@@ -3,21 +3,24 @@
 텔레그램으로 질문을 보내면 **글 답변 + 한국어 음성(TTS) 답변**을 함께 보내 주는 봇입니다.
 화면 글씨를 읽기 어려운 시니어 분들도 답을 **귀로 들을 수 있어** 편리합니다.
 
+**완전 무료로 운영할 수 있습니다.** AI 답변은 Google Gemini 무료 등급(카드 등록 불필요),
+음성 합성은 edge-tts(키 불필요)를 사용합니다.
+
 답변 성격은 저장소의 `SOUL.md`(소울.엠디 — 차분한 영적 동반자형 AI 비서) 페르소나를 따릅니다.
 
 ## 작동 방식
 
 1. 사용자가 텔레그램에서 질문을 보냅니다.
-2. Claude(claude-opus-5)가 SOUL.md 페르소나로 답을 만듭니다.
+2. Google Gemini(gemini-2.5-flash)가 SOUL.md 페르소나로 답을 만듭니다.
 3. 봇이 답을 **글**로 먼저 보내고,
 4. 이어서 **음성 메시지**(edge-tts, 한국어 '선희' 목소리)로도 보내 줍니다.
 
-## 준비물
+## 준비물 (모두 무료)
 
 | 항목 | 얻는 방법 |
 |---|---|
 | 텔레그램 봇 토큰 | 텔레그램에서 `@BotFather` 검색 → `/newbot` 으로 발급 |
-| Anthropic API 키 | https://platform.claude.com 에서 발급 |
+| Gemini API 키 | https://aistudio.google.com 접속 → 구글 계정 로그인 → "Get API key" 클릭 (카드 등록 불필요) |
 | Python 3.10 이상 | https://python.org |
 | ffmpeg (선택) | 있으면 텔레그램 '음성 메시지' 형식으로 전송 (없으면 MP3 파일로 전송) |
 
@@ -29,7 +32,7 @@ pip install -r requirements.txt
 
 # 환경 변수 설정
 export TELEGRAM_BOT_TOKEN="봇파더에서 받은 토큰"
-export ANTHROPIC_API_KEY="Anthropic API 키"
+export GEMINI_API_KEY="구글 AI 스튜디오에서 받은 키"
 
 python bot.py
 ```
@@ -42,9 +45,14 @@ python bot.py
 | `/new` | 대화를 처음부터 다시 시작 |
 | `/voice` | 음성 답변 켜기/끄기 |
 
+## 무료 사용량 안내
+
+Gemini 무료 등급은 분당·하루 요청 횟수에 제한이 있습니다(모델에 따라 하루 수백 건 수준).
+가족·소모임에서 쓰기에는 충분하며, 한도를 넘으면 봇이 "잠시 후 다시 질문해 주세요"라고 안내합니다.
+사용량이 많아지면 `bot.py`의 `MODEL`을 한도가 더 넉넉한 모델(예: `gemini-2.0-flash`)로 바꿔 보세요.
+
 ## 참고
 
 - 대화 기록은 메모리에만 보관되어, 봇을 재시작하면 초기화됩니다.
 - 긴 답변은 앞부분 약 1,500자까지만 음성으로 읽고, 나머지는 글로 확인하도록 안내합니다.
 - 목소리를 바꾸려면 `tts.py`의 `DEFAULT_VOICE`를 수정하세요. (남성: `ko-KR-InJoonNeural`)
-- Claude 응답에는 안전 분류기 거절 시 자동으로 대체 모델이 응답하는 서버측 폴백(`fallbacks: "default"`)이 켜져 있습니다.
