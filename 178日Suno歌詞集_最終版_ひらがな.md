@@ -11,7 +11,7 @@
 - ヴァースは黙想本文の気づき・聖句・短い祈りを、完結した美しい詩行に再構成（散文の切り貼り・断片行・実践指示文は排除）
 - シニアの日常の情景（鏡の白髪、先立った友、孫、食卓、散歩、夕暮れ）を活かし、聴く方が「これは私の歌だ」と感じられるように
 - すべての曲が希望と平安で結ばれます
-- 各曲は歌唱行34行前後・約4分30秒〜5分の長さ。同じサビを3回以上繰り返し、[Bridge]にはその日の祈り・告白を置いています
+- 各曲は歌唱行26〜28行・間奏1箇所。Suno v5.5 実測に基づき、約4分30秒〜5分で完全に終わる長さに調整済み。[Bridge]にはその日の祈り・告白を置いています
 
 **スタイルの原則：**
 - 簡潔な英語スタイル記述。静かで黙想的、しかし明るく穏やかな喜びのある雰囲気
@@ -22,7 +22,7 @@
 
 **Sunoでの使い方：**
 1. Custom モードを開く
-2. 「Sunoスタイル」の行を Style of Music 欄に貼り付ける
+2. 「Sunoスタイル」の**英語部分のみ**（slow steady … から末尾まで）を Style of Music 欄に貼り付ける。「- **Sunoスタイル：**」などのマークダウン記号は含めないこと
 3. 「ボーカル・歌唱法」の内容も Style 欄の続きに加えるとボーカル指定が安定します
 4. コードブロック内の歌詞（[Verse] などのタグ、末尾の [End] を含む）を Lyrics 欄にそのまま貼り付ける
 5. 発音がおかしい単語があれば、その単語だけひらがなに変えて再生成すると解決します
@@ -35,7 +35,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet and meditative, serene sunrise warmth, peaceful grateful joy, spacious and unhurried, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, small choir on final refrain only, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -68,20 +68,6 @@
 けれどあなたは かわりませんでした
 ゆれるこころを みてにつないでください
 
-[Chorus]
-イエス・キリストは きのうもきょうも
-とこしえまでも かわらないおかた
-すべてがかわっても しゅはかわらない
-そのあいは わたしのえいえんのいかり
-
-[Instrumental Interlude]
-
-[Verse 4]
-あしたのことは わからなくても
-ひつよういじょうに おそれません
-へいあんはあらしの ないことでなく
-かわらぬしゅが おられること
-
 [Bridge]
 ふるいしゃしんを てにとるとき
 あのひびもしゅは ともにおられた
@@ -109,7 +95,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese worship ballad, nylon-string guitar, piano, clarinet, warm cello, soft and intimate, gentle thankful warmth, calm quiet morning joy, close natural sound, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain with light harmony, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -142,20 +128,6 @@
 きょうはただ りょうてをひらいて
 あなたのあいを うけとります
 
-[Chorus: unison]
-かみはあいです かみはあいです
-できてもできなくても かわらない
-なにものもわたしを ひきはなせない
-キリストにある かみのあいから
-
-[Instrumental Interlude]
-
-[Verse 4]
-かみのあいより ふかいこどくはなく
-かみのあいより おもいこうかいもない
-ふりかえるひびの そのぜんぶを
-つつんであまる あいがある
-
 [Bridge]
 おもいだします あのひのこと
 あなたのあいを かんじたばめん
@@ -183,7 +155,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese scripture meditation hymn, upright piano, soft woodwinds, viola and cello, still and attentive, warm major-key resolution, clear peaceful morning light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth unhurried legato, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -216,20 +188,6 @@
 かかえてきた おもいにもつを
 ひとつずつみまえに おいてゆく
 
-[Chorus]
-せいなるしゅよ わたしをきよめてください
-あなたがせいなる かたであるから
-いかりもうらみも てばなします
-しゅのものとして いかしてください
-
-[Instrumental Interlude]
-
-[Verse 4]
-じぶんのただしさ くらべるこころ
-まもろうとする がんこさも
-ひとつずつみまえに おいてゆけば
-あいたうつわを しゅがみたす
-
 [Bridge]
 イザヤのように こたえます
 「ここにおります つかわしてください」
@@ -257,7 +215,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian meditative hymn, upright piano, gentle woodwind responses, warm cello, light organ, hushed and reflective, tender assurance, serene morning stillness, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, thoughtful even phrasing, quiet two-part harmony in final chorus, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -290,20 +248,6 @@
 さいごのびょうしょう そのときにも
 みてがわたしを ささえている
 
-[Chorus]
-しゅよ、あなたは わたしをしっておられる
-どこへいっても そこにおられる
-しゅにできないことは なにひとつない
-これがわたしの ふかいなぐさめ
-
-[Instrumental Interlude]
-
-[Verse 4]
-てんにのぼっても そこにおられ
-やみのなかにも ひかりはある
-だれにもみえない なみだのときも
-あなたはじっと みておられる
-
 [Bridge]
 こどものかいふく かていのわかい
 ながくこたえのない いのりさえ
@@ -331,7 +275,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Warm Japanese morning praise song, piano, nylon-string guitar, clarinet, very light brushed percussion, fresh and thankful, new-morning brightness, calm gentle joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, conversational verses, tender harmony on final line, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -363,20 +307,6 @@
 おそすぎることは ありません
 のこされたすべての あさごとに
 あたらしいめぐみが そそがれる
-
-[Chorus: unison]
-しゅのいつくしみは つきることなく
-あさごとにあたらしい あさごとにあたらしい
-しゅのしんじつは おおきいのです
-きょうもあたらしい いつくしみをありがとう
-
-[Instrumental Interlude]
-
-[Verse 4]
-もっともくらい なげきのなかで
-よげんしゃはみた かがやくしんり
-すべてうしなわれた ようにみえても
-あわれみは おわらない
 
 [Bridge]
 きのうのかなしみに きょうのよろこびを
@@ -436,19 +366,7 @@
 そのすべての ばしょにおいて
 しゅはわたしと ともにおられる
 
-[Chorus: flute accompaniment]
-インマヌエル しゅはともにおられる
-よのおわりまで いつまでも
-さいごのいきを するそのときも
-インマヌエル わたしはひとりじゃない
-
 [Instrumental Interlude]
-
-[Verse 4]
-ゲツセマネの よるのこどくも
-あざけりのこえも しっておられる
-だからわたしの さびしさを
-だれよりふかく わかってくださる
 
 [Bridge]
 あさのしょくたく くすりをのむとき
@@ -477,7 +395,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Reflective Japanese scripture hymn, upright piano, soft woodwind, viola, restrained organ, humble and still, quiet grace resolving into warm light, gentle morning peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, gentle two-part harmony at the end, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -510,20 +428,6 @@
 つみをふかく しるほどに
 じゅうじかのあいが おおきくみえる
 
-[Chorus]
-あなたはメシア いけるかみのこ
-やくそくのすくいぬし イエスよ
-わたしのつみのおもにを おわれたかた
-もうじぶんで せおいません
-
-[Instrumental Interlude]
-
-[Verse 4]
-ぐうぜんにおきた ことではない
-はるかなむかしからの やくそく
-ときがみちて しゅはこられて
-そのやくそくを はたされた
-
 [Bridge]
 くいたあとまで ばっしつづけない
 しゅがおわれた にもつだから
@@ -551,7 +455,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness, gentle 6/8, felt piano, solo cello, thin warm strings, soft organ, honest and tender, grace and gentle relief, quiet morning assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, sincere prayerful delivery, soft alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -584,20 +488,6 @@
 あいとあわれみ へいあんといのち
 きょうはしずかに いただきます
 
-[Chorus]
-なしとげられた しゅがすべてを
-すくいのわざは かんせいした
-うけためぐみが あふれでて
-かぞくへりんじんへ ながれていく
-
-[Instrumental Interlude]
-
-[Verse 4]
-ふさいのしょうしょに しるされた
-「しはらいずみ」の そのひとこと
-これからささげる ほうしもあいも
-かんしゃのおうとうに すぎません
-
 [Bridge]
 うけとることは はじではなく
 めぐみにゆだねる せいじゅくのしるし
@@ -625,7 +515,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Peaceful Japanese hymn of resurrection hope, intimate piano, soft strings, gentle French horn, acoustic guitar, quiet meditation opening into warm light, hopeful serene joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone or mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, brightening softly as hope grows, small choir in final chorus, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -658,20 +548,6 @@
 さきにめされた なつかしいかおと
 むかえてくださる しゅがおられる
 
-[Chorus]
-しよ、おまえのしょうりは どこにあるのか
-しよ、おまえのとげは どこにあるのか
-しゅはふっかつ そして、いのち
-しはおわりでは ありません
-
-[Instrumental Interlude]
-
-[Verse 4]
-としをかさねての しんこうは
-えいえんをみつめる しんこうです
-めのまえのものは ちいさくなり
-つづくいのちが おおきくみえる
-
 [Bridge]
 しはしょうりに のみこまれた
 よりよいすまいへ うつるように
@@ -699,7 +575,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of quiet expectation, piano, warm strings, restrained French horn, spacious and unhurried, calm longing turning to gentle joy, sunrise-like warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or gentle baritone, clear Japanese diction, comfortable mid-range, gentle and warm, tender expectant tone, small mixed choir at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -732,20 +608,6 @@
 いのりのなかで よんできたかたの
 みかおをついに あおぎみる
 
-[Chorus]
-「わたしはすぐにくる」 しゅのことば
-おそれではなく したうこころで
-マラナ・タ しゅよ、きてください
-おあいするひを まちのぞみます
-
-[Instrumental Interlude]
-
-[Verse 4]
-このよのながれは いきさきのない
-かわではなく しゅへむかうみち
-くるしいひびに たよったおかたに
-やがてまみえる ひがきます
-
 [Bridge]
 そのひあなたに なんといおう
 ただありがとうと いうでしょう
@@ -773,7 +635,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, nylon-string guitar, still and prayerful, humble warmth in God's presence, quiet peaceful joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison chorus ending in amen, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -806,20 +668,6 @@
 よわったひにも やまいのとこにも
 さいごのときまで ともにおられる
 
-[Chorus]
-たすけぬしなる せいれいよ
-いつまでもともに いてくださる
-すべてをおしえ おもいおこさせて
-きょうもともに あゆんでください
-
-[Instrumental Interlude]
-
-[Verse 4]
-なにかをきめる そのときには
-「おしえてください」と いのります
-こころがさわぐ そのひには
-「へいあんをください」と ねがいます
-
 [Bridge]
 ことばにならない かなしみさえ
 うめきをもって とりなされる
@@ -847,7 +695,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese chapel prayer song, piano, soft pipe organ, warm cello countermelody, unhurried steady pulse, open-handed surrender, tranquil trusting warmth, calm humble joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and mature alto, clear Japanese diction, comfortable mid-range, gentle and warm, quiet prayerful phrasing, delicate harmony in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -880,20 +728,6 @@
 あくことは うしなうことではなく
 みたされるための ばしょになる
 
-[Chorus]
-もとめるものに せいれいを
-てんのちちは あたえてくださる
-あいたうつわに そそいでください
-あなたのあいと へいあんを
-
-[Instrumental Interlude]
-
-[Verse 4]
-みたしはいちどで おわりではなく
-あさごとにうける おくりもの
-つかえばまたあく このうつわを
-なんどでもさしだせば いいのです
-
 [Bridge]
 たかぶるおもいの ためではなく
 しずかなくらしの まんなかで
@@ -921,7 +755,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Quiet Japanese devotional hymn, soft piano, pipe organ, nylon-string guitar, gentle cello, restful abiding mood, tender organic warmth, calm grateful stillness, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature alto and baritone in gentle alternation, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, closing amen cadence, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -954,20 +788,6 @@
 いのりのなかで みことばのなかで
 みはすこしずつ そだっていく
 
-[Chorus]
-わたしはぶどうのき あなたがたはえだ
-しゅよ、あなたに つながります
-としをかさねるほど やわらかく
-ゆたかなみを むすばせてください
-
-[Instrumental Interlude]
-
-[Verse 4]
-ここのつのみは ばらばらでなく
-ひとつのいのちの みのりです
-あいもにんたいも にゅうわもじせいも
-おなじきのうえで そだちます
-
 [Bridge]
 「いつもおだやかな ひとだった」と
 いつかだれかが おもいだす
@@ -995,7 +815,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian prayer hymn of daily gratitude, piano, sustained soft organ, gentle cello, steady unhurried pace, everyday thankfulness, serene humble morning joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature baritone and alto, clear Japanese diction, comfortable mid-range, gentle and warm, calm even phrasing with soft unison chorus, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -1028,20 +848,6 @@
 ちいさくみえる そのしんせつが
 えいえんにのこる みになります
 
-[Chorus]
-いつもよろこび たえずいのり
-どんなことにも かんしゃしなさい
-これがかみさまの みこころです
-きょうをみまえで いきるだけ
-
-[Instrumental Interlude]
-
-[Verse 4]
-りんじんとかわす あさのあいさつ
-まごへおくる はげましのことば
-ふるいともへの いっぽんのでんわ
-それもみこころを いきること
-
 [Bridge]
 めざめたあさに こういのります
 「きょうをきよく あゆませてください」
@@ -1069,7 +875,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of calling, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, quiet sense of purpose, hopeful grateful readiness, simple singable warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature male baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, dignified storytelling, unified final line, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus: small choir] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus: small choir] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -1102,20 +908,6 @@
 そのちいさな はたらきさえも
 かみはたいせつに もちいられる
 
-[Chorus: small choir]
-わたしはかみに つくられたもの
-よいおこないのために つくられた
-さいごのほほえみ さいごのいのりも
-しゅはもちいて くださいます
-
-[Instrumental Interlude]
-
-[Verse 4]
-わかいひのめしは こそだてやしごと
-かたちをかえて つづいていく
-いまはいのるひと はなしをきくひと
-しずかにあいを とどけるひと
-
 [Bridge]
 なにをみるとき こころがいたむか
 なにをするとき いきいきするか
@@ -1142,7 +934,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, gentle cello, unhurried and still, warm humble trust, serene morning devotion, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -1175,20 +967,6 @@
 いつつのしるしが かさなるとき
 しずかにいっぽ ふみだせます
 
-[Chorus]
-こころをつくして しゅにしんらいし
-じぶんのさとりに たよりません
-どんなときにも しゅをみとめれば
-しゅがこのみちを まっすぐにされる
-
-[Instrumental Interlude]
-
-[Verse 4]
-みちびかれてきた ひびをおもえば
-あのけつだんにも みてがあった
-ちえのかぎりを みとめるところから
-まことのちえは はじまります
-
 [Bridge]
 しゅよどうすれば よいでしょうか
 ちいさなことにも たちどまりたずね
@@ -1204,7 +982,6 @@
 [Outro: amen cadence]
 どんなときにも しゅをみとめれば
 しゅがみちを しめしてくださる
-アーメン
 
 [End]
 ```
@@ -1248,19 +1025,7 @@
 わたしのみない ひびのさきにも
 あなたのしんじつは かわりません
 
-[Chorus: violin accompaniment]
-なにごとにも ときがある
-すべてのことに ときがある
-ときがみちて みこはこられた
-しゅのときを わたしはしんじます
-
 [Instrumental Interlude]
-
-[Verse 4]
-うまれるときがあり しぬときがある
-うえるときがあり ぬくときがある
-なくときもわらうときも みてのなか
-ながいさいげつが おしえてくれた
 
 [Bridge]
 こたえをこのめで みなくても
@@ -1289,7 +1054,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn of hope, intimate piano, soft strings, restrained French horn, acoustic guitar, spacious and serene, sunrise warmth after a long night, peaceful grateful joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, small mixed choir on final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -1322,20 +1087,6 @@
 ひとつのみことばが こころにのこれば
 それがしょうがいの かてになる
 
-[Chorus]
-えいえんのいのちは
-まことのかみを しること
-つかわされたみこ イエス・キリストを
-しることこそ いのちです
-
-[Instrumental Interlude]
-
-[Verse 4]
-ほこるべきものは ただひとつ
-ざいでもほまれでも ありません
-いつくしみとせいぎを おこなわれる
-しゅをしることを ほこります
-
 [Bridge]
 これからもつづく めぐみのたびじ
 ふくいんのふかみへ すすみます
@@ -1363,7 +1114,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Quiet Japanese praise song of calling, piano, acoustic guitar, warm strings, light bass, gentle walking pulse, calm readiness, hopeful thankful warmth, simple singable melody, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -1396,20 +1147,6 @@
 むずかしいことばは いらないから
 まごにもつたえたい このしらせ
 
-[Chorus: small choir]
-ふくいんは かみのちから
-しんじるものを すくうちから
-しゅがわたしのため しんでよみがえられた
-このしらせに きょうもいかされる
-
-[Instrumental Interlude]
-
-[Verse 4]
-おさないひにきいた あのしらせを
-しずかなへやで ききなおすとき
-いぜんとはちがう ふかいおもみで
-このむねのおくに せまってくる
-
 [Bridge]
 しゅよあたまだけで しっていました
 いまこのこころで うけとります
@@ -1437,7 +1174,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Gentle Japanese worship hymn of mission, acoustic guitar, piano, brushed snare, warm strings, softly walking tempo, quiet purposeful hope, warm and bright everyday grace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm grounded baritone lead, small mixed choir in chorus, unified final line, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -1470,20 +1207,6 @@
 ちいさなしんせつ ひとつおこなえば
 そこにみくにの かおりがさく
 
-[Chorus: small choir]
-みくにが きますように
-みこころが おこなわれますように
-てんのきぼうを いだきながら
-きょうこのばしょで みくにをいきる
-
-[Instrumental Interlude]
-
-[Verse 4]
-いそがなくても いいのです
-めだつことを しなくても
-まいにちこのみを とおりぬけて
-みくにはしずかに ひろがります
-
 [Bridge]
 てんのみくにを まちのぞみつつ
 きょうのくらしに しゅをむかえる
@@ -1511,7 +1234,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of repentance and grace, gentle 6/8, felt piano, solo cello, quiet strings, honest and tender, softly opening into peaceful light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, alto support in final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -1544,20 +1267,6 @@
 ほうしのできない わたしのままで
 しゅのあいは かわりません
 
-[Chorus]
-ほかにふくいんは ありません
-キリストのふくいん ただひとつ
-しゅくふくのためでなく あなたをあいして
-じゅうじかのもとへ かえります
-
-[Instrumental Interlude]
-
-[Verse 4]
-なぜしんじるのかと とわれたなら
-しずかにこころを みつめなおす
-しゅくふくのためだけでは ありません
-あなたをあいして いるからです
-
 [Bridge]
 しゅよわたしの どうきをてらし
 ちゅうしんにあなたを おかせてください
@@ -1585,7 +1294,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Softly moving Japanese praise song, piano, acoustic guitar, brushed snare, light bass, easy walking pace, everyday gospel gladness, calm and quietly bright, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Steady mature baritone, small senior choir on chorus, clear Japanese diction, comfortable mid-range, gentle and warm, dignified unhurried delivery, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -1618,20 +1327,6 @@
 とうといちしおが おおっています
 おもにをひとつずつ おろします
 
-[Chorus: small choir]
-キリスト・イエスに あるものは
-もうつみに さだめられない
-きのうもきょうも かわらぬあいが
-きょうをいきる ちからになる
-
-[Instrumental Interlude]
-
-[Verse 4]
-こどくがふかく なるゆうべには
-インマヌエルのしゅが ともにおられる
-おそれがおしよせる そのときには
-わたしにはふっかつの きぼうがある
-
 [Bridge]
 あさにしょくたくに ねむるまえに
 じぶんのたましいへ かたりかける
@@ -1659,7 +1354,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Quiet Japanese meditative hymn of the cross, flowing 6/8, felt piano, solo cello, thin warm strings, tender reflection easing into gentle relief, calm morning peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Sincere mature baritone, gentle alto joining the final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, minimal vibrato, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -1692,20 +1387,6 @@
 さいごのいきは おわりではなく
 しゅとまみえる あたらしいあさ
 
-[Chorus]
-じゅうじかにつけられた キリストを
-わたしはしょうがい のべつたえます
-あいとゆるしと わかいとじゆう
-しのむこうの いのちのしらせ
-
-[Instrumental Interlude]
-
-[Verse 4]
-しんでんのまくは ふたつにさけて
-とおくたつひびは おわりました
-かみのこどもとして むかえられて
-かおとかおをあわせる ひをまちます
-
 [Bridge]
 あいとさばきのおわり わかいとじゆう
 えいえんのいのちの しらせをむねに
@@ -1733,7 +1414,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Gentle Japanese hymn of cleansing grace, lilting 6/8, felt piano, warm cello, soft strings, restrained organ, quiet gratitude turning to peaceful assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm unhurried baritone lead, mature alto harmony on last refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -1766,20 +1447,6 @@
 しゅよこのかぞくを めぐみのうちに
 そのいのりは けっしてむだでない
 
-[Chorus]
-みこイエスの とうといちが
-すべてのつみから きよめます
-ゆるしときよめと まもりとしょうり
-きょうもこのみを ささえています
-
-[Instrumental Interlude]
-
-[Verse 4]
-すぎこしのよるの こひつじのちが
-いえいえのいりぐち まもったように
-しゅのとうといちが このいえをおおい
-きょうもわたしたちを まもります
-
 [Bridge]
 ながくきえなかった ざいせきのおもさも
 りょうしんのおくまで きよめられて
@@ -1807,7 +1474,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Serene Japanese hymn of resurrection hope, intimate piano, acoustic guitar, soft strings, gentle French horn, warm major glow, quiet dawn-like joy, spacious and calm, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mezzo-soprano or baritone lead, small choir on final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, graceful legato, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -1840,20 +1507,6 @@
 いたみもやまいも なみだもない
 くちないからだを きせられます
 
-[Chorus]
-「わたしはいきているものである
-しんだが いまはえいえんにいきている」
-しゅがいきて おられるから
-わたしもきょうを いきられます
-
-[Instrumental Interlude]
-
-[Verse 4]
-しつぼうにしずむ ひがきても
-もういちどたちあがる ちからがある
-いまこのうちに ながれている
-ふっかつのいのちが あるからです
-
 [Bridge]
 わたしはキリストと ともにしんで
 ともにあたらしく いかされました
@@ -1881,7 +1534,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Tender Japanese hymn of new life in Christ, swaying 6/8, felt piano, solo cello, quiet strings, restrained organ, honest reflection blooming into gentle peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature baritone, soft alto support in the closing refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -1914,20 +1567,6 @@
 あいとにんたい へいあんあわれみ
 うちなるしゅのすがたを みますように
 
-[Chorus]
-もはやわたしが いきるのではなく
-キリストがわたしの うちにいきる
-よわくなるほど はっきりみえる
-あなたのいのちが あらわれます
-
-[Instrumental Interlude]
-
-[Verse 4]
-できることが へってゆくのは
-ただかなしみでは ありません
-ふるいわたしが ちいさくなって
-しゅのすがたが みえてくるばしょ
-
 [Bridge]
 まいにちこころへ かたりかけます
 わたしのうちに しゅがいきておられる
@@ -1955,7 +1594,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Peaceful Japanese hymn of new birth, intimate piano, soft strings, restrained French horn, acoustic guitar, warm and bright, gentle spiritual awakening, thankful quiet joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, small mixed choir in final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -1988,20 +1627,6 @@
 そこにあたらしい いのちがいきづく
 としをかさねても おそくはない
 
-[Chorus]
-イエスをうけいれ そのなをしんじる
-すべてのひとに あたえられる
-かみのこどもと なるめぐみ
-あたらしいいのちの はじまりです
-
-[Instrumental Interlude]
-
-[Verse 4]
-かくしんのないまま すごしたひとも
-はじることなく しゅのまえへ
-しんじつにもとめる ものをしゅは
-けっしてしりぞけ なさいません
-
 [Bridge]
 しゅよながいとしつき かよいました
 きょうあたらしい いのちをください
@@ -2029,7 +1654,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Quiet Japanese hymn of repentance and heaven's joy, gentle 6/8 sway, felt piano, warm solo cello, thin strings, humble tenderness resolving into serene relief, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Sincere warm baritone lead, mature alto joining only at the end, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -2062,20 +1687,6 @@
 しょうがいのにもつは ひとつずつ
 じゅうじかのしたへ うつされていく
 
-[Chorus]
-ひとりのつみびとが くいあらためるなら
-てんにはよろこびが あふれます
-ちいさなわたしの たちかえりも
-みつかいたちの よろこびになる
-
-[Instrumental Interlude]
-
-[Verse 4]
-じぶんをせめるだけの かなしみでなく
-みこころにそった かなしみは
-ぜつぼうではなく じゆうへむかい
-すくいへみちびく みちになる
-
 [Bridge]
 しょうがいのこる あのひとつも
 もういちどしゅへ もっていける
@@ -2103,7 +1714,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, cello, soft woodwinds, uncluttered lyrics-forward arrangement, attentive stillness, warm peaceful morning light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, gentle two-part harmony in final chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -2136,20 +1747,6 @@
 いつかまごが そのページをひらき
 しんじたあゆみを みるでしょう
 
-[Chorus]
-みよ しゅはとぐちにたち
-いまもたたいて おられます
-こころのとびらを おおきくひらきます
-しゅよ わたしのうちへ おはいりください
-
-[Instrumental Interlude]
-
-[Verse 4]
-ふうふがひごとに あいをたしかめる
-そのようにまいあさ しゅをむかえる
-いちどのけっしんは ひびのしせいに
-したしさはふかく そだちます
-
 [Bridge]
 しゅイエスよ わたしはつみあるもの
 しんでよみがえられた しゅをしんじます
@@ -2177,7 +1774,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Warm Japanese meditative hymn of new creation, intimate piano, soft strings, gentle French horn, acoustic guitar, spacious major warmth, quietly radiant joy, calm gratitude, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone or mezzo-soprano lead, small choir only on final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -2210,20 +1807,6 @@
 かぞくにそそいだ ふかいあいを
 こどもやまごは みています
 
-[Chorus]
-キリストにあるひとは
-あたらしくつくられたもの
-ふるいものは すぎさって
-すべてがあたらしく はじまった
-
-[Instrumental Interlude]
-
-[Verse 4]
-ことばがすくなく なったひにも
-ひとつのいのりに しんじつがやどる
-できるひとつの ちいさなしんせつ
-それもあたらしい いのちのあかし
-
 [Bridge]
 きょうだいしまいを あいするこころ
 きよくありたいと ねがうこころ
@@ -2250,7 +1833,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Japanese Christian morning praise ballad, piano, nylon-string guitar, clarinet, cello, quiet and warm, gentle thankful warmth blooming into calm morning joy, intimate and unhurried, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -2283,20 +1866,6 @@
 あたりまえのものは ひとつもない
 あたえられたから かんしゃするのです
 
-[Chorus: unison]
-めぐみによって かみからのおくりもの
-あたいなしに ぎとされました
-ほこるものは なにもありません
-ただありがとうと うたいます
-
-[Verse 4]
-めぐみはわたしに とどまらないで
-しずかにとなりへ ながれてゆく
-つまずいたひとを そっとゆるし
-にがてなひとの さいわいをいのる
-
-[Instrumental Interlude]
-
 [Bridge]
 しゅよ このおもにをおろします
 じぶんのただしさに たよったひびを
@@ -2324,7 +1893,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of quiet repentance, 6/8, felt piano, solo cello, quiet warm strings, meditative and still, honest reflection easing into gentle relief and peaceful assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -2357,20 +1926,6 @@
 ながくせおった ざいせきかんを
 いまあなたのまえへ おろします
 
-[Chorus]
-キリスト・イエスに あるものは
-けっしてつみに さだめられない
-さいこうのさいばんかんが せんげんされた
-「あなたをぎと みとめる」と
-
-[Verse 4]
-あさにひるに よるのしじまに
-そのせんげんを よみかえします
-わたしのなまえを そっといれて
-「あなたはぎと みとめられた」と
-
-[Instrumental Interlude]
-
 [Bridge]
 ひとからせめられる ひがきても
 かこがうったえを おこしても
@@ -2398,7 +1953,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Gentle Japanese worship hymn of forgiveness and renewal, 6/8, felt piano, solo cello, quiet strings, tender honesty opening into soft light and calm assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, steady prayerful lines, soft alto joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -2431,20 +1986,6 @@
 かみがさきに あいしてくださった
 そのあいにこたえて あゆむだけです
 
-[Chorus]
-キリストはわたしを じゆうにされた
-ふたたびくびきを おわないように
-ぎむではなく あいへのこたえ
-よろこんでただしいみちを えらびます
-
-[Verse 4]
-めぐみはつみを かるくするのでなく
-きよいあゆみへ そだてるちから
-きょうもすこしずつ わたしをつくり
-あいするものへと かえてくださる
-
-[Instrumental Interlude]
-
 [Bridge]
 しゅよ かんぺきをもとめて つかれたひとに
 そっとつたえたい ことばがあります
@@ -2472,7 +2013,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese Christian praise ballad, nylon-string guitar, piano, clarinet, cello, warm gratitude and quietly growing joy, close natural intimacy like waves of grace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, tender two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -2505,20 +2046,6 @@
 そのものがたりを こやまごへ
 しんこうのいさんとして のこしましょう
 
-[Chorus: unison]
-めぐみのうえに さらにめぐみ
-しゅをしるちしきに せいちょうさせてください
-ふりかえれば すべてがめぐみ
-ほこれるものは なにもありません
-
-[Verse 4]
-あるいてきたひびを ふりかえれば
-とどいたことばが いかりになる
-こころがおもく しずむよるには
-あのみことばへ かえればいい
-
-[Instrumental Interlude]
-
 [Bridge]
 しゅよ このじゅうろくにちの みちのりを
 ともにあるいて くださいました
@@ -2546,7 +2073,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, viola, cello, attentive stillness and honest searching resolving into clear peaceful morning joy, lyrics-forward and uncluttered, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, calm thoughtful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -2578,20 +2105,6 @@
 ほんしつへかえる めぐみのとき
 ひとにみせる しんこうではなく
 しゅとふたりきりの ふかいまじわりへ
-
-[Chorus]
-しゅよ、かたちではなく こころをささげます
-なれたいのりの ことばではなく
-こころからわく ひとことを
-きょうあなたに もうしあげます
-
-[Verse 4]
-ときにはすべてを すこしやすんで
-あなたとふたりで すわっています
-なれたいとなみの そのおくにある
-いきたいずみへ かえるために
-
-[Instrumental Interlude]
 
 [Bridge]
 しゅよ こころをごらんになるかた
@@ -2645,12 +2158,6 @@
 いのりはみじかくても しんじつになり
 ことばはすくなくても あたたかくなる
 
-[Chorus: strings swell]
-たいせつなのは あいによってはたらくしんこう
-かつどうのおおさでは ありません
-あいのふかさが ほんもののしるし
-しゅよ、このあいを そだててください
-
 [Verse 3]
 からだがよわっても きぼうはつよく
 しをまえにしても しゅをしんらいする
@@ -2658,12 +2165,6 @@
 うちがわのあいは ふかくなれる
 
 [Instrumental Interlude]
-
-[Verse 4]
-みことばをきじゅんに きょうをえらび
-つみをかなしんで たちかえるこころ
-かんぜんでなくても かまわない
-そだちゆくほうこうを しゅはみておられる
 
 [Bridge]
 きのうよりすこし ふかくなるかんけい
@@ -2723,19 +2224,7 @@
 としをかさねたいま もっとふかく
 しずかにゆるがず あいせるのです
 
-[Chorus]
-こころをつくし たましいをつくして
-しゅなるあなたを あいします
-おもいだし くいあらためて
-はじめのあいへ かえります
-
 [Instrumental Interlude]
-
-[Verse 4]
-あさのひととき みじかいいのり
-さんびをいっきょく くちずさむこと
-ちいさなひとつで じゅうぶんだから
-きょうそのいっぽを ふみだします
 
 [Bridge]
 はじめてであったひの ものがたりを
@@ -2764,7 +2253,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, stillness and humble surrender, warm quiet joy of God's presence, spacious and unhurried, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, gentle mixed unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -2797,20 +2286,6 @@
 やわらかなこころを あたえてください
 みことばがふかく とどくように
 
-[Chorus]
-こころをつくして しゅにしんらいします
-じぶんのさとりに たよりません
-あたまでしっていた みことばが
-こころのなぐさめに かわりますように
-
-[Verse 4]
-ゆだねなさいと しっていながら
-しんぱいをにぎって はなせないよるも
-いそがずいっせつの まえにすわれば
-ことばはしずかに むねへおりてくる
-
-[Instrumental Interlude]
-
 [Bridge]
 「おそれるな あなたとともにいる」
 いちごずつ ゆっくりくりかえす
@@ -2838,7 +2313,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Intimate Japanese Christian praise song, nylon-string guitar, piano, clarinet, very light brushed percussion, quiet companionship and gentle thankful warmth, restful morning glow, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, conversational and tender, clear Japanese diction, comfortable mid-range, gentle and warm, soft closing harmony, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -2871,20 +2346,6 @@
 こころがおもいひは なにもいわずに
 ただみまえに すわるだけでいい
 
-[Chorus: unison]
-わたしはあいするかたのもの
-あいするかたは わたしのもの
-ちかづけばしゅも ちかづいてくださる
-そのやくそくを きょうもしんじて
-
-[Verse 4]
-ちょうしょくのあとの まどべのいす
-あたたかいおちゃを いっぱいそえて
-きょうからきめます やくそくのじかん
-あなたとであう わたしのばしょを
-
-[Instrumental Interlude]
-
 [Bridge]
 とおくかんじていた ひびにさえ
 あなたはまって いてくださった
@@ -2912,7 +2373,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese scripture meditation hymn, upright piano, soft woodwinds, viola, cello, warm major-key assurance, serene morning light and gentle sense of belonging, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, smooth natural legato, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -2945,20 +2406,6 @@
 このみぶんだけは ちじょうをこえて
 えいえんにまで つづいてゆく
 
-[Chorus]
-わたしはかみの あいするこども
-なにをしたかでは ありません
-しらががふえても しわがふかくても
-ちちはたいせつに みつめておられる
-
-[Verse 4]
-まごのてをとって つたえましょう
-「なにをしなくても あなたはたから」
-わたしがうけとった そのおなじあいを
-つぎのせだいへ てわたすのです
-
-[Instrumental Interlude]
-
 [Bridge]
 しごとのなでもなく かたがきでもなく
 うまれるまえから よばれていたなまえ
@@ -2986,7 +2433,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian meditative hymn on identity, upright piano, viola, cello, soft woodwind responses, attentive stillness resolving into clear peaceful joy, steady and reassuring, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, calm and thoughtful, clear Japanese diction, comfortable mid-range, gentle and warm, quiet two-part final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -3019,20 +2466,6 @@
 「わたしのもの」と しゅがよばれる
 そのかちはけっして かわりません
 
-[Chorus]
-よのラベルではなく かみのみぶんにいきる
-このよにあわせず こころをあたらしく
-えらばれたたみ おうにつかえるさいし
-それがわたしの ほんとうのすがた
-
-[Verse 4]
-たいしょくしゃと よばれるひにも
-たすけがいるひとと みられるひにも
-かみのめにはただ とうといひとり
-かけがえのない わたしがいます
-
-[Instrumental Interlude]
-
 [Bridge]
 きょうもかぞくの なをよびながら
 しずかにいのりを ささげます
@@ -3060,7 +2493,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Gentle Japanese hymn of contentment, upright piano, soft woodwinds, cello, light organ, restful gratitude and warm sufficiency in quiet morning light, uncluttered and lyrics-forward, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, unhurried thankful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, soft harmony in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -3093,20 +2526,6 @@
 ちいさなものを おくりものとして
 うけとるところから はじまります
 
-[Chorus]
-みちたりるこころを ともなうしんこうは
-おおきなゆたかさを もたらします
-もちもののおおさでは ありません
-しゅがともにおられる それでじゅうぶん
-
-[Verse 4]
-くらべるくせが かおをだすひは
-いちどたちどまり こくはくします
-「いまあたえられている ものもめぐみ」
-みちたりるこころは ひびまなぶもの
-
-[Instrumental Interlude]
-
 [Bridge]
 しゅよ もっとほしいと ねがったこころを
 あなたのみまえに おろします
@@ -3134,7 +2553,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Reflective Japanese Christian hymn of self-examination, 6/8, felt piano, solo cello, thin warm strings, gentle honesty resting in grace, quiet assurance and peaceful morning calm, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, sincere and steady, clear Japanese diction, comfortable mid-range, gentle and warm, alto joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -3167,20 +2586,6 @@
 「このばしょを かいふくしてください」
 そうしゅにもとめるだけで よいのです
 
-[Chorus]
-じぶんじしんを ただしくみつめるなら
-さばきをうけずに すみますから
-しゅのまえで しょうじきになること
-それがかいふくの はじまりです
-
-[Verse 4]
-つきのはじめに ノートをひらき
-たましいのにわを みまわります
-ひととではなく きのうのわたしと
-みてのあとを かぞえるために
-
-[Instrumental Interlude]
-
 [Bridge]
 こんなんのなかにも しゅのへいあんが
 しずかなかわのように ながれているか
@@ -3208,7 +2613,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Tender Japanese Christian meditation hymn, felt piano, solo cello, subtle pipe organ, warm strings, quiet compassion and peaceful grateful joy, soft sunrise warmth in weakness held by grace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, calm compassionate tone, clear Japanese diction, comfortable mid-range, gentle and warm, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -3241,20 +2646,6 @@
 「よわいときは しゅにささえられている」と
 そのすがたこそ しんこうのいさん
 
-[Chorus]
-わたしがよわい そのときにこそ
-しゅのちからが かんぜんにあらわれる
-あなたのめぐみは じゅうぶんだから
-このよわさのなかを ながれてください
-
-[Verse 4]
-「もういぜんとおなじには できません」
-しょうじきにいえる きょうのわたし
-そのこくはくは よわさではなく
-みてへうつりすむ ちえなのです
-
-[Instrumental Interlude]
-
 [Bridge]
 しゅよ このげんかいを おわたしします
 からだのげんかいも こころのげんかいも
@@ -3282,7 +2673,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet meditation opening into peaceful grateful joy, sunrise after a long night, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, small choir only in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -3314,20 +2705,6 @@
 からだのよわさ しょうらいのふあん
 けれどそのむこうで かみさまが
 そだてておられるものが みえるのです
-
-[Chorus]
-にんたいはねられた ひんせいをうみ
-ひんせいはたしかな きぼうをうむ
-このしれんのなかでも しゅはきょうも
-わたしをかたちづくって おられます
-
-[Verse 4]
-かなしむことは よわさではない
-なみだもまた しぜんないのり
-けれどそのなみだの おくのほうで
-そだてられている ものがある
-
-[Instrumental Interlude]
 
 [Bridge]
 ながいよるをこえて あさひがのぼるように
@@ -3386,19 +2763,7 @@
 すこしやすんで ひかりをあびること
 それもしゅがそなえたみちです
 
-[Chorus: full strings swell]
-かみはしんじつなおかた
-たえられないしれんには あわせない
-しゅによりたのむこのすがたを
-こどもやまごに のこせますように
-
 [Instrumental Interlude]
-
-[Verse 4]
-ひとりだとおもえるよるも
-しょうらいがふとこわくなるあさも
-かみはげんかいをごぞんじで
-みてはくるしみにとどいている
 
 [Bridge]
 しゅよ のがれのみちを
@@ -3460,18 +2825,6 @@
 ひとのいたみをおもうあわれみ
 それがのこされたじゅんきんです
 
-[Chorus]
-ためされたのち わたしは
-じゅんきんのようになってでてくる
-ひをくぐったしんこうは
-きんよりもとうといたからもの
-
-[Verse 4]
-くるしいときにもせめなかった
-ちちのやわらかなまなざし
-まちわびながらいのりつづけた
-ははのせなかをおぼえている
-
 [Bridge]
 いたいものはいたいままに
 もうしあげてよいのです
@@ -3530,18 +2883,6 @@
 きょうというマナをひろいながら
 やくそくのちへ あるいてゆく
 
-[Chorus]
-ひとはパンだけでいきるのではない
-しゅのくちからでる みことばによって
-きょうもいかされてゆく
-あれのは めぐみのがっこう
-
-[Verse 4]
-にぎりしめていたほこりが
-すこしずつ ほどけてゆき
-からにされたこのりょうてへ
-あたらしいめぐみがそそがれる
-
 [Bridge]
 ひくくされることさえも
 ふかいめぐみとしりました
@@ -3599,18 +2940,6 @@
 しゅはパンとねむりをあたえられた
 よくたべ よくやすみ
 しずかなこえにみみをすまそう
-
-[Chorus]
-しゅをまちのぞむひとは
-あたらしいちからをうける
-わしのようにつばさをひろげ
-もういちど のぼってゆける
-
-[Verse 4]
-しずんだこころにむかって
-しんりをかたりきかせよう
-かんじょうよりもさきにたつ
-かみのしんじつがあるから
 
 [Bridge]
 かくさずさしだします
@@ -3671,18 +3000,6 @@
 よりたのむこころがそだちました
 みみできいていたしゅを
 いまはこのめであおいでいます
-
-[Chorus]
-くなんはにんたいをうみ
-にんたいはねられたひんせいを
-ひんせいはきぼうをうむ
-ためされたのち じゅんきんのようにかがやく
-
-[Verse 4]
-あたまでしっていたしんこうが
-こころでいきるしんこうへ
-よのラベルをぬぎすてて
-かみのことしてたっています
 
 [Bridge]
 うしなったもののかずよりも
@@ -3746,18 +3063,6 @@
 ことばにならないひは
 だまってそばにいるだけでいい
 
-[Chorus]
-てんにおられる
-わたしたちのちちよ
-やくめをおえたこのときこそ
-あなたとしたしむめぐみのとき
-
-[Verse 4]
-ながくつれそったひとと
-だまってすごすごごのように
-ことばをこえたやすらぎが
-しゅとのあいだにもあります
-
 [Bridge]
 このしずかなひとときから
 かぞくへのいのりがうまれ
@@ -3817,18 +3122,6 @@
 ゆうわくからおまもりください
 ことばのでないひには
 このいのりだけでじゅうぶんです
-
-[Chorus]
-てんのちちよ きょうも
-ひごとのかてをおあたえください
-まいにちのこきゅうのようにいのり
-こやまごへてわたせますように
-
-[Verse 4]
-れいはいからはじまるいのり
-ゆるしとまもりでむすぶいのり
-むっつのねがいのひとつずつに
-きょうのくらしをかさねます
 
 [Bridge]
 いつかこらはおもいだす
@@ -3890,18 +3183,6 @@
 ながくいきたからこそしる
 かぞえきれないめぐみがある
 
-[Chorus]
-なにもおもいわずらわず
-かんしゃをこめていのろう
-かんしゃしながらもんにはいり
-さんびしながら しゅのにわへ
-
-[Verse 4]
-まず あなたをほめたたえ
-つぎにこころをひらいてこくはくし
-めぐみをかぞえてかんしゃして
-おわりにねがいをもうしあげる
-
 [Bridge]
 ねんりんをかさねたかんしゃには
 しょうがいのおもみがあります
@@ -3961,18 +3242,6 @@
 せんたくものをたたむとき
 しゅよ ありがとうございますと
 くらしのふしめによびかける
-
-[Chorus]
-たゆまずいのり
-かんしゃをもってめをさまそう
-あらゆるいのりとねがいを
-せいれいによって ささげよう
-
-[Verse 4]
-ごふんのちんもくのなかで
-おもいがゆれてもかまわない
-ただしゅがここにおられると
-こころをしずめてすわります
 
 [Bridge]
 きょうはひとりのなまえを
@@ -4034,19 +3303,6 @@
 まだみぬまごのまごのためにも
 いのりはときをこえてゆく
 
-[Chorus: small choir]
-すべてのひとのために
-ねがい いのり とりなし
-かんしゃをささげよう
-ひとりのははのいのりが
-このしょうがいをささえるように
-
-[Verse 4]
-わたしのためにも だれかが
-いのってくれたひがありました
-あのぬくもりをむねにいだき
-きょうはわたしがいのるばんです
-
 [Bridge]
 くるしみのなかのひとりの
 なまえをきょうもよびながら
@@ -4106,18 +3362,6 @@
 ちいさないのりのへやをつくる
 できなかったひはせめずに
 またあした しずかにもどればいい
-
-[Chorus]
-いぜんからしていたように
-きょうもいのります
-ながいねんげつのしずかなリズムが
-いのりをふかくしてくれる
-
-[Verse 4]
-りょうてをあわせ こうべをたれて
-せいしょをひらき しゅへむかう
-びょういんへいくひも ごふんでも
-おなじばしょへかえってゆく
 
 [Bridge]
 あらしのひにもかわらずに
@@ -4179,18 +3423,6 @@
 くさりをとき くびきをはずす
 それがしゅのよろこばれるだんじき
 
-[Chorus: unison]
-いまからでも こころをつくして
-しゅのもとへかえろう
-むりのないちいさなささげもの
-あいにかえてくださるしゅ
-
-[Verse 4]
-つきにいちどのちいさなよはく
-いちじかんのしずかなひととき
-おおきなけっしんでなくても
-しゅへのかわきはふかくなる
-
 [Bridge]
 しゅよ このあけたりょうてを
 あなたへさしだします
@@ -4250,18 +3482,6 @@
 いのりませんかとこえをかけよう
 しょくたくをかこむかぞくと
 ひとことずついのってみよう
-
-[Chorus]
-ふたりまたはさんにんが
-しゅのなによってあつまるなら
-そのただなかに しゅはおられる
-みじかいいのりにも しゅはおられる
-
-[Verse 4]
-よわっていたあのきせつに
-となりのいのりにささえられた
-いのりでむすばれたともは
-しょうがいのたからになります
 
 [Bridge]
 ははがひとこと こがひとこと
@@ -4323,18 +3543,6 @@
 ひとりでたたかわないで
 いのってくださいとともにたのもう
 
-[Chorus]
-みをつつしみ めをさましていよう
-おそれることはない
-わたしのうちにおられるかたは
-よにいるものよりも ちからがある
-
-[Verse 4]
-たたかいはおおきなばしょより
-まいにちのちいさなばしょで
-そのたびみじかいひとことの
-いのりとみことばでこたえよう
-
 [Bridge]
 よくたべ よくやすむことも
 しゅがそなえられたまもりのひとつ
@@ -4395,18 +3603,6 @@
 ぶぐをまとうとはすなわち
 しゅイエスをみにまとうこと
 
-[Chorus]
-しゅにむすばれて
-そのいだいなちからによってつよくなろう
-いっぷんのあさのいのりが
-いちにちのこころをととのえる
-
-[Verse 4]
-かていへ びょういんへ きんじょへも
-へいあんをはこぶあしになろう
-あらそいではなく やわらぎを
-ことばとほほえみでとどけよう
-
 [Bridge]
 ふあんなひにはたてをおもい
 くらいあさにはかぶとをかぶる
@@ -4438,6 +3634,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -4466,18 +3663,6 @@
 しゅよ あさごとにちえをください
 キリストをたかくするみちをえらびます
 
-[Chorus]
-すべてをよくたしかめ
-よいものをたいせつにします
-わるいものは どんなかたちでもしりぞけて
-しんりのうちを しずかにあゆみます
-
-[Verse 4]
-みことばとひとつにひびくだろうか
-キリストをたかくあおいでいるか
-あいとへいあんのみはそだつか
-しんこうのともとともにたしかめる
-
 [Bridge]
 ひかりのてんしをよそおうかげも
 ここちよいこえにまぎれるから
@@ -4495,6 +3680,7 @@
 へいあんのうちに きょうをあゆみます
 
 [End]
+
 ```
 
 ---
@@ -4510,6 +3696,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano and soft organ]
 
 [Verse 1]
@@ -4538,18 +3725,6 @@
 しゅとのしたしさをつくり
 こやまごのこころにものこります
 
-[Chorus]
-たえずいのり どんなときにもかんしゃする
-それが あなたのみこころ
-あさごとのちいさないのりが
-しょうがいのたからとなります
-
-[Verse 4]
-いのりはつとめではなくであい
-しずけさのなかでしゅとあうじかん
-りょうではなくふかさによって
-ばんねんのひびはみたされてゆく
-
 [Bridge]
 あさのひかりでも ちんもくでも
 あるきながらのひとこきゅうでも
@@ -4567,6 +3742,7 @@
 アーメン かんしゃします
 
 [End]
+
 ```
 
 ---
@@ -4582,6 +3758,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano and acoustic guitar]
 
 [Verse 1]
@@ -4602,12 +3779,6 @@
 ばんねんはおわりのばしょではないと
 あのひとのあゆみがおしえてくれる
 
-[Chorus: small choir]
-しゅのことばにしたがって
-きょうのいっぽをふみだします
-すべてをしらなくてもいい
-あなたがみちをしめしてくださる
-
 [Short Interlude]
 
 [Verse 3]
@@ -4615,12 +3786,6 @@
 きょう でんわをかけてみよう
 ちいさなわかいのいっぽさえ
 しゅがよろこんでくださるから
-
-[Verse 4]
-むねのおくにしまったちいさなほうし
-きょうそのとびらをそっとひらく
-いっぽをふみだすそのたびに
-しゅがつぎのみちをてらされる
 
 [Bridge]
 ななじゅうごからひゃくさいまでの
@@ -4639,6 +3804,7 @@
 あたらしいいっぽを きょうもふみだします
 
 [End]
+
 ```
 
 ---
@@ -4654,6 +3820,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -4682,18 +3849,6 @@
 ともにまつともとてをとり
 かみのときを しずかにまちます
 
-[Chorus]
-アブラムはしゅをしんじた
-しゅはそれをぎとみとめられた
-ながくにんたいしたそのさきで
-やくそくのものをうけとります
-
-[Verse 4]
-もうむりだとつぶやいたよるも
-やくそくはきえていませんでした
-ながくまってあたえられたこたえを
-かぞえればかんしゃがあふれます
-
 [Bridge]
 いそぐこころをみまえにおいて
 かみのときはかならずくると
@@ -4711,6 +3866,7 @@
 あなたのやくそくはしんじつだから
 
 [End]
+
 ```
 
 ---
@@ -4726,6 +3882,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -4754,18 +3911,6 @@
 すこしずつてばなしながら
 のこるひびを あなたとともに
 
-[Chorus]
-さらにすぐれたふるさとがある
-てんにある まことのふるさと
-このちじょうはかりのやど
-みあげるこころはじゆうになる
-
-[Verse 4]
-もちものをひとつわかちあえば
-こころはかるく そらはちかくなる
-さきにめされたなつかしいかおに
-やがてあえるひをおもいます
-
 [Bridge]
 ざいさんもたちばもけんこうも
 みなちじょうのかりものだから
@@ -4783,6 +3928,7 @@
 きょうのみちをせいじつにあゆむ
 
 [End]
+
 ```
 
 ---
@@ -4798,6 +3944,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: solo piano]
 
 [Verse 1]
@@ -4815,14 +3962,6 @@
 しょうがいかけてきずいたもの
 そのすべてをみまえにおく
 それがばんねんのけんしんです
-
-[Verse]
-かみはイサクをかえされた
-てばなしたこのてにもういちど
-さらにゆたかなやくそくを
-そのひらにのせてくださった
-しんぱいはいのりへかえられて
-かぞくにのこるしんこうのかたち
 
 [Bridge]
 しゅよ これをおわたしします
@@ -4843,10 +3982,9 @@
 [Outro: sustained resolution]
 おしまずささげたそのばしょへ
 あふれるめぐみがそそがれます
-おしまぬあいにいだかれて
-きょうもやすらかにゆだねます
 
 [End]
+
 ```
 
 ---
@@ -4862,6 +4000,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: fingerpicked acoustic guitar]
 
 [Verse 1]
@@ -4879,14 +4018,6 @@
 わたしがあなたとともにいる
 たりなさは さまたげにならない
 しゅがともにはたらかれるから
-
-[Verse]
-アブラハムも サムエルも
-なまえをよばれてたちあがった
-しずかなもくそうのこのばしょが
-わたしのもえるしばになる
-みみをすませばあさのひかりに
-きょうもよばれるこえがする
 
 [Subtle Build]
 しずけさのなかでみみをすます
@@ -4909,10 +4040,9 @@
 [Outro: acoustic fade]
 わたしはここにおります
 あなたのこえにこたえます
-ちいさなばしょでかまいません
-きょうもちゅうじつにつかえます
 
 [End]
+
 ```
 
 ---
@@ -4928,6 +4058,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -4956,18 +4087,6 @@
 ささえてくださいとたのむことも
 しゅがあたえたしんこうのちえ
 
-[Chorus]
-しゅはわたしたちとともにおられる
-おそれることはありません
-あれのはとおりぬけるばしょ
-しんこうがふかくされるばしょ
-
-[Verse 4]
-つらかったあのきせつこそ
-しんこうをふかくたがやしたはたけ
-むだにながれたなみだはない
-みなくんれんのめぐみでした
-
 [Bridge]
 きょうはわたしがだれかのとなりで
 さがるてをそっとささえたい
@@ -4985,6 +4104,7 @@
 しゅとともにわたってゆきます
 
 [End]
+
 ```
 
 ---
@@ -5000,6 +4120,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -5028,18 +4149,6 @@
 かみのみまえへはこぶいのり
 それがばんねんのとうといはたらき
 
-[Chorus]
-あいするひとのなまえをよび
-みまえにたっていのります
-からだはよわくなっても
-こころのひざはかがめられる
-
-[Verse 4]
-おもえばわたしのためにもまた
-ながくいのったひとがいました
-そのいのりにささえられて
-きょうのわたしがたっています
-
 [Bridge]
 くずれたところにたちふさがり
 みいかりさえおもいなおさせた
@@ -5057,6 +4166,7 @@
 いのりはどこまでもとどきます
 
 [End]
+
 ```
 
 ---
@@ -5072,6 +4182,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano]
 
 [Verse 1]
@@ -5100,18 +4211,6 @@
 かなわぬゆめがのこっていても
 さいごをうつくしくむかえられる
 
-[Chorus]
-えいえんのかみが わたしのすまい
-えいえんのみうでが したからささえる
-きょうのいのりと きょうのじゅうじゅんを
-さいごまでつみかさねてゆきます
-
-[Verse 4]
-おおきなことはできなくても
-きょうのちいさなもくそうをまもる
-そのつみかさねのいちにちいちにちが
-うつくしいしょうがいになってゆく
-
 [Bridge]
 さいごまでしんこうをまもりたいと
 こへつたえたそのひとことが
@@ -5129,6 +4228,7 @@
 かわることなくささえてくださる
 
 [End]
+
 ```
 
 ---
@@ -5144,6 +4244,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano and soft organ]
 
 [Verse 1]
@@ -5172,18 +4273,6 @@
 まいにちいのるこのすがたを
 こやまごがみつめています
 
-[Chorus]
-わたしがしゅにねがうのは ただひとつ
-しょうがい しゅのいえにすみ
-しゅのうるわしさをあおぎみて
-あなたのそばにとどまること
-
-[Verse 4]
-あれののひも おうきゅうのひも
-たましいはあなたをもとめました
-かわいたちのようなそのあさも
-ひとことのいのりでたります
-
 [Bridge]
 しょうがいささげたこのいのりは
 めにみえないいさんとなって
@@ -5201,6 +4290,7 @@
 アーメン したいもとめます
 
 [End]
+
 ```
 
 ---
@@ -5216,6 +4306,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: felt piano and cello]
 
 [Verse 1]
@@ -5244,18 +4335,6 @@
 ばんねんのくいあらためには
 めぐみをしるうつくしさがある
 
-[Chorus]
-かみよ わたしのうちに
-きよいこころをつくってください
-ゆるがないれいをあたらしくして
-あなたのいつくしみにかえります
-
-[Verse 4]
-ゆるされるしかくはわたしでなく
-あわれみぶかいあなたにある
-いつくしみによってぬぐわれる
-そむきのしみも ふるいなみだも
-
 [Bridge]
 おもにはひとりでかかえずに
 うちあけるとももめぐみのうち
@@ -5273,6 +4352,7 @@
 あなたからいただきます
 
 [End]
+
 ```
 
 ---
@@ -5288,6 +4368,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: felt piano]
 
 [Verse 1]
@@ -5316,18 +4397,6 @@
 あさごとのみことばのまきばで
 きょうもゆっくりやすみます
 
-[Chorus]
-かみはわたしたちのさけどころ
-くなんのとき すぐちかくにいるたすけ
-ひつじかいがおられるから
-ひつようなものはそなえられる
-
-[Verse 4]
-くるしみがきえるのではなく
-そのただなかにさけどころがある
-じょうきょうがどうであろうとも
-このこくはくはかわりません
-
 [Bridge]
 ひつじかいにみちびかれたひびを
 まごのそばでかたりましょう
@@ -5345,6 +4414,7 @@
 とぼしいことはありません
 
 [End]
+
 ```
 
 ---
@@ -5360,6 +4430,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: nylon guitar and piano]
 
 [Verse 1]
@@ -5388,18 +4459,6 @@
 こやまごへてわたします
 あなたのちからをつたえるまで
 
-[Chorus: unison]
-いきているかぎり しゅをほめたたえ
-しょうがい わたしのかみをさんびします
-しらがになってもみすてずに
-みわざをうたわせてください
-
-[Verse 4]
-しらがにきざまれたひとつずつの
-ものがたりがさんびになります
-としおいたもののうたごえが
-きょうかいをそっとささえている
-
 [Bridge]
 すきなさんびをもういっきょく
 ゆっくりこころでうたいます
@@ -5417,6 +4476,7 @@
 このうたがつぎのせだいへながれますように
 
 [End]
+
 ```
 
 ---
@@ -5432,6 +4492,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano]
 
 [Verse 1]
@@ -5460,18 +4521,6 @@
 のこしたいしんこうのいちぶんを
 まずわたしがいきてゆきます
 
-[Chorus]
-しゅはいのちのみちをしめされる
-みまえにはみちあふれるよろこび
-しゅのみぎにはえいえんのたのしみ
-そのやくそくをにぎってあゆみます
-
-[Verse 4]
-おもえばわたしにもしんこうを
-のこしてくれたひとがいました
-あのひとこととあのうしろすがたを
-いまもむねにいだいています
-
 [Bridge]
 まことのつよさはかつことでなく
 しゅのみちをあゆみぬくゆうき
@@ -5489,6 +4538,7 @@
 そのひとことを あいとともにのこします
 
 [End]
+
 ```
 
 ---
@@ -5498,7 +4548,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwind, cello, light organ, attentive stillness, warm major-key resolution, clear peaceful morning joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony on final chorus, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -5531,20 +4581,6 @@
 まつことにつかれた きょうのこのばしょにも
 しゅはしずかに はたらいておられる
 
-[Chorus]
-ひとはあくをくわだてても
-かみはそれを ぜんへかえられる
-たえしのぶひびは むだではない
-しゅがそなえておられる じかんです
-
-[Instrumental Interlude]
-
-[Verse 4]
-どれいのいえでも ろうごくのなかでも
-あたえられたつとめに せいじつにいきた
-そのひとつひとつを かみはもちいて
-めぐみのみちへ つないでくださった
-
 [Bridge]
 たえてとおった わたしのものがたりを
 きょうはまごにも かたりつたえたい
@@ -5573,7 +4609,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness, gentle 6/8, felt piano, solo cello, quiet strings, restrained organ, honest reflection easing into grace, peaceful morning assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, alto support in the outro, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -5606,20 +4642,6 @@
 わたしもゆるされた つみびとだから
 そのめぐみに ささえられて
 
-[Chorus]
-しゅよ、このきずを おゆだねします
-さばきはあなたの みてのうちに
-かみはすべてを ぜんへかえるおかた
-ゆるしのみちを ひらいてください
-
-[Instrumental Interlude]
-
-[Verse 4]
-ゆるすことは あいてのおこないを
-なかったことに するのではない
-おもすぎるには ひとりでかかえず
-ともにいのるともに うちあけます
-
 [Bridge]
 ゆるせないあのひとの なをよんで
 「しゅよ、あのひとを しゅくふくしてください」
@@ -5648,7 +4670,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, cello countermelody, unhurried and still, humble surrender, serene morning light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Baritone-alto duet with gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -5675,25 +4697,11 @@
 りかいをこえた かみのせつりが
 わたしのしょうがいを みちびいていた
 
-[Chorus]
-かみをあいするものには
-すべてのことが ともにはたらいて
-ぜんとなると しゅはやくそくされた
-このやくそくが こころのいかり
-
 [Verse 3]
 いたみはいたみのまま みとめながら
 そこにもしゅが はたらいておられる
 りかいできないことが のこっていても
 あなたのみてに ゆだねます
-
-[Instrumental Interlude]
-
-[Verse 4]
-あしたのけんこうが ふあんなよるも
-このゆくすえが きにかかるひも
-ゆれるこぶねの いかりのように
-このやくそくが わたしをたもつ
 
 [Bridge]
 ぜんへかえられた わたしのひびを
@@ -5723,7 +4731,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic meditation song, nylon-string guitar, soft piano, cello, brief flute, spacious silence between phrases, quiet gratitude, gentle thankful warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed unison refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Final Chorus] [Outro: piano and cello]
 
 ## Suno用歌詞
 
@@ -5755,20 +4763,6 @@
 いっせつをゆっくり あじわうだけで
 そのちいさなかてが ねんげつをかけて
 としをかさねたこころを そだてます
-
-[Chorus: unison]
-ひとはパンだけで いきるのではない
-みことばによって いかされる
-いちにちにいっせつ ひとくちずつ
-たましいのしょくたくに いただきます
-
-[Instrumental Interlude]
-
-[Verse 4]
-いそがしさのなかで せいしょをとじて
-とおざかっていた きせつもあった
-けれどいま えいえんがちかづくあさに
-みことばがまた あたらしくとどく
 
 [Bridge]
 しょくじのりょうは へってきても
@@ -5826,22 +4820,10 @@
 [Instrumental Interlude]
 
 [Verse 4: waltz]
-もてなしにおわれた マルタのように
-こころせわしく すごしたひびよ
-はたらきのうちに おちつきをなくし
-しゅのみこえを ききのがしていた
-
-[Verse 5: waltz]
 せいしょをひらくまえ りょうてをあわせ
 「おかたりください」と ささやくあさ
 ただのもじが みこえにかわり
 わたしにかたる ことばとなる
-
-[Verse 6: waltz]
-あさのベッドのうえ しずかなへやでも
-しゅのあしもとは そこにひらかれる
-ひろさではなく かたちでもなく
-むけるこころが とうといのです
 
 [Bridge: orchestra swell]
 いまのいすでも しょくたくのそばでも
@@ -5871,7 +4853,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian quiet praise hymn, upright piano, viola, soft woodwind responses, light organ, lyrics-forward calm, treasured stillness, warm bright peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, natural breathing, gentle two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -5904,20 +4886,6 @@
 しょくたくのそばに まくらもとにおいて
 まいにちひとたび こころにむかえる
 
-[Chorus]
-あなたのみことばを わたしのこころに
-いっせつでいい ふかくきざんで
-おそれのよるにも なみだのあさにも
-そのことばが わたしをささえる
-
-[Instrumental Interlude]
-
-[Verse 4]
-あけがたにめざめ おそれがわくとき
-とものふほうが とどいたひにも
-きざんだいっせつが くちからながれ
-しゅのみまえへと つれもどされる
-
 [Bridge]
 しゅよ このひとことを
 しょうがい こころにきざんでください
@@ -5946,7 +4914,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Japanese Christian gentle acoustic hymn, nylon-string guitar, piano, cello, gentle flute interlude, open airy space, step-by-step calm assurance, peaceful quiet joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, laid-back unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Final Chorus] [Outro: piano and cello]
 
 ## Suno用歌詞
 
@@ -5973,25 +4941,11 @@
 みちのぜんたいは みえなかったけれど
 しゅはいつも あゆみをまもられた
 
-[Chorus: unison]
-みことばは わたしのあしのともしび
-わたしのみちをてらす ひかりです
-さきはみえなくても だいじょうぶ
-きょうのいっぽの ひかりであるける
-
 [Verse 3]
 あしたのことは あしたのひかりが
 きょうはきょうのひかりで じゅうぶんです
 こころのくらいばしょに いっせつをともし
 きょうのいっぽを ふみだします
-
-[Instrumental Interlude]
-
-[Verse 4]
-さきのすべてを みせないことも
-かみのふかい あいのかたち
-いちどにすべてを みたならば
-このこころは たえられないから
 
 [Bridge]
 おそれのひには 「おそれるな」と
@@ -6021,7 +4975,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian meditative chapel hymn, soft piano, warm pipe organ, nylon guitar, gentle cello, short pauses between phrases, prayerful dialogue mood, warm humble joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in gentle unison, clear Japanese diction, comfortable mid-range, gentle and warm, delicate final harmony, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -6048,25 +5002,11 @@
 ながねんつれそった ふうふのように
 ひとことだけで つうじあえる
 
-[Chorus]
-みことばといのりが であうとき
-あなたとのたいわが はじまります
-いっせつをきいて ひとことかえす
-「しゅよ、あなたに よりたのみます」
-
 [Verse 3]
 いっせつをよんで しばらくとどまり
 こころにとどいた いちごをいだく
 そのちいさなゆききが つみかさなって
 しょうがいでもっともふかい どうはんとなる
-
-[Instrumental Interlude]
-
-[Verse 4]
-きいて とどまり そしてこたえる
-いっせつをにど ゆっくりよみ
-とどいたいちごを しばらくいだいて
-こころのひとことを おかえしする
 
 [Bridge]
 「ありがとうございます」 「おゆるしください」
@@ -6096,7 +5036,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian quiet devotion hymn, soft piano, sustained organ, nylon-string guitar, cello, steady unhurried pulse, humble willing obedience, calm yet joyful warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Senior mixed unison led by baritone and alto, clear Japanese diction, comfortable mid-range, gentle and warm, restrained dynamics, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -6123,25 +5063,11 @@
 「あいしなさい」と きいたひには
 こどもにあいしていると つたえます
 
-[Chorus]
-みことばを おこなうひとに
-なにをするにも あいをもって
-いっぽんのでんわ ひとことのかんしゃ
-そのいっぽが ふかいじゅうじゅん
-
 [Verse 3]
 ひとのめをきにした ひびはすぎて
 いまはしずかに しゅのまえをあるく
 だれにもみえない ちいさないっぽが
 もっともじゅんすいな じゅうじゅんとなる
-
-[Instrumental Interlude]
-
-[Verse 4]
-よいことばをきき こころあたたまっても
-きのうとおなじ あゆみのままなら
-じぶんでじぶんを あざむいてしまう
-きいたことばは いきるためのもの
 
 [Bridge]
 おおきなはたらきの ひびはすぎても
@@ -6171,7 +5097,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian gentle praise song, piano, acoustic guitar, brushed snare, warm strings, easy walking pulse, grateful hopeful purpose, bright unhurried joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, warm storytelling verses, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -6198,25 +5124,11 @@
 いつもあたらしい はっけんをくれる
 ともがそばに いてくれる
 
-[Chorus: small choir]
-あなたのみことばは みつよりもあまく
-わたしのしょうがいの ともとなった
-いちにちじゅうしずかに くちずさんで
-あいすることばと ともにいきる
-
 [Verse 3]
 こどくなひに いっせつをひらけば
 「おそれるな わたしはともにいる」
 ひとがとなりに いないときにも
 みことばがそばで かたりかける
-
-[Instrumental Interlude]
-
-[Verse 4]
-ぎむはかてへと かてはあいへと
-みことばとの あゆみはふかまる
-よまないひには こころがうえて
-ひらけばともの こえがきこえる
 
 [Bridge]
 「これはわたしの しょうがいのことば」
@@ -6246,7 +5158,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of eternal hope, intimate piano, soft strings, restrained French horn, spacious major-key warmth, sunrise serenity after a long night, peaceful grateful joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, small mixed choir on final chorus only, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -6273,25 +5185,11 @@
 しのかげのたにを あゆむときにも
 しゅがともにおられる というやくそく
 
-[Chorus]
-くさはかれ はなはしぼんでも
-かみのことばは えいえんにたつ
-いきていて ちからあることばが
-きょうもわたしに かたりかける
-
 [Verse 3]
 しることばを いきることばに
 ゆるしのことばは わかいのいっぽに
 かんしゃのことばは かぞくへのひとことに
 みことばが せいかつになる
-
-[Instrumental Interlude]
-
-[Verse 4]
-かてとしてうけ あしもとにすわり
-こころにきざんで ともしびとしてあゆむ
-いのりでこたえ ちいさくしたがい
-しょうがいのともと なったことば
 
 [Bridge]
 おおくのせいくを しることよりも
@@ -6321,7 +5219,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian tender morning hymn, gentle 6/8 sway, felt piano, solo cello, quiet strings, intimate opening warming into grace, renewed first-love tenderness, soft peaceful joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, tender legato, soft alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -6348,25 +5246,11 @@
 しゅはせめるより さきによばれる
 「おもいだして かえっておいで」と
 
-[Chorus]
-あいするかたの こえがきこえる
-やまをこえ おかをとびこえて
-しゅはわたしのもとへ きてくださる
-はじめのあいへ かえろう
-
 [Verse 3]
 むかしとおなじ あつさでなくていい
 としをかさねたいまは もっとしずかに
 もっとふかく ゆるがないあいで
 あなたをあいする ものとなりたい
-
-[Instrumental Interlude]
-
-[Verse 4]
-れいはいもいのりも つづけてきたのに
-したしさだけが うすれていた
-ただしさのおくで ひえていたこころ
-しゅはごぞんじで よんでおられた
 
 [Bridge]
 おもいだします あのぬくもりを
@@ -6396,7 +5280,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian quiet hymn of repentance, flowing 6/8, felt piano, cello, thin warm strings, restrained organ, honest confession resolving into light, calm evening peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Sincere mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, gentle alto in the outro, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -6423,25 +5307,11 @@
 くいあらためを あしたにのばさず
 きょうきづいたひとつを しゅのもとへ
 
-[Chorus]
-つみをこくはくするなら
-しんじつなしゅは ゆるしてくださる
-じぶんをせめる へやのとびらをあけて
-ひかりのなかへ かえります
-
 [Verse 3]
 ねむりにつくまえ いちにちをかえりみて
 みじかくこくはくし ゆるしをうける
 こころをかるくして へいあんのうちに
 こんやもやすらかに ねむります
-
-[Instrumental Interlude]
-
-[Verse 4]
-きぶんによって ゆるすおかたでなく
-しゅはしんじつな ただしいおかた
-みこがだいかを はらわれたから
-こくはくするものは きよめられる
 
 [Bridge]
 ながくじぶんを せめなくていい
@@ -6471,7 +5341,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian gentle hymn of reconciliation, soft 6/8, felt piano, solo cello, quiet warm strings, humble courage and grace, gradually opening warmth, peaceful morning hope, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm restrained baritone, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried heartfelt delivery, mature alto joining the outro, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -6498,25 +5368,11 @@
 じゅうじかはかみが さきにさしのべた
 わかいのみて だったのです
 
-[Chorus]
-まずいって わかいしなさい
-できるかぎり じぶんのがわから
-しゅがさきに ちかづいてくださった
-わたしもいっぽを ふみだします
-
 [Verse 3]
 「ながいあいだ こころにかかっていました」
 「きずつけたなら ごめんなさい」
 そのひとことから はじめればいい
 けっかはしゅに おゆだねして
-
-[Instrumental Interlude]
-
-[Verse 4]
-いつかはなせると おもううちに
-あえないひが くるかもしれない
-としをかさねた きょうこのひこそ
-かみがそなえられた わかいのとき
 
 [Bridge]
 うけいれられない こともあるでしょう
@@ -6546,7 +5402,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian family blessing hymn, lilting 6/8, felt piano, cello, warm strings, restrained organ, quiet intercessory devotion, covenant assurance, gentle thankful peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm fatherly baritone, clear Japanese diction, comfortable mid-range, gentle and warm, calm prayerful phrasing, soft alto support at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -6573,25 +5429,11 @@
 モニカのなみだの いのりのように
 かみのときに とどくとしんじて
 
-[Chorus]
-わたしとわたしのいえは しゅにつかえます
-じんせいのゆうべに こくはくします
-かみのめぐみは いちだいでおわらず
-こへまごへと ながれてゆく
-
 [Verse 3]
 つかえなさいと いいつづけるより
 つかえるへいあんな すがたをみせよう
 かんしゃするすがた ゆるすすがたが
 かていのちゅうしんに しゅをむかえる
-
-[Instrumental Interlude]
-
-[Verse 4]
-みながおなじに なることでなく
-もんだいがすべて きえることでもない
-かていのまんなかに もういちど
-しゅをおむかえする ことなのです
 
 [Bridge]
 ともにいのれる ひとりのかぞく
@@ -6651,19 +5493,7 @@
 なみだをながすよるも しんこうのあかし
 うつむくこころを しゅへむけます
 
-[Chorus]
-わたしのたましいは いけるかみを
-かわきもとめます たにがわのように
-かわきはみたしへの まねきだから
-しゅよ きょうも あなたをしたいます
-
 [Interlude: woodwind]
-
-[Verse 4]
-としをかさねて おぼえるこのかわきは
-はずかしいことでは ありません
-かみがあたえられた せいなるしたい
-もとめるばしょに しゅはもうおられる
 
 [Bridge]
 ひとりでかかえた かわきのことばを
@@ -6725,18 +5555,6 @@
 こごとではなく いのりをささげ
 さばきではなく あいをそそぎます
 
-[Verse 4]
-あるひかかってくる いっぽんのでんわ
-おなじしょくたくに すわるそのひを
-しゅがしずかに そなえてくださる
-てんがよろこぶあさを まちのぞみます
-
-[Chorus]
-ひつじかいは うしなわれたいっぴきを
-みつけるまで さがしつづけられる
-しゅがあきらめて おられないのなら
-わたしもあきらめず いのりつづけます
-
 [Bridge]
 しゅよ あのこを さがしだしてください
 わたしはここで まちつづけます
@@ -6795,19 +5613,7 @@
 ひざをかがめて みなをよぶとき
 きょりはしずかに ちぢまってゆく
 
-[Chorus]
-かみにちかくあることこそ
-わたしのさいわいです
-ちかづくたましいを しりぞけないおかた
-しゅよ もっとちかくへ みちびいてください
-
 [Interlude: woodwind]
-
-[Verse 4]
-あさのみことば ひるのひとこきゅう
-よるのみじかい かんしゃのいのり
-ちいさなじかんを つみかさねながら
-いちにちをあなたの そばですごします
 
 [Bridge]
 いきをすいながら かみにちかづき
@@ -6869,18 +5675,6 @@
 きょうのあさひと ともにそそがれた
 あたらしいあわれみが ながれています
 
-[Verse 4]
-きょうひとこと いのれたのなら
-きのうよりいっぽ しゅにちかづいた
-ちいさなかいふくが つみかさなって
-いつかおおきな へんかになります
-
-[Chorus]
-しゅのいつくしみは つきることなく
-そのあわれみは おわりません
-あさごとにあたらしい めぐみのなかで
-ちいさなかいふくを かさねてゆきます
-
 [Bridge]
 しゅこそわたしの うけるぶんです
 だからしずかに まちのぞみます
@@ -6939,19 +5733,7 @@
 おそれはすこしずつ ちいさくなって
 しずかなそなえの ときがはじまる
 
-[Chorus]
-しはおわりではなく とびらです
-しゅにおあいする ひらかれたとびら
-むかえにきてくださる やくそくをいだいて
-おそれではなく へいあんのなかをあゆむ
-
 [Interlude: soft horn]
-
-[Verse 4]
-さいごのこきゅうが おわるそのとき
-イエスさまが むかえてくださる
-こをむかえる ちちおやのように
-りょううでをひろげて まっておられる
 
 [Bridge]
 「わたしはふたたびきて あなたをむかえる」
@@ -7011,19 +5793,7 @@
 おもいえがくたび おそれはすこしずつ
 あいたいおもいへ かわってゆきます
 
-[Chorus]
-かみはすべてのなみだを
-そのめからぬぐってくださる
-もはやしはなく かなしみもなく
-さけびもいたみも すぎさります
-
 [Interlude: soft horn]
-
-[Verse 4]
-あけがたひとりで ながしたなみだも
-だれにもみせずに ながしたなみだも
-しゅはみんな ごぞんじですから
-さいごにはみてで ぬぐってくださる
 
 [Bridge]
 さいごのへやに ひとりにみえても
@@ -7083,19 +5853,7 @@
 つちへかえるみちは つくりぬしのさだめ
 おだやかなみちと うけとめます
 
-[Chorus]
-つちのちりで かたちづくられて
-いのちのいきを ふきいれられた
-からだはつちへ れいはかみへ
-あたえぬしのもとへ かえってゆきます
-
 [Interlude: woodwind]
-
-[Verse 4]
-としをかさねるほど たましいはふかくなり
-こにはやさしく ともはなつかしく
-しゅのみまえに ひざまずきたいと
-ねがうこころが そだってゆきます
 
 [Bridge]
 しゅよ このからだも このたましいも
@@ -7157,18 +5915,6 @@
 かんぜんでなくても よりたのんであゆんだ
 このしょうがいを しゅにかんしゃします
 
-[Verse 4]
-いちにちひとつの ちいさなととのえが
-ひとつきたてば さんじゅうのめぐみ
-ふるいともへおくる いっつうのてがみも
-たびだちへそなえる しずかないっぽ
-
-[Chorus]
-わたしのへいわを あなたにあたえる
-よがあたえるものとは ちがうへいわを
-かんきょうがかわっても うしなわれない
-そのへいあんのなかを あゆんでゆきます
-
 [Bridge]
 しゅよ おろせずに いるにもつを
 きょうはひとつだけ おわたしします
@@ -7227,19 +5973,7 @@
 おしえこむよりも あいをこめて
 ひつようなことばを のこしたのです
 
-[Refrain]
-みてきためぐみを わすれないで
-こどもやまごへ つたえましょう
-しょうがいをかけて しったしんりを
-あいのことばで てわたししましょう
-
 [Instrumental Interlude]
-
-[Verse 4]
-つたえそびれた あやまりのことば
-のこっているなら しゅにねがいます
-きかいとゆうきを あたえてくださいと
-やわらいだこころで かきはじめます
 
 [Final Verse and Refrain]
 ひとりひとりへ ちがうひとことを
@@ -7297,19 +6031,7 @@
 モーセがねがったのは ながさではなくて
 のこりのひびを よくいきるちえ
 
-[Chorus]
-わたしたちのひを かぞえることを
-しゅよ どうかおしえてください
-「きょう」とよばれている そのあいだに
-たがいにはげまし あいをつたえます
-
 [Interlude: soft horn]
-
-[Verse 4]
-あしたではなくて きょうつたえます
-「あいしている」と いうひとことを
-あしたではなくて きょうゆだねます
-おろせずにいた おもいにもつを
 
 [Bridge]
 あさのいのりに ひとことそえます
@@ -7369,19 +6091,7 @@
 ごひゃくにんがあおいだ よみがえりのしゅ
 れきしにおこった たしかなできごと
 
-[Chorus]
-しよ おまえのしょうりは どこにあるのか
-しよ おまえのとげは どこにあるのか
-しゅははかをやぶって よみがえられた
-わたしにもふっかつの あさがきます
-
 [Interlude: soft horn]
-
-[Verse 4]
-ひざのいたみも きこえにくさも
-かすむめも そのあさにはない
-あたらしいからだで めをさますとき
-ためいきはさんびへ かわるでしょう
 
 [Bridge]
 ぜつぼうのなかから たちあがるちから
@@ -7441,19 +6151,7 @@
 あいのことばを のこすひびをすぎ
 ふっかつのあさの やくそくまできた
 
-[Chorus]
-しのかぎは しゅのみてにある
-だからわたしは おそれません
-ひらかれるとびらは おそれのとびらではなく
-むかえいれられる であいのとびら
-
 [Interlude: soft horn]
-
-[Verse 4]
-さいごのひを ひきよせすぎず
-きょうはきょうのために いきるひです
-あさのいのり いっせつのことば
-かぞくへのあいが ふかいそなえです
 
 [Bridge]
 あさのいのりをまもり いっせつをむねに
@@ -7515,18 +6213,6 @@
 いっぱいのおちゃ ひとことのしんせつ
 そのばしょにみくにの かおりがながれる
 
-[Verse 4]
-おおきなできごとを またなくていい
-ちいさなしゅんかんに しゅはおられます
-なにもないいちにちと おもえたひにも
-みくにはしずかに きていました
-
-[Chorus]
-かみのくには たべのみではなく
-せいれいがあたえる ただしさと
-へいわとよろこび このこころのうちに
-きょうもあなたの くにがきますように
-
 [Bridge]
 けさもへいあんに めざめたそのばしょ
 このためにいのる そのちいさなばしょ
@@ -7586,18 +6272,6 @@
 みまえにひざまずいた ときでした
 かんきょうがかわっても かわらないへいあん
 そのひみつをきょうも いきてゆきます
-
-[Verse 4]
-しんぱいをけすことは できなくても
-じゅんじょをかえることは できるのです
-しゅのごしはいを さいしょにおくとき
-しんぱいはただしい ばしょにおさまる
-
-[Chorus]
-しゅよ きょうまず あなたのくにをもとめます
-あしたのことは あしたにまかせて
-しんぱいよりもさきに あなたをおいて
-へいあんのなかを あゆんでゆきます
 
 [Bridge]
 まずもとめなさいと いわれたおかたは
@@ -7659,18 +6333,6 @@
 もっともひくい じゅうじかまでくだられた
 そのかたをかみは たかくあげられた
 
-[Verse 4]
-かぞくのたすけは しゅのみてのしるし
-めいわくではなく ともにあゆむめぐみ
-できることが すくなくなっても
-いのりのほうしは きょうもできます
-
-[Chorus: small choir]
-おおいなるものに なりたいひとは
-みなにつかえる ものとなりなさい
-ひくくなるみちも しゅとともになら
-へいあんとかんしゃで あゆんでゆけます
-
 [Bridge]
 しゅよ おさなごのように
 あなたのみてに よりたのみます
@@ -7728,19 +6390,7 @@
 こやまごはいつか おもいだすでしょう
 ゆるがなかった あなたのすがた
 
-[Chorus: flute accompaniment]
-あなたはよのひかり ちのしおです
-ちいさなひとりにした そのあいは
-しゅイエスごじしんへの おくりもの
-ひかりをかがやかせ きょうもいきよう
-
 [Instrumental Interlude]
-
-[Verse 4]
-しずかないすに すわるだけでも
-しんこうのかおりは ながれてゆく
-ガリラヤのりょうしにも かたられたことば
-「あなたはひかり」と きょうもひびく
 
 [Bridge]
 しゅよ おおきなものは もとめません
@@ -7808,14 +6458,6 @@
 できるかぎり わたしのがわから
 すべてのひとと へいわにいきます
 
-[Verse 4]
-どちらがただしいか きめるのでなく
-きれたところを むすびなおすこと
-「ふたりともおなじに あいしている」
-そのまごころが かべをとかす
-りがいをはなれた しずかなめに
-わかいへのみちが みえてきます
-
 [Bridge]
 しゅよ へいわのきみ イエスさま
 こわしたばしょも みまえにおきます
@@ -7826,7 +6468,6 @@
 へいわをつくるひとは さいわいです
 かみのこどもと よばれるから
 できるかぎり わたしのがわから
-あたたかなひとこと たずさえて
 へいわへのいっぽを ふみだします
 
 [End]
@@ -7872,18 +6513,6 @@
 こやまごが そうおぼえるなら
 それはなにより おおきないさん
 しょうがいのすがたが おしえとなる
-
-[Chorus]
-かたくたって ゆらぐことなく
-しゅのはたらきに はげみなさい
-しゅにあっておこなう そのろうくは
-けっしてむだには なりません
-
-[Verse 4]
-ふせいをことわって おくれたあゆみ
-しんじつをかたって うまれたきょり
-そのひとつずつに しゅはめをとめ
-てんのみくにを やくそくされる
 
 [Bridge]
 しゅよ ゆらいだひも ありました
@@ -7945,18 +6574,6 @@
 いちにちひとつの あいのかけらが
 みくににつまれる しんこうのあしあと
 
-[Chorus]
-もっともちいさいものの ひとりにしたこと
-それはわたしに してくれたこと
-しゅのことばを むねにいだいて
-きょうもいっぽ ちいさなじゅうじゅん
-
-[Verse 4]
-でんわがむずかしい ひがきても
-みじかいカードを かけるでしょう
-とこにふすひも しゅくふくはできる
-いのりはどこでも とどけられる
-
 [Bridge]
 しゅよ とおりすぎた しんせつもありました
 めんどうにおもった ひもゆるしてください
@@ -8016,18 +6633,6 @@
 わたしはいまも みくにのたみ
 むしろふるさとへ ちかづいている
 のこされたひびを みくににいきる
-
-[Chorus]
-かみのくには たべのみではなく
-せいれいによる ぎとへいわとよろこび
-みくにがきますように きょうここに
-わたしのこころを おうざとしてください
-
-[Verse 4]
-とみもめいよも けんこうさえも
-みくにのしるしでは ありません
-こころのおうざに しゅをむかえる
-それがしるしと せいしょはかたる
 
 [Bridge]
 しゅよ へいぼんな しょくたくにいまに
@@ -8089,18 +6694,6 @@
 しょくたくでいのる ちいさなすがたを
 こやまごはみて おぼえている
 
-[Chorus: unison]
-なにをするにも しゅイエスのなによって
-ことばとわざの すべてをもって
-ちちなるかみへ かんしゃしながら
-すべてのばしょが せいなるばしょ
-
-[Verse 4]
-いっぱいのおちゃを いただくときも
-ねむりにつくまえの しずけさも
-おおきなできごとは いらないのです
-しゅをおもうこころが あればいい
-
 [Bridge]
 しゅよ わけてきた ひびをゆるして
 わすれてすごした ばしょもみまえに
@@ -8160,18 +6753,6 @@
 いちにちぜんぶを かたちづくる
 しんぱいよりもさきに みなをよぶ
 そのしゅうかんが いかりになる
-
-[Chorus: unison]
-しゅのあわれみは あさごとにあたらしく
-しゅのしんじつは おおきいのです
-ふとんをめくる そのまえに
-「しゅよ きょうも」と よびかけます
-
-[Verse 4]
-おなじいすにすわり おなじじこくに
-しずかにひらく みことばのページ
-ながくまもられた そのばしょこそ
-しんこうをそだてる あさのいずみ
 
 [Bridge]
 しゅよ あさのさいしょを しんぱいにわたした
@@ -8233,18 +6814,6 @@
 しょくたくはいつも れいはいのばしょ
 まごのこころにも いのりはのこる
 
-[Chorus: unison]
-あいするかたは わたしをつれていく
-しゅくえんのいえへ まねいてくださる
-かかげられたはたは あいでした
-よろこびとまごころで いただきます
-
-[Verse 4]
-しょくたくをかこむ かいわのなかで
-きょうのかんしゃを ひとつかたる
-こころにのこった みことばひとふし
-そのわかちあいも いのりになる
-
 [Bridge]
 しゅよ かんしゃをわすれて すぎたしょくたく
 そのひびもどうか ゆるしてください
@@ -8304,18 +6873,6 @@
 しずかなにちじょうこそ しんこうのぶたい
 きょうしたくない ひとつのことも
 いのってささげれば れいはいとなる
-
-[Chorus: unison]
-おこたらず こころをもやして
-しゅにつかえなさい としゅはいわれる
-ゆっくりでいい ちいさくていい
-そのねっしんを しゅはよろこばれる
-
-[Verse 4]
-わかいひのような ねつではなくても
-ゆっくりちいさな ほのおでいい
-きょうもてあしを うごかせること
-それじたいがもう めぐみです
 
 [Bridge]
 しゅよ いやいやながら おこなったひびを
@@ -8377,18 +6934,6 @@
 いちぎょうのたよりも であいになる
 こころにうかぶ ひとりのもとへ
 
-[Chorus]
-ふへいをいわず もてなしあいなさい
-みことばをむねに きょうもであう
-しゅよ このであいを ささげます
-わたしをとおして あなたのあたたかさを
-
-[Verse 4]
-びょういんのまちあいで となりあうひと
-かわすまなざしも しゅのおくりもの
-おだやかなえがおと みじかいあいさつが
-だれかのいちにちを あかるくする
-
 [Bridge]
 しゅよ めんどうにおもった であいをゆるし
 あうひとごとに いのらせてください
@@ -8449,18 +6994,6 @@
 きょうとおなじこころで いっぽずつ
 さいごのひまで しゅとあるこう
 
-[Chorus: small choir]
-ぜんちよ よろこびのこえをあげよ
-よろこびをもって しゅにつかえよう
-しゅのいつくしみは えいえんに
-そのしんじつは よよにおよぶ
-
-[Verse 4]
-こころにのこった ひとふしをむねに
-めぐみのふかかった ひをかぞえる
-あゆみをともに わかちあえば
-めぐみはさらに ふかくなる
-
 [Bridge]
 しゅよ かたちだけの あさもありました
 よめずにとじた ひもありました
@@ -8519,19 +7052,7 @@
 みことば いのり れいはいのばしょ
 それがひびを みたしてくれる
 
-[Chorus: violin accompaniment]
-わたしたちのひを かぞえることを
-どうかおしえて くださいしゅよ
-ちえあるこころを あたえてください
-きょうというおくりもの たいせつにいきる
-
 [Instrumental Interlude]
-
-[Verse 4]
-テレビのまえを ただながれるとき
-そのいちぶを いのりへうつす
-あさのもくそうの さんじゅっぷんが
-いちにちまるごと しゅとあゆませる
 
 [Bridge]
 しゅよ むなしく ながしたじかんを
@@ -8593,18 +7114,6 @@
 いまあるものの なかにしゅをみて
 きょうもかんしゃで しょくたくをかこむ
 
-[Chorus]
-おかねをあいすることは あくのね
-みちたりるこころは おおきなとみ
-わたしのひつようを すべてみたすと
-やくそくされるしゅに よりたのみます
-
-[Verse 4]
-ひとりでかかえる おもいにもつは
-しんらいするひとと わかちあえばいい
-きょうもたべるもの きるものがあり
-やすめるばしょが あたえられている
-
 [Bridge]
 しゅよ しんぱいが しんらいをおおう
 そのひびをみまえに こくはくします
@@ -8664,18 +7173,6 @@
 さばくよりも さいごまできくこと
 「さいきんどうしてる」と たずねたら
 だまってうなずき みみをかたむける
-
-[Chorus]
-きくことにはやく かたることにおそく
-ことばはいつも めぐみにみちて
-しおであじつけられた ように
-かいわのなかにも しゅはおられる
-
-[Verse 4]
-ふへいのかわりに かんしゃのことば
-ひはんのかわりに なぐさめをひとつ
-いいたいことより あいてのこころを
-さきにうけとめる しずかなちえ
 
 [Bridge]
 しゅよ きくまえに かたったひびと
@@ -8737,18 +7234,6 @@
 あるけないひには まどべにたって
 えいこうをかたる そらをみあげる
 
-[Chorus: unison]
-しゅよ あなたのみわざは
-なんとおおいことでしょう
-ちえによって みなつくられ
-ちはあなたのもので みちています
-
-[Verse 4]
-さんぽのとちゅうで であうひとには
-あたたかなあいさつを ひとつてわたす
-ひとりでくらす りんじんのまどへ
-あんぴをたずねる こえをとどける
-
 [Bridge]
 いきをすいながら みわざをあおぎ
 いきをはきながら かんしゃをささげる
@@ -8775,7 +7260,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of gentle calling, warm piano, acoustic guitar, soft strings, light brushed snare, steady walking pulse, hopeful grateful joy, calm and purposeful, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir on refrains, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -8808,20 +7293,6 @@
 はなれてしまったこのことは
 しゅごじしんが さがしてください
 
-[Chorus: small choir]
-こどもたちは しゅからたくされたたから
-たいのみは かみからのむくい
-しゅよ このこをみてにゆだねます
-あゆむべきみちへ みちびいてください
-
-[Instrumental Interlude]
-
-[Verse 4]
-ねがいもさびしさも ほこらしさも
-みんなしょうじきに しゅへつげる
-きょうかいのなかまと いのるわが
-こどものじんせいを つつんでゆく
-
 [Bridge]
 きょうはでんわで ただひとこと
 「げんきですか」と こえをきく
@@ -8849,7 +7320,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese worship ballad, intimate chamber folk, nylon-string guitar, piano, clarinet, warm cello, soft memorable refrain, quiet thankful warmth, calm morning joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, warm natural blend, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -8882,20 +7353,6 @@
 じぶんからさきに てをさしのべる
 そのゆうきを あたえてください
 
-[Chorus: unison]
-あいはにんたいづよく あいはしんせつです
-ゆるされたように ゆるしあおう
-よめとむこのため きょうもいのる
-いのりはかていを まもるちから
-
-[Instrumental Interlude]
-
-[Verse 4]
-まってあげること うけいれること
-それもおやから おくれるあい
-なまえをよんで しゅくふくをいのる
-けんこうとしんこうと そのかていを
-
 [Bridge]
 しられなくても かまわない
 いのりはしずかに いえをまもる
@@ -8923,7 +7380,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian song of quiet fellowship, piano, acoustic guitar, warm strings, gentle brushed snare, unhurried walking tempo, friendly grateful glow, peaceful and steady, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone lead, small senior choir on chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -8956,20 +7413,6 @@
 しんこうのなかをあゆんだゆうじょうは
 さいごのばしょまで ともにゆく
 
-[Chorus: small choir]
-ともはどんなときにもあいし
-きょうだいはくなんのひのためにうまれた
-ふたりはひとりに まさるもの
-たおれるとき おこしてくれる
-
-[Instrumental Interlude]
-
-[Verse 4]
-かずのおおさより ふかさがいい
-ひとりふたりの ともがいれば
-せいねんのひのとも としおいてのとも
-ひとりずつおもい かんしゃする
-
 [Bridge]
 きょう こころにうかぶひとへ
 みじかいたよりを とどけよう
@@ -8997,7 +7440,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Quiet Japanese praise song of humble service, acoustic guitar, piano, light bass, warm strings, softly walking rhythm, modest hopeful joy, calm sense of purpose, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone, gentle senior mixed choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady breath, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -9030,20 +7473,6 @@
 ひざまずいてささげるいのりは
 きょうかいのいちばんつよいちから
 
-[Chorus: small choir]
-てをつけたことは なんであっても
-ちからをつくして おこないなさい
-たまものをもちいて たがいにつかえる
-ちいさなほうしも しゅへのささげもの
-
-[Instrumental Interlude]
-
-[Verse 4]
-つみかさねたちえ いのるちから
-あたたかなそんざい そのものが
-しゅからあずかった たまものだから
-よいかんりしゃとして もちいよう
-
 [Bridge]
 ここにすわって いのること
 それじたいがもう ほうしです
@@ -9071,7 +7500,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic meditation on daily grace, nylon-string guitar, soft piano, cello, brief flute, spacious and unhurried, thankful tender warmth, restful quiet joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, relaxed unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 ♬ 一食に込められた意味, 変わることのない主の愛（いつも私のそばに）
 時は流れても 主の恵みは永遠に (神が造られたものは、すべて良いものです。...)
 朝ごとに新しく 私の魂よ賛美せよ ♬
@@ -9107,20 +7536,6 @@
 いつかおなじいのりをささげる
 しょくたくはしんこうの つたわるばしょ
 
-[Chorus: unison]
-かみがつくられたものは みなよいもの
-かんしゃしてうけとれば しりぞけるものはない
-ひごとのかてを ありがとう
-いっしょくに めぐみがこめられている
-
-[Instrumental Interlude]
-
-[Verse 4]
-しょくぜんのことば しょくごのかんしゃ
-ちいさなしゅうかんを かさねるうちに
-しょくたくはいつか れいはいのばしょ
-しゅをおもいだす めぐみのせき
-
 [Bridge]
 つぎのいっしょくを まえもって
 かんしゃのいのりで むかえよう
@@ -9148,7 +7563,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian evening-calm meditative hymn, felt piano, solo cello, subtle pipe organ, warm strings, spacious chapel air, tender peaceful stillness, softly consoling, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, calm compassionate tone, clear Japanese diction, comfortable mid-range, gentle and warm, smooth legato phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -9181,20 +7596,6 @@
 にもつをおろして めをとじる
 ねむりはゆだねる ちいさなしんこう
 
-[Chorus]
-ひがしずむまで いかりをいだかず
-へいあんのうちに みをよこたえよう
-きょうもまもってくださったしゅが
-こんやもおなじく まもってくださる
-
-[Instrumental Interlude]
-
-[Verse 4]
-ねむるまえのこころは あさへつながる
-かんしゃでとじれば かんしゃであける
-きょう こころをいためたあのひとを
-ねむるまえにそっと いのりにのせる
-
 [Bridge]
 ながいいのりが できないよるも
 ひとことだけで じゅうぶんです
@@ -9222,7 +7623,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese hymn of comfort, felt piano, solo cello, soft acoustic guitar, quiet pipe organ, slow breathing space, consoling embrace of warmth, serene quiet hope, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature female alto, intimate prayerful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -9255,20 +7656,6 @@
 きょうかいのなかまも いのるともも
 すぐそばに いてくれる
 
-[Chorus]
-「けっしてあなたをみはなさない
-けっしてあなたをはなれない」
-こどくのいちばんふかいところで
-しゅはいちばんちかくにおられる
-
-[Instrumental Interlude]
-
-[Verse 4]
-なにかでうめようと しなくていい
-みじかいいのりを ささげるだけ
-「しゅよ きょうはこどくです」
-そのひとことで しゅはちかづく
-
 [Bridge]
 ふりかえれば あのこどくのひも
 しゅはともに いてくださった
@@ -9296,7 +7683,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, nylon-string guitar, gentle cello, unhurried steady pulse, reverent stillness, humble warm joy of presence, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -9329,20 +7716,6 @@
 しゅをかんじとるためにそなえられた
 ゆたかなよはくの おくりもの
 
-[Chorus]
-しゅのみまえには みちあふれるよろこび
-いまここに しゅがおられる
-いちにちのすべてのしゅんかんを
-あなたのりんざいのなかであゆむ
-
-[Instrumental Interlude]
-
-[Verse 4]
-あさ こころにおいた いちぎょうのいのり
-ひるにもふっと うかんでくる
-ひとこきゅうのいのりは ちいさないかり
-いちにちをしゅへ つないでくれる
-
 [Bridge]
 きょういちばん しゅがちかかった
 そのひとときを わかちあおう
@@ -9370,7 +7743,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Restful Japanese meditative hymn, felt piano, solo cello, warm strings, quiet pipe organ, slow spacious phrases, cradle-like calm, softly reassuring peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature female alto, tender chest voice, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried legato lines, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -9403,20 +7776,6 @@
 あなたのみうでのなかでいただく
 そのとき やすみもれいはいになる
 
-[Chorus]
-「つかれたものよ わたしのもとへきなさい
-わたしがあなたを やすませよう」
-しゅがさきだって すすんでくださる
-おそれず おびえず いこえばいい
-
-[Instrumental Interlude]
-
-[Verse 4]
-やすむことは なまけではない
-ちからをてばなし よりたのむこと
-まどろむまえの ちいさないのりで
-ひるねのじかんも きよくなる
-
 [Bridge]
 つかれている だれかがいたら
 「やすんでいいよ」と こえをかけよう
@@ -9444,7 +7803,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness and renewal, 6/8, felt piano, solo cello, thin warm strings, restrained organ, honest quiet reflection opening into gentle relief, peaceful morning grace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, alto support on final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, sincere and steady, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -9477,20 +7836,6 @@
 うしろのものを てばなして
 まえにあるものへ みをのばす
 
-[Chorus]
-「さあ わたしたちははなしあおう」
-しゅがまねいて くださる
-ひのようなつみも ゆきのように
-べにのようなきずも しろくされる
-
-[Instrumental Interlude]
-
-[Verse 4]
-こころのなかで わかいははじまる
-「まちがっていました」と こくはくし
-「わたしはゆるします」と いのるとき
-きおくのおもさは かるくなる
-
 [Bridge]
 あのとおいひの きおくのなかにも
 かんしゃできる ひとばめんがある
@@ -9518,7 +7863,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic nature meditation, nylon-string guitar, brief gentle flute, soft piano, cello, open airy space, serene morning light, quietly wondering joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone with mature alto duet, alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed unison refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
 ## Suno用歌詞
 
@@ -9551,20 +7896,6 @@
 「わたしはここにいる」と
 しゅのりんざいが ささやいている
 
-[Chorus: unison]
-やまやまとおかは よろこびうたい
-ののきぎはみな てをたたく
-てんはかみのえいこうをかたる
-いまいるばしょで しゅにであう
-
-[Instrumental Interlude]
-
-[Verse 4]
-せつめいしなくて かまわない
-ただみつめるだけで じゅうぶんです
-ひるはひるへ かたりつたえ
-よるはよるへ ちしきをつげる
-
 [Bridge]
 「きょうのそらは きれいでしたよ」
 かぞくにひとこと つたえてみよう
@@ -9592,7 +7923,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Tender Japanese meditative hymn, felt piano, solo cello, subtle organ, soft strings, gentle chapel reverb, humble accepting calm, quiet strength in weakness, warmly hopeful, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, compassionate steady tone, clear Japanese diction, comfortable mid-range, gentle and warm, light vibrato at phrase endings only, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -9625,20 +7956,6 @@
 ひとりのなまえを よびながら
 とりなすことも できる
 
-[Chorus]
-こころのまずしいひとは さいわい
-てんのくには そのひとのもの
-よわいときにこそ わたしはつよい
-よわさのなかに しゅのちからがやどる
-
-[Instrumental Interlude]
-
-[Verse 4]
-よわさをみとめる そのことが
-ふかいしんこうの しるしです
-よりたのむほどに しゅはちかく
-よわさはみもとへ すすむみち
-
 [Bridge]
 よわっている ともがいたら
 「いのっています」と つたえよう
@@ -9666,7 +7983,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Warm Japanese praise ballad of gratitude, intimate chamber folk, nylon-string guitar, piano, clarinet, light cello, simple singable refrain, gentle thankful warmth, calm bright morning joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, conversational verses, gentle unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 ♬ 感謝が自然になる場所, 変わることのない主の愛（いつも私のそばに）
 時は流れても 主の恵みは永遠に (感謝しながら主の門へ入り、讃美しながら主...)
 朝ごとに新しく 私の魂よ賛美せよ ♬
@@ -9702,20 +8019,6 @@
 ふへいからではなく かんしゃから
 きょうというひを はじめよう
 
-[Chorus: unison]
-かんしゃしながら しゅのもんへはいり
-さんびしながら しゅのにわへすすむ
-どのようなことにも かんしゃしよう
-それがみまえへ すすむいりぐち
-
-[Instrumental Interlude]
-
-[Verse 4]
-きょうのちいさな めぐみをみっつ
-こころにかぞえて ねむりにつく
-ひとのかんしゃを きいていると
-じぶんのかんしゃにも きづいてゆく
-
 [Bridge]
 わかちあうかんしゃは ささえあうちから
 まじわりのなかで そだってゆく
@@ -9743,7 +8046,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Quiet Japanese acoustic meditation on everyday holiness, nylon-string guitar, soft piano, cello, short flute phrases, silence between lines, plain unhurried grace, restful contented joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, laid-back natural phrasing, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
 ## Suno用歌詞
 
@@ -9776,20 +8079,6 @@
 へいぼんなばしょを せいなるばしょへ
 しずかにかえて くださる
 
-[Chorus: unison]
-たべるときも のむときも
-すべてをかみのえいこうのために
-としをかさねても なおみをむすぶ
-いのちにあふれて いきてゆく
-
-[Instrumental Interlude]
-
-[Verse 4]
-とくべつなちからは いらないから
-まいにち しゅのまえへ でるだけでいい
-ひとこきゅうのいのりを くちにおいて
-ひとつのじゅうじゅんを つづけてゆく
-
 [Bridge]
 しずかにみのる そのあゆみを
 しゅもよろこんで みておられる
@@ -9817,7 +8106,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of lifelong calling, piano, acoustic guitar, warm strings, light brushed snare, gentle forward pulse, dignified hopeful gratitude, calm resolve and quiet joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone lead with small senior choir refrain, warm storytelling verses, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -9849,20 +8138,6 @@
 とくべつなしかくは いらない
 ただこたえよう こころをこめて
 「わたしは ここにおります」
-
-[Chorus: small choir]
-わたしがとしをかさね しらがになっても
-しゅよ みすてないでください
-あなたのちからを つぎのせだいへ
-つたえおえる そのひまで
-
-[Instrumental Interlude]
-
-[Verse 4]
-おおきなぶたいは いらないから
-となりにいるひとへ つたえるだけ
-けいけんしてきた かみのちからを
-まごへこどもへ かたりつぐ
 
 [Bridge]
 まじわりのなかで みつけたしめいは
@@ -9921,19 +8196,7 @@
 そのうしろすがたがそのままで
 いちばんふかいおしえになる
 
-[Chorus: strings swell]
-としをかさねても めしはつづく
-しらがのひびは みをむすぶきせつ
-いのちにあふれ いきいきと
-あなたのちからを つぎのせだいへ
-
 [Instrumental Interlude]
-
-[Verse 4]
-はじめてしゅにであったひのこと
-ささえられたたにのものがたりを
-しょくたくでそっとかたりだせば
-こらのしょうがいにともしびがともる
 
 [Bridge]
 しゅよ みすてないでください
@@ -9993,19 +8256,7 @@
 かぞえきれないあいとなって
 まごたちのこころのいかりになる
 
-[Chorus]
-いっぱいのつめたいみずさえ
-しゅはけっしてわすれない
-ちいさなあいのそのばしょが
-しゅにささげるしめいのばしょ
-
 [Instrumental Interlude]
-
-[Verse 4]
-くるしかったひにうけたひとこと
-こどくなひにとどいたたより
-あれはしゅのいつくしみでした
-こんどはわたしがとどけるばん
 
 [Bridge]
 「しゅよ いつのことでしょう」と
@@ -10067,18 +8318,6 @@
 しょうがいのきづきをみじかいてがみに
 いのりをこめて てわたします
 
-[Chorus: small choir]
-ことまごへのこす しんこうのいさん
-くりかえし かたりきかせよう
-いえにいるときも みちのうえでも
-しょうがいのしゅを つたえていこう
-
-[Verse 4]
-こんなんのなかでもうしなわない
-へいあんのそのうしろすがた
-しょうがいあいしたひとふしが
-なによりのたからものになる
-
 [Bridge]
 しゅよ このあゆみのすべてが
 こらへのてがみとなりますように
@@ -10138,18 +8377,6 @@
 このとしになってもへいあんだよ」
 そのひとことがとものこころに
 ちいさなとびらをひらくでしょう
-
-[Chorus: small choir]
-ともはどんなときにもあいする
-あいにねざして しんりをかたろう
-としをかさねたいまだからこそ
-とどけられるひとことがある
-
-[Verse 4]
-しょうがいそばにいてくれた
-ゆうじょうはしゅからのおくりもの
-ともにしらがになったいま
-そのきずなをなおそだてたい
 
 [Bridge]
 しゅよ あのとものこころにも
@@ -10211,18 +8438,6 @@
 どんなみをむすぶかしらなくても
 しゅはすべてごぞんじです
 
-[Chorus: small choir]
-ただしいひとのいのりは
-はたらくとき おおきなちから
-エリヤのかみはきょうもいきて
-ひざまずくいのりにこたえられる
-
-[Verse 4]
-こたえられたいのりのきおく
-まもられてきたひびのめぐみ
-なかまとこころをあわせるとき
-いのりはさらにふかくなる
-
 [Bridge]
 しゅよ きょうもひざまずきます
 かなわぬひにはてをあわせ
@@ -10282,18 +8497,6 @@
 いちどにひとつでじゅうぶんです
 あるいてきたみちをわかちあえば
 だれかのなぐさめ だれかのちから
-
-[Chorus: small choir]
-としをかさねたものにはちえ
-ながくいきたものにはふんべつ
-うけたたまものをもちいてつかえる
-それがしらがのしめいです
-
-[Verse 4]
-「わたしはそのようなとき……」と
-しずかにはじめればいい
-きょうかいのまじわりのそのなかで
-ものがたりはともしびとなってゆく
 
 [Bridge]
 しゅよ ながくいきたことさえ
@@ -10355,18 +8558,6 @@
 おなじきせつをいきるものだけが
 とどけられるなぐさめがある
 
-[Chorus: small choir]
-かみはこどくなひとに
-かぞくをあたえられるおかた
-りんじんをじぶんのようにあいし
-そのあいのつうろにしてください
-
-[Verse 4]
-ながくはなさなくてもいい
-そばにすこしすわるだけでいい
-れんらくしたそのことじたいが
-そのひとへのおくりものになる
-
 [Bridge]
 しゅよ そのみこころを
 このむねにもそそいでください
@@ -10426,18 +8617,6 @@
 わたしたちにはわからない
 けれどしゅはごぞんじです
 けっかはみてにゆだねましょう
-
-[Chorus: small choir]
-すべてのひとにふくいんを
-ひとりのたましい とうといいのち
-ひとのたましいをえるものは
-ちえあるひととしゅはいわれる
-
-[Verse 4]
-はじめてふくいんをつたえてくれた
-あのひとのひとことをおもう
-ひとことがしょうがいをかえた
-そのめぐみをわすれはしない
 
 [Bridge]
 しゅよ ひとりのたましいを
@@ -10499,18 +8678,6 @@
 へいあんのうちにいきるすがたが
 なによりもふかいまねきだから
 
-[Chorus]
-しゅイエスをしんじなさい
-あなたもかぞくもすくわれる
-そのやくそくをにぎりしめて
-わたしとわたしのいえは しゅにつかえます
-
-[Verse 4]
-あきらめかけたひもありました
-らくたんにしずむよるもありました
-それでもきょうもなまえをよぶ
-あいがいつでもさきだから
-
 [Bridge]
 はんだんよりも せっきょうよりも
 あたたかなひとことをさきに
@@ -10571,18 +8738,6 @@
 しにいたるまでちゅうじつであれと
 しゅのみこえがささえてくれる
 
-[Chorus]
-よいたたかいをたたかいぬき
-はしるべきみちをはしりおえ
-しんこうをまもりとおしました
-そうこくはくできるひまで
-
-[Verse 4]
-まいにちこのばしょをまもること
-おおきなことをしなくても
-だれのめにとまらなくても
-それがかんむりへつづくみち
-
 [Bridge]
 しゅよ あしたもおなじじこくに
 このばしょへすわらせてください
@@ -10641,19 +8796,7 @@
 しんこうをまもりとおしましたと
 こくはくできるひをめざして
 
-[Chorus: full strings swell]
-だれをつかわそうと しゅがとわれる
-わたしはここにおります
-しらがのこのみを つかわしてください
-めしはまだおわっていない
-
 [Instrumental Interlude]
-
-[Verse 4]
-しめいはおわってはいない
-いまこそもっともふかいばしょへ
-ひざまずくいのりとことばが
-のこるひびをみたしてゆく
 
 [Bridge]
 しゅよ ぎのかんむりが
@@ -10715,18 +8858,6 @@
 それでもしゅはこのきょうかいに
 ごじしんをささげられたのです
 
-[Chorus: small choir]
-しゅよ あなたのおられるいえ
-えいこうのやどるそのばしょを
-わたしはあいします いつまでも
-キリストのからだであるきょうかいを
-
-[Verse 4]
-このからだにはただひとつ
-わたししかみたせないばしょがある
-そのばしょがきょうもあたえられて
-しずかなかんしゃがあふれます
-
 [Bridge]
 かつどうがすくなくなっても
 からだのいちぶはかわらない
@@ -10786,18 +8917,6 @@
 でんわでともにいのればいい
 かたちよりも ともにいること
 それがまじわりのうつくしさ
-
-[Chorus]
-みよ ともにすむことは
-なんとよく うつくしいこと
-あつまることをやめないで
-そのひがちかづくほど なおさらに
-
-[Verse 4]
-ひとりでせおわなくていい
-しょうじきにうちあければいい
-みたされたあのこころこそが
-つぎのつどいへみちびくひかり
 
 [Bridge]
 しゅよ つぎのつどいのひも
@@ -10859,18 +8978,6 @@
 「しゅよ わたしはここにおります」
 さしだすことがれいはいです
 
-[Chorus]
-れいとしんりをもって
-れいはいをささげます
-くちさきだけのうやまいでなく
-このこころをちかくささげます
-
-[Verse 4]
-まいにちのこのもくそうも
-ちいさなれいはいのひととき
-いまこのばしょにすわったことが
-みまえにたつはじまりです
-
 [Bridge]
 はなやかでなくていい
 ながいことばもいらない
@@ -10931,18 +9038,6 @@
 しょうがいのひとことをわかちあえば
 せだいをこえてものがたりはつづく
 
-[Chorus: small choir]
-しらがはえいこうのかんむり
-ただしいみちをあゆんだしるし
-としをかさねたものにはちえ
-ながくいきたものにはふんべつ
-
-[Verse 4]
-わたしよりながくあゆんだかたの
-ひとことがちからをくれる
-そしてわたしのものがたりを
-まっているひとがきっといる
-
 [Bridge]
 しゅよ せんぱいたちのひびを
 すこやかにまもってください
@@ -10969,7 +9064,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, cello, soft woodwinds, attentive welcoming stillness, warm open-hearted morning peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, small mixed choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -11002,31 +9097,11 @@
 ながいじんせいから にじむやすらぎで
 きょうはそっと となりにすわります
 
-[Chorus]
-キリストがわたしを うけいれたように
-わたしもあなたを うけいれます
-たびびとをもてなす そのとぐちで
-てんしをむかえた ひともいたのだから
-
-[Instrumental Interlude]
-
-[Verse 4]
-あたらしくこられた かたがたのために
-ねをおろせるように きょうもいのります
-しゅがおくられた たいせつなきゃくを
-あたたかなめで おむかえします
-
 [Bridge]
 しずけさのなかで いきをととのえ
 キリストがわたしを うけいれたように
 となえるいのりが ゆうきとなって
 さきにちかづく いっぽをくれる
-
-[Chorus]
-キリストがわたしを うけいれたように
-わたしもあなたを うけいれます
-たびびとをもてなす そのとぐちで
-てんしをむかえた ひともいたのだから
 
 [Final Chorus: gentle two-part harmony]
 キリストがわたしを うけいれたように
@@ -11074,12 +9149,6 @@
 おおくかたらずとも そこにいるだけで
 あなたのそんざいが つどいのはしら
 
-[Chorus: small choir]
-ふたりでもさんにんでも しゅのなによって
-あつまるところに しゅはおられる
-おしえをまもり パンをさき
-ともにいのる ふかいまじわり
-
 [Short Interlude]
 
 [Verse 3]
@@ -11087,18 +9156,6 @@
 きょうもあなたが ともにいてください
 うけためぐみを わかちあいながら
 このまじわりを ゆたかにしてください
-
-[Verse 4]
-ちいさなともしびから せかいはかわった
-しょだいのきょうかいも ちいさなむれから
-うけためぐみを かぞえるたびに
-このつどいがなお いとおしくなる
-
-[Chorus: small choir]
-ふたりでもさんにんでも しゅのなによって
-あつまるところに しゅはおられる
-おしえをまもり パンをさき
-ともにいのる ふかいまじわり
 
 [Bridge]
 しゅよ ちいさなむれに りんざいをみたし
@@ -11152,12 +9209,6 @@
 かおをみあわせて わかちあうとき
 ことばをこえた まじわりがうまれる
 
-[Chorus: unison]
-みよ しゅはとぐちに たってたたく
-とをひらくなら はいってくださる
-わたしとともに しょくじをすると
-やくそくしてくださった あたたかなこえ
-
 [Interlude: flute]
 
 [Verse 3]
@@ -11165,18 +9216,6 @@
 あなたとかこむ しょくたくとしてください
 ともにたべるよろこびと まごころをあたえ
 このしょくたくを めぐみのばしょに
-
-[Verse 4]
-おおくをかたらずとも おなじさらをわけ
-かおをみあわせれば こころはかよう
-ゆげのたちのぼる かんそなぜんが
-おなじかぞくだと おしえてくれる
-
-[Chorus: unison]
-みよ しゅはとぐちに たってたたく
-とをひらくなら はいってくださる
-わたしとともに しょくじをすると
-やくそくしてくださった あたたかなこえ
 
 [Bridge]
 しゅよ きょうのいっしょくを めぐみとうけます
@@ -11230,12 +9269,6 @@
 ひとことのあいさつ ひとことのなぐさめ
 それもキリストのからだに つかえるみち
 
-[Chorus: small choir]
-うけたたまものを もちいながら
-たがいにつかえる よいかんりしゃに
-ちいさなほうしを しゅはごらんになる
-めだたなくても とうといささげもの
-
 [Short Interlude]
 
 [Verse 3]
@@ -11243,18 +9276,6 @@
 いのりのほうし そこにいるほうし
 いまあるちからで いまいるばしょで
 よろこびをもって つかえさせてください
-
-[Verse 4]
-「わたしにできることは ありますか」と
-たずねるひとことから ほうしははじまる
-にわのはなにみずを やるひとときも
-きょうかいをしずかに ささえてゆく
-
-[Chorus: small choir]
-うけたたまものを もちいながら
-たがいにつかえる よいかんりしゃに
-ちいさなほうしを しゅはごらんになる
-めだたなくても とうといささげもの
 
 [Bridge]
 だれもみていなくても しゅがみておられる
@@ -11308,12 +9329,6 @@
 ひはんするよりも さきにしゅくふくを
 りかいできなくても まずいのりを
 
-[Chorus: small choir]
-しゅのほまれと みわざのすべてを
-のちのせだいへ かたりつたえよう
-しゅよ このきょうかいの つぎのせだいを
-みことばのなかに たたせてください
-
 [Short Interlude]
 
 [Verse 3]
@@ -11321,18 +9336,6 @@
 あなたのみことばを まもることによって
 いのりにかがめる このひざこそが
 きょうかいのあしたを たてあげてゆく
-
-[Verse 4]
-いのりのかだいを たずねてみよう
-おさなごたちのなを ひとつずつむねに
-いのるしらがは きょうかいのたから
-しんこうはしずかに うけつがれてゆく
-
-[Chorus: small choir]
-しゅのほまれと みわざのすべてを
-のちのせだいへ かたりつたえよう
-しゅよ このきょうかいの つぎのせだいを
-みことばのなかに たたせてください
 
 [Bridge]
 わかかったひびの わたしのためにも
@@ -11386,12 +9389,6 @@
 あえないままでも こころのなかでゆるし
 そのひとのために いのるいっぽを
 
-[Chorus]
-できるかぎり じぶんのがわから
-すべてのひとと へいわにいきたい
-へいわのきずなで むすばれたいっちを
-しゅよ まもらせてください
-
 [Interlude: quiet strings]
 
 [Verse 3]
@@ -11399,18 +9396,6 @@
 きょうどうたいのきずは きょうどうたいのなかで
 うらみではなく あのひとのへいあんを
 きょうはしずかに いのらせてください
-
-[Verse 4]
-いっちはひとりでに たもたれはしない
-ゆるし りかいし さきにちかづく
-わかいをいそがずとも あんぴのひとことを
-きょうはじぶんから とどけてみよう
-
-[Chorus]
-できるかぎり じぶんのがわから
-すべてのひとと へいわにいきたい
-へいわのきずなで むすばれたいっちを
-しゅよ まもらせてください
 
 [Bridge]
 しらぬまにだれかを きずつけたひも
@@ -11464,12 +9449,6 @@
 「あなたがいてくれて うれしいです」
 そのひとことが あいのかよいじ
 
-[Chorus: small choir]
-たがいにあいしあいなさい
-わたしがあなたを あいしたように
-うけとったあいを となりのひとへ
-きょうもながれます しゅのあいのかわ
-
 [Short Interlude]
 
 [Verse 3]
@@ -11477,18 +9456,6 @@
 いまはこころを そのままつたえるとき
 まずしゅのあいを ふかくうけとって
 あふれためぐみを わかちあいます
-
-[Verse 4]
-わかいひはたいめんに さえぎられて
-いえなかったことばが いまならいえる
-「おいのりしています」と そえるひとことに
-しゅのぬくもりが のせられてゆく
-
-[Chorus: small choir]
-たがいにあいしあいなさい
-わたしがあなたを あいしたように
-うけとったあいを となりのひとへ
-きょうもながれます しゅのあいのかわ
 
 [Bridge]
 しゅよ まずあなたの ふかいあいに
@@ -11542,12 +9509,6 @@
 わたしのいのりも わたしのそんざいも
 このかぞくを たてあげている
 
-[Chorus: small choir]
-もはやたびびとでも きりゅうしゃでもない
-わたしたちは かみのかぞくです
-そのひがちかづくほど なおつどい
-はげましあって ともにあゆもう
-
 [Short Interlude]
 
 [Verse 3]
@@ -11555,18 +9516,6 @@
 ちいさなほうし つぎのせだいへのいのり
 そのすべてが かぞくのいとなみ
 わたしがいてこそ みちてゆくいえ
-
-[Verse 4]
-このひびにうけた めぐみのひとつを
-きょうはだれかに わかちあおう
-かたりあうたびに めぐみはふくらみ
-かぞくのきずなは ふかくなってゆく
-
-[Chorus: small choir]
-もはやたびびとでも きりゅうしゃでもない
-わたしたちは かみのかぞくです
-そのひがちかづくほど なおつどい
-はげましあって ともにあゆもう
 
 [Bridge]
 しゅよ このきょうかいが まことのかぞくへ
@@ -11620,12 +9569,6 @@
 からだがつかれても こころがしずんでも
 いつものばしょで しゅのまえにすわる
 
-[Chorus: unison]
-ゆうべにもあさにも まひるにも
-わたしはしゅをよび しゅはきかれる
-いぜんからしていた ようにきょうも
-いちにちさんど ひざまずこう
-
 [Interlude: flute]
 
 [Verse 3]
@@ -11633,18 +9576,6 @@
 ちちとことせいれいへ まっすぐに
 ししのあなでも まもられたおかたが
 としをかさねたきょうも ともにおられる
-
-[Verse 4]
-ひざがつけない ひにはいすで
-りょうてをひらいて ひざのうえにおく
-しせいではなくて こころをさしだす
-それがひざまずく ということだから
-
-[Chorus: unison]
-ゆうべにもあさにも まひるにも
-わたしはしゅをよび しゅはきかれる
-いぜんからしていた ようにきょうも
-いちにちさんど ひざまずこう
 
 [Bridge]
 ゆうべもあさも まひるもいのった
@@ -11673,7 +9604,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Reflective Japanese scripture hymn, upright piano, viola, cello, soft woodwinds, lyrics-forward clarity, attentive gentle resolve, serene bright morning peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth legato with light two-part final harmony, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
 ## Suno用歌詞
 
@@ -11712,25 +9643,11 @@
 てばなしたそのばしょを かみがみたし
 ちえとすこやかさを あたえてくださる
 
-[Instrumental Interlude]
-
-[Verse 4]
-ことばをつつしみ しんぱいをてばなし
-しゅうちゃくのにもつを ひとつずつおろす
-あいたそのばしょに しずけさがみちて
-かみのめぐみが ながれこんでくる
-
 [Bridge]
 しゅよ きょうひとつ こころにきめます
 みまえでしずかに こくはくします
 きめたこのこころを ささえてください
 ゆらぐひにも みてにすがります
-
-[Chorus]
-ダニエルのように こころにきめます
-どんなときにも かんしゃをえらぶと
-てばなしたそのばしょを かみがみたし
-ちえとすこやかさを あたえてくださる
 
 [Final Chorus: gentle two-part harmony]
 ダニエルのように こころにきめます
@@ -11749,7 +9666,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Gentle Japanese hymn of scripture and promise, upright piano, viola, cello, soft woodwind responses, quiet trusting stillness, warm hopeful major-key glow, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, natural breathing, small choir joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
 ## Suno用歌詞
 
@@ -11788,25 +9705,11 @@
 ひとのおもいが おわるところから
 かみのかのうせいが はじまります
 
-[Instrumental Interlude]
-
-[Verse 4]
-「やくそくのとおり」 「かたられたとおり」
-くりかえされる たしかなことば
-わたしのちからが つきるところで
-あなたのしんじつが たちあがります
-
 [Bridge]
 「もうおそい」と とじていたねがいを
 きょうもういちど みまえにひろげます
 きゅうじゅうのサラを かえりみたおかたは
 このしらがをも かえりみてくださる
-
-[Chorus]
-やくそくされたおかたは しんじつです
-かたられたとおり なしとげられる
-ひとのおもいが おわるところから
-かみのかのうせいが はじまります
 
 [Final Chorus: gentle two-part harmony]
 やくそくされたおかたは しんじつです
@@ -11850,12 +9753,6 @@
 そのなみだを しゅはごらんになる
 なみだもまた いのりだから
 
-[Chorus]
-わたしはこのこのために いのりました
-しゅはねがいを きいてくださった
-わすれないでくださいと さけぶこえを
-しゅはおぼえて かえりみられる
-
 [Short Interlude]
 
 [Verse 3]
@@ -11863,18 +9760,6 @@
 しゅがあたえてくださったと こくはくしよう
 もっともとうといものを もういちどささげた
 ハンナのしんこうに わたしもならいたい
-
-[Verse 4]
-よっていると みまがわれるほど
-こころをそそいだ ハンナのいのり
-ととのわぬままの ことばであっても
-まことのさけびを しゅはしっておられる
-
-[Chorus]
-わたしはこのこのために いのりました
-しゅはねがいを きいてくださった
-わすれないでくださいと さけぶこえを
-しゅはおぼえて かえりみられる
 
 [Bridge]
 ひとりでながす なみだもとうとい
@@ -11928,12 +9813,6 @@
 かぞく しんこうのとも ちいさなむれ
 そのひとたちが わたしのルツです
 
-[Chorus: unison]
-あなたのゆくところへ わたしもゆきます
-あなたのかみは わたしのかみです
-しゅのつばさのしたに みをよせるものへ
-ゆたかなむくいが ありますように
-
 [Interlude: flute]
 
 [Verse 3]
@@ -11941,18 +9820,6 @@
 ナオミもルツに おおくをおしえた
 しょうがいのちえを わかちあいながら
 ともにあるくみちは なおうつくしい
-
-[Verse 4]
-おしみなくそそいだ さいげつのあいが
-くるしみのひに みをむすんでいた
-そばにいるひとの ぬくもりはきっと
-あゆんできたみちの しずかなみのり
-
-[Chorus: unison]
-あなたのゆくところへ わたしもゆきます
-あなたのかみは わたしのかみです
-しゅのつばさのしたに みをよせるものへ
-ゆたかなむくいが ありますように
 
 [Bridge]
 しゅよ そばにいる ひとのなをよび
@@ -12006,12 +9873,6 @@
 そのひとつひとつの めぐみのきおくが
 いまもれいはいへと わたしをまねく
 
-[Chorus: unison]
-あなたのにわで すごすいちにちは
-せんにちのひびに まさります
-あくのてんまくに すむよりも
-かみのいえのかどぐちに たちつづけたい
-
 [Interlude: flute]
 
 [Verse 3]
@@ -12019,18 +9880,6 @@
 れいはいするこころは てばなさない
 まちつづけたはてに おさなごイエスへ
 であったアンナの よろこびをむねに
-
-[Verse 4]
-きょうかいへいけない ひのへやにも
-れいはいのこころは ともりつづける
-ちいさなこのばしょを きょうもひらくこと
-それもしんでんに つながるみち
-
-[Chorus: unison]
-あなたのにわで すごすいちにちは
-せんにちのひびに まさります
-あくのてんまくに すむよりも
-かみのいえのかどぐちに たちつづけたい
 
 [Bridge]
 しゅよ さいごのひまで このばしょをひらき
@@ -12058,7 +9907,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn, intimate piano, soft strings, gentle French horn, quiet and hopeful, serene peace after long waiting, spacious and warm, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, choir on final refrain only, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Chorus] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -12091,18 +9940,6 @@
 ゆるされたひの あのやすらぎも
 つみかさなって へいあんとなる
 
-[Chorus]
-わたしのめは あなたのすくいをみました
-いのりのこたえに みてのまもりに
-すべてのたみをてらす そのひかり
-だからさいごも へいあんのうちに
-
-[Verse 4]
-じゅうじかのイエスを あおいだひも
-ふっかつのあさを いわったひも
-ながいききを こえたあのひも
-わたしのめは すくいをみていた
-
 [Bridge]
 しゅよ みことばのとおり
 このしもべを へいあんのうちに
@@ -12130,7 +9967,7 @@
 - **参考マッチ曲：** Simon & Garfunkel - Bridge over Troubled Water
 - **Sunoスタイル：** slow steady 72 BPM, Japanese gentle worship ballad, solo piano, warm strings, soft French horn, steady and encouraging, quiet perseverance glowing with hopeful warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, steady unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Male Vocal] / [Intro: solo piano] [Verse] [Chorus] [Verse: strings enter] [Chorus] [Instrumental Interlude] [Bridge] [Final Verse: orchestral and gospel climax] [Chorus] [Outro: sustained resolution]
+- **メタタグ構成：** [Male Vocal] / [Intro: solo piano] [Verse] [Chorus] [Instrumental Interlude] [Verse] [Bridge] [Final Verse: orchestral and gospel climax] [Chorus] [Outro: sustained resolution]
 
 ## Suno用歌詞
 
@@ -12144,20 +9981,6 @@
 たましいはまえへ むかっていた
 もくひょうをめざして はしります
 うえへめしてくださる そのしょうへ
-
-[Chorus]
-はしるひとはみな はしるけれど
-しょうをえるように はしりなさい
-ひとりではない このみちのりを
-ともにはしる なかまがいる
-
-[Verse: strings enter]
-としをかさねて かこはふえて
-よいおもいでも いたみもある
-けれどうしろのものは しゅにゆだね
-まえにあるものへ てをのばす
-もくひょうをめざして はしります
-はやさではなく ほうこうをまもって
 
 [Chorus]
 はしるひとはみな はしるけれど
@@ -12184,7 +10007,6 @@
 キリスト・イエスにあって
 のこされたひびは まだまえにある
 ともにさいごまで はしりましょう
-そのしょうをえるまで はしりましょう
 
 [Chorus]
 はしるひとはみな はしるけれど
@@ -12207,7 +10029,7 @@
 - **参考マッチ曲：** Simon & Garfunkel - The Sound of Silence
 - **Sunoスタイル：** slow steady 65 BPM, Japanese quiet praise song, fingerpicked acoustic guitar, felt piano, warm cello, calm and contented, tender stillness of learned contentment, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male duet in close harmony, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Male Duet] / [Intro: fingerpicked acoustic guitar] [Verse] [Chorus] [Verse: close harmony] [Chorus] [Instrumental Interlude] [Subtle Build] [Bridge] [Final Verse] [Chorus] [Outro: acoustic fade]
+- **メタタグ構成：** [Male Duet] / [Intro: fingerpicked acoustic guitar] [Verse] [Chorus] [Verse: close harmony] [Instrumental Interlude] [Bridge] [Final Verse] [Chorus] [Outro: acoustic fade]
 
 ## Suno用歌詞
 
@@ -12232,19 +10054,7 @@
 とおってきた すべてのみちが
 みちたりをまなぶ がっこうでした
 
-[Chorus]
-どんなきょうぐうに あっても
-みちたりることを まなびました
-くらべるこころを てばなして
-いまあるものに かんしゃします
-
 [Instrumental Interlude]
-
-[Subtle Build]
-きょうたべるものがある
-れんらくできるかぞくがいる
-そのひとつひとつが
-ちいさなみちたりの ばしょとなる
 
 [Bridge]
 ろうのかべの うちがわにも
@@ -12281,7 +10091,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese gentle praise song, piano, acoustic guitar, brushed snare, warm strings, calm purposeful walking pulse, hopeful grateful warmth of a life devoted, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature male baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12314,18 +10124,6 @@
 まだみちがのこされているなら
 きょうもそのみちを はしります
 
-[Chorus: small choir]
-よいたたかいを たたかいぬき
-はしるべきみちを はしりおえ
-しんこうをまもりとおしました
-そうこくはくできる ひをめざして
-
-[Verse 4]
-つかれたひにも いのりのばしょを
-よわったからだでも れいはいのせきを
-まもりつづける ちいさなけんしん
-それもいのちを ささげるみち
-
 [Bridge]
 しゅよ よいたたかいを
 たたかわせてください
@@ -12354,7 +10152,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, mellow cello, still and attentive, warm restoring tenderness by the shore, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Verse] [Chorus] [Bridge] [Final Chorus: gentle two-part harmony]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Verse] [Chorus] [Interlude: woodwind] [Verse] [Bridge] [Final Chorus: gentle two-part harmony]
 
 ## Suno用歌詞
 
@@ -12387,18 +10185,6 @@
 そのばしょへしゅは きてくださり
 ちいさなあいのひを みつけられる
 
-[Chorus]
-たおれたばしょから もういちど
-しゅはわたしを たててくださる
-「わたしのこひつじを やしないなさい」
-たおれたことは おわりではない
-
-[Verse 4]
-やがてペトロは たちあがり
-おおくのたましいを しゅへみちびいた
-たおれてたった ひとだからこそ
-たおれたひとに よりそえる
-
 [Bridge]
 しゅよ もういちど
 わたしをたたせてください
@@ -12424,7 +10210,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian reflective hymn, gentle 6/8 sway, felt piano, solo cello, quiet strings, honest and prayerful, grace easing into peaceful light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, soft alto support at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Verse] [Chorus] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Verse] [Chorus] [Interlude: quiet strings] [Verse] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -12457,18 +10243,6 @@
 としをかさねたわたしのあゆみも
 そのものがたりの つづきのなかに
 
-[Chorus]
-しんこうのそうししゃ かんせいしゃである
-イエスをみつめて はしります
-にんたいをもって このきょうそうを
-しゅがさいごまで はしらせてくださる
-
-[Verse 4]
-おもいにもつを したへおいて
-からみつくものを ぬぎすてて
-たおれても もういちどたつ
-とまらぬことが にんたいです
-
 [Bridge]
 ハンナのなみだも おぼえられて
 どのものがたりも さししめす
@@ -12496,7 +10270,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of humble service, piano, acoustic guitar, light bass, brushed snare, tender and devoted, quiet servant-hearted warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with gentle senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried storytelling, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12529,18 +10303,6 @@
 このために まごのために
 いのりでそのあしを あらえます
 
-[Chorus: small choir]
-しゅであり しであるかたが
-わたしのあしを あらわれたから
-わたしもたがいに あしをあらいあう
-そのあいにならい きょうをいきる
-
-[Verse 4]
-ふりかえれば このてもまた
-このあし まごのあしを
-あらうように つかえてきた
-いまはさいごのいっぱいを そそぐとき
-
 [Bridge]
 しゅよ このこころにも
 てぬぐいを まかせてください
@@ -12569,7 +10331,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese gentle worship song, piano, acoustic guitar, warm strings, brushed snare, humble and kind, softly glowing everyday gratitude, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone lead, small senior choir on refrains, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12602,18 +10364,6 @@
 あたたかなまなざし やわらかなことば
 こころからのいのりで つかえます
 
-[Chorus: small choir]
-もっともちいさいもののひとりに
-したことは わたしにしたこと
-いっぱいのつめたい みずさえも
-しゅはけっして わすれない
-
-[Verse 4]
-おおきなほうしは いちどのけっしん
-ちいさなほうしは まいにちのけっしん
-みえないばしょで みえないてで
-めだたないあいが つづいていく
-
 [Bridge]
 てがよわく なっていっても
 こころのては つかえられる
@@ -12641,7 +10391,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian family blessing hymn, acoustic guitar, piano, light bass, warm strings, homely and tender, gentle thankful warmth around the table, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone, small mixed senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12674,18 +10424,6 @@
 おくりだすときの そのすがたが
 ことまごにのこる しんこうのいさん
 
-[Chorus: small choir]
-わたしとわたしのいえは
-しゅにつかえます
-そのけっしんを きょうもあたらしく
-かぞくはしゅの あいのなかに
-
-[Verse 4]
-ちかいひとほど きたいはふくらみ
-ふくらむほどに しつぼうもふかい
-だからかさねる ちいさなにんたい
-ちいさなゆずりあい ちいさなあい
-
 [Bridge]
 しょくたくでさきに てをあわせて
 こんなんのひには てをにぎる
@@ -12713,7 +10451,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese quiet praise hymn, piano, acoustic guitar, brushed snare, soft strings, caring and steadfast, patient shepherd-like warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone, warm senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady breath, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12746,18 +10484,6 @@
 こんどはわたしが そのひとりに
 いのりのばしょを まもるばんです
 
-[Chorus: small choir]
-ひとりのなまえを よんでいのる
-ひとりをどこまでも あいしぬく
-みつけるまで さがされるしゅと
-そのひとりへ つかえます
-
-[Verse 4]
-いどのそばの みじかいときが
-ひとつのまちを かえたように
-ひとりへそそいだ ちいさなあいは
-ながれゆくかわの はじまりとなる
-
 [Bridge]
 こころにうかぶ ひとつのなまえ
 かみからたくされた ひとつのたましい
@@ -12785,7 +10511,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian prayer hymn, piano, acoustic guitar, warm strings, light bass, devoted and still, humble kneeling reverence with quiet hope, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm grounded baritone with soft senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful pacing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12818,18 +10544,6 @@
 いすでも ベッドのそばでもいい
 こころのひざが ほんとうのひざ
 
-[Chorus: small choir]
-いつもあなたがたのために
-いのりのなかで ちからをつくす
-ひとにはみえない そのひざが
-ひとつのじだいを ささえます
-
-[Verse 4]
-あれののモーセも ひざまずき
-ダビデはあさごとに いのった
-ひにみたびの ダニエルのひざ
-ハンナのいのりは みをむすんだ
-
 [Bridge]
 いのれるじかんが ふえたことは
 としをかさねた ものへのおくりもの
@@ -12857,7 +10571,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese gentle hymn of perseverance, piano, acoustic guitar, brushed snare, warm strings, steadfast and calm, enduring faithful warmth step by step, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone lead, small senior choir in unison close, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12890,18 +10604,6 @@
 しょうさんよりも しゅのほほえみを
 のこるみちでも あいせますように
 
-[Chorus: small choir]
-さいごまで たえしのぶひとは
-すくわれると しゅはいわれた
-さいごまで おなじしせいで
-つかえるものと してください
-
-[Verse 4]
-たすけられるひが ふえていっても
-あたえるこころは うしなわない
-からだがよわく なっていっても
-さきにあんぴを たずねるこころ
-
 [Bridge]
 しゅよ さいごまで
 おなじしせいで つかえさせてください
@@ -12929,7 +10631,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope, warm piano, tender French horn, soft strings, bright and assured, peaceful everlasting morning glow, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, small choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Chorus] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -12962,18 +10664,6 @@
 よこになっていても いのりで
 ほほえみひとつでも つかえられる
 
-[Chorus]
-かたくたって ゆらぐことなく
-しゅのはたらきに はげみなさい
-しゅにあっておこなう ろうくは
-けっしてむだには なりません
-
-[Verse 4]
-からだのゆれ こころのゆれ
-かんけいのゆれの なかにあっても
-つかえるしせいは てばなさない
-それがなによりの あかしとなる
-
 [Bridge]
 やくそくのちを みなかったモーセも
 しんでんをたてなかった ダビデも
@@ -13002,7 +10692,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian farewell meditation hymn, felt piano, solo cello, subtle pipe organ, serene and consoling, deep restful peace like evening light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, clear Japanese diction, comfortable mid-range, gentle and warm, calm compassionate phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Verse] [Chorus] [Bridge] [Final Chorus] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Verse] [Chorus] [Interlude: solo cello] [Verse] [Bridge] [Final Chorus] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -13034,18 +10724,6 @@
 あたらしいあさの はじまりです
 すべてをしゅへ ゆだねたものに
 あたえられる へいあんがある
-
-[Chorus]
-わたしのめは あなたのすくいをみました
-みことばのとおり へいあんのうちに
-ひゃくななじゅうはちにちの このたびじを
-ともにあゆんでくださった しゅにかんしゃ
-
-[Verse 4]
-まいにちのみことば まいにちのいのり
-つみかさねた しずかなじかんは
-たましいのおくへ たからとして
-いまもかわらず かがやいている
 
 [Bridge]
 かんぺきだから へいあんなのではなく

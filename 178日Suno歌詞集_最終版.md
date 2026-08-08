@@ -9,7 +9,7 @@
 - ヴァースは黙想本文の気づき・聖句・短い祈りを、完結した美しい詩行に再構成（散文の切り貼り・断片行・実践指示文は排除）
 - シニアの日常の情景（鏡の白髪、先立った友、孫、食卓、散歩、夕暮れ）を活かし、聴く方が「これは私の歌だ」と感じられるように
 - すべての曲が希望と平安で結ばれます
-- 各曲は歌唱行34行前後・約4分30秒〜5分の長さ。同じサビを3回以上繰り返し、[Bridge]にはその日の祈り・告白を置いています
+- 各曲は歌唱行26〜28行・間奏1箇所。Suno v5.5 実測に基づき、約4分30秒〜5分で完全に終わる長さに調整済み。[Bridge]にはその日の祈り・告白を置いています
 
 **スタイルの原則：**
 - 簡潔な英語スタイル記述。静かで黙想的、しかし明るく穏やかな喜びのある雰囲気
@@ -20,7 +20,7 @@
 
 **Sunoでの使い方：**
 1. Custom モードを開く
-2. 「Sunoスタイル」の行を Style of Music 欄に貼り付ける
+2. 「Sunoスタイル」の**英語部分のみ**（slow steady … から末尾まで）を Style of Music 欄に貼り付ける。「- **Sunoスタイル：**」などのマークダウン記号は含めないこと
 3. 「ボーカル・歌唱法」の内容も Style 欄の続きに加えるとボーカル指定が安定します
 4. コードブロック内の歌詞（[Verse] などのタグ、末尾の [End] を含む）を Lyrics 欄にそのまま貼り付ける
 5. 発音がおかしい単語があれば、その単語だけひらがなに変えて再生成すると解決します
@@ -33,7 +33,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet and meditative, serene sunrise warmth, peaceful grateful joy, spacious and unhurried, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, small choir on final refrain only, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -66,20 +66,6 @@
 けれどあなたは 変わりませんでした
 揺れる心を 御手につないでください
 
-[Chorus]
-イエス・キリストは 昨日も今日も
-とこしえまでも 変わらないお方
-すべてが変わっても 主は変わらない
-その愛は 私の永遠の錨
-
-[Instrumental Interlude]
-
-[Verse 4]
-明日のことは 分からなくても
-必要以上に 恐れません
-平安は嵐の ないことでなく
-変わらぬ主が おられること
-
 [Bridge]
 古い写真を 手に取るとき
 あの日々も主は 共におられた
@@ -107,7 +93,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese worship ballad, nylon-string guitar, piano, clarinet, warm cello, soft and intimate, gentle thankful warmth, calm quiet morning joy, close natural sound, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain with light harmony, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -140,20 +126,6 @@
 今日はただ 両手を開いて
 あなたの愛を 受け取ります
 
-[Chorus: unison]
-神は愛です 神は愛です
-できてもできなくても 変わらない
-何ものも私を 引き離せない
-キリストにある 神の愛から
-
-[Instrumental Interlude]
-
-[Verse 4]
-神の愛より 深い孤独はなく
-神の愛より 重い後悔もない
-振り返る日々の その全部を
-包んで余る 愛がある
-
 [Bridge]
 思い出します あの日のこと
 あなたの愛を 感じた場面
@@ -181,7 +153,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese scripture meditation hymn, upright piano, soft woodwinds, viola and cello, still and attentive, warm major-key resolution, clear peaceful morning light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth unhurried legato, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -214,20 +186,6 @@
 抱えてきた 重い荷物を
 一つずつ御前に 置いてゆく
 
-[Chorus]
-聖なる主よ 私を清めてください
-あなたが聖なる 方であるから
-怒りも恨みも 手放します
-主のものとして 生かしてください
-
-[Instrumental Interlude]
-
-[Verse 4]
-自分の正しさ 比べる心
-守ろうとする 頑固さも
-一つずつ御前に 置いてゆけば
-空いた器を 主が満たす
-
 [Bridge]
 イザヤのように 答えます
 「ここにおります 遣わしてください」
@@ -255,7 +213,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian meditative hymn, upright piano, gentle woodwind responses, warm cello, light organ, hushed and reflective, tender assurance, serene morning stillness, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, thoughtful even phrasing, quiet two-part harmony in final chorus, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -288,20 +246,6 @@
 最後の病床 その時にも
 御手が私を 支えている
 
-[Chorus]
-主よ、あなたは 私を知っておられる
-どこへ行っても そこにおられる
-主にできないことは 何一つない
-これが私の 深い慰め
-
-[Instrumental Interlude]
-
-[Verse 4]
-天に上っても そこにおられ
-闇の中にも 光はある
-誰にも見えない 涙の時も
-あなたはじっと 見ておられる
-
 [Bridge]
 子どもの回復 家庭の和解
 長く答えのない 祈りさえ
@@ -329,7 +273,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Warm Japanese morning praise song, piano, nylon-string guitar, clarinet, very light brushed percussion, fresh and thankful, new-morning brightness, calm gentle joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, conversational verses, tender harmony on final line, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -361,20 +305,6 @@
 遅すぎることは ありません
 残されたすべての 朝ごとに
 新しい恵みが 注がれる
-
-[Chorus: unison]
-主の慈しみは 尽きることなく
-朝ごとに新しい 朝ごとに新しい
-主の真実は 大きいのです
-今日も新しい 慈しみをありがとう
-
-[Instrumental Interlude]
-
-[Verse 4]
-最も暗い 嘆きの中で
-預言者は見た 輝く真理
-すべて失われた ように見えても
-あわれみは 終わらない
 
 [Bridge]
 昨日の悲しみに 今日の喜びを
@@ -434,19 +364,7 @@
 そのすべての 場所において
 主は私と 共におられる
 
-[Chorus: flute accompaniment]
-インマヌエル 主は共におられる
-世の終わりまで いつまでも
-最後の息を するその時も
-インマヌエル 私はひとりじゃない
-
 [Instrumental Interlude]
-
-[Verse 4]
-ゲツセマネの 夜の孤独も
-あざけりの声も 知っておられる
-だから私の 寂しさを
-誰より深く 分かってくださる
 
 [Bridge]
 朝の食卓 薬を飲むとき
@@ -475,7 +393,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Reflective Japanese scripture hymn, upright piano, soft woodwind, viola, restrained organ, humble and still, quiet grace resolving into warm light, gentle morning peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, gentle two-part harmony at the end, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -508,20 +426,6 @@
 罪を深く 知るほどに
 十字架の愛が 大きく見える
 
-[Chorus]
-あなたはメシア 生ける神の子
-約束の救い主 イエスよ
-私の罪の重荷を 負われた方
-もう自分で 背負いません
-
-[Instrumental Interlude]
-
-[Verse 4]
-偶然に起きた ことではない
-はるかな昔からの 約束
-時が満ちて 主は来られて
-その約束を 果たされた
-
 [Bridge]
 悔いた後まで 罰し続けない
 主が負われた 荷物だから
@@ -549,7 +453,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness, gentle 6/8, felt piano, solo cello, thin warm strings, soft organ, honest and tender, grace and gentle relief, quiet morning assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, sincere prayerful delivery, soft alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -582,20 +486,6 @@
 愛とあわれみ 平安といのち
 今日は静かに いただきます
 
-[Chorus]
-成し遂げられた 主がすべてを
-救いのわざは 完成した
-受けた恵みが あふれ出て
-家族へ隣人へ 流れていく
-
-[Instrumental Interlude]
-
-[Verse 4]
-負債の証書に 記された
-「支払い済み」の その一言
-これから捧げる 奉仕も愛も
-感謝の応答に すぎません
-
 [Bridge]
 受け取ることは 恥ではなく
 恵みにゆだねる 成熟のしるし
@@ -623,7 +513,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Peaceful Japanese hymn of resurrection hope, intimate piano, soft strings, gentle French horn, acoustic guitar, quiet meditation opening into warm light, hopeful serene joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone or mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, brightening softly as hope grows, small choir in final chorus, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -656,20 +546,6 @@
 先に召された 懐かしい顔と
 迎えてくださる 主がおられる
 
-[Chorus]
-死よ、お前の勝利は どこにあるのか
-死よ、お前のとげは どこにあるのか
-主は復活 そして、いのち
-死は終わりでは ありません
-
-[Instrumental Interlude]
-
-[Verse 4]
-年を重ねての 信仰は
-永遠を見つめる 信仰です
-目の前のものは 小さくなり
-続くいのちが 大きく見える
-
 [Bridge]
 死は勝利に のみ込まれた
 より良い住まいへ 移るように
@@ -697,7 +573,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of quiet expectation, piano, warm strings, restrained French horn, spacious and unhurried, calm longing turning to gentle joy, sunrise-like warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or gentle baritone, clear Japanese diction, comfortable mid-range, gentle and warm, tender expectant tone, small mixed choir at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -730,20 +606,6 @@
 祈りの中で 呼んできた方の
 み顔をついに 仰ぎ見る
 
-[Chorus]
-「私はすぐに来る」 主のことば
-恐れではなく 慕う心で
-マラナ・タ 主よ、来てください
-お会いする日を 待ち望みます
-
-[Instrumental Interlude]
-
-[Verse 4]
-この世の流れは 行き先のない
-川ではなく 主へ向かう道
-苦しい日々に 頼ったお方に
-やがてまみえる 日が来ます
-
 [Bridge]
 その日あなたに 何と言おう
 ただありがとうと 言うでしょう
@@ -771,7 +633,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, nylon-string guitar, still and prayerful, humble warmth in God's presence, quiet peaceful joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison chorus ending in amen, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -804,20 +666,6 @@
 弱った日にも 病の床にも
 最後の時まで 共におられる
 
-[Chorus]
-助け主なる 聖霊よ
-いつまでも共に いてくださる
-すべてを教え 思い起こさせて
-今日も共に 歩んでください
-
-[Instrumental Interlude]
-
-[Verse 4]
-何かを決める その時には
-「教えてください」と 祈ります
-心が騒ぐ その日には
-「平安をください」と 願います
-
 [Bridge]
 ことばにならない 悲しみさえ
 うめきをもって 執り成される
@@ -845,7 +693,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese chapel prayer song, piano, soft pipe organ, warm cello countermelody, unhurried steady pulse, open-handed surrender, tranquil trusting warmth, calm humble joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and mature alto, clear Japanese diction, comfortable mid-range, gentle and warm, quiet prayerful phrasing, delicate harmony in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -878,20 +726,6 @@
 空くことは 失うことではなく
 満たされるための 場所になる
 
-[Chorus]
-求める者に 聖霊を
-天の父は 与えてくださる
-空いた器に 注いでください
-あなたの愛と 平安を
-
-[Instrumental Interlude]
-
-[Verse 4]
-満たしは一度で 終わりではなく
-朝ごとに受ける 贈り物
-使えばまた空く この器を
-何度でも差し出せば いいのです
-
 [Bridge]
 高ぶる思いの ためではなく
 静かな暮らしの 真ん中で
@@ -919,7 +753,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Quiet Japanese devotional hymn, soft piano, pipe organ, nylon-string guitar, gentle cello, restful abiding mood, tender organic warmth, calm grateful stillness, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature alto and baritone in gentle alternation, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, closing amen cadence, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -952,20 +786,6 @@
 祈りの中で みことばの中で
 実は少しずつ 育っていく
 
-[Chorus]
-私はぶどうの木 あなたがたは枝
-主よ、あなたに つながります
-年を重ねるほど 柔らかく
-豊かな実を 結ばせてください
-
-[Instrumental Interlude]
-
-[Verse 4]
-九つの実は ばらばらでなく
-一つのいのちの 実りです
-愛も忍耐も 柔和も自制も
-同じ木の上で 育ちます
-
 [Bridge]
 「いつも穏やかな 人だった」と
 いつか誰かが 思い出す
@@ -993,7 +813,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian prayer hymn of daily gratitude, piano, sustained soft organ, gentle cello, steady unhurried pace, everyday thankfulness, serene humble morning joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature baritone and alto, clear Japanese diction, comfortable mid-range, gentle and warm, calm even phrasing with soft unison chorus, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -1026,20 +846,6 @@
 小さく見える その親切が
 永遠に残る 実になります
 
-[Chorus]
-いつも喜び 絶えず祈り
-どんなことにも 感謝しなさい
-これが神さまの みこころです
-今日を御前で 生きるだけ
-
-[Instrumental Interlude]
-
-[Verse 4]
-隣人と交わす 朝のあいさつ
-孫へ送る 励ましのことば
-古い友への 一本の電話
-それもみこころを 生きること
-
 [Bridge]
 目覚めた朝に こう祈ります
 「今日を聖く 歩ませてください」
@@ -1067,7 +873,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of calling, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, quiet sense of purpose, hopeful grateful readiness, simple singable warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature male baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, dignified storytelling, unified final line, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus: small choir] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus: small choir] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -1100,20 +906,6 @@
 その小さな 働きさえも
 神は大切に 用いられる
 
-[Chorus: small choir]
-私は神に 造られた者
-善い行いのために 造られた
-最後のほほえみ 最後の祈りも
-主は用いて くださいます
-
-[Instrumental Interlude]
-
-[Verse 4]
-若い日の召しは 子育てや仕事
-形を変えて 続いていく
-今は祈る人 話を聞く人
-静かに愛を 届ける人
-
 [Bridge]
 何を見るとき 心が痛むか
 何をするとき 生き生きするか
@@ -1140,7 +932,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, gentle cello, unhurried and still, warm humble trust, serene morning devotion, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -1173,20 +965,6 @@
 五つのしるしが 重なる時
 静かに一歩 踏み出せます
 
-[Chorus]
-心を尽くして 主に信頼し
-自分の悟りに 頼りません
-どんな時にも 主を認めれば
-主がこの道を まっすぐにされる
-
-[Instrumental Interlude]
-
-[Verse 4]
-導かれてきた 日々を思えば
-あの決断にも 御手があった
-知恵の限りを 認めるところから
-まことの知恵は 始まります
-
 [Bridge]
 主よどうすれば よいでしょうか
 小さなことにも 立ち止まり尋ね
@@ -1202,7 +980,6 @@
 [Outro: amen cadence]
 どんな時にも 主を認めれば
 主が道を 示してくださる
-アーメン
 
 [End]
 ```
@@ -1246,19 +1023,7 @@
 私の見ない 日々の先にも
 あなたの真実は 変わりません
 
-[Chorus: violin accompaniment]
-何事にも 時がある
-すべてのことに 時がある
-時が満ちて 御子は来られた
-主の時を 私は信じます
-
 [Instrumental Interlude]
-
-[Verse 4]
-生まれる時があり 死ぬ時がある
-植える時があり 抜く時がある
-泣く時も笑う時も 御手の中
-長い歳月が 教えてくれた
 
 [Bridge]
 答えをこの目で 見なくても
@@ -1287,7 +1052,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn of hope, intimate piano, soft strings, restrained French horn, acoustic guitar, spacious and serene, sunrise warmth after a long night, peaceful grateful joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, small mixed choir on final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -1320,20 +1085,6 @@
 一つのみことばが 心に残れば
 それが生涯の 糧になる
 
-[Chorus]
-永遠のいのちは
-まことの神を 知ること
-遣わされた御子 イエス・キリストを
-知ることこそ いのちです
-
-[Instrumental Interlude]
-
-[Verse 4]
-誇るべきものは ただ一つ
-財でも誉れでも ありません
-慈しみと正義を 行われる
-主を知ることを 誇ります
-
 [Bridge]
 これからも続く 恵みの旅路
 福音の深みへ 進みます
@@ -1361,7 +1112,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Quiet Japanese praise song of calling, piano, acoustic guitar, warm strings, light bass, gentle walking pulse, calm readiness, hopeful thankful warmth, simple singable melody, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -1394,20 +1145,6 @@
 難しいことばは いらないから
 孫にも伝えたい この知らせ
 
-[Chorus: small choir]
-福音は 神の力
-信じる者を 救う力
-主が私のため 死んでよみがえられた
-この知らせに 今日も生かされる
-
-[Instrumental Interlude]
-
-[Verse 4]
-幼い日に聞いた あの知らせを
-静かな部屋で 聞き直すとき
-以前とは違う 深い重みで
-この胸の奥に 迫ってくる
-
 [Bridge]
 主よ頭だけで 知っていました
 今この心で 受け取ります
@@ -1435,7 +1172,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Gentle Japanese worship hymn of mission, acoustic guitar, piano, brushed snare, warm strings, softly walking tempo, quiet purposeful hope, warm and bright everyday grace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm grounded baritone lead, small mixed choir in chorus, unified final line, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -1468,20 +1205,6 @@
 小さな親切 一つ行えば
 そこに御国の 香りが咲く
 
-[Chorus: small choir]
-御国が 来ますように
-みこころが 行われますように
-天の希望を 抱きながら
-今日この場所で 御国を生きる
-
-[Instrumental Interlude]
-
-[Verse 4]
-急がなくても いいのです
-目立つことを しなくても
-毎日この身を 通り抜けて
-御国は静かに 広がります
-
 [Bridge]
 天の御国を 待ち望みつつ
 今日の暮らしに 主を迎える
@@ -1509,7 +1232,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of repentance and grace, gentle 6/8, felt piano, solo cello, quiet strings, honest and tender, softly opening into peaceful light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, alto support in final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -1542,20 +1265,6 @@
 奉仕のできない 私のままで
 主の愛は 変わりません
 
-[Chorus]
-ほかに福音は ありません
-キリストの福音 ただ一つ
-祝福のためでなく あなたを愛して
-十字架のもとへ 帰ります
-
-[Instrumental Interlude]
-
-[Verse 4]
-なぜ信じるのかと 問われたなら
-静かに心を 見つめ直す
-祝福のためだけでは ありません
-あなたを愛して いるからです
-
 [Bridge]
 主よ私の 動機を照らし
 中心にあなたを 置かせてください
@@ -1583,7 +1292,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Softly moving Japanese praise song, piano, acoustic guitar, brushed snare, light bass, easy walking pace, everyday gospel gladness, calm and quietly bright, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Steady mature baritone, small senior choir on chorus, clear Japanese diction, comfortable mid-range, gentle and warm, dignified unhurried delivery, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -1616,20 +1325,6 @@
 尊い血潮が 覆っています
 重荷を一つずつ 降ろします
 
-[Chorus: small choir]
-キリスト・イエスに ある者は
-もう罪に 定められない
-昨日も今日も 変わらぬ愛が
-今日を生きる 力になる
-
-[Instrumental Interlude]
-
-[Verse 4]
-孤独が深く なる夕べには
-インマヌエルの主が 共におられる
-恐れが押し寄せる その時には
-私には復活の 希望がある
-
 [Bridge]
 朝に食卓に 眠る前に
 自分の魂へ 語りかける
@@ -1657,7 +1352,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Quiet Japanese meditative hymn of the cross, flowing 6/8, felt piano, solo cello, thin warm strings, tender reflection easing into gentle relief, calm morning peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Sincere mature baritone, gentle alto joining the final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, minimal vibrato, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -1690,20 +1385,6 @@
 最後の息は 終わりではなく
 主とまみえる 新しい朝
 
-[Chorus]
-十字架につけられた キリストを
-私は生涯 宣べ伝えます
-愛と赦しと 和解と自由
-死の向こうの いのちの知らせ
-
-[Instrumental Interlude]
-
-[Verse 4]
-神殿の幕は 二つに裂けて
-遠く立つ日々は 終わりました
-神の子どもとして 迎えられて
-顔と顔を合わせる 日を待ちます
-
 [Bridge]
 愛と裁きの終わり 和解と自由
 永遠のいのちの 知らせを胸に
@@ -1731,7 +1412,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Gentle Japanese hymn of cleansing grace, lilting 6/8, felt piano, warm cello, soft strings, restrained organ, quiet gratitude turning to peaceful assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm unhurried baritone lead, mature alto harmony on last refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -1764,20 +1445,6 @@
 主よこの家族を 恵みのうちに
 その祈りは 決してむだでない
 
-[Chorus]
-御子イエスの 尊い血が
-すべての罪から 清めます
-赦しと清めと 守りと勝利
-今日もこの身を 支えています
-
-[Instrumental Interlude]
-
-[Verse 4]
-過越の夜の 小羊の血が
-家々の入口 守ったように
-主の尊い血が この家をおおい
-今日も私たちを 守ります
-
 [Bridge]
 長く消えなかった 罪責の重さも
 良心の奥まで 清められて
@@ -1805,7 +1472,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Serene Japanese hymn of resurrection hope, intimate piano, acoustic guitar, soft strings, gentle French horn, warm major glow, quiet dawn-like joy, spacious and calm, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mezzo-soprano or baritone lead, small choir on final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, graceful legato, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -1838,20 +1505,6 @@
 痛みも病も 涙もない
 朽ちない体を 着せられます
 
-[Chorus]
-「私は生きている者である
-死んだが 今は永遠に生きている」
-主が生きて おられるから
-私も今日を 生きられます
-
-[Instrumental Interlude]
-
-[Verse 4]
-失望に沈む 日が来ても
-もう一度立ち上がる 力がある
-今この内に 流れている
-復活のいのちが あるからです
-
 [Bridge]
 私はキリストと 共に死んで
 共に新しく 生かされました
@@ -1879,7 +1532,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Tender Japanese hymn of new life in Christ, swaying 6/8, felt piano, solo cello, quiet strings, restrained organ, honest reflection blooming into gentle peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature baritone, soft alto support in the closing refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -1912,20 +1565,6 @@
 愛と忍耐 平安あわれみ
 内なる主の姿を 見ますように
 
-[Chorus]
-もはや私が 生きるのではなく
-キリストが私の 内に生きる
-弱くなるほど はっきり見える
-あなたのいのちが 現れます
-
-[Instrumental Interlude]
-
-[Verse 4]
-できることが 減ってゆくのは
-ただ悲しみでは ありません
-古い私が 小さくなって
-主の姿が 見えてくる場所
-
 [Bridge]
 毎日心へ 語りかけます
 私の内に 主が生きておられる
@@ -1953,7 +1592,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Peaceful Japanese hymn of new birth, intimate piano, soft strings, restrained French horn, acoustic guitar, warm and bright, gentle spiritual awakening, thankful quiet joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, small mixed choir in final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -1986,20 +1625,6 @@
 そこに新しい いのちが息づく
 年を重ねても 遅くはない
 
-[Chorus]
-イエスを受け入れ その名を信じる
-すべての人に 与えられる
-神の子どもと なる恵み
-新しいいのちの 始まりです
-
-[Instrumental Interlude]
-
-[Verse 4]
-確信のないまま 過ごした人も
-恥じることなく 主の前へ
-真実に求める 者を主は
-決して退け なさいません
-
 [Bridge]
 主よ長い年月 通いました
 今日新しい いのちをください
@@ -2027,7 +1652,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Quiet Japanese hymn of repentance and heaven's joy, gentle 6/8 sway, felt piano, warm solo cello, thin strings, humble tenderness resolving into serene relief, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Sincere warm baritone lead, mature alto joining only at the end, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -2060,20 +1685,6 @@
 生涯の荷物は 一つずつ
 十字架の下へ 移されていく
 
-[Chorus]
-一人の罪人が 悔い改めるなら
-天には喜びが あふれます
-小さな私の 立ち返りも
-御使いたちの 喜びになる
-
-[Instrumental Interlude]
-
-[Verse 4]
-自分を責めるだけの 悲しみでなく
-みこころに沿った 悲しみは
-絶望ではなく 自由へ向かい
-救いへ導く 道になる
-
 [Bridge]
 生涯残る あの一つも
 もう一度主へ 持って行ける
@@ -2101,7 +1712,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, cello, soft woodwinds, uncluttered lyrics-forward arrangement, attentive stillness, warm peaceful morning light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, gentle two-part harmony in final chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -2134,20 +1745,6 @@
 いつか孫が その頁を開き
 信じた歩みを 見るでしょう
 
-[Chorus]
-見よ 主は戸口に立ち
-今もたたいて おられます
-心の扉を 大きく開きます
-主よ 私の内へ お入りください
-
-[Instrumental Interlude]
-
-[Verse 4]
-夫婦が日ごとに 愛を確かめる
-そのように毎朝 主を迎える
-一度の決心は 日々の姿勢に
-親しさは深く 育ちます
-
 [Bridge]
 主イエスよ 私は罪ある者
 死んでよみがえられた 主を信じます
@@ -2175,7 +1772,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Warm Japanese meditative hymn of new creation, intimate piano, soft strings, gentle French horn, acoustic guitar, spacious major warmth, quietly radiant joy, calm gratitude, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone or mezzo-soprano lead, small choir only on final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -2208,20 +1805,6 @@
 家族に注いだ 深い愛を
 子どもや孫は 見ています
 
-[Chorus]
-キリストにある人は
-新しく造られた者
-古いものは 過ぎ去って
-すべてが新しく 始まった
-
-[Instrumental Interlude]
-
-[Verse 4]
-ことばが少なく なった日にも
-一つの祈りに 真実が宿る
-できる一つの 小さな親切
-それも新しい いのちの証し
-
 [Bridge]
 兄弟姉妹を 愛する心
 聖くありたいと 願う心
@@ -2248,7 +1831,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Japanese Christian morning praise ballad, piano, nylon-string guitar, clarinet, cello, quiet and warm, gentle thankful warmth blooming into calm morning joy, intimate and unhurried, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -2281,20 +1864,6 @@
 当たり前のものは 一つもない
 与えられたから 感謝するのです
 
-[Chorus: unison]
-恵みによって 神からの贈り物
-価なしに 義とされました
-誇るものは 何もありません
-ただありがとうと 歌います
-
-[Verse 4]
-恵みは私に とどまらないで
-静かに隣へ 流れてゆく
-つまずいた人を そっと赦し
-苦手な人の 幸いを祈る
-
-[Instrumental Interlude]
-
 [Bridge]
 主よ この重荷を降ろします
 自分の正しさに 頼った日々を
@@ -2322,7 +1891,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of quiet repentance, 6/8, felt piano, solo cello, quiet warm strings, meditative and still, honest reflection easing into gentle relief and peaceful assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -2355,20 +1924,6 @@
 長く背負った 罪責感を
 今あなたの前へ 降ろします
 
-[Chorus]
-キリスト・イエスに ある者は
-決して罪に 定められない
-最高の裁判官が 宣言された
-「あなたを義と 認める」と
-
-[Verse 4]
-朝に昼に 夜のしじまに
-その宣言を 読み返します
-私の名前を そっと入れて
-「あなたは義と 認められた」と
-
-[Instrumental Interlude]
-
 [Bridge]
 人から責められる 日が来ても
 過去が訴えを 起こしても
@@ -2396,7 +1951,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Gentle Japanese worship hymn of forgiveness and renewal, 6/8, felt piano, solo cello, quiet strings, tender honesty opening into soft light and calm assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, steady prayerful lines, soft alto joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -2429,20 +1984,6 @@
 神が先に 愛してくださった
 その愛に応えて 歩むだけです
 
-[Chorus]
-キリストは私を 自由にされた
-再びくびきを 負わないように
-義務ではなく 愛への応え
-喜んで正しい道を 選びます
-
-[Verse 4]
-恵みは罪を 軽くするのでなく
-聖い歩みへ 育てる力
-今日も少しずつ 私を造り
-愛する者へと 変えてくださる
-
-[Instrumental Interlude]
-
 [Bridge]
 主よ 完璧を求めて 疲れた人に
 そっと伝えたい ことばがあります
@@ -2470,7 +2011,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese Christian praise ballad, nylon-string guitar, piano, clarinet, cello, warm gratitude and quietly growing joy, close natural intimacy like waves of grace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, tender two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -2503,20 +2044,6 @@
 その物語を 子や孫へ
 信仰の遺産として 残しましょう
 
-[Chorus: unison]
-恵みの上に さらに恵み
-主を知る知識に 成長させてください
-振り返れば すべてが恵み
-誇れるものは 何もありません
-
-[Verse 4]
-歩いてきた日々を 振り返れば
-届いたことばが 錨になる
-心が重く 沈む夜には
-あのみことばへ 帰ればいい
-
-[Instrumental Interlude]
-
 [Bridge]
 主よ この十六日の 道のりを
 共に歩いて くださいました
@@ -2544,7 +2071,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, viola, cello, attentive stillness and honest searching resolving into clear peaceful morning joy, lyrics-forward and uncluttered, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, calm thoughtful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -2576,20 +2103,6 @@
 本質へ帰る 恵みの時
 人に見せる 信仰ではなく
 主と二人きりの 深い交わりへ
-
-[Chorus]
-主よ、形ではなく 心をささげます
-慣れた祈りの ことばではなく
-心から湧く 一言を
-今日あなたに 申し上げます
-
-[Verse 4]
-時にはすべてを 少し休んで
-あなたと二人で 座っています
-慣れた営みの その奥にある
-生きた泉へ 帰るために
-
-[Instrumental Interlude]
 
 [Bridge]
 主よ 心をご覧になる方
@@ -2643,12 +2156,6 @@
 祈りは短くても 真実になり
 ことばは少なくても 温かくなる
 
-[Chorus: strings swell]
-大切なのは 愛によって働く信仰
-活動の多さでは ありません
-愛の深さが 本物のしるし
-主よ、この愛を 育ててください
-
 [Verse 3]
 体が弱っても 希望は強く
 死を前にしても 主を信頼する
@@ -2656,12 +2163,6 @@
 内側の愛は 深くなれる
 
 [Instrumental Interlude]
-
-[Verse 4]
-みことばを基準に 今日を選び
-罪を悲しんで 立ち帰る心
-完全でなくても かまわない
-育ちゆく方向を 主は見ておられる
 
 [Bridge]
 昨日より少し 深くなる関係
@@ -2721,19 +2222,7 @@
 年を重ねた今 もっと深く
 静かに揺るがず 愛せるのです
 
-[Chorus]
-心を尽くし 魂を尽くして
-主なるあなたを 愛します
-思い出し 悔い改めて
-初めの愛へ 帰ります
-
 [Instrumental Interlude]
-
-[Verse 4]
-朝のひととき 短い祈り
-讃美を一曲 口ずさむこと
-小さな一つで 十分だから
-今日その一歩を 踏み出します
 
 [Bridge]
 初めて出会った日の 物語を
@@ -2762,7 +2251,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, stillness and humble surrender, warm quiet joy of God's presence, spacious and unhurried, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, gentle mixed unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -2795,20 +2284,6 @@
 柔らかな心を 与えてください
 みことばが深く 届くように
 
-[Chorus]
-心を尽くして 主に信頼します
-自分の悟りに 頼りません
-頭で知っていた みことばが
-心の慰めに 変わりますように
-
-[Verse 4]
-ゆだねなさいと 知っていながら
-心配を握って 離せない夜も
-急がず一節の 前に座れば
-ことばは静かに 胸へ降りてくる
-
-[Instrumental Interlude]
-
 [Bridge]
 「恐れるな あなたと共にいる」
 一語ずつ ゆっくり繰り返す
@@ -2836,7 +2311,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Intimate Japanese Christian praise song, nylon-string guitar, piano, clarinet, very light brushed percussion, quiet companionship and gentle thankful warmth, restful morning glow, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, conversational and tender, clear Japanese diction, comfortable mid-range, gentle and warm, soft closing harmony, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -2869,20 +2344,6 @@
 心が重い日は 何も言わずに
 ただ御前に 座るだけでいい
 
-[Chorus: unison]
-私は愛する方のもの
-愛する方は 私のもの
-近づけば主も 近づいてくださる
-その約束を 今日も信じて
-
-[Verse 4]
-朝食のあとの 窓辺の椅子
-温かいお茶を 一杯そえて
-今日から決めます 約束の時間
-あなたと出会う 私の場所を
-
-[Instrumental Interlude]
-
 [Bridge]
 遠く感じていた 日々にさえ
 あなたは待って いてくださった
@@ -2910,7 +2371,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese scripture meditation hymn, upright piano, soft woodwinds, viola, cello, warm major-key assurance, serene morning light and gentle sense of belonging, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, smooth natural legato, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -2943,20 +2404,6 @@
 この身分だけは 地上を越えて
 永遠にまで 続いてゆく
 
-[Chorus]
-私は神の 愛する子ども
-何をしたかでは ありません
-白髪が増えても しわが深くても
-父は大切に 見つめておられる
-
-[Verse 4]
-孫の手を取って 伝えましょう
-「何をしなくても あなたは宝」
-私が受け取った その同じ愛を
-次の世代へ 手渡すのです
-
-[Instrumental Interlude]
-
 [Bridge]
 仕事の名でもなく 肩書きでもなく
 生まれる前から 呼ばれていた名前
@@ -2984,7 +2431,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian meditative hymn on identity, upright piano, viola, cello, soft woodwind responses, attentive stillness resolving into clear peaceful joy, steady and reassuring, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, calm and thoughtful, clear Japanese diction, comfortable mid-range, gentle and warm, quiet two-part final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -3017,20 +2464,6 @@
 「わたしのもの」と 主が呼ばれる
 その価値は決して 変わりません
 
-[Chorus]
-世のラベルではなく 神の身分に生きる
-この世に合わせず 心を新しく
-選ばれた民 王に仕える祭司
-それが私の 本当の姿
-
-[Verse 4]
-退職者と 呼ばれる日にも
-助けが要る人と 見られる日にも
-神の目にはただ 尊いひとり
-かけがえのない 私がいます
-
-[Instrumental Interlude]
-
 [Bridge]
 今日も家族の 名を呼びながら
 静かに祈りを ささげます
@@ -3058,7 +2491,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Gentle Japanese hymn of contentment, upright piano, soft woodwinds, cello, light organ, restful gratitude and warm sufficiency in quiet morning light, uncluttered and lyrics-forward, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, unhurried thankful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, soft harmony in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -3091,20 +2524,6 @@
 小さなものを 贈り物として
 受け取るところから 始まります
 
-[Chorus]
-満ち足りる心を 伴う信仰は
-大きな豊かさを もたらします
-持ち物の多さでは ありません
-主が共におられる それで十分
-
-[Verse 4]
-比べる癖が 顔を出す日は
-一度立ち止まり 告白します
-「今与えられている ものも恵み」
-満ち足りる心は 日々学ぶもの
-
-[Instrumental Interlude]
-
 [Bridge]
 主よ もっと欲しいと 願った心を
 あなたの御前に 降ろします
@@ -3132,7 +2551,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Reflective Japanese Christian hymn of self-examination, 6/8, felt piano, solo cello, thin warm strings, gentle honesty resting in grace, quiet assurance and peaceful morning calm, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, sincere and steady, clear Japanese diction, comfortable mid-range, gentle and warm, alto joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -3165,20 +2584,6 @@
 「この場所を 回復してください」
 そう主に求めるだけで よいのです
 
-[Chorus]
-自分自身を 正しく見つめるなら
-裁きを受けずに すみますから
-主の前で 正直になること
-それが回復の 始まりです
-
-[Verse 4]
-月の初めに ノートを開き
-魂の庭を 見回ります
-人とではなく 昨日の私と
-御手の跡を 数えるために
-
-[Instrumental Interlude]
-
 [Bridge]
 困難の中にも 主の平安が
 静かな川のように 流れているか
@@ -3206,7 +2611,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Tender Japanese Christian meditation hymn, felt piano, solo cello, subtle pipe organ, warm strings, quiet compassion and peaceful grateful joy, soft sunrise warmth in weakness held by grace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, calm compassionate tone, clear Japanese diction, comfortable mid-range, gentle and warm, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -3239,20 +2644,6 @@
 「弱い時は 主に支えられている」と
 その姿こそ 信仰の遺産
 
-[Chorus]
-私が弱い その時にこそ
-主の力が 完全に現れる
-あなたの恵みは 十分だから
-この弱さの中を 流れてください
-
-[Verse 4]
-「もう以前と同じには できません」
-正直に言える 今日の私
-その告白は 弱さではなく
-御手へ移り住む 知恵なのです
-
-[Instrumental Interlude]
-
 [Bridge]
 主よ この限界を お渡しします
 体の限界も 心の限界も
@@ -3280,7 +2671,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet meditation opening into peaceful grateful joy, sunrise after a long night, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, small choir only in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -3312,20 +2703,6 @@
 体の弱さ 将来の不安
 けれどその向こうで 神さまが
 育てておられるものが 見えるのです
-
-[Chorus]
-忍耐は練られた 品性を生み
-品性は確かな 希望を生む
-この試練の中でも 主は今日も
-私を形づくって おられます
-
-[Verse 4]
-悲しむことは 弱さではない
-涙もまた 自然な祈り
-けれどその涙の 奥のほうで
-育てられている ものがある
-
-[Instrumental Interlude]
 
 [Bridge]
 長い夜を越えて 朝日が昇るように
@@ -3384,19 +2761,7 @@
 少し休んで 光を浴びること
 それも主が備えた道です
 
-[Chorus: full strings swell]
-神は真実なお方
-耐えられない試練には 遭わせない
-主により頼むこの姿を
-子どもや孫に 残せますように
-
 [Instrumental Interlude]
-
-[Verse 4]
-ひとりだと思える夜も
-将来がふと怖くなる朝も
-神は限界をご存じで
-御手は苦しみに届いている
 
 [Bridge]
 主よ 逃れの道を
@@ -3458,18 +2823,6 @@
 人の痛みを思うあわれみ
 それが残された純金です
 
-[Chorus]
-試された後 私は
-純金のようになって出て来る
-火をくぐった信仰は
-金よりも尊い宝もの
-
-[Verse 4]
-苦しい時にも責めなかった
-父のやわらかなまなざし
-待ちわびながら祈り続けた
-母の背中を覚えている
-
 [Bridge]
 痛いものは痛いままに
 申し上げてよいのです
@@ -3528,18 +2881,6 @@
 今日というマナを拾いながら
 約束の地へ 歩いてゆく
 
-[Chorus]
-人はパンだけで生きるのではない
-主の口から出る みことばによって
-今日も生かされてゆく
-荒れ野は 恵みの学校
-
-[Verse 4]
-握りしめていた誇りが
-少しずつ ほどけてゆき
-空にされたこの両手へ
-新しい恵みが注がれる
-
 [Bridge]
 低くされることさえも
 深い恵みと知りました
@@ -3597,18 +2938,6 @@
 主はパンと眠りを与えられた
 よく食べ よく休み
 静かな声に耳を澄まそう
-
-[Chorus]
-主を待ち望む人は
-新しい力を受ける
-鷲のように翼をひろげ
-もう一度 昇ってゆける
-
-[Verse 4]
-沈んだ心に向かって
-真理を語り聞かせよう
-感情よりも先に立つ
-神の真実があるから
 
 [Bridge]
 隠さず差し出します
@@ -3669,18 +2998,6 @@
 より頼む心が育ちました
 耳で聞いていた主を
 今はこの目で仰いでいます
-
-[Chorus]
-苦難は忍耐を生み
-忍耐は練られた品性を
-品性は希望を生む
-試された後 純金のように輝く
-
-[Verse 4]
-頭で知っていた信仰が
-心で生きる信仰へ
-世のラベルを脱ぎすてて
-神の子として立っています
 
 [Bridge]
 失ったものの数よりも
@@ -3744,18 +3061,6 @@
 ことばにならない日は
 黙ってそばにいるだけでいい
 
-[Chorus]
-天におられる
-私たちの父よ
-役目を終えたこの時こそ
-あなたと親しむ恵みの時
-
-[Verse 4]
-長く連れ添った人と
-黙って過ごす午後のように
-ことばを越えた安らぎが
-主とのあいだにもあります
-
 [Bridge]
 この静かなひとときから
 家族への祈りが生まれ
@@ -3815,18 +3120,6 @@
 誘惑からお守りください
 ことばの出ない日には
 この祈りだけで十分です
-
-[Chorus]
-天の父よ 今日も
-日ごとの糧をお与えください
-毎日の呼吸のように祈り
-子や孫へ手渡せますように
-
-[Verse 4]
-礼拝から始まる祈り
-赦しと守りで結ぶ祈り
-六つの願いのひとつずつに
-今日の暮らしを重ねます
 
 [Bridge]
 いつか子らは思い出す
@@ -3888,18 +3181,6 @@
 長く生きたからこそ知る
 数えきれない恵みがある
 
-[Chorus]
-何も思い煩わず
-感謝を込めて祈ろう
-感謝しながら門に入り
-讃美しながら 主の庭へ
-
-[Verse 4]
-まず あなたをほめたたえ
-次に心をひらいて告白し
-恵みを数えて感謝して
-終わりに願いを申し上げる
-
 [Bridge]
 年輪を重ねた感謝には
 生涯の重みがあります
@@ -3959,18 +3240,6 @@
 洗濯物をたたむとき
 主よ ありがとうございますと
 暮らしの節目に呼びかける
-
-[Chorus]
-たゆまず祈り
-感謝をもって目を覚まそう
-あらゆる祈りと願いを
-聖霊によって ささげよう
-
-[Verse 4]
-五分の沈黙の中で
-思いが揺れてもかまわない
-ただ主がここにおられると
-心を静めて座ります
 
 [Bridge]
 今日はひとりの名前を
@@ -4032,19 +3301,6 @@
 まだ見ぬ孫の孫のためにも
 祈りは時を越えてゆく
 
-[Chorus: small choir]
-すべての人のために
-願い 祈り 執り成し
-感謝をささげよう
-一人の母の祈りが
-子の生涯を支えるように
-
-[Verse 4]
-私のためにも 誰かが
-祈ってくれた日がありました
-あのぬくもりを胸に抱き
-今日は私が祈る番です
-
 [Bridge]
 苦しみの中のひとりの
 名前を今日も呼びながら
@@ -4104,18 +3360,6 @@
 小さな祈りの部屋をつくる
 できなかった日は責めずに
 また明日 静かに戻ればいい
-
-[Chorus]
-以前からしていたように
-今日も祈ります
-長い年月の静かなリズムが
-祈りを深くしてくれる
-
-[Verse 4]
-両手を合わせ 頭を垂れて
-聖書をひらき 主へ向かう
-病院へ行く日も 五分でも
-同じ場所へ帰ってゆく
 
 [Bridge]
 嵐の日にも変わらずに
@@ -4177,18 +3421,6 @@
 鎖を解き くびきを外す
 それが主の喜ばれる断食
 
-[Chorus: unison]
-今からでも 心を尽くして
-主のもとへ帰ろう
-無理のない小さなささげもの
-愛に変えてくださる主
-
-[Verse 4]
-月に一度の小さな余白
-一時間の静かなひととき
-大きな決心でなくても
-主への渇きは深くなる
-
 [Bridge]
 主よ この空けた両手を
 あなたへ差し出します
@@ -4248,18 +3480,6 @@
 祈りませんかと声をかけよう
 食卓を囲む家族と
 一言ずつ祈ってみよう
-
-[Chorus]
-二人または三人が
-主の名によって集まるなら
-そのただ中に 主はおられる
-短い祈りにも 主はおられる
-
-[Verse 4]
-弱っていたあの季節に
-隣の祈りに支えられた
-祈りで結ばれた友は
-生涯の宝になります
 
 [Bridge]
 母がひとこと 子がひとこと
@@ -4321,18 +3541,6 @@
 ひとりで戦わないで
 祈ってくださいと友に頼もう
 
-[Chorus]
-身を慎み 目を覚ましていよう
-恐れることはない
-私の内におられる方は
-世にいる者よりも 力がある
-
-[Verse 4]
-戦いは大きな場所より
-毎日の小さな場所で
-そのたび短いひとことの
-祈りとみことばで応えよう
-
 [Bridge]
 よく食べ よく休むことも
 主が備えられた守りのひとつ
@@ -4393,18 +3601,6 @@
 武具をまとうとはすなわち
 主イエスを身にまとうこと
 
-[Chorus]
-主に結ばれて
-その偉大な力によって強くなろう
-一分の朝の祈りが
-一日の心を整える
-
-[Verse 4]
-家庭へ 病院へ 近所へも
-平安を運ぶ足になろう
-争いではなく やわらぎを
-ことばとほほえみで届けよう
-
 [Bridge]
 不安な日には盾を思い
 暗い朝には兜をかぶる
@@ -4436,6 +3632,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -4464,18 +3661,6 @@
 主よ 朝ごとに知恵をください
 キリストを高くする道を選びます
 
-[Chorus]
-すべてをよく確かめ
-良いものを大切にします
-悪いものは どんな形でも退けて
-真理のうちを 静かに歩みます
-
-[Verse 4]
-みことばと一つに響くだろうか
-キリストを高く仰いでいるか
-愛と平安の実は育つか
-信仰の友と共に確かめる
-
 [Bridge]
 光の天使を装う影も
 心地よい声にまぎれるから
@@ -4493,6 +3678,7 @@
 平安のうちに 今日を歩みます
 
 [End]
+
 ```
 
 ---
@@ -4508,6 +3694,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano and soft organ]
 
 [Verse 1]
@@ -4536,18 +3723,6 @@
 主との親しさをつくり
 子や孫の心にも残ります
 
-[Chorus]
-絶えず祈り どんな時にも感謝する
-それが あなたのみこころ
-朝ごとの小さな祈りが
-生涯の宝となります
-
-[Verse 4]
-祈りは務めではなく出会い
-静けさの中で主と会う時間
-量ではなく深さによって
-晩年の日々は満たされてゆく
-
 [Bridge]
 朝の光でも 沈黙でも
 歩きながらの一呼吸でも
@@ -4565,6 +3740,7 @@
 アーメン 感謝します
 
 [End]
+
 ```
 
 ---
@@ -4580,6 +3756,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano and acoustic guitar]
 
 [Verse 1]
@@ -4600,12 +3777,6 @@
 晩年は終わりの場所ではないと
 あの人の歩みが教えてくれる
 
-[Chorus: small choir]
-主のことばに従って
-今日の一歩を踏み出します
-すべてを知らなくてもいい
-あなたが道を示してくださる
-
 [Short Interlude]
 
 [Verse 3]
@@ -4613,12 +3784,6 @@
 今日 電話をかけてみよう
 小さな和解の一歩さえ
 主が喜んでくださるから
-
-[Verse 4]
-胸の奥にしまった小さな奉仕
-今日その扉をそっと開く
-一歩を踏み出すそのたびに
-主が次の道を照らされる
 
 [Bridge]
 七十五から百歳までの
@@ -4637,6 +3802,7 @@
 新しい一歩を 今日も踏み出します
 
 [End]
+
 ```
 
 ---
@@ -4652,6 +3818,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -4680,18 +3847,6 @@
 共に待つ友と手を取り
 神の時を 静かに待ちます
 
-[Chorus]
-アブラムは主を信じた
-主はそれを義と認められた
-長く忍耐したその先で
-約束のものを受け取ります
-
-[Verse 4]
-もう無理だとつぶやいた夜も
-約束は消えていませんでした
-長く待って与えられた答えを
-数えれば感謝があふれます
-
 [Bridge]
 急ぐ心を御前に置いて
 神の時は必ず来ると
@@ -4709,6 +3864,7 @@
 あなたの約束は真実だから
 
 [End]
+
 ```
 
 ---
@@ -4724,6 +3880,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -4752,18 +3909,6 @@
 少しずつ手放しながら
 残る日々を あなたと共に
 
-[Chorus]
-さらにすぐれた故郷がある
-天にある まことの故郷
-この地上は仮の宿
-見上げる心は自由になる
-
-[Verse 4]
-持ち物をひとつ分かち合えば
-心は軽く 空は近くなる
-先に召された懐かしい顔に
-やがて会える日を思います
-
 [Bridge]
 財産も立場も健康も
 みな地上の借りものだから
@@ -4781,6 +3926,7 @@
 今日の道を誠実に歩む
 
 [End]
+
 ```
 
 ---
@@ -4796,6 +3942,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: solo piano]
 
 [Verse 1]
@@ -4813,14 +3960,6 @@
 生涯かけて築いたもの
 そのすべてを御前に置く
 それが晩年の献身です
-
-[Verse]
-神はイサクを返された
-手放したこの手にもう一度
-さらに豊かな約束を
-そのひらに載せてくださった
-心配は祈りへ変えられて
-家族に残る信仰のかたち
 
 [Bridge]
 主よ これをお渡しします
@@ -4841,10 +3980,9 @@
 [Outro: sustained resolution]
 惜しまずささげたその場所へ
 あふれる恵みが注がれます
-惜しまぬ愛に抱かれて
-今日も安らかに委ねます
 
 [End]
+
 ```
 
 ---
@@ -4860,6 +3998,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: fingerpicked acoustic guitar]
 
 [Verse 1]
@@ -4877,14 +4016,6 @@
 わたしがあなたと共にいる
 足りなさは 妨げにならない
 主が共に働かれるから
-
-[Verse]
-アブラハムも サムエルも
-名前を呼ばれて立ち上がった
-静かな黙想のこの場所が
-私の燃える柴になる
-耳を澄ませば朝の光に
-今日も呼ばれる声がする
 
 [Subtle Build]
 静けさの中で耳を澄ます
@@ -4907,10 +4038,9 @@
 [Outro: acoustic fade]
 私はここにおります
 あなたの声に応えます
-小さな場所でかまいません
-今日も忠実に仕えます
 
 [End]
+
 ```
 
 ---
@@ -4926,6 +4056,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -4954,18 +4085,6 @@
 支えてくださいと頼むことも
 主が与えた信仰の知恵
 
-[Chorus]
-主は私たちと共におられる
-恐れることはありません
-荒れ野は通り抜ける場所
-信仰が深くされる場所
-
-[Verse 4]
-つらかったあの季節こそ
-信仰を深く耕した畑
-むだに流れた涙はない
-みな訓練の恵みでした
-
 [Bridge]
 今日は私が誰かの隣で
 下がる手をそっと支えたい
@@ -4983,6 +4102,7 @@
 主と共に渡ってゆきます
 
 [End]
+
 ```
 
 ---
@@ -4998,6 +4118,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: upright piano]
 
 [Verse 1]
@@ -5026,18 +4147,6 @@
 神の御前へ運ぶ祈り
 それが晩年の尊い働き
 
-[Chorus]
-愛する人の名前を呼び
-御前に立って祈ります
-体は弱くなっても
-心のひざはかがめられる
-
-[Verse 4]
-思えば私のためにもまた
-長く祈った人がいました
-その祈りに支えられて
-今日の私が立っています
-
 [Bridge]
 崩れたところに立ちふさがり
 御怒りさえ思い直させた
@@ -5055,6 +4164,7 @@
 祈りはどこまでも届きます
 
 [End]
+
 ```
 
 ---
@@ -5070,6 +4180,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano]
 
 [Verse 1]
@@ -5098,18 +4209,6 @@
 かなわぬ夢が残っていても
 最後を美しく迎えられる
 
-[Chorus]
-永遠の神が 私の住まい
-永遠の御腕が 下から支える
-今日の祈りと 今日の従順を
-最後まで積み重ねてゆきます
-
-[Verse 4]
-大きなことはできなくても
-今日の小さな黙想を守る
-その積み重ねの一日一日が
-美しい生涯になってゆく
-
 [Bridge]
 最後まで信仰を守りたいと
 子へ伝えたその一言が
@@ -5127,6 +4226,7 @@
 変わることなく支えてくださる
 
 [End]
+
 ```
 
 ---
@@ -5142,6 +4242,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano and soft organ]
 
 [Verse 1]
@@ -5170,18 +4271,6 @@
 毎日祈るこの姿を
 子や孫が見つめています
 
-[Chorus]
-私が主に願うのは ただ一つ
-生涯 主の家に住み
-主の麗しさを仰ぎ見て
-あなたのそばにとどまること
-
-[Verse 4]
-荒れ野の日も 王宮の日も
-魂はあなたを求めました
-乾いた地のようなその朝も
-一言の祈りで足ります
-
 [Bridge]
 生涯ささげたこの祈りは
 目に見えない遺産となって
@@ -5199,6 +4288,7 @@
 アーメン 慕い求めます
 
 [End]
+
 ```
 
 ---
@@ -5214,6 +4304,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: felt piano and cello]
 
 [Verse 1]
@@ -5242,18 +4333,6 @@
 晩年の悔い改めには
 恵みを知る美しさがある
 
-[Chorus]
-神よ 私の内に
-清い心を造ってください
-揺るがない霊を新しくして
-あなたの慈しみに帰ります
-
-[Verse 4]
-ゆるされる資格は私でなく
-あわれみ深いあなたにある
-慈しみによってぬぐわれる
-背きの染みも 古い涙も
-
 [Bridge]
 重荷はひとりで抱えずに
 打ち明ける友も恵みのうち
@@ -5271,6 +4350,7 @@
 あなたからいただきます
 
 [End]
+
 ```
 
 ---
@@ -5286,6 +4366,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: felt piano]
 
 [Verse 1]
@@ -5314,18 +4395,6 @@
 朝ごとのみことばの牧場で
 今日もゆっくり休みます
 
-[Chorus]
-神は私たちの避け所
-苦難の時 すぐ近くにいる助け
-羊飼いがおられるから
-必要なものは備えられる
-
-[Verse 4]
-苦しみが消えるのではなく
-その只中に避け所がある
-状況がどうであろうとも
-この告白は変わりません
-
 [Bridge]
 羊飼いに導かれた日々を
 孫のそばで語りましょう
@@ -5343,6 +4412,7 @@
 乏しいことはありません
 
 [End]
+
 ```
 
 ---
@@ -5358,6 +4428,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: nylon guitar and piano]
 
 [Verse 1]
@@ -5386,18 +4457,6 @@
 子や孫へ手渡します
 あなたの力を伝えるまで
 
-[Chorus: unison]
-生きている限り 主をほめたたえ
-生涯 私の神を讃美します
-白髪になっても見捨てずに
-御業を歌わせてください
-
-[Verse 4]
-白髪に刻まれたひとつずつの
-物語が讃美になります
-年老いた者の歌声が
-教会をそっと支えている
-
 [Bridge]
 好きな讃美をもう一曲
 ゆっくり心で歌います
@@ -5415,6 +4474,7 @@
 この歌が次の世代へ流れますように
 
 [End]
+
 ```
 
 ---
@@ -5430,6 +4490,7 @@
 ## Suno用歌詞
 
 ```text
+
 [Intro: piano]
 
 [Verse 1]
@@ -5458,18 +4519,6 @@
 残したい信仰の一文を
 まず私が生きてゆきます
 
-[Chorus]
-主は命の道を示される
-御前には満ちあふれる喜び
-主の右には永遠の楽しみ
-その約束を握って歩みます
-
-[Verse 4]
-思えば私にも信仰を
-残してくれた人がいました
-あの一言とあの後ろ姿を
-今も胸に抱いています
-
 [Bridge]
 まことの強さは勝つことでなく
 主の道を歩み抜く勇気
@@ -5487,6 +4536,7 @@
 その一言を 愛と共に残します
 
 [End]
+
 ```
 
 ---
@@ -5496,7 +4546,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwind, cello, light organ, attentive stillness, warm major-key resolution, clear peaceful morning joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony on final chorus, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -5529,20 +4579,6 @@
 待つことに疲れた 今日のこの場所にも
 主は静かに 働いておられる
 
-[Chorus]
-人は悪を企てても
-神はそれを 善へ変えられる
-耐え忍ぶ日々は むだではない
-主が備えておられる 時間です
-
-[Instrumental Interlude]
-
-[Verse 4]
-奴隷の家でも 牢獄の中でも
-与えられた務めに 誠実に生きた
-その一つ一つを 神は用いて
-恵みの道へ つないでくださった
-
 [Bridge]
 耐えて通った 私の物語を
 今日は孫にも 語り伝えたい
@@ -5571,7 +4607,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness, gentle 6/8, felt piano, solo cello, quiet strings, restrained organ, honest reflection easing into grace, peaceful morning assurance, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, alto support in the outro, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -5604,20 +4640,6 @@
 私も赦された 罪人だから
 その恵みに 支えられて
 
-[Chorus]
-主よ、この傷を お委ねします
-裁きはあなたの 御手のうちに
-神はすべてを 善へ変えるお方
-赦しの道を 開いてください
-
-[Instrumental Interlude]
-
-[Verse 4]
-赦すことは 相手の行いを
-なかったことに するのではない
-重すぎる荷は ひとりで抱えず
-共に祈る友に 打ち明けます
-
 [Bridge]
 赦せないあの人の 名を呼んで
 「主よ、あの人を 祝福してください」
@@ -5646,7 +4668,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, cello countermelody, unhurried and still, humble surrender, serene morning light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Baritone-alto duet with gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -5673,25 +4695,11 @@
 理解を越えた 神の摂理が
 私の生涯を 導いていた
 
-[Chorus]
-神を愛する者には
-すべてのことが 共に働いて
-善となると 主は約束された
-この約束が 心の錨
-
 [Verse 3]
 痛みは痛みのまま 認めながら
 そこにも主が 働いておられる
 理解できないことが 残っていても
 あなたの御手に 委ねます
-
-[Instrumental Interlude]
-
-[Verse 4]
-明日の健康が 不安な夜も
-子の行く末が 気にかかる日も
-揺れる小舟の 錨のように
-この約束が 私を保つ
 
 [Bridge]
 善へ変えられた 私の日々を
@@ -5721,7 +4729,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic meditation song, nylon-string guitar, soft piano, cello, brief flute, spacious silence between phrases, quiet gratitude, gentle thankful warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed unison refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Final Chorus] [Outro: piano and cello]
 
 ## Suno用歌詞
 
@@ -5753,20 +4761,6 @@
 一節をゆっくり 味わうだけで
 その小さな糧が 年月をかけて
 年を重ねた心を 育てます
-
-[Chorus: unison]
-人はパンだけで 生きるのではない
-みことばによって 生かされる
-一日に一節 ひとくちずつ
-魂の食卓に いただきます
-
-[Instrumental Interlude]
-
-[Verse 4]
-忙しさの中で 聖書を閉じて
-遠ざかっていた 季節もあった
-けれど今 永遠が近づく朝に
-みことばがまた 新しく届く
 
 [Bridge]
 食事の量は 減ってきても
@@ -5824,22 +4818,10 @@
 [Instrumental Interlude]
 
 [Verse 4: waltz]
-もてなしに追われた マルタのように
-心せわしく 過ごした日々よ
-働きのうちに 落ち着きを失くし
-主の御声を 聞き逃していた
-
-[Verse 5: waltz]
 聖書を開く前 両手を合わせ
 「お語りください」と ささやく朝
 ただの文字が 御声に変わり
 私に語る ことばとなる
-
-[Verse 6: waltz]
-朝のベッドの上 静かな部屋でも
-主の足もとは そこに開かれる
-広さではなく 形でもなく
-向ける心が 尊いのです
 
 [Bridge: orchestra swell]
 居間の椅子でも 食卓のそばでも
@@ -5869,7 +4851,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian quiet praise hymn, upright piano, viola, soft woodwind responses, light organ, lyrics-forward calm, treasured stillness, warm bright peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, natural breathing, gentle two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -5902,20 +4884,6 @@
 食卓のそばに 枕元に置いて
 毎日ひとたび 心に迎える
 
-[Chorus]
-あなたのみことばを 私の心に
-一節でいい 深く刻んで
-恐れの夜にも 涙の朝にも
-そのことばが 私を支える
-
-[Instrumental Interlude]
-
-[Verse 4]
-明け方に目覚め 恐れが湧く時
-友の訃報が 届いた日にも
-刻んだ一節が 口から流れ
-主の御前へと 連れ戻される
-
 [Bridge]
 主よ このひとことを
 生涯 心に刻んでください
@@ -5944,7 +4912,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Japanese Christian gentle acoustic hymn, nylon-string guitar, piano, cello, gentle flute interlude, open airy space, step-by-step calm assurance, peaceful quiet joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, laid-back unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Final Chorus] [Outro: piano and cello]
 
 ## Suno用歌詞
 
@@ -5971,25 +4939,11 @@
 道の全体は 見えなかったけれど
 主はいつも 歩みを守られた
 
-[Chorus: unison]
-みことばは 私の足の灯
-私の道を照らす 光です
-先は見えなくても 大丈夫
-今日の一歩の 光で歩ける
-
 [Verse 3]
 明日のことは 明日の光が
 今日は今日の光で 十分です
 心の暗い場所に 一節を灯し
 今日の一歩を 踏み出します
-
-[Instrumental Interlude]
-
-[Verse 4]
-先のすべてを 見せないことも
-神の深い 愛のかたち
-一度にすべてを 見たならば
-この心は 耐えられないから
 
 [Bridge]
 恐れの日には 「恐れるな」と
@@ -6019,7 +4973,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian meditative chapel hymn, soft piano, warm pipe organ, nylon guitar, gentle cello, short pauses between phrases, prayerful dialogue mood, warm humble joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in gentle unison, clear Japanese diction, comfortable mid-range, gentle and warm, delicate final harmony, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -6046,25 +5000,11 @@
 長年連れ添った 夫婦のように
 一言だけで 通じ合える
 
-[Chorus]
-みことばと祈りが 出会う時
-あなたとの対話が 始まります
-一節を聞いて 一言返す
-「主よ、あなたに より頼みます」
-
 [Verse 3]
 一節を読んで しばらくとどまり
 心に届いた 一語を抱く
 その小さな行き来が 積み重なって
 生涯で最も深い 同伴となる
-
-[Instrumental Interlude]
-
-[Verse 4]
-聞いて とどまり そして応える
-一節を二度 ゆっくり読み
-届いた一語を しばらく抱いて
-心の一言を お返しする
 
 [Bridge]
 「ありがとうございます」 「お赦しください」
@@ -6094,7 +5034,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian quiet devotion hymn, soft piano, sustained organ, nylon-string guitar, cello, steady unhurried pulse, humble willing obedience, calm yet joyful warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Senior mixed unison led by baritone and alto, clear Japanese diction, comfortable mid-range, gentle and warm, restrained dynamics, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -6121,25 +5061,11 @@
 「愛しなさい」と 聞いた日には
 子どもに愛していると 伝えます
 
-[Chorus]
-みことばを 行う人に
-何をするにも 愛をもって
-一本の電話 一言の感謝
-その一歩が 深い従順
-
 [Verse 3]
 人の目を気にした 日々は過ぎて
 今は静かに 主の前を歩く
 誰にも見えない 小さな一歩が
 最も純粋な 従順となる
-
-[Instrumental Interlude]
-
-[Verse 4]
-良いことばを聞き 心温まっても
-昨日と同じ 歩みのままなら
-自分で自分を 欺いてしまう
-聞いたことばは 生きるためのもの
 
 [Bridge]
 大きな働きの 日々は過ぎても
@@ -6169,7 +5095,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian gentle praise song, piano, acoustic guitar, brushed snare, warm strings, easy walking pulse, grateful hopeful purpose, bright unhurried joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, warm storytelling verses, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -6196,25 +5122,11 @@
 いつも新しい 発見をくれる
 友がそばに いてくれる
 
-[Chorus: small choir]
-あなたのみことばは 蜜よりも甘く
-私の生涯の 友となった
-一日中静かに 口ずさんで
-愛することばと 共に生きる
-
 [Verse 3]
 孤独な日に 一節を開けば
 「恐れるな 私は共にいる」
 人が隣に いない時にも
 みことばがそばで 語りかける
-
-[Instrumental Interlude]
-
-[Verse 4]
-義務は糧へと 糧は愛へと
-みことばとの 歩みは深まる
-読まない日には 心が飢えて
-開けば友の 声が聞こえる
 
 [Bridge]
 「これはわたしの 生涯のことば」
@@ -6244,7 +5156,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of eternal hope, intimate piano, soft strings, restrained French horn, spacious major-key warmth, sunrise serenity after a long night, peaceful grateful joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, small mixed choir on final chorus only, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -6271,25 +5183,11 @@
 死の陰の谷を 歩む時にも
 主が共におられる という約束
 
-[Chorus]
-草は枯れ 花はしぼんでも
-神のことばは 永遠に立つ
-生きていて 力あることばが
-今日も私に 語りかける
-
 [Verse 3]
 知ることばを 生きることばに
 赦しのことばは 和解の一歩に
 感謝のことばは 家族への一言に
 みことばが 生活になる
-
-[Instrumental Interlude]
-
-[Verse 4]
-糧として受け 足もとに座り
-心に刻んで 灯として歩む
-祈りで応え 小さく従い
-生涯の友と なったことば
 
 [Bridge]
 多くの聖句を 知ることよりも
@@ -6319,7 +5217,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian tender morning hymn, gentle 6/8 sway, felt piano, solo cello, quiet strings, intimate opening warming into grace, renewed first-love tenderness, soft peaceful joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, tender legato, soft alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -6346,25 +5244,11 @@
 主は責めるより 先に呼ばれる
 「思い出して 帰っておいで」と
 
-[Chorus]
-愛する方の 声が聞こえる
-山を越え 丘を跳び越えて
-主は私のもとへ 来てくださる
-初めの愛へ 帰ろう
-
 [Verse 3]
 昔と同じ 熱さでなくていい
 年を重ねた今は もっと静かに
 もっと深く 揺るがない愛で
 あなたを愛する 者となりたい
-
-[Instrumental Interlude]
-
-[Verse 4]
-礼拝も祈りも 続けてきたのに
-親しさだけが 薄れていた
-正しさの奥で 冷えていた心
-主はご存じで 呼んでおられた
 
 [Bridge]
 思い出します あの温もりを
@@ -6394,7 +5278,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian quiet hymn of repentance, flowing 6/8, felt piano, cello, thin warm strings, restrained organ, honest confession resolving into light, calm evening peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Sincere mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, gentle alto in the outro, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -6421,25 +5305,11 @@
 悔い改めを 明日に延ばさず
 今日気づいた一つを 主のもとへ
 
-[Chorus]
-罪を告白するなら
-真実な主は 赦してくださる
-自分を責める 部屋の扉を開けて
-光の中へ 帰ります
-
 [Verse 3]
 眠りにつく前 一日をかえりみて
 短く告白し 赦しを受ける
 心を軽くして 平安のうちに
 今夜も安らかに 眠ります
-
-[Instrumental Interlude]
-
-[Verse 4]
-気分によって 赦すお方でなく
-主は真実な 正しいお方
-御子が代価を 払われたから
-告白する者は 清められる
 
 [Bridge]
 長く自分を 責めなくていい
@@ -6469,7 +5339,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian gentle hymn of reconciliation, soft 6/8, felt piano, solo cello, quiet warm strings, humble courage and grace, gradually opening warmth, peaceful morning hope, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm restrained baritone, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried heartfelt delivery, mature alto joining the outro, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -6496,25 +5366,11 @@
 十字架は神が 先に差し伸べた
 和解の御手 だったのです
 
-[Chorus]
-まず行って 和解しなさい
-できる限り 自分の側から
-主が先に 近づいてくださった
-私も一歩を 踏み出します
-
 [Verse 3]
 「長い間 心にかかっていました」
 「傷つけたなら ごめんなさい」
 その一言から 始めればいい
 結果は主に お委ねして
-
-[Instrumental Interlude]
-
-[Verse 4]
-いつか話せると 思ううちに
-会えない日が 来るかもしれない
-年を重ねた 今日この日こそ
-神が備えられた 和解の時
 
 [Bridge]
 受け入れられない こともあるでしょう
@@ -6544,7 +5400,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian family blessing hymn, lilting 6/8, felt piano, cello, warm strings, restrained organ, quiet intercessory devotion, covenant assurance, gentle thankful peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm fatherly baritone, clear Japanese diction, comfortable mid-range, gentle and warm, calm prayerful phrasing, soft alto support at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -6571,25 +5427,11 @@
 モニカの涙の 祈りのように
 神の時に 届くと信じて
 
-[Chorus]
-私と私の家は 主に仕えます
-人生の夕べに 告白します
-神の恵みは 一代で終わらず
-子へ孫へと 流れてゆく
-
 [Verse 3]
 仕えなさいと 言い続けるより
 仕える平安な 姿を見せよう
 感謝する姿 赦す姿が
 家庭の中心に 主を迎える
-
-[Instrumental Interlude]
-
-[Verse 4]
-みなが同じに なることでなく
-問題がすべて 消えることでもない
-家庭の真ん中に もう一度
-主をお迎えする ことなのです
 
 [Bridge]
 共に祈れる ひとりの家族
@@ -6649,19 +5491,7 @@
 涙を流す夜も 信仰の証し
 うつむく心を 主へ向けます
 
-[Chorus]
-私の魂は 生ける神を
-渇き求めます 谷川のように
-渇きは満たしへの 招きだから
-主よ 今日も あなたを慕います
-
 [Interlude: woodwind]
-
-[Verse 4]
-年を重ねて 覚えるこの渇きは
-恥ずかしいことでは ありません
-神が与えられた 聖なる慕い
-求める場所に 主はもうおられる
 
 [Bridge]
 ひとりで抱えた 渇きのことばを
@@ -6723,18 +5553,6 @@
 小言ではなく 祈りをささげ
 裁きではなく 愛を注ぎます
 
-[Verse 4]
-ある日かかってくる 一本の電話
-同じ食卓に 座るその日を
-主が静かに 備えてくださる
-天が喜ぶ朝を 待ち望みます
-
-[Chorus]
-羊飼いは 失われた一匹を
-見つけるまで 捜し続けられる
-主が諦めて おられないのなら
-私も諦めず 祈り続けます
-
 [Bridge]
 主よ あの子を 捜し出してください
 私はここで 待ち続けます
@@ -6793,19 +5611,7 @@
 ひざをかがめて 御名を呼ぶとき
 距離は静かに 縮まってゆく
 
-[Chorus]
-神に近くあることこそ
-私の幸いです
-近づく魂を 退けないお方
-主よ もっと近くへ 導いてください
-
 [Interlude: woodwind]
-
-[Verse 4]
-朝のみことば 昼の一呼吸
-夜の短い 感謝の祈り
-小さな時間を 積み重ねながら
-一日をあなたの そばで過ごします
 
 [Bridge]
 息を吸いながら 神に近づき
@@ -6867,18 +5673,6 @@
 今日の朝日と ともに注がれた
 新しいあわれみが 流れています
 
-[Verse 4]
-今日ひとこと 祈れたのなら
-昨日より一歩 主に近づいた
-小さな回復が 積み重なって
-いつか大きな 変化になります
-
-[Chorus]
-主の慈しみは 尽きることなく
-そのあわれみは 終わりません
-朝ごとに新しい 恵みの中で
-小さな回復を 重ねてゆきます
-
 [Bridge]
 主こそ私の 受ける分です
 だから静かに 待ち望みます
@@ -6937,19 +5731,7 @@
 恐れは少しずつ 小さくなって
 静かな備えの 時が始まる
 
-[Chorus]
-死は終わりではなく 扉です
-主にお会いする 開かれた扉
-迎えに来てくださる 約束を抱いて
-恐れではなく 平安の中を歩む
-
 [Interlude: soft horn]
-
-[Verse 4]
-最後の呼吸が 終わるその時
-イエスさまが 迎えてくださる
-子を迎える 父親のように
-両腕を広げて 待っておられる
 
 [Bridge]
 「私は再び来て あなたを迎える」
@@ -7009,19 +5791,7 @@
 思い描くたび 恐れは少しずつ
 会いたい思いへ 変わってゆきます
 
-[Chorus]
-神はすべての涙を
-その目からぬぐってくださる
-もはや死はなく 悲しみもなく
-叫びも痛みも 過ぎ去ります
-
 [Interlude: soft horn]
-
-[Verse 4]
-明け方ひとりで 流した涙も
-誰にも見せずに 流した涙も
-主はみんな ご存じですから
-最後には御手で ぬぐってくださる
 
 [Bridge]
 最後の部屋に ひとりに見えても
@@ -7081,19 +5851,7 @@
 土へ帰る道は 造り主の定め
 穏やかな道と 受け止めます
 
-[Chorus]
-土の塵で 形づくられて
-命の息を 吹き入れられた
-体は土へ 霊は神へ
-与え主のもとへ 帰ってゆきます
-
 [Interlude: woodwind]
-
-[Verse 4]
-年を重ねるほど 魂は深くなり
-子には優しく 友は懐かしく
-主の御前に ひざまずきたいと
-願う心が 育ってゆきます
 
 [Bridge]
 主よ この体も この魂も
@@ -7155,18 +5913,6 @@
 完全でなくても より頼んで歩んだ
 この生涯を 主に感謝します
 
-[Verse 4]
-一日ひとつの 小さな整えが
-ひと月たてば 三十の恵み
-古い友へ送る 一通の手紙も
-旅立ちへ備える 静かな一歩
-
-[Chorus]
-わたしの平和を あなたに与える
-世が与えるものとは 違う平和を
-環境が変わっても 失われない
-その平安の中を 歩んでゆきます
-
 [Bridge]
 主よ 下ろせずに いる荷物を
 今日はひとつだけ お渡しします
@@ -7225,19 +5971,7 @@
 教え込むよりも 愛を込めて
 必要なことばを 残したのです
 
-[Refrain]
-見てきた恵みを 忘れないで
-子どもや孫へ 伝えましょう
-生涯をかけて 知った真理を
-愛のことばで 手渡しましょう
-
 [Instrumental Interlude]
-
-[Verse 4]
-伝えそびれた 謝りのことば
-残っているなら 主に願います
-機会と勇気を 与えてくださいと
-和らいだ心で 書き始めます
 
 [Final Verse and Refrain]
 一人ひとりへ 違う一言を
@@ -7295,19 +6029,7 @@
 モーセが願ったのは 長さではなくて
 残りの日々を よく生きる知恵
 
-[Chorus]
-私たちの日を 数えることを
-主よ どうか教えてください
-「今日」と呼ばれている その間に
-互いに励まし 愛を伝えます
-
 [Interlude: soft horn]
-
-[Verse 4]
-明日ではなくて 今日伝えます
-「愛している」と いう一言を
-明日ではなくて 今日委ねます
-下ろせずにいた 重い荷物を
 
 [Bridge]
 朝の祈りに ひとこと添えます
@@ -7367,19 +6089,7 @@
 五百人が仰いだ よみがえりの主
 歴史に起こった 確かな出来事
 
-[Chorus]
-死よ お前の勝利は どこにあるのか
-死よ お前のとげは どこにあるのか
-主は墓を破って よみがえられた
-私にも復活の 朝が来ます
-
 [Interlude: soft horn]
-
-[Verse 4]
-ひざの痛みも 聞こえにくさも
-かすむ目も その朝にはない
-新しい体で 目を覚ますとき
-ため息は賛美へ 変わるでしょう
 
 [Bridge]
 絶望の中から 立ち上がる力
@@ -7439,19 +6149,7 @@
 愛のことばを 残す日々を過ぎ
 復活の朝の 約束まで来た
 
-[Chorus]
-死の鍵は 主の御手にある
-だから私は 恐れません
-開かれる扉は 恐れの扉ではなく
-迎え入れられる 出会いの扉
-
 [Interlude: soft horn]
-
-[Verse 4]
-最後の日を 引き寄せすぎず
-今日は今日のために 生きる日です
-朝の祈り 一節のことば
-家族への愛が 深い備えです
 
 [Bridge]
 朝の祈りを守り 一節を胸に
@@ -7513,18 +6211,6 @@
 一杯のお茶 ひとことの親切
 その場所に御国の 香りが流れる
 
-[Verse 4]
-大きな出来事を 待たなくていい
-小さな瞬間に 主はおられます
-何もない一日と 思えた日にも
-御国は静かに 来ていました
-
-[Chorus]
-神の国は 食べ飲みではなく
-聖霊が与える 正しさと
-平和と喜び この心の内に
-今日もあなたの 国が来ますように
-
 [Bridge]
 今朝も平安に 目覚めたその場所
 子のために祈る その小さな場所
@@ -7584,18 +6270,6 @@
 御前にひざまずいた 時でした
 環境が変わっても 変わらない平安
 その秘密を今日も 生きてゆきます
-
-[Verse 4]
-心配を消すことは できなくても
-順序を変えることは できるのです
-主のご支配を 最初に置くとき
-心配は正しい 場所に納まる
-
-[Chorus]
-主よ 今日まず あなたの国を求めます
-明日のことは 明日に任せて
-心配よりも先に あなたを置いて
-平安の中を 歩んでゆきます
 
 [Bridge]
 まず求めなさいと 言われたお方は
@@ -7657,18 +6331,6 @@
 最も低い 十字架まで下られた
 その方を神は 高く上げられた
 
-[Verse 4]
-家族の助けは 主の御手のしるし
-迷惑ではなく 共に歩む恵み
-できることが 少なくなっても
-祈りの奉仕は 今日もできます
-
-[Chorus: small choir]
-大いなる者に なりたい人は
-皆に仕える 者となりなさい
-低くなる道も 主と共になら
-平安と感謝で 歩んでゆけます
-
 [Bridge]
 主よ 幼な子のように
 あなたの御手に より頼みます
@@ -7726,19 +6388,7 @@
 子や孫はいつか 思い出すでしょう
 揺るがなかった あなたの姿
 
-[Chorus: flute accompaniment]
-あなたは世の光 地の塩です
-小さな一人にした その愛は
-主イエスご自身への 贈り物
-光を輝かせ 今日も生きよう
-
 [Instrumental Interlude]
-
-[Verse 4]
-静かな椅子に 座るだけでも
-信仰の香りは 流れてゆく
-ガリラヤの漁師にも 語られたことば
-「あなたは光」と 今日も響く
 
 [Bridge]
 主よ 大きなものは 求めません
@@ -7806,14 +6456,6 @@
 できる限り 私の側から
 すべての人と 平和に生きます
 
-[Verse 4]
-どちらが正しいか 決めるのでなく
-切れたところを 結び直すこと
-「二人とも同じに 愛している」
-その真心が 壁を溶かす
-利害を離れた 静かな目に
-和解への道が 見えてきます
-
 [Bridge]
 主よ 平和の君 イエスさま
 壊した場所も 御前に置きます
@@ -7824,7 +6466,6 @@
 平和をつくる人は 幸いです
 神の子どもと 呼ばれるから
 できる限り 私の側から
-温かなひと言 携えて
 平和への一歩を 踏み出します
 
 [End]
@@ -7870,18 +6511,6 @@
 子や孫が そう覚えるなら
 それは何より 大きな遺産
 生涯の姿が 教えとなる
-
-[Chorus]
-堅く立って 揺らぐことなく
-主の働きに 励みなさい
-主にあって行う その労苦は
-決してむだには なりません
-
-[Verse 4]
-不正を断って 遅れた歩み
-真実を語って 生まれた距離
-その一つずつに 主は目を留め
-天の御国を 約束される
 
 [Bridge]
 主よ 揺らいだ日も ありました
@@ -7943,18 +6572,6 @@
 一日一つの 愛のかけらが
 御国に積まれる 信仰の足跡
 
-[Chorus]
-最も小さい者の 一人にしたこと
-それは私に してくれたこと
-主のことばを 胸に抱いて
-今日も一歩 小さな従順
-
-[Verse 4]
-電話が難しい 日が来ても
-短いカードを 書けるでしょう
-床に伏す日も 祝福はできる
-祈りはどこでも 届けられる
-
 [Bridge]
 主よ 通り過ぎた 親切もありました
 面倒に思った 日も赦してください
@@ -8014,18 +6631,6 @@
 私は今も 御国の民
 むしろ故郷へ 近づいている
 残された日々を 御国に生きる
-
-[Chorus]
-神の国は 食べ飲みではなく
-聖霊による 義と平和と喜び
-御国が来ますように 今日ここに
-私の心を 王座としてください
-
-[Verse 4]
-富も名誉も 健康さえも
-御国のしるしでは ありません
-心の王座に 主を迎える
-それがしるしと 聖書は語る
 
 [Bridge]
 主よ 平凡な 食卓に居間に
@@ -8087,18 +6692,6 @@
 食卓で祈る 小さな姿を
 子や孫は見て 覚えている
 
-[Chorus: unison]
-何をするにも 主イエスの名によって
-ことばとわざの すべてをもって
-父なる神へ 感謝しながら
-すべての場所が 聖なる場所
-
-[Verse 4]
-一杯のお茶を いただく時も
-眠りにつく前の 静けさも
-大きな出来事は いらないのです
-主を想う心が あればいい
-
 [Bridge]
 主よ 分けてきた 日々を赦して
 忘れて過ごした 場所も御前に
@@ -8158,18 +6751,6 @@
 一日ぜんぶを 形づくる
 心配よりも先に 御名を呼ぶ
 その習慣が 錨になる
-
-[Chorus: unison]
-主のあわれみは 朝ごとに新しく
-主の真実は 大きいのです
-布団をめくる その前に
-「主よ 今日も」と 呼びかけます
-
-[Verse 4]
-同じ椅子に座り 同じ時刻に
-静かに開く みことばの頁
-長く守られた その場所こそ
-信仰を育てる 朝の泉
 
 [Bridge]
 主よ 朝の最初を 心配に渡した
@@ -8231,18 +6812,6 @@
 食卓はいつも 礼拝の場所
 孫の心にも 祈りは残る
 
-[Chorus: unison]
-愛する方は 私を連れて行く
-祝宴の家へ 招いてくださる
-掲げられた旗は 愛でした
-喜びと真心で いただきます
-
-[Verse 4]
-食卓を囲む 会話の中で
-今日の感謝を ひとつ語る
-心に残った みことばひと節
-その分かち合いも 祈りになる
-
 [Bridge]
 主よ 感謝を忘れて 過ぎた食卓
 その日々もどうか 赦してください
@@ -8302,18 +6871,6 @@
 静かな日常こそ 信仰の舞台
 今日したくない ひとつのことも
 祈ってささげれば 礼拝となる
-
-[Chorus: unison]
-怠らず 心を燃やして
-主に仕えなさい と主は言われる
-ゆっくりでいい 小さくていい
-その熱心を 主は喜ばれる
-
-[Verse 4]
-若い日のような 熱ではなくても
-ゆっくり小さな 炎でいい
-今日も手足を 動かせること
-それ自体がもう 恵みです
 
 [Bridge]
 主よ 嫌々ながら 行った日々を
@@ -8375,18 +6932,6 @@
 一行の便りも 出会いになる
 心に浮かぶ 一人のもとへ
 
-[Chorus]
-不平を言わず もてなし合いなさい
-みことばを胸に 今日も出会う
-主よ この出会いを ささげます
-私を通して あなたの温かさを
-
-[Verse 4]
-病院の待合で 隣り合う人
-交わすまなざしも 主の贈り物
-穏やかな笑顔と 短い挨拶が
-誰かの一日を 明るくする
-
 [Bridge]
 主よ 面倒に思った 出会いを赦し
 会う人ごとに 祈らせてください
@@ -8447,18 +6992,6 @@
 今日と同じ心で 一歩ずつ
 最後の日まで 主と歩こう
 
-[Chorus: small choir]
-全地よ 喜びの声を上げよ
-喜びをもって 主に仕えよう
-主の慈しみは 永遠に
-その真実は 代々に及ぶ
-
-[Verse 4]
-心に残った ひと節を胸に
-恵みの深かった 日を数える
-歩みを友に 分かち合えば
-恵みはさらに 深くなる
-
 [Bridge]
 主よ 形だけの 朝もありました
 読めずに閉じた 日もありました
@@ -8517,19 +7050,7 @@
 みことば 祈り 礼拝の場所
 それが日々を 満たしてくれる
 
-[Chorus: violin accompaniment]
-私たちの日を 数えることを
-どうか教えて ください主よ
-知恵ある心を 与えてください
-今日という贈り物 大切に生きる
-
 [Instrumental Interlude]
-
-[Verse 4]
-テレビの前を ただ流れる時
-その一部を 祈りへ移す
-朝の黙想の 三十分が
-一日まるごと 主と歩ませる
 
 [Bridge]
 主よ むなしく 流した時間を
@@ -8591,18 +7112,6 @@
 今あるものの 中に主を見て
 今日も感謝で 食卓を囲む
 
-[Chorus]
-お金を愛することは 悪の根
-満ち足りる心は 大きな富
-私の必要を すべて満たすと
-約束される主に より頼みます
-
-[Verse 4]
-一人で抱える 重い荷物は
-信頼する人と 分かち合えばいい
-今日も食べる物 着る物があり
-休める場所が 与えられている
-
 [Bridge]
 主よ 心配が 信頼を覆う
 その日々を御前に 告白します
@@ -8662,18 +7171,6 @@
 裁くよりも 最後まで聞くこと
 「最近どうしてる」と 尋ねたら
 黙ってうなずき 耳を傾ける
-
-[Chorus]
-聞くことに早く 語ることに遅く
-ことばはいつも 恵みに満ちて
-塩で味つけられた ように
-会話の中にも 主はおられる
-
-[Verse 4]
-不平のかわりに 感謝のことば
-批判のかわりに 慰めをひとつ
-言いたいことより 相手の心を
-先に受けとめる 静かな知恵
 
 [Bridge]
 主よ 聞く前に 語った日々と
@@ -8735,18 +7232,6 @@
 歩けない日には 窓辺に立って
 栄光を語る 空を見上げる
 
-[Chorus: unison]
-主よ あなたの御業は
-なんと多いことでしょう
-知恵によって みな造られ
-地はあなたのもので 満ちています
-
-[Verse 4]
-散歩の途中で 出会う人には
-温かな挨拶を ひとつ手渡す
-一人で暮らす 隣人の窓へ
-安否を尋ねる 声を届ける
-
 [Bridge]
 息を吸いながら 御業を仰ぎ
 息を吐きながら 感謝をささげる
@@ -8773,7 +7258,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of gentle calling, warm piano, acoustic guitar, soft strings, light brushed snare, steady walking pulse, hopeful grateful joy, calm and purposeful, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir on refrains, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -8806,20 +7291,6 @@
 離れてしまった子のことは
 主ご自身が 捜してください
 
-[Chorus: small choir]
-子どもたちは 主から託された宝
-胎の実は 神からの報い
-主よ この子を御手に委ねます
-歩むべき道へ 導いてください
-
-[Instrumental Interlude]
-
-[Verse 4]
-願いも寂しさも 誇らしさも
-みんな正直に 主へ告げる
-教会の仲間と 祈る輪が
-子どもの人生を 包んでゆく
-
 [Bridge]
 今日は電話で ただ一言
 「元気ですか」と 声を聞く
@@ -8847,7 +7318,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese worship ballad, intimate chamber folk, nylon-string guitar, piano, clarinet, warm cello, soft memorable refrain, quiet thankful warmth, calm morning joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, warm natural blend, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
 ## Suno用歌詞
 
@@ -8880,20 +7351,6 @@
 自分から先に 手を差し伸べる
 その勇気を 与えてください
 
-[Chorus: unison]
-愛は忍耐強く 愛は親切です
-赦されたように 赦し合おう
-嫁と婿のため 今日も祈る
-祈りは家庭を 守る力
-
-[Instrumental Interlude]
-
-[Verse 4]
-待ってあげること 受け入れること
-それも親から 贈れる愛
-名前を呼んで 祝福を祈る
-健康と信仰と その家庭を
-
 [Bridge]
 知られなくても かまわない
 祈りは静かに 家を守る
@@ -8921,7 +7378,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian song of quiet fellowship, piano, acoustic guitar, warm strings, gentle brushed snare, unhurried walking tempo, friendly grateful glow, peaceful and steady, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone lead, small senior choir on chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -8954,20 +7411,6 @@
 信仰の中を歩んだ友情は
 最後の場所まで 共にゆく
 
-[Chorus: small choir]
-友はどんな時にも愛し
-兄弟は苦難の日のために生まれた
-二人は一人に まさるもの
-倒れる時 起こしてくれる
-
-[Instrumental Interlude]
-
-[Verse 4]
-数の多さより 深さがいい
-一人二人の 友がいれば
-青年の日の友 年老いての友
-一人ずつ思い 感謝する
-
 [Bridge]
 今日 心に浮かぶ人へ
 短い便りを 届けよう
@@ -8995,7 +7438,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Quiet Japanese praise song of humble service, acoustic guitar, piano, light bass, warm strings, softly walking rhythm, modest hopeful joy, calm sense of purpose, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone, gentle senior mixed choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady breath, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -9028,20 +7471,6 @@
 ひざまずいてささげる祈りは
 教会のいちばん強い力
 
-[Chorus: small choir]
-手をつけたことは 何であっても
-力を尽くして 行いなさい
-賜物を用いて 互いに仕える
-小さな奉仕も 主へのささげもの
-
-[Instrumental Interlude]
-
-[Verse 4]
-積み重ねた知恵 祈る力
-温かな存在 そのものが
-主から預かった 賜物だから
-善い管理者として 用いよう
-
 [Bridge]
 ここに座って 祈ること
 それ自体がもう 奉仕です
@@ -9069,7 +7498,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic meditation on daily grace, nylon-string guitar, soft piano, cello, brief flute, spacious and unhurried, thankful tender warmth, restful quiet joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, relaxed unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 ♬ 一食に込められた意味, 変わることのない主の愛（いつも私のそばに）
 時は流れても 主の恵みは永遠に (神が造られたものは、すべて良いものです。...)
 朝ごとに新しく 私の魂よ賛美せよ ♬
@@ -9105,20 +7534,6 @@
 いつか同じ祈りをささげる
 食卓は信仰の 伝わる場所
 
-[Chorus: unison]
-神が造られたものは みな良いもの
-感謝して受け取れば 退けるものはない
-日ごとの糧を ありがとう
-一食に 恵みが込められている
-
-[Instrumental Interlude]
-
-[Verse 4]
-食前のことば 食後の感謝
-小さな習慣を 重ねるうちに
-食卓はいつか 礼拝の場所
-主を思い出す 恵みの席
-
 [Bridge]
 次の一食を 前もって
 感謝の祈りで 迎えよう
@@ -9146,7 +7561,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian evening-calm meditative hymn, felt piano, solo cello, subtle pipe organ, warm strings, spacious chapel air, tender peaceful stillness, softly consoling, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, calm compassionate tone, clear Japanese diction, comfortable mid-range, gentle and warm, smooth legato phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -9179,20 +7594,6 @@
 荷物を下ろして 目を閉じる
 眠りは委ねる 小さな信仰
 
-[Chorus]
-日が沈むまで 怒りを抱かず
-平安のうちに 身を横たえよう
-今日も守ってくださった主が
-今夜も同じく 守ってくださる
-
-[Instrumental Interlude]
-
-[Verse 4]
-眠る前の心は 朝へつながる
-感謝で閉じれば 感謝で明ける
-今日 心を痛めたあの人を
-眠る前にそっと 祈りにのせる
-
 [Bridge]
 長い祈りが できない夜も
 ひとことだけで 十分です
@@ -9220,7 +7621,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese hymn of comfort, felt piano, solo cello, soft acoustic guitar, quiet pipe organ, slow breathing space, consoling embrace of warmth, serene quiet hope, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature female alto, intimate prayerful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -9253,20 +7654,6 @@
 教会の仲間も 祈る友も
 すぐそばに いてくれる
 
-[Chorus]
-「決してあなたを見放さない
-決してあなたを離れない」
-孤独のいちばん深いところで
-主はいちばん近くにおられる
-
-[Instrumental Interlude]
-
-[Verse 4]
-何かで埋めようと しなくていい
-短い祈りを ささげるだけ
-「主よ 今日は孤独です」
-その一言で 主は近づく
-
 [Bridge]
 振り返れば あの孤独の日も
 主は共に いてくださった
@@ -9294,7 +7681,7 @@
 - **適用カテゴリ：** 祈り・信頼・献身
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, nylon-string guitar, gentle cello, unhurried steady pulse, reverent stillness, humble warm joy of presence, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: amen cadence]
+- **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
 ## Suno用歌詞
 
@@ -9327,20 +7714,6 @@
 主を感じ取るために備えられた
 豊かな余白の 贈り物
 
-[Chorus]
-主の御前には 満ちあふれる喜び
-今ここに 主がおられる
-一日のすべての瞬間を
-あなたの臨在の中で歩む
-
-[Instrumental Interlude]
-
-[Verse 4]
-朝 心に置いた 一行の祈り
-昼にもふっと 浮かんでくる
-一呼吸の祈りは 小さな錨
-一日を主へ つないでくれる
-
 [Bridge]
 今日いちばん 主が近かった
 その一時を 分かち合おう
@@ -9368,7 +7741,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Restful Japanese meditative hymn, felt piano, solo cello, warm strings, quiet pipe organ, slow spacious phrases, cradle-like calm, softly reassuring peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature female alto, tender chest voice, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried legato lines, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -9401,20 +7774,6 @@
 あなたの御腕の中でいただく
 その時 休みも礼拝になる
 
-[Chorus]
-「疲れた者よ 私のもとへ来なさい
-私があなたを 休ませよう」
-主が先立って 進んでくださる
-恐れず おびえず 憩えばいい
-
-[Instrumental Interlude]
-
-[Verse 4]
-休むことは 怠けではない
-力を手放し より頼むこと
-まどろむ前の 小さな祈りで
-昼寝の時間も 聖くなる
-
 [Bridge]
 疲れている 誰かがいたら
 「休んでいいよ」と 声をかけよう
@@ -9442,7 +7801,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness and renewal, 6/8, felt piano, solo cello, thin warm strings, restrained organ, honest quiet reflection opening into gentle relief, peaceful morning grace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, alto support on final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, sincere and steady, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Instrumental Interlude] [Bridge] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -9475,20 +7834,6 @@
 後ろのものを 手放して
 前にあるものへ 身を伸ばす
 
-[Chorus]
-「さあ 私たちは話し合おう」
-主が招いて くださる
-緋のような罪も 雪のように
-紅のような傷も 白くされる
-
-[Instrumental Interlude]
-
-[Verse 4]
-心の中で 和解は始まる
-「間違っていました」と 告白し
-「私は赦します」と 祈る時
-記憶の重さは 軽くなる
-
 [Bridge]
 あの遠い日の 記憶の中にも
 感謝できる 一場面がある
@@ -9516,7 +7861,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic nature meditation, nylon-string guitar, brief gentle flute, soft piano, cello, open airy space, serene morning light, quietly wondering joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone with mature alto duet, alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed unison refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
 ## Suno用歌詞
 
@@ -9549,20 +7894,6 @@
 「私はここにいる」と
 主の臨在が ささやいている
 
-[Chorus: unison]
-山々と丘は 喜び歌い
-野の木々はみな 手をたたく
-天は神の栄光を語る
-今いる場所で 主に出会う
-
-[Instrumental Interlude]
-
-[Verse 4]
-説明しなくて かまわない
-ただ見つめるだけで 十分です
-昼は昼へ 語り伝え
-夜は夜へ 知識を告げる
-
 [Bridge]
 「今日の空は きれいでしたよ」
 家族に一言 伝えてみよう
@@ -9590,7 +7921,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Tender Japanese meditative hymn, felt piano, solo cello, subtle organ, soft strings, gentle chapel reverb, humble accepting calm, quiet strength in weakness, warmly hopeful, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, compassionate steady tone, clear Japanese diction, comfortable mid-range, gentle and warm, light vibrato at phrase endings only, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Instrumental Interlude] [Bridge] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -9623,20 +7954,6 @@
 一人の名前を 呼びながら
 執り成すことも できる
 
-[Chorus]
-心の貧しい人は 幸い
-天の国は その人のもの
-弱い時にこそ 私は強い
-弱さの中に 主の力が宿る
-
-[Instrumental Interlude]
-
-[Verse 4]
-弱さを認める そのことが
-深い信仰の しるしです
-より頼むほどに 主は近く
-弱さは御許へ 進む道
-
 [Bridge]
 弱っている 友がいたら
 「祈っています」と 伝えよう
@@ -9664,7 +7981,7 @@
 - **適用カテゴリ：** 恵み・愛・感謝
 - **Sunoスタイル：** slow steady 76 BPM, Warm Japanese praise ballad of gratitude, intimate chamber folk, nylon-string guitar, piano, clarinet, light cello, simple singable refrain, gentle thankful warmth, calm bright morning joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, conversational verses, gentle unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Instrumental Interlude] [Bridge] [Outro: soft harmony]
+- **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 ♬ 感謝が自然になる場所, 変わることのない主の愛（いつも私のそばに）
 時は流れても 主の恵みは永遠に (感謝しながら主の門へ入り、讃美しながら主...)
 朝ごとに新しく 私の魂よ賛美せよ ♬
@@ -9700,20 +8017,6 @@
 不平からではなく 感謝から
 今日という日を 始めよう
 
-[Chorus: unison]
-感謝しながら 主の門へ入り
-讃美しながら 主の庭へ進む
-どのようなことにも 感謝しよう
-それが御前へ 進む入口
-
-[Instrumental Interlude]
-
-[Verse 4]
-今日の小さな 恵みを三つ
-心に数えて 眠りにつく
-人の感謝を 聞いていると
-自分の感謝にも 気づいてゆく
-
 [Bridge]
 分かち合う感謝は 支え合う力
 交わりの中で 育ってゆく
@@ -9741,7 +8044,7 @@
 - **適用カテゴリ：** 日常・自然・安息
 - **Sunoスタイル：** slow steady 64 BPM, Quiet Japanese acoustic meditation on everyday holiness, nylon-string guitar, soft piano, cello, short flute phrases, silence between lines, plain unhurried grace, restful contented joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, laid-back natural phrasing, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Instrumental Interlude] [Bridge] [Outro: piano and cello]
+- **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
 ## Suno用歌詞
 
@@ -9774,20 +8077,6 @@
 平凡な場所を 聖なる場所へ
 静かに変えて くださる
 
-[Chorus: unison]
-食べる時も 飲む時も
-すべてを神の栄光のために
-年を重ねても なお実を結ぶ
-命にあふれて 生きてゆく
-
-[Instrumental Interlude]
-
-[Verse 4]
-特別な力は いらないから
-毎日 主の前へ 出るだけでいい
-一呼吸の祈りを 口に置いて
-一つの従順を 続けてゆく
-
 [Bridge]
 静かに実る その歩みを
 主も喜んで 見ておられる
@@ -9815,7 +8104,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of lifelong calling, piano, acoustic guitar, warm strings, light brushed snare, gentle forward pulse, dignified hopeful gratitude, calm resolve and quiet joy, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone lead with small senior choir refrain, warm storytelling verses, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Instrumental Interlude] [Bridge] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -9847,20 +8136,6 @@
 特別な資格は いらない
 ただ応えよう 心を込めて
 「私は ここにおります」
-
-[Chorus: small choir]
-私が年を重ね 白髪になっても
-主よ 見捨てないでください
-あなたの力を 次の世代へ
-伝え終える その日まで
-
-[Instrumental Interlude]
-
-[Verse 4]
-大きな舞台は いらないから
-隣にいる人へ 伝えるだけ
-経験してきた 神の力を
-孫へ子どもへ 語り継ぐ
 
 [Bridge]
 交わりの中で 見つけた使命は
@@ -9919,19 +8194,7 @@
 その後ろ姿がそのままで
 いちばん深い教えになる
 
-[Chorus: strings swell]
-年を重ねても 召しは続く
-白髪の日々は 実を結ぶ季節
-命にあふれ 生き生きと
-あなたの力を 次の世代へ
-
 [Instrumental Interlude]
-
-[Verse 4]
-初めて主に出会った日のこと
-支えられた谷の物語を
-食卓でそっと語り出せば
-子らの生涯に灯がともる
 
 [Bridge]
 主よ 見捨てないでください
@@ -9991,19 +8254,7 @@
 数えきれない愛となって
 孫たちの心の錨になる
 
-[Chorus]
-一杯の冷たい水さえ
-主は決して忘れない
-小さな愛のその場所が
-主にささげる使命の場所
-
 [Instrumental Interlude]
-
-[Verse 4]
-苦しかった日に受けた一言
-孤独な日に届いた便り
-あれは主の慈しみでした
-今度は私が届ける番
 
 [Bridge]
 「主よ いつのことでしょう」と
@@ -10065,18 +8316,6 @@
 生涯の気づきを短い手紙に
 祈りをこめて 手渡します
 
-[Chorus: small choir]
-子と孫へ残す 信仰の遺産
-繰り返し 語り聞かせよう
-家にいる時も 道の上でも
-生涯の主を 伝えていこう
-
-[Verse 4]
-困難の中でも失わない
-平安のその後ろ姿
-生涯愛したひと節が
-何よりの宝物になる
-
 [Bridge]
 主よ この歩みのすべてが
 子らへの手紙となりますように
@@ -10136,18 +8375,6 @@
 この年になっても平安だよ」
 その一言が友の心に
 小さな扉を開くでしょう
-
-[Chorus: small choir]
-友はどんな時にも愛する
-愛に根ざして 真理を語ろう
-年を重ねた今だからこそ
-届けられる一言がある
-
-[Verse 4]
-生涯そばにいてくれた
-友情は主からの贈り物
-共に白髪になった今
-その絆をなお育てたい
 
 [Bridge]
 主よ あの友の心にも
@@ -10209,18 +8436,6 @@
 どんな実を結ぶか知らなくても
 主はすべてご存じです
 
-[Chorus: small choir]
-正しい人の祈りは
-働く時 大きな力
-エリヤの神は今日も生きて
-ひざまずく祈りに応えられる
-
-[Verse 4]
-答えられた祈りの記憶
-守られてきた日々の恵み
-仲間と心を合わせるとき
-祈りはさらに深くなる
-
 [Bridge]
 主よ 今日もひざまずきます
 かなわぬ日には手を合わせ
@@ -10280,18 +8495,6 @@
 一度に一つで十分です
 歩いてきた道を分かち合えば
 誰かの慰め 誰かの力
-
-[Chorus: small choir]
-年を重ねた者には知恵
-長く生きた者には分別
-受けた賜物を用いて仕える
-それが白髪の使命です
-
-[Verse 4]
-「私はそのような時……」と
-静かに始めればいい
-教会の交わりのその中で
-物語は灯となってゆく
 
 [Bridge]
 主よ 長く生きたことさえ
@@ -10353,18 +8556,6 @@
 同じ季節を生きる者だけが
 届けられる慰めがある
 
-[Chorus: small choir]
-神は孤独な人に
-家族を与えられるお方
-隣人を自分のように愛し
-その愛の通路にしてください
-
-[Verse 4]
-長く話さなくてもいい
-そばに少し座るだけでいい
-連絡したそのこと自体が
-その人への贈り物になる
-
 [Bridge]
 主よ その御心を
 この胸にも注いでください
@@ -10424,18 +8615,6 @@
 私たちには分からない
 けれど主はご存じです
 結果は御手に委ねましょう
-
-[Chorus: small choir]
-すべての人に福音を
-一人の魂 尊いいのち
-人の魂を得る者は
-知恵ある人と主は言われる
-
-[Verse 4]
-初めて福音を伝えてくれた
-あの人の一言を思う
-一言が生涯を変えた
-その恵みを忘れはしない
 
 [Bridge]
 主よ 一人の魂を
@@ -10497,18 +8676,6 @@
 平安のうちに生きる姿が
 何よりも深い招きだから
 
-[Chorus]
-主イエスを信じなさい
-あなたも家族も救われる
-その約束を握りしめて
-私と私の家は 主に仕えます
-
-[Verse 4]
-諦めかけた日もありました
-落胆に沈む夜もありました
-それでも今日も名前を呼ぶ
-愛がいつでも先だから
-
 [Bridge]
 判断よりも 説教よりも
 温かな一言を先に
@@ -10569,18 +8736,6 @@
 死に至るまで忠実であれと
 主の御声が支えてくれる
 
-[Chorus]
-善い戦いを戦い抜き
-走るべき道を走り終え
-信仰を守り通しました
-そう告白できる日まで
-
-[Verse 4]
-毎日この場所を守ること
-大きなことをしなくても
-誰の目にとまらなくても
-それが冠へ続く道
-
 [Bridge]
 主よ 明日も同じ時刻に
 この場所へ座らせてください
@@ -10639,19 +8794,7 @@
 信仰を守り通しましたと
 告白できる日を目指して
 
-[Chorus: full strings swell]
-誰を遣わそうと 主が問われる
-私はここにおります
-白髪のこの身を 遣わしてください
-召しはまだ終わっていない
-
 [Instrumental Interlude]
-
-[Verse 4]
-使命は終わってはいない
-今こそ最も深い場所へ
-ひざまずく祈りとことばが
-残る日々を満たしてゆく
 
 [Bridge]
 主よ 義の冠が
@@ -10713,18 +8856,6 @@
 それでも主はこの教会に
 ご自身をささげられたのです
 
-[Chorus: small choir]
-主よ あなたのおられる家
-栄光の宿るその場所を
-私は愛します いつまでも
-キリストの体である教会を
-
-[Verse 4]
-この体にはただ一つ
-私しか満たせない場所がある
-その場所が今日も与えられて
-静かな感謝があふれます
-
 [Bridge]
 活動が少なくなっても
 体の一部は変わらない
@@ -10784,18 +8915,6 @@
 電話で共に祈ればいい
 形よりも 共にいること
 それが交わりの美しさ
-
-[Chorus]
-見よ 共に住むことは
-なんと善く 美しいこと
-集まることをやめないで
-その日が近づくほど なおさらに
-
-[Verse 4]
-一人で背負わなくていい
-正直に打ち明ければいい
-満たされたあの心こそが
-次の集いへ導く光
 
 [Bridge]
 主よ 次の集いの日も
@@ -10857,18 +8976,6 @@
 「主よ 私はここにおります」
 差し出すことが礼拝です
 
-[Chorus]
-霊と真理をもって
-礼拝をささげます
-口先だけの敬いでなく
-この心を近くささげます
-
-[Verse 4]
-毎日のこの黙想も
-小さな礼拝のひととき
-今この場所に座ったことが
-御前に立つ始まりです
-
 [Bridge]
 華やかでなくていい
 長いことばもいらない
@@ -10929,18 +9036,6 @@
 生涯の一言を分かち合えば
 世代を越えて物語は続く
 
-[Chorus: small choir]
-白髪は栄光の冠
-正しい道を歩んだしるし
-年を重ねた者には知恵
-長く生きた者には分別
-
-[Verse 4]
-私より長く歩んだ方の
-一言が力をくれる
-そして私の物語を
-待っている人がきっといる
-
 [Bridge]
 主よ 先輩たちの日々を
 健やかに守ってください
@@ -10967,7 +9062,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, cello, soft woodwinds, attentive welcoming stillness, warm open-hearted morning peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, small mixed choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
 ## Suno用歌詞
 
@@ -11000,31 +9095,11 @@
 長い人生から にじむ安らぎで
 今日はそっと 隣に座ります
 
-[Chorus]
-キリストが私を 受け入れたように
-私もあなたを 受け入れます
-旅人をもてなす その戸口で
-天使を迎えた 人もいたのだから
-
-[Instrumental Interlude]
-
-[Verse 4]
-新しく来られた 方々のために
-根を下ろせるように 今日も祈ります
-主が送られた 大切な客を
-温かな目で お迎えします
-
 [Bridge]
 静けさの中で 息を整え
 キリストが私を 受け入れたように
 となえる祈りが 勇気となって
 先に近づく 一歩をくれる
-
-[Chorus]
-キリストが私を 受け入れたように
-私もあなたを 受け入れます
-旅人をもてなす その戸口で
-天使を迎えた 人もいたのだから
 
 [Final Chorus: gentle two-part harmony]
 キリストが私を 受け入れたように
@@ -11072,12 +9147,6 @@
 多く語らずとも そこにいるだけで
 あなたの存在が 集いの柱
 
-[Chorus: small choir]
-二人でも三人でも 主の名によって
-集まるところに 主はおられる
-教えを守り パンを裂き
-共に祈る 深い交わり
-
 [Short Interlude]
 
 [Verse 3]
@@ -11085,18 +9154,6 @@
 今日もあなたが 共にいてください
 受けた恵みを 分かち合いながら
 この交わりを 豊かにしてください
-
-[Verse 4]
-小さな灯から 世界は変わった
-初代の教会も 小さな群れから
-受けた恵みを 数えるたびに
-この集いがなお いとおしくなる
-
-[Chorus: small choir]
-二人でも三人でも 主の名によって
-集まるところに 主はおられる
-教えを守り パンを裂き
-共に祈る 深い交わり
 
 [Bridge]
 主よ 小さな群れに 臨在を満たし
@@ -11150,12 +9207,6 @@
 顔を見合わせて 分かち合うとき
 ことばを超えた 交わりが生まれる
 
-[Chorus: unison]
-見よ 主は戸口に 立ってたたく
-戸を開くなら 入ってくださる
-私と共に 食事をすると
-約束してくださった 温かな声
-
 [Interlude: flute]
 
 [Verse 3]
@@ -11163,18 +9214,6 @@
 あなたと囲む 食卓としてください
 共に食べる喜びと 真心を与え
 この食卓を 恵みの場所に
-
-[Verse 4]
-多くを語らずとも 同じ皿を分け
-顔を見合わせれば 心は通う
-湯気の立ちのぼる 簡素な膳が
-同じ家族だと 教えてくれる
-
-[Chorus: unison]
-見よ 主は戸口に 立ってたたく
-戸を開くなら 入ってくださる
-私と共に 食事をすると
-約束してくださった 温かな声
 
 [Bridge]
 主よ 今日の一食を 恵みと受けます
@@ -11228,12 +9267,6 @@
 一言の挨拶 一言の慰め
 それもキリストの体に 仕える道
 
-[Chorus: small choir]
-受けた賜物を 用いながら
-互いに仕える 善い管理者に
-小さな奉仕を 主はご覧になる
-目立たなくても 尊いささげもの
-
 [Short Interlude]
 
 [Verse 3]
@@ -11241,18 +9274,6 @@
 祈りの奉仕 そこにいる奉仕
 今ある力で 今いる場所で
 喜びをもって 仕えさせてください
-
-[Verse 4]
-「私にできることは ありますか」と
-尋ねる一言から 奉仕は始まる
-庭の花に水を やるひとときも
-教会を静かに 支えてゆく
-
-[Chorus: small choir]
-受けた賜物を 用いながら
-互いに仕える 善い管理者に
-小さな奉仕を 主はご覧になる
-目立たなくても 尊いささげもの
 
 [Bridge]
 誰も見ていなくても 主が見ておられる
@@ -11306,12 +9327,6 @@
 批判するよりも 先に祝福を
 理解できなくても まず祈りを
 
-[Chorus: small choir]
-主の誉れと 御業のすべてを
-後の世代へ 語り伝えよう
-主よ この教会の 次の世代を
-みことばの中に 立たせてください
-
 [Short Interlude]
 
 [Verse 3]
@@ -11319,18 +9334,6 @@
 あなたのみことばを 守ることによって
 祈りにかがめる このひざこそが
 教会の明日を 建て上げてゆく
-
-[Verse 4]
-祈りの課題を 尋ねてみよう
-幼な子たちの名を 一つずつ胸に
-祈る白髪は 教会の宝
-信仰は静かに 受け継がれてゆく
-
-[Chorus: small choir]
-主の誉れと 御業のすべてを
-後の世代へ 語り伝えよう
-主よ この教会の 次の世代を
-みことばの中に 立たせてください
 
 [Bridge]
 若かった日々の 私のためにも
@@ -11384,12 +9387,6 @@
 会えないままでも 心の中で赦し
 その人のために 祈る一歩を
 
-[Chorus]
-できる限り 自分の側から
-すべての人と 平和に生きたい
-平和のきずなで 結ばれた一致を
-主よ 守らせてください
-
 [Interlude: quiet strings]
 
 [Verse 3]
@@ -11397,18 +9394,6 @@
 共同体の傷は 共同体の中で
 恨みではなく あの人の平安を
 今日は静かに 祈らせてください
-
-[Verse 4]
-一致はひとりでに 保たれはしない
-赦し 理解し 先に近づく
-和解を急がずとも 安否の一言を
-今日は自分から 届けてみよう
-
-[Chorus]
-できる限り 自分の側から
-すべての人と 平和に生きたい
-平和のきずなで 結ばれた一致を
-主よ 守らせてください
 
 [Bridge]
 知らぬ間に誰かを 傷つけた日も
@@ -11462,12 +9447,6 @@
 「あなたがいてくれて うれしいです」
 その一言が 愛の通い路
 
-[Chorus: small choir]
-互いに愛し合いなさい
-私があなたを 愛したように
-受け取った愛を 隣の人へ
-今日も流れます 主の愛の川
-
 [Short Interlude]
 
 [Verse 3]
@@ -11475,18 +9454,6 @@
 今は心を そのまま伝える時
 まず主の愛を 深く受け取って
 あふれた恵みを 分かち合います
-
-[Verse 4]
-若い日は体面に さえぎられて
-言えなかったことばが 今なら言える
-「お祈りしています」と 添える一言に
-主のぬくもりが 乗せられてゆく
-
-[Chorus: small choir]
-互いに愛し合いなさい
-私があなたを 愛したように
-受け取った愛を 隣の人へ
-今日も流れます 主の愛の川
 
 [Bridge]
 主よ まずあなたの 深い愛に
@@ -11540,12 +9507,6 @@
 私の祈りも 私の存在も
 この家族を 建て上げている
 
-[Chorus: small choir]
-もはや旅人でも 寄留者でもない
-私たちは 神の家族です
-その日が近づくほど なお集い
-励まし合って 共に歩もう
-
 [Short Interlude]
 
 [Verse 3]
@@ -11553,18 +9514,6 @@
 小さな奉仕 次の世代への祈り
 そのすべてが 家族の営み
 私がいてこそ 満ちてゆく家
-
-[Verse 4]
-この日々に受けた 恵みのひとつを
-今日は誰かに 分かち合おう
-語り合うたびに 恵みはふくらみ
-家族のきずなは 深くなってゆく
-
-[Chorus: small choir]
-もはや旅人でも 寄留者でもない
-私たちは 神の家族です
-その日が近づくほど なお集い
-励まし合って 共に歩もう
 
 [Bridge]
 主よ この教会が まことの家族へ
@@ -11618,12 +9567,6 @@
 体が疲れても 心が沈んでも
 いつもの場所で 主の前に座る
 
-[Chorus: unison]
-夕べにも朝にも 真昼にも
-私は主を呼び 主は聞かれる
-以前からしていた ように今日も
-一日三度 ひざまずこう
-
 [Interlude: flute]
 
 [Verse 3]
@@ -11631,18 +9574,6 @@
 父と子と聖霊へ まっすぐに
 獅子の穴でも 守られたお方が
 年を重ねた今日も 共におられる
-
-[Verse 4]
-ひざがつけない 日には椅子で
-両手をひらいて ひざの上に置く
-姿勢ではなくて 心を差し出す
-それがひざまずく ということだから
-
-[Chorus: unison]
-夕べにも朝にも 真昼にも
-私は主を呼び 主は聞かれる
-以前からしていた ように今日も
-一日三度 ひざまずこう
 
 [Bridge]
 夕べも朝も 真昼も祈った
@@ -11671,7 +9602,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Reflective Japanese scripture hymn, upright piano, viola, cello, soft woodwinds, lyrics-forward clarity, attentive gentle resolve, serene bright morning peace, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth legato with light two-part final harmony, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
 ## Suno用歌詞
 
@@ -11710,25 +9641,11 @@
 手放したその場所を 神が満たし
 知恵と健やかさを 与えてくださる
 
-[Instrumental Interlude]
-
-[Verse 4]
-ことばを慎み 心配を手放し
-執着の荷物を 一つずつ降ろす
-空いたその場所に 静けさが満ちて
-神の恵みが 流れ込んでくる
-
 [Bridge]
 主よ 今日ひとつ 心に決めます
 御前で静かに 告白します
 決めたこの心を 支えてください
 揺らぐ日にも 御手にすがります
-
-[Chorus]
-ダニエルのように 心に決めます
-どんな時にも 感謝を選ぶと
-手放したその場所を 神が満たし
-知恵と健やかさを 与えてくださる
 
 [Final Chorus: gentle two-part harmony]
 ダニエルのように 心に決めます
@@ -11747,7 +9664,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Gentle Japanese hymn of scripture and promise, upright piano, viola, cello, soft woodwind responses, quiet trusting stillness, warm hopeful major-key glow, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, natural breathing, small choir joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Instrumental Interlude] [Bridge] [Final Chorus: gentle two-part harmony]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
 ## Suno用歌詞
 
@@ -11786,25 +9703,11 @@
 人の思いが 終わるところから
 神の可能性が 始まります
 
-[Instrumental Interlude]
-
-[Verse 4]
-「約束のとおり」 「語られたとおり」
-くり返される 確かなことば
-私の力が 尽きるところで
-あなたの真実が 立ち上がります
-
 [Bridge]
 「もう遅い」と 閉じていた願いを
 今日もう一度 御前に広げます
 九十のサラを 顧みたお方は
 この白髪をも 顧みてくださる
-
-[Chorus]
-約束されたお方は 真実です
-語られたとおり 成し遂げられる
-人の思いが 終わるところから
-神の可能性が 始まります
 
 [Final Chorus: gentle two-part harmony]
 約束されたお方は 真実です
@@ -11848,12 +9751,6 @@
 その涙を 主はご覧になる
 涙もまた 祈りだから
 
-[Chorus]
-私はこの子のために 祈りました
-主は願いを 聞いてくださった
-忘れないでくださいと 叫ぶ声を
-主は覚えて 顧みられる
-
 [Short Interlude]
 
 [Verse 3]
@@ -11861,18 +9758,6 @@
 主が与えてくださったと 告白しよう
 最も尊いものを もう一度ささげた
 ハンナの信仰に 私も倣いたい
-
-[Verse 4]
-酔っていると 見まがわれるほど
-心を注いだ ハンナの祈り
-整わぬままの ことばであっても
-まことの叫びを 主は知っておられる
-
-[Chorus]
-私はこの子のために 祈りました
-主は願いを 聞いてくださった
-忘れないでくださいと 叫ぶ声を
-主は覚えて 顧みられる
 
 [Bridge]
 ひとりで流す 涙も尊い
@@ -11926,12 +9811,6 @@
 家族 信仰の友 小さな群れ
 その人たちが 私のルツです
 
-[Chorus: unison]
-あなたの行く所へ 私も行きます
-あなたの神は 私の神です
-主の翼の下に 身を寄せる者へ
-豊かな報いが ありますように
-
 [Interlude: flute]
 
 [Verse 3]
@@ -11939,18 +9818,6 @@
 ナオミもルツに 多くを教えた
 生涯の知恵を 分かち合いながら
 共に歩く道は なお美しい
-
-[Verse 4]
-惜しみなく注いだ 歳月の愛が
-苦しみの日に 実を結んでいた
-そばにいる人の 温もりはきっと
-歩んできた道の 静かな実り
-
-[Chorus: unison]
-あなたの行く所へ 私も行きます
-あなたの神は 私の神です
-主の翼の下に 身を寄せる者へ
-豊かな報いが ありますように
 
 [Bridge]
 主よ そばにいる 人の名を呼び
@@ -12004,12 +9871,6 @@
 その一つ一つの 恵みの記憶が
 今も礼拝へと 私を招く
 
-[Chorus: unison]
-あなたの庭で 過ごす一日は
-千日の日々に まさります
-悪の天幕に 住むよりも
-神の家の門口に 立ち続けたい
-
 [Interlude: flute]
 
 [Verse 3]
@@ -12017,18 +9878,6 @@
 礼拝する心は 手放さない
 待ち続けた果てに 幼子イエスへ
 出会ったアンナの 喜びを胸に
-
-[Verse 4]
-教会へ行けない 日の部屋にも
-礼拝の心は 灯りつづける
-小さなこの場所を 今日も開くこと
-それも神殿に つながる道
-
-[Chorus: unison]
-あなたの庭で 過ごす一日は
-千日の日々に まさります
-悪の天幕に 住むよりも
-神の家の門口に 立ち続けたい
 
 [Bridge]
 主よ 最後の日まで この場所を開き
@@ -12056,7 +9905,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn, intimate piano, soft strings, gentle French horn, quiet and hopeful, serene peace after long waiting, spacious and warm, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, choir on final refrain only, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Chorus] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -12089,18 +9938,6 @@
 赦された日の あの安らぎも
 積み重なって 平安となる
 
-[Chorus]
-私の目は あなたの救いを見ました
-祈りの答えに 御手の守りに
-すべての民を照らす その光
-だから最後も 平安のうちに
-
-[Verse 4]
-十字架のイエスを 仰いだ日も
-復活の朝を 祝った日も
-長い危機を 越えたあの日も
-私の目は 救いを見ていた
-
 [Bridge]
 主よ みことばのとおり
 この僕を 平安のうちに
@@ -12128,7 +9965,7 @@
 - **参考マッチ曲：** Simon & Garfunkel - Bridge over Troubled Water
 - **Sunoスタイル：** slow steady 72 BPM, Japanese gentle worship ballad, solo piano, warm strings, soft French horn, steady and encouraging, quiet perseverance glowing with hopeful warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, steady unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Male Vocal] / [Intro: solo piano] [Verse] [Chorus] [Verse: strings enter] [Chorus] [Instrumental Interlude] [Bridge] [Final Verse: orchestral and gospel climax] [Chorus] [Outro: sustained resolution]
+- **メタタグ構成：** [Male Vocal] / [Intro: solo piano] [Verse] [Chorus] [Instrumental Interlude] [Verse] [Bridge] [Final Verse: orchestral and gospel climax] [Chorus] [Outro: sustained resolution]
 
 ## Suno用歌詞
 
@@ -12142,20 +9979,6 @@
 魂は前へ 向かっていた
 目標を目指して 走ります
 上へ召してくださる その賞へ
-
-[Chorus]
-走る人は皆 走るけれど
-賞を得るように 走りなさい
-一人ではない この道のりを
-共に走る 仲間がいる
-
-[Verse: strings enter]
-年を重ねて 過去は増えて
-よい思い出も 痛みもある
-けれど後ろのものは 主に委ね
-前にあるものへ 手を伸ばす
-目標を目指して 走ります
-速さではなく 方向を守って
 
 [Chorus]
 走る人は皆 走るけれど
@@ -12182,7 +10005,6 @@
 キリスト・イエスにあって
 残された日々は まだ前にある
 共に最後まで 走りましょう
-その賞を得るまで 走りましょう
 
 [Chorus]
 走る人は皆 走るけれど
@@ -12205,7 +10027,7 @@
 - **参考マッチ曲：** Simon & Garfunkel - The Sound of Silence
 - **Sunoスタイル：** slow steady 65 BPM, Japanese quiet praise song, fingerpicked acoustic guitar, felt piano, warm cello, calm and contented, tender stillness of learned contentment, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male duet in close harmony, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Male Duet] / [Intro: fingerpicked acoustic guitar] [Verse] [Chorus] [Verse: close harmony] [Chorus] [Instrumental Interlude] [Subtle Build] [Bridge] [Final Verse] [Chorus] [Outro: acoustic fade]
+- **メタタグ構成：** [Male Duet] / [Intro: fingerpicked acoustic guitar] [Verse] [Chorus] [Verse: close harmony] [Instrumental Interlude] [Bridge] [Final Verse] [Chorus] [Outro: acoustic fade]
 
 ## Suno用歌詞
 
@@ -12230,19 +10052,7 @@
 通ってきた すべての道が
 満ち足りを学ぶ 学校でした
 
-[Chorus]
-どんな境遇に あっても
-満ち足りることを 学びました
-比べる心を 手放して
-今あるものに 感謝します
-
 [Instrumental Interlude]
-
-[Subtle Build]
-今日食べるものがある
-連絡できる家族がいる
-その一つ一つが
-小さな満ち足りの 場所となる
 
 [Bridge]
 牢の壁の 内側にも
@@ -12279,7 +10089,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese gentle praise song, piano, acoustic guitar, brushed snare, warm strings, calm purposeful walking pulse, hopeful grateful warmth of a life devoted, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature male baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12312,18 +10122,6 @@
 まだ道が残されているなら
 今日もその道を 走ります
 
-[Chorus: small choir]
-善い戦いを 戦い抜き
-走るべき道を 走り終え
-信仰を守り通しました
-そう告白できる 日を目指して
-
-[Verse 4]
-疲れた日にも 祈りの場所を
-弱った体でも 礼拝の席を
-守り続ける 小さな献身
-それも命を ささげる道
-
 [Bridge]
 主よ 善い戦いを
 戦わせてください
@@ -12352,7 +10150,7 @@
 - **適用カテゴリ：** みことば・真理・成長
 - **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, mellow cello, still and attentive, warm restoring tenderness by the shore, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Verse] [Chorus] [Bridge] [Final Chorus: gentle two-part harmony]
+- **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Verse] [Chorus] [Interlude: woodwind] [Verse] [Bridge] [Final Chorus: gentle two-part harmony]
 
 ## Suno用歌詞
 
@@ -12385,18 +10183,6 @@
 その場所へ主は 来てくださり
 小さな愛の火を 見つけられる
 
-[Chorus]
-倒れた場所から もう一度
-主は私を 立ててくださる
-「私の小羊を 養いなさい」
-倒れたことは 終わりではない
-
-[Verse 4]
-やがてペトロは 立ち上がり
-多くの魂を 主へ導いた
-倒れて立った 人だからこそ
-倒れた人に 寄り添える
-
 [Bridge]
 主よ もう一度
 私を立たせてください
@@ -12422,7 +10208,7 @@
 - **適用カテゴリ：** 悔い改め・十字架・回復
 - **Sunoスタイル：** slow steady 61 BPM, Japanese Christian reflective hymn, gentle 6/8 sway, felt piano, solo cello, quiet strings, honest and prayerful, grace easing into peaceful light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, soft alto support at the close, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Verse] [Chorus] [Bridge] [Final Chorus] [Outro: alto support]
+- **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Verse] [Chorus] [Interlude: quiet strings] [Verse] [Bridge] [Final Chorus] [Outro: alto support]
 
 ## Suno用歌詞
 
@@ -12455,18 +10241,6 @@
 年を重ねた私の歩みも
 その物語の 続きの中に
 
-[Chorus]
-信仰の創始者 完成者である
-イエスを見つめて 走ります
-忍耐をもって この競走を
-主が最後まで 走らせてくださる
-
-[Verse 4]
-重い荷物を 下へ置いて
-絡みつくものを 脱ぎ捨てて
-倒れても もう一度立つ
-止まらぬことが 忍耐です
-
 [Bridge]
 ハンナの涙も 覚えられて
 どの物語も 指し示す
@@ -12494,7 +10268,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of humble service, piano, acoustic guitar, light bass, brushed snare, tender and devoted, quiet servant-hearted warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with gentle senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried storytelling, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12527,18 +10301,6 @@
 子のために 孫のために
 祈りでその足を 洗えます
 
-[Chorus: small choir]
-主であり 師である方が
-私の足を 洗われたから
-私も互いに 足を洗い合う
-その愛にならい 今日を生きる
-
-[Verse 4]
-振り返れば この手もまた
-子の足 孫の足を
-洗うように 仕えてきた
-今は最後の一杯を 注ぐ時
-
 [Bridge]
 主よ この心にも
 手ぬぐいを 巻かせてください
@@ -12567,7 +10329,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese gentle worship song, piano, acoustic guitar, warm strings, brushed snare, humble and kind, softly glowing everyday gratitude, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone lead, small senior choir on refrains, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12600,18 +10362,6 @@
 温かなまなざし やわらかなことば
 心からの祈りで 仕えます
 
-[Chorus: small choir]
-最も小さい者の一人に
-したことは 私にしたこと
-一杯の冷たい 水さえも
-主は決して 忘れない
-
-[Verse 4]
-大きな奉仕は 一度の決心
-小さな奉仕は 毎日の決心
-見えない場所で 見えない手で
-目立たない愛が 続いていく
-
 [Bridge]
 手が弱く なっていっても
 心の手は 仕えられる
@@ -12639,7 +10389,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian family blessing hymn, acoustic guitar, piano, light bass, warm strings, homely and tender, gentle thankful warmth around the table, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone, small mixed senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12672,18 +10422,6 @@
 送り出すときの その姿が
 子と孫に残る 信仰の遺産
 
-[Chorus: small choir]
-私と私の家は
-主に仕えます
-その決心を 今日も新しく
-家族は主の 愛の中に
-
-[Verse 4]
-近い人ほど 期待はふくらみ
-ふくらむほどに 失望も深い
-だから重ねる 小さな忍耐
-小さな譲り合い 小さな愛
-
 [Bridge]
 食卓で先に 手を合わせて
 困難の日には 手を握る
@@ -12711,7 +10449,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese quiet praise hymn, piano, acoustic guitar, brushed snare, soft strings, caring and steadfast, patient shepherd-like warmth, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone, warm senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady breath, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12744,18 +10482,6 @@
 今度は私が その一人に
 祈りの場所を 守る番です
 
-[Chorus: small choir]
-一人の名前を 呼んで祈る
-一人をどこまでも 愛し抜く
-見つけるまで 捜される主と
-その一人へ 仕えます
-
-[Verse 4]
-井戸のそばの 短いときが
-一つの町を 変えたように
-一人へ注いだ 小さな愛は
-流れゆく川の 始まりとなる
-
 [Bridge]
 心に浮かぶ 一つの名前
 神から託された 一つの魂
@@ -12783,7 +10509,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese Christian prayer hymn, piano, acoustic guitar, warm strings, light bass, devoted and still, humble kneeling reverence with quiet hope, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Warm grounded baritone with soft senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful pacing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12816,18 +10542,6 @@
 椅子でも ベッドのそばでもいい
 心のひざが 本当のひざ
 
-[Chorus: small choir]
-いつもあなたがたのために
-祈りの中で 力を尽くす
-人には見えない そのひざが
-一つの時代を 支えます
-
-[Verse 4]
-荒れ野のモーセも ひざまずき
-ダビデは朝ごとに 祈った
-日に三度の ダニエルのひざ
-ハンナの祈りは 実を結んだ
-
 [Bridge]
 祈れる時間が 増えたことは
 年を重ねた 者への贈りもの
@@ -12855,7 +10569,7 @@
 - **適用カテゴリ：** 共同体・奉仕・使命
 - **Sunoスタイル：** slow steady 80 BPM, Japanese gentle hymn of perseverance, piano, acoustic guitar, brushed snare, warm strings, steadfast and calm, enduring faithful warmth step by step, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone lead, small senior choir in unison close, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Chorus: small choir] [Bridge] [Final Chorus] [Outro: unison]
+- **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
 ## Suno用歌詞
 
@@ -12888,18 +10602,6 @@
 称賛よりも 主のほほえみを
 残る道でも 愛せますように
 
-[Chorus: small choir]
-最後まで 耐え忍ぶ人は
-救われると 主は言われた
-最後まで 同じ姿勢で
-仕える者と してください
-
-[Verse 4]
-助けられる日が 増えていっても
-与える心は 失わない
-体が弱く なっていっても
-先に安否を 尋ねる心
-
 [Bridge]
 主よ 最後まで
 同じ姿勢で 仕えさせてください
@@ -12927,7 +10629,7 @@
 - **適用カテゴリ：** 希望・復活・永遠
 - **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope, warm piano, tender French horn, soft strings, bright and assured, peaceful everlasting morning glow, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, small choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Chorus] [Bridge] [Final Chorus] [Outro: strings fade]
+- **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Bridge] [Final Chorus] [Outro: strings fade]
 
 ## Suno用歌詞
 
@@ -12960,18 +10662,6 @@
 横になっていても 祈りで
 ほほえみ一つでも 仕えられる
 
-[Chorus]
-堅く立って 揺らぐことなく
-主の働きに 励みなさい
-主にあって行う 労苦は
-決してむだには なりません
-
-[Verse 4]
-体の揺れ 心の揺れ
-関係の揺れの 中にあっても
-仕える姿勢は 手放さない
-それが何よりの 証しとなる
-
 [Bridge]
 約束の地を 見なかったモーセも
 神殿を建てなかった ダビデも
@@ -13000,7 +10690,7 @@
 - **適用カテゴリ：** 慰め・平安
 - **Sunoスタイル：** slow steady 65 BPM, Japanese Christian farewell meditation hymn, felt piano, solo cello, subtle pipe organ, serene and consoling, deep restful peace like evening light, consistent soft dynamics, no dramatic climax, no high notes, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, clear Japanese diction, comfortable mid-range, gentle and warm, calm compassionate phrasing, no belting, no falsetto, soothing clear tone for seniors
-- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Verse] [Chorus] [Bridge] [Final Chorus] [Outro: quiet organ and piano]
+- **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Verse] [Chorus] [Interlude: solo cello] [Verse] [Bridge] [Final Chorus] [Outro: quiet organ and piano]
 
 ## Suno用歌詞
 
@@ -13032,18 +10722,6 @@
 新しい朝の 始まりです
 すべてを主へ 委ねた者に
 与えられる 平安がある
-
-[Chorus]
-私の目は あなたの救いを見ました
-みことばのとおり 平安のうちに
-百七十八日の この旅路を
-共に歩んでくださった 主に感謝
-
-[Verse 4]
-毎日のみことば 毎日の祈り
-積み重ねた 静かな時間は
-魂の奥へ 宝として
-今も変わらず 輝いている
 
 [Bridge]
 完璧だから 平安なのではなく
