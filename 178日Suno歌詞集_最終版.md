@@ -8,12 +8,12 @@
 - サビ＝その日の「黙想の核心」。短く覚えやすい告白のことばとして毎回繰り返し、心に刻まれるようにしました
 - ヴァースは黙想本文の気づき・聖句・短い祈りを、完結した美しい詩行に再構成（散文の切り貼り・断片行・実践指示文は排除）
 - シニアの日常の情景（鏡の白髪、先立った友、孫、食卓、散歩、夕暮れ）を活かし、聴く方が「これは私の歌だ」と感じられるように
-- すべての曲が希望と平安で結ばれます
+- すべての曲が希望と平安で結ばれ、最後は「アーメン」で終わります
 - 各曲は歌唱行26〜28行・間奏1箇所。Suno v5.5 実測に基づき、約4分30秒〜5分で完全に終わる長さに調整済み。[Bridge]にはその日の祈り・告白を置いています
 
 **スタイルの原則：**
 - 簡潔な英語スタイル記述。静かで黙想的、しかし明るく穏やかな喜びのある雰囲気
-- 曲ごとに固定BPM（58〜86の範囲）をスタイル冒頭に明記し、テンポの暴走を防止。日ごとに楽器構成とムードに変化
+- 曲ごとに固定BPM（69〜88の範囲、gently flowing）をスタイル冒頭に明記。落ち着きは保ちつつ、心地よく流れるテンポ。日ごとに楽器構成とムードに変化
 - 全曲に gentle emotional build を指定——最後のサビへ向けて穏やかに感情が高まる、温かなクライマックスを持たせています
 - クライマックスはあっても高音なし（全曲 warm tender climax, no high notes, no shouting／ベルティングなし）
 - シニアが聴きやすい、成熟した温かくクリアなボーカル（no belting, no falsetto）
@@ -31,7 +31,7 @@
 
 - **黙想の核心：** イエス・キリストは、昨日も今日も、そして永遠に変わることのないお方です。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet and meditative, serene sunrise warmth, peaceful grateful joy, spacious and unhurried, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian meditative hymn, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet and meditative, serene sunrise warmth, peaceful grateful joy, spacious and unhurried, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, small choir on final refrain only, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -81,6 +81,7 @@
 [Outro: strings fade]
 昨日も今日も 永遠に変わらない主
 あなたのうちに 今日もとどまります
+アーメン
 
 [End]
 ```
@@ -91,7 +92,7 @@
 
 - **黙想の核心：** 神は愛です。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese worship ballad, nylon-string guitar, piano, clarinet, warm cello, soft and intimate, gentle thankful warmth, calm quiet morning joy, close natural sound, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Gentle Japanese worship ballad, nylon-string guitar, piano, clarinet, warm cello, soft and intimate, gentle thankful warmth, calm quiet morning joy, close natural sound, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain with light harmony, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
 
@@ -141,6 +142,7 @@
 [Outro: soft harmony]
 受けたこの愛で もう一人を
 今日 愛する者としてください
+アーメン
 
 [End]
 ```
@@ -151,7 +153,7 @@
 
 - **黙想の核心：** 「わたしが聖なる者であるから、あなたがたも聖なる者となりなさい。」
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese scripture meditation hymn, upright piano, soft woodwinds, viola and cello, still and attentive, warm major-key resolution, clear peaceful morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Quiet Japanese scripture meditation hymn, upright piano, soft woodwinds, viola and cello, still and attentive, warm major-key resolution, clear peaceful morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth unhurried legato, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -201,6 +203,7 @@
 [Outro]
 軽くなった心で 今日を歩む
 聖なる方と 手をつないで
+アーメン
 
 [End]
 ```
@@ -211,7 +214,7 @@
 
 - **黙想の核心：** 主にできないことは何一つありません。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian meditative hymn, upright piano, gentle woodwind responses, warm cello, light organ, hushed and reflective, tender assurance, serene morning stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian meditative hymn, upright piano, gentle woodwind responses, warm cello, light organ, hushed and reflective, tender assurance, serene morning stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, thoughtful even phrasing, quiet two-part harmony in final chorus, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -261,6 +264,7 @@
 [Outro]
 忘れられては いない私
 今日も知られて 愛されている
+アーメン
 
 [End]
 ```
@@ -271,7 +275,7 @@
 
 - **黙想の核心：** それは朝ごとに新しく、主の真実は大きいのです。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Warm Japanese morning praise song, piano, nylon-string guitar, clarinet, very light brushed percussion, fresh and thankful, new-morning brightness, calm gentle joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Warm Japanese morning praise song, piano, nylon-string guitar, clarinet, very light brushed percussion, fresh and thankful, new-morning brightness, calm gentle joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, conversational verses, tender harmony on final line, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Final Chorus: unison] [Outro: soft harmony]
 
@@ -321,6 +325,7 @@
 [Outro: soft harmony]
 明日も目覚めたら いちばん先に
 あなたに言います ありがとう
+アーメン
 
 [End]
 ```
@@ -331,7 +336,7 @@
 
 - **黙想の核心：** その名はインマヌエル。「神は私たちと共におられる」という意味です。
 - **参考マッチ曲：** ザ・フォーク・クルセダーズ - 悲しくてやりきれない
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian folk hymn, fingerpicked acoustic guitar, gentle flute, soft upright piano, quiet and consoling, tender nearness in stillness, warm peaceful comfort, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian folk hymn, fingerpicked acoustic guitar, gentle flute, soft upright piano, quiet and consoling, tender nearness in stillness, warm peaceful comfort, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, soft folk-like storytelling, natural easy breathing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Vocal] / [Intro: acoustic guitar fingerpicking] [Verse] [Chorus: flute accompaniment] [Instrumental Interlude] [Bridge] [Final Chorus: flute accompaniment] [Outro: acoustic guitar fade]
 
@@ -381,6 +386,7 @@
 [Outro: acoustic guitar fade]
 今日もその名を 静かに呼ぶ
 インマヌエル 主は共に
+アーメン
 
 [End]
 ```
@@ -391,7 +397,7 @@
 
 - **黙想の核心：** 「あなたはメシア、生ける神の子です。」
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Reflective Japanese scripture hymn, upright piano, soft woodwind, viola, restrained organ, humble and still, quiet grace resolving into warm light, gentle morning peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Reflective Japanese scripture hymn, upright piano, soft woodwind, viola, restrained organ, humble and still, quiet grace resolving into warm light, gentle morning peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, gentle two-part harmony at the end, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -441,6 +447,7 @@
 [Outro]
 重荷を降ろした 軽いこの肩
 自由の朝を 歩き出す
+アーメン
 
 [End]
 ```
@@ -451,7 +458,7 @@
 
 - **黙想の核心：** 「成し遂げられた。」
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness, gentle 6/8, felt piano, solo cello, thin warm strings, soft organ, honest and tender, grace and gentle relief, quiet morning assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of forgiveness, gentle 6/8, felt piano, solo cello, thin warm strings, soft organ, honest and tender, grace and gentle relief, quiet morning assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, sincere prayerful delivery, soft alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -501,6 +508,7 @@
 [Outro: alto support]
 成し遂げられた その一言に
 今日も安らいで 眠ります
+アーメン
 
 [End]
 ```
@@ -511,7 +519,7 @@
 
 - **黙想の核心：** 「死よ、お前の勝利はどこにあるのか。死よ、お前のとげはどこにあるのか。」
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Peaceful Japanese hymn of resurrection hope, intimate piano, soft strings, gentle French horn, acoustic guitar, quiet meditation opening into warm light, hopeful serene joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Peaceful Japanese hymn of resurrection hope, intimate piano, soft strings, gentle French horn, acoustic guitar, quiet meditation opening into warm light, hopeful serene joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone or mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, brightening softly as hope grows, small choir in final chorus, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -561,6 +569,7 @@
 [Outro: strings fade]
 その日まで 平安のうちに
 今日の一日を 歩みます
+アーメン
 
 [End]
 ```
@@ -571,7 +580,7 @@
 
 - **黙想の核心：** 「私はすぐに来る。」
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of quiet expectation, piano, warm strings, restrained French horn, spacious and unhurried, calm longing turning to gentle joy, sunrise-like warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian hymn of quiet expectation, piano, warm strings, restrained French horn, spacious and unhurried, calm longing turning to gentle joy, sunrise-like warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or gentle baritone, clear Japanese diction, comfortable mid-range, gentle and warm, tender expectant tone, small mixed choir at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -621,6 +630,7 @@
 [Outro: strings fade]
 主に会うその日を 平安のうちに
 今日も喜んで 待っています
+アーメン
 
 [End]
 ```
@@ -631,7 +641,7 @@
 
 - **黙想の核心：** 父がイエスの名によって遣わしてくださる聖霊は、すべてのことを教え、主が語られたことを思い起こさせてくださいます。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, nylon-string guitar, still and prayerful, humble warmth in God's presence, quiet peaceful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, nylon-string guitar, still and prayerful, humble warmth in God's presence, quiet peaceful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison chorus ending in amen, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -681,6 +691,7 @@
 [Outro: amen cadence]
 助けてください 教えてください
 共にいてください アーメン
+アーメン
 
 [End]
 ```
@@ -691,7 +702,7 @@
 
 - **黙想の核心：** 天の父は、求める者に聖霊を与えてくださいます。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese chapel prayer song, piano, soft pipe organ, warm cello countermelody, unhurried steady pulse, open-handed surrender, tranquil trusting warmth, calm humble joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Gentle Japanese chapel prayer song, piano, soft pipe organ, warm cello countermelody, unhurried steady pulse, open-handed surrender, tranquil trusting warmth, calm humble joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and mature alto, clear Japanese diction, comfortable mid-range, gentle and warm, quiet prayerful phrasing, delicate harmony in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -741,6 +752,7 @@
 [Outro: amen cadence]
 主よ、今日も 満たしてください
 開いたこの手で 受け取ります アーメン
+アーメン
 
 [End]
 ```
@@ -751,7 +763,7 @@
 
 - **黙想の核心：** 「私はぶどうの木、あなたがたはその枝である。」
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Quiet Japanese devotional hymn, soft piano, pipe organ, nylon-string guitar, gentle cello, restful abiding mood, tender organic warmth, calm grateful stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Quiet Japanese devotional hymn, soft piano, pipe organ, nylon-string guitar, gentle cello, restful abiding mood, tender organic warmth, calm grateful stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature alto and baritone in gentle alternation, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, closing amen cadence, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -801,6 +813,7 @@
 [Outro: amen cadence]
 その香りが 孫たちへ
 次の世代へ 届きますように アーメン
+アーメン
 
 [End]
 ```
@@ -811,7 +824,7 @@
 
 - **黙想の核心：** いつも喜び、絶えず祈り、どんなことにも感謝しなさい。これこそ、キリスト・イエスにおいて、神があなたがたに望んでおられることです。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian prayer hymn of daily gratitude, piano, sustained soft organ, gentle cello, steady unhurried pace, everyday thankfulness, serene humble morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian prayer hymn of daily gratitude, piano, sustained soft organ, gentle cello, steady unhurried pace, everyday thankfulness, serene humble morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature baritone and alto, clear Japanese diction, comfortable mid-range, gentle and warm, calm even phrasing with soft unison chorus, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -861,6 +874,7 @@
 [Outro: amen cadence]
 今日も喜び 祈り、感謝して
 あなたの前を 歩みます アーメン
+アーメン
 
 [End]
 ```
@@ -871,7 +885,7 @@
 
 - **黙想の核心：** 私たちは神に造られたものであり、キリスト・イエスにあって、善い行いのために造られました。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of calling, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, quiet sense of purpose, hopeful grateful readiness, simple singable warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of calling, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, quiet sense of purpose, hopeful grateful readiness, simple singable warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature male baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, dignified storytelling, unified final line, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus: small choir] [Outro: unison]
 
@@ -921,6 +935,7 @@
 [Outro: unison]
 残された日々の この召しに
 今日も誠実に 応えます
+アーメン
 
 [End]
 ```
@@ -930,7 +945,7 @@
 
 - **黙想の核心：** 心を尽くして主に信頼し、自分の悟りだけに頼ってはなりません。どのような時にも主を認めるなら、主があなたの道をまっすぐにしてくださいます。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, gentle cello, unhurried and still, warm humble trust, serene morning devotion, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, gentle cello, unhurried and still, warm humble trust, serene morning devotion, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -980,6 +995,7 @@
 [Outro: amen cadence]
 どんな時にも 主を認めれば
 主が道を 示してくださる
+アーメン
 
 [End]
 ```
@@ -990,7 +1006,7 @@
 
 - **黙想の核心：** 時が満ちると、神は御子を遣わされました。
 - **参考マッチ曲：** かぐや姫 - 神田川
-- **Sunoスタイル：** slow steady 80 BPM, Gentle Japanese worship ballad, acoustic guitar, warm violin, soft piano, light brushed snare, calm walking pulse, quiet sense of purpose, hopeful grateful glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Gentle Japanese worship ballad, acoustic guitar, warm violin, soft piano, light brushed snare, calm walking pulse, quiet sense of purpose, hopeful grateful glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, dignified storytelling verses, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Vocal] / [Intro: acoustic guitar and violin] [Verse] [Chorus: violin accompaniment] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: solo violin fade]
 
@@ -1040,6 +1056,7 @@
 [Outro: solo violin fade]
 私の時間を みな御手に
 あなたの時を 静かに待ちます
+アーメン
 
 [End]
 ```
@@ -1050,7 +1067,7 @@
 
 - **黙想の核心：** 永遠のいのちとは、唯一のまことの神と、神が遣わされたイエス・キリストを知ることです。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn of hope, intimate piano, soft strings, restrained French horn, acoustic guitar, spacious and serene, sunrise warmth after a long night, peaceful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian meditative hymn of hope, intimate piano, soft strings, restrained French horn, acoustic guitar, spacious and serene, sunrise warmth after a long night, peaceful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, small mixed choir on final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -1100,6 +1117,7 @@
 [Outro: strings fade]
 主を知ることが
 私のいちばんの 喜びです
+アーメン
 
 [End]
 ```
@@ -1110,7 +1128,7 @@
 
 - **黙想の核心：** 福音は、信じるすべての人に救いをもたらす、神の力です。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Quiet Japanese praise song of calling, piano, acoustic guitar, warm strings, light bass, gentle walking pulse, calm readiness, hopeful thankful warmth, simple singable melody, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Quiet Japanese praise song of calling, piano, acoustic guitar, warm strings, light bass, gentle walking pulse, calm readiness, hopeful thankful warmth, simple singable melody, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -1160,6 +1178,7 @@
 [Outro: unison]
 主は私のため 死んでよみがえられた
 単純な福音を 握って歩みます
+アーメン
 
 [End]
 ```
@@ -1170,7 +1189,7 @@
 
 - **黙想の核心：** 神の国の福音は、すべての民への証しとして、世界中に宣べ伝えられます。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Gentle Japanese worship hymn of mission, acoustic guitar, piano, brushed snare, warm strings, softly walking tempo, quiet purposeful hope, warm and bright everyday grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Gentle Japanese worship hymn of mission, acoustic guitar, piano, brushed snare, warm strings, softly walking tempo, quiet purposeful hope, warm and bright everyday grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm grounded baritone lead, small mixed choir in chorus, unified final line, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -1220,6 +1239,7 @@
 [Outro: unison]
 主の正義と 平安と喜びが
 この家に 満ちますように
+アーメン
 
 [End]
 ```
@@ -1230,7 +1250,7 @@
 
 - **黙想の核心：** サタンさえ、光の天使を装うことがあります。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of repentance and grace, gentle 6/8, felt piano, solo cello, quiet strings, honest and tender, softly opening into peaceful light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of repentance and grace, gentle 6/8, felt piano, solo cello, quiet strings, honest and tender, softly opening into peaceful light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, alto support in final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -1280,6 +1300,7 @@
 [Outro: alto support]
 先に愛して くださった主を
 私も愛して 生きていきます
+アーメン
 
 [End]
 ```
@@ -1290,7 +1311,7 @@
 
 - **黙想の核心：** キリストの福音にふさわしく、日々を生きなさい。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Softly moving Japanese praise song, piano, acoustic guitar, brushed snare, light bass, easy walking pace, everyday gospel gladness, calm and quietly bright, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Softly moving Japanese praise song, piano, acoustic guitar, brushed snare, light bass, easy walking pace, everyday gospel gladness, calm and quietly bright, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Steady mature baritone, small senior choir on chorus, clear Japanese diction, comfortable mid-range, gentle and warm, dignified unhurried delivery, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -1340,6 +1361,7 @@
 [Outro: unison]
 今日も福音は 神の力
 私を生かす 力です
+アーメン
 
 [End]
 ```
@@ -1350,7 +1372,7 @@
 
 - **黙想の核心：** 私たちは、十字架につけられたキリストを宣べ伝えます。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Quiet Japanese meditative hymn of the cross, flowing 6/8, felt piano, solo cello, thin warm strings, tender reflection easing into gentle relief, calm morning peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Quiet Japanese meditative hymn of the cross, flowing 6/8, felt piano, solo cello, thin warm strings, tender reflection easing into gentle relief, calm morning peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Sincere mature baritone, gentle alto joining the final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, minimal vibrato, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -1400,6 +1422,7 @@
 [Outro: alto support]
 十字架は生涯 支える錨
 今日もその前に 立ち止まります
+アーメン
 
 [End]
 ```
@@ -1410,7 +1433,7 @@
 
 - **黙想の核心：** 神の御子イエスの血は、私たちをすべての罪から清めます。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Gentle Japanese hymn of cleansing grace, lilting 6/8, felt piano, warm cello, soft strings, restrained organ, quiet gratitude turning to peaceful assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Gentle Japanese hymn of cleansing grace, lilting 6/8, felt piano, warm cello, soft strings, restrained organ, quiet gratitude turning to peaceful assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm unhurried baritone lead, mature alto harmony on last refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -1460,6 +1483,7 @@
 [Outro: alto support]
 赦しと平安の 中を歩み
 恵みをたたえて 生きていきます
+アーメン
 
 [End]
 ```
@@ -1470,7 +1494,7 @@
 
 - **黙想の核心：** 「私は生きている者である。かつては死んだが、見よ、今は永遠に生きている。」
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Serene Japanese hymn of resurrection hope, intimate piano, acoustic guitar, soft strings, gentle French horn, warm major glow, quiet dawn-like joy, spacious and calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Serene Japanese hymn of resurrection hope, intimate piano, acoustic guitar, soft strings, gentle French horn, warm major glow, quiet dawn-like joy, spacious and calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mezzo-soprano or baritone lead, small choir on final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, graceful legato, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -1520,6 +1544,7 @@
 [Outro: strings fade]
 三つの復活 揺るがぬ錨
 新しい体の 約束に憩う
+アーメン
 
 [End]
 ```
@@ -1530,7 +1555,7 @@
 
 - **黙想の核心：** キリストにある人は、新しく造られた者です。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Tender Japanese hymn of new life in Christ, swaying 6/8, felt piano, solo cello, quiet strings, restrained organ, honest reflection blooming into gentle peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Tender Japanese hymn of new life in Christ, swaying 6/8, felt piano, solo cello, quiet strings, restrained organ, honest reflection blooming into gentle peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature baritone, soft alto support in the closing refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -1580,6 +1605,7 @@
 [Outro: alto support]
 私の内に 主が生きておられる
 それが今の 私の力です
+アーメン
 
 [End]
 ```
@@ -1590,7 +1616,7 @@
 
 - **黙想の核心：** イエスを受け入れ、その名を信じる人々には、神の子どもとなる資格が与えられました。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Peaceful Japanese hymn of new birth, intimate piano, soft strings, restrained French horn, acoustic guitar, warm and bright, gentle spiritual awakening, thankful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Peaceful Japanese hymn of new birth, intimate piano, soft strings, restrained French horn, acoustic guitar, warm and bright, gentle spiritual awakening, thankful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, small mixed choir in final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -1640,6 +1666,7 @@
 [Outro: strings fade]
 生涯をかけて 育っていく
 新しいいのちを 感謝します
+アーメン
 
 [End]
 ```
@@ -1650,7 +1677,7 @@
 
 - **黙想の核心：** 一人の罪人が悔い改めるなら、神の天使たちの前に喜びがあります。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Quiet Japanese hymn of repentance and heaven's joy, gentle 6/8 sway, felt piano, warm solo cello, thin strings, humble tenderness resolving into serene relief, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Quiet Japanese hymn of repentance and heaven's joy, gentle 6/8 sway, felt piano, warm solo cello, thin strings, humble tenderness resolving into serene relief, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Sincere warm baritone lead, mature alto joining only at the end, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -1700,6 +1727,7 @@
 [Outro: alto support]
 軽くなった心で 今日は眠り
 新しいあわれみの 朝を待ちます
+アーメン
 
 [End]
 ```
@@ -1710,7 +1738,7 @@
 
 - **黙想の核心：** 「見よ、私は戸口に立ってたたいている。私の声を聞いて戸を開ける人がいるなら、私はその人のところへ入る。」
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, cello, soft woodwinds, uncluttered lyrics-forward arrangement, attentive stillness, warm peaceful morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, cello, soft woodwinds, uncluttered lyrics-forward arrangement, attentive stillness, warm peaceful morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, gentle two-part harmony in final chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -1760,6 +1788,7 @@
 [Outro]
 今日もこの心へ お入りください
 開いた扉から 平安が満ちる
+アーメン
 
 [End]
 ```
@@ -1770,7 +1799,7 @@
 
 - **黙想の核心：** キリストにある人は、新しく造られた者です。古いものは過ぎ去り、新しいものが始まりました。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Warm Japanese meditative hymn of new creation, intimate piano, soft strings, gentle French horn, acoustic guitar, spacious major warmth, quietly radiant joy, calm gratitude, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Warm Japanese meditative hymn of new creation, intimate piano, soft strings, gentle French horn, acoustic guitar, spacious major warmth, quietly radiant joy, calm gratitude, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone or mezzo-soprano lead, small choir only on final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -1820,6 +1849,7 @@
 [Outro: strings fade]
 最後の日まで 熟してゆく
 新しいいのちを 感謝します
+アーメン
 
 [End]
 ```
@@ -1829,7 +1859,7 @@
 
 - **黙想の核心：** 私たちは、キリスト・イエスによる贖いを通して、神の恵みにより、価なしに義とされました。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Japanese Christian morning praise ballad, piano, nylon-string guitar, clarinet, cello, quiet and warm, gentle thankful warmth blooming into calm morning joy, intimate and unhurried, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Japanese Christian morning praise ballad, piano, nylon-string guitar, clarinet, cello, quiet and warm, gentle thankful warmth blooming into calm morning joy, intimate and unhurried, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
@@ -1879,6 +1909,7 @@
 [Outro: soft harmony]
 恵みによって 神からの贈り物
 今日もこの身を ゆだねます
+アーメン
 
 [End]
 ```
@@ -1889,7 +1920,7 @@
 
 - **黙想の核心：** 今や、キリスト・イエスにある者は、決して罪に定められることがありません。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of quiet repentance, 6/8, felt piano, solo cello, quiet warm strings, meditative and still, honest reflection easing into gentle relief and peaceful assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of quiet repentance, 6/8, felt piano, solo cello, quiet warm strings, meditative and still, honest reflection easing into gentle relief and peaceful assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
@@ -1939,6 +1970,7 @@
 [Outro: alto support]
 キリストにある私は
 もう責められることが ありません
+アーメン
 
 [End]
 ```
@@ -1949,7 +1981,7 @@
 
 - **黙想の核心：** 恵みが増すようにと、罪の中にとどまり続けてよいのでしょうか。決して、そのようなことはありません。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Gentle Japanese worship hymn of forgiveness and renewal, 6/8, felt piano, solo cello, quiet strings, tender honesty opening into soft light and calm assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Gentle Japanese worship hymn of forgiveness and renewal, 6/8, felt piano, solo cello, quiet strings, tender honesty opening into soft light and calm assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, steady prayerful lines, soft alto joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
@@ -1999,6 +2031,7 @@
 [Outro: alto support]
 キリストが 私たちを自由にされた
 その恵みの中を 今日も歩みます
+アーメン
 
 [End]
 ```
@@ -2009,7 +2042,7 @@
 
 - **黙想の核心：** 私たちの主、救い主イエス・キリストの恵みと、その方を知る知識において成長しなさい。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese Christian praise ballad, nylon-string guitar, piano, clarinet, cello, warm gratitude and quietly growing joy, close natural intimacy like waves of grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Gentle Japanese Christian praise ballad, nylon-string guitar, piano, clarinet, cello, warm gratitude and quietly growing joy, close natural intimacy like waves of grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, tender two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
@@ -2059,6 +2092,7 @@
 [Outro: soft harmony]
 恵みの上に さらに恵み
 私の呼吸の すべてが恵み
+アーメン
 
 [End]
 ```
@@ -2069,7 +2103,7 @@
 
 - **黙想の核心：** 偽善な律法学者とファリサイ派の人々は、厳しく戒められています。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, viola, cello, attentive stillness and honest searching resolving into clear peaceful morning joy, lyrics-forward and uncluttered, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, viola, cello, attentive stillness and honest searching resolving into clear peaceful morning joy, lyrics-forward and uncluttered, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, calm thoughtful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -2119,6 +2153,7 @@
 [Outro]
 形を越えて 心はあなたへ
 生きた信仰が 今よみがえる
+アーメン
 
 [End]
 ```
@@ -2129,7 +2164,7 @@
 
 - **黙想の核心：** 大切なのは、愛によって働く信仰です。
 - **参考マッチ曲：** 荒井由実 - 卒業写真
-- **Sunoスタイル：** slow steady 76 BPM, Nostalgic Japanese Christian worship ballad, solo piano, soft strings swelling gently, cello, quiet spiritual insight and warm gratitude, serene and songful morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Nostalgic Japanese Christian worship ballad, solo piano, soft strings swelling gently, cello, quiet spiritual insight and warm gratitude, serene and songful morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature female voice, clear Japanese diction, comfortable mid-range, gentle and warm, tender unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Female Vocal] / [Intro: solo piano] [Verse] [Chorus: strings swell] [Instrumental Interlude] [Bridge] [Outro: piano fade out]
 
@@ -2179,6 +2214,7 @@
 [Outro: piano fade out]
 愛によって働く 本物の信仰
 その香りが 周りへ届きますように
+アーメン
 
 [End]
 ```
@@ -2189,7 +2225,7 @@
 
 - **黙想の核心：** 心を尽くし、魂を尽くし、思いを尽くして、主なるあなたの神を愛しなさい。
 - **参考マッチ曲：** 荒井由実 - ひこうき雲
-- **Sunoスタイル：** slow steady 76 BPM, Tender Japanese Christian worship ballad, warm organ, piano, nylon-string guitar, cello, quiet remembrance turning into peaceful renewed love, calm steady warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Tender Japanese Christian worship ballad, warm organ, piano, nylon-string guitar, cello, quiet remembrance turning into peaceful renewed love, calm steady warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature female voice, soft and sincere, clear Japanese diction, comfortable mid-range, gentle and warm, reflective steady phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Female Vocal] / [Intro: organ and piano] [Verse] [Chorus] [Instrumental Interlude] [Bridge] [Outro: organ fade]
 
@@ -2239,6 +2275,7 @@
 [Outro: organ fade]
 責めるためではなく 招くために
 主は今日も 扉をたたく
+アーメン
 
 [End]
 ```
@@ -2249,7 +2286,7 @@
 
 - **黙想の核心：** 心を尽くして主に信頼し、自分の理解だけに頼ってはなりません。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, stillness and humble surrender, warm quiet joy of God's presence, spacious and unhurried, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, stillness and humble surrender, warm quiet joy of God's presence, spacious and unhurried, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, gentle mixed unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
@@ -2309,7 +2346,7 @@
 
 - **黙想の核心：** 私は愛する方のもの、愛する方は私のものです。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Intimate Japanese Christian praise song, nylon-string guitar, piano, clarinet, very light brushed percussion, quiet companionship and gentle thankful warmth, restful morning glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Intimate Japanese Christian praise song, nylon-string guitar, piano, clarinet, very light brushed percussion, quiet companionship and gentle thankful warmth, restful morning glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, conversational and tender, clear Japanese diction, comfortable mid-range, gentle and warm, soft closing harmony, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
@@ -2359,6 +2396,7 @@
 [Outro: soft harmony]
 今日も一歩 あなたへ近づく
 あなたも近づいて くださるから
+アーメン
 
 [End]
 ```
@@ -2369,7 +2407,7 @@
 
 - **黙想の核心：** 神は、私たちが母の胎内に形づくられる前から、私たちを知っておられます。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese scripture meditation hymn, upright piano, soft woodwinds, viola, cello, warm major-key assurance, serene morning light and gentle sense of belonging, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Quiet Japanese scripture meditation hymn, upright piano, soft woodwinds, viola, cello, warm major-key assurance, serene morning light and gentle sense of belonging, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, smooth natural legato, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -2419,6 +2457,7 @@
 [Outro]
 私は神の 愛する子ども
 その一言で 今日も足ります
+アーメン
 
 [End]
 ```
@@ -2429,7 +2468,7 @@
 
 - **黙想の核心：** この世の考え方に合わせるのではなく、心を新しくしていただき、造り変えられなさい。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian meditative hymn on identity, upright piano, viola, cello, soft woodwind responses, attentive stillness resolving into clear peaceful joy, steady and reassuring, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian meditative hymn on identity, upright piano, viola, cello, soft woodwind responses, attentive stillness resolving into clear peaceful joy, steady and reassuring, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, calm and thoughtful, clear Japanese diction, comfortable mid-range, gentle and warm, quiet two-part final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -2479,6 +2518,7 @@
 [Outro]
 世の声よりも 深いところで
 「わたしのもの」と 呼ぶ声を聞く
+アーメン
 
 [End]
 ```
@@ -2489,7 +2529,7 @@
 
 - **黙想の核心：** 満ち足りる心を伴う信仰は、大きな豊かさをもたらします。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Gentle Japanese hymn of contentment, upright piano, soft woodwinds, cello, light organ, restful gratitude and warm sufficiency in quiet morning light, uncluttered and lyrics-forward, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Gentle Japanese hymn of contentment, upright piano, soft woodwinds, cello, light organ, restful gratitude and warm sufficiency in quiet morning light, uncluttered and lyrics-forward, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, unhurried thankful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, soft harmony in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -2539,6 +2579,7 @@
 [Outro]
 主がおられるので 今で十分
 この告白が 私の豊かさ
+アーメン
 
 [End]
 ```
@@ -2549,7 +2590,7 @@
 
 - **黙想の核心：** 自分自身を正しく見つめるなら、裁きを受けずにすみます。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Reflective Japanese Christian hymn of self-examination, 6/8, felt piano, solo cello, thin warm strings, gentle honesty resting in grace, quiet assurance and peaceful morning calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Reflective Japanese Christian hymn of self-examination, 6/8, felt piano, solo cello, thin warm strings, gentle honesty resting in grace, quiet assurance and peaceful morning calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, sincere and steady, clear Japanese diction, comfortable mid-range, gentle and warm, alto joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
@@ -2599,6 +2640,7 @@
 [Outro: alto support]
 弱いところも 主にゆだねます
 正直な心を 御手の中へ
+アーメン
 
 [End]
 ```
@@ -2609,7 +2651,7 @@
 
 - **黙想の核心：** 「私の恵みは、あなたに十分である。私の力は、弱さの中で完全に現れる。」
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Tender Japanese Christian meditation hymn, felt piano, solo cello, subtle pipe organ, warm strings, quiet compassion and peaceful grateful joy, soft sunrise warmth in weakness held by grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Tender Japanese Christian meditation hymn, felt piano, solo cello, subtle pipe organ, warm strings, quiet compassion and peaceful grateful joy, soft sunrise warmth in weakness held by grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, calm compassionate tone, clear Japanese diction, comfortable mid-range, gentle and warm, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
@@ -2659,6 +2701,7 @@
 [Outro: quiet organ and piano]
 この弱さの中に 主の力が流れる
 今日も御手に 支えられて
+アーメン
 
 [End]
 ```
@@ -2669,7 +2712,7 @@
 
 - **黙想の核心：** 忍耐は練られた品性を生み、練られた品性は希望を生みます。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet meditation opening into peaceful grateful joy, sunrise after a long night, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian hymn of hope, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet meditation opening into peaceful grateful joy, sunrise after a long night, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, small choir only in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -2719,6 +2762,7 @@
 [Outro: strings fade]
 試練を通って 育った希望を
 次の世代へ 手渡します
+アーメン
 
 [End]
 ```
@@ -2728,7 +2772,7 @@
 
 - **黙想の核心：** 神は真実なお方です。耐えられない試練に遭わせることはなさらず、試練と共に、それに耐えられる逃れの道も備えてくださいます。
 - **参考マッチ曲：** 山口百恵 - 秋桜 （コスモス）
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of repentance and renewal, felt piano, gentle strings, solo cello, quiet and honest, softening into peaceful morning grace and assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of repentance and renewal, felt piano, gentle strings, solo cello, quiet and honest, softening into peaceful morning grace and assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, mature alto joining final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Female Vocal] / [Intro: piano and gentle strings] [Verse] [Chorus: full strings swell] [Instrumental Interlude] [Bridge] [Final Chorus: full strings swell] [Outro: quiet piano end]
 
@@ -2778,6 +2822,7 @@
 [Outro: quiet piano end]
 逃れの道を備え 耐えられるようにしてくださる
 主よ あなたに今日もより頼みます
+アーメン
 
 [End]
 ```
@@ -2788,7 +2833,7 @@
 
 - **黙想の核心：** 試練を通して確かめられた信仰は、火で精錬されても失われる金よりも尊いものです。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, viola, cello, attentive stillness, warm major-key resolution, clear peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, viola, cello, attentive stillness, warm major-key resolution, clear peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, small mixed choir on final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
@@ -2836,6 +2881,7 @@
 主はなお 私を練っておられる
 家族の心に残りますように
 火を通っても崩れない この平安
+アーメン
 
 [End]
 ```
@@ -2846,7 +2892,7 @@
 
 - **黙想の核心：** 人はパンだけで生きるのではなく、主の口から出るすべてのことばによって生きることを、あなたに教えるためでした。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese Christian hymn on Scripture, upright piano, gentle woodwind responses, warm cello, light organ, thoughtful stillness, gentle thankful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Quiet Japanese Christian hymn on Scripture, upright piano, gentle woodwind responses, warm cello, light organ, thoughtful stillness, gentle thankful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, soft two-part choir at the close, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
@@ -2894,6 +2940,7 @@
 毎日のマナに 感謝して歩む
 静けさの中で聞こえてくる
 主のやさしい声を頼りに
+アーメン
 
 [End]
 ```
@@ -2904,7 +2951,7 @@
 
 - **黙想の核心：** 主を待ち望む人は、新しい力を得ます。鷲のように翼を広げて上ります。
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese worship ballad of comfort, felt piano, solo cello, subtle pipe organ, warm strings, quiet reflection rising into peaceful grateful joy, warm sunrise mood, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Gentle Japanese worship ballad of comfort, felt piano, solo cello, subtle pipe organ, warm strings, quiet reflection rising into peaceful grateful joy, warm sunrise mood, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, calm compassionate tone, clear Japanese diction, comfortable mid-range, gentle and warm, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Final Chorus] [Outro: quiet organ and piano]
 
@@ -2954,6 +3001,7 @@
 [Outro: quiet organ and piano]
 私の魂よ 神を待ち望め
 主はきっと 起こしてくださる
+アーメン
 
 [End]
 ```
@@ -2964,7 +3012,7 @@
 
 - **黙想の核心：** 苦難は忍耐を、忍耐は練られた品性を、練られた品性は希望を生みます。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope and resurrection, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet meditation opening into serene sunrise joy, spacious and warm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian hymn of hope and resurrection, intimate piano, soft strings, restrained French horn, acoustic guitar, quiet meditation opening into serene sunrise joy, spacious and warm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone lead, small mixed choir on final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -3016,6 +3064,7 @@
 [Outro: strings fade]
 主は今日も 私を練っておられる
 純金のように 光るその日まで
+アーメン
 
 [End]
 ```
@@ -3026,7 +3075,7 @@
 
 - **黙想の核心：** 「天におられる私たちの父よ。」
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, nylon-string guitar, gentle cello, unhurried stillness, humble surrender, warm sense of God's nearness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, nylon-string guitar, gentle cello, unhurried stillness, humble surrender, warm sense of God's nearness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and female alto alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3076,6 +3125,7 @@
 [Outro: amen cadence]
 天におられる 私たちの父よ
 今日もあなたと過ごします アーメン
+アーメン
 
 [End]
 ```
@@ -3086,7 +3136,7 @@
 
 - **黙想の核心：** 「私たちに必要な日ごとの糧を、今日もお与えください。」
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Quiet Japanese chapel prayer hymn, soft piano, warm pipe organ, gentle cello countermelody, steady unhurried pulse, humble daily-bread simplicity, tender morning trust, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Quiet Japanese chapel prayer hymn, soft piano, warm pipe organ, gentle cello countermelody, steady unhurried pulse, humble daily-bread simplicity, tender morning trust, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and mature alto in turn, soft unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3136,6 +3186,7 @@
 [Outro: amen cadence]
 御名が聖とされ 御国が来ますように
 日ごとの糧を感謝します アーメン
+アーメン
 
 [End]
 ```
@@ -3146,7 +3197,7 @@
 
 - **黙想の核心：** 何も思い煩わず、あらゆる場合に、感謝を込めて祈りと願いを神へ申し上げなさい。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese hymn of thankful prayer, soft piano, sustained pipe organ, nylon-string guitar, lyrics-forward calm, grateful stillness, quiet joy of praise, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Gentle Japanese hymn of thankful prayer, soft piano, sustained pipe organ, nylon-string guitar, lyrics-forward calm, grateful stillness, quiet joy of praise, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with female alto, delicate two-part harmony at the close, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3196,6 +3247,7 @@
 [Outro: amen cadence]
 礼拝と告白と 感謝と願いと
 主よ この祈りを受けてください アーメン
+アーメン
 
 [End]
 ```
@@ -3206,7 +3258,7 @@
 
 - **黙想の核心：** たゆまず祈り、感謝をもって目を覚ましていなさい。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Peaceful Japanese devotional prayer song, soft piano, pipe organ, gentle cello, short pauses between phrases, watchful thankful calm, everyday prayerful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Peaceful Japanese devotional prayer song, soft piano, pipe organ, gentle cello, short pauses between phrases, watchful thankful calm, everyday prayerful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Alternating mature baritone and alto verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3256,6 +3308,7 @@
 [Outro: amen cadence]
 一日のすべての場所が
 あなたと語らう部屋になる アーメン
+アーメン
 
 [End]
 ```
@@ -3266,7 +3319,7 @@
 
 - **黙想の核心：** すべての人のために、願い、祈り、執り成し、感謝をささげなさい。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Warm Japanese hymn of calling and service, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, quiet sense of purpose, hopeful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Warm Japanese hymn of calling and service, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, quiet sense of purpose, hopeful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone, small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, dignified unhurried storytelling, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus: small choir] [Outro: unison]
 
@@ -3316,6 +3369,7 @@
 [Outro: unison]
 私が地上を去った後も
 祈りは御手に覚えられている
+アーメン
 
 [End]
 ```
@@ -3326,7 +3380,7 @@
 
 - **黙想の核心：** あなたの正しい定めのゆえに、私は一日に七度、あなたをほめたたえます。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Serene Japanese morning prayer hymn, soft piano, sustained pipe organ, gentle cello, steady faithful pulse, quiet daily-rhythm devotion, calm settled joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Serene Japanese morning prayer hymn, soft piano, sustained pipe organ, gentle cello, steady faithful pulse, quiet daily-rhythm devotion, calm settled joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and female alto trading verses, restrained unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3376,6 +3430,7 @@
 [Outro: amen cadence]
 以前からしていたように 今日も祈る
 生涯この姿勢で歩みます アーメン
+アーメン
 
 [End]
 ```
@@ -3386,7 +3441,7 @@
 
 - **黙想の核心：** 神が喜ばれる断食は、悪の鎖を解き、重いくびきを外し、苦しめられている人を自由にするものです。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic meditation song, nylon-string guitar, soft piano, cello, brief gentle flute, open space and silence between phrases, restful quiet warmth, gently joyful close, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian acoustic meditation song, nylon-string guitar, soft piano, cello, brief gentle flute, open space and silence between phrases, restful quiet warmth, gently joyful close, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, relaxed unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Final Chorus: unison] [Outro: piano and cello]
 
@@ -3436,6 +3491,7 @@
 [Outro: piano and cello]
 心を尽くして 主のもとへ帰る
 その静けさに 主がおられる
+アーメン
 
 [End]
 ```
@@ -3446,7 +3502,7 @@
 
 - **黙想の核心：** 「二人または三人が、私の名によって集まるところには、私もその中にいる。」
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Tender Japanese hymn of shared prayer, soft piano, pipe organ, nylon-string guitar, gentle cello, intimate lyrics-forward calm, warm togetherness in stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Tender Japanese hymn of shared prayer, soft piano, pipe organ, nylon-string guitar, gentle cello, intimate lyrics-forward calm, warm togetherness in stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3496,6 +3552,7 @@
 [Outro: amen cadence]
 心を合わせるところに 主も共に
 祈りの輪を今日もひろげます アーメン
+アーメン
 
 [End]
 ```
@@ -3506,7 +3563,7 @@
 
 - **黙想の核心：** 身を慎み、目を覚ましていなさい。敵である悪魔が、ほえたける獅子のように歩き回り、食い尽くす者を捜しています。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Steadfast Japanese morning prayer hymn, soft piano, sustained pipe organ, gentle cello countermelody, calm watchful assurance, quiet unshaken trust, peaceful morning courage, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Steadfast Japanese morning prayer hymn, soft piano, sustained pipe organ, gentle cello countermelody, calm watchful assurance, quiet unshaken trust, peaceful morning courage, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone with female alto, soft unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3556,6 +3613,7 @@
 [Outro: amen cadence]
 すでに勝利しておられる主が
 今日も私と共におられる アーメン
+アーメン
 
 [End]
 ```
@@ -3566,7 +3624,7 @@
 
 - **黙想の核心：** 主に結ばれ、その偉大な力によって強くなりなさい。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Calm Japanese hymn of daily devotion, soft piano, warm pipe organ, nylon-string guitar, gentle steady pulse, quiet strength and surrender, serene morning readiness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Calm Japanese hymn of daily devotion, soft piano, warm pipe organ, nylon-string guitar, gentle steady pulse, quiet strength and surrender, serene morning readiness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone and mature alto alternating, delicate two-part harmony at the close, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3616,6 +3674,7 @@
 [Outro: amen cadence]
 主よ 今日もキリストを着せてください
 その力の中で立ちます アーメン
+アーメン
 
 [End]
 ```
@@ -3625,7 +3684,7 @@
 
 - **黙想の核心：** すべてをよく確かめ、良いものを大切にし、悪いものはどのような形であっても退けなさい。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, soft woodwind, light organ, attentive stillness, gentle discerning clarity, warm peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, soft woodwind, light organ, attentive stillness, gentle discerning clarity, warm peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, small choir in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -3676,6 +3735,7 @@
 [Outro]
 すべてを確かめ 良いものを抱き
 平安のうちに 今日を歩みます
+アーメン
 
 [End]
 
@@ -3687,7 +3747,7 @@
 
 - **黙想の核心：** 主よ、朝、あなたは私の声を聞いてくださいます。朝ごとに、私はあなたの前に祈りをささげ、待ち望みます。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, unhurried prayerful pulse, quiet surrender, warm humble stillness before God, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, unhurried prayerful pulse, quiet surrender, warm humble stillness before God, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and female alto alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, tender unison chorus, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -3738,6 +3798,7 @@
 [Outro: amen cadence]
 主よ 朝あなたは 私の声を聞かれます
 アーメン 感謝します
+アーメン
 
 [End]
 
@@ -3749,7 +3810,7 @@
 
 - **黙想の核心：** アブラハムは、召しを受けた時、信仰によって従い、将来受け継ぐ地へ出て行きました。行き先を知らないまま、出発したのです。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of calling and service, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, hopeful quiet purpose, calm grateful readiness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of calling and service, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, hopeful quiet purpose, calm grateful readiness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, dignified storytelling, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -3800,6 +3861,7 @@
 [Outro: unison]
 主のことばに従って
 新しい一歩を 今日も踏み出します
+アーメン
 
 [End]
 
@@ -3811,7 +3873,7 @@
 
 - **黙想の核心：** アブラムは主を信じました。主は、それを彼の義と認められました。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese scripture hymn, upright piano, cello, soft woodwind responses, patient trusting stillness, warm major-key serenity, gentle hope of waiting on God, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Quiet Japanese scripture hymn, upright piano, cello, soft woodwind responses, patient trusting stillness, warm major-key serenity, gentle hope of waiting on God, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth patient legato, soft choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -3862,6 +3924,7 @@
 [Outro]
 待つ日々さえ恵みに変わる
 あなたの約束は真実だから
+アーメン
 
 [End]
 
@@ -3873,7 +3936,7 @@
 
 - **黙想の核心：** 「私は、あなたがたの中に住む、旅人であり寄留者です。亡くなった者を葬るための土地を、所有地として与えてください。」
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Gentle Japanese meditative hymn, upright piano, viola, soft woodwind, light organ, spacious pilgrim calm, homeward longing resolved into peace, bright quiet hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Gentle Japanese meditative hymn, upright piano, viola, soft woodwind, light organ, spacious pilgrim calm, homeward longing resolved into peace, bright quiet hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Tender mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried phrasing, gentle two-part final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -3924,6 +3987,7 @@
 [Outro]
 天の故郷を慕いながら
 今日の道を誠実に歩む
+アーメン
 
 [End]
 
@@ -3935,7 +3999,7 @@
 
 - **黙想の核心：** 「その子に手を下してはならない。あなたが、ひとり息子さえ私に惜しまなかったので、今、あなたが神を畏れる者であることが分かった。」
 - **参考マッチ曲：** Simon & Garfunkel - Bridge over Troubled Water
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian hymn of surrender, solo piano opening, warm strings entering gradually, gentle cello, prayerful devotion, deep thankful stillness, quietly radiant grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian hymn of surrender, solo piano opening, warm strings entering gradually, gentle cello, prayerful devotion, deep thankful stillness, quietly radiant grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Vocal] / [Intro: solo piano] [Verse] [Verse: strings enter] [Bridge] [Final Verse: orchestral and gospel climax] [Outro: sustained resolution]
 
@@ -3980,6 +4044,7 @@
 [Outro: sustained resolution]
 惜しまずささげたその場所へ
 あふれる恵みが注がれます
+アーメン
 
 [End]
 
@@ -3991,7 +4056,7 @@
 
 - **黙想の核心：** 「今、私はあなたをファラオのもとへ遣わす。私の民イスラエルの人々を、エジプトから導き出しなさい。」
 - **参考マッチ曲：** Simon & Garfunkel - The Sound of Silence
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian folk hymn of quiet calling, fingerpicked acoustic guitar, soft piano, warm strings, reflective and purposeful, humble hopeful readiness, gentle morning resolve, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian folk hymn of quiet calling, fingerpicked acoustic guitar, soft piano, warm strings, reflective and purposeful, humble hopeful readiness, gentle morning resolve, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone duet, close harmony verses, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Duet] / [Intro: fingerpicked acoustic guitar] [Verse] [Verse: close harmony] [Subtle Build] [Bridge] [Final Verse] [Outro: acoustic fade]
 
@@ -4038,6 +4103,7 @@
 [Outro: acoustic fade]
 私はここにおります
 あなたの声に応えます
+アーメン
 
 [End]
 
@@ -4049,7 +4115,7 @@
 
 - **黙想の核心：** アロンとフルが、一人は片側から、もう一人は反対側からモーセの手を支えました。そのため、モーセの手は日が沈むまで下がりませんでした。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture reflection hymn, upright piano, soft woodwind, viola, cello, steadfast comforting stillness, quiet strength of companionship, warm settled joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture reflection hymn, upright piano, soft woodwind, viola, cello, steadfast comforting stillness, quiet strength of companionship, warm settled joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm steady mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -4100,6 +4166,7 @@
 [Outro]
 荒れ野の果てに約束の地
 主と共に渡ってゆきます
+アーメン
 
 [End]
 
@@ -4111,7 +4178,7 @@
 
 - **黙想の核心：** 主は思い直され、民に下すと語られた災いを下されませんでした。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Meditative Japanese Christian hymn, upright piano, woodwind responses, cello, light organ, interceding tenderness, quiet compassionate devotion, softly glowing peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Meditative Japanese Christian hymn, upright piano, woodwind responses, cello, light organ, interceding tenderness, quiet compassionate devotion, softly glowing peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, small choir joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -4162,6 +4229,7 @@
 [Outro]
 遠くへ行けない日にも
 祈りはどこまでも届きます
+アーメン
 
 [End]
 
@@ -4173,7 +4241,7 @@
 
 - **黙想の核心：** 永遠の神が、あなたの住まいです。その永遠の御腕が、あなたを下から支えています。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope and eternal life, intimate piano, soft strings, restrained French horn, spacious warm harmony, sunrise serenity after a long night, peaceful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian hymn of hope and eternal life, intimate piano, soft strings, restrained French horn, spacious warm harmony, sunrise serenity after a long night, peaceful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, small mixed choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -4224,6 +4292,7 @@
 [Outro: strings fade]
 その御腕は 子や孫の日々も
 変わることなく支えてくださる
+アーメン
 
 [End]
 
@@ -4235,7 +4304,7 @@
 
 - **黙想の核心：** 私が主に願うことは、ただ一つです。生涯、主の家に住み、主の麗しさを仰ぎ、主の宮で主を求め続けることです。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Quiet Japanese chapel prayer hymn, soft piano, pipe organ, nylon-string guitar, gentle cello, unhurried devotion, single-hearted longing for God, warm abiding stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Quiet Japanese chapel prayer hymn, soft piano, pipe organ, nylon-string guitar, gentle cello, unhurried devotion, single-hearted longing for God, warm abiding stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in gentle alternation, clear Japanese diction, comfortable mid-range, gentle and warm, delicate final harmony, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
@@ -4286,6 +4355,7 @@
 [Outro: amen cadence]
 あなたは私の神です
 アーメン 慕い求めます
+アーメン
 
 [End]
 
@@ -4297,7 +4367,7 @@
 
 - **黙想の核心：** 神よ、私の内に清い心を造り、揺るがない霊を新しくしてください。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of repentance and renewal, gentle 6/8, felt piano, solo cello, quiet strings, honest humble reflection opening into grace, soft morning relief and assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of repentance and renewal, gentle 6/8, felt piano, solo cello, quiet strings, honest humble reflection opening into grace, soft morning relief and assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, soft alto support at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
@@ -4348,6 +4418,7 @@
 [Outro: alto support]
 朝ごとに新しい心を
 あなたからいただきます
+アーメン
 
 [End]
 
@@ -4359,7 +4430,7 @@
 
 - **黙想の核心：** 神は私たちの避け所、私たちの力。苦難の時に、すぐ近くにいる助けです。
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese morning meditation hymn, felt piano, solo cello, subtle pipe organ, soft acoustic guitar, sheltering calm, tender consolation, quietly bright thankful peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Gentle Japanese morning meditation hymn, felt piano, solo cello, subtle pipe organ, soft acoustic guitar, sheltering calm, tender consolation, quietly bright thankful peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto lead, clear Japanese diction, comfortable mid-range, gentle and warm, compassionate smooth legato, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
@@ -4410,6 +4481,7 @@
 [Outro: quiet organ and piano]
 主は私の羊飼い
 乏しいことはありません
+アーメン
 
 [End]
 
@@ -4421,7 +4493,7 @@
 
 - **黙想の核心：** 私は生きている限り、主をほめたたえ、生涯、私の神を讃美します。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Japanese Christian praise ballad, intimate chamber folk, nylon-string guitar, piano, clarinet, cello, simple singable refrain, lifelong grateful warmth, calm shared morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Japanese Christian praise ballad, intimate chamber folk, nylon-string guitar, piano, clarinet, cello, simple singable refrain, lifelong grateful warmth, calm shared morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and female alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft harmony on final line, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
@@ -4472,6 +4544,7 @@
 [Outro: soft harmony]
 生涯 主を讃美します
 この歌が次の世代へ流れますように
+アーメン
 
 [End]
 
@@ -4483,7 +4556,7 @@
 
 - **黙想の核心：** 主は命の道を示してくださいます。主の御前には満ちあふれる喜びがあり、主の右には永遠の楽しみがあります。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Serene Japanese hymn of eternal hope, intimate piano, gentle French horn, soft strings, acoustic guitar, spacious dawn-lit warmth, quiet everlasting joy passed to the next generation, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Serene Japanese hymn of eternal hope, intimate piano, gentle French horn, soft strings, acoustic guitar, spacious dawn-lit warmth, quiet everlasting joy passed to the next generation, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone or mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, small choir only in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -4534,6 +4607,7 @@
 [Outro: strings fade]
 主の道を歩みなさい
 その一言を 愛と共に残します
+アーメン
 
 [End]
 
@@ -4544,7 +4618,7 @@
 
 - **黙想の核心：** あなたがたは私に悪を企てましたが、神はそれを善へ変え、今日のように多くの人々の命を救うために用いてくださいました。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwind, cello, light organ, attentive stillness, warm major-key resolution, clear peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwind, cello, light organ, attentive stillness, warm major-key resolution, clear peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony on final chorus, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -4594,6 +4668,7 @@
 [Outro]
 神はそれを 善へ変えられた
 この告白とともに 今日も歩む
+アーメン
 
 [End]
 ```
@@ -4605,7 +4680,7 @@
 
 - **黙想の核心：** 心から兄弟姉妹を赦さないなら、天の父も同じように取り扱われると、イエスは教えられました。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness, gentle 6/8, felt piano, solo cello, quiet strings, restrained organ, honest reflection easing into grace, peaceful morning assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of forgiveness, gentle 6/8, felt piano, solo cello, quiet strings, restrained organ, honest reflection easing into grace, peaceful morning assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, alto support in the outro, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -4655,6 +4730,7 @@
 [Outro: alto support]
 委ねるたびに 心は軽く
 あなたの慈しみに 包まれます
+アーメン
 
 [End]
 ```
@@ -4666,7 +4742,7 @@
 
 - **黙想の核心：** 神を愛し、みこころによって召された人々には、すべてのことが共に働いて、善となります。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, cello countermelody, unhurried and still, humble surrender, serene morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, cello countermelody, unhurried and still, humble surrender, serene morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Baritone-alto duet with gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -4716,6 +4792,7 @@
 [Outro: amen cadence]
 すべてが共に働いて 善となる
 アーメン 主を信じます
+アーメン
 
 [End]
 ```
@@ -4727,7 +4804,7 @@
 
 - **黙想の核心：** ヨブは、日々の食べ物よりも、神の口から出ることばを大切にしました。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic meditation song, nylon-string guitar, soft piano, cello, brief flute, spacious silence between phrases, quiet gratitude, gentle thankful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian acoustic meditation song, nylon-string guitar, soft piano, cello, brief flute, spacious silence between phrases, quiet gratitude, gentle thankful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed unison refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Final Chorus] [Outro: piano and cello]
 
@@ -4777,6 +4854,7 @@
 [Outro: piano and cello]
 今日の一節が 今日の糧
 みことばによって 生きてゆきます
+アーメン
 
 [End]
 ```
@@ -4788,7 +4866,7 @@
 
 - **黙想の核心：** 主よ、私は一日中あなたを待ち望み、あなたに目を向けます。
 - **参考マッチ曲：** Andy Williams - Moon River
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian gentle worship waltz, flowing harp, warm strings, softly blooming orchestra, tender nostalgic calm, restful serenity, quiet joyful trust, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian gentle worship waltz, flowing harp, warm strings, softly blooming orchestra, tender nostalgic calm, restful serenity, quiet joyful trust, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male vocal, clear Japanese diction, comfortable mid-range, gentle and warm, smooth unhurried waltz phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Vocal] / [Intro: harp and strings] [Verse: waltz] [Instrumental Interlude] [Bridge: orchestra swell] [Final Verse] [Outro: quiet orchestral cadence]
 
@@ -4838,6 +4916,7 @@
 [Outro: quiet orchestral cadence]
 足もとへ座り みことばを聞く
 今日もあなたを 待ち望みます
+アーメン
 
 [End]
 ```
@@ -4849,7 +4928,7 @@
 
 - **黙想の核心：** マリアは、これらのことをすべて心に納め、何度も思い巡らしていました。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian quiet praise hymn, upright piano, viola, soft woodwind responses, light organ, lyrics-forward calm, treasured stillness, warm bright peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian quiet praise hymn, upright piano, viola, soft woodwind responses, light organ, lyrics-forward calm, treasured stillness, warm bright peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, natural breathing, gentle two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -4899,6 +4978,7 @@
 [Outro]
 あなたのみことばを 私の心に
 刻まれた灯は 消えません
+アーメン
 
 [End]
 ```
@@ -4910,7 +4990,7 @@
 
 - **黙想の核心：** あなたは安全な道を歩み、足を取られることはありません。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian gentle acoustic hymn, nylon-string guitar, piano, cello, gentle flute interlude, open airy space, step-by-step calm assurance, peaceful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian gentle acoustic hymn, nylon-string guitar, piano, cello, gentle flute interlude, open airy space, step-by-step calm assurance, peaceful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, laid-back unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Final Chorus] [Outro: piano and cello]
 
@@ -4960,6 +5040,7 @@
 [Outro: piano and cello]
 私の足の灯 私の道の光
 今日もその光で 歩みます
+アーメン
 
 [End]
 ```
@@ -4971,7 +5052,7 @@
 
 - **黙想の核心：** 私は一日中、あなたの正しさを語り、あなたにより頼います。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian meditative chapel hymn, soft piano, warm pipe organ, nylon guitar, gentle cello, short pauses between phrases, prayerful dialogue mood, warm humble joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian meditative chapel hymn, soft piano, warm pipe organ, nylon guitar, gentle cello, short pauses between phrases, prayerful dialogue mood, warm humble joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in gentle unison, clear Japanese diction, comfortable mid-range, gentle and warm, delicate final harmony, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -5021,6 +5102,7 @@
 [Outro: amen cadence]
 聞いて 応えて また聞いて
 アーメン 主と共に歩みます
+アーメン
 
 [End]
 ```
@@ -5032,7 +5114,7 @@
 
 - **黙想の核心：** 何をするにも、愛をもって行いなさい。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian quiet devotion hymn, soft piano, sustained organ, nylon-string guitar, cello, steady unhurried pulse, humble willing obedience, calm yet joyful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian quiet devotion hymn, soft piano, sustained organ, nylon-string guitar, cello, steady unhurried pulse, humble willing obedience, calm yet joyful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Senior mixed unison led by baritone and alto, clear Japanese diction, comfortable mid-range, gentle and warm, restrained dynamics, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -5082,6 +5164,7 @@
 [Outro: amen cadence]
 今日も一歩 愛をもって
 アーメン 行わせてください
+アーメン
 
 [End]
 ```
@@ -5093,7 +5176,7 @@
 
 - **黙想の核心：** あなたのみことばは、私の口に蜜よりも甘いものです。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian gentle praise song, piano, acoustic guitar, brushed snare, warm strings, easy walking pulse, grateful hopeful purpose, bright unhurried joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian gentle praise song, piano, acoustic guitar, brushed snare, warm strings, easy walking pulse, grateful hopeful purpose, bright unhurried joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, warm storytelling verses, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -5143,6 +5226,7 @@
 [Outro: unison]
 一日中 静かに口ずさむ
 みことばは 私の生涯の友
+アーメン
 
 [End]
 ```
@@ -5154,7 +5238,7 @@
 
 - **黙想の核心：** 草は枯れ、花はしぼみます。しかし、私たちの神のみことばは、永遠に立ち続けます。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of eternal hope, intimate piano, soft strings, restrained French horn, spacious major-key warmth, sunrise serenity after a long night, peaceful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian hymn of eternal hope, intimate piano, soft strings, restrained French horn, spacious major-key warmth, sunrise serenity after a long night, peaceful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, small mixed choir on final chorus only, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -5204,6 +5288,7 @@
 [Outro: strings fade]
 生きていて 力あるみことば
 永遠のことばと 共に歩みます
+アーメン
 
 [End]
 ```
@@ -5215,7 +5300,7 @@
 
 - **黙想の核心：** 愛する方の声が聞こえます。見てください。その方は山を越え、丘を跳び越えて来られます。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian tender morning hymn, gentle 6/8 sway, felt piano, solo cello, quiet strings, intimate opening warming into grace, renewed first-love tenderness, soft peaceful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian tender morning hymn, gentle 6/8 sway, felt piano, solo cello, quiet strings, intimate opening warming into grace, renewed first-love tenderness, soft peaceful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, tender legato, soft alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -5265,6 +5350,7 @@
 [Outro: alto support]
 初めの行いへ 戻ります
 あなたの愛のもとへ 帰ります
+アーメン
 
 [End]
 ```
@@ -5276,7 +5362,7 @@
 
 - **黙想の核心：** 「今日、神の声を聞くなら、荒れ野で神に逆らった時のように、心をかたくなにしてはならない。」
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian quiet hymn of repentance, flowing 6/8, felt piano, cello, thin warm strings, restrained organ, honest confession resolving into light, calm evening peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian quiet hymn of repentance, flowing 6/8, felt piano, cello, thin warm strings, restrained organ, honest confession resolving into light, calm evening peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Sincere mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, gentle alto in the outro, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -5326,6 +5412,7 @@
 [Outro: alto support]
 赦しを受けて 心は軽く
 光の中を 今日も歩みます
+アーメン
 
 [End]
 ```
@@ -5337,7 +5424,7 @@
 
 - **黙想の核心：** できる限り、あなたがたの側から、すべての人と平和に暮らしなさい。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian gentle hymn of reconciliation, soft 6/8, felt piano, solo cello, quiet warm strings, humble courage and grace, gradually opening warmth, peaceful morning hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian gentle hymn of reconciliation, soft 6/8, felt piano, solo cello, quiet warm strings, humble courage and grace, gradually opening warmth, peaceful morning hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm restrained baritone, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried heartfelt delivery, mature alto joining the outro, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -5387,6 +5474,7 @@
 [Outro: alto support]
 私の心にも あの人の心にも
 主よ、平和を 与えてください
+アーメン
 
 [End]
 ```
@@ -5398,7 +5486,7 @@
 
 - **黙想の核心：** 神は、アブラハムとその子孫との間に、永遠の契約を立て、彼らの神となると約束されました。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian family blessing hymn, lilting 6/8, felt piano, cello, warm strings, restrained organ, quiet intercessory devotion, covenant assurance, gentle thankful peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian family blessing hymn, lilting 6/8, felt piano, cello, warm strings, restrained organ, quiet intercessory devotion, covenant assurance, gentle thankful peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm fatherly baritone, clear Japanese diction, comfortable mid-range, gentle and warm, calm prayerful phrasing, soft alto support at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -5448,6 +5536,7 @@
 [Outro: alto support]
 私と私の家は 主に仕える
 この祈りをあなたに 委ねます
+アーメン
 
 [End]
 ```
@@ -5458,7 +5547,7 @@
 
 - **黙想の核心：** 私の魂は神を、生ける神を渇き求めます。いつ、私は御前に出て、神の御顔を仰ぐことができるでしょうか。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, cello, light organ, attentive stillness, gentle longing turning to warm morning light, quiet and peaceful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, cello, light organ, attentive stillness, gentle longing turning to warm morning light, quiet and peaceful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, calm thoughtful phrasing, small mixed choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -5508,6 +5597,7 @@
 [Outro]
 渇いた魂に 泉はあふれ
 飢えた心は 良いもので満ちる
+アーメン
 
 [End]
 ```
@@ -5518,7 +5608,7 @@
 
 - **黙想の核心：** 羊飼いは、失われた一匹を見つけるまで、捜し続けます。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of repentance and renewal, 6/8, felt piano, solo cello, quiet strings, restrained organ, honest and tender, gentle grace and relief, soft peaceful assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of repentance and renewal, 6/8, felt piano, solo cello, quiet strings, restrained organ, honest and tender, gentle grace and relief, soft peaceful assurance, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, mature alto support in final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful steady phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -5568,6 +5658,7 @@
 [Outro: alto support]
 一人の帰りを 天は喜ぶ
 あの子は今も 主の御手の中
+アーメン
 
 [End]
 ```
@@ -5578,7 +5669,7 @@
 
 - **黙想の核心：** 神に近くあることこそ、私の幸いです。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Gentle Japanese scripture-meditation worship hymn, upright piano, woodwind responses, viola, light organ, serene attentive calm, warm major-key brightness, quiet nearness and peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Gentle Japanese scripture-meditation worship hymn, upright piano, woodwind responses, viola, light organ, serene attentive calm, warm major-key brightness, quiet nearness and peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Serene mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth unhurried legato, gentle two-part harmony on final chorus, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -5628,6 +5719,7 @@
 [Outro]
 今日も御前に 座れたことが
 すでに近づいた 一歩の恵み
+アーメン
 
 [End]
 ```
@@ -5638,7 +5730,7 @@
 
 - **黙想の核心：** 主の慈しみは尽きることがなく、そのあわれみは終わりません。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Quiet Japanese hymn of forgiveness and daily renewal, 6/8, felt piano, cello, quiet warm strings, gradually opening harmony, tender morning mercy, peaceful hopeful calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Quiet Japanese hymn of forgiveness and daily renewal, 6/8, felt piano, cello, quiet warm strings, gradually opening harmony, tender morning mercy, peaceful hopeful calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Sincere mature baritone, alto joining softly at the close, clear Japanese diction, comfortable mid-range, gentle and warm, minimal vibrato, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -5688,6 +5780,7 @@
 [Outro: alto support]
 今日も朝が 来ました
 それだけでもう 回復の始まりです
+アーメン
 
 [End]
 ```
@@ -5698,7 +5791,7 @@
 
 - **黙想の核心：** 私たちの国籍は天にあります。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope and eternal life, intimate piano, soft strings, restrained French horn, spacious warm harmony, quiet meditative dawn, peaceful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian hymn of hope and eternal life, intimate piano, soft strings, restrained French horn, spacious warm harmony, quiet meditative dawn, peaceful grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, gradually brightening tone, small mixed choir on final refrain only, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -5748,6 +5841,7 @@
 [Outro: strings fade]
 私たちの国籍は 天にあります
 今日も穏やかに 帰り道を歩みます
+アーメン
 
 [End]
 ```
@@ -5758,7 +5852,7 @@
 
 - **黙想の核心：** 神は人々の目から、すべての涙をぬぐってくださいます。もはや死はなく、悲しみも、叫びも、痛みもありません。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Gentle Japanese worship ballad of resurrection hope, piano, acoustic guitar, soft strings, French horn, sunrise-after-night warmth, serene comforting calm, quietly joyful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Gentle Japanese worship ballad of resurrection hope, piano, acoustic guitar, soft strings, French horn, sunrise-after-night warmth, serene comforting calm, quietly joyful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, graceful sustained legato, small choir only at the final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -5808,6 +5902,7 @@
 [Outro: strings fade]
 再会の約束を 胸に抱けば
 今日の孤独も 平安へ変わる
+アーメン
 
 [End]
 ```
@@ -5818,7 +5913,7 @@
 
 - **黙想の核心：** 主なる神は、土の塵で人を形づくり、その鼻に命の息を吹き入れられました。人は、生きる者となりました。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Quiet Japanese scripture meditation hymn, upright piano, cello, soft woodwinds, uncluttered lyrics-forward calm, gentle reflective depth, warm bright resolution, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Quiet Japanese scripture meditation hymn, upright piano, cello, soft woodwinds, uncluttered lyrics-forward calm, gentle reflective depth, warm bright resolution, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, natural breathing, gentle two-part harmony in final chorus, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -5868,6 +5963,7 @@
 [Outro]
 生涯働いた この手を包む
 永遠のいのちの 温かい御手
+アーメン
 
 [End]
 ```
@@ -5878,7 +5974,7 @@
 
 - **黙想の核心：** 「私は平和をあなたがたに残し、私の平和を与える。私は、世が与えるように与えるのではない。」
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning meditation hymn, felt piano, solo cello, subtle pipe organ, warm strings, soft chapel spaciousness, tender quiet reflection, peaceful sunrise warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning meditation hymn, felt piano, solo cello, subtle pipe organ, warm strings, soft chapel spaciousness, tender quiet reflection, peaceful sunrise warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, clear Japanese diction, comfortable mid-range, gentle and warm, compassionate unhurried phrasing, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Final Chorus] [Outro: quiet organ and piano]
 
@@ -5928,6 +6024,7 @@
 [Outro: quiet organ and piano]
 善い戦いを 戦い終えて
 御手に委ねて 静かに憩います
+アーメン
 
 [End]
 ```
@@ -5938,7 +6035,7 @@
 
 - **黙想の核心：** 自分が見たことを忘れず、子どもや孫へ伝えなさい。
 - **参考マッチ曲：** Gilbert O'Sullivan - Alone Again (Naturally)
-- **Sunoスタイル：** slow steady 76 BPM, Intimate Japanese chamber-folk praise ballad, piano, nylon-string guitar, cello, clarinet, close natural warmth, tender thankful reflection, calm morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Intimate Japanese chamber-folk praise ballad, piano, nylon-string guitar, cello, clarinet, close natural warmth, tender thankful reflection, calm morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, conversational verses, soft harmony on the last line, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Vocal] / [Intro: piano and acoustic guitar] [Verse] [Refrain] [Instrumental Interlude] [Final Verse and Refrain] [Outro: quiet fade]
 
@@ -5986,6 +6083,7 @@
 [Outro: quiet fade]
 愛していますと ひとこと
 今日この手で 伝えます
+アーメン
 
 [End]
 ```
@@ -5996,7 +6094,7 @@
 
 - **黙想の核心：** 「今日」と呼ばれている間、毎日、互いに励まし合いなさい。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Peaceful Japanese hymn of hope and gratitude, piano, soft French horn, warm strings, gentle open arrangement, thankful morning light, calm yet joyful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Peaceful Japanese hymn of hope and gratitude, piano, soft French horn, warm strings, gentle open arrangement, thankful morning light, calm yet joyful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, clear Japanese diction, comfortable mid-range, gentle and warm, straight sustained notes, small mixed choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -6046,6 +6144,7 @@
 [Outro: strings fade]
 今この瞬間も 贈り物です
 今日を深く 生きさせてください
+アーメン
 
 [End]
 ```
@@ -6056,7 +6155,7 @@
 
 - **黙想の核心：** 「死よ、お前の勝利はどこにあるのか。死よ、お前のとげはどこにあるのか。」
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian resurrection-hope hymn, intimate piano, restrained French horn, soft strings, acoustic guitar, spacious major warmth, quiet awakening joy, dawn-like serenity, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian resurrection-hope hymn, intimate piano, restrained French horn, soft strings, acoustic guitar, spacious major warmth, quiet awakening joy, dawn-like serenity, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, hopeful brightening delivery, choir joining softly at final chorus, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -6106,6 +6205,7 @@
 [Outro: strings fade]
 復活であり いのちである主が
 今日も私の内に 生きておられる
+アーメン
 
 [End]
 ```
@@ -6116,7 +6216,7 @@
 
 - **黙想の核心：** 「私は死んだが、見よ、今は世々限りなく生きている。私は死と死者の世界の鍵を持っている。」
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Warm Japanese worship hymn of eternal hope, piano, soft strings, gentle French horn, unhurried spacious flow, peaceful assured calm, quietly grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Warm Japanese worship hymn of eternal hope, piano, soft strings, gentle French horn, unhurried spacious flow, peaceful assured calm, quietly grateful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone lead, clear Japanese diction, comfortable mid-range, gentle and warm, tender steady phrasing, small mixed choir only in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -6166,6 +6266,7 @@
 [Outro: strings fade]
 勝利を与えてくださる 神に感謝し
 今日を深く 平安に生きます
+アーメン
 
 [End]
 ```
@@ -6176,7 +6277,7 @@
 
 - **黙想の核心：** 神の国は、食べたり飲んだりすることではなく、聖霊によって与えられる正しさ、平和、喜びです。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, nylon-string guitar, stillness and surrender, humble warm joy, unhurried reverent calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, gentle cello, nylon-string guitar, stillness and surrender, humble warm joy, unhurried reverent calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Final Chorus] [Outro: amen cadence]
 
@@ -6226,6 +6327,7 @@
 [Outro: amen cadence]
 心の王座に 主をお迎えします
 今日も御国の 一日です アーメン
+アーメン
 
 [End]
 ```
@@ -6236,7 +6338,7 @@
 
 - **黙想の核心：** 「明日のことまで思い悩んではならない。明日のことは明日が思い悩む。一日の苦労は、その日だけで十分である。」
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese hymn ballad of comfort and trust, felt piano, solo cello, subtle organ, warm strings, quiet chapel reverb, tender trusting calm, warm sunrise peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Gentle Japanese hymn ballad of comfort and trust, felt piano, solo cello, subtle organ, warm strings, quiet chapel reverb, tender trusting calm, warm sunrise peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature female alto, clear Japanese diction, comfortable mid-range, gentle and warm, smooth consoling legato, softly glowing final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Final Chorus] [Outro: quiet organ and piano]
 
@@ -6286,6 +6388,7 @@
 [Outro: quiet organ and piano]
 主よ 今日 まず
 あなたの国を 求めます
+アーメン
 
 [End]
 ```
@@ -6296,7 +6399,7 @@
 
 - **黙想の核心：** 「あなたがたの中で大いなる者になりたい人は、皆に仕える者となりなさい。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Hopeful Japanese hymn of calling and service, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, quiet purposeful gratitude, calm bright readiness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Hopeful Japanese hymn of calling and service, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, quiet purposeful gratitude, calm bright readiness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, storytelling verses, unified final line, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus: small choir] [Outro: unison]
 
@@ -6346,6 +6449,7 @@
 [Outro: unison]
 幼な子のように あなたにより頼み
 ありがとうと 温かく伝えます
+アーメン
 
 [End]
 ```
@@ -6355,7 +6459,7 @@
 
 - **黙想の核心：** 「私の兄弟姉妹である、この最も小さい者の一人にしたことは、私にしてくれたことなのである。」
 - **参考マッチ曲：** ザ・フォーク・クルセダーズ - 悲しくてやりきれない
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of calling and service, acoustic guitar, flute, piano, warm strings, gentle walking pulse, hopeful grateful joy, quiet steady purpose, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of calling and service, acoustic guitar, flute, piano, warm strings, gentle walking pulse, hopeful grateful joy, quiet steady purpose, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, dignified storytelling, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Vocal] / [Intro: acoustic guitar fingerpicking] [Verse] [Chorus: flute accompaniment] [Instrumental Interlude] [Bridge] [Outro: acoustic guitar fade]
 
@@ -6405,6 +6509,7 @@
 [Outro: acoustic guitar fade]
 光を 輝かせなさい
 小さな場所で 今日もひと筋
+アーメン
 
 [End]
 ```
@@ -6415,7 +6520,7 @@
 
 - **黙想の核心：** できる限り、あなたがたの側から、すべての人と平和に暮らしなさい。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, viola, cello, attentive stillness, gentle spiritual understanding, clear peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, viola, cello, attentive stillness, gentle spiritual understanding, clear peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth legato, soft final harmony, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
@@ -6467,6 +6572,7 @@
 神の子どもと 呼ばれるから
 できる限り 私の側から
 平和への一歩を 踏み出します
+アーメン
 
 [End]
 ```
@@ -6477,7 +6583,7 @@
 
 - **黙想の核心：** 堅く立ち、揺らぐことなく、いつも主の働きに励みなさい。主にあって行う労苦は、決してむだにはなりません。
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese Christian hymn ballad, felt piano, solo cello, subtle pipe organ, warm strings, spacious chapel calm, tender reflection, peaceful grateful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Gentle Japanese Christian hymn ballad, felt piano, solo cello, subtle pipe organ, warm strings, spacious chapel calm, tender reflection, peaceful grateful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature female alto, clear Japanese diction, comfortable mid-range, gentle and warm, tender compassionate phrasing, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
@@ -6527,6 +6633,7 @@
 [Outro: quiet organ and piano]
 最後まで 誠実に
 主の御手を 握りしめて
+アーメン
 
 [End]
 ```
@@ -6537,7 +6644,7 @@
 
 - **黙想の核心：** 「この最も小さい者の一人にしたことは、私にしてくれたことなのである。」
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, nylon-string guitar, gentle cello, unhurried prayerful stillness, warm humble joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, nylon-string guitar, gentle cello, unhurried prayerful stillness, warm humble joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
@@ -6597,7 +6704,7 @@
 
 - **黙想の核心：** 神の国は、食べたり飲んだりすることではなく、聖霊によって与えられる正しさ、平和、喜びです。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Quiet Japanese Christian prayer hymn, piano, soft pipe organ, nylon-string guitar, cello countermelody, still and surrendered, serene morning devotion, warm humble gladness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Quiet Japanese Christian prayer hymn, piano, soft pipe organ, nylon-string guitar, cello countermelody, still and surrendered, serene morning devotion, warm humble gladness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, tender unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
@@ -6657,7 +6764,7 @@
 
 - **黙想の核心：** 何をするにも、ことばによると行いによるとを問わず、すべて主イエスの名によって行い、主によって父なる神へ感謝しなさい。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Japanese Christian morning praise ballad, nylon-string guitar, piano, clarinet, cello, intimate chamber warmth, quiet thankful gladness, calm bright morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Japanese Christian morning praise ballad, nylon-string guitar, piano, clarinet, cello, intimate chamber warmth, quiet thankful gladness, calm bright morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft harmony on final line, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
@@ -6707,6 +6814,7 @@
 [Outro: soft harmony]
 食べる時も 飲む時も
 あなたの栄光のために 生きます
+アーメン
 
 [End]
 ```
@@ -6717,7 +6825,7 @@
 
 - **黙想の核心：** 主のあわれみは朝ごとに新しく、主の真実は大きいのです。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic morning meditation song, nylon guitar, flute, piano, cello, open restful space, quiet dawn serenity, softly joyful ending, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian acoustic morning meditation song, nylon guitar, flute, piano, cello, open restful space, quiet dawn serenity, softly joyful ending, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, relaxed unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -6767,6 +6875,7 @@
 [Outro: piano and cello]
 主よ 今日も
 朝の光の中 あなたと共に
+アーメン
 
 [End]
 ```
@@ -6777,7 +6886,7 @@
 
 - **黙想の核心：** 愛する方は私を祝宴の家へ連れて行き、私の上に掲げられた旗は愛でした。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Gentle Japanese Christian acoustic meditation, nylon-string guitar, soft piano, cello, brief flute, unhurried intimacy, thankful mealtime warmth, peaceful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Gentle Japanese Christian acoustic meditation, nylon-string guitar, soft piano, cello, brief flute, unhurried intimacy, thankful mealtime warmth, peaceful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and alto duet, alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, laid-back unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -6827,6 +6936,7 @@
 [Outro: piano and cello]
 喜びと 真心をもって
 神を讃美する 食卓に
+アーメン
 
 [End]
 ```
@@ -6837,7 +6947,7 @@
 
 - **黙想の核心：** 怠らず、心を燃やし、主に仕えなさい。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Quiet Japanese Christian acoustic devotion song, nylon guitar, piano, cello, gentle flute, spacious everyday calm, humble faithful warmth, softly glowing joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Quiet Japanese Christian acoustic devotion song, nylon guitar, piano, cello, gentle flute, spacious everyday calm, humble faithful warmth, softly glowing joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed timing, soft smiling final lines, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -6887,6 +6997,7 @@
 [Outro: piano and cello]
 心を込めて 主に対するように
 今日の小さなことを ささげます
+アーメン
 
 [End]
 ```
@@ -6897,7 +7008,7 @@
 
 - **黙想の核心：** 不平を言わず、互いにもてなし合いなさい。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture hymn, upright piano, woodwinds, viola, light organ, lyrics-forward stillness, kind welcoming warmth, clear gentle morning brightness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture hymn, upright piano, woodwinds, viola, light organ, lyrics-forward stillness, kind welcoming warmth, clear gentle morning brightness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Thoughtful mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, small choir in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -6947,6 +7058,7 @@
 [Outro]
 すべての出会いに 主の御手がある
 今日の挨拶も 祝福になる
+アーメン
 
 [End]
 ```
@@ -6957,7 +7069,7 @@
 
 - **黙想の核心：** 全地よ、喜びの声を主へ上げなさい。喜びをもって主に仕え、喜び歌いながら御前へ進みなさい。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of grateful milestone praise, piano, acoustic guitar, warm strings, light brushed snare, gentle walking pulse, thankful hopeful joy, calm celebration, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of grateful milestone praise, piano, acoustic guitar, warm strings, light brushed snare, gentle walking pulse, thankful hopeful joy, calm celebration, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, unified warm refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -7007,6 +7119,7 @@
 [Outro: unison]
 慈しみは 永遠に
 最後の日まで 共にいてください
+アーメン
 
 [End]
 ```
@@ -7017,7 +7130,7 @@
 
 - **黙想の核心：** 私たちの日を正しく数えることを教え、知恵ある心を得させてください。
 - **参考マッチ曲：** かぐや姫 - 神田川
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic reflection song, acoustic guitar, violin, soft piano, cello, gentle folk warmth, wise tender stillness, quietly hopeful glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian acoustic reflection song, acoustic guitar, violin, soft piano, cello, gentle folk warmth, wise tender stillness, quietly hopeful glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried reflective phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Vocal] / [Intro: acoustic guitar and violin] [Verse] [Chorus: violin accompaniment] [Instrumental Interlude] [Bridge] [Outro: solo violin fade]
 
@@ -7067,6 +7180,7 @@
 [Outro: solo violin fade]
 時をよく用い
 あなたと共に 歩みます
+アーメン
 
 [End]
 ```
@@ -7077,7 +7191,7 @@
 
 - **黙想の核心：** お金を愛することは、あらゆる悪の根です。それを求めるあまり、信仰から迷い出て、多くの苦しみを背負った人もいます。
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Tender Japanese Christian hymn ballad, felt piano, solo cello, warm strings, quiet pipe organ, chapel spaciousness, honest consolation, restful trusting peace, warm sunrise calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Tender Japanese Christian hymn ballad, felt piano, solo cello, warm strings, quiet pipe organ, chapel spaciousness, honest consolation, restful trusting peace, warm sunrise calm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Compassionate mature female alto, clear Japanese diction, comfortable mid-range, gentle and warm, intimate prayerful verses, softly hopeful ending, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
@@ -7127,6 +7241,7 @@
 [Outro: quiet organ and piano]
 満ち足りる 心をもって
 あなたに委ねて 今日を生きます
+アーメン
 
 [End]
 ```
@@ -7137,7 +7252,7 @@
 
 - **黙想の核心：** あなたがたのことばが、いつも恵みに満ち、塩で味つけられたようなものでありますように。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian chapel prayer hymn, soft piano, pipe organ, nylon-string guitar, gentle cello, short pauses between phrases, listening stillness, graceful humble warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian chapel prayer hymn, soft piano, pipe organ, nylon-string guitar, gentle cello, short pauses between phrases, listening stillness, graceful humble warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, delicate final harmony, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
@@ -7197,7 +7312,7 @@
 
 - **黙想の核心：** 主よ、あなたの御業は、なんと多いことでしょう。あなたは、そのすべてを知恵によって造られました。地は、あなたの造られたもので満ちています。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic nature meditation, nylon guitar, flute, soft piano, cello, airy open space, strolling peaceful wonder, warm creation-praise joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian acoustic nature meditation, nylon guitar, flute, soft piano, cello, airy open space, strolling peaceful wonder, warm creation-praise joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm low baritone and mature alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed strolling phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -7247,6 +7362,7 @@
 [Outro: piano and cello]
 天は神の栄光を語り
 帰り道 心は軽くなっている
+アーメン
 
 [End]
 ```
@@ -7256,7 +7372,7 @@
 
 - **黙想の核心：** 子どもたちは主から託された宝であり、胎の実は神からの報いです。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of gentle calling, warm piano, acoustic guitar, soft strings, light brushed snare, steady walking pulse, hopeful grateful joy, calm and purposeful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of gentle calling, warm piano, acoustic guitar, soft strings, light brushed snare, steady walking pulse, hopeful grateful joy, calm and purposeful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir on refrains, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -7306,6 +7422,7 @@
 [Outro: unison]
 主よ この子を 御手に委ねます
 年老いた祈りが 深く届きますように
+アーメン
 
 [End]
 ```
@@ -7316,7 +7433,7 @@
 
 - **黙想の核心：** 愛は忍耐強く、愛は親切です。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Gentle Japanese worship ballad, intimate chamber folk, nylon-string guitar, piano, clarinet, warm cello, soft memorable refrain, quiet thankful warmth, calm morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Gentle Japanese worship ballad, intimate chamber folk, nylon-string guitar, piano, clarinet, warm cello, soft memorable refrain, quiet thankful warmth, calm morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone-alto duet, warm natural blend, clear Japanese diction, comfortable mid-range, gentle and warm, soft unison refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 
@@ -7366,6 +7483,7 @@
 [Outro: soft harmony]
 互いに親切に 思いやりをもって
 愛は忍耐強く 愛は親切です
+アーメン
 
 [End]
 ```
@@ -7376,7 +7494,7 @@
 
 - **黙想の核心：** 友は、どのような時にも愛し、兄弟姉妹は、苦難の時のために生まれています。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian song of quiet fellowship, piano, acoustic guitar, warm strings, gentle brushed snare, unhurried walking tempo, friendly grateful glow, peaceful and steady, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian song of quiet fellowship, piano, acoustic guitar, warm strings, gentle brushed snare, unhurried walking tempo, friendly grateful glow, peaceful and steady, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone lead, small senior choir on chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -7426,6 +7544,7 @@
 [Outro: unison]
 主よ よき友をありがとう
 この友情を 育ててゆきます
+アーメン
 
 [End]
 ```
@@ -7436,7 +7555,7 @@
 
 - **黙想の核心：** 手をつけたことは何であっても、力を尽くして行いなさい。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Quiet Japanese praise song of humble service, acoustic guitar, piano, light bass, warm strings, softly walking rhythm, modest hopeful joy, calm sense of purpose, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Quiet Japanese praise song of humble service, acoustic guitar, piano, light bass, warm strings, softly walking rhythm, modest hopeful joy, calm sense of purpose, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone, gentle senior mixed choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady breath, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -7486,6 +7605,7 @@
 [Outro: unison]
 主よ 今日できる小さな奉仕を
 見つける目を 与えてください
+アーメン
 
 [End]
 ```
@@ -7496,7 +7616,7 @@
 
 - **黙想の核心：** 神が造られたものは、すべて良いものです。感謝して受け取るなら、退けるべきものはありません。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic meditation on daily grace, nylon-string guitar, soft piano, cello, brief flute, spacious and unhurried, thankful tender warmth, restful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian acoustic meditation on daily grace, nylon-string guitar, soft piano, cello, brief flute, spacious and unhurried, thankful tender warmth, restful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, relaxed unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 ♬ 一食に込められた意味, 変わることのない主の愛（いつも私のそばに）
@@ -7549,6 +7669,7 @@
 [Outro: piano and cello]
 感謝して 受け取ります
 日ごとの糧の 主の恵み
+アーメン
 
 [End]
 ```
@@ -7559,7 +7680,7 @@
 
 - **黙想の核心：** 怒っても、罪を犯してはなりません。日が沈むまで、怒りを抱いたままでいてはなりません。
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian evening-calm meditative hymn, felt piano, solo cello, subtle pipe organ, warm strings, spacious chapel air, tender peaceful stillness, softly consoling, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian evening-calm meditative hymn, felt piano, solo cello, subtle pipe organ, warm strings, spacious chapel air, tender peaceful stillness, softly consoling, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, calm compassionate tone, clear Japanese diction, comfortable mid-range, gentle and warm, smooth legato phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
@@ -7609,6 +7730,7 @@
 [Outro: quiet organ and piano]
 平安のうちに 横たわり眠る
 守ってくださるのは あなただけ
+アーメン
 
 [End]
 ```
@@ -7619,7 +7741,7 @@
 
 - **黙想の核心：** 「私は決してあなたを見放さず、決してあなたを離れない。」
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Gentle Japanese hymn of comfort, felt piano, solo cello, soft acoustic guitar, quiet pipe organ, slow breathing space, consoling embrace of warmth, serene quiet hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Gentle Japanese hymn of comfort, felt piano, solo cello, soft acoustic guitar, quiet pipe organ, slow breathing space, consoling embrace of warmth, serene quiet hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature female alto, intimate prayerful delivery, clear Japanese diction, comfortable mid-range, gentle and warm, softly brighter final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
@@ -7669,6 +7791,7 @@
 [Outro: quiet organ and piano]
 最も孤独な その日にも
 主が最も近くにおられる
+アーメン
 
 [End]
 ```
@@ -7679,7 +7802,7 @@
 
 - **黙想の核心：** 主の御前には、満ちあふれる喜びがあります。
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, nylon-string guitar, gentle cello, unhurried steady pulse, reverent stillness, humble warm joy of presence, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained pipe organ, nylon-string guitar, gentle cello, unhurried steady pulse, reverent stillness, humble warm joy of presence, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in alternating verses, gentle unison chorus, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
@@ -7729,6 +7852,7 @@
 [Outro: amen cadence]
 いつも主を 私の前に
 御前には満ちあふれる喜び アーメン
+アーメン
 
 [End]
 ```
@@ -7739,7 +7863,7 @@
 
 - **黙想の核心：** 主ご自身が、あなたに先立って進み、共にいてくださいます。あなたを離れず、見捨てられません。恐れてはなりません。おびえてはなりません。
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Restful Japanese meditative hymn, felt piano, solo cello, warm strings, quiet pipe organ, slow spacious phrases, cradle-like calm, softly reassuring peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Restful Japanese meditative hymn, felt piano, solo cello, warm strings, quiet pipe organ, slow spacious phrases, cradle-like calm, softly reassuring peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature female alto, tender chest voice, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried legato lines, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
@@ -7789,6 +7913,7 @@
 [Outro: quiet organ and piano]
 主のうちに憩う やすらぎよ
 恐れることなく 休みます
+アーメン
 
 [End]
 ```
@@ -7799,7 +7924,7 @@
 
 - **黙想の核心：** 主は言われます。「さあ、私たちは話し合おう。あなたがたの罪が緋のようであっても、雪のように白くなる。紅のように赤くても、羊の毛のようになる。」
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of forgiveness and renewal, 6/8, felt piano, solo cello, thin warm strings, restrained organ, honest quiet reflection opening into gentle relief, peaceful morning grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of forgiveness and renewal, 6/8, felt piano, solo cello, thin warm strings, restrained organ, honest quiet reflection opening into gentle relief, peaceful morning grace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, alto support on final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, sincere and steady, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
@@ -7849,6 +7974,7 @@
 [Outro: alto support]
 雪よりも白く されました
 前にあるものへ 歩み出します
+アーメン
 
 [End]
 ```
@@ -7859,7 +7985,7 @@
 
 - **黙想の核心：** 山々と丘は、あなたがたの前で喜びの歌声を上げ、野の木々も皆、手をたたきます。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic nature meditation, nylon-string guitar, brief gentle flute, soft piano, cello, open airy space, serene morning light, quietly wondering joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian acoustic nature meditation, nylon-string guitar, brief gentle flute, soft piano, cello, open airy space, serene morning light, quietly wondering joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone with mature alto duet, alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed unison refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -7909,6 +8035,7 @@
 [Outro: piano and cello]
 今日の空よ ありがとう
 造り主を ほめたたえます
+アーメン
 
 [End]
 ```
@@ -7919,7 +8046,7 @@
 
 - **黙想の核心：** 心の貧しい人々は幸いです。天の国は、その人たちのものだからです。
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Tender Japanese meditative hymn, felt piano, solo cello, subtle organ, soft strings, gentle chapel reverb, humble accepting calm, quiet strength in weakness, warmly hopeful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Tender Japanese meditative hymn, felt piano, solo cello, subtle organ, soft strings, gentle chapel reverb, humble accepting calm, quiet strength in weakness, warmly hopeful, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, compassionate steady tone, clear Japanese diction, comfortable mid-range, gentle and warm, light vibrato at phrase endings only, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Chorus] [Interlude: solo cello] [Bridge] [Outro: quiet organ and piano]
 
@@ -7969,6 +8096,7 @@
 [Outro: quiet organ and piano]
 それでも恵みは 十分です
 弱い時にこそ 私は強い
+アーメン
 
 [End]
 ```
@@ -7979,7 +8107,7 @@
 
 - **黙想の核心：** 感謝しながら主の門へ入り、讃美しながら主の庭へ進み、主へ感謝し、御名をほめたたえなさい。
 - **適用カテゴリ：** 恵み・愛・感謝
-- **Sunoスタイル：** slow steady 76 BPM, Warm Japanese praise ballad of gratitude, intimate chamber folk, nylon-string guitar, piano, clarinet, light cello, simple singable refrain, gentle thankful warmth, calm bright morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 84 BPM, Warm Japanese praise ballad of gratitude, intimate chamber folk, nylon-string guitar, piano, clarinet, light cello, simple singable refrain, gentle thankful warmth, calm bright morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto duet, conversational verses, gentle unison refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone and Female Alto] / [Intro: nylon guitar and piano] [Verse] [Chorus: unison] [Interlude: clarinet] [Bridge] [Outro: soft harmony]
 ♬ 感謝が自然になる場所, 変わることのない主の愛（いつも私のそばに）
@@ -8032,6 +8160,7 @@
 [Outro: soft harmony]
 どのようなことにも 感謝する
 御名をほめたたえます
+アーメン
 
 [End]
 ```
@@ -8042,7 +8171,7 @@
 
 - **黙想の核心：** 食べる時も、飲む時も、何をする時にも、すべてを神の栄光のために行いなさい。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Quiet Japanese acoustic meditation on everyday holiness, nylon-string guitar, soft piano, cello, short flute phrases, silence between lines, plain unhurried grace, restful contented joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Quiet Japanese acoustic meditation on everyday holiness, nylon-string guitar, soft piano, cello, short flute phrases, silence between lines, plain unhurried grace, restful contented joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, laid-back natural phrasing, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -8092,6 +8221,7 @@
 [Outro: piano and cello]
 主は私の岩 正しいお方
 今日もその実を 結ばせてください
+アーメン
 
 [End]
 ```
@@ -8102,7 +8232,7 @@
 
 - **黙想の核心：** 神よ、私が年を重ね、白髪になっても、私を見捨てないでください。あなたの力を次の世代へ、あなたの御業をこれから来るすべての人へ伝えるまで。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of lifelong calling, piano, acoustic guitar, warm strings, light brushed snare, gentle forward pulse, dignified hopeful gratitude, calm resolve and quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of lifelong calling, piano, acoustic guitar, warm strings, light brushed snare, gentle forward pulse, dignified hopeful gratitude, calm resolve and quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone lead with small senior choir refrain, warm storytelling verses, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -8152,6 +8282,7 @@
 [Outro: unison]
 私はここにおります
 遣わしてください 主よ
+アーメン
 
 [End]
 ```
@@ -8161,7 +8292,7 @@
 
 - **黙想の核心：** 年を重ねても、なお実を結び、命にあふれ、生き生きとしています。
 - **参考マッチ曲：** 荒井由実 - 卒業写真
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of lifelong calling, solo piano opening, warm swelling strings, acoustic guitar, gentle walking pulse, hopeful grateful joy, serene morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of lifelong calling, solo piano opening, warm swelling strings, acoustic guitar, gentle walking pulse, hopeful grateful joy, serene morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature female vocal, clear Japanese diction, comfortable mid-range, gentle and warm, tender storytelling delivery, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Female Vocal] / [Intro: solo piano] [Verse] [Chorus: strings swell] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: piano fade out]
 
@@ -8211,6 +8342,7 @@
 [Outro: piano fade out]
 あなたの力を 次の世代へ
 年を重ねても なお実を結ぶ
+アーメン
 
 [End]
 ```
@@ -8221,7 +8353,7 @@
 
 - **黙想の核心：** 弟子であるという理由で、この小さい者の一人に、一杯の冷たい水を飲ませる人は、決して報いを失うことがありません。
 - **参考マッチ曲：** 荒井由実 - ひこうき雲
-- **Sunoスタイル：** slow steady 80 BPM, Gentle Japanese worship ballad of quiet service, warm organ, intimate piano, light bass, soft strings, calm sense of purpose, peaceful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Gentle Japanese worship ballad of quiet service, warm organ, intimate piano, light bass, soft strings, calm sense of purpose, peaceful quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature female voice, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Female Vocal] / [Intro: organ and piano] [Verse] [Chorus] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: organ fade]
 
@@ -8271,6 +8403,7 @@
 [Outro: organ fade]
 最も小さい者 その一人へ
 小さな愛を 主にささげます
+アーメン
 
 [End]
 ```
@@ -8281,7 +8414,7 @@
 
 - **黙想の核心：** それを子どもたちへ繰り返し教え、家にいる時も、道を歩く時も、横になる時も、起きる時も、語り聞かせなさい。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian meditative hymn of family faith, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, tender thankful warmth, quiet steady hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian meditative hymn of family faith, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, tender thankful warmth, quiet steady hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, unison closing line, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -8331,6 +8464,7 @@
 [Outro: unison]
 繰り返し 教えなさい
 主のことばを 子どもたちに
+アーメン
 
 [End]
 ```
@@ -8341,7 +8475,7 @@
 
 - **黙想の核心：** 愛に根ざして真理を語り、あらゆる面で、頭であるキリストへ向かって成長していきなさい。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Quiet Japanese praise song of friendship, piano, acoustic guitar, light bass, warm strings, reflective and warm, calm yet joyful, simple singable melody, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Quiet Japanese praise song of friendship, piano, acoustic guitar, light bass, warm strings, reflective and warm, calm yet joyful, simple singable melody, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone lead, small senior choir on refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -8391,6 +8525,7 @@
 [Outro: unison]
 友は いつも愛する
 平安の一言 今日届けます
+アーメン
 
 [End]
 ```
@@ -8401,7 +8536,7 @@
 
 - **黙想の核心：** 正しい人の祈りは、働く時、大きな力があります。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian prayer hymn, piano, acoustic guitar, brushed snare, soft strings, gentle steady pulse, humble quiet strength, peaceful hopeful glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian prayer hymn, piano, acoustic guitar, brushed snare, soft strings, gentle steady pulse, humble quiet strength, peaceful hopeful glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with gentle senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, steady prayerful phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -8451,6 +8586,7 @@
 [Outro: unison]
 祈りには 大きな力がある
 今日も一人の名を ささげます
+アーメン
 
 [End]
 ```
@@ -8461,7 +8597,7 @@
 
 - **黙想の核心：** 年を重ねた者には知恵があり、長く生きた者には分別があります。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Warm Japanese gospel folk hymn of shared wisdom, acoustic guitar, piano, light bass, warm strings, easy walking tempo, grateful gentle warmth, quiet dignified joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Warm Japanese gospel folk hymn of shared wisdom, acoustic guitar, piano, light bass, warm strings, easy walking tempo, grateful gentle warmth, quiet dignified joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Storytelling mature baritone, small senior mixed choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -8511,6 +8647,7 @@
 [Outro: unison]
 受けた賜物を 用いて仕える
 生涯の知恵を 分かち合います
+アーメン
 
 [End]
 ```
@@ -8521,7 +8658,7 @@
 
 - **黙想の核心：** 「隣人を自分のように愛しなさい。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Tender Japanese Christian hymn of compassion, piano, acoustic guitar, warm strings, light bass, soft unhurried pulse, kindhearted warmth, calm consoling joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Tender Japanese Christian hymn of compassion, piano, acoustic guitar, warm strings, light bass, soft unhurried pulse, kindhearted warmth, calm consoling joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Gentle mature baritone lead with senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, consoling tone, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -8571,6 +8708,7 @@
 [Outro: unison]
 孤独な人へ 家族を与える主
 その温もりを 届けます
+アーメン
 
 [End]
 ```
@@ -8581,7 +8719,7 @@
 
 - **黙想の核心：** 「全世界へ行き、すべての人へ福音を宣べ伝えなさい。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian morning hymn of gentle witness, piano, acoustic guitar, brushed snare, warm strings, quiet sense of mission, hopeful seed-sowing warmth, serene simple melody, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian morning hymn of gentle witness, piano, acoustic guitar, brushed snare, warm strings, quiet sense of mission, hopeful seed-sowing warmth, serene simple melody, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature baritone, small senior choir on chorus, clear Japanese diction, comfortable mid-range, gentle and warm, sincere unforced delivery, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -8631,6 +8769,7 @@
 [Outro: unison]
 人の魂を得る者は 知恵ある人
 今日も一粒の種を蒔きます
+アーメン
 
 [End]
 ```
@@ -8641,7 +8780,7 @@
 
 - **黙想の核心：** 「私と私の家は、主に仕えます。」
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Quiet Japanese hymn of repentance and renewal, gentle 6/8, felt piano, solo cello, quiet strings, restrained organ, honest and prayerful, grace opening into peaceful morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Quiet Japanese hymn of repentance and renewal, gentle 6/8, felt piano, solo cello, quiet strings, restrained organ, honest and prayerful, grace opening into peaceful morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature baritone, mature alto support in final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -8691,6 +8830,7 @@
 [Outro: alto support]
 あなたの家族も 救われます
 その日を信じて 今日も祈る
+アーメン
 
 [End]
 ```
@@ -8701,7 +8841,7 @@
 
 - **黙想の核心：** 私は、善い戦いを戦い、走るべき道のりを走り終え、信仰を守り通しました。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope and eternal life, intimate piano, soft strings, restrained French horn, acoustic guitar, spacious warm harmony, sunrise-like peaceful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian hymn of hope and eternal life, intimate piano, soft strings, restrained French horn, acoustic guitar, spacious warm harmony, sunrise-like peaceful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, small mixed choir on final refrain only, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Chorus] [Interlude: soft horn] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -8751,6 +8891,7 @@
 [Outro: strings fade]
 死に至るまで 忠実に
 主が最後まで 共に走られる
+アーメン
 
 [End]
 ```
@@ -8761,7 +8902,7 @@
 
 - **黙想の核心：** 主は、「誰を遣わそう。誰が私たちのために行くだろうか」と言われました。私は、「私はここにおります。私を遣わしてください」と答えました。
 - **参考マッチ曲：** 山口百恵 - 秋桜 （コスモス）
-- **Sunoスタイル：** slow steady 80 BPM, Reflective Japanese worship ballad of calling, piano, gentle strings, light acoustic guitar, tender swelling chorus, quiet resolve, grateful hopeful warmth, closing in stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Reflective Japanese worship ballad of calling, piano, gentle strings, light acoustic guitar, tender swelling chorus, quiet resolve, grateful hopeful warmth, closing in stillness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature female lead, clear Japanese diction, comfortable mid-range, gentle and warm, sincere devoted phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Female Vocal] / [Intro: piano and gentle strings] [Verse] [Chorus: full strings swell] [Instrumental Interlude] [Bridge] [Final Chorus] [Outro: quiet piano end]
 
@@ -8811,6 +8952,7 @@
 [Outro: quiet piano end]
 信仰を 守り通しました
 その告白へと 今日も一歩
+アーメン
 
 [End]
 ```
@@ -8821,7 +8963,7 @@
 
 - **黙想の核心：** 主よ、私は、あなたがおられる家、あなたの栄光の宿る場所を愛します。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of church and belonging, piano, acoustic guitar, warm strings, light bass, gentle walking pulse, faithful steadfast warmth, calm bright devotion, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of church and belonging, piano, acoustic guitar, warm strings, light bass, gentle walking pulse, faithful steadfast warmth, calm bright devotion, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Dignified mature baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, unified unison ending, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -8871,6 +9013,7 @@
 [Outro: unison]
 キリストの体 その一部として
 祈りで教会を支えます
+アーメン
 
 [End]
 ```
@@ -8881,7 +9024,7 @@
 
 - **黙想の核心：** 見よ、兄弟姉妹が共に住むことは、なんと善く、なんと美しいことでしょう。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese scripture meditation hymn of fellowship, upright piano, soft woodwinds, viola, cello, attentive stillness, warm communal tenderness, clear peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese scripture meditation hymn of fellowship, upright piano, soft woodwinds, viola, cello, attentive stillness, warm communal tenderness, clear peaceful morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano, gentle two-part harmony in final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -8931,6 +9074,7 @@
 [Outro]
 共に集うことは 善く美しい
 その恵みを味わい続ける
+アーメン
 
 [End]
 ```
@@ -8941,7 +9085,7 @@
 
 - **黙想の核心：** 「この民は、口では私を敬うが、その心は私から遠く離れている。」
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Still Japanese meditative hymn of true worship, upright piano, light organ, soft woodwinds, cello, uncluttered lyrics-forward arrangement, humble inward calm, quiet sincere joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Still Japanese meditative hymn of true worship, upright piano, light organ, soft woodwinds, cello, uncluttered lyrics-forward arrangement, humble inward calm, quiet sincere joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Thoughtful mature mezzo-soprano, soft two-part harmony on final refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -8991,6 +9135,7 @@
 [Outro]
 霊と真理をもって
 今日も御前に立ちます
+アーメン
 
 [End]
 ```
@@ -9001,7 +9146,7 @@
 
 - **黙想の核心：** 年を重ねた者には知恵があり、長く生きた者には分別があります。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Warmhearted Japanese Christian hymn of generations, piano, acoustic guitar, warm strings, brushed snare, gentle walking pulse, honoring grateful warmth, softly joyful spirit, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Warmhearted Japanese Christian hymn of generations, piano, acoustic guitar, warm strings, brushed snare, gentle walking pulse, honoring grateful warmth, softly joyful spirit, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone lead, small senior mixed choir, clear Japanese diction, comfortable mid-range, gentle and warm, respectful storytelling tone, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -9051,6 +9196,7 @@
 [Outro: unison]
 白髪は 栄光の冠
 その冠を 感謝します
+アーメン
 
 [End]
 ```
@@ -9060,7 +9206,7 @@
 
 - **黙想の核心：** 旅人をもてなすことを忘れてはなりません。そうすることで、気づかないまま天使たちをもてなした人もいたからです。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, cello, soft woodwinds, attentive welcoming stillness, warm open-hearted morning peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, viola, cello, soft woodwinds, attentive welcoming stillness, warm open-hearted morning peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, small mixed choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony] [Outro]
 
@@ -9110,6 +9256,7 @@
 [Outro]
 開かれた扉の そのかたわらで
 温かな声に なれますように
+アーメン
 
 [End]
 ```
@@ -9120,7 +9267,7 @@
 
 - **黙想の核心：** 信徒たちは、使徒たちの教えを守り、交わり、パンを裂き、祈ることに心を合わせていました。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of calling and service, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, hopeful grateful fellowship, calm quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of calling and service, piano, acoustic guitar, brushed snare, warm strings, gentle walking pulse, hopeful grateful fellowship, calm quiet joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried storytelling verses, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -9170,6 +9317,7 @@
 [Outro: unison]
 二人また三人 集まるところに
 主は今日も 共におられます
+アーメン
 
 [End]
 ```
@@ -9180,7 +9328,7 @@
 
 - **黙想の核心：** 「見よ、私は戸口に立って、たたいている。私の声を聞いて戸を開く人がいるなら、私はその人のもとへ入り、その人と共に食事をし、その人も私と共に食事をする。」
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Japanese Christian acoustic morning meditation song, nylon-string guitar, soft piano, cello, gentle flute, spacious and unhurried, quiet grace at the shared table, warm restful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Japanese Christian acoustic morning meditation song, nylon-string guitar, soft piano, cello, gentle flute, spacious and unhurried, quiet grace at the shared table, warm restful joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone-alto duet, alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed unison refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -9230,6 +9378,7 @@
 [Outro: piano and cello]
 戸を開きます 主よ来てください
 今日の食卓も あなたと共に
+アーメン
 
 [End]
 ```
@@ -9240,7 +9389,7 @@
 
 - **黙想の核心：** それぞれが受けた賜物を用い、神のさまざまな恵みを任された、善い管理者として、互いに仕えなさい。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Gentle Japanese worship song of humble service, piano, acoustic guitar, brushed snare, warm strings, softly walking rhythm, quiet sense of purpose, bright thankful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Gentle Japanese worship song of humble service, piano, acoustic guitar, brushed snare, warm strings, softly walking rhythm, quiet sense of purpose, bright thankful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone lead with small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, dignified steady phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -9290,6 +9439,7 @@
 [Outro: unison]
 仕えるために 来られた主に
 今日も倣って 歩んでゆきます
+アーメン
 
 [End]
 ```
@@ -9300,7 +9450,7 @@
 
 - **黙想の核心：** 若者は、どのようにして歩みを清く保つことができるでしょうか。あなたのみことばを守ることによってです。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian morning hymn of intercession, piano, acoustic guitar, light bass, warm strings, gently moving pulse, hopeful prayerful warmth, calm forward-looking joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian morning hymn of intercession, piano, acoustic guitar, light bass, warm strings, gently moving pulse, hopeful prayerful warmth, calm forward-looking joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm grounded baritone, small senior mixed choir on refrains, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -9350,6 +9500,7 @@
 [Outro: unison]
 後の世代へ 語り伝えます
 主の恵みは 世々に続くと
+アーメン
 
 [End]
 ```
@@ -9360,7 +9511,7 @@
 
 - **黙想の核心：** できる限り、あなたがたの側から、すべての人と平和に暮らしなさい。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian hymn of repentance and renewal in gentle 6/8, felt piano, solo cello, quiet strings, honest reflection opening into grace, peaceful reconciled morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian hymn of repentance and renewal in gentle 6/8, felt piano, solo cello, quiet strings, honest reflection opening into grace, peaceful reconciled morning light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful sincere phrasing, soft alto support in final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Chorus] [Interlude: quiet strings] [Bridge] [Outro: alto support]
 
@@ -9410,6 +9561,7 @@
 [Outro: alto support]
 平和のきずなに 結ばれて
 教会が愛の 場所となりますように
+アーメン
 
 [End]
 ```
@@ -9420,7 +9572,7 @@
 
 - **黙想の核心：** 「互いに愛し合いなさい。私があなたがたを愛したように、あなたがたも互いに愛し合いなさい。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Warm Japanese praise song of shared love, piano, acoustic guitar, brushed snare, warm strings, easy walking tempo, tender communal warmth, calm yet joyful gratitude, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Warm Japanese praise song of shared love, piano, acoustic guitar, brushed snare, warm strings, easy walking tempo, tender communal warmth, calm yet joyful gratitude, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone lead joined by small senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, conversational heartfelt verses, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -9470,6 +9622,7 @@
 [Outro: unison]
 私があなたを 愛したように
 互いに愛し合う 者としてください
+アーメン
 
 [End]
 ```
@@ -9480,7 +9633,7 @@
 
 - **黙想の核心：** 集まることをやめる人たちに倣わず、互いに励まし合い、その日が近づいているのを見るほど、ますますそうしなさい。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian congregational morning hymn, piano, acoustic guitar, light bass, warm strings, steady gentle pulse, family-like encouraging warmth, quietly joyful togetherness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian congregational morning hymn, piano, acoustic guitar, light bass, warm strings, steady gentle pulse, family-like encouraging warmth, quietly joyful togetherness, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded warm baritone with senior mixed choir, clear Japanese diction, comfortable mid-range, gentle and warm, unified final unison, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Chorus: small choir] [Short Interlude] [Bridge] [Outro: unison]
 
@@ -9530,6 +9683,7 @@
 [Outro: unison]
 私たちは 神の家族です
 さらに集い さらに愛します
+アーメン
 
 [End]
 ```
@@ -9540,7 +9694,7 @@
 
 - **黙想の核心：** 夕べにも、朝にも、真昼にも、私は嘆き、うめきます。主は、私の声を聞いてくださいます。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Quiet Japanese acoustic devotional song, nylon-string guitar, soft piano, cello, brief flute, open airy space, faithful daily-prayer calm, gentle steadfast peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Quiet Japanese acoustic devotional song, nylon-string guitar, soft piano, cello, brief flute, open airy space, faithful daily-prayer calm, gentle steadfast peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone and mature alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried laid-back phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -9590,6 +9744,7 @@
 [Outro: piano and cello]
 以前からしていた ように明日も
 この祈りの場所を 開き続けます
+アーメン
 
 [End]
 ```
@@ -9600,7 +9755,7 @@
 
 - **黙想の核心：** 神は、この四人の若者へ、あらゆる文書と知恵を理解する知識と洞察を与えられました。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Reflective Japanese scripture hymn, upright piano, viola, cello, soft woodwinds, lyrics-forward clarity, attentive gentle resolve, serene bright morning peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Reflective Japanese scripture hymn, upright piano, viola, cello, soft woodwinds, lyrics-forward clarity, attentive gentle resolve, serene bright morning peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Calm mature mezzo-soprano, clear Japanese diction, comfortable mid-range, gentle and warm, smooth legato with light two-part final harmony, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
@@ -9652,6 +9807,7 @@
 今日一日を 主にささげると
 その決心の上に 神は注がれる
 あふれる知恵と 深い平安を
+アーメン
 
 [End]
 ```
@@ -9662,7 +9818,7 @@
 
 - **黙想の核心：** 主は、約束されたとおりサラを顧み、語られたとおりサラのために行われました。
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Gentle Japanese hymn of scripture and promise, upright piano, viola, cello, soft woodwind responses, quiet trusting stillness, warm hopeful major-key glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Gentle Japanese hymn of scripture and promise, upright piano, viola, cello, soft woodwind responses, quiet trusting stillness, warm hopeful major-key glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, natural breathing, small choir joining the final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Chorus] [Interlude: woodwind] [Bridge] [Final Chorus: gentle two-part harmony]
 
@@ -9714,6 +9870,7 @@
 語られたとおり 成し遂げられる
 白髪の日々にも 望みは芽生え
 諦めた夢へ もう一度歩き出す
+アーメン
 
 [End]
 ```
@@ -9724,7 +9881,7 @@
 
 - **黙想の核心：** 「私は、この子のために祈りました。主は、私が願い求めたものを与えてくださいました。」
 - **適用カテゴリ：** 祈り・信頼・献身
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, gentle cello, unhurried lyrics-forward stillness, humble surrendered warmth, quiet hopeful peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian morning prayer hymn, soft piano, sustained organ, nylon-string guitar, gentle cello, unhurried lyrics-forward stillness, humble surrendered warmth, quiet hopeful peace, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone and alto in gentle unison, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful rounded phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Senior Mixed Unison] / [Intro: piano and soft organ] [Verse] [Chorus] [Short Interlude] [Bridge] [Outro: amen cadence]
 
@@ -9774,6 +9931,7 @@
 [Outro: amen cadence]
 主よ 私を 忘れないでください
 あなたは聞いてくださる お方です アーメン
+アーメン
 
 [End]
 ```
@@ -9784,7 +9942,7 @@
 
 - **黙想の核心：** 「主が、あなたの行いに報いてくださいますように。イスラエルの神、主の翼の下へ避け所を求めて来たあなたへ、豊かな報いがありますように。」
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Tender Japanese acoustic meditation song, nylon-string guitar, soft piano, cello, gentle flute, spacious quiet phrasing, companionship and gentle gratitude, softly glowing warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Tender Japanese acoustic meditation song, nylon-string guitar, soft piano, cello, gentle flute, spacious quiet phrasing, companionship and gentle gratitude, softly glowing warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone and mature alto duet, alternating verses, clear Japanese diction, comfortable mid-range, gentle and warm, relaxed easy timing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -9834,6 +9992,7 @@
 [Outro: piano and cello]
 主の翼の下に 身を寄せながら
 共に歩む人と 今日も感謝して
+アーメン
 
 [End]
 ```
@@ -9844,7 +10003,7 @@
 
 - **黙想の核心：** あなたの庭で過ごす一日は、ほかの場所で過ごす千日にもまさります。悪の天幕に住むより、私の神の家の門口に立つことを選びます。
 - **適用カテゴリ：** 日常・自然・安息
-- **Sunoスタイル：** slow steady 64 BPM, Peaceful Japanese acoustic worship meditation, nylon-string guitar, soft piano, cello, brief gentle flute, restful open silence, lifelong devotion in quiet worship, calm radiant morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 72 BPM, Peaceful Japanese acoustic worship meditation, nylon-string guitar, soft piano, cello, brief gentle flute, restful open silence, lifelong devotion in quiet worship, calm radiant morning joy, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Low warm baritone with mature alto duet, clear Japanese diction, comfortable mid-range, gentle and warm, soft unadorned unison refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Baritone and Alto Duet] / [Intro: nylon guitar] [Verse] [Chorus: unison] [Interlude: flute] [Bridge] [Outro: piano and cello]
 
@@ -9894,6 +10053,7 @@
 [Outro: piano and cello]
 受けた恵みを 分かち合いながら
 生涯の礼拝を ささげ続けます
+アーメン
 
 [End]
 ```
@@ -9903,7 +10063,7 @@
 
 - **黙想の核心：** 「この救いは、すべての民の前に備えられたもの。異邦人を照らす光、あなたの民イスラエルの栄光です。」
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian meditative hymn, intimate piano, soft strings, gentle French horn, quiet and hopeful, serene peace after long waiting, spacious and warm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian meditative hymn, intimate piano, soft strings, gentle French horn, quiet and hopeful, serene peace after long waiting, spacious and warm, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, choir on final refrain only, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -9953,6 +10113,7 @@
 [Outro: strings fade]
 あなたの救いを 見ました
 みことばのとおり 平安のうちに
+アーメン
 
 [End]
 ```
@@ -9963,7 +10124,7 @@
 
 - **黙想の核心：** 競技場で走る人は皆走りますが、賞を受けるのは一人だけです。あなたがたも賞を得るように走りなさい。
 - **参考マッチ曲：** Simon & Garfunkel - Bridge over Troubled Water
-- **Sunoスタイル：** slow steady 72 BPM, Japanese gentle worship ballad, solo piano, warm strings, soft French horn, steady and encouraging, quiet perseverance glowing with hopeful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese gentle worship ballad, solo piano, warm strings, soft French horn, steady and encouraging, quiet perseverance glowing with hopeful warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, steady unhurried phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Vocal] / [Intro: solo piano] [Verse] [Chorus] [Instrumental Interlude] [Verse] [Bridge] [Final Verse: orchestral and gospel climax] [Chorus] [Outro: sustained resolution]
 
@@ -10015,6 +10176,7 @@
 [Outro: sustained resolution]
 目標を目指して 走ります
 最後まで あなたと共に
+アーメン
 
 [End]
 ```
@@ -10025,7 +10187,7 @@
 
 - **黙想の核心：** 私を強くしてくださるお方によって、私はどのようなことにも向き合うことができます。
 - **参考マッチ曲：** Simon & Garfunkel - The Sound of Silence
-- **Sunoスタイル：** slow steady 65 BPM, Japanese quiet praise song, fingerpicked acoustic guitar, felt piano, warm cello, calm and contented, tender stillness of learned contentment, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese quiet praise song, fingerpicked acoustic guitar, felt piano, warm cello, calm and contented, tender stillness of learned contentment, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male duet in close harmony, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Male Duet] / [Intro: fingerpicked acoustic guitar] [Verse] [Chorus] [Verse: close harmony] [Instrumental Interlude] [Bridge] [Final Verse] [Chorus] [Outro: acoustic fade]
 
@@ -10077,6 +10239,7 @@
 [Outro: acoustic fade]
 満ち足りることを 学びました
 主が今日も 強めてくださる
+アーメン
 
 [End]
 ```
@@ -10087,7 +10250,7 @@
 
 - **黙想の核心：** 私はすでに、注ぎの供え物としてささげられようとしています。世を去る時が近づきました。私は善い戦いを戦い、走るべき道のりを走り終え、信仰を守り通しました。
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese gentle praise song, piano, acoustic guitar, brushed snare, warm strings, calm purposeful walking pulse, hopeful grateful warmth of a life devoted, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese gentle praise song, piano, acoustic guitar, brushed snare, warm strings, calm purposeful walking pulse, hopeful grateful warmth of a life devoted, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature male baritone with small senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -10138,6 +10301,7 @@
 [Outro: unison]
 使命を果たすために
 今日も自分を ささげます
+アーメン
 
 [End]
 ```
@@ -10148,7 +10312,7 @@
 
 - **黙想の核心：** 「私の小羊を養いなさい。私の羊を世話しなさい。私の羊を養いなさい。」
 - **適用カテゴリ：** みことば・真理・成長
-- **Sunoスタイル：** slow steady 67 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, mellow cello, still and attentive, warm restoring tenderness by the shore, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 75 BPM, Japanese Christian scripture meditation hymn, upright piano, soft woodwinds, mellow cello, still and attentive, warm restoring tenderness by the shore, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano lead, clear Japanese diction, comfortable mid-range, gentle and warm, soft two-part harmony at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Mezzo-Soprano] / [Intro: upright piano] [Verse] [Verse] [Chorus] [Interlude: woodwind] [Verse] [Bridge] [Final Chorus: gentle two-part harmony]
 
@@ -10196,6 +10360,7 @@
 完全でなくても かまわない
 一言の慰め 一度のほほえみ
 それが誰かを 養うパンとなる
+アーメン
 
 [End]
 ```
@@ -10206,7 +10371,7 @@
 
 - **黙想の核心：** 信仰の創始者であり、完成者であるイエスを見つめましょう。イエスは、ご自分の前にある喜びのために、十字架を耐えられました。
 - **適用カテゴリ：** 悔い改め・十字架・回復
-- **Sunoスタイル：** slow steady 61 BPM, Japanese Christian reflective hymn, gentle 6/8 sway, felt piano, solo cello, quiet strings, honest and prayerful, grace easing into peaceful light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 69 BPM, Japanese Christian reflective hymn, gentle 6/8 sway, felt piano, solo cello, quiet strings, honest and prayerful, grace easing into peaceful light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm mature male baritone, clear Japanese diction, comfortable mid-range, gentle and warm, soft alto support at the close, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Warm Mature Male Baritone] / [Intro: felt piano and cello] [Verse] [Verse] [Chorus] [Interlude: quiet strings] [Verse] [Bridge] [Final Chorus] [Outro: alto support]
 
@@ -10256,6 +10421,7 @@
 [Outro: alto support]
 目はイエスへ 足は今日の一歩へ
 多くの証人に 囲まれて
+アーメン
 
 [End]
 ```
@@ -10266,7 +10432,7 @@
 
 - **黙想の核心：** 「主であり、師である私が、あなたがたの足を洗ったのだから、あなたがたも互いに足を洗い合うべきです。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian hymn of humble service, piano, acoustic guitar, light bass, brushed snare, tender and devoted, quiet servant-hearted warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian hymn of humble service, piano, acoustic guitar, light bass, brushed snare, tender and devoted, quiet servant-hearted warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone with gentle senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, unhurried storytelling, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -10317,6 +10483,7 @@
 [Outro: unison]
 生涯 歩き続けたこの足を
 主が洗ってくださいます
+アーメン
 
 [End]
 ```
@@ -10327,7 +10494,7 @@
 
 - **黙想の核心：** 「この最も小さい者の一人にしたことは、私にしてくれたことなのである。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese gentle worship song, piano, acoustic guitar, warm strings, brushed snare, humble and kind, softly glowing everyday gratitude, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese gentle worship song, piano, acoustic guitar, warm strings, brushed snare, humble and kind, softly glowing everyday gratitude, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm baritone lead, small senior choir on refrains, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -10377,6 +10544,7 @@
 [Outro: unison]
 人の称賛ではなく
 主のほほえみを 求めて
+アーメン
 
 [End]
 ```
@@ -10387,7 +10555,7 @@
 
 - **黙想の核心：** 「私と私の家は、主に仕えます。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian family blessing hymn, acoustic guitar, piano, light bass, warm strings, homely and tender, gentle thankful warmth around the table, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian family blessing hymn, acoustic guitar, piano, light bass, warm strings, homely and tender, gentle thankful warmth around the table, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Grounded mature baritone, small mixed senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -10437,6 +10605,7 @@
 [Outro: unison]
 私と私の家は
 とこしえまでも 主に仕えます
+アーメン
 
 [End]
 ```
@@ -10447,7 +10616,7 @@
 
 - **黙想の核心：** 「羊を百匹もっている人が、その一匹を見失ったなら、九十九匹を野原へ残し、見つけるまで、その失われた一匹を捜し歩かないだろうか。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese quiet praise hymn, piano, acoustic guitar, brushed snare, soft strings, caring and steadfast, patient shepherd-like warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese quiet praise hymn, piano, acoustic guitar, brushed snare, soft strings, caring and steadfast, patient shepherd-like warmth, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature male baritone, warm senior choir refrain, clear Japanese diction, comfortable mid-range, gentle and warm, steady breath, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -10497,6 +10666,7 @@
 [Outro: unison]
 心に浮かぶ その一人へ
 今日も愛を 届けます
+アーメン
 
 [End]
 ```
@@ -10507,7 +10677,7 @@
 
 - **黙想の核心：** 「彼は、いつもあなたがたのために、祈りの中で力を尽くしています。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese Christian prayer hymn, piano, acoustic guitar, warm strings, light bass, devoted and still, humble kneeling reverence with quiet hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese Christian prayer hymn, piano, acoustic guitar, warm strings, light bass, devoted and still, humble kneeling reverence with quiet hope, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Warm grounded baritone with soft senior choir, clear Japanese diction, comfortable mid-range, gentle and warm, prayerful pacing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -10557,6 +10727,7 @@
 [Outro: unison]
 与えられた この時間を
 今日もひざで ささげます
+アーメン
 
 [End]
 ```
@@ -10567,7 +10738,7 @@
 
 - **黙想の核心：** 「最後まで耐え忍ぶ人は救われる。」
 - **適用カテゴリ：** 共同体・奉仕・使命
-- **Sunoスタイル：** slow steady 80 BPM, Japanese gentle hymn of perseverance, piano, acoustic guitar, brushed snare, warm strings, steadfast and calm, enduring faithful warmth step by step, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 88 BPM, Japanese gentle hymn of perseverance, piano, acoustic guitar, brushed snare, warm strings, steadfast and calm, enduring faithful warmth step by step, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature baritone lead, small senior choir in unison close, clear Japanese diction, comfortable mid-range, gentle and warm, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Male Baritone with Senior Choir] / [Intro: piano and acoustic guitar] [Verse] [Verse] [Chorus: small choir] [Short Interlude] [Verse] [Bridge] [Final Chorus] [Outro: unison]
 
@@ -10617,6 +10788,7 @@
 [Outro: unison]
 握ってくださったのは 主
 その恵みに 感謝します
+アーメン
 
 [End]
 ```
@@ -10627,7 +10799,7 @@
 
 - **黙想の核心：** 愛する兄弟姉妹よ。堅く立ち、揺らぐことなく、いつも主の働きに励みなさい。主にあって行う労苦は、決してむだにはなりません。
 - **適用カテゴリ：** 希望・復活・永遠
-- **Sunoスタイル：** slow steady 72 BPM, Japanese Christian hymn of hope, warm piano, tender French horn, soft strings, bright and assured, peaceful everlasting morning glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 80 BPM, Japanese Christian hymn of hope, warm piano, tender French horn, soft strings, bright and assured, peaceful everlasting morning glow, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature mezzo-soprano or warm baritone, clear Japanese diction, comfortable mid-range, gentle and warm, small choir on final refrain, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Lead Vocal with Small Mixed Choir] / [Intro: piano] [Verse] [Verse] [Chorus] [Interlude: soft horn] [Verse] [Bridge] [Final Chorus] [Outro: strings fade]
 
@@ -10678,6 +10850,7 @@
 [Outro: strings fade]
 労苦は むだにならない
 最後まで 主と共に
+アーメン
 
 [End]
 ```
@@ -10688,7 +10861,7 @@
 
 - **黙想の核心：** 「主よ、今こそ、あなたはみことばのとおり、この僕を平安のうちに去らせてくださいます。私の目が、あなたの救いを見たからです。」
 - **適用カテゴリ：** 慰め・平安
-- **Sunoスタイル：** slow steady 65 BPM, Japanese Christian farewell meditation hymn, felt piano, solo cello, subtle pipe organ, serene and consoling, deep restful peace like evening light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
+- **Sunoスタイル：** gently flowing 73 BPM, Japanese Christian farewell meditation hymn, felt piano, solo cello, subtle pipe organ, serene and consoling, deep restful peace like evening light, gentle emotional build, warm tender climax in the final chorus, no high notes, no shouting, senior-friendly
 - **ボーカル・歌唱法：** Mature female alto, clear Japanese diction, comfortable mid-range, gentle and warm, calm compassionate phrasing, no belting, no falsetto, soothing clear tone for seniors
 - **メタタグ構成：** [Mature Female Alto] / [Intro: felt piano] [Verse] [Verse] [Chorus] [Interlude: solo cello] [Verse] [Bridge] [Final Chorus] [Outro: quiet organ and piano]
 
@@ -10738,6 +10911,7 @@
 [Outro: quiet organ and piano]
 今日まで導いてくださった主
 その道は 永遠へと続きます
+アーメン
 
 [End]
 ```
