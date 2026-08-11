@@ -29,6 +29,121 @@ SN:          o     o   o     o
 KK:  ●           ●       ●       ●
 ```
 
+---
+
+# Part 1 — Variations that keep the 2-and-3 figure
+
+Every pattern in this group preserves the sheet's snare structure exactly:
+**2, the "a" of 2, the "e" of 3, and 4 never move.** Only the kick and
+hi-hats change, so the figure you're drilling stays constant while the
+ground shifts under it.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+SN:          o     o   o     o          <- fixed in every pattern below
+```
+
+## A1. Bare Bones Figure *(level 1)*
+
+The figure completely naked: quarter-note hats, kick on 1 and 3.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+HH:  x       x       x       x
+SN:          o     o   o     o
+KK:  ●               ●
+```
+
+## A2. Floor Four Under *(level 2)*
+
+The figure over four-on-the-floor kick — dance pulse below, syncopation on top.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+HH:  x   x   x   x   x   x   x   x
+SN:          o     o   o     o
+KK:  ●       ●       ●       ●
+```
+
+## A3. Sixteen Sheet *(level 3)*
+
+The sheet groove with 16th-note hi-hats — the syncopated snares now land
+together with hat notes.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+HH:  x x x x x x x x x x x x x x x x
+SN:          o     o   o     o
+KK:  ●           ●       ●       ●
+```
+
+## A4. Disco Sheet *(level 3)*
+
+Open hat on every "&" over the sheet's own kick line — three opens land
+exactly on kicks.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+HH:  x   O   x   O   x   O   x   O
+SN:          o     o   o     o
+KK:  ●           ●       ●       ●
+```
+
+## A5. Kick-a Bounce *(level 3)*
+
+The sheet groove plus one kick on the "a" of 1 — a pickup that tumbles
+into the snare figure.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+HH:  O   x   x   x   x   x   x   x
+SN:          o     o   o     o
+KK:  ●     ●     ●       ●       ●
+```
+
+## A6. Call and Response *(level 3)*
+
+Kick asks on 1 and the "a" of 1, then 3 and the "a" of 3; the snare figure
+answers in the gaps.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+HH:  x   x   x   x   x   x   x   x
+SN:          o     o   o     o
+KK:  ●     ●         ●     ●
+```
+
+## A7. Bark and Answer *(level 4)*
+
+Open-hat barks stacked on the two syncopated snares, choked by the very
+next closed hat.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+HH:  x   x   x   x O x O x   x   x
+SN:          o     o   o     o
+KK:  ●           ●       ●       ●
+```
+
+## A8. Ghosted Edges *(level 4)*
+
+The four structural snares stay full-volume; ghosts sneak into the "a" of 3
+and the "a" of 4.
+
+```
+     1 e & a 2 e & a 3 e & a 4 e & a
+HH:  x   x   x   x   x   x   x   x
+SN:          o     o   o   · o     ·
+KK:  ●           ●       ●       ●
+```
+
+---
+
+# Part 2 — Feel variations
+
+These trade the sheet's snare figure for other backbeats to explore
+different feels.
+
 ## 2. Money Beat *(level 1)*
 
 The foundation of every pattern here. Snare 2 and 4, kick 1 and 3.

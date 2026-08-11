@@ -186,6 +186,14 @@
   .reset-btn:hover { color: var(--ink); border-color: var(--muted); }
   .reset-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
+  /* ---------- section headings ---------- */
+  .section-head { margin: 36px 0 14px; }
+  .section-head h2 {
+    font-size: 20px; font-weight: 800; letter-spacing: -0.01em;
+    margin: 0 0 6px; text-wrap: balance;
+  }
+  .section-head p { margin: 0; color: var(--muted); font-size: 13.5px; max-width: 68ch; }
+
   /* ---------- practice plan ---------- */
   .plan { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 26px; }
   .plan h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; margin: 4px 0 14px; }
@@ -203,9 +211,10 @@
     <div class="eyebrow">Drum Practice · Groove Lab</div>
     <h1>One groove from your book, nine ways to make it dance</h1>
     <p class="lede">
-      The first card is the pattern from your sheet. Every other card keeps the same upbeat
-      8-beat feel and changes one idea — kick placement, hi-hat color, ghost notes — so you can
-      hear exactly what each ingredient does. Tap any cell to make your own variation.
+      The first card is the pattern from your sheet. The first group of variations keeps its
+      signature beat-2-and-3 snare figure — 2, the "a" of 2, the "e" of 3, and 4 — exactly in
+      place and changes only the kick and hi-hats around it. The second group loosens the
+      structure to explore different feels. Tap any cell to make your own variation.
     </p>
   </header>
 
@@ -267,6 +276,65 @@ const PATTERNS = [
     hh: "2010101010101010", sn: "0000200202002000", kk: "1000001000100010"
   },
   {
+    sec: "Keeping the 2-and-3 figure",
+    secDesc: "Every card in this group preserves the sheet's snare structure exactly — 2, the “a” of 2, the “e” of 3, and 4 never move. Only the kick and hi-hats change, so the figure you're drilling stays the same while the ground shifts under it.",
+    name: "Bare Bones Figure", badge: "2&3 kept", level: 1,
+    desc: "The snare figure completely naked: quarter-note hi-hats, kick on 1 and 3, nothing else. Learn the syncopation here before dressing it up.",
+    tip: "Count out loud — “2 … a, e … 4”. The snare does the talking; everything else just keeps time.",
+    hh: "1000100010001000", sn: "0000200202002000", kk: "1000000010000000"
+  },
+  {
+    sec: null, secDesc: null,
+    name: "Floor Four Under", badge: "2&3 kept", level: 2,
+    desc: "The full figure over a four-on-the-floor kick — a steady dance pulse below, the syncopation riding on top.",
+    tip: "The kick is your metronome. Don't let the 16th snares drag it backward.",
+    hh: "1010101010101010", sn: "0000200202002000", kk: "1000100010001000"
+  },
+  {
+    sec: null, secDesc: null,
+    name: "Sixteen Sheet", badge: "2&3 kept", level: 3,
+    desc: "The sheet groove with 16th-note hi-hats. Now the syncopated snares land together with hat notes — easier to place, harder to keep light.",
+    tip: "Hands strike together on the “a” of 2 and the “e” of 3. No flams.",
+    hh: "1111111111111111", sn: "0000200202002000", kk: "1000001000100010"
+  },
+  {
+    sec: null, secDesc: null,
+    name: "Disco Sheet", badge: "2&3 kept", level: 3,
+    desc: "Open hi-hat on every “&” over the sheet's own kick line — three of the opens land exactly on kicks, which makes the groove sparkle.",
+    tip: "Each open hat closes on the next beat. Listen for the “chick” as part of the rhythm.",
+    hh: "1020102010201020", sn: "0000200202002000", kk: "1000001000100010"
+  },
+  {
+    sec: null, secDesc: null,
+    name: "Kick-a Bounce", badge: "2&3 kept", level: 3,
+    desc: "The sheet groove plus one kick on the “a” of 1 — a quick double off beat 1 that tumbles forward into the snare figure.",
+    tip: "Keep the “a”-of-1 kick light, like a pickup note. Beat 2's snare is the landing.",
+    hh: "2010101010101010", sn: "0000200202002000", kk: "1001001000100010"
+  },
+  {
+    sec: null, secDesc: null,
+    name: "Call and Response", badge: "2&3 kept", level: 3,
+    desc: "Kick asks on 1 and the “a” of 1, then again on 3 and the “a” of 3; the snare figure answers in the gaps. A symmetric conversation.",
+    tip: "Play it as a dialogue — kick phrase, snare phrase — instead of one dense stream.",
+    hh: "1010101010101010", sn: "0000200202002000", kk: "1001000010010000"
+  },
+  {
+    sec: null, secDesc: null,
+    name: "Bark and Answer", badge: "2&3 kept", level: 4,
+    desc: "Open-hat barks stacked right on the two syncopated snares — the “a” of 2 and the “e” of 3 — so the figure's oddest notes get the loudest color.",
+    tip: "The very next closed hat chokes each bark. Short and rude is correct.",
+    hh: "1010101212101010", sn: "0000200202002000", kk: "1000001000100010"
+  },
+  {
+    sec: null, secDesc: null,
+    name: "Ghosted Edges", badge: "2&3 kept", level: 4,
+    desc: "The four structural snares stay full-volume while ghost notes sneak into the “a” of 3 and the “a” of 4, filling the figure's empty corners.",
+    tip: "If a listener can tell the ghosts from silence, they're too loud.",
+    hh: "1010101010101010", sn: "0000200202012001", kk: "1000001000100010"
+  },
+  {
+    sec: "Feel variations",
+    secDesc: "The first round of variations: these trade the sheet's snare figure for other backbeats to explore different feels — foundation grooves, disco, Motown, funk.",
     name: "Money Beat", badge: null, level: 1,
     desc: "The foundation under every pattern here: straight eighth hi-hats, snare on 2 and 4, kick on 1 and 3. Thousands of hit songs use exactly this.",
     tip: "Make every hi-hat note identical in volume — that evenness is the whole exercise.",
@@ -341,6 +409,12 @@ let openHatGain = null;
 /* ---------------- build the cards ---------------- */
 const cardsEl = document.getElementById("cards");
 PATTERNS.forEach((p, idx) => {
+  if (p.sec) {
+    const head = document.createElement("div");
+    head.className = "section-head";
+    head.innerHTML = "<h2>" + p.sec + "</h2><p>" + p.secDesc + "</p>";
+    cardsEl.appendChild(head);
+  }
   const card = document.createElement("article");
   card.className = "card" + (idx === 0 ? " selected" : "");
   card.dataset.idx = idx;
@@ -415,12 +489,15 @@ cardsEl.addEventListener("click", e => {
   if (idx !== selIdx) selectPattern(idx);
 });
 
+function cardOf(idx) {
+  return cardsEl.querySelector('.card[data-idx="' + idx + '"]');
+}
+
 function selectPattern(idx) {
   document.querySelectorAll(".card .cell.now").forEach(c => c.classList.remove("now"));
   document.querySelector(".card.selected")?.classList.remove("selected");
   selIdx = idx;
-  const card = cardsEl.children[idx];
-  card.classList.add("selected");
+  cardOf(idx).classList.add("selected");
   document.getElementById("nowName").textContent = PATTERNS[idx].name;
 }
 
@@ -528,7 +605,7 @@ function tick() {
       barCount++;
       if (document.getElementById("chain").checked && barCount % 8 === 0) {
         selectPattern((selIdx + 1) % PATTERNS.length);
-        cardsEl.children[selIdx].scrollIntoView({ block: "nearest", behavior: "smooth" });
+        cardOf(selIdx).scrollIntoView({ block: "nearest", behavior: "smooth" });
       }
     }
   }
@@ -541,7 +618,7 @@ function draw() {
     cur = drawQueue.shift().step;
   }
   if (cur >= 0) {
-    const card = cardsEl.children[selIdx];
+    const card = cardOf(selIdx);
     card.querySelectorAll(".cell.now").forEach(c => c.classList.remove("now"));
     card.querySelectorAll('.cell[data-step="' + cur + '"]').forEach(c => c.classList.add("now"));
   }
