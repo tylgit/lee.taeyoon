@@ -1,0 +1,568 @@
+<title>Groove Lab — Drum Pattern Practice</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #F1EDE4;
+    --panel: #FBF9F4;
+    --panel-2: #E9E4D7;
+    --ink: #292219;
+    --muted: #7A7062;
+    --line: #DCD5C6;
+    --hh: #2F7A6C;
+    --sn: #B87A16;
+    --kk: #BE4A2E;
+    --accent: #BE4A2E;
+    --accent-ink: #FFF7F0;
+    --now: rgba(41, 34, 25, 0.10);
+    --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #191713;
+      --panel: #211E19;
+      --panel-2: #2B2721;
+      --ink: #EFE9DC;
+      --muted: #9C927F;
+      --line: #38332A;
+      --hh: #55B5A2;
+      --sn: #E0A33C;
+      --kk: #E06A48;
+      --accent: #E06A48;
+      --accent-ink: #221410;
+      --now: rgba(239, 233, 220, 0.10);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #191713;
+    --panel: #211E19;
+    --panel-2: #2B2721;
+    --ink: #EFE9DC;
+    --muted: #9C927F;
+    --line: #38332A;
+    --hh: #55B5A2;
+    --sn: #E0A33C;
+    --kk: #E06A48;
+    --accent: #E06A48;
+    --accent-ink: #221410;
+    --now: rgba(239, 233, 220, 0.10);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header.masthead { padding: 40px 0 20px; }
+  .eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  h1 {
+    margin: 6px 0 8px; font-size: 30px; font-weight: 800;
+    letter-spacing: -0.02em; text-wrap: balance;
+  }
+  .lede { max-width: 62ch; color: var(--muted); margin: 0; }
+
+  /* ---------- transport ---------- */
+  .transport {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 18px 0 26px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  }
+  .play-btn {
+    width: 52px; height: 52px; border-radius: 50%;
+    border: none; cursor: pointer;
+    background: var(--accent); color: var(--accent-ink);
+    display: grid; place-items: center; flex: none;
+  }
+  .play-btn svg { width: 20px; height: 20px; fill: currentColor; }
+  .play-btn:focus-visible { outline: 3px solid var(--hh); outline-offset: 2px; }
+
+  .tempo-box { display: flex; align-items: center; gap: 10px; }
+  .tempo-box input[type="range"] { width: 160px; accent-color: var(--accent); }
+  .lcd {
+    font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    font-size: 20px; font-weight: 600; min-width: 3.2ch; text-align: right;
+  }
+  .lcd small { font-size: 11px; font-weight: 400; color: var(--muted); margin-left: 3px; }
+  .t-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .toggles { display: flex; gap: 18px; flex-wrap: wrap; }
+  .toggles label { display: flex; align-items: center; gap: 7px; font-size: 13px; cursor: pointer; }
+  .toggles input { accent-color: var(--accent); width: 15px; height: 15px; }
+  .now-playing { margin-left: auto; text-align: right; }
+  .now-playing .t-label { display: block; }
+  .now-playing strong { font-size: 14px; }
+
+  /* ---------- legend ---------- */
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center;
+    font-size: 13px; color: var(--muted); margin-bottom: 22px;
+  }
+  .legend .chip { display: inline-flex; align-items: center; gap: 7px; }
+  .swatch { width: 14px; height: 14px; border-radius: 4px; flex: none; }
+  .swatch.hh { background: var(--hh); }
+  .swatch.sn { background: var(--sn); }
+  .swatch.kk { background: var(--kk); }
+  .swatch.open { background: transparent; border: 3px solid var(--hh); border-radius: 50%; }
+  .swatch.ghost { background: var(--sn); opacity: 0.45; transform: scale(0.6); border-radius: 50%; }
+
+  /* ---------- pattern cards ---------- */
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px 20px;
+    margin-bottom: 18px;
+    cursor: pointer;
+  }
+  .card.selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .card-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+  .card h2 { margin: 0; font-size: 18px; font-weight: 750; letter-spacing: -0.01em; }
+  .badge {
+    font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+    background: var(--accent); color: var(--accent-ink);
+    padding: 3px 8px; border-radius: 999px;
+  }
+  .level { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: 0.1em; }
+  .card p.desc { margin: 0 0 14px; color: var(--muted); font-size: 13.5px; max-width: 70ch; }
+
+  .grid-scroll { overflow-x: auto; padding-bottom: 4px; }
+  .seq { display: grid; grid-template-columns: 34px 1fr; row-gap: 5px; min-width: 560px; }
+  .row-label {
+    font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+    color: var(--muted); align-self: center; letter-spacing: 0.08em;
+  }
+  .beats { display: flex; gap: 12px; }
+  .beat { display: flex; gap: 4px; flex: 1; }
+  .counts { display: flex; gap: 12px; }
+  .counts .beat span {
+    flex: 1; text-align: center;
+    font-family: var(--font-mono); font-size: 10px; color: var(--muted);
+  }
+  .counts .beat span.b { font-weight: 700; color: var(--ink); }
+
+  .cell {
+    flex: 1; aspect-ratio: 1 / 1.05; min-width: 24px;
+    border: 1px solid var(--line); border-radius: 5px;
+    background: var(--panel-2);
+    cursor: pointer; padding: 0;
+    display: grid; place-items: center;
+    transition: background 80ms linear;
+  }
+  .cell:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .cell.now { box-shadow: inset 0 0 0 100px var(--now); }
+  .cell .dot { width: 62%; height: 62%; border-radius: 4px; }
+
+  .lane-hh .cell[data-v="1"] .dot { background: var(--hh); }
+  .lane-hh .cell[data-v="2"] .dot { background: transparent; border: 3px solid var(--hh); border-radius: 50%; }
+  .lane-sn .cell[data-v="2"] .dot { background: var(--sn); }
+  .lane-sn .cell[data-v="1"] .dot { background: var(--sn); opacity: 0.45; width: 36%; height: 36%; border-radius: 50%; }
+  .lane-kk .cell[data-v="1"] .dot,
+  .lane-kk .cell[data-v="2"] .dot { background: var(--kk); }
+
+  .card-foot { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
+  .tip { font-size: 12.5px; color: var(--muted); font-style: italic; margin: 0; }
+  .reset-btn {
+    margin-left: auto; flex: none;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    background: none; border: 1px solid var(--line); border-radius: 6px;
+    color: var(--muted); padding: 5px 10px; cursor: pointer;
+  }
+  .reset-btn:hover { color: var(--ink); border-color: var(--muted); }
+  .reset-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* ---------- practice plan ---------- */
+  .plan { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 26px; }
+  .plan h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; margin: 4px 0 14px; }
+  .plan ol { margin: 0; padding-left: 22px; max-width: 68ch; }
+  .plan li { margin-bottom: 9px; }
+  .plan li strong { font-weight: 700; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cell { transition: none; }
+  }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="eyebrow">Drum Practice · Groove Lab</div>
+    <h1>One groove from your book, nine ways to make it dance</h1>
+    <p class="lede">
+      The first card is the pattern from your sheet. Every other card keeps the same upbeat
+      8-beat feel and changes one idea — kick placement, hi-hat color, ghost notes — so you can
+      hear exactly what each ingredient does. Tap any cell to make your own variation.
+    </p>
+  </header>
+
+  <div class="transport">
+    <button class="play-btn" id="playBtn" aria-label="Play or stop (spacebar)">
+      <svg id="iconPlay" viewBox="0 0 20 20"><path d="M4 2 L18 10 L4 18 Z"/></svg>
+      <svg id="iconStop" viewBox="0 0 20 20" style="display:none"><rect x="3" y="3" width="14" height="14" rx="2"/></svg>
+    </button>
+    <div class="tempo-box">
+      <span class="t-label">Tempo</span>
+      <input type="range" id="tempo" min="50" max="180" value="90" aria-label="Tempo in BPM">
+      <span class="lcd"><span id="bpmVal">90</span><small>BPM</small></span>
+    </div>
+    <div class="toggles">
+      <label><input type="checkbox" id="metro"> Click on quarters</label>
+      <label><input type="checkbox" id="chain"> Auto-advance every 8 bars</label>
+    </div>
+    <div class="now-playing">
+      <span class="t-label">Selected</span>
+      <strong id="nowName">The Sheet Groove</strong>
+    </div>
+  </div>
+
+  <div class="legend" aria-hidden="true">
+    <span class="chip"><span class="swatch hh"></span> closed hi-hat</span>
+    <span class="chip"><span class="swatch open"></span> open hi-hat</span>
+    <span class="chip"><span class="swatch sn"></span> snare</span>
+    <span class="chip"><span class="swatch ghost"></span> ghost snare (quiet)</span>
+    <span class="chip"><span class="swatch kk"></span> kick</span>
+  </div>
+
+  <main id="cards"></main>
+
+  <section class="plan">
+    <h2>How to practice these</h2>
+    <ol>
+      <li><strong>Start at 70&nbsp;BPM with the click on.</strong> Count "1-e-&amp;-a" out loud — the syncopated snare hits in the sheet groove live on the "a" of 2 and the "e" of 3, and counting is the fastest way to lock them in.</li>
+      <li><strong>Loop one card until four clean bars in a row feel easy,</strong> then nudge the tempo up by 5. Resist jumping to 120 early — clean and slow always wins.</li>
+      <li><strong>Isolate lanes.</strong> If a pattern fights you, play only kick + snare first, then add the hi-hat back on top.</li>
+      <li><strong>Use auto-advance as a workout.</strong> Turn on "auto-advance every 8 bars" and let the app walk you through all ten patterns without stopping — great for endurance and quick switching.</li>
+      <li><strong>Make it yours.</strong> Tap cells to move a kick or add a ghost note. Hi-hat cells cycle closed → open → off; snare cells cycle accent → ghost → off.</li>
+    </ol>
+  </section>
+</div>
+
+<script>
+"use strict";
+
+/* ---------------- pattern data ----------------
+   16 steps per bar: 1 e & a 2 e & a 3 e & a 4 e & a
+   hh: 1 = closed, 2 = open
+   sn: 2 = full hit, 1 = ghost
+   kk: 1 = kick                                        */
+const PATTERNS = [
+  {
+    name: "The Sheet Groove", badge: "From your sheet", level: 3,
+    desc: "The transcription: open hi-hat on 1, kick on 1 and every &, snare on 2 and 4 with two syncopated 16ths — the “a” of 2 and the “e” of 3.",
+    tip: "Those two 16th snares wrap around beat 3 — count “2-e-&-A, E-&” and let them bounce.",
+    hh: "2010101010101010", sn: "0000200202002000", kk: "1000001000100010"
+  },
+  {
+    name: "Money Beat", badge: null, level: 1,
+    desc: "The foundation under every pattern here: straight eighth hi-hats, snare on 2 and 4, kick on 1 and 3. Thousands of hit songs use exactly this.",
+    tip: "Make every hi-hat note identical in volume — that evenness is the whole exercise.",
+    hh: "1010101010101010", sn: "0000200000002000", kk: "1000000010000000"
+  },
+  {
+    name: "Money Beat Plus", badge: null, level: 1,
+    desc: "Same beat with one extra kick on the & of 2 — the first taste of the syncopation your sheet groove is built on.",
+    tip: "The added kick lands together with a hi-hat note, not between notes. Let them click.",
+    hh: "1010101010101010", sn: "0000200000002000", kk: "1000001010000000"
+  },
+  {
+    name: "Disco Four-on-the-Floor", badge: null, level: 2,
+    desc: "Kick on all four beats, open hi-hat on every &. Instant dance floor — the open hats are the “pea-soup” sizzle of classic disco.",
+    tip: "Close the hat exactly on the next kick. The chick of it closing is part of the groove.",
+    hh: "1020102010201020", sn: "0000200000002000", kk: "1000100010001000"
+  },
+  {
+    name: "Motown Stomp", badge: null, level: 2,
+    desc: "Snare on every single beat over four-on-the-floor kick. Huge, happy, and harder than it looks to keep perfectly even.",
+    tip: "Think tambourine, not gunshots — relaxed wrist, all four snares the same size.",
+    hh: "1010101010101010", sn: "2000200020002000", kk: "1000100010001000"
+  },
+  {
+    name: "Sixteenth Drive", badge: null, level: 3,
+    desc: "The Money Beat Plus engine with 16th-note hi-hats on top. Pop-punk and city-pop energy; alternate your hands or play one-handed for a workout.",
+    tip: "Accent the hi-hat notes that land on the beat so the 16ths don’t turn into a blur.",
+    hh: "1111111111111111", sn: "0000200000002000", kk: "1000001010000000"
+  },
+  {
+    name: "Funk Kick Pop", badge: null, level: 3,
+    desc: "Snare stays on 2 and 4 while the kick gets chatty: 1, the “a” of 1, the & of 2, 3, and the & of 4. Pure funk bounce.",
+    tip: "The “a”-of-1 kick is a quick double off beat 1 — keep it light, like a heartbeat.",
+    hh: "1010101010101010", sn: "0000200000002000", kk: "1001001010000010"
+  },
+  {
+    name: "Open-Hat Party", badge: null, level: 3,
+    desc: "Your sheet groove’s kick pattern with open hats barking on the & of 2 and the & of 4 — each one paired with a kick underneath.",
+    tip: "Open hat and kick hit as one sound. If you hear a flam, slow down 10 BPM.",
+    hh: "1010102010101020", sn: "0000200000002000", kk: "1000001000100010"
+  },
+  {
+    name: "Ghost Groove", badge: null, level: 4,
+    desc: "The sheet groove’s syncopated snares turned into whisper-quiet ghost notes, plus one more on the “a” of 4. Same skeleton, way more strut.",
+    tip: "Ghosts are felt, not heard — an inch off the head. The accents on 2 and 4 stay big.",
+    hh: "1010101010101010", sn: "0000200101002001", kk: "1000001000100010"
+  },
+  {
+    name: "Snare Build Fill", badge: null, level: 4,
+    desc: "Half a bar of groove, then a 16th-note snare build that crescendos into the next bar. Loop it and nail the seam back into beat 1.",
+    tip: "Start the build as ghosts and grow every note — the last four should be full accents.",
+    hh: "1010101000000000", sn: "0000200011112222", kk: "1000000010001000"
+  }
+];
+
+/* keep originals for per-card reset */
+const ORIGINALS = PATTERNS.map(p => ({ hh: p.hh, sn: p.sn, kk: p.kk }));
+/* parse strings to arrays */
+PATTERNS.forEach(p => { ["hh","sn","kk"].forEach(l => { p[l] = p[l].split("").map(Number); }); });
+
+const COUNTS = ["1","e","&","a","2","e","&","a","3","e","&","a","4","e","&","a"];
+const LANES = [["hh","HH"],["sn","SN"],["kk","KK"]];
+
+let selIdx = 0;
+let bpm = 90;
+let playing = false;
+let audio = null, master = null;
+let nextTime = 0, step = 0, barCount = 0, timerId = null;
+let drawQueue = [];
+let openHatGain = null;
+
+/* ---------------- build the cards ---------------- */
+const cardsEl = document.getElementById("cards");
+PATTERNS.forEach((p, idx) => {
+  const card = document.createElement("article");
+  card.className = "card" + (idx === 0 ? " selected" : "");
+  card.dataset.idx = idx;
+
+  const dots = "●".repeat(p.level) + "○".repeat(4 - p.level);
+  let html = '<div class="card-head"><h2>' + p.name + '</h2>';
+  if (p.badge) html += '<span class="badge">' + p.badge + '</span>';
+  html += '<span class="level" title="Difficulty ' + p.level + ' of 4">' + dots + '</span></div>';
+  html += '<p class="desc">' + p.desc + '</p>';
+  html += '<div class="grid-scroll"><div class="seq">';
+
+  html += '<span class="row-label" aria-hidden="true"></span><div class="counts">';
+  for (let b = 0; b < 4; b++) {
+    html += '<div class="beat">';
+    for (let s = 0; s < 4; s++) {
+      const i = b * 4 + s;
+      html += '<span class="' + (s === 0 ? "b" : "") + '">' + COUNTS[i] + '</span>';
+    }
+    html += '</div>';
+  }
+  html += '</div>';
+
+  LANES.forEach(([lane, label]) => {
+    html += '<span class="row-label">' + label + '</span><div class="beats lane-' + lane + '">';
+    for (let b = 0; b < 4; b++) {
+      html += '<div class="beat">';
+      for (let s = 0; s < 4; s++) {
+        const i = b * 4 + s;
+        html += '<button class="cell" data-lane="' + lane + '" data-step="' + i +
+          '" data-v="' + p[lane][i] + '" aria-label="' + label + ' step ' + (i + 1) +
+          '"><span class="dot"></span></button>';
+      }
+      html += '</div>';
+    }
+    html += '</div>';
+  });
+
+  html += '</div></div>';
+  html += '<div class="card-foot"><p class="tip">' + p.tip + '</p>' +
+    '<button class="reset-btn">Reset</button></div>';
+  card.innerHTML = html;
+  cardsEl.appendChild(card);
+});
+
+/* ---------------- interaction ---------------- */
+cardsEl.addEventListener("click", e => {
+  const card = e.target.closest(".card");
+  if (!card) return;
+  const idx = Number(card.dataset.idx);
+
+  const cell = e.target.closest(".cell");
+  if (cell) {
+    const lane = cell.dataset.lane, s = Number(cell.dataset.step);
+    let v = PATTERNS[idx][lane][s];
+    if (lane === "kk")      v = v ? 0 : 1;            // off <-> hit
+    else if (lane === "hh") v = (v + 1) % 3;          // off -> closed -> open
+    else                    v = v === 0 ? 2 : v === 2 ? 1 : 0; // off -> hit -> ghost
+    PATTERNS[idx][lane][s] = v;
+    cell.dataset.v = v;
+  }
+
+  const resetBtn = e.target.closest(".reset-btn");
+  if (resetBtn) {
+    ["hh","sn","kk"].forEach(l => {
+      PATTERNS[idx][l] = ORIGINALS[idx][l].split("").map(Number);
+    });
+    card.querySelectorAll(".cell").forEach(c => {
+      c.dataset.v = PATTERNS[idx][c.dataset.lane][Number(c.dataset.step)];
+    });
+  }
+
+  if (idx !== selIdx) selectPattern(idx);
+});
+
+function selectPattern(idx) {
+  document.querySelectorAll(".card .cell.now").forEach(c => c.classList.remove("now"));
+  document.querySelector(".card.selected")?.classList.remove("selected");
+  selIdx = idx;
+  const card = cardsEl.children[idx];
+  card.classList.add("selected");
+  document.getElementById("nowName").textContent = PATTERNS[idx].name;
+}
+
+const tempoEl = document.getElementById("tempo");
+tempoEl.addEventListener("input", () => {
+  bpm = Number(tempoEl.value);
+  document.getElementById("bpmVal").textContent = bpm;
+});
+
+document.getElementById("playBtn").addEventListener("click", togglePlay);
+document.addEventListener("keydown", e => {
+  if (e.code === "Space" && !e.target.closest("input")) { e.preventDefault(); togglePlay(); }
+});
+
+/* ---------------- audio engine ---------------- */
+function ensureAudio() {
+  if (audio) return;
+  audio = new (window.AudioContext || window.webkitAudioContext)();
+  const comp = audio.createDynamicsCompressor();
+  comp.threshold.value = -12; comp.ratio.value = 4;
+  master = audio.createGain();
+  master.gain.value = 0.9;
+  master.connect(comp).connect(audio.destination);
+}
+
+function noiseBuffer() {
+  const len = audio.sampleRate * 0.5;
+  const buf = audio.createBuffer(1, len, audio.sampleRate);
+  const d = buf.getChannelData(0);
+  for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+  return buf;
+}
+let _noise = null;
+function playNoise(t, { hp = 6000, decay = 0.05, gain = 0.3, bp = 0 }) {
+  if (!_noise) _noise = noiseBuffer();
+  const src = audio.createBufferSource(); src.buffer = _noise;
+  let node = src;
+  if (bp) { const f = audio.createBiquadFilter(); f.type = "bandpass"; f.frequency.value = bp; f.Q.value = 0.8; node.connect(f); node = f; }
+  if (hp) { const f = audio.createBiquadFilter(); f.type = "highpass"; f.frequency.value = hp; node.connect(f); node = f; }
+  const g = audio.createGain();
+  g.gain.setValueAtTime(gain, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + decay);
+  node.connect(g).connect(master);
+  src.start(t); src.stop(t + decay + 0.05);
+  return g;
+}
+
+function playKick(t) {
+  const o = audio.createOscillator(), g = audio.createGain();
+  o.type = "sine";
+  o.frequency.setValueAtTime(150, t);
+  o.frequency.exponentialRampToValueAtTime(45, t + 0.12);
+  g.gain.setValueAtTime(0.9, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + 0.28);
+  o.connect(g).connect(master);
+  o.start(t); o.stop(t + 0.3);
+  playNoise(t, { hp: 0, bp: 900, decay: 0.02, gain: 0.25 }); // beater click
+}
+
+function playSnare(t, ghost) {
+  const amp = ghost ? 0.22 : 1;
+  playNoise(t, { hp: 1500, decay: ghost ? 0.08 : 0.16, gain: 0.4 * amp });
+  const o = audio.createOscillator(), g = audio.createGain();
+  o.type = "triangle"; o.frequency.setValueAtTime(190, t);
+  g.gain.setValueAtTime(0.4 * amp, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + 0.08);
+  o.connect(g).connect(master);
+  o.start(t); o.stop(t + 0.1);
+}
+
+function chokeOpenHat(t) {
+  if (openHatGain) { openHatGain.gain.cancelScheduledValues(t); openHatGain.gain.setTargetAtTime(0.001, t, 0.008); openHatGain = null; }
+}
+function playHat(t, open) {
+  chokeOpenHat(t);
+  const g = playNoise(t, { hp: 7500, decay: open ? 0.35 : 0.05, gain: open ? 0.25 : 0.3 });
+  if (open) openHatGain = g;
+}
+
+function playClick(t, downbeat) {
+  const o = audio.createOscillator(), g = audio.createGain();
+  o.type = "square"; o.frequency.value = downbeat ? 1600 : 1100;
+  g.gain.setValueAtTime(0.12, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + 0.03);
+  o.connect(g).connect(master);
+  o.start(t); o.stop(t + 0.04);
+}
+
+/* ---------------- scheduler ---------------- */
+function scheduleStep(s, t) {
+  const p = PATTERNS[selIdx];
+  if (p.kk[s]) playKick(t);
+  if (p.sn[s]) playSnare(t, p.sn[s] === 1);
+  if (p.hh[s]) playHat(t, p.hh[s] === 2);
+  if (s % 4 === 0 && document.getElementById("metro").checked) playClick(t, s === 0);
+  drawQueue.push({ step: s, time: t });
+}
+
+function tick() {
+  while (nextTime < audio.currentTime + 0.12) {
+    scheduleStep(step, nextTime);
+    nextTime += 60 / bpm / 4;
+    step = (step + 1) % 16;
+    if (step === 0) {
+      barCount++;
+      if (document.getElementById("chain").checked && barCount % 8 === 0) {
+        selectPattern((selIdx + 1) % PATTERNS.length);
+        cardsEl.children[selIdx].scrollIntoView({ block: "nearest", behavior: "smooth" });
+      }
+    }
+  }
+}
+
+function draw() {
+  if (!playing) return;
+  let cur = -1;
+  while (drawQueue.length && drawQueue[0].time <= audio.currentTime) {
+    cur = drawQueue.shift().step;
+  }
+  if (cur >= 0) {
+    const card = cardsEl.children[selIdx];
+    card.querySelectorAll(".cell.now").forEach(c => c.classList.remove("now"));
+    card.querySelectorAll('.cell[data-step="' + cur + '"]').forEach(c => c.classList.add("now"));
+  }
+  requestAnimationFrame(draw);
+}
+
+function togglePlay() {
+  ensureAudio();
+  if (audio.state === "suspended") audio.resume();
+  playing = !playing;
+  document.getElementById("iconPlay").style.display = playing ? "none" : "";
+  document.getElementById("iconStop").style.display = playing ? "" : "none";
+  if (playing) {
+    step = 0; barCount = 0; drawQueue = [];
+    nextTime = audio.currentTime + 0.06;
+    timerId = setInterval(tick, 25);
+    requestAnimationFrame(draw);
+  } else {
+    clearInterval(timerId);
+    chokeOpenHat(audio.currentTime);
+    document.querySelectorAll(".cell.now").forEach(c => c.classList.remove("now"));
+  }
+}
+</script>
