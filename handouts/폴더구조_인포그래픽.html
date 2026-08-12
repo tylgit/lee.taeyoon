@@ -1,0 +1,179 @@
+<meta charset="utf-8">
+<title>자서전 폴더 구조</title>
+<style>
+  @page { size: 900px 2070px; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 900px; margin: 0 auto;
+    font-family: "NanumGothic", "Nanum Gothic", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif;
+    background: #f6f1e4; color: #22303c;
+  }
+  .wrap { padding: 44px 46px 40px; }
+
+  .hero { text-align: center; margin-bottom: 30px; }
+  .hero .kicker { font-size: 15px; letter-spacing: 0.25em; color: #8a7a52; margin-bottom: 10px; }
+  .hero h1 { font-size: 40px; color: #1a3a5c; line-height: 1.25; }
+  .hero .sub { margin-top: 12px; font-size: 19px; color: #5a5346; }
+  .hero .sub b { color: #7a3b12; }
+
+  .legend { display: flex; gap: 12px; justify-content: center; margin-bottom: 26px; }
+  .legend span { font-size: 15.5px; padding: 7px 14px; border-radius: 999px; border: 2px solid; background: #fff; }
+  .lg-tool  { color: #1a3a5c; border-color: #1a3a5c; }
+  .lg-story { color: #8a5a00; border-color: #c9971c; background: #fff8e6 !important; }
+  .lg-book  { color: #1e6b40; border-color: #2e8b57; background: #eefaf2 !important; }
+
+  .root {
+    background: #fffdf8; border: 3px solid #6b5b3e; border-radius: 18px;
+    padding: 22px 24px; box-shadow: 0 6px 0 rgba(107,91,62,0.18);
+  }
+  .root-title { font-size: 25px; font-weight: 800; color: #3d3425; margin-bottom: 4px; }
+  .root-note { font-size: 15.5px; color: #7a3b12; margin-bottom: 18px; }
+
+  .item, .folder { border-radius: 12px; margin-top: 12px; }
+  .item {
+    display: flex; align-items: baseline; gap: 10px;
+    background: #fff; border: 2px solid #b9c6d4; padding: 13px 16px;
+  }
+  .item .name, .folder .name { font-weight: 800; font-size: 17.5px; white-space: nowrap; }
+  .item .desc, .folder .desc { font-size: 15px; color: #5a5346; }
+  .tool   { border-color: #9db3c8; }
+  .tool .name { color: #1a3a5c; }
+  .folder { border: 2px solid; padding: 14px 16px 16px; }
+  .folder > .head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 2px; }
+  .f-tool  { background: #f0f4f9; border-color: #9db3c8; }
+  .f-tool > .head .name { color: #1a3a5c; }
+  .f-plain { background: #fbf7ec; border-color: #c4b48b; }
+  .f-plain > .head .name { color: #6b5b3e; }
+  .f-story { background: #fff4d6; border-color: #c9971c; }
+  .f-story > .head .name { color: #8a5a00; font-size: 19px; }
+  .f-book  { background: #eefaf2; border-color: #2e8b57; }
+  .f-book > .head .name { color: #1e6b40; }
+  .star { font-size: 14.5px; color: #a86a00; margin-top: 6px; }
+
+  .card-note {
+    margin-top: 8px; font-size: 14px; color: #6b6252; background: #fffdf8;
+    border: 1.5px dashed #c4b48b; border-radius: 9px; padding: 9px 12px;
+  }
+
+  .flow-title { text-align: center; font-size: 27px; color: #1a3a5c; margin: 40px 0 6px; font-weight: 800; }
+  .flow-sub { text-align: center; font-size: 15.5px; color: #5a5346; margin-bottom: 20px; }
+  .flow { }
+  .step {
+    display: flex; align-items: center; gap: 18px;
+    background: #fff; border: 2.5px solid #6b5b3e22; border-radius: 14px;
+    padding: 16px 20px;
+  }
+  .step .no {
+    flex: none; width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 25px; color: #fff; font-weight: 800;
+  }
+  .step h3 { font-size: 19px; margin-bottom: 3px; }
+  .step p { font-size: 15px; color: #5a5346; }
+  .step p code { font-family: inherit; background: #f1ead7; padding: 1px 7px; border-radius: 6px; font-size: 14px; color: #6b5b3e; }
+  .s1 .no { background: #7a3b12; } .s1 h3 { color: #7a3b12; }
+  .s2 .no { background: #c9971c; } .s2 h3 { color: #8a5a00; }
+  .s3 .no { background: #1a3a5c; } .s3 h3 { color: #1a3a5c; }
+  .s4 .no { background: #2e8b57; } .s4 h3 { color: #1e6b40; }
+  .arrow { text-align: center; font-size: 24px; color: #a89a76; line-height: 1.4; }
+
+  .foot { margin-top: 34px; text-align: center; font-size: 14.5px; color: #8a8172; border-top: 2px dashed #c4b48b; padding-top: 16px; }
+  .foot b { color: #7a3b12; }
+</style>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kicker">샬롬대학 챗지피티 클래스 · 자서전 만들기</div>
+    <h1>자서전 폴더, 한눈에 보기</h1>
+    <div class="sub">폴더 하나가 <b>한 사람의 책 한 권</b>입니다</div>
+  </div>
+
+  <div class="legend">
+    <span class="lg-tool">🔧 도구 — 그대로 두세요</span>
+    <span class="lg-story">✍️ 이야기가 쌓이는 곳</span>
+    <span class="lg-book">📖 완성본이 나오는 곳</span>
+  </div>
+
+  <div class="root">
+    <div class="root-title">📁 자서전_시작폴더</div>
+    <div class="root-note">이 폴더를 통째로 복사하면 학생 한 분의 작업장이 됩니다</div>
+
+    <div class="item tool">
+      <span class="name">📄 CLAUDE.md</span>
+      <span class="desc">클로드가 읽는 작업 규칙 — "답변에 없는 사실은 지어내지 않는다"</span>
+    </div>
+
+    <div class="folder f-tool">
+      <div class="head"><span class="name">📁 .claude/skills/</span><span class="desc">클로드의 두 가지 재주</span></div>
+      <div class="item tool"><span class="name">🎤 interview</span><span class="desc">한 문씩 묻고 → 말한 그대로 받아 적고 → 다듬는 인터뷰 진행자</span></div>
+      <div class="item tool"><span class="name">📚 book-build</span><span class="desc">모인 답을 12개 장의 흐르는 이야기로 엮는 편집자</span></div>
+    </div>
+
+    <div class="folder f-plain">
+      <div class="head"><span class="name">📁 autobiography/</span><span class="desc">자서전 본체</span></div>
+
+      <div class="item tool"><span class="name">📄 README.md</span><span class="desc">사용 안내 (어르신·가족용)</span></div>
+      <div class="item tool"><span class="name">📄 questions.json</span><span class="desc">인생 질문 90문 — A부터 L까지 12묶음</span></div>
+      <div class="item tool"><span class="name">⚙️ tools.py</span><span class="desc">진행 상황 보기 · 다음 질문 · 책 조립기</span></div>
+
+      <div class="folder f-story">
+        <div class="head"><span class="name">📁 answers/ ★</span><span class="desc">답변 파일 90개 (A01 … L90)</span></div>
+        <div class="card-note">
+          파일마다 네 칸: <b>상태</b> · <b>말한 그대로(원문)</b> · <b>다듬은 글</b> · <b>메모</b><br>
+          말씀하신 원문이 그대로 남으므로, 다듬은 글이 마음에 안 들면 언제든 되돌릴 수 있습니다
+        </div>
+        <div class="star">★ 인생 이야기가 쌓이는 심장입니다 — 이 폴더만 있으면 책은 언제든 다시 만들 수 있습니다</div>
+      </div>
+
+      <div class="folder f-book">
+        <div class="head"><span class="name">📁 book/</span><span class="desc">책이 만들어지는 곳</span></div>
+        <div class="item tool"><span class="name">📄 meta.md</span><span class="desc">책 제목 · 지은이 · 머리말</span></div>
+        <div class="item tool"><span class="name">📁 chapters/</span><span class="desc">클로드가 답변을 엮어 쓴 12개 장 원고</span></div>
+        <div class="item tool"><span class="name">📁 output/</span><span class="desc">완성본 책 — 워드 · PDF · HTML</span></div>
+      </div>
+    </div>
+
+    <div class="item tool">
+      <span class="name">📄 시작카드.pdf</span>
+      <span class="desc">어르신용 한 장 안내 — 인쇄해서 컴퓨터 옆에 두세요</span>
+    </div>
+    <div class="item tool">
+      <span class="name">📄 가족도우미_안내.pdf</span>
+      <span class="desc">자녀분께 보내는 설치 안내 (10분)</span>
+    </div>
+  </div>
+
+  <div class="flow-title">이야기가 흐르는 길</div>
+  <div class="flow-sub">매일 조금씩 말하면, 폴더 안에서 이렇게 책이 됩니다</div>
+
+  <div class="flow">
+    <div class="step s1">
+      <div class="no">🎤</div>
+      <div><h3>말로 답한다</h3>
+      <p>"인터뷰 이어서 해 줘" — 질문이 나오면 마이크 단추를 누르고 말합니다</p></div>
+    </div>
+    <div class="arrow">▼</div>
+    <div class="step s2">
+      <div class="no">✍️</div>
+      <div><h3>답이 쌓인다 — <code>answers/</code></h3>
+      <p>말한 그대로 + 다듬은 글이 나란히 저장됩니다 (하루 두세 문이면 충분)</p></div>
+    </div>
+    <div class="arrow">▼</div>
+    <div class="step s3">
+      <div class="no">📚</div>
+      <div><h3>장으로 엮인다 — <code>book/chapters/</code></h3>
+      <p>"이제 책으로 만들어 줘" — 클로드가 90개의 답을 12개 장의 흐르는 이야기로</p></div>
+    </div>
+    <div class="arrow">▼</div>
+    <div class="step s4">
+      <div class="no">📖</div>
+      <div><h3>책이 나온다 — <code>book/output/</code></h3>
+      <p>워드·PDF 완성본 → 인쇄·제본하면 가족에게 남는 한 권의 책</p></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    기억할 것은 하나 — <b>answers/ 폴더가 재산입니다.</b> 가끔 폴더를 통째로 복사(백업)해 두세요.
+  </div>
+
+</div>
