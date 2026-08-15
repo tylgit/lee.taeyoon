@@ -389,7 +389,7 @@ body { overflow: hidden; }
   <h2>120분을 이렇게 씁니다</h2>
   <div class="s-body"><figure>
 <div class="fig-scroll">
-<svg viewBox="0 0 956 350" role="img" aria-label="워크샵 120분 진행표. 1시 30분 준비 10분, 1시 40분 강의 25분, 2시 5분 실습1 바이브 코딩 30분, 2시 35분 휴식 10분, 2시 45분 강의 10분, 2시 55분 실습2 15분, 3시 10분 실습3 15분, 3시 25분 맺음 5분으로 3시 30분에 끝난다. 손으로 하는 시간이 60분으로 절반을 차지한다." style="font-family:var(--f-body)">
+<svg viewBox="0 0 956 350" role="img" aria-label="워크샵 120분 진행표. 1시 30분 준비 10분, 1시 40분 강의 20분, 2시 실습1 자서전 25분, 2시 25분 휴식 10분, 2시 35분 강의 5분, 2시 40분 실습2 노래 12분, 2시 52분 실습3 영상 13분, 3시 5분 강의 5분, 3시 10분 실습4 보안 10분, 3시 20분 맺음 10분으로 3시 30분에 끝난다. 손으로 하는 시간이 60분으로 절반을 차지한다." style="font-family:var(--f-body)">
   <!-- 시각 눈금 : 1:30 = x150, 1분 = 6.5px, 3:30 = x930 -->
   <g stroke="currentColor" opacity=".14">
     <line x1="150" y1="60" x2="150" y2="268"/><line x1="345" y1="60" x2="345" y2="268"/>
@@ -405,38 +405,41 @@ body { overflow: hidden; }
   <text x="14" y="88" font-size="12.5" fill="currentColor" opacity=".8">준비</text>
   <rect x="150" y="72" width="65" height="30" rx="6" fill="currentColor" opacity=".16"/>
   <text x="182" y="92" font-size="11" text-anchor="middle" fill="currentColor">10분</text>
-  <text x="224" y="92" font-size="12" fill="currentColor">노트북 켜기 · 계정 로그인 · 짝 정하기</text>
+  <text x="224" y="92" font-size="12" fill="currentColor">노트북 · 계정 · 사진 확인</text>
 
   <!-- 행 2 : 강의 -->
   <text x="14" y="130" font-size="12.5" fill="currentColor" opacity=".8">강의</text>
-  <rect x="215" y="114" width="163" height="30" rx="6" fill="var(--s2)" opacity=".35"/>
-  <text x="296" y="134" font-size="11.5" text-anchor="middle" fill="currentColor">25분 · 2026 AI 지형도</text>
-  <rect x="638" y="114" width="65" height="30" rx="6" fill="var(--s2)" opacity=".35"/>
-  <text x="670" y="134" font-size="11" text-anchor="middle" fill="currentColor">10분</text>
-  <text x="712" y="134" font-size="11.5" fill="currentColor" opacity=".8">멀티모달 시연</text>
+  <rect x="215" y="114" width="130" height="30" rx="6" fill="var(--s2)" opacity=".35"/>
+  <text x="280" y="134" font-size="11.5" text-anchor="middle" fill="currentColor">20분 · AI 지형도</text>
+  <rect x="572" y="114" width="33" height="30" rx="6" fill="var(--s2)" opacity=".35"/>
+  <text x="588" y="134" font-size="10" text-anchor="middle" fill="currentColor">5분</text>
+  <rect x="768" y="114" width="32" height="30" rx="6" fill="var(--s2)" opacity=".35"/>
+  <text x="784" y="134" font-size="10" text-anchor="middle" fill="currentColor">5분</text>
 
   <!-- 행 3 : 실습 -->
   <text x="14" y="172" font-size="12.5" font-weight="700" fill="var(--crimson)">실습</text>
-  <rect x="378" y="156" width="195" height="30" rx="6" fill="var(--crimson)" opacity=".5"/>
-  <text x="475" y="176" font-size="11.5" text-anchor="middle" fill="currentColor" font-weight="700">실습 1 · 바이브 코딩 30분</text>
-  <rect x="703" y="156" width="97" height="30" rx="6" fill="var(--crimson)" opacity=".5"/>
-  <text x="751" y="176" font-size="11.5" text-anchor="middle" fill="currentColor" font-weight="700">실습 2 · 15분</text>
-  <rect x="801" y="156" width="97" height="30" rx="6" fill="var(--crimson)" opacity=".5"/>
-  <text x="849" y="176" font-size="11.5" text-anchor="middle" fill="currentColor" font-weight="700">실습 3 · 15분</text>
+  <rect x="345" y="156" width="162" height="30" rx="6" fill="var(--crimson)" opacity=".5"/>
+  <text x="426" y="176" font-size="11.5" text-anchor="middle" fill="currentColor" font-weight="700">1 · 자서전 25분</text>
+  <rect x="605" y="156" width="78" height="30" rx="6" fill="var(--crimson)" opacity=".5"/>
+  <text x="644" y="176" font-size="11" text-anchor="middle" fill="currentColor" font-weight="700">2 · 노래 12분</text>
+  <rect x="683" y="156" width="85" height="30" rx="6" fill="var(--crimson)" opacity=".5"/>
+  <text x="725" y="176" font-size="11" text-anchor="middle" fill="currentColor" font-weight="700">3 · 영상 13분</text>
+  <rect x="800" y="156" width="65" height="30" rx="6" fill="var(--crimson)" opacity=".5"/>
+  <text x="832" y="176" font-size="11" text-anchor="middle" fill="currentColor" font-weight="700">4 · 보안 10분</text>
 
   <!-- 행 4 : 휴식 / 맺음 -->
   <text x="14" y="214" font-size="12.5" fill="currentColor" opacity=".8">쉼 · 맺음</text>
-  <rect x="573" y="198" width="65" height="30" rx="6" fill="currentColor" opacity=".1"/>
-  <text x="605" y="218" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">휴식</text>
-  <rect x="898" y="198" width="32" height="30" rx="6" fill="currentColor" opacity=".16"/>
-  <text x="914" y="218" font-size="10.5" text-anchor="middle" fill="currentColor">맺음</text>
+  <rect x="507" y="198" width="65" height="30" rx="6" fill="currentColor" opacity=".1"/>
+  <text x="539" y="218" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">휴식</text>
+  <rect x="865" y="198" width="65" height="30" rx="6" fill="currentColor" opacity=".16"/>
+  <text x="897" y="218" font-size="11" text-anchor="middle" fill="currentColor">맺음</text>
 
   <!-- 비중 막대 : 실습 60분 = 780px의 절반 -->
   <text x="14" y="258" font-size="12" fill="currentColor" opacity=".7">비중</text>
   <rect x="150" y="242" width="780" height="22" rx="5" fill="currentColor" opacity=".1"/>
   <rect x="150" y="242" width="390" height="22" rx="5" fill="var(--crimson)" opacity=".55"/>
   <text x="345" y="258" font-size="11.5" text-anchor="middle" fill="currentColor" font-weight="700">손으로 하는 시간 60분 (50%)</text>
-  <text x="735" y="258" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".75">듣기 35분 · 준비와 쉼 25분</text>
+  <text x="735" y="258" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".75">듣기 30분 · 준비와 쉼 30분</text>
 
   <line x1="150" y1="268" x2="930" y2="268" stroke="currentColor" opacity=".4"/>
 
@@ -445,7 +448,7 @@ body { overflow: hidden; }
   <text x="540" y="329" font-size="11.5" text-anchor="middle" fill="currentColor">듣고 끝나는 자리라면 세미나입니다. 절반의 시간을 교우님 손으로 직접 만드시므로 워크샵입니다.</text>
 </svg>
 </div>
-<figcaption><strong>120분 중 60분, 꼭 절반이 교우님 손에 있습니다.</strong> 강의는 실습에 필요한 만큼만 하고, 나머지 여덟 개 장은 교재로 돌려 집에서 읽으시도록 했습니다.</figcaption>
+<figcaption><strong>120분 중 60분, 꼭 절반이 교우님 손에 있습니다.</strong> 실습 1~3은 하나로 이어지는 한 프로젝트라 순서를 바꿀 수 없고, 실습 4는 어떤 일이 있어도 시간을 남겨 둡니다.</figcaption>
 </figure></div>
 </section>
 
@@ -455,11 +458,12 @@ body { overflow: hidden; }
   <h2>집에 갈 때 손에 남는 세 가지</h2>
   <div class="s-body">
     <ul class="big-list">
-      <li><span class="m">1</span><span><strong>교우회 주소록 웹앱</strong> — 말 몇 마디로 만든, 실제로 열리는 웹페이지 하나</span></li>
-      <li><span class="m">2</span><span><strong>영문 서류를 읽어주는 법</strong> — 카메라로 비추면 한국어로 설명받는 습관</span></li>
-      <li><span class="m">3</span><span><strong>가족 안전 암호 카드</strong> — 오늘 전원이 완성해서 가져가는 종이 한 장</span></li>
+      <li><span class="m">1</span><span><strong>자서전 한 장</strong> — 교우님 인생의 한 장면. 한글 원고와 영어 대역</span></li>
+      <li><span class="m">2</span><span><strong>그 이야기로 만든 노래</strong> — 한국어로 부르는 MP3 한 곡</span></li>
+      <li><span class="m">3</span><span><strong>사진과 노래로 만든 영상</strong> — 손주에게 바로 보낼 MP4</span></li>
+      <li><span class="m">4</span><span><strong>안전한 비밀번호 + 가족 암호</strong> — 오늘 만든 것을 지키는 법</span></li>
     </ul>
-    <p style="color:var(--ink-2)">셋 다 오늘 이 자리에서 끝냅니다. 숙제로 미루지 않습니다.</p>
+    <p style="color:var(--ink-2)">넷 다 오늘 이 자리에서 끝냅니다. 숙제로 미루지 않습니다.</p>
   </div>
 </section>
 
@@ -1159,170 +1163,179 @@ body { overflow: hidden; }
 <section class="slide part-slide">
   <div class="pn">제 4 부</div>
   <h2>이제 직접 해 봅니다</h2>
-  <p>여기부터는 노트북을 여십시오. 워크북을 함께 펴 주십시오.</p>
+  <p>지금부터 90분은 교우님의 이야기를 글과 노래와 영상으로 만드는 시간입니다.</p>
 </section>
 
 <!-- 24 -->
-<section class="slide">
-  <div class="s-eyebrow">바이브 코딩</div>
-  <h2>문법을 몰라도 말로 앱을 만듭니다</h2>
-  <div class="s-body">
-    <p class="wide-p">결과의 질은 거의 전적으로 <strong>지시문의 구체성</strong>에서 갈립니다. 좋은 지시문에는 넷이 들어갑니다.</p>
-    <ul class="big-list">
-      <li><span class="m">1</span><span><strong>무엇을</strong> — 만들 물건을 한 문장으로</span></li>
-      <li><span class="m">2</span><span><strong>누가 쓰는가</strong> — &ldquo;30대부터 80대까지&rdquo;. 이 한 줄이 글씨 크기를 바꿉니다</span></li>
-      <li><span class="m">3</span><span><strong>기능 목록</strong> — 번호를 매겨 하나씩</span></li>
-      <li><span class="m">4</span><span><strong>형태 조건</strong> — &ldquo;HTML 파일 하나로&rdquo;, &ldquo;휴대폰에서도&rdquo;</span></li>
-    </ul>
-    <div class="card warn"><h4>나쁜 지시문</h4><p style="font-size:1.05rem">&ldquo;교우회 홈페이지 좀 만들어줘.&rdquo; — 무언가 나오긴 합니다. 다만 머릿속에 그리신 것과는 전혀 다른 물건입니다.</p></div>
-  </div>
-</section>
-
-<!-- 25 -->
-<section class="slide lab-slide">
-  <div class="lab-badge" style="margin-bottom:1rem">실습 1 · 30분</div>
-  <h2>교우회 주소록 웹앱 만들기</h2>
-  <div class="s-body">
-    <p class="wide-p">워크북의 <strong>실습 1</strong>을 펴시고 1단계부터 따라오십시오. 지시문은 워크북에 그대로 있으니 받아 적지 마십시오.</p>
-    <ul class="big-list">
-      <li><span class="m">1</span><span>Claude 또는 ChatGPT를 엽니다</span></li>
-      <li><span class="m">2</span><span>워크북의 지시문을 <strong>그대로 복사해</strong> 붙여 넣습니다</span></li>
-      <li><span class="m">3</span><span>나온 결과를 보고 <strong>세 번 고쳐 말합니다</strong> — 이것이 핵심입니다</span></li>
-      <li><span class="m">4</span><span>파일로 저장해 브라우저에서 엽니다</span></li>
-    </ul>
-    <p style="color:var(--ink-2)">막히시면 손을 드십시오. 옆자리와 짝을 지어 함께 하셔도 좋습니다.</p>
-  </div>
-</section>
-
-<!-- 26 -->
-<section class="slide">
-  <div class="s-eyebrow">멀티모달</div>
-  <h2>보여주고, 들려주고, 말하게 하기</h2>
-  <div class="s-body">
-    <div class="cols">
-      <div class="card hi">
-        <h4>카메라로 비추십시오</h4>
-        <p style="font-size:1.02rem;line-height:1.7">영문 우편물, 병원 서류, 약봉지, 세탁기 조작부. 비추면서 물으시면 한국어로 설명해 줍니다.</p>
-      </div>
-      <div class="card hi">
-        <h4>지치지 않는 대화 상대</h4>
-        <p style="font-size:1.02rem;line-height:1.7">&ldquo;영어를 가르쳐 줘&rdquo;보다 <strong>역할을 주십시오</strong> — &ldquo;당신은 병원 접수 직원입니다.&rdquo; 훨씬 잘 됩니다.</p>
-      </div>
-    </div>
-    <div class="card warn">
-      <h4>반드시 지켜 주십시오</h4>
-      <p style="font-size:1.05rem">AI의 번역과 요약은 <strong>이해를 돕는 용도</strong>입니다. &ldquo;서명해도 되는가&rdquo;, &ldquo;이 약을 먹어도 되는가&rdquo; 같은 판단은 반드시 사람 전문가에게 확인하십시오.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 27 -->
-<section class="slide lab-slide">
-  <div class="lab-badge" style="margin-bottom:1rem">실습 2 · 15분</div>
-  <h2>영문 서류를 읽어주게 하기</h2>
-  <div class="s-body">
-    <p class="wide-p">워크북의 <strong>실습 2</strong>입니다. 가지고 오신 영문 우편물이 없으시면 워크북 뒤쪽의 견본 서류를 쓰십시오.</p>
-    <pre>지금 비추고 있는 이 서류가 무엇인지 한국어로 차분히 설명해 주세요.
-
-1) 제가 꼭 해야 하는 일이 있으면 무엇인지
-2) 기한이 있으면 언제까지인지
-3) 돈이 나가는 항목이 있으면 얼마인지
-
-이 세 가지를 먼저 알려 주시고,
-담당자에게 전화해서 영어로 확인할 질문 세 문장도 만들어 주세요.</pre>
-  </div>
-</section>
-
-<!-- 28 -->
 <section class="slide fig-slide">
-  <div class="s-eyebrow">가장 오래 남을 이야기</div>
-  <h2>자서전 — 지금 기록하지 않으면 사라집니다</h2>
+  <div class="s-eyebrow">오늘의 흐름</div>
+  <h2>하나가 다음을 먹여 살립니다</h2>
   <div class="s-body"><figure>
 <div class="fig-scroll">
-<svg viewBox="0 0 940 300" role="img" aria-label="자서전 제작 4단계 흐름. 음성 메모와 옛 사진을 모아 NotebookLM에 넣어 연표와 가계도를 만들고, Claude로 한 장씩 집필한 뒤 한영 대역판으로 편집해 출판한다. 3단계 집필은 장 단위로 반복되며 사실 확인 표시가 붙은 문장은 사람이 검증해 되돌린다." style="font-family:var(--f-body)">
+<svg viewBox="0 0 960 300" role="img" aria-label="오늘 만드는 것의 흐름. 5분 구술한 이야기가 자서전 한 장이 되고, 그 원고에서 가사를 뽑아 노래를 만들고, 그 노래와 옛 사진으로 영상을 만든다. 세 실습이 하나의 결과물로 이어지며, 사실 확인은 첫 단계에서 사람이 끝낸다." style="font-family:var(--f-body)">
   <defs>
-    <marker id="ab-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
-    </marker>
-    <marker id="ab-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="var(--warn)"/>
+    <marker id="tp-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--crimson)"/>
     </marker>
   </defs>
 
-  <g font-size="12.5">
-    <!-- 1 -->
-    <rect x="20" y="70" width="190" height="96" rx="10" fill="currentColor" opacity=".05"/>
-    <rect x="20" y="70" width="190" height="96" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
-    <text x="34" y="62" font-size="11" font-family="var(--f-mono)" fill="currentColor" opacity=".6">1단계</text>
-    <text x="115" y="97" text-anchor="middle" font-weight="700" fill="currentColor">모으기</text>
-    <text x="115" y="120" text-anchor="middle" font-size="11.5" fill="currentColor" opacity=".8">스마트폰 음성 메모</text>
-    <text x="115" y="138" text-anchor="middle" font-size="11.5" fill="currentColor" opacity=".8">앨범 사진 · 이민 서류</text>
-    <text x="115" y="156" text-anchor="middle" font-size="11" fill="currentColor" opacity=".55">말로 해도 됩니다</text>
+  <text x="20" y="28" font-size="13.5" font-weight="700" fill="currentColor">오늘 세 실습은 따로 노는 셋이 아니라, 하나가 다음을 먹여 살립니다</text>
 
-    <!-- 2 -->
-    <rect x="250" y="70" width="190" height="96" rx="10" fill="var(--s3)" opacity=".13"/>
-    <rect x="250" y="70" width="190" height="96" rx="10" fill="none" stroke="var(--s3)" stroke-width="1.5"/>
-    <text x="264" y="62" font-size="11" font-family="var(--f-mono)" fill="currentColor" opacity=".6">2단계</text>
-    <text x="345" y="97" text-anchor="middle" font-weight="700" fill="currentColor">정리하기</text>
-    <text x="345" y="120" text-anchor="middle" font-size="11.5" fill="var(--s3)" font-weight="700">NotebookLM</text>
-    <text x="345" y="140" text-anchor="middle" font-size="11.5" fill="currentColor" opacity=".8">연표 · 가계도 자동 추출</text>
-    <text x="345" y="158" text-anchor="middle" font-size="11" fill="currentColor" opacity=".55">사서 역할</text>
+  <!-- 입력 -->
+  <rect x="20" y="96" width="128" height="76" rx="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="84" y="124" font-size="12.5" text-anchor="middle" fill="currentColor" font-weight="700">교우님의 기억</text>
+  <text x="84" y="145" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">5분간 말로</text>
+  <text x="84" y="162" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">녹음합니다</text>
 
-    <!-- 3 -->
-    <rect x="480" y="70" width="190" height="96" rx="10" fill="var(--s1)" opacity=".16"/>
-    <rect x="480" y="70" width="190" height="96" rx="10" fill="none" stroke="var(--s1)" stroke-width="2"/>
-    <text x="494" y="62" font-size="11" font-family="var(--f-mono)" fill="currentColor" opacity=".6">3단계</text>
-    <text x="575" y="97" text-anchor="middle" font-weight="700" fill="currentColor">쓰기</text>
-    <text x="575" y="120" text-anchor="middle" font-size="11.5" fill="var(--s1)" font-weight="700">Claude Opus 5</text>
-    <text x="575" y="140" text-anchor="middle" font-size="11.5" fill="currentColor" opacity=".8">한 번에 딱 한 장씩</text>
-    <text x="575" y="158" text-anchor="middle" font-size="11" fill="currentColor" opacity=".55">작가 역할</text>
+  <line x1="150" y1="134" x2="184" y2="134" stroke="var(--crimson)" stroke-width="2" marker-end="url(#tp-a)"/>
 
-    <!-- 4 -->
-    <rect x="710" y="70" width="190" height="96" rx="10" fill="currentColor" opacity=".05"/>
-    <rect x="710" y="70" width="190" height="96" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
-    <text x="724" y="62" font-size="11" font-family="var(--f-mono)" fill="currentColor" opacity=".6">4단계</text>
-    <text x="805" y="97" text-anchor="middle" font-weight="700" fill="currentColor">펴내기</text>
-    <text x="805" y="120" text-anchor="middle" font-size="11.5" fill="currentColor" opacity=".8">한글·영어 대역판</text>
-    <text x="805" y="140" text-anchor="middle" font-size="11.5" fill="currentColor" opacity=".8">아마존 KDP 자가출판</text>
-    <text x="805" y="158" text-anchor="middle" font-size="11" fill="currentColor" opacity=".55">손주가 읽습니다</text>
-  </g>
+  <!-- 실습 1 -->
+  <rect x="188" y="88" width="176" height="92" rx="10" fill="var(--s1)" opacity=".16"/>
+  <rect x="188" y="88" width="176" height="92" rx="10" fill="none" stroke="var(--s1)" stroke-width="1.8"/>
+  <text x="200" y="80" font-size="11" font-family="var(--f-mono)" fill="var(--s1)">실습 1 · 25분</text>
+  <text x="276" y="118" font-size="14" text-anchor="middle" font-weight="700" fill="currentColor">자서전 한 장</text>
+  <text x="276" y="140" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">약 3,000자 원고</text>
+  <text x="276" y="158" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">한글 + 영어 대역</text>
+  <text x="276" y="172" font-size="10.5" text-anchor="middle" fill="var(--s1)">Claude · ChatGPT</text>
 
-  <line x1="212" y1="118" x2="246" y2="118" stroke="currentColor" stroke-width="1.6" marker-end="url(#ab-a)"/>
-  <line x1="442" y1="118" x2="476" y2="118" stroke="currentColor" stroke-width="1.6" marker-end="url(#ab-a)"/>
-  <line x1="672" y1="118" x2="706" y2="118" stroke="currentColor" stroke-width="1.6" marker-end="url(#ab-a)"/>
+  <line x1="366" y1="134" x2="400" y2="134" stroke="var(--crimson)" stroke-width="2" marker-end="url(#tp-a)"/>
+  <text x="383" y="126" font-size="10.5" text-anchor="middle" fill="var(--crimson)">가사</text>
 
-  <!-- 장 단위 반복 -->
-  <path d="M545 168 C 520 220, 630 220, 605 170" fill="none" stroke="var(--s1)" stroke-width="1.7" marker-end="url(#ab-a)"/>
-  <text x="575" y="228" font-size="11.5" text-anchor="middle" fill="var(--s1)">1장 → 2장 → 3장… 장마다 반복</text>
+  <!-- 실습 2 -->
+  <rect x="404" y="88" width="176" height="92" rx="10" fill="var(--s6)" opacity=".16"/>
+  <rect x="404" y="88" width="176" height="92" rx="10" fill="none" stroke="var(--s6)" stroke-width="1.8"/>
+  <text x="416" y="80" font-size="11" font-family="var(--f-mono)" fill="var(--s6)">실습 2 · 12분</text>
+  <text x="492" y="118" font-size="14" text-anchor="middle" font-weight="700" fill="currentColor">내 이야기 노래</text>
+  <text x="492" y="140" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">MP3 파일 하나</text>
+  <text x="492" y="158" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">한국어 가창</text>
+  <text x="492" y="172" font-size="10.5" text-anchor="middle" fill="var(--s6)">Suno · 무료</text>
 
-  <!-- 사실 확인 되돌림 -->
-  <path d="M480 148 C 400 250, 200 250, 130 172" fill="none" stroke="var(--warn)" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ab-w)"/>
-  <rect x="240" y="248" width="210" height="28" rx="7" fill="var(--warn-in)" stroke="var(--warn)" stroke-width="1.3"/>
-  <text x="345" y="267" font-size="11.5" text-anchor="middle" fill="var(--warn)">[확인 필요] 표시된 문장은 되돌려 검증</text>
+  <line x1="582" y1="134" x2="616" y2="134" stroke="var(--crimson)" stroke-width="2" marker-end="url(#tp-a)"/>
+  <text x="599" y="126" font-size="10.5" text-anchor="middle" fill="var(--crimson)">MP3</text>
 
-  <text x="20" y="30" font-size="13.5" font-weight="700" fill="currentColor">AI에게 자료 정리와 문장은 맡기고, 사실 판정은 끝까지 사람이 쥡니다</text>
+  <!-- 실습 3 -->
+  <rect x="620" y="88" width="176" height="92" rx="10" fill="var(--s2)" opacity=".16"/>
+  <rect x="620" y="88" width="176" height="92" rx="10" fill="none" stroke="var(--s2)" stroke-width="1.8"/>
+  <text x="632" y="80" font-size="11" font-family="var(--f-mono)" fill="var(--s2)">실습 3 · 13분</text>
+  <text x="708" y="118" font-size="14" text-anchor="middle" font-weight="700" fill="currentColor">가족 영상</text>
+  <text x="708" y="140" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">MP4 · 1080p</text>
+  <text x="708" y="158" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">사진 + 노래 + 자막</text>
+  <text x="708" y="172" font-size="10.5" text-anchor="middle" fill="var(--s2)">Clipchamp · iMovie</text>
+
+  <line x1="798" y1="134" x2="832" y2="134" stroke="var(--crimson)" stroke-width="2" marker-end="url(#tp-a)"/>
+
+  <!-- 결과 -->
+  <rect x="836" y="96" width="112" height="76" rx="10" fill="var(--crimson)" opacity=".14"/>
+  <rect x="836" y="96" width="112" height="76" rx="10" fill="none" stroke="var(--crimson)" stroke-width="1.8"/>
+  <text x="892" y="124" font-size="12.5" text-anchor="middle" font-weight="700" fill="var(--crimson)">손주에게</text>
+  <text x="892" y="145" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".85">카톡으로</text>
+  <text x="892" y="162" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".85">보냅니다</text>
+
+  <!-- 사진 입력 (아래에서 실습 3으로) -->
+  <rect x="620" y="228" width="176" height="46" rx="9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="708" y="248" font-size="12" text-anchor="middle" fill="currentColor" font-weight="700">옛 사진 6~10장</text>
+  <text x="708" y="265" font-size="11" text-anchor="middle" fill="var(--danger)">미리 챙겨 오셔야 합니다</text>
+  <line x1="708" y1="224" x2="708" y2="186" stroke="var(--crimson)" stroke-width="2" marker-end="url(#tp-a)"/>
+
+  <!-- 사실 확인 -->
+  <rect x="188" y="228" width="176" height="46" rx="9" fill="var(--warn-in)" stroke="var(--warn)" stroke-width="1.4"/>
+  <text x="276" y="248" font-size="12" text-anchor="middle" font-weight="700" fill="var(--warn)">사실 확인은 여기서 끝</text>
+  <text x="276" y="265" font-size="11" text-anchor="middle" fill="currentColor">[확인 필요] 표시를 사람이 검증</text>
+  <line x1="276" y1="224" x2="276" y2="186" stroke="var(--warn)" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#tp-a)"/>
 </svg>
 </div>
-<figcaption><strong>핵심은 3단계의 두 화살표입니다.</strong> 한 번에 전체를 시키면 AI가 없는 이야기를 지어냅니다. 장 단위로 끊어 시키고, AI가 <code>[확인 필요]</code>로 표시한 부분은 반드시 교우님이 직접 확인해 되돌리십시오. 이 절차 하나가 &lsquo;그럴듯한 거짓말&rsquo;이 섞인 가족사를 막습니다.</figcaption>
+<figcaption><strong>실습 1의 원고가 실습 2의 가사가 되고, 실습 2의 노래가 실습 3의 배경음악이 됩니다.</strong> 그래서 순서를 건너뛸 수 없고, 첫 단추인 사실 확인을 대충 하면 틀린 이야기가 노래와 영상까지 따라갑니다.</figcaption>
 </figure></div>
 </section>
 
-<!-- 29 -->
+<!-- 25 -->
 <section class="slide">
-  <div class="s-eyebrow">자서전 · 꼭 지킬 것</div>
+  <div class="s-eyebrow">왜 자서전인가</div>
   <div class="s-body" style="justify-content:center">
-    <p class="punch" style="max-width:28ch">&ldquo;내 자서전 전체를 써 줘&rdquo;라고<br><em>하지 마십시오.</em></p>
-    <p class="wide-p">그렇게 시키면 AI는 빈칸을 <strong>그럴듯한 상상</strong>으로 메웁니다. 가족사에 거짓이 섞이면 책의 가치가 통째로 사라집니다.</p>
-    <div class="card good">
-      <h4>대신 이렇게</h4>
-      <ul>
-        <li><strong>한 번에 한 장씩</strong>, 재료를 직접 주면서</li>
-        <li>&ldquo;없는 일은 절대 지어내지 마세요&rdquo;를 지시문에 넣기</li>
-        <li>&ldquo;확실하지 않으면 <code>[확인 필요]</code>라고 적어 주세요&rdquo;</li>
-        <li>표시된 곳은 <strong>반드시 직접 확인</strong>해서 되돌리기</li>
-      </ul>
+    <p class="punch" style="max-width:26ch">지금 기록하지 않으면 <em>사라집니다.</em></p>
+    <p class="wide-p">1980년대에 아틀란타에 오신 이야기를, 영어로 자란 자녀와 손주는 <strong>들을 기회가 없었습니다.</strong> 물어볼 줄 몰랐고, 우리는 말할 자리가 없었습니다.</p>
+    <div class="card hi">
+      <h4>자서전을 못 쓰는 진짜 이유</h4>
+      <p style="font-size:1.05rem;line-height:1.7">시간이 없어서가 아니라 <strong>&ldquo;처음부터 끝까지&rdquo;를 상상하기 때문</strong>입니다. 전체를 그리면 영원히 시작하지 못합니다.</p>
+      <p style="font-size:1.05rem;line-height:1.7;margin-top:.6rem">그래서 오늘은 <strong>딱 한 장면</strong>만 씁니다. 그리고 <strong>타자가 아니라 말로</strong> 합니다.</p>
     </div>
-    <p style="color:var(--ink-2)">완벽한 자료를 기다리지 마십시오. <strong>오늘 30분 녹음</strong>이 시작입니다.</p>
+  </div>
+</section>
+
+<!-- 25b -->
+<section class="slide lab-slide">
+  <div class="lab-badge" style="margin-bottom:1rem">실습 1 · 25분</div>
+  <h2>말로 쓰는 자서전 한 장</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span>장면 하나를 고릅니다 — &ldquo;내 인생&rdquo;이 아니라 <strong>&ldquo;그날 하루&rdquo;</strong></span></li>
+      <li><span class="m">2</span><span>휴대폰 <strong>마이크 단추</strong>를 누르고 5분간 그냥 말합니다</span></li>
+      <li><span class="m">3</span><span>워크북의 지시문을 붙여 넣습니다</span></li>
+      <li><span class="m">4</span><span><strong style="color:var(--danger)">[확인 필요] 표시를 전부 직접 확인합니다</strong> ← 오늘 가장 중요</span></li>
+      <li><span class="m">5</span><span>영어 대역을 만들어 내 메일로 보냅니다</span></li>
+    </ul>
+    <p style="color:var(--ink-2)">말이 안 나오시면 <strong>옆자리 교우님께 먼저 들려주십시오.</strong> 사람에게 말하면 훨씬 잘 나옵니다.</p>
+  </div>
+</section>
+
+<!-- 25c -->
+<section class="slide">
+  <div class="s-eyebrow">실습 1에서 절대 건너뛰지 마실 것</div>
+  <div class="s-body" style="justify-content:center">
+    <p class="punch" style="max-width:28ch">AI는 이야기를 매끄럽게 만들려고 <em>세부를 지어냅니다.</em></p>
+    <div class="cols">
+      <div class="card warn">
+        <h4>그냥 두면</h4>
+        <p style="font-size:1.05rem;line-height:1.7">지어낸 이야기가 원고에 남고, 그것이 <strong>노래로, 영상으로 그대로 따라갑니다.</strong> 손주가 읽을 가족사에 거짓이 섞입니다.</p>
+      </div>
+      <div class="card good">
+        <h4>그래서 이렇게</h4>
+        <p style="font-size:1.05rem;line-height:1.7">지시문에 <code>[확인 필요]</code>를 적게 하고, <strong>표시된 문장을 하나하나 확인</strong>합니다. 기억이 안 나면 <strong>지웁니다.</strong></p>
+      </div>
+    </div>
+    <p class="wide-p" style="color:var(--ink-2)">오늘 만드는 것은 소설이 아니라 <strong>기록</strong>입니다.</p>
+  </div>
+</section>
+
+<!-- 25d -->
+<section class="slide lab-slide">
+  <div class="lab-badge" style="margin-bottom:1rem">실습 2 · 12분</div>
+  <h2>그 이야기로 노래 만들기</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span><strong>같은 대화창에</strong> 이어서 &mdash; &ldquo;이 글로 가사를 써 주세요&rdquo;</span></li>
+      <li><span class="m">2</span><span><code>suno.com</code> 가입 (무료 · 하루 50크레딧)</span></li>
+      <li><span class="m">3</span><span><strong>Custom</strong> 모드로 가사를 붙여 넣습니다</span></li>
+      <li><span class="m">4</span><span>Style 칸에 <strong>맨 앞에 <code>Korean</code></strong>을 꼭 넣습니다</span></li>
+      <li><span class="m">5</span><span>MP3로 내려받아 <strong>바탕화면에</strong> 둡니다</span></li>
+    </ul>
+    <pre>Korean ballad, warm acoustic guitar, gentle male vocal, nostalgic, slow tempo</pre>
+    <p style="color:var(--ink-2);font-size:1rem"><strong>Korean을 빼면 영어로 불러 버립니다.</strong> 무료 곡은 가족끼리 나누는 것은 되지만 판매·수익 창출은 안 됩니다.</p>
+  </div>
+</section>
+
+<!-- 25e -->
+<section class="slide lab-slide">
+  <div class="lab-badge" style="margin-bottom:1rem">실습 3 · 13분</div>
+  <h2>사진과 노래로 영상 만들기</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card">
+        <h4>윈도우 &mdash; Clipchamp</h4>
+        <p style="font-size:1.02rem;line-height:1.7">윈도우 11에 <strong>이미 깔려 있습니다.</strong> 시작 검색창에 &lsquo;Clipchamp&rsquo;를 치면 나옵니다.</p>
+      </div>
+      <div class="card">
+        <h4>맥 &mdash; iMovie</h4>
+        <p style="font-size:1.02rem;line-height:1.7">맥에 <strong>이미 깔려 있습니다.</strong> 런치패드에서 &lsquo;iMovie&rsquo;를 찾으십시오.</p>
+      </div>
+    </div>
+    <ul class="big-list">
+      <li><span class="m">1</span><span>사진 6~10장과 MP3를 <strong>한 폴더에</strong> 모읍니다</span></li>
+      <li><span class="m">2</span><span>사진을 타임라인에 순서대로, MP3는 아래 줄에</span></li>
+      <li><span class="m">3</span><span>사진 길이를 늘려 <strong>노래 길이에 맞춥니다</strong> (8장 · 2분 = 한 장 15초)</span></li>
+      <li><span class="m">4</span><span>맨 앞에 제목 한 줄 → <strong>1080p로 내보내기</strong></span></li>
+    </ul>
+    <p style="color:var(--crimson);font-weight:700">다 되면 그 자리에서 카톡으로 보내십시오. 집에 가면 못 보냅니다.</p>
   </div>
 </section>
 
@@ -1330,7 +1343,7 @@ body { overflow: hidden; }
 <section class="slide part-slide">
   <div class="pn">제 5 부</div>
   <h2>가족을 지키기</h2>
-  <p>오늘 전원이 완성해서 가져가는 유일한 항목입니다.</p>
+  <p>방금 만드신 이야기와 사진을 지키는 일이기도 합니다.</p>
 </section>
 
 <!-- 31 -->
@@ -1444,18 +1457,62 @@ body { overflow: hidden; }
 </section>
 
 <!-- 34 -->
-<section class="slide lab-slide">
-  <div class="lab-badge" style="margin-bottom:1rem">실습 3 · 15분</div>
-  <h2>가족 안전 암호 카드 완성하기</h2>
+<section class="slide">
+  <div class="s-eyebrow">비밀번호 · 흔한 오해</div>
+  <h2>&lsquo;복잡하게&rsquo;는 이제 틀린 조언입니다</h2>
   <div class="s-body">
-    <p class="wide-p">워크북의 <strong>안전 암호 카드</strong>를 채우십시오. 오늘 이 자리를 뜨기 전에 반드시 끝냅니다.</p>
+    <div class="cols">
+      <div class="card warn">
+        <h4>이런 것은 약합니다</h4>
+        <ul style="font-family:var(--f-mono)">
+          <li>P@ssw0rd!</li>
+          <li>Atlanta2026!</li>
+          <li>내이름 + 생년월일</li>
+        </ul>
+        <p style="font-size:1rem;margin-top:.7rem">짧아서 컴퓨터가 금방 풉니다. <strong>사람만 외우기 힘들 뿐입니다.</strong></p>
+      </div>
+      <div class="card good">
+        <h4>이렇게 하십시오</h4>
+        <ul style="font-family:var(--f-mono)">
+          <li>고등어7수박달력연필</li>
+          <li>anam-tiger-melon-42</li>
+        </ul>
+        <p style="font-size:1rem;margin-top:.7rem">관계없는 <strong>단어 네 개</strong>. 길고, 외워지고, 인터넷에 없습니다.</p>
+      </div>
+    </div>
+    <p class="punch" style="max-width:32ch">진짜 위험은 복잡함이 아니라 <em>같은 걸 여러 곳에 쓰는 것</em>입니다.</p>
+  </div>
+</section>
+
+<!-- 34b -->
+<section class="slide">
+  <div class="s-eyebrow">오늘 배운 것 중 유일한 예외</div>
+  <div class="s-body" style="justify-content:center">
+    <p class="punch" style="max-width:30ch">AI에게 비밀번호를 <em>만들어 달라고 하지 마십시오.</em></p>
+    <p class="wide-p">오늘 AI로 무엇이든 하실 수 있지만 이것만은 예외입니다. AI에게 시키면 그 비밀번호가 <strong>대화 기록에 그대로 남습니다.</strong> 만든 비밀번호를 &ldquo;안전한가요?&rdquo;라고 물어보셔도 안 됩니다.</p>
+    <div class="card good">
+      <h4>대신 오늘 하실 일 — 효과가 가장 큰 것 하나</h4>
+      <p style="font-size:1.08rem;line-height:1.75"><strong>이메일 계정에 2단계 인증을 켜십시오.</strong> 비밀번호가 털려도 휴대폰이 없으면 못 들어옵니다. 비밀번호를 바꾸는 것보다 훨씬 강력합니다.</p>
+      <p style="font-size:1rem;margin-top:.6rem;color:var(--ink-2)">이메일 하나만 뚫리면 나머지가 전부 열립니다. 다른 사이트의 &lsquo;비밀번호 찾기&rsquo;가 그 메일로 오기 때문입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 34c -->
+<section class="slide lab-slide">
+  <div class="lab-badge" style="margin-bottom:1rem">실습 4 · 10분</div>
+  <h2>비밀번호와 가족 암호, 오늘 끝냅니다</h2>
+  <div class="s-body">
     <ul class="big-list">
-      <li><span class="m">1</span><span>가족만 아는 말을 하나 정합니다 — <strong>인터넷에 없는 것</strong>으로</span></li>
-      <li><span class="m">2</span><span>카드에 적습니다 (생일·전화번호·주소는 안 됩니다)</span></li>
-      <li><span class="m">3</span><span><strong>지금 이 자리에서</strong> 가족 단톡방에 알립니다</span></li>
-      <li><span class="m">4</span><span>지갑에 넣고, 냉장고에 한 장 더 붙이십시오</span></li>
+      <li><span class="m">1</span><span>이메일 비밀번호를 <strong>단어 네 개</strong>로 새로 정합니다</span></li>
+      <li><span class="m">2</span><span>그 계정에 <strong>2단계 인증</strong>을 켭니다</span></li>
+      <li><span class="m">3</span><span>워크북의 <strong>가족 안전 암호 카드</strong>를 채웁니다 — 인터넷에 없는 말로</span></li>
+      <li><span class="m">4</span><span><strong>지금 이 자리에서</strong> 가족 단톡방에 알립니다</span></li>
     </ul>
-    <div class="card good"><h4>좋은 암호의 예</h4><p style="font-size:1.05rem">살던 동네 이름 · 키우던 개 이름 · 외할머니의 말버릇 · 첫 가게 간판 이름</p></div>
+    <div class="card warn">
+      <h4>오늘 만든 영상에 관하여</h4>
+      <p style="font-size:1.05rem">교우님 목소리와 가족 얼굴이 들어 있습니다. 가족끼리 나누는 것은 좋지만 <strong>공개 계정에는 올리지 마십시오.</strong> 목소리 몇 초면 복제됩니다.</p>
+    </div>
   </div>
 </section>
 
@@ -1465,11 +1522,11 @@ body { overflow: hidden; }
   <h2>오늘 밤 집에서 하실 세 가지</h2>
   <div class="s-body">
     <ul class="big-list">
-      <li><span class="m">1</span><span><strong>가족 단톡방에 안전 암호를 알리십시오.</strong> 오늘 안에. 정해만 두고 알리지 않으면 소용없습니다.</span></li>
-      <li><span class="m">2</span><span><strong>영문 우편물 한 장을 카메라로 비춰 보십시오.</strong> 한 번 해 보시면 습관이 됩니다.</span></li>
-      <li><span class="m">3</span><span><strong>30분만 녹음하십시오.</strong> 자서전은 자료가 다 모여서 시작하는 것이 아닙니다.</span></li>
+      <li><span class="m">1</span><span><strong>오늘 만든 영상을 가족 단톡방에 올리십시오.</strong> 아직 안 보내셨다면 오늘 안에.</span></li>
+      <li><span class="m">2</span><span><strong>자서전 두 번째 장을 쓰십시오.</strong> 오늘과 똑같이 — 장면 하나, 5분 구술, 지시문, 확인. <strong>일주일에 한 장이면 1년에 책 한 권입니다.</strong></span></li>
+      <li><span class="m">3</span><span><strong>계정 세 개에 2단계 인증을 켜십시오.</strong> 은행, 카카오톡, 페이스북 순으로.</span></li>
     </ul>
-    <p class="punch" style="max-width:30ch">AI의 손님이 아니라 <em>주인</em>으로.</p>
+    <p class="punch" style="max-width:30ch">교우님의 이야기가 <em>오늘 처음으로</em> 남았습니다.</p>
     <p style="color:var(--ink-3);font-family:var(--f-mono);font-size:.9rem">교재와 워크북은 계속 보실 수 있습니다. 궁금한 것은 교우회 단톡방에 올려 주십시오.</p>
   </div>
 </section>
@@ -1480,7 +1537,7 @@ body { overflow: hidden; }
   <span class="ku">고대 아틀란타 교우회 AI 워크샵</span>
   <span class="bar"><i id="pbar"></i></span>
   <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
-  <span id="cnt" style="min-width:5.5em;text-align:center">1 / 36</span>
+  <span id="cnt" style="min-width:5.5em;text-align:center">1 / 38</span>
   <button type="button" id="next" aria-label="다음 슬라이드">→</button>
 </div>
 
