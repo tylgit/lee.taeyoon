@@ -1,9 +1,13 @@
 # Groove Lab — Drum Pattern Practice
 
 Ten upbeat drum patterns built around the groove from the practice sheet.
-Open **`index.html`** in a browser for the interactive version: it plays every
-pattern with adjustable tempo, a metronome click, an auto-advance practice
-mode, and editable grids so you can invent your own variations.
+Open **`index.html`** in a browser for the interactive version: every card
+shows standard drum notation in the same format as the practice sheet
+(hi-hat x-heads with open-hat circles, snare and kick voices, beams and
+rests), plus an editable step grid that keeps the notation in sync. It plays
+every pattern with adjustable tempo, a metronome click, and an auto-advance
+practice mode. Printing the page produces a paper practice sheet with the
+notation only.
 
 ## How to read the grids
 

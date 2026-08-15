@@ -141,6 +141,9 @@
   .level { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: 0.1em; }
   .card p.desc { margin: 0 0 14px; color: var(--muted); font-size: 13.5px; max-width: 70ch; }
 
+  .notation { color: var(--ink); margin: 0 0 10px; }
+  .notation svg { display: block; width: 100%; max-width: 620px; height: auto; }
+
   .grid-scroll { overflow-x: auto; padding-bottom: 4px; }
   .seq { display: grid; grid-template-columns: 34px 1fr; row-gap: 5px; min-width: 560px; }
   .row-label {
@@ -204,6 +207,13 @@
   @media (prefers-reduced-motion: reduce) {
     .cell { transition: none; }
   }
+
+  @media print {
+    .transport, .reset-btn, .plan { display: none; }
+    body { background: #fff; }
+    .card { break-inside: avoid; box-shadow: none; }
+    .grid-scroll { display: none; }   /* paper gets the notation only */
+  }
 </style>
 
 <div class="wrap">
@@ -214,7 +224,9 @@
       The first card is the pattern from your sheet. The first group of variations keeps its
       signature beat-2-and-3 snare figure — 2, the "a" of 2, the "e" of 3, and 4 — exactly in
       place and changes only the kick and hi-hats around it. The second group loosens the
-      structure to explore different feels. Tap any cell to make your own variation.
+      structure to explore different feels. Each card shows standard drum notation in the
+      same format as your sheet, with the step grid below it — tap any cell and the notation
+      updates too. Printing this page gives you a paper practice sheet.
     </p>
   </header>
 
@@ -406,6 +418,102 @@ let nextTime = 0, step = 0, barCount = 0, timerId = null;
 let drawQueue = [];
 let openHatGain = null;
 
+/* ---------------- notation renderer ----------------
+   Renders one bar of standard drum notation as SVG, in the same
+   format as the practice sheet: hi-hat as x-heads above the staff
+   (open = circled), snare on the 3rd space, both beamed stems-up;
+   kick in the 1st space as a stems-down voice with 8th/quarter rests. */
+function renderNotation(p) {
+  const S = 8, TOP = 36, CW = 21, BG = 12, LEFT = 46;
+  const W = LEFT + 16 * CW + 3 * BG + 12, H = 102;
+  const Y_HH = TOP - 5, Y_SN = TOP + 1.5 * S, Y_KK = TOP + 3.5 * S;
+  const BEAM_UP = TOP - 26, BEAM_DN = TOP + 4 * S + 20;
+  const hx = st => LEFT + st * CW + Math.floor(st / 4) * BG + 6;
+  let o = "";
+  const line = (x1, y1, x2, y2, w) => { o += '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="currentColor" stroke-width="' + (w || 1) + '"/>'; };
+  const rect = (x, y, w, h) => { o += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="currentColor"/>'; };
+  const path = (d, sw) => { o += '<path d="' + d + '" stroke="currentColor" stroke-width="' + (sw || 1.6) + '" fill="none" stroke-linecap="round"/>'; };
+  const dot = (x, y) => { o += '<circle cx="' + x + '" cy="' + y + '" r="1.9" fill="currentColor"/>'; };
+  const head = (x, y, rx, ry, op) => { o += '<ellipse cx="' + x + '" cy="' + y + '" rx="' + rx + '" ry="' + ry + '" fill="currentColor"' + (op ? ' opacity="0.75"' : '') + '/>'; };
+
+  /* staff, start double-bar, percussion clef, end bar */
+  for (let i = 0; i < 5; i++) line(LEFT - 24, TOP + i * S, W - 4, TOP + i * S, 1);
+  rect(LEFT - 24, TOP, 3, 4 * S); line(LEFT - 17, TOP, LEFT - 17, TOP + 4 * S, 1.2);
+  rect(LEFT - 10, TOP + S, 2.6, 2 * S); rect(LEFT - 5, TOP + S, 2.6, 2 * S);
+  line(W - 4, TOP, W - 4, TOP + 4 * S, 1.6);
+
+  const qRest = (x, y) => path("M" + (x - 2.5) + "," + (y - 8) + " L" + (x + 2.5) + "," + (y - 3) + " L" + (x - 2.5) + "," + (y + 1.5) + " Q" + (x + 4) + "," + (y + 4) + " " + (x + 1) + "," + (y + 8.5), 2.2);
+  const eRest = (x, y) => { o += '<circle cx="' + (x - 2.6) + '" cy="' + y + '" r="2" fill="currentColor"/>'; path("M" + (x - 1.2) + "," + (y + 1.2) + " Q" + (x + 1.5) + "," + (y + 2.4) + " " + (x + 3) + "," + (y + 0.3) + " L" + (x - 0.6) + "," + (y + 10), 1.5); };
+  const sRest = (x, y) => { o += '<circle cx="' + (x - 2.6) + '" cy="' + y + '" r="1.8" fill="currentColor"/><circle cx="' + (x - 3.4) + '" cy="' + (y + 5) + '" r="1.8" fill="currentColor"/>'; path("M" + (x - 1.2) + "," + (y + 1) + " Q" + (x + 1.5) + "," + (y + 2.2) + " " + (x + 3) + "," + (y + 0.3) + " L" + (x - 1.4) + "," + (y + 13), 1.5); };
+
+  /* one voice = list of onsets (0..3) inside a beat; durations run to
+     the next onset. dur 1 = 16th, 2 = 8th, 3 = dotted 8th, 4 = quarter. */
+  const beamGroup = (sxs, durs, beamY, secondUp) => {
+    rect(sxs[0] - 0.7, beamY, sxs[sxs.length - 1] - sxs[0] + 1.4, 3.4);
+    const yb = secondUp ? beamY - 4.8 : beamY + 5;
+    for (let i = 0; i < durs.length; i++) {
+      if (durs[i] !== 1) continue;
+      if (i < durs.length - 1 && durs[i + 1] === 1) rect(sxs[i] - 0.7, yb, sxs[i + 1] - sxs[i] + 1.4, 3);
+      else if (!(i > 0 && durs[i - 1] === 1))
+        rect(i === durs.length - 1 ? sxs[i] - 8 : sxs[i] - 0.7, yb, 8.7, 3);
+    }
+  };
+  const flag = (sx, sy, down) => {
+    const d = down ? -1 : 1;
+    path("M" + sx + "," + sy + " C" + (sx + 7) + "," + (sy + 4 * d) + " " + (sx + 8) + "," + (sy + 10 * d) + " " + (sx + 3) + "," + (sy + 16 * d), 2.2);
+  };
+
+  for (let b = 0; b < 4; b++) {
+    /* --- top voice: hi-hat + snare, stems up --- */
+    const evs = [];
+    for (let r = 0; r < 4; r++) { const st = 4 * b + r; if (p.hh[st] || p.sn[st]) evs.push(r); }
+    if (!evs.length) { qRest(hx(4 * b + 1) + CW / 2, TOP + 1.7 * S); }
+    else {
+      const durs = evs.map((r, i) => i < evs.length - 1 ? evs[i + 1] - r : 4 - r);
+      const sxs = [];
+      evs.forEach((r, i) => {
+        const st = 4 * b + r, x = hx(st), hasH = p.hh[st], hasS = p.sn[st];
+        const sx = x + 4.4; sxs.push(sx);
+        if (hasH) {
+          line(x - 3.4, Y_HH - 3.4, x + 3.4, Y_HH + 3.4, 1.7);
+          line(x - 3.4, Y_HH + 3.4, x + 3.4, Y_HH - 3.4, 1.7);
+          if (hasH === 2) o += '<circle cx="' + x + '" cy="' + Y_HH + '" r="5.8" stroke="currentColor" stroke-width="1.4" fill="none"/>';
+        }
+        if (hasS) {
+          const gh = hasS === 1;
+          head(x, Y_SN, gh ? 3.4 : 4.6, gh ? 2.6 : 3.5, gh);
+          if (gh) { path("M" + (x - 7) + "," + (Y_SN - 5) + " q-3.4,5 0,10", 1.3); path("M" + (x + 7) + "," + (Y_SN - 5) + " q3.4,5 0,10", 1.3); }
+        }
+        line(sx, hasS ? Y_SN - 1 : Y_HH, sx, BEAM_UP + 1.5, 1.4);
+        if (durs[i] === 3) dot(x + 8.6, (hasS ? Y_SN : Y_HH) - 2);
+      });
+      if (evs.length > 1) beamGroup(sxs, durs, BEAM_UP, false);
+      else if (durs[0] < 4) { flag(sxs[0], BEAM_UP + 1, false); if (durs[0] === 1) flag(sxs[0], BEAM_UP + 7, false); }
+    }
+
+    /* --- bottom voice: kick, stems down, with rests --- */
+    const kev = [];
+    for (let r = 0; r < 4; r++) { if (p.kk[4 * b + r]) kev.push(r); }
+    if (!kev.length) { qRest(hx(4 * b + 1) + CW / 2, TOP + 2.6 * S); continue; }
+    const first = kev[0], ry = TOP + 2.5 * S;
+    if (first === 1) sRest(hx(4 * b), ry);
+    else if (first === 2) eRest(hx(4 * b), ry);
+    else if (first === 3) { eRest(hx(4 * b), ry); sRest(hx(4 * b + 2), ry); }
+    const kdurs = kev.map((r, i) => i < kev.length - 1 ? kev[i + 1] - r : 4 - r);
+    const ksxs = [];
+    kev.forEach((r, i) => {
+      const x = hx(4 * b + r), sx = x - 4.4; ksxs.push(sx);
+      head(x, Y_KK, 4.6, 3.5, false);
+      line(sx, Y_KK + 1, sx, BEAM_DN + 3, 1.4);
+      if (kdurs[i] === 3) dot(x + 8.6, Y_KK);
+    });
+    if (kev.length > 1) beamGroup(ksxs, kdurs, BEAM_DN, true);
+    else if (kdurs[0] < 4) { flag(ksxs[0], BEAM_DN + 3, true); if (kdurs[0] === 1) flag(ksxs[0], BEAM_DN - 3, true); }
+  }
+
+  return '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Drum notation for this pattern">' + o + "</svg>";
+}
+
 /* ---------------- build the cards ---------------- */
 const cardsEl = document.getElementById("cards");
 PATTERNS.forEach((p, idx) => {
@@ -424,6 +532,7 @@ PATTERNS.forEach((p, idx) => {
   if (p.badge) html += '<span class="badge">' + p.badge + '</span>';
   html += '<span class="level" title="Difficulty ' + p.level + ' of 4">' + dots + '</span></div>';
   html += '<p class="desc">' + p.desc + '</p>';
+  html += '<div class="notation">' + renderNotation(p) + '</div>';
   html += '<div class="grid-scroll"><div class="seq">';
 
   html += '<span class="row-label" aria-hidden="true"></span><div class="counts">';
@@ -474,6 +583,7 @@ cardsEl.addEventListener("click", e => {
     else                    v = v === 0 ? 2 : v === 2 ? 1 : 0; // off -> hit -> ghost
     PATTERNS[idx][lane][s] = v;
     cell.dataset.v = v;
+    card.querySelector(".notation").innerHTML = renderNotation(PATTERNS[idx]);
   }
 
   const resetBtn = e.target.closest(".reset-btn");
@@ -484,6 +594,7 @@ cardsEl.addEventListener("click", e => {
     card.querySelectorAll(".cell").forEach(c => {
       c.dataset.v = PATTERNS[idx][c.dataset.lane][Number(c.dataset.step)];
     });
+    card.querySelector(".notation").innerHTML = renderNotation(PATTERNS[idx]);
   }
 
   if (idx !== selIdx) selectPattern(idx);
