@@ -68,7 +68,7 @@
       <span class="note-title">이 장에서 배울 것</span>
       <ul>
         <li>이틀 전(8월 13일) 나온 Gemini 3.7 Flash가 왜 중요한 사건인지</li>
-        <li>&lsquo;값싼 모델&rsquo;이 최상급을 따라잡고 있다는 사실의 의미</li>
+        <li>최상급 모델과 값싼 모델의 <strong>실제 격차가 얼마인지</strong>, 그리고 순위표를 읽을 때 주의할 점</li>
         <li>Gemini Spark·Live가 교우님의 일상에서 하는 일</li>
       </ul>
     </div>
@@ -87,14 +87,40 @@
   <div class="wrap">
     <p>
       <strong>DeepSWE</strong>는 &ldquo;긴 프로그래밍 과제를 사람 도움 없이 끝까지 해내는 비율&rdquo;을 재는 시험입니다.
-      에이전트가 실제로 잘하는지를 보는 데 가장 가까운 지표입니다.
-      3.6 Flash의 49.0%가 3.7 Flash에서 <strong>65.3%</strong>로 올랐습니다. <span class="src">확인</span>
+      에이전트가 실제로 잘하는지를 보는 데 가장 가까운 지표입니다. <span class="src">확인</span>
+    </p>
+
+    <h3>이 표를 읽는 두 가지 방법</h3>
+    <p>
+      <strong>첫째, 세로로 읽으면 &lsquo;순위&rsquo;입니다.</strong>
+      맨 위는 Anthropic의 <strong>Claude Opus 5(74.0%)</strong>이고,
+      GPT-5.6 Sol, Claude Fable 5, GPT-5.6 Terra가 뒤를 잇습니다.
+      Gemini 3.7 Flash는 아홉 중 일곱째입니다. 1등이 아닙니다.
     </p>
     <p>
-      중요한 것은 이것이 &lsquo;최상급&rsquo; 모델이 아니라 <strong>&lsquo;싸고 빠른 일꾼&rsquo; 등급</strong>이라는 점입니다.
-      게다가 구글은 연말까지 출시 기념 반값(100만 토큰당 입력 $0.75 / 출력 $3.75)에 팔고 있습니다. <span class="src">확인</span>
-      <strong>값싼 등급이 작년 최상급을 넘어서는 일</strong>이 이제 몇 주 단위로 일어납니다.
+      <strong>둘째, 가로로 읽으면 &lsquo;간격&rsquo;입니다. 이쪽이 훨씬 중요합니다.</strong>
+      1위 74.0%와 값싼 등급 65.3% 사이가 <strong>8.7점</strong>밖에 안 됩니다.
+      그리고 그 값싼 모델은 3주 전만 해도 49.0%였습니다.
+      최상급을 살 형편이 아니어도, 오늘 손에 쥔 도구가
+      <strong>작년 최고 모델이 하던 일을 이미 넘어섭니다.</strong>
     </p>
+    <p>
+      값도 함께 보십시오. 구글은 연말까지 출시 기념 반값
+      (100만 토큰당 입력 $0.75 / 출력 $3.75)에 팔고 있습니다. <span class="src">확인</span>
+      1위 모델과 8.7점 차이를 <strong>수십 분의 일 값</strong>에 살 수 있다는 뜻입니다.
+    </p>
+
+    <div class="note check">
+      <span class="note-title">순위표를 볼 때 주의하실 것</span>
+      <p style="margin:0">
+        시험 점수는 <strong>한 가지 능력</strong>만 잽니다. DeepSWE는 코딩 시험이므로,
+        글쓰기·번역·상담을 잘하는지는 알려 주지 않습니다.
+        또 같은 시험도 측정 기관과 시점에 따라 1~2점씩 다르게 나옵니다.
+        <strong>1점 차이로 도구를 고르지 마십시오.</strong>
+        교우님께 실제로 중요한 것은 순위가 아니라
+        &ldquo;내가 시키려는 일을 해내는가&rdquo;와 &ldquo;값이 감당되는가&rdquo; 둘뿐입니다.
+      </p>
+    </div>
 
     <h3>교우님 일상에서는 이렇게 나타납니다</h3>
     <div class="term">
@@ -151,9 +177,27 @@
     </div>
 
     <p>
-      Grok 4.6은 Artificial Analysis 지능 지수에서 <strong>61점</strong>을 받아
-      GPT-5.6 Sol Max와 동률, 전 세계 3위에 올랐습니다.
-      위에 있는 것은 Anthropic의 <strong>Claude Opus 5</strong>와 <strong>Fable 5</strong> 둘뿐입니다. <span class="src">확인</span>
+      Grok 4.6은 종합 지능 지수(Artificial Analysis)에서 <strong>60.9점</strong>으로 전 세계 3위에 올랐습니다.
+      위에 있는 것은 Anthropic의 <strong>Claude Opus 5(63.0)</strong>와
+      <strong>Claude Fable 5(62.1)</strong> 둘뿐입니다. <span class="src">확인</span>
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>순위</th><th>모델</th><th>만든 곳</th><th class="num">종합 지능 지수</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Claude Opus 5</strong></td><td>Anthropic</td><td class="num">63.0</td></tr>
+          <tr><td>2</td><td><strong>Claude Fable 5</strong></td><td>Anthropic</td><td class="num">62.1</td></tr>
+          <tr><td>3</td><td><strong>Grok 4.6</strong></td><td>SpaceXAI</td><td class="num">60.9</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      앞 장의 코딩 시험(DeepSWE)과 순서가 조금 다릅니다. <strong>당연한 일입니다.</strong>
+      코딩만 재는 시험과 여러 능력을 합쳐 재는 지수는 결과가 다를 수밖에 없습니다.
+      <strong>어느 하나가 &lsquo;진짜 순위&rsquo;인 것이 아닙니다.</strong>
+      두 표가 함께 말해 주는 것은 순위가 아니라,
+      상위권이 <strong>몇 점 차이로 촘촘히 붙어 있다</strong>는 사실입니다.
     </p>
 
     <div class="note check">

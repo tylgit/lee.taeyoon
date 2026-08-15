@@ -326,17 +326,64 @@ body { overflow: hidden; }
 
 <!-- 16 -->
 <section class="slide fig-slide">
-  <div class="s-eyebrow">Google · 이틀 전</div>
-  <h2>값싼 모델이 3주 만에 16%p 올랐습니다</h2>
+  <div class="s-eyebrow">지금 누가 제일 잘하나</div>
+  <h2>최상급과 값싼 등급의 차이 &mdash; 겨우 8.7점</h2>
   <div class="s-body">{{fig:deepswe}}</div>
 </section>
 
 <!-- 17 -->
 <section class="slide">
-  <div class="s-eyebrow">이것이 뜻하는 것</div>
-  <div class="s-body" style="justify-content:center">
-    <p class="punch" style="max-width:26ch">&ldquo;작년에 써 보니 별로더라&rdquo;는<br>이 분야에서 <em>유효기간이 지난</em> 판단입니다.</p>
-    <p class="wide-p" style="margin-top:1rem">속도가 아니라 <strong>가속도</strong>를 보십시오. 지금 안 되는 일도 몇 달 뒤에는 됩니다. 그러니 지금 하실 일은 &lsquo;완벽한 도구 고르기&rsquo;가 아니라 <strong>&lsquo;쓰는 법 익히기&rsquo;</strong>입니다.</p>
+  <div class="s-eyebrow">표를 읽는 법</div>
+  <h2>세로가 아니라 가로를 보십시오</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card">
+        <h4>세로로 읽으면 — 순위</h4>
+        <ul>
+          <li>1위 <strong>Claude Opus 5</strong> 74.0%</li>
+          <li>2위 GPT-5.6 Sol 72.7%</li>
+          <li>3위 Claude Fable 5 69.7%</li>
+          <li style="color:var(--ink-3)">Gemini 3.7 Flash는 9개 중 7째</li>
+        </ul>
+      </div>
+      <div class="card hi">
+        <h4>가로로 읽으면 — 간격</h4>
+        <ul>
+          <li>1위와 값싼 등급 차이 <strong>8.7점</strong></li>
+          <li>그 값싼 모델은 3주 전 <strong>49.0%</strong>였습니다</li>
+          <li>값은 <strong>수십 분의 일</strong></li>
+        </ul>
+      </div>
+    </div>
+    <p class="punch" style="max-width:30ch">최상급을 못 사도, 오늘 손에 쥔 도구가 <em>작년 최고</em>를 넘어섭니다.</p>
+  </div>
+</section>
+
+<!-- 17b -->
+<section class="slide">
+  <div class="s-eyebrow">다만 조심하실 것</div>
+  <h2>1점 차이로 도구를 고르지 마십시오</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card warn">
+        <h4>시험 점수의 한계</h4>
+        <ul>
+          <li>DeepSWE는 <strong>코딩만</strong> 재는 시험입니다</li>
+          <li>글쓰기·번역·상담 실력은 알 수 없습니다</li>
+          <li>측정 기관·시점마다 1~2점씩 다릅니다</li>
+          <li>순위는 <strong>몇 주면 뒤집힙니다</strong></li>
+        </ul>
+      </div>
+      <div class="card good">
+        <h4>실제로 물어야 할 두 가지</h4>
+        <ul>
+          <li>내가 <strong>시키려는 일</strong>을 해내는가</li>
+          <li><strong>값</strong>이 감당되는가</li>
+        </ul>
+        <p style="font-size:1rem;margin-top:.8rem">이 둘이면 충분합니다. 순위표는 참고일 뿐입니다.</p>
+      </div>
+    </div>
+    <p class="wide-p" style="color:var(--ink-2)">&ldquo;작년에 써 보니 별로더라&rdquo;는 이 분야에서 유효기간이 지난 판단입니다. 지금 하실 일은 완벽한 도구 고르기가 아니라 <strong>쓰는 법 익히기</strong>입니다.</p>
   </div>
 </section>
 
@@ -348,7 +395,7 @@ body { overflow: hidden; }
     <ul class="big-list">
       <li><span class="m">2월</span><span>SpaceX가 xAI를 인수 — 합병 후 <strong>1조 2,500억 달러</strong>. 5월에 SpaceXAI로 재편</span></li>
       <li><span class="m">어제</span><span>코딩 도구 회사 <strong>Cursor를 600억 달러</strong>에 인수 완료 (8월 14일)</span></li>
-      <li><span class="m">어제</span><span><strong>Grok 4.6</strong> 발표 — 지능 지수 세계 3위. 위에는 Claude Opus 5와 Fable 5뿐</span></li>
+      <li><span class="m">어제</span><span><strong>Grok 4.6</strong> 발표 — 종합 지능 지수 <strong>60.9점</strong>으로 세계 3위. 위에는 Claude Opus 5(63.0)와 Fable 5(62.1)뿐</span></li>
     </ul>
     <div class="card warn" style="margin-top:.4rem">
       <h4>다만 주의</h4>
@@ -584,7 +631,7 @@ body { overflow: hidden; }
   <span class="ku">고대 아틀란타 교우회 AI 워크샵</span>
   <span class="bar"><i id="pbar"></i></span>
   <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
-  <span id="cnt" style="min-width:5.5em;text-align:center">1 / 35</span>
+  <span id="cnt" style="min-width:5.5em;text-align:center">1 / 36</span>
   <button type="button" id="next" aria-label="다음 슬라이드">→</button>
 </div>
 

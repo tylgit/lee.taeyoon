@@ -1,46 +1,87 @@
 <figure>
 <div class="fig-scroll">
-<svg viewBox="0 0 760 300" role="img" aria-label="DeepSWE v1.1 장기 코딩 과제 성공률 비교. GPT-5.6 Terra 69.6퍼센트, Gemini 3.7 Flash 65.3퍼센트, Claude Sonnet 5 53.8퍼센트, 3주 전 모델인 Gemini 3.6 Flash 49.0퍼센트. Gemini는 3주 만에 16.3퍼센트포인트 올랐다." style="font-family:var(--f-body)">
-  <!-- 눈금 -->
+<svg viewBox="0 0 800 470" role="img" aria-label="DeepSWE v1.1 장기 코딩 과제 성공률 전체 순위. Claude Opus 5 74.0퍼센트, GPT-5.6 Sol 72.7, Claude Fable 5 69.7, GPT-5.6 Terra 69.6, Kimi K3 67.5, Grok 4.6 67.0, Gemini 3.7 Flash 65.3, Claude Sonnet 5 53.8, 3주 전 모델인 Gemini 3.6 Flash 49.0. 1위와 값싼 등급인 Gemini 3.7 Flash의 차이는 8.7점포인트에 불과하다." style="font-family:var(--f-body)">
+  <!-- 눈금 : 0% = x210, 1% = 6.5px -->
   <g stroke="currentColor" opacity=".14">
-    <line x1="200" y1="40" x2="200" y2="238"/><line x1="330" y1="40" x2="330" y2="238"/>
-    <line x1="460" y1="40" x2="460" y2="238"/><line x1="590" y1="40" x2="590" y2="238"/>
-    <line x1="720" y1="40" x2="720" y2="238"/>
-  </g>
-  <g font-size="11" fill="currentColor" opacity=".55" text-anchor="middle" font-family="var(--f-mono)">
-    <text x="200" y="258">0%</text><text x="330" y="258">20</text><text x="460" y="258">40</text>
-    <text x="590" y="258">60</text><text x="720" y="258">80</text>
+    <line x1="210" y1="40" x2="210" y2="400"/><line x1="340" y1="40" x2="340" y2="400"/>
+    <line x1="470" y1="40" x2="470" y2="400"/><line x1="600" y1="40" x2="600" y2="400"/>
+    <line x1="730" y1="40" x2="730" y2="400"/>
   </g>
 
-  <!-- 막대 : 4px 라운드 데이터 엔드, 기준선에 고정 -->
+  <!-- 3.6 Flash 수준 기준선 : 3주 전 수준이 어디였는지 (막대 뒤에 깔림) -->
+  <line x1="528" y1="292" x2="528" y2="394" stroke="var(--crimson)" stroke-width="1.6" stroke-dasharray="4 4" opacity=".55"/>
+  <polygon points="528,286 524,294 532,294" fill="var(--crimson)" opacity=".75"/>
+
   <g font-size="13">
-    <text x="190" y="63" text-anchor="end" fill="currentColor">GPT-5.6 Terra</text>
-    <path d="M200 48 h448 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-448 z" fill="var(--s2)"/>
-    <text x="664" y="63" font-size="13" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">69.6%</text>
+    <!-- 1 Opus 5 -->
+    <text x="200" y="67" text-anchor="end" fill="currentColor">Claude Opus 5</text>
+    <path d="M210 52 h477 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-477 z" fill="var(--s1)"/>
+    <text x="703" y="67" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">74.0%</text>
 
-    <text x="190" y="113" text-anchor="end" fill="currentColor" font-weight="700">Gemini 3.7 Flash</text>
-    <path d="M200 98 h420 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-420 z" fill="var(--s3)"/>
-    <text x="636" y="113" font-size="13" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">65.3%</text>
+    <!-- 2 Sol -->
+    <text x="200" y="107" text-anchor="end" fill="currentColor">GPT-5.6 Sol</text>
+    <path d="M210 92 h469 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-469 z" fill="var(--s2)"/>
+    <text x="695" y="107" fill="currentColor" font-variant-numeric="tabular-nums">72.7%</text>
 
-    <text x="190" y="163" text-anchor="end" fill="currentColor">Claude Sonnet 5</text>
-    <path d="M200 148 h346 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-346 z" fill="var(--s1)"/>
-    <text x="562" y="163" font-size="13" fill="currentColor" font-variant-numeric="tabular-nums">53.8%</text>
+    <!-- 3 Fable 5 -->
+    <text x="200" y="147" text-anchor="end" fill="currentColor">Claude Fable 5</text>
+    <path d="M210 132 h449 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-449 z" fill="var(--s1)"/>
+    <text x="675" y="147" fill="currentColor" font-variant-numeric="tabular-nums">69.7%</text>
 
-    <text x="190" y="213" text-anchor="end" fill="currentColor" opacity=".7">Gemini 3.6 Flash</text>
-    <text x="190" y="228" text-anchor="end" font-size="10.5" fill="currentColor" opacity=".5">3주 전 모델</text>
-    <path d="M200 198 h314 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-314 z" fill="var(--s3)" opacity=".38"/>
-    <text x="530" y="213" font-size="13" fill="currentColor" opacity=".7" font-variant-numeric="tabular-nums">49.0%</text>
+    <!-- 4 Terra -->
+    <text x="200" y="187" text-anchor="end" fill="currentColor">GPT-5.6 Terra</text>
+    <path d="M210 172 h448 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-448 z" fill="var(--s2)"/>
+    <text x="674" y="187" fill="currentColor" font-variant-numeric="tabular-nums">69.6%</text>
+
+    <!-- 5 Kimi K3 -->
+    <text x="200" y="227" text-anchor="end" fill="currentColor">Kimi K3</text>
+    <text x="200" y="242" text-anchor="end" font-size="10.5" fill="var(--s5)">오픈웨이트 · 무료</text>
+    <path d="M210 212 h435 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-435 z" fill="var(--s5)"/>
+    <text x="661" y="227" fill="currentColor" font-variant-numeric="tabular-nums">67.5%</text>
+
+    <!-- 6 Grok 4.6 -->
+    <text x="200" y="267" text-anchor="end" fill="currentColor">Grok 4.6</text>
+    <path d="M210 252 h432 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-432 z" fill="var(--s4)"/>
+    <text x="658" y="267" fill="currentColor" font-variant-numeric="tabular-nums">67.0%</text>
+
+    <!-- 7 Gemini 3.7 Flash (강조) -->
+    <text x="200" y="307" text-anchor="end" fill="currentColor" font-weight="700">Gemini 3.7 Flash</text>
+    <text x="200" y="322" text-anchor="end" font-size="10.5" fill="var(--s3)">값싼 등급 · 이틀 전 출시</text>
+    <path d="M210 292 h420 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-420 z" fill="var(--s3)"/>
+    <text x="646" y="307" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">65.3%</text>
+
+    <!-- 8 Sonnet 5 -->
+    <text x="200" y="347" text-anchor="end" fill="currentColor">Claude Sonnet 5</text>
+    <path d="M210 332 h350 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-350 z" fill="var(--s1)" opacity=".55"/>
+    <text x="576" y="347" fill="currentColor" font-variant-numeric="tabular-nums">53.8%</text>
+
+    <!-- 9 3.6 Flash -->
+    <text x="200" y="387" text-anchor="end" fill="currentColor" opacity=".7">Gemini 3.6 Flash</text>
+    <text x="200" y="402" text-anchor="end" font-size="10.5" fill="currentColor" opacity=".5">3주 전 모델</text>
+    <path d="M210 372 h318 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-318 z" fill="var(--s3)" opacity=".35"/>
+    <text x="544" y="387" fill="currentColor" opacity=".7" font-variant-numeric="tabular-nums">49.0%</text>
+    <text x="600" y="387" font-size="12" font-weight="700" fill="var(--crimson)">↑ 3주 만에 +16.3%p</text>
   </g>
 
-  <!-- 3.6 → 3.7 상승 표시 : 3.6 막대 끝에서 3.7 막대 끝까지 -->
-  <path d="M518 196 L518 92 L624 92" fill="none" stroke="var(--crimson)" stroke-width="1.8" stroke-dasharray="4 3"/>
-  <circle cx="518" cy="196" r="3.5" fill="var(--crimson)"/>
-  <circle cx="624" cy="92" r="3.5" fill="var(--crimson)"/>
-  <text x="632" y="88" font-size="12.5" font-weight="700" fill="var(--crimson)">3주 만에 +16.3%p</text>
+  <!-- 1위 ↔ 값싼 등급 격차 -->
+  <path d="M634 314 L634 424 M691 74 L691 424" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3" opacity=".45"/>
+  <path d="M634 420 L691 420" stroke="var(--gold)" stroke-width="2"/>
+  <text x="700" y="424" font-size="12" font-weight="700" fill="var(--gold)">격차 8.7점</text>
 
-  <line x1="200" y1="40" x2="200" y2="240" stroke="currentColor" opacity=".45"/>
-  <text x="200" y="282" font-size="11.5" fill="currentColor" opacity=".6">긴 코딩 과제를 끝까지 혼자 해내는 비율 (DeepSWE v1.1)</text>
+  <g font-size="11" fill="currentColor" opacity=".55" text-anchor="middle" font-family="var(--f-mono)">
+    <text x="210" y="446">0%</text><text x="340" y="446">20</text><text x="470" y="446">40</text>
+    <text x="600" y="446">60</text><text x="730" y="446">80</text>
+  </g>
+  <line x1="210" y1="40" x2="210" y2="404" stroke="currentColor" opacity=".45"/>
+  <text x="14" y="466" font-size="11.5" fill="currentColor" opacity=".6">긴 코딩 과제를 사람 도움 없이 끝까지 해내는 비율 · DeepSWE v1.1 (2026년 8월 14일 갱신)</text>
 </svg>
 </div>
-<figcaption><strong>속도가 아니라 가속도를 보십시오.</strong> 구글의 값싼 &lsquo;일꾼&rsquo; 모델이 3주 만에 16.3%p 올라 최상급 모델 바로 아래에 붙었습니다. 작년 기준으로 도구를 고르면 이미 한 세대가 늦습니다.</figcaption>
+<ul class="legend">
+  <li><span class="swatch" style="background:var(--s1)"></span>Anthropic</li>
+  <li><span class="swatch" style="background:var(--s2)"></span>OpenAI</li>
+  <li><span class="swatch" style="background:var(--s3)"></span>Google</li>
+  <li><span class="swatch" style="background:var(--s4)"></span>SpaceXAI</li>
+  <li><span class="swatch" style="background:var(--s5)"></span>오픈웨이트</li>
+</ul>
+<figcaption><strong>1위 Claude Opus 5(74.0%)와 값싼 등급 Gemini 3.7 Flash(65.3%)의 차이가 8.7점뿐입니다.</strong> 게다가 그 값싼 모델은 3주 전만 해도 49.0%였습니다. 최상급을 살 형편이 아니어도 오늘 할 수 있는 일이, 작년 최고 모델이 하던 일을 넘어섭니다.</figcaption>
 </figure>

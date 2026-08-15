@@ -1006,7 +1006,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
       <span class="note-title">이 장에서 배울 것</span>
       <ul>
         <li>이틀 전(8월 13일) 나온 Gemini 3.7 Flash가 왜 중요한 사건인지</li>
-        <li>&lsquo;값싼 모델&rsquo;이 최상급을 따라잡고 있다는 사실의 의미</li>
+        <li>최상급 모델과 값싼 모델의 <strong>실제 격차가 얼마인지</strong>, 그리고 순위표를 읽을 때 주의할 점</li>
         <li>Gemini Spark·Live가 교우님의 일상에서 하는 일</li>
       </ul>
     </div>
@@ -1022,62 +1022,129 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
   <div class="wide"><figure>
 <div class="fig-scroll">
-<svg viewBox="0 0 760 300" role="img" aria-label="DeepSWE v1.1 장기 코딩 과제 성공률 비교. GPT-5.6 Terra 69.6퍼센트, Gemini 3.7 Flash 65.3퍼센트, Claude Sonnet 5 53.8퍼센트, 3주 전 모델인 Gemini 3.6 Flash 49.0퍼센트. Gemini는 3주 만에 16.3퍼센트포인트 올랐다." style="font-family:var(--f-body)">
-  <!-- 눈금 -->
+<svg viewBox="0 0 800 470" role="img" aria-label="DeepSWE v1.1 장기 코딩 과제 성공률 전체 순위. Claude Opus 5 74.0퍼센트, GPT-5.6 Sol 72.7, Claude Fable 5 69.7, GPT-5.6 Terra 69.6, Kimi K3 67.5, Grok 4.6 67.0, Gemini 3.7 Flash 65.3, Claude Sonnet 5 53.8, 3주 전 모델인 Gemini 3.6 Flash 49.0. 1위와 값싼 등급인 Gemini 3.7 Flash의 차이는 8.7점포인트에 불과하다." style="font-family:var(--f-body)">
+  <!-- 눈금 : 0% = x210, 1% = 6.5px -->
   <g stroke="currentColor" opacity=".14">
-    <line x1="200" y1="40" x2="200" y2="238"/><line x1="330" y1="40" x2="330" y2="238"/>
-    <line x1="460" y1="40" x2="460" y2="238"/><line x1="590" y1="40" x2="590" y2="238"/>
-    <line x1="720" y1="40" x2="720" y2="238"/>
-  </g>
-  <g font-size="11" fill="currentColor" opacity=".55" text-anchor="middle" font-family="var(--f-mono)">
-    <text x="200" y="258">0%</text><text x="330" y="258">20</text><text x="460" y="258">40</text>
-    <text x="590" y="258">60</text><text x="720" y="258">80</text>
+    <line x1="210" y1="40" x2="210" y2="400"/><line x1="340" y1="40" x2="340" y2="400"/>
+    <line x1="470" y1="40" x2="470" y2="400"/><line x1="600" y1="40" x2="600" y2="400"/>
+    <line x1="730" y1="40" x2="730" y2="400"/>
   </g>
 
-  <!-- 막대 : 4px 라운드 데이터 엔드, 기준선에 고정 -->
+  <!-- 3.6 Flash 수준 기준선 : 3주 전 수준이 어디였는지 (막대 뒤에 깔림) -->
+  <line x1="528" y1="292" x2="528" y2="394" stroke="var(--crimson)" stroke-width="1.6" stroke-dasharray="4 4" opacity=".55"/>
+  <polygon points="528,286 524,294 532,294" fill="var(--crimson)" opacity=".75"/>
+
   <g font-size="13">
-    <text x="190" y="63" text-anchor="end" fill="currentColor">GPT-5.6 Terra</text>
-    <path d="M200 48 h448 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-448 z" fill="var(--s2)"/>
-    <text x="664" y="63" font-size="13" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">69.6%</text>
+    <!-- 1 Opus 5 -->
+    <text x="200" y="67" text-anchor="end" fill="currentColor">Claude Opus 5</text>
+    <path d="M210 52 h477 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-477 z" fill="var(--s1)"/>
+    <text x="703" y="67" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">74.0%</text>
 
-    <text x="190" y="113" text-anchor="end" fill="currentColor" font-weight="700">Gemini 3.7 Flash</text>
-    <path d="M200 98 h420 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-420 z" fill="var(--s3)"/>
-    <text x="636" y="113" font-size="13" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">65.3%</text>
+    <!-- 2 Sol -->
+    <text x="200" y="107" text-anchor="end" fill="currentColor">GPT-5.6 Sol</text>
+    <path d="M210 92 h469 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-469 z" fill="var(--s2)"/>
+    <text x="695" y="107" fill="currentColor" font-variant-numeric="tabular-nums">72.7%</text>
 
-    <text x="190" y="163" text-anchor="end" fill="currentColor">Claude Sonnet 5</text>
-    <path d="M200 148 h346 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-346 z" fill="var(--s1)"/>
-    <text x="562" y="163" font-size="13" fill="currentColor" font-variant-numeric="tabular-nums">53.8%</text>
+    <!-- 3 Fable 5 -->
+    <text x="200" y="147" text-anchor="end" fill="currentColor">Claude Fable 5</text>
+    <path d="M210 132 h449 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-449 z" fill="var(--s1)"/>
+    <text x="675" y="147" fill="currentColor" font-variant-numeric="tabular-nums">69.7%</text>
 
-    <text x="190" y="213" text-anchor="end" fill="currentColor" opacity=".7">Gemini 3.6 Flash</text>
-    <text x="190" y="228" text-anchor="end" font-size="10.5" fill="currentColor" opacity=".5">3주 전 모델</text>
-    <path d="M200 198 h314 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-314 z" fill="var(--s3)" opacity=".38"/>
-    <text x="530" y="213" font-size="13" fill="currentColor" opacity=".7" font-variant-numeric="tabular-nums">49.0%</text>
+    <!-- 4 Terra -->
+    <text x="200" y="187" text-anchor="end" fill="currentColor">GPT-5.6 Terra</text>
+    <path d="M210 172 h448 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-448 z" fill="var(--s2)"/>
+    <text x="674" y="187" fill="currentColor" font-variant-numeric="tabular-nums">69.6%</text>
+
+    <!-- 5 Kimi K3 -->
+    <text x="200" y="227" text-anchor="end" fill="currentColor">Kimi K3</text>
+    <text x="200" y="242" text-anchor="end" font-size="10.5" fill="var(--s5)">오픈웨이트 · 무료</text>
+    <path d="M210 212 h435 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-435 z" fill="var(--s5)"/>
+    <text x="661" y="227" fill="currentColor" font-variant-numeric="tabular-nums">67.5%</text>
+
+    <!-- 6 Grok 4.6 -->
+    <text x="200" y="267" text-anchor="end" fill="currentColor">Grok 4.6</text>
+    <path d="M210 252 h432 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-432 z" fill="var(--s4)"/>
+    <text x="658" y="267" fill="currentColor" font-variant-numeric="tabular-nums">67.0%</text>
+
+    <!-- 7 Gemini 3.7 Flash (강조) -->
+    <text x="200" y="307" text-anchor="end" fill="currentColor" font-weight="700">Gemini 3.7 Flash</text>
+    <text x="200" y="322" text-anchor="end" font-size="10.5" fill="var(--s3)">값싼 등급 · 이틀 전 출시</text>
+    <path d="M210 292 h420 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-420 z" fill="var(--s3)"/>
+    <text x="646" y="307" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">65.3%</text>
+
+    <!-- 8 Sonnet 5 -->
+    <text x="200" y="347" text-anchor="end" fill="currentColor">Claude Sonnet 5</text>
+    <path d="M210 332 h350 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-350 z" fill="var(--s1)" opacity=".55"/>
+    <text x="576" y="347" fill="currentColor" font-variant-numeric="tabular-nums">53.8%</text>
+
+    <!-- 9 3.6 Flash -->
+    <text x="200" y="387" text-anchor="end" fill="currentColor" opacity=".7">Gemini 3.6 Flash</text>
+    <text x="200" y="402" text-anchor="end" font-size="10.5" fill="currentColor" opacity=".5">3주 전 모델</text>
+    <path d="M210 372 h318 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-318 z" fill="var(--s3)" opacity=".35"/>
+    <text x="544" y="387" fill="currentColor" opacity=".7" font-variant-numeric="tabular-nums">49.0%</text>
+    <text x="600" y="387" font-size="12" font-weight="700" fill="var(--crimson)">↑ 3주 만에 +16.3%p</text>
   </g>
 
-  <!-- 3.6 → 3.7 상승 표시 : 3.6 막대 끝에서 3.7 막대 끝까지 -->
-  <path d="M518 196 L518 92 L624 92" fill="none" stroke="var(--crimson)" stroke-width="1.8" stroke-dasharray="4 3"/>
-  <circle cx="518" cy="196" r="3.5" fill="var(--crimson)"/>
-  <circle cx="624" cy="92" r="3.5" fill="var(--crimson)"/>
-  <text x="632" y="88" font-size="12.5" font-weight="700" fill="var(--crimson)">3주 만에 +16.3%p</text>
+  <!-- 1위 ↔ 값싼 등급 격차 -->
+  <path d="M634 314 L634 424 M691 74 L691 424" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="3 3" opacity=".45"/>
+  <path d="M634 420 L691 420" stroke="var(--gold)" stroke-width="2"/>
+  <text x="700" y="424" font-size="12" font-weight="700" fill="var(--gold)">격차 8.7점</text>
 
-  <line x1="200" y1="40" x2="200" y2="240" stroke="currentColor" opacity=".45"/>
-  <text x="200" y="282" font-size="11.5" fill="currentColor" opacity=".6">긴 코딩 과제를 끝까지 혼자 해내는 비율 (DeepSWE v1.1)</text>
+  <g font-size="11" fill="currentColor" opacity=".55" text-anchor="middle" font-family="var(--f-mono)">
+    <text x="210" y="446">0%</text><text x="340" y="446">20</text><text x="470" y="446">40</text>
+    <text x="600" y="446">60</text><text x="730" y="446">80</text>
+  </g>
+  <line x1="210" y1="40" x2="210" y2="404" stroke="currentColor" opacity=".45"/>
+  <text x="14" y="466" font-size="11.5" fill="currentColor" opacity=".6">긴 코딩 과제를 사람 도움 없이 끝까지 해내는 비율 · DeepSWE v1.1 (2026년 8월 14일 갱신)</text>
 </svg>
 </div>
-<figcaption><strong>속도가 아니라 가속도를 보십시오.</strong> 구글의 값싼 &lsquo;일꾼&rsquo; 모델이 3주 만에 16.3%p 올라 최상급 모델 바로 아래에 붙었습니다. 작년 기준으로 도구를 고르면 이미 한 세대가 늦습니다.</figcaption>
+<ul class="legend">
+  <li><span class="swatch" style="background:var(--s1)"></span>Anthropic</li>
+  <li><span class="swatch" style="background:var(--s2)"></span>OpenAI</li>
+  <li><span class="swatch" style="background:var(--s3)"></span>Google</li>
+  <li><span class="swatch" style="background:var(--s4)"></span>SpaceXAI</li>
+  <li><span class="swatch" style="background:var(--s5)"></span>오픈웨이트</li>
+</ul>
+<figcaption><strong>1위 Claude Opus 5(74.0%)와 값싼 등급 Gemini 3.7 Flash(65.3%)의 차이가 8.7점뿐입니다.</strong> 게다가 그 값싼 모델은 3주 전만 해도 49.0%였습니다. 최상급을 살 형편이 아니어도 오늘 할 수 있는 일이, 작년 최고 모델이 하던 일을 넘어섭니다.</figcaption>
 </figure></div>
 
   <div class="wrap">
     <p>
       <strong>DeepSWE</strong>는 &ldquo;긴 프로그래밍 과제를 사람 도움 없이 끝까지 해내는 비율&rdquo;을 재는 시험입니다.
-      에이전트가 실제로 잘하는지를 보는 데 가장 가까운 지표입니다.
-      3.6 Flash의 49.0%가 3.7 Flash에서 <strong>65.3%</strong>로 올랐습니다. <span class="src">확인</span>
+      에이전트가 실제로 잘하는지를 보는 데 가장 가까운 지표입니다. <span class="src">확인</span>
+    </p>
+
+    <h3>이 표를 읽는 두 가지 방법</h3>
+    <p>
+      <strong>첫째, 세로로 읽으면 &lsquo;순위&rsquo;입니다.</strong>
+      맨 위는 Anthropic의 <strong>Claude Opus 5(74.0%)</strong>이고,
+      GPT-5.6 Sol, Claude Fable 5, GPT-5.6 Terra가 뒤를 잇습니다.
+      Gemini 3.7 Flash는 아홉 중 일곱째입니다. 1등이 아닙니다.
     </p>
     <p>
-      중요한 것은 이것이 &lsquo;최상급&rsquo; 모델이 아니라 <strong>&lsquo;싸고 빠른 일꾼&rsquo; 등급</strong>이라는 점입니다.
-      게다가 구글은 연말까지 출시 기념 반값(100만 토큰당 입력 $0.75 / 출력 $3.75)에 팔고 있습니다. <span class="src">확인</span>
-      <strong>값싼 등급이 작년 최상급을 넘어서는 일</strong>이 이제 몇 주 단위로 일어납니다.
+      <strong>둘째, 가로로 읽으면 &lsquo;간격&rsquo;입니다. 이쪽이 훨씬 중요합니다.</strong>
+      1위 74.0%와 값싼 등급 65.3% 사이가 <strong>8.7점</strong>밖에 안 됩니다.
+      그리고 그 값싼 모델은 3주 전만 해도 49.0%였습니다.
+      최상급을 살 형편이 아니어도, 오늘 손에 쥔 도구가
+      <strong>작년 최고 모델이 하던 일을 이미 넘어섭니다.</strong>
     </p>
+    <p>
+      값도 함께 보십시오. 구글은 연말까지 출시 기념 반값
+      (100만 토큰당 입력 $0.75 / 출력 $3.75)에 팔고 있습니다. <span class="src">확인</span>
+      1위 모델과 8.7점 차이를 <strong>수십 분의 일 값</strong>에 살 수 있다는 뜻입니다.
+    </p>
+
+    <div class="note check">
+      <span class="note-title">순위표를 볼 때 주의하실 것</span>
+      <p style="margin:0">
+        시험 점수는 <strong>한 가지 능력</strong>만 잽니다. DeepSWE는 코딩 시험이므로,
+        글쓰기·번역·상담을 잘하는지는 알려 주지 않습니다.
+        또 같은 시험도 측정 기관과 시점에 따라 1~2점씩 다르게 나옵니다.
+        <strong>1점 차이로 도구를 고르지 마십시오.</strong>
+        교우님께 실제로 중요한 것은 순위가 아니라
+        &ldquo;내가 시키려는 일을 해내는가&rdquo;와 &ldquo;값이 감당되는가&rdquo; 둘뿐입니다.
+      </p>
+    </div>
 
     <h3>교우님 일상에서는 이렇게 나타납니다</h3>
     <div class="term">
@@ -1134,9 +1201,27 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     </div>
 
     <p>
-      Grok 4.6은 Artificial Analysis 지능 지수에서 <strong>61점</strong>을 받아
-      GPT-5.6 Sol Max와 동률, 전 세계 3위에 올랐습니다.
-      위에 있는 것은 Anthropic의 <strong>Claude Opus 5</strong>와 <strong>Fable 5</strong> 둘뿐입니다. <span class="src">확인</span>
+      Grok 4.6은 종합 지능 지수(Artificial Analysis)에서 <strong>60.9점</strong>으로 전 세계 3위에 올랐습니다.
+      위에 있는 것은 Anthropic의 <strong>Claude Opus 5(63.0)</strong>와
+      <strong>Claude Fable 5(62.1)</strong> 둘뿐입니다. <span class="src">확인</span>
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>순위</th><th>모델</th><th>만든 곳</th><th class="num">종합 지능 지수</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Claude Opus 5</strong></td><td>Anthropic</td><td class="num">63.0</td></tr>
+          <tr><td>2</td><td><strong>Claude Fable 5</strong></td><td>Anthropic</td><td class="num">62.1</td></tr>
+          <tr><td>3</td><td><strong>Grok 4.6</strong></td><td>SpaceXAI</td><td class="num">60.9</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      앞 장의 코딩 시험(DeepSWE)과 순서가 조금 다릅니다. <strong>당연한 일입니다.</strong>
+      코딩만 재는 시험과 여러 능력을 합쳐 재는 지수는 결과가 다를 수밖에 없습니다.
+      <strong>어느 하나가 &lsquo;진짜 순위&rsquo;인 것이 아닙니다.</strong>
+      두 표가 함께 말해 주는 것은 순위가 아니라,
+      상위권이 <strong>몇 점 차이로 촘촘히 붙어 있다</strong>는 사실입니다.
     </p>
 
     <div class="note check">
