@@ -1,0 +1,215 @@
+/* ── 고대 아틀란타 교우회 AI 워크샵 2026 · 공통 디자인 시스템 ─────────────
+   Display : 한국 출판 명조체 (교본의 얼굴)
+   Body    : 한국 고딕체 (30~80대 모두 읽히도록 큰 본문)
+   Utility : 고정폭 (프롬프트 · 명령어 · 수치)
+   ───────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* 지면 · 잉크 (라이트가 기본) */
+  --paper:      #FCFCFB;
+  --paper-2:    #F5F3F1;
+  --paper-3:    #ECE8E6;
+  --ink:        #171215;
+  --ink-2:      #4A4145;
+  --ink-3:      #756A6E;
+  --rule:       #DED8D6;
+  --rule-2:     #C9C1BF;
+
+  /* 고려대 정체성 */
+  --crimson:    #8A1538;
+  --crimson-2:  #B03052;
+  --crimson-in: #FBEEF1;
+  --gold:       #AD7C1C;
+  --gold-in:    #FBF3E2;
+
+  /* 색이 꽉 찬 브랜드 블록(부 표지·머리띠·번호 원)용.
+     본문 강조색(--crimson)은 테마에 따라 밝아지므로 흰 글씨를 얹을 수 없다.
+     이 두 값은 두 테마에서 모두 깊게 유지해 흰 글씨 대비를 보장한다. */
+  --brand-fill: #8A1538;
+  --gold-fill:  #8F6415;
+  --on-brand:   #FFFFFF;
+
+  /* 의미색 (계열색과 절대 겸용하지 않음) */
+  --good:       #2E7D55;
+  --good-in:    #E8F4EE;
+  --warn:       #A2621A;
+  --warn-in:    #FCF2E3;
+  --danger:     #B3241F;
+  --danger-in:  #FCECEB;
+
+  /* 검증된 계열색 · 라이트 (validate_palette.js 전 항목 통과) */
+  --s1: #B03052;  /* Anthropic  */
+  --s2: #1785A8;  /* OpenAI     */
+  --s3: #AD7C1C;  /* Google     */
+  --s4: #5568C4;  /* SpaceXAI   */
+  --s5: #2E9160;  /* 오픈웨이트  */
+  --s6: #A0489A;  /* Meta       */
+
+  --shadow: 0 1px 2px rgba(23,18,21,.06), 0 8px 24px -12px rgba(23,18,21,.18);
+
+  --f-display: 'Nanum Myeongjo', 'AppleMyungjo', 'Batang', 'Apple SD Gothic Neo', serif;
+  --f-body: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', system-ui, sans-serif;
+  --f-mono: 'D2Coding', 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+
+  --measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
+    --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
+    --rule: #383634;   --rule-2: #4A4744;
+    --crimson: #E0778F; --crimson-2: #D4657E; --crimson-in: #33181F;
+    --gold: #D6A340; --gold-in: #332816;
+    --good: #4FA97B; --good-in: #16281F;
+    --warn: #CF8A33; --warn-in: #2B2013;
+    --danger: #E0716C; --danger-in: #301A19;
+    --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
+    --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
+    --brand-fill: #7C1230; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
+  --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
+  --rule: #383634;   --rule-2: #4A4744;
+  --crimson: #E0778F; --crimson-2: #D4657E; --crimson-in: #33181F;
+  --gold: #D6A340; --gold-in: #332816;
+  --good: #4FA97B; --good-in: #16281F;
+  --warn: #CF8A33; --warn-in: #2B2013;
+  --danger: #E0716C; --danger-in: #301A19;
+  --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
+  --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
+  --brand-fill: #7C1230; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 17px;
+  line-height: 1.78;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; line-height: 1.3; margin: 0; font-weight: 700; }
+
+a { color: var(--crimson); text-underline-offset: 3px; }
+:focus-visible { outline: 2.5px solid var(--crimson-2); outline-offset: 3px; border-radius: 3px; }
+
+/* ── 공통 컴포넌트 ───────────────────────────────────────────────── */
+
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* 강의 배지 · 상태 칩 */
+.chip {
+  display: inline-flex; align-items: center; gap: .4em;
+  font-family: var(--f-mono); font-size: .7rem; letter-spacing: .05em;
+  padding: .25em .7em; border-radius: 100px; border: 1px solid;
+  white-space: nowrap; vertical-align: middle;
+}
+.chip-ok     { color: var(--good);   border-color: var(--good);   background: var(--good-in); }
+.chip-check  { color: var(--warn);   border-color: var(--warn);   background: var(--warn-in); }
+.chip-risk   { color: var(--danger); border-color: var(--danger); background: var(--danger-in); }
+.chip-ku     { color: var(--crimson);border-color: var(--crimson);background: var(--crimson-in); }
+
+/* 콜아웃 */
+.note {
+  border-left: 4px solid var(--rule-2);
+  background: var(--paper-2);
+  padding: 1.1rem 1.3rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.6rem 0;
+}
+.note > :first-child { margin-top: 0; }
+.note > :last-child  { margin-bottom: 0; }
+.note-title { font-family: var(--f-display); font-weight: 700; display: block; margin-bottom: .4rem; }
+.note.ok     { border-color: var(--good);    background: var(--good-in); }
+.note.ok     .note-title { color: var(--good); }
+.note.check  { border-color: var(--warn);    background: var(--warn-in); }
+.note.check  .note-title { color: var(--warn); }
+.note.risk   { border-color: var(--danger);  background: var(--danger-in); }
+.note.risk   .note-title { color: var(--danger); }
+.note.ku     { border-color: var(--crimson); background: var(--crimson-in); }
+.note.ku     .note-title { color: var(--crimson); }
+
+/* 프롬프트 상자 */
+.prompt {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  margin: 1.6rem 0;
+  overflow: hidden;
+}
+.prompt-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .6rem .95rem;
+  background: var(--paper-3);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--f-mono); font-size: .74rem; letter-spacing: .04em;
+  color: var(--ink-2);
+}
+.prompt pre {
+  margin: 0; padding: 1rem 1.1rem;
+  font-family: var(--f-mono); font-size: .84rem; line-height: 1.65;
+  white-space: pre-wrap; word-break: break-word; color: var(--ink);
+}
+.copy {
+  font: inherit; font-size: .72rem; cursor: pointer;
+  border: 1px solid var(--rule-2); background: var(--paper);
+  color: var(--ink-2); border-radius: 6px; padding: .22em .7em;
+}
+.copy:hover { border-color: var(--crimson); color: var(--crimson); }
+.copy[data-done="1"] { color: var(--good); border-color: var(--good); }
+
+/* 표 */
+.tbl-wrap { overflow-x: auto; margin: 1.7rem 0; border: 1px solid var(--rule); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; min-width: 560px; }
+th, td { padding: .7rem .85rem; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+thead th {
+  background: var(--paper-3); font-family: var(--f-mono); font-weight: 600;
+  font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2);
+  position: sticky; top: 0;
+}
+tbody tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* 도표 */
+figure { margin: 2rem 0; }
+figure svg { display: block; max-width: 100%; height: auto; margin-inline: auto; }
+figcaption {
+  margin-top: .85rem; font-size: .84rem; color: var(--ink-3);
+  text-align: center; line-height: 1.6; text-wrap: balance;
+}
+.fig-scroll { overflow-x: auto; }
+
+/* 범례 */
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; justify-content: center; margin: .9rem 0 0; padding: 0; list-style: none; font-size: .8rem; color: var(--ink-2); }
+.legend li { display: flex; align-items: center; gap: .45em; }
+.swatch { width: 11px; height: 11px; border-radius: 3px; flex: none; }
+
+/* 출처 확인 표시 */
+.src {
+  font-family: var(--f-mono); font-size: .68rem; letter-spacing: .03em;
+  color: var(--good); border: 1px solid var(--good); background: var(--good-in);
+  border-radius: 4px; padding: .1em .45em; white-space: nowrap; vertical-align: .12em;
+}
+.src.unver { color: var(--warn); border-color: var(--warn); background: var(--warn-in); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

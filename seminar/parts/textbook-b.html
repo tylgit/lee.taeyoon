@@ -1,0 +1,793 @@
+<section class="chapter" id="c3">
+  <div class="wrap">
+    <div class="ch-num">제3장</div>
+    <h2>OpenAI — GPT-5.6과 ChatGPT Work</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>GPT-5.6이 <strong>하나가 아니라 셋</strong>(Sol·Terra·Luna)이라는 점과 그 고르는 법</li>
+        <li>ChatGPT Work가 Claude Cowork와 정면으로 맞서는 제품이라는 점</li>
+      </ul>
+    </div>
+
+    <p>
+      OpenAI는 2026년 7월 9일 GPT-5.6을 공개했습니다.
+      특이한 것은 <strong>한 모델이 아니라 세 등급</strong>으로 나왔다는 점입니다.
+      같은 날 <strong>ChatGPT Work</strong>도 함께 발표되었습니다. <span class="src">확인</span>
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>등급</th><th>성격</th><th>API 값 (100만 토큰, 입력/출력)</th><th>이럴 때 고릅니다</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sol</strong></td><td>최상급 · 가장 깊이 생각함</td><td class="num">$5 / $30</td><td>어려운 분석, 중요한 판단, 긴 문서 해석</td></tr>
+          <tr><td><strong>Terra</strong></td><td>중간 · 매일 쓰는 일꾼</td><td class="num">$2.50 / $15</td><td>대부분의 업무. 기본값으로 두시면 됩니다</td></tr>
+          <tr><td><strong>Luna</strong></td><td>가장 빠르고 쌈</td><td class="num">$1 / $6</td><td>간단한 요약, 번역, 분류 등 양이 많은 일</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note check">
+      <span class="note-title">값에 관한 주의</span>
+      <p style="margin:0">
+        위 값은 출시 당시 기준입니다. 7월 30일에 Luna가 80%, Terra가 20% 인하되었으므로
+        현재 실제 단가는 더 낮습니다. <span class="src unver">확인 권장</span>
+        또한 이 값은 개발자가 API로 쓸 때의 값이고,
+        교우님이 ChatGPT 앱으로 쓰실 때는 월정액이라 해당되지 않습니다.
+      </p>
+    </div>
+
+    <h3>ChatGPT Work — 몇 시간짜리 프로젝트를 통째로</h3>
+    <p>
+      ChatGPT Work는 &ldquo;질문에 답하는&rdquo; 물건이 아니라
+      <strong>&ldquo;일을 처음부터 끝까지 해내는&rdquo;</strong> 물건으로 설계되었습니다.
+      코딩 도구였던 Codex를 ChatGPT 안으로 합쳐, 여러 시간 걸리는 작업을 맡을 수 있게 만들었습니다.
+      <span class="src">확인</span>
+    </p>
+    <p>
+      Claude Cowork와 겨냥하는 지점이 거의 같습니다. 실무에서 둘 중 하나를 고르실 때 기준은 단순합니다 —
+      <strong>이미 ChatGPT를 구독 중이시면 ChatGPT Work</strong>부터 써 보시고,
+      문서의 정확성과 긴 문서 이해가 특히 중요하시면 Claude Cowork를 함께 시험해 보십시오.
+      두 개를 다 구독할 필요는 없습니다.
+    </p>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>GPT-5.6은 <strong>Sol(어려운 일) · Terra(보통 일) · Luna(많은 일)</strong> 세 등급입니다. 헷갈리시면 Terra에 두시면 됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="c4">
+  <div class="wrap">
+    <div class="ch-num">제4장</div>
+    <h2>Google — Gemini 3.7 Flash와 Spark</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>이틀 전(8월 13일) 나온 Gemini 3.7 Flash가 왜 중요한 사건인지</li>
+        <li>&lsquo;값싼 모델&rsquo;이 최상급을 따라잡고 있다는 사실의 의미</li>
+        <li>Gemini Spark·Live가 교우님의 일상에서 하는 일</li>
+      </ul>
+    </div>
+
+    <p>
+      구글은 이 워크샵 이틀 전인 <strong>2026년 8월 13일</strong> Gemini 3.7 Flash를 발표했습니다.
+      직전 모델인 3.6 Flash가 나온 지 <strong>3주</strong> 만입니다. <span class="src">확인</span>
+    </p>
+    <p>
+      3주 만에 낸 모델이 얼마나 나아졌겠나 싶지만, 숫자를 보시면 놀라실 겁니다.
+    </p>
+  </div>
+
+  <div class="wide">{{fig:deepswe}}</div>
+
+  <div class="wrap">
+    <p>
+      <strong>DeepSWE</strong>는 &ldquo;긴 프로그래밍 과제를 사람 도움 없이 끝까지 해내는 비율&rdquo;을 재는 시험입니다.
+      에이전트가 실제로 잘하는지를 보는 데 가장 가까운 지표입니다.
+      3.6 Flash의 49.0%가 3.7 Flash에서 <strong>65.3%</strong>로 올랐습니다. <span class="src">확인</span>
+    </p>
+    <p>
+      중요한 것은 이것이 &lsquo;최상급&rsquo; 모델이 아니라 <strong>&lsquo;싸고 빠른 일꾼&rsquo; 등급</strong>이라는 점입니다.
+      게다가 구글은 연말까지 출시 기념 반값(100만 토큰당 입력 $0.75 / 출력 $3.75)에 팔고 있습니다. <span class="src">확인</span>
+      <strong>값싼 등급이 작년 최상급을 넘어서는 일</strong>이 이제 몇 주 단위로 일어납니다.
+    </p>
+
+    <h3>교우님 일상에서는 이렇게 나타납니다</h3>
+    <div class="term">
+      <dl style="margin:0">
+        <dt>Gemini 3.7 Flash</dt>
+        <dd>엔진입니다. Gemini 앱, Spark, 구글 문서 뒤에서 돌아갑니다. 직접 만질 일은 없습니다.</dd>
+        <dt>Gemini Spark</dt>
+        <dd>지메일·구글 드라이브·구글 문서 위에 상주하며 자율적으로 일하는 비서. 3.7 Flash가 여기 들어갔습니다. <span class="src">확인</span> (AI Pro 또는 Ultra 구독 필요)</dd>
+        <dt>Gemini Live</dt>
+        <dd>스마트폰 카메라를 켜고 <strong>보여주면서 대화</strong>하는 기능. 영문 우편물, 약봉지, 세탁기 조작부를 비추며 물어보시면 한국어로 설명해 줍니다. 오늘 실습 2에서 직접 해 봅니다.</dd>
+      </dl>
+    </div>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>속도가 아니라 <strong>가속도</strong>를 보십시오. 값싼 모델이 3주 만에 16%p 뛰었습니다. 그래서 &ldquo;작년에 써 보니 별로더라&rdquo;는 판단은 이 분야에서 유효기간이 지났습니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="c5">
+  <div class="wrap">
+    <div class="ch-num">제5장</div>
+    <h2>SpaceXAI — 합병으로 태어난 진영</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>xAI가 SpaceX에 흡수되어 SpaceXAI가 된 경위</li>
+        <li>어제(8월 14일) 마무리된 Cursor 인수가 뜻하는 것</li>
+      </ul>
+    </div>
+
+    <p>
+      2026년 2월 2일, SpaceX가 일론 머스크의 AI 회사 xAI를 <strong>전액 주식 교환</strong>으로 인수했습니다.
+      합병 후 기업가치 1조 2,500억 달러로, 역사상 가장 큰 비상장 기업 합병으로 보도되었습니다.
+      5월에는 xAI라는 이름을 없애고 Grok과 X를 SpaceX 산하 <strong>SpaceXAI</strong> 부문으로 재편했습니다.
+      <span class="src">확인</span>
+    </p>
+    <p>
+      그리고 <strong>어제, 2026년 8월 14일</strong> SpaceXAI는 코딩 도구 회사 Cursor(모회사 Anysphere)를
+      600억 달러에 인수 완료하고, 같은 날 <strong>Grok 4.6</strong>을 내놓았습니다. <span class="src">확인</span>
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>제품</th><th>무엇인가</th><th>누구에게</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Grok Build</strong></td><td>터미널 기반 코딩 에이전트. Claude Code·Codex의 경쟁자</td><td>개발자</td></tr>
+          <tr><td><strong>Grok Bot</strong></td><td>상시 대기하는 에이전트 팀. 사무 업무 쪽으로 확장</td><td>실무자</td></tr>
+          <tr><td><strong>Grok 4.6</strong></td><td>최신 대화형 주력 모델. X의 실시간 소셜 데이터에 강함</td><td>모두</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Grok 4.6은 Artificial Analysis 지능 지수에서 <strong>61점</strong>을 받아
+      GPT-5.6 Sol Max와 동률, 전 세계 3위에 올랐습니다.
+      위에 있는 것은 Anthropic의 <strong>Claude Opus 5</strong>와 <strong>Fable 5</strong> 둘뿐입니다. <span class="src">확인</span>
+    </p>
+
+    <div class="note check">
+      <span class="note-title">교우님께 실질적으로 의미하는 것</span>
+      <p style="margin:0">
+        Grok의 강점은 <strong>X(옛 트위터)의 실시간 정보</strong>입니다. 지금 이 순간 무슨 일이 벌어지고 있는지
+        묻기에는 좋습니다. 다만 실시간 소셜 데이터는 검증되지 않은 정보도 함께 딸려 오므로,
+        <strong>사실 확인이 필요한 일에는 다른 도구와 교차 검증</strong>하시길 권합니다.
+      </p>
+    </div>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>AI 판이 <strong>자본 규모의 싸움</strong>으로 넘어갔다는 신호입니다. 다만 교우님의 선택 기준은 회사 크기가 아니라 &ldquo;내가 하려는 일에 맞는가&rdquo; 하나면 충분합니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="c6">
+  <div class="wrap">
+    <div class="ch-num">제6장</div>
+    <h2>오픈웨이트와 Meta — 값이 무너지고 있다</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>&lsquo;오픈웨이트(Open-Weight)&rsquo; 모델이 무엇이고 왜 중요한지</li>
+        <li>중국 모델을 안전하게 쓰는 법과, 절대 하지 말아야 할 것</li>
+      </ul>
+    </div>
+
+    <div class="term">
+      <dl style="margin:0">
+        <dt>오픈웨이트 (Open-Weight)</dt>
+        <dd>AI 모델의 &lsquo;두뇌&rsquo; 파일 자체를 누구나 내려받을 수 있게 공개한 것. 내 컴퓨터에 설치해 <strong>인터넷 없이</strong> 돌릴 수 있습니다. 회사 서버로 내 데이터가 나가지 않습니다.</dd>
+      </dl>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>모델</th><th>만든 곳</th><th>2026년 8월 기준</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Kimi K3</strong></td><td>Moonshot AI</td><td>2.8조 파라미터 · 지금까지 공개된 것 중 가장 큼. 7월 16일 API, 7월 27일 가중치 공개 <span class="src">확인</span></td></tr>
+          <tr><td><strong>DeepSeek V4-Flash</strong></td><td>DeepSeek</td><td>2,840억 파라미터. 출력 100만 토큰당 <strong>$0.18</strong> — 압도적으로 쌈 <span class="src">확인</span></td></tr>
+          <tr><td><strong>Qwen3</strong></td><td>알리바바</td><td>119개 언어 지원. 한국어·동양권 맥락 이해가 오픈소스 중 강한 편 <span class="src unver">확인 권장</span></td></tr>
+          <tr><td><strong>Muse Spark 1.2<br>Muse Code</strong></td><td>Meta</td><td>8월 5일 발표. Meta 최초의 공식 코딩 에이전트 <span class="src">확인</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>값 차이가 어느 정도인지 보시면 이렇습니다.</p>
+  </div>
+
+  <div class="wide">{{fig:price}}</div>
+
+  <div class="wrap">
+    <div class="note risk">
+      <span class="note-title">교우회 보안 주의 — 이것만은 지켜 주십시오</span>
+      <p>
+        오픈웨이트 모델을 <strong>내 컴퓨터에 내려받아 돌리는 것은 완전히 안전합니다.</strong>
+        데이터가 밖으로 나가지 않기 때문입니다.
+      </p>
+      <p style="margin-bottom:0">
+        그러나 <strong>중국 회사의 웹사이트에 직접 접속해 개인정보·회사 기밀·의료 서류를 올리는 것은
+        삼가시기 바랍니다.</strong> 이것은 특정 나라를 겨냥한 말이 아니라 모든 해외 서비스에 해당하는 원칙이며,
+        다만 데이터 관할과 정보 요구 법제가 다른 나라의 서버는 그 위험이 한층 큽니다.
+      </p>
+    </div>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>AI 값은 <strong>바닥을 향해 무너지는 중</strong>입니다. 오늘 비싸서 못 쓰신 일은 내년에 거의 공짜가 됩니다. 그러니 지금은 값보다 <strong>&ldquo;쓰는 법을 익히는 것&rdquo;</strong>에 시간을 쓰십시오.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="c7">
+  <div class="wrap">
+    <div class="ch-num">제7장</div>
+    <h2>Perplexity — 여러 AI를 한꺼번에 시켜 대조하기</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>중요한 결정 앞에서 AI의 &lsquo;거짓말&rsquo;을 줄이는 실용적 방법</li>
+      </ul>
+    </div>
+
+    <p>
+      Perplexity는 원래 &lsquo;출처를 붙여 주는 검색&rsquo;으로 알려진 회사입니다.
+      2026년 이 회사의 가장 쓸모 있는 기능은 <strong>Model Council(모델 평의회)</strong>입니다.
+    </p>
+    <p>
+      같은 질문을 <strong>서로 다른 회사의 최상급 AI 세 개에 동시에</strong> 던지고,
+      답을 나란히 놓고 비교해 주는 기능입니다. <span class="src">확인</span>
+      (어떤 세 모델이 들어가는지는 자주 바뀌므로 화면에서 직접 확인하십시오. <span class="src unver">확인 권장</span>)
+    </p>
+
+    <div class="note ok">
+      <span class="note-title">이 기능이 왜 중요한가</span>
+      <p style="margin:0">
+        AI가 사실이 아닌 것을 자연스럽게 말하는 현상을 <strong>환각(Hallucination)</strong>이라 합니다.
+        완전히 없앨 수는 없습니다. 그러나 <strong>서로 다른 회사의 AI 셋이 똑같이 틀릴 확률은 훨씬 낮습니다.</strong>
+        세 답이 일치하면 믿을 만하고, 갈리면 그 지점이 바로 사람이 직접 확인해야 할 곳입니다.
+      </p>
+    </div>
+
+    <p>
+      Perplexity는 또한 <strong>Comet</strong>이라는 AI 브라우저를 냅니다.
+      2026년 3월 18일부터 유료 장벽을 없애 무료로 풀었고, iOS·안드로이드·윈도우·맥에서 모두 쓸 수 있습니다.
+      4월에는 맥에서 브라우저 밖 컴퓨터 작업까지 대신하는 기능이 추가되었습니다. <span class="src">확인</span>
+    </p>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>돈이 걸린 결정, 건강에 관한 판단, 계약 해석 — 이런 일에는 <strong>AI 하나의 답을 믿지 마시고 셋에게 물어 대조</strong>하십시오.</p>
+    </div>
+  </div>
+</section>
+
+<div class="part-open wrap">
+  <div class="pnum">제 3 부</div>
+  <h2>이번 주 — 8월 둘째 주에 일어난 일</h2>
+  <p>워크샵 직전 사흘 사이에 나온 소식만 모았습니다. 이 부는 유통기한이 가장 짧습니다.</p>
+</div>
+
+<section class="chapter" id="c8">
+  <div class="wrap">
+    <div class="ch-num">제8장</div>
+    <h2>8월 13일 · 14일의 뉴스</h2>
+
+    <h3>① 구글, Gemini 3.7 Flash 발표 <span style="font-size:.7em;color:var(--ink-3)">8월 13일</span></h3>
+    <p>
+      제4장에서 자세히 다뤘습니다. 핵심은 &ldquo;값싼 등급이 3주 만에 16%p 올랐다&rdquo;입니다. <span class="src">확인</span>
+    </p>
+
+    <h3>② DeepJudge, &lsquo;에이전트 인수인계 규약&rsquo; 공개 <span style="font-size:.7em;color:var(--ink-3)">8월 13일</span></h3>
+    <p>
+      취리히의 DeepJudge가 <strong>Agent Handoff Protocol</strong>을 공개했습니다.
+      A라는 AI 제품에서 하던 작업의 맥락을 <strong>그대로 간직한 채 B 제품으로 넘어가는</strong> 개방 규약입니다.
+      법률 AI인 Harvey가 이번 달 베타로 적용에 들어갔고, Thomson Reuters도 지원을 밝혔습니다. <span class="src">확인</span>
+    </p>
+    <div class="note ok">
+      <span class="note-title">왜 교우님께 좋은 소식인가</span>
+      <p style="margin:0">
+        지금까지는 AI를 바꾸면 <strong>처음부터 다시 설명</strong>해야 했습니다.
+        이 규약이 퍼지면 그럴 필요가 없어집니다.
+        곧 &ldquo;한 회사에 묶여서 못 옮긴다&rdquo;는 걱정이 줄어든다는 뜻입니다.
+      </p>
+    </div>
+
+    <h3>③ GitKraken, GitLens 19 발표 <span style="font-size:.7em;color:var(--ink-3)">8월 14일</span></h3>
+    <p>
+      개발자용 도구지만 <strong>흐름을 읽는 데 중요한 신호</strong>라 넣었습니다.
+      GitLens 19는 &ldquo;AI가 혼자 코드를 짜는&rdquo; 단계를 지나
+      <strong>사람과 AI가 한 화면에서 함께 검토하는 작업대</strong>를 지향합니다.
+      AI가 만든 결과를 사람이 검토하는 과정 자체가 제품이 된 것입니다. <span class="src">확인</span>
+    </p>
+
+    <h3>④ AI 기억(Memory)의 표준화 움직임</h3>
+    <p>
+      Starling MX가 <strong>Starling System Library</strong>와
+      <strong>Universal Cognitive Architecture</strong>를 내놓았습니다.
+      회사의 지식을 특정 AI 회사에 가두지 않고, 내가 소유한 저장소에 두고
+      여러 AI가 읽어 가게 하자는 접근입니다. <span class="src unver">확인 권장</span>
+    </p>
+    <div class="note check">
+      <span class="note-title">이 항목은 확인이 필요합니다</span>
+      <p style="margin:0">
+        회사와 제품이 실재하는 것은 확인했으나, 이것이 <strong>&lsquo;영구 무료 개방 표준&rsquo;인지
+        아니면 상용 제품군인지는 확인되지 않았습니다.</strong>
+        현재 자료로는 상용 제품군에 가까워 보입니다.
+        발표 때는 &ldquo;개방 표준&rdquo;이라 단정하지 마시고
+        &ldquo;내 데이터를 한 회사에 가두지 않으려는 시도들이 나오고 있다&rdquo; 정도로 말씀하시길 권합니다.
+      </p>
+    </div>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>사흘 사이의 네 소식이 한 방향을 가리킵니다 — <strong>성능은 오르고, 값은 내리고, 한 회사에 묶이는 일은 줄어듭니다.</strong> 전부 사용자에게 유리한 방향입니다.</p>
+    </div>
+  </div>
+</section>
+
+<div class="part-open wrap">
+  <div class="pnum">제 4 부</div>
+  <h2>생활과 업무 — 실제로 무엇을 할 수 있나</h2>
+  <p>여기부터는 오늘 워크샵에서 손으로 직접 해 보실 내용입니다. 자세한 절차는 워크북에 있습니다.</p>
+</div>
+
+<section class="chapter" id="c9">
+  <div class="wrap">
+    <div class="ch-num">제9장</div>
+    <h2>바이브 코딩 — 말로 앱을 만듭니다</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>문법을 한 줄도 모르고 한국어 설명만으로 프로그램을 만드는 법</li>
+        <li>좋은 지시문과 나쁜 지시문의 차이</li>
+      </ul>
+    </div>
+
+    <div class="term">
+      <dl style="margin:0">
+        <dt>바이브 코딩 (Vibe Coding)</dt>
+        <dd>프로그래밍 문법 대신 <strong>&ldquo;무엇을 원하는지&rdquo;를 평범한 말로 설명해</strong> 소프트웨어를 만드는 방식. 복잡한 코드는 AI가 씁니다.</dd>
+      </dl>
+    </div>
+
+    <h3>좋은 지시문의 네 가지 요소</h3>
+    <p>결과의 질은 거의 전적으로 <strong>지시문의 구체성</strong>에서 갈립니다. 좋은 지시문에는 넷이 들어갑니다.</p>
+    <ol>
+      <li><strong>무엇을</strong> — &ldquo;교우회 주소록 웹페이지&rdquo;처럼 만들 물건을 한 문장으로</li>
+      <li><strong>누가 쓰는가</strong> — &ldquo;30대부터 80대까지&rdquo;. 이 한 줄이 글씨 크기와 버튼 크기를 바꿉니다</li>
+      <li><strong>기능 목록</strong> — 번호를 매겨 하나씩. 뭉뚱그리면 뭉뚱그린 결과가 나옵니다</li>
+      <li><strong>형태 조건</strong> — &ldquo;HTML 파일 하나로&rdquo;, &ldquo;휴대폰에서도 보이게&rdquo;</li>
+    </ol>
+
+    <div class="note risk">
+      <span class="note-title">나쁜 지시문의 예</span>
+      <p style="margin:0"><em>&ldquo;교우회 홈페이지 좀 만들어줘.&rdquo;</em> — AI는 무엇이든 하나 만들어 주긴 합니다. 다만 교우님이 머릿속에 그린 것과는 전혀 다른 물건이 나옵니다.</p>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt-head"><span>실습 1에서 쓸 지시문 (워크북에도 같은 것이 있습니다)</span><button class="copy" type="button">복사</button></div>
+      <pre>고려대학교 아틀란타 교우회를 위한 웹페이지를 하나 만들어 주세요.
+
+[누가 쓰나]
+- 30대부터 80대까지 교우와 가족이 함께 씁니다.
+- 어르신도 안경 없이 보실 수 있게 글씨를 큼직하게 해 주세요.
+
+[디자인]
+- 고려대 상징색인 크림슨 레드(#8A1538)와 금색, 흰색을 씁니다.
+- 화면이 복잡하지 않고 단정하게 해 주세요.
+
+[기능]
+1. 교우 검색창 — 성명, 입학년도/학과, 거주 지역(Duluth, Johns Creek,
+   Alpharetta 등)으로 찾을 수 있게
+2. '오늘의 교우 소식' 게시판 칸
+3. 누르면 바로 전화가 걸리는 '비상 연락' 버튼
+4. 예시 데이터를 6명분 미리 넣어 주세요 (가상의 이름으로)
+
+[형태]
+- 모든 코드를 HTML 파일 하나에 담아, 브라우저에서 바로 열리게 해 주세요.
+- 휴대폰 화면에서도 예쁘게 보이도록 해 주세요.</pre>
+    </div>
+
+    <div class="note check">
+      <span class="note-title">현실적인 기대치</span>
+      <p style="margin:0">
+        30초 만에 화면이 나옵니다. 다만 <strong>첫 결과가 완성품인 경우는 드뭅니다.</strong>
+        &ldquo;글씨를 더 크게&rdquo;, &ldquo;버튼을 아래로&rdquo;처럼 <strong>고쳐 달라고 두세 번 더 말하는 것까지가
+        바이브 코딩</strong>입니다. 오늘 실습에서 이 &lsquo;고쳐 말하기&rsquo;를 연습합니다.
+      </p>
+    </div>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>코딩을 배우실 필요는 없습니다. 다만 <strong>&ldquo;원하는 것을 구체적으로 말하는 법&rdquo;</strong>은 배우셔야 합니다. 그것이 2026년의 새 문해력입니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="c10">
+  <div class="wrap">
+    <div class="ch-num">제10장</div>
+    <h2>멀티모달 — 보여주고, 들려주고, 말하게 하기</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>카메라로 비추어 영문 서류·약봉지를 즉석에서 이해하는 법</li>
+        <li>미국 생활의 언어 장벽을 실제로 낮추는 구체적 쓰임새</li>
+      </ul>
+    </div>
+
+    <div class="term">
+      <dl style="margin:0">
+        <dt>멀티모달 (Multimodal)</dt>
+        <dd>글자만이 아니라 <strong>사진·소리·영상</strong>을 함께 이해하는 능력. 2026년 주요 모델은 전부 갖추고 있습니다.</dd>
+      </dl>
+    </div>
+
+    <h3>1. 병원·관공서·우편물 — 카메라로 비추십시오</h3>
+    <p>
+      스마트폰에서 Gemini 앱이나 ChatGPT 앱을 열고 <strong>카메라 모드</strong>를 켠 뒤,
+      영문 서류를 비추면서 물어보시면 됩니다. 사진을 찍어 올리셔도 됩니다.
+    </p>
+
+    <div class="prompt">
+      <div class="prompt-head"><span>그대로 말하거나 입력하십시오</span><button class="copy" type="button">복사</button></div>
+      <pre>지금 비추고 있는 이 서류가 무엇인지 한국어로 차분히 설명해 주세요.
+
+1) 제가 꼭 해야 하는 일이 있으면 무엇인지
+2) 기한이 있으면 언제까지인지
+3) 돈이 나가는 항목이 있으면 얼마인지
+
+이 세 가지를 먼저 알려 주시고,
+담당자에게 전화해서 영어로 확인할 질문 세 문장도 만들어 주세요.</pre>
+    </div>
+
+    <div class="note risk">
+      <span class="note-title">반드시 지켜 주십시오</span>
+      <p style="margin:0">
+        AI의 번역과 요약은 <strong>이해를 돕는 용도</strong>입니다.
+        <strong>법률 문서, 의료 처방, 세금 서류의 최종 판단은 반드시 사람 전문가에게 확인</strong>하십시오.
+        특히 &ldquo;서명해도 되는가&rdquo;, &ldquo;이 약을 먹어도 되는가&rdquo; 같은 판단은 AI에게 맡기지 마십시오.
+      </p>
+    </div>
+
+    <h3>2. 외국어 공부 — AI를 대화 상대로</h3>
+    <p>
+      AI의 가장 좋은 점은 <strong>몇 번을 틀려도 지치지 않고, 부끄럽지 않다</strong>는 것입니다.
+      &ldquo;영어를 가르쳐 줘&rdquo;보다 <strong>역할을 정해 주는 편</strong>이 훨씬 잘 됩니다.
+    </p>
+    <div class="prompt">
+      <div class="prompt-head"><span>영어 회화 연습</span><button class="copy" type="button">복사</button></div>
+      <pre>당신은 애틀랜타의 병원 접수 직원입니다. 저는 예약을 잡으려는 환자입니다.
+영어로 대화해 주시되, 제가 문장을 틀리면 그때그때 고쳐 주세요.
+
+- 한 번에 두 문장 이상 말하지 마세요.
+- 제 수준은 초급입니다. 쉬운 단어로 천천히 해 주세요.
+- 대화가 끝나면 오늘 제가 자주 틀린 것 세 가지를 한국어로 정리해 주세요.</pre>
+    </div>
+
+    <h3>3. 나만의 노래와 가족 영상</h3>
+    <p>
+      Suno나 Udio 같은 서비스에 가사를 넣으면 몇 분 만에 곡이 나옵니다.
+      교우회 찬가, 부모님 팔순 축하곡, 손주 생일 노래를 직접 만드실 수 있습니다.
+      <span class="src unver">확인 권장</span>
+      (서비스 이름과 버전은 자주 바뀌므로 현장에서 확인하십시오.)
+    </p>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>AI에게 <strong>눈과 귀</strong>가 생겼습니다. 이민 생활에서 가장 답답했던 &ldquo;이게 무슨 서류인지 모르겠다&rdquo;는 순간이, 이제 카메라를 비추는 3초로 해결됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="c11">
+  <div class="wrap">
+    <div class="ch-num">제11장</div>
+    <h2>자서전 — 한 사람의 역사를 책으로</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>흩어진 기억과 사진을 한 권의 책으로 엮는 4단계 절차</li>
+        <li>AI가 없는 이야기를 지어내지 못하게 막는 방법</li>
+      </ul>
+    </div>
+
+    <p>
+      이 장은 이 책에서 가장 <strong>오래 남을</strong> 장이라고 생각합니다.
+      1980년대에 아틀란타에 오신 교우님들의 이야기는 지금 기록하지 않으면 사라집니다.
+      영어로 자란 자녀와 손주들은 그 이야기를 <strong>들을 기회가 없었습니다.</strong>
+    </p>
+  </div>
+
+  <div class="wide">{{fig:autobio}}</div>
+
+  <div class="wrap">
+    <h3>1단계 — 완벽하게 모으려 하지 마십시오</h3>
+    <p>
+      가장 흔한 실패는 &ldquo;자료가 다 모이면 시작하겠다&rdquo;입니다. 그러면 영원히 시작하지 못합니다.
+      <strong>스마트폰 녹음기를 켜고 30분만 말씀하시면 됩니다.</strong> 순서가 뒤죽박죽이어도 괜찮습니다.
+      순서를 잡는 것은 2단계에서 AI가 합니다.
+    </p>
+
+    <h3>2단계 — NotebookLM에 넣어 정리시킵니다</h3>
+    <p>
+      NotebookLM은 <strong>내가 올린 자료 안에서만</strong> 답하는 구글의 도구입니다.
+      바깥 지식을 섞지 않기 때문에 개인 기록 정리에 알맞습니다.
+      녹음 파일과 사진, 서류를 올리면 연표와 인물 관계를 뽑아 줍니다.
+    </p>
+
+    <h3>3단계 — 한 번에 딱 한 장씩</h3>
+    <div class="note risk">
+      <span class="note-title">이 규칙 하나가 책의 성패를 가릅니다</span>
+      <p style="margin:0">
+        <strong>&ldquo;내 자서전 전체를 써 줘&rdquo;라고 하지 마십시오.</strong>
+        그렇게 시키면 AI는 빈칸을 그럴듯한 상상으로 메웁니다.
+        가족사에 거짓이 섞이면 책의 가치가 통째로 사라집니다.
+        <strong>반드시 한 장씩, 재료를 직접 주면서</strong> 쓰게 하십시오.
+      </p>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt-head"><span>자서전 집필 지시문 — 장마다 이 틀을 쓰십시오</span><button class="copy" type="button">복사</button></div>
+      <pre>제 자서전의 제3장 '1985년, 아틀란타에 도착하다'를 써 주세요.
+
+[반드시 지킬 조건]
+- 아래에 제가 적어 드린 사실만 사용하고, 없는 일은 절대 지어내지 마세요.
+- 확실하지 않거나 제 확인이 필요한 부분은 문장 끝에 [확인 필요]라고 적어 주세요.
+- 분량은 한글 약 4,000자로 해 주세요.
+- 문체는 훗날 이 책을 읽을 자녀와 손주에게 이야기하듯,
+  따뜻하고 담백하게 써 주세요. 미사여구는 빼 주세요.
+
+[제가 드리는 재료]
+- 1985년 3월, 아틀란타 공항에 내렸을 때 공기가 습하고 더웠던 것
+- 둘루스에서 첫 가게를 열고 새벽 5시에 나가 밤 11시에 닫던 나날
+- 한국에 계신 어머니가 그리워 밤마다 편지를 쓰다 만 이야기
+- 첫해 겨울, 가게 유리창이 깨졌을 때 이웃이 도와준 일</pre>
+    </div>
+
+    <h3>4단계 — 한글과 영어를 나란히</h3>
+    <p>
+      여기서 이 프로젝트의 진짜 가치가 나옵니다.
+      <strong>왼쪽 면은 한국어, 오른쪽 면은 영어</strong>로 만드시면
+      영어로 자란 손주가 할아버지의 이야기를 <strong>처음으로 읽게 됩니다.</strong>
+      아마존 KDP 같은 자가출판으로 실물 책을 몇 권만 찍는 것도 어렵지 않습니다.
+    </p>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>완벽한 원고를 기다리지 마십시오. <strong>오늘 30분 녹음</strong>이 시작입니다. 그리고 AI가 <code>[확인 필요]</code>라 표시한 곳은 반드시 교우님이 직접 확인하십시오.</p>
+    </div>
+  </div>
+</section>
+
+<div class="part-open wrap">
+  <div class="pnum">제 5 부</div>
+  <h2>지키기 — 가족을 위한 준비</h2>
+  <p>이 부는 오늘 워크샵에서 <strong>전원이 완성해 가지고 돌아가는</strong> 유일한 항목입니다.</p>
+</div>
+
+<section class="chapter" id="c12">
+  <div class="wrap">
+    <div class="ch-num">제12장</div>
+    <h2>딥페이크와 딥보이스 — 목소리는 더 이상 신분증이 아닙니다</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>2026년 음성 복제 사기가 실제로 작동하는 방식</li>
+        <li>기술을 몰라도 확실히 막는 방법 — <strong>가족 안전 암호</strong></li>
+      </ul>
+    </div>
+
+    <p>
+      AI가 좋아진 만큼 사기도 정교해졌습니다.
+      <strong>자녀 목소리 몇 초</strong>만 있으면 똑같은 목소리를 만들 수 있습니다.
+      유튜브 영상, SNS에 올린 동영상, 심지어 통화 녹음이면 충분합니다.
+    </p>
+    <p>
+      전화가 옵니다. 자녀 목소리로 울먹이며 사고가 났다고 합니다.
+      급하다고, 아무에게도 말하지 말라고 합니다.
+      <strong>목소리가 똑같기 때문에 의심할 겨를이 없습니다.</strong> 이것이 핵심 수법입니다.
+    </p>
+  </div>
+
+  <div class="wide">{{fig:deepfake}}</div>
+
+  <div class="wrap">
+    <h3>다급한 전화를 받았을 때의 3대 원칙</h3>
+    <ol>
+      <li><strong>돈 이야기가 나오는 순간 일단 끊습니다.</strong> 진짜 자녀라면 다시 걸 수 있습니다. 끊는 것은 절대 무례한 일이 아닙니다.</li>
+      <li><strong>미리 정한 가족 암호를 물어봅니다.</strong> AI는 목소리는 흉내 내도, 가족만 아는 말은 모릅니다.</li>
+      <li><strong>내가 원래 알고 있는 번호로 직접 다시 겁니다.</strong> 걸려 온 번호로 되걸지 마십시오.</li>
+    </ol>
+
+    <div class="note ku">
+      <span class="note-title">가족 안전 암호를 정하는 요령</span>
+      <ul style="margin:.4rem 0 0">
+        <li><strong>인터넷에 없는 것</strong>으로 정하십시오. 생일·전화번호·주소는 안 됩니다.</li>
+        <li><strong>가족만 아는 옛 기억</strong>이 좋습니다 — 살던 동네 이름, 키우던 개 이름, 외할머니가 늘 하시던 말버릇.</li>
+        <li><strong>SNS에 절대 올리지 않은 것</strong>이어야 합니다.</li>
+        <li>온 가족이 <strong>오늘 안에</strong> 공유하십시오. 정해만 두고 알리지 않으면 소용없습니다.</li>
+      </ul>
+    </div>
+
+    <div class="note check">
+      <span class="note-title">예방도 함께</span>
+      <p style="margin:0">
+        자녀·손주의 목소리와 얼굴이 담긴 영상을 <strong>공개 계정에 올리지 않는 것</strong>만으로도
+        위험이 크게 줄어듭니다. 이미 올린 것을 다 지우실 필요는 없지만,
+        앞으로는 비공개나 친구 공개로 올리시길 권합니다.
+      </p>
+    </div>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p><strong>목소리는 더 이상 신분증이 아닙니다.</strong> 아무리 자녀 목소리와 똑같아도, 암호를 대지 못하면 자녀가 아닙니다. 오늘 워크샵을 마치기 전에 반드시 암호 카드를 완성하십시오.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 부록 ══════════ -->
+<div class="part-open wrap">
+  <div class="pnum">부 록</div>
+  <h2>찾아보고 쓰는 자료</h2>
+</div>
+
+<section class="chapter" id="apx-a">
+  <div class="wrap">
+    <div class="ch-num">부록 A</div>
+    <h2>한눈에 비교표</h2>
+    <p>2026년 8월 15일 기준입니다. 값과 기능은 자주 바뀌므로 결제 전 공식 홈페이지에서 확인하십시오.</p>
+  </div>
+  <div class="wide">
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>제품</th><th>만든 곳</th><th>무엇을 하나</th><th>이런 교우님께</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Claude Cowork</strong></td><td>Anthropic</td><td>데스크톱 폴더의 문서를 자율 정리 · 보고서와 엑셀 생성</td><td><span class="chip chip-ku">추천</span> 문서 많은 직장인·경영자·모든 교우</td></tr>
+          <tr><td><strong>ChatGPT Work</strong></td><td>OpenAI</td><td>몇 시간짜리 복합 프로젝트 자율 수행</td><td>이미 ChatGPT를 쓰고 계신 교우</td></tr>
+          <tr><td><strong>Gemini Spark</strong></td><td>Google</td><td>지메일·드라이브 위에 상주하는 자율 비서</td><td>구글 계정을 주로 쓰시는 교우</td></tr>
+          <tr><td><strong>Gemini Live</strong></td><td>Google</td><td>카메라로 비추며 실시간 대화 · 번역</td><td><span class="chip chip-ku">추천</span> 미국 생활 전반 · 어르신</td></tr>
+          <tr><td><strong>Perplexity<br>(Model Council)</strong></td><td>Perplexity</td><td>여러 AI에 동시에 물어 답을 대조</td><td>중요한 결정 앞의 모든 교우</td></tr>
+          <tr><td><strong>NotebookLM</strong></td><td>Google</td><td>내가 올린 자료 안에서만 답변 · 연표 추출</td><td>자서전·회고록을 준비하시는 교우</td></tr>
+          <tr><td><strong>Claude Code</strong></td><td>Anthropic</td><td>터미널 기반 코딩 · 대형 프로젝트 자율 수정</td><td>개발자·엔지니어 교우와 자녀</td></tr>
+          <tr><td><strong>Codex</strong></td><td>OpenAI</td><td>터미널 코딩 에이전트</td><td>소프트웨어 분야 교우</td></tr>
+          <tr><td><strong>Grok Build / 4.6</strong></td><td>SpaceXAI</td><td>고속 개발 에이전트 · 실시간 소셜 정보</td><td>스타트업 · 시사에 밝고 싶은 교우</td></tr>
+          <tr><td><strong>Qwen3 · DeepSeek</strong></td><td>Alibaba · DeepSeek</td><td>내 컴퓨터에 설치해 인터넷 없이 사용</td><td>보안이 중요한 자료를 다루는 교우</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="apx-b">
+  <div class="wrap">
+    <div class="ch-num">부록 B</div>
+    <h2>바로 쓰는 실전 지시문</h2>
+    <p>복사해서 붙여 넣고, 대괄호 안만 교우님 사정에 맞게 고치시면 됩니다.</p>
+
+    <h3>생활</h3>
+    <div class="prompt">
+      <div class="prompt-head"><span>영문 우편물 해독</span><button class="copy" type="button">복사</button></div>
+      <pre>첨부한 사진의 영문 서류를 한국어로 설명해 주세요.
+1) 어디서 온 무슨 문서인지 2) 제가 해야 할 일 3) 기한 4) 금액
+이 넷을 표로 정리하고, 무시해도 되는 광고성 내용이면 그렇다고 알려 주세요.</pre>
+    </div>
+    <div class="prompt">
+      <div class="prompt-head"><span>병원 진료 준비</span><button class="copy" type="button">복사</button></div>
+      <pre>다음 주에 [정형외과] 진료가 있습니다. 증상은 [오른쪽 무릎이 계단 내려갈 때 아픔]입니다.
+1) 의사에게 영어로 물어볼 질문 5개를 한국어 뜻과 함께 만들어 주세요.
+2) 제 증상을 영어로 정확히 설명하는 문장 3개도 만들어 주세요.
+3) 진료 때 놓치기 쉬운, 꼭 확인해야 할 것도 알려 주세요.</pre>
+    </div>
+    <div class="prompt">
+      <div class="prompt-head"><span>여행 일정 짜기</span><button class="copy" type="button">복사</button></div>
+      <pre>[10월 셋째 주]에 [부부 두 명]이 [애틀랜타에서 한국]에 갑니다.
+[2주]간 머무르며 [서울과 부산]을 봅니다. [70대이고 오래 걷기 어렵습니다.]
+날짜별 일정을 표로 만들어 주시되, 이동 시간과 예상 비용도 넣어 주세요.
+무리한 일정이면 솔직히 말씀해 주시고 대안을 제시해 주세요.</pre>
+    </div>
+
+    <h3>업무</h3>
+    <div class="prompt">
+      <div class="prompt-head"><span>회의록 정리</span><button class="copy" type="button">복사</button></div>
+      <pre>첨부한 회의 녹음(또는 메모)을 다음 형식으로 정리해 주세요.
+1) 결정된 사항 2) 미결 사항 3) 담당자와 기한이 있는 할 일 목록
+4) 다음 회의에서 다뤄야 할 것
+추측하지 마시고, 녹음에 없는 내용은 넣지 마세요.</pre>
+    </div>
+    <div class="prompt">
+      <div class="prompt-head"><span>계약서·약관 검토 (초벌)</span><button class="copy" type="button">복사</button></div>
+      <pre>첨부한 영문 [임대차 계약서]를 검토해 주세요.
+1) 제게 불리할 수 있는 조항을 위험도 순으로 정리
+2) 업계 관행보다 특이한 조항
+3) 서명 전에 상대에게 확인해야 할 질문
+이것은 참고용이며 최종 판단은 변호사에게 받겠습니다. 확신이 없는 부분은 그렇다고 말해 주세요.</pre>
+    </div>
+
+    <h3>가족</h3>
+    <div class="prompt">
+      <div class="prompt-head"><span>손주와 함께 만드는 그림책</span><button class="copy" type="button">복사</button></div>
+      <pre>[일곱 살] 손주에게 읽어 줄 짧은 그림책 이야기를 만들어 주세요.
+주인공은 [한국에서 온 할머니와 미국에서 태어난 손녀]입니다.
+주제는 [서로 말이 잘 안 통해도 마음은 통한다]입니다.
+한국어와 영어를 한 문장씩 나란히 써 주세요. 8쪽 분량으로 해 주세요.</pre>
+    </div>
+    <div class="prompt">
+      <div class="prompt-head"><span>부모님 구술 기록 질문지</span><button class="copy" type="button">복사</button></div>
+      <pre>[여든두 살 아버지]의 인생 이야기를 녹음하려 합니다.
+편안하게 말문이 열리는 질문 20개를 만들어 주세요.
+- 어린 시절부터 순서대로, 한 질문에 하나씩만 물어보게
+- '예/아니오'로 끝나지 않고 이야기가 이어지는 질문으로
+- 아픈 기억을 억지로 끌어내지 않는 부드러운 표현으로</pre>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="apx-c">
+  <div class="wrap">
+    <div class="ch-num">부록 C</div>
+    <h2>발표 전 출처 확인 목록</h2>
+    <p>
+      강사님을 위한 부록입니다. 이 책의 내용은 2026년 8월 15일에
+      복수 매체로 교차 확인했으나, 아래 항목은 <strong>단상에서 단정적으로 말씀하시기 전에
+      한 번 더 확인</strong>하시길 권합니다.
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>항목</th><th>상태</th><th>확인해야 할 것</th></tr></thead>
+        <tbody>
+          <tr><td>SpaceX의 xAI 인수 · SpaceXAI 재편</td><td><span class="src">확인</span></td><td>추가 확인 불필요</td></tr>
+          <tr><td>Cursor 인수 완료 (8/14) · 600억 달러</td><td><span class="src">확인</span></td><td>추가 확인 불필요</td></tr>
+          <tr><td>Gemini 3.7 Flash (8/13) · DeepSWE 65.3%</td><td><span class="src">확인</span></td><td>추가 확인 불필요</td></tr>
+          <tr><td>GPT-5.6 Sol·Terra·Luna (7/9) · ChatGPT Work</td><td><span class="src">확인</span></td><td>추가 확인 불필요</td></tr>
+          <tr><td>Claude Cowork 출시 일정</td><td><span class="src">확인</span></td><td>추가 확인 불필요</td></tr>
+          <tr><td>Kimi K3 2.8조 파라미터</td><td><span class="src">확인</span></td><td>추가 확인 불필요</td></tr>
+          <tr><td>Meta Muse Code · Spark 1.2</td><td><span class="src">확인</span></td><td><strong>날짜 주의</strong> — 8월 12일이 아니라 <strong>8월 5일</strong> 발표입니다</td></tr>
+          <tr><td>DeepSeek V4-Flash 단가</td><td><span class="src">확인</span></td><td><strong>수치 주의</strong> — $0.14/$0.28이 아니라 <strong>$0.0882/$0.1764</strong></td></tr>
+          <tr><td>GitLens 19 (8/14)</td><td><span class="src">확인</span></td><td>추가 확인 불필요</td></tr>
+          <tr><td>DeepJudge Agent Handoff (8/13)</td><td><span class="src">확인</span></td><td>추가 확인 불필요</td></tr>
+          <tr><td>Perplexity Model Council 구성 모델</td><td><span class="src unver">확인 권장</span></td><td>어떤 세 모델인지 자주 바뀝니다. 화면에서 확인 후 말씀하십시오</td></tr>
+          <tr><td>&lsquo;Perplexity Computer&rsquo;라는 제품명</td><td><span class="src unver">확인 권장</span></td><td>확인된 명칭은 맥용 <strong>Personal Computer</strong>(4월)입니다</td></tr>
+          <tr><td>Starling MX &lsquo;영구 무료 개방 표준&rsquo;</td><td><span class="src unver">확인 권장</span></td><td>상용 제품군으로 보입니다. &lsquo;개방 표준&rsquo;이라 단정하지 마십시오</td></tr>
+          <tr><td>Qwen3 &lsquo;한국어 이해 1위&rsquo;</td><td><span class="src unver">확인 권장</span></td><td>순위 근거를 찾지 못했습니다. &ldquo;다국어에 강한 편&rdquo; 정도로 말씀하십시오</td></tr>
+          <tr><td>GPT-5.6 인하 후 실제 단가</td><td><span class="src unver">확인 권장</span></td><td>7/30 인하가 반영된 현재가를 공식 페이지에서 확인</td></tr>
+          <tr><td>Suno·Udio 버전과 요금</td><td><span class="src unver">확인 권장</span></td><td>서비스명·버전이 자주 바뀝니다</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note ku">
+      <span class="note-title">발표 원칙 하나만 제안드립니다</span>
+      <p style="margin:0">
+        확신이 서지 않는 항목은 <strong>&ldquo;제가 확인한 바로는&rdquo;</strong> 또는
+        <strong>&ldquo;8월 14일 기준으로&rdquo;</strong>를 앞에 붙여 말씀하십시오.
+        이 한 마디가 나중에 정정할 때 훨씬 편하게 만들어 줍니다.
+        AI 분야에서 &ldquo;모른다&rdquo;고 말하는 강사가 오히려 신뢰를 얻습니다.
+      </p>
+    </div>
+
+    <hr style="margin:3rem 0;border:0;border-top:1px solid var(--rule)">
+    <p style="text-align:center;color:var(--ink-3);font-size:.9rem">
+      고려대학교 아틀란타 교우회 AI 워크샵 · 2026년 8월 15일<br>
+      <span style="font-family:var(--f-mono);font-size:.82rem">교재 · 읽는 책 (1 / 3)　　슬라이드 · 워크북이 따로 있습니다</span>
+    </p>
+  </div>
+</section>

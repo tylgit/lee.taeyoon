@@ -1,0 +1,46 @@
+<figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 760 300" role="img" aria-label="DeepSWE v1.1 장기 코딩 과제 성공률 비교. GPT-5.6 Terra 69.6퍼센트, Gemini 3.7 Flash 65.3퍼센트, Claude Sonnet 5 53.8퍼센트, 3주 전 모델인 Gemini 3.6 Flash 49.0퍼센트. Gemini는 3주 만에 16.3퍼센트포인트 올랐다." style="font-family:var(--f-body)">
+  <!-- 눈금 -->
+  <g stroke="currentColor" opacity=".14">
+    <line x1="200" y1="40" x2="200" y2="238"/><line x1="330" y1="40" x2="330" y2="238"/>
+    <line x1="460" y1="40" x2="460" y2="238"/><line x1="590" y1="40" x2="590" y2="238"/>
+    <line x1="720" y1="40" x2="720" y2="238"/>
+  </g>
+  <g font-size="11" fill="currentColor" opacity=".55" text-anchor="middle" font-family="var(--f-mono)">
+    <text x="200" y="258">0%</text><text x="330" y="258">20</text><text x="460" y="258">40</text>
+    <text x="590" y="258">60</text><text x="720" y="258">80</text>
+  </g>
+
+  <!-- 막대 : 4px 라운드 데이터 엔드, 기준선에 고정 -->
+  <g font-size="13">
+    <text x="190" y="63" text-anchor="end" fill="currentColor">GPT-5.6 Terra</text>
+    <path d="M200 48 h448 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-448 z" fill="var(--s2)"/>
+    <text x="664" y="63" font-size="13" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">69.6%</text>
+
+    <text x="190" y="113" text-anchor="end" fill="currentColor" font-weight="700">Gemini 3.7 Flash</text>
+    <path d="M200 98 h420 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-420 z" fill="var(--s3)"/>
+    <text x="636" y="113" font-size="13" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">65.3%</text>
+
+    <text x="190" y="163" text-anchor="end" fill="currentColor">Claude Sonnet 5</text>
+    <path d="M200 148 h346 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-346 z" fill="var(--s1)"/>
+    <text x="562" y="163" font-size="13" fill="currentColor" font-variant-numeric="tabular-nums">53.8%</text>
+
+    <text x="190" y="213" text-anchor="end" fill="currentColor" opacity=".7">Gemini 3.6 Flash</text>
+    <text x="190" y="228" text-anchor="end" font-size="10.5" fill="currentColor" opacity=".5">3주 전 모델</text>
+    <path d="M200 198 h314 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-314 z" fill="var(--s3)" opacity=".38"/>
+    <text x="530" y="213" font-size="13" fill="currentColor" opacity=".7" font-variant-numeric="tabular-nums">49.0%</text>
+  </g>
+
+  <!-- 3.6 → 3.7 상승 표시 : 3.6 막대 끝에서 3.7 막대 끝까지 -->
+  <path d="M518 196 L518 92 L624 92" fill="none" stroke="var(--crimson)" stroke-width="1.8" stroke-dasharray="4 3"/>
+  <circle cx="518" cy="196" r="3.5" fill="var(--crimson)"/>
+  <circle cx="624" cy="92" r="3.5" fill="var(--crimson)"/>
+  <text x="632" y="88" font-size="12.5" font-weight="700" fill="var(--crimson)">3주 만에 +16.3%p</text>
+
+  <line x1="200" y1="40" x2="200" y2="240" stroke="currentColor" opacity=".45"/>
+  <text x="200" y="282" font-size="11.5" fill="currentColor" opacity=".6">긴 코딩 과제를 끝까지 혼자 해내는 비율 (DeepSWE v1.1)</text>
+</svg>
+</div>
+<figcaption><strong>속도가 아니라 가속도를 보십시오.</strong> 구글의 값싼 &lsquo;일꾼&rsquo; 모델이 3주 만에 16.3%p 올라 최상급 모델 바로 아래에 붙었습니다. 작년 기준으로 도구를 고르면 이미 한 세대가 늦습니다.</figcaption>
+</figure>

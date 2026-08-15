@@ -1,0 +1,436 @@
+<title>안암골에서 아틀란타까지</title>
+<style>
+{{css}}
+
+/* ── 교재 전용 레이아웃 : 좌측 장 레일 + 68ch 본문 ───────────────── */
+.book { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 0; }
+
+.rail {
+  position: sticky; top: 0; align-self: start; height: 100vh;
+  overflow-y: auto; padding: 1.6rem 1rem 3rem 1.6rem;
+  border-right: 1px solid var(--rule); background: var(--paper-2);
+}
+.rail-brand { font-family: var(--f-display); font-weight: 700; font-size: .96rem; line-height: 1.4; color: var(--crimson); margin-bottom: .3rem; }
+.rail-sub { font-size: .72rem; color: var(--ink-3); margin-bottom: 1.4rem; font-family: var(--f-mono); }
+.rail nav ol { list-style: none; margin: 0; padding: 0; }
+.rail nav a {
+  display: block; padding: .3rem .5rem; border-radius: 6px;
+  font-size: .82rem; line-height: 1.45; color: var(--ink-2); text-decoration: none;
+  border-left: 2px solid transparent;
+}
+.rail nav a:hover { background: var(--paper-3); color: var(--crimson); }
+.rail .part-label {
+  font-family: var(--f-mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-3); margin: 1.1rem 0 .35rem .5rem;
+}
+
+main { padding: 0 2.4rem 6rem; min-width: 0; }
+.wrap { max-width: var(--measure); margin-inline: auto; }
+.wide { max-width: 1040px; margin-inline: auto; }
+
+/* 표지 */
+.cover { padding: 5rem 0 3.4rem; border-bottom: 3px double var(--crimson); margin-bottom: 3rem; }
+.cover h1 { font-size: clamp(2.4rem, 5.4vw, 3.7rem); letter-spacing: -.015em; margin: 1rem 0 .9rem; }
+.cover .kicker { font-family: var(--f-mono); font-size: .78rem; letter-spacing: .18em; color: var(--crimson); text-transform: uppercase; }
+.cover .lede { font-size: 1.12rem; color: var(--ink-2); line-height: 1.85; max-width: 60ch; }
+.cover .meta { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; font-size: .85rem; color: var(--ink-3); font-family: var(--f-mono); }
+
+/* 장 */
+.chapter { padding-top: 3.6rem; margin-top: 3.6rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
+.chapter:first-of-type { border-top: 0; }
+.chapter > .wrap > .ch-num { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .14em; color: var(--crimson); }
+.chapter h2 { font-size: clamp(1.7rem, 3.4vw, 2.25rem); margin: .5rem 0 1.3rem; letter-spacing: -.01em; }
+.chapter h3 { font-size: 1.28rem; margin: 2.6rem 0 .9rem; }
+.chapter h4 { font-size: 1.06rem; margin: 1.8rem 0 .6rem; font-family: var(--f-body); }
+.chapter p { margin: 1.1rem 0; }
+.chapter ul, .chapter ol { padding-left: 1.35rem; margin: 1.1rem 0; }
+.chapter li { margin: .5rem 0; }
+.chapter li::marker { color: var(--crimson); }
+
+/* 부 구분 */
+.part-open { padding: 3.4rem 0 1rem; text-align: center; }
+.part-open .pnum { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .22em; color: var(--crimson); }
+.part-open h2 { font-size: clamp(1.5rem, 3.2vw, 2rem); margin: .6rem 0 .5rem; }
+.part-open p { color: var(--ink-3); font-size: .95rem; max-width: 54ch; margin-inline: auto; }
+
+/* 학습 목표 */
+.goals { background: var(--crimson-in); border: 1px solid var(--crimson); border-radius: 10px; padding: 1.15rem 1.4rem; margin: 1.6rem 0 2.2rem; }
+.goals .note-title { color: var(--crimson); }
+.goals ul { margin: .5rem 0 0; padding-left: 1.2rem; }
+.goals li { margin: .35rem 0; font-size: .95rem; }
+
+/* 한 줄 요약 */
+.takeaway {
+  border: 1px solid var(--rule-2); border-left: 5px solid var(--gold);
+  border-radius: 0 10px 10px 0; padding: 1.05rem 1.3rem; margin: 2.2rem 0;
+  background: var(--gold-in);
+}
+.takeaway .lab { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .12em; color: var(--gold); display: block; margin-bottom: .35rem; }
+.takeaway p { margin: 0; font-size: 1.02rem; }
+
+/* 용어 카드 */
+.term { border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0; background: var(--paper-2); }
+.term dt { font-family: var(--f-display); font-weight: 700; color: var(--crimson); margin-top: .7rem; }
+.term dt:first-child { margin-top: 0; }
+.term dd { margin: .25rem 0 0; font-size: .94rem; color: var(--ink-2); }
+
+code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3); padding: .1em .38em; border-radius: 4px; }
+
+@media (max-width: 900px) {
+  .book { grid-template-columns: 1fr; }
+  .rail { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--rule); padding: 1.2rem; }
+  .rail nav ol { columns: 2; column-gap: 1.2rem; }
+  main { padding: 0 1.15rem 4rem; }
+  body { font-size: 16.5px; }
+}
+</style>
+
+<div class="book">
+
+<aside class="rail">
+  <div class="rail-brand">안암골에서<br>아틀란타까지</div>
+  <div class="rail-sub">교재 · 2026.08.15</div>
+  <nav aria-label="목차">
+    <div class="part-label">여는 글</div>
+    <ol>
+      <li><a href="#intro">교우 여러분께</a></li>
+      <li><a href="#howto">이 책을 읽는 법</a></li>
+      <li><a href="#now">제0장 · 지금 어디까지 왔나</a></li>
+    </ol>
+    <div class="part-label">제1부 · 원리</div>
+    <ol>
+      <li><a href="#c1">제1장 · 챗봇에서 에이전트로</a></li>
+    </ol>
+    <div class="part-label">제2부 · 다섯 진영</div>
+    <ol>
+      <li><a href="#map">한 장으로 보는 판세</a></li>
+      <li><a href="#c2">제2장 · Anthropic</a></li>
+      <li><a href="#c3">제3장 · OpenAI</a></li>
+      <li><a href="#c4">제4장 · Google</a></li>
+      <li><a href="#c5">제5장 · SpaceXAI</a></li>
+      <li><a href="#c6">제6장 · 오픈웨이트와 Meta</a></li>
+      <li><a href="#c7">제7장 · Perplexity</a></li>
+    </ol>
+    <div class="part-label">제3부 · 이번 주</div>
+    <ol>
+      <li><a href="#c8">제8장 · 8월 둘째 주 뉴스</a></li>
+    </ol>
+    <div class="part-label">제4부 · 생활과 업무</div>
+    <ol>
+      <li><a href="#c9">제9장 · 바이브 코딩</a></li>
+      <li><a href="#c10">제10장 · 멀티모달</a></li>
+      <li><a href="#c11">제11장 · 자서전</a></li>
+    </ol>
+    <div class="part-label">제5부 · 지키기</div>
+    <ol>
+      <li><a href="#c12">제12장 · 딥페이크 방어</a></li>
+    </ol>
+    <div class="part-label">부록</div>
+    <ol>
+      <li><a href="#apx-a">A · 한눈에 비교표</a></li>
+      <li><a href="#apx-b">B · 실전 프롬프트</a></li>
+      <li><a href="#apx-c">C · 출처 확인 목록</a></li>
+    </ol>
+  </nav>
+</aside>
+
+<main>
+
+<!-- ══════════ 표지 ══════════ -->
+<header class="cover wrap" id="intro">
+  <div class="kicker">고려대학교 아틀란타 교우회 · AI 워크샵 교재</div>
+  <h1>안암골에서<br>아틀란타까지</h1>
+  <p class="lede">
+    2026년, AI는 묻고 답하는 물건에서 <strong>맡기면 끝내 오는 물건</strong>으로 바뀌었습니다.
+    이 책은 그 변화가 정확히 무엇인지, 그리고 서른의 교우와 여든의 교우가
+    각자 무엇을 얻을 수 있는지를 처음부터 끝까지 설명합니다.
+  </p>
+  <div class="meta">
+    <span>2026년 8월 15일 (토)</span>
+    <span>워크샵 교재 · 읽는 책</span>
+    <span>8월 14일 뉴스까지 반영</span>
+  </div>
+</header>
+
+<section class="wrap" id="howto">
+  <h3>이 책을 읽는 법</h3>
+  <p>
+    이 책은 오늘 워크샵에서 <em>따라 하는</em> 책이 아닙니다. 따라 하는 책은 따로 있습니다(워크북).
+    이 책은 <strong>읽고 아는</strong> 책입니다. 오늘 현장에서는 이 중 서너 장만 다루고,
+    나머지는 집에서 천천히 읽으시도록 만들었습니다.
+  </p>
+
+  <div class="note ku">
+    <span class="note-title">먼저, 오늘 이 자리의 이름에 대하여</span>
+    <p style="margin:0">
+      오늘 모임은 <strong>특강이 아니라 워크샵</strong>입니다. 이 구분은 말장난이 아니라 약속입니다.
+      특강은 앞에서 말하고 뒤에서 듣는 자리이고, 워크샵은 <strong>참석하신 분이 직접 손을 움직여
+      결과물을 가지고 돌아가는 자리</strong>입니다. 그래서 오늘 150분 중 85분이 교우님 손에 있습니다.
+      노트북을 꼭 챙겨 오시라고 부탁드린 이유도 같습니다.
+    </p>
+  </div>
+
+  <h4>본문에 붙은 표시</h4>
+  <p>이 책에는 사실 확인 상태를 나타내는 작은 표시가 붙어 있습니다.</p>
+  <ul>
+    <li><span class="src">확인</span> — 2026년 8월 15일 기준으로 <strong>복수의 언론·공식 발표로 교차 확인한 사실</strong>입니다. 날짜·수치·제품명을 그대로 인용하셔도 됩니다.</li>
+    <li><span class="src unver">확인 권장</span> — 출처가 하나뿐이거나, 회사의 홍보 문구를 근거로 한 서술입니다. 발표나 인용 전에 한 번 더 확인하시길 권합니다. 어디를 확인해야 하는지는 <a href="#apx-c">부록 C</a>에 모아 두었습니다.</li>
+  </ul>
+  <p>
+    AI 분야는 이 책을 인쇄한 다음 주에 또 바뀝니다. 표시가 붙어 있다는 것은
+    &ldquo;틀렸다&rdquo;는 뜻이 아니라 <strong>&ldquo;유통기한이 짧다&rdquo;</strong>는 뜻입니다.
+  </p>
+</section>
+
+<!-- ══════════ 제0장 ══════════ -->
+<section class="chapter" id="now">
+  <div class="wrap">
+    <div class="ch-num">제0장</div>
+    <h2>지금 어디까지 왔나</h2>
+    <p>
+      2026년의 AI를 어렵게 만드는 것은 기술이 아니라 <strong>속도</strong>입니다.
+      아래 표를 먼저 보십시오. 오늘 배울 내용의 절반이 지난 6주 안에 세상에 나왔습니다.
+    </p>
+  </div>
+  <div class="wide">{{fig:timeline}}</div>
+  <div class="wrap">
+    <p>
+      7월 9일 OpenAI가 GPT-5.6을 내놓은 뒤 8월 14일까지 <strong>37일</strong> 동안,
+      다섯 진영이 전부 새 주력 제품을 발표했습니다. 이 정도 밀도는 이전에 없었습니다.
+    </p>
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>제품 이름을 외우려 하지 마십시오. 이름은 계절마다 바뀝니다. 대신 <strong>&ldquo;AI가 스스로 도구를 쓰기 시작했다&rdquo;</strong>는 구조 변화 하나만 붙잡으시면, 이름이 바뀌어도 흔들리지 않습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 제1부 ══════════ -->
+<div class="part-open wrap">
+  <div class="pnum">제 1 부</div>
+  <h2>원리 — 무엇이 달라졌는가</h2>
+  <p>이 부는 딱 한 장입니다. 그러나 이 장을 이해하시면 나머지 열한 장은 응용에 불과합니다.</p>
+</div>
+
+<section class="chapter" id="c1">
+  <div class="wrap">
+    <div class="ch-num">제1장</div>
+    <h2>챗봇에서 에이전트로</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>&lsquo;에이전틱 AI(Agentic AI)&rsquo;가 정확히 무엇을 가리키는 말인지</li>
+        <li>챗봇과 에이전트를 가르는 두 가지 구조적 차이 — <strong>도구</strong>와 <strong>되돌아오는 화살표</strong></li>
+        <li>AI에게 맡겨도 되는 일과, 사람이 끝까지 쥐고 있어야 하는 일의 경계</li>
+      </ul>
+    </div>
+
+    <h3>1. 세 문장으로 요약하면</h3>
+    <p>
+      2022년부터 2024년까지 우리가 쓰던 AI는 <strong>말동무</strong>였습니다.
+      질문하면 답을 주었고, 그 답을 가지고 실제로 무언가를 하는 것은 사람의 몫이었습니다.
+      AI에게는 손이 없었기 때문입니다.
+    </p>
+    <p>
+      2026년의 AI는 <strong>일꾼</strong>입니다. 파일을 직접 열고, 엑셀을 직접 만들고,
+      웹을 직접 검색하고, 결과가 틀리면 스스로 다시 시도합니다.
+      이것을 <strong>에이전틱 AI</strong>라고 부릅니다.
+    </p>
+    <p>그 차이를 그림 하나로 보시면 다음과 같습니다.</p>
+  </div>
+
+  <div class="wide">{{fig:agentic}}</div>
+
+  <div class="wrap">
+    <h3>2. 왼쪽과 오른쪽을 가르는 두 가지</h3>
+    <p>위 그림에서 실제로 달라진 것은 딱 두 가지입니다.</p>
+
+    <h4>첫째 — 손이 생겼습니다 (도구 사용)</h4>
+    <p>
+      예전에는 AI가 &ldquo;이 엑셀 수식을 쓰시면 됩니다&rdquo;라고 <em>알려주었</em>습니다.
+      지금은 AI가 엑셀 파일을 <em>직접 만들어</em> 폴더에 놓아둡니다.
+      &ldquo;알려주기&rdquo;와 &ldquo;해놓기&rdquo; 사이의 거리가, 그동안 우리가 AI를 잘 못 쓰던 이유의 거의 전부였습니다.
+    </p>
+
+    <h4>둘째 — 스스로 되돌아갑니다 (자기 점검 루프)</h4>
+    <p>
+      더 중요한 것은 이쪽입니다. 에이전트는 일을 한 다음
+      <strong>&ldquo;내가 한 게 맞나?&rdquo;를 스스로 확인</strong>합니다.
+      코드를 고쳤으면 실제로 실행해 보고, 오류가 나면 원인을 찾아 다시 고칩니다.
+      사람이 매번 &ldquo;틀렸어, 다시&rdquo;라고 말해주지 않아도 됩니다.
+    </p>
+    <p>
+      이 점검 루프가 있기 때문에 에이전트는 <strong>몇 시간짜리 일</strong>을 맡을 수 있습니다.
+      한 번에 맞히는 능력이 아니라, 틀렸을 때 알아서 되돌아가는 능력이 긴 일을 가능하게 만듭니다.
+    </p>
+
+    <div class="term">
+      <dl style="margin:0">
+        <dt>에이전틱 AI (Agentic AI)</dt>
+        <dd>목표를 받으면 스스로 계획을 세우고, 도구를 사용해 실행하고, 결과를 점검해 필요하면 다시 시도하는 AI. &lsquo;대화&rsquo;가 아니라 &lsquo;위임&rsquo;이 기본 단위입니다.</dd>
+        <dt>도구 사용 (Tool Use)</dt>
+        <dd>AI가 파일 읽기·쓰기, 웹 검색, 프로그램 실행 같은 실제 동작을 직접 수행하는 것. AI에게 손을 달아주는 부분입니다.</dd>
+        <dt>MCP (Model Context Protocol)</dt>
+        <dd>AI를 외부 프로그램·데이터베이스에 연결하는 표준 규격. 콘센트 규격이 통일되면 어느 가전이든 꽂히듯, MCP 덕분에 어느 AI든 같은 도구에 꽂힙니다.</dd>
+        <dt>컨텍스트 창 (Context Window)</dt>
+        <dd>AI가 한 번에 기억할 수 있는 분량. 2026년 주요 모델은 100만 토큰(책 여러 권 분량)을 한 번에 봅니다.</dd>
+      </dl>
+    </div>
+
+    <h3>3. 그렇다면 무엇을 맡기고 무엇을 쥐고 있어야 하나</h3>
+    <p>
+      이 질문이 이 책 전체에서 가장 중요합니다. 답은 <strong>&ldquo;되돌릴 수 있는가&rdquo;</strong> 하나로 갈립니다.
+    </p>
+
+    <div class="note ok">
+      <span class="note-title">마음 놓고 맡겨도 되는 일 — 되돌릴 수 있는 것</span>
+      <ul style="margin:.4rem 0 0">
+        <li>초안 쓰기, 요약, 번역, 정리, 표 만들기</li>
+        <li>자료 조사와 비교 (단, 출처는 확인)</li>
+        <li>사진 정리, 파일 이름 정리, 형식 변환</li>
+        <li>코드 짜기와 테스트 — 틀리면 다시 짜면 됩니다</li>
+      </ul>
+    </div>
+
+    <div class="note risk">
+      <span class="note-title">사람이 끝까지 쥐고 있어야 하는 일 — 되돌릴 수 없는 것</span>
+      <ul style="margin:.4rem 0 0">
+        <li><strong>돈이 나가는 결정</strong> — 송금, 결제, 계약 서명</li>
+        <li><strong>밖으로 나가는 것</strong> — 메일 발송, 게시글 업로드, 파일 공유</li>
+        <li><strong>사실 판정</strong> — 특히 가족사·병력·법률·의료. AI는 모르는 것도 자연스럽게 지어냅니다</li>
+        <li><strong>지우는 일</strong> — 원본 파일 삭제, 계정 정리</li>
+      </ul>
+    </div>
+
+    <p>
+      좋은 에이전트 제품은 이 경계를 스스로 지킵니다.
+      Claude Cowork도, ChatGPT Work도, 파일을 지우거나 메일을 보내기 직전에
+      <strong>멈추고 사용자에게 물어봅니다</strong>. 이 확인 창이 뜰 때 습관적으로 &lsquo;예&rsquo;를 누르지 마시고,
+      무엇을 하려는지 한 번 읽어보시는 습관을 오늘부터 들이시면 좋겠습니다.
+    </p>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>AI에게 <strong>손</strong>과 <strong>되돌아가는 화살표</strong>가 생겼습니다. 그래서 이제는 &lsquo;물어보는&rsquo; 것이 아니라 &lsquo;맡기는&rsquo; 것입니다. 다만 되돌릴 수 없는 일만은 끝까지 사람이 쥐십시오.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 제2부 ══════════ -->
+<div class="part-open wrap">
+  <div class="pnum">제 2 부</div>
+  <h2>다섯 진영 — 누가 무엇을 만들고 있나</h2>
+  <p>이름이 수십 개라 복잡해 보이지만, 실은 다섯 회사가 똑같은 표의 같은 칸을 채우고 있을 뿐입니다.</p>
+</div>
+
+<section class="chapter" id="map">
+  <div class="wrap">
+    <div class="ch-num">지형도</div>
+    <h2>한 장으로 보는 2026년 판세</h2>
+    <p>
+      개별 회사로 들어가기 전에, 전체 그림을 먼저 보십시오.
+      2026년의 규칙은 단순합니다 — <strong>모든 회사가 &lsquo;개발자용 하나 + 업무용 하나&rsquo;를 한 쌍으로 냅니다.</strong>
+    </p>
+  </div>
+  <div class="wide">{{fig:landscape}}</div>
+  <div class="wrap">
+    <p>
+      교우님이 소프트웨어를 만드는 분이 아니라면, <strong>위쪽 줄은 이름만 알아두시고
+      아래쪽 줄에서 하나만 고르시면 됩니다.</strong> 그리고 대개 이미 쓰고 계신 것을 고르는 편이 낫습니다.
+      지메일을 많이 쓰시면 Gemini, ChatGPT를 이미 구독 중이시면 ChatGPT Work,
+      문서 작업이 많고 꼼꼼함이 중요하면 Claude Cowork입니다.
+    </p>
+  </div>
+</section>
+
+<section class="chapter" id="c2">
+  <div class="wrap">
+    <div class="ch-num">제2장</div>
+    <h2>Anthropic — Claude Code와 Claude Cowork</h2>
+
+    <div class="goals">
+      <span class="note-title">이 장에서 배울 것</span>
+      <ul>
+        <li>두 제품이 경쟁 관계가 아니라 <strong>같은 엔진의 두 입구</strong>라는 점</li>
+        <li>비개발자 교우님이 쓰실 것은 어느 쪽이며, 무엇을 시킬 수 있는지</li>
+        <li>각 제품이 할 수 있는 일과 할 수 없는 일의 경계</li>
+      </ul>
+    </div>
+
+    <p>
+      Anthropic은 2026년 1월 12일 <strong>Claude Cowork</strong>를 리서치 프리뷰로 내놓았고,
+      4월에 정식 출시했습니다. 2월 10일에는 윈도우판이, 7월 7일에는 모바일과 웹으로 확장되었습니다.
+      <span class="src">확인</span>
+    </p>
+    <p>
+      이름이 둘이라 헷갈리기 쉬운데, 구조를 보시면 아주 단순합니다.
+    </p>
+  </div>
+
+  <div class="wide">{{fig:claude-two-track}}</div>
+
+  <div class="wrap">
+    <h3>Claude Cowork로 실제 무엇을 시킬 수 있나</h3>
+    <p>
+      Cowork의 핵심은 <strong>&ldquo;폴더를 통째로 맡긴다&rdquo;</strong>입니다.
+      파일을 하나씩 올리는 것이 아니라, 내 컴퓨터의 폴더 하나를 지정해 주고 말로 시킵니다.
+    </p>
+
+    <div class="prompt">
+      <div class="prompt-head"><span>Claude Cowork에게 시키는 예</span></div>
+      <pre>바탕화면의 '2026보험서류' 폴더를 열어보세요.
+
+그 안의 영문 PDF들을 전부 읽고,
+1) 보험사 이름, 2) 월 납입액, 3) 보장 만기일, 4) 자기부담금
+네 가지를 뽑아 엑셀 표 한 장으로 정리해 주세요.
+
+그리고 제가 놓치면 손해 볼 만한 조항이 있으면
+'주의' 열에 한국어로 짧게 적어 주세요.</pre>
+    </div>
+
+    <p>
+      이 지시 하나로 Cowork는 폴더를 읽고, PDF를 해석하고, 엑셀 파일을 만들어
+      같은 폴더에 저장합니다. 사람이 자리를 비운 동안에도 계속 일합니다.
+      40쪽짜리 영문 약관 열 개를 손으로 정리하면 하루가 걸리는 일입니다.
+    </p>
+
+    <h4>Claude Code는 무엇이 다른가</h4>
+    <p>
+      Claude Code는 같은 능력을 <strong>터미널</strong>(검은 화면에 글자만 있는 개발자용 창)에서 씁니다.
+      수백 개 파일로 이루어진 소프트웨어 전체를 한 번에 읽고, 여러 파일을 넘나들며 고치고,
+      스스로 테스트를 돌려 확인합니다. IT 분야에 계신 교우님과 자녀분께는 이쪽을 권합니다.
+    </p>
+
+    <div class="note check">
+      <span class="note-title">두 제품 모두 못 하는 것</span>
+      <ul style="margin:.4rem 0 0">
+        <li><strong>허락하지 않은 폴더는 보지 못합니다.</strong> 지정한 폴더 밖으로 나가지 않습니다 — 이것은 제약이 아니라 안전장치입니다.</li>
+        <li><strong>사용자 승인 없이 지우거나 보내지 않습니다.</strong> 중요한 동작 앞에서는 반드시 멈추고 물어봅니다.</li>
+        <li><strong>사실을 보증하지 못합니다.</strong> 요약과 정리는 훌륭하지만, 숫자와 날짜는 원본과 대조하십시오.</li>
+      </ul>
+    </div>
+
+    <div class="takeaway">
+      <span class="lab">이 장의 한 줄</span>
+      <p>코드를 만지면 <strong>Claude Code</strong>, 문서를 만지면 <strong>Claude Cowork</strong>. 오늘 워크샵에서 노트북으로 직접 다루는 것은 Cowork 쪽입니다.</p>
+    </div>
+  </div>
+</section>
+
+{{part:textbook-b}}
+
+</main>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var pre = b.closest('.prompt').querySelector('pre');
+    navigator.clipboard.writeText(pre.textContent.trim()).then(function () {
+      var t = b.textContent; b.textContent = '복사됨'; b.dataset.done = '1';
+      setTimeout(function () { b.textContent = t; b.dataset.done = ''; }, 1600);
+    });
+  });
+});
+</script>
