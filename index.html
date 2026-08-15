@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b0a2a">
+<title>네온 버블 팝</title>
+<style>
+  /* ===== 기본 리셋 : 전체 화면 캔버스 한 장만 사용 ===== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #07061c;
+    /* 모바일에서 스크롤/확대/길게눌러 선택 전부 차단 */
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* 노치 대응 */
+    position: fixed;
+    inset: 0;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<script>
+"use strict";
+(function () {
+
+/* ==========================================================================
+   0. 유틸리티 — 수학, 이징 함수
+   모든 애니메이션은 여기 있는 이징을 통과시킨다 (선형 움직임 금지).
+   ========================================================================== */
+
+var clamp = function (v, lo, hi) { return v < lo ? lo : (v > hi ? hi : v); };
+var lerp  = function (a, b, t) { return a + (b - a) * t; };
+var rand  = function (a, b) { return a + Math.random() * (b - a); };
+var randInt = function (a, b) { return Math.floor(rand(a, b + 1)); };
+var TAU = Math.PI * 2;
+
+// 부드럽게 감속 (가장 많이 쓰는 기본 이징)
+function easeOutCubic(t) { t = clamp(t, 0, 1); var u = 1 - t; return 1 - u * u * u; }
+function easeOutQuint(t) { t = clamp(t, 0, 1); var u = 1 - t; return 1 - u * u * u * u * u; }
+// 목표를 살짝 지나쳤다 돌아오는 "톡" 느낌 — 콤보 숫자, 버블 등장에 사용
+function easeOutBack(t) {
+  t = clamp(t, 0, 1);
+  var c1 = 1.70158, c3 = c1 + 1, u = t - 1;
+  return 1 + c3 * u * u * u + c1 * u * u;
+}
+// 통통 튀는 탄성 — 점수 펀치, 게임오버 패널에 사용
+function easeOutElastic(t) {
+  t = clamp(t, 0, 1);
+  if (t === 0 || t === 1) return t;
+  var p = TAU / 3;
+  return Math.pow(2, -10 * t) * Math.sin((t * 10 - 0.75) * p) + 1;
+}
+function easeInOutSine(t) { return -(Math.cos(Math.PI * clamp(t, 0, 1)) - 1) / 2; }
+
+// 프레임레이트에 독립적인 감쇠(지수 감쇠). dt가 흔들려도 결과가 같다.
+function damp(current, target, rate, dt) {
+  return target + (current - target) * Math.exp(-rate * dt);
+}
+
+
+/* ==========================================================================
+   1. 캔버스 & 리사이즈
+   devicePixelRatio를 반영하되 2배까지만 (모바일 60fps 유지용).
+   ========================================================================== */
+
+var canvas = document.getElementById("game");
+var ctx = canvas.getContext("2d", { alpha: false });
+
+var W = 0, H = 0, DPR = 1;
+var S = 1; // 화면 크기 기준 스케일 계수 — 글씨/버블 크기를 여기에 곱한다
+
+function resize() {
+  DPR = clamp(window.devicePixelRatio || 1, 1, 2);
+  W = Math.floor(window.innerWidth);
+  H = Math.floor(window.innerHeight);
+  canvas.width  = Math.floor(W * DPR);
+  canvas.height = Math.floor(H * DPR);
+  canvas.style.width  = W + "px";
+  canvas.style.height = H + "px";
+  // 세로로 긴 폰에서도 버블이 너무 작아지지 않도록 하한을 넉넉히 잡음
+  S = clamp(Math.min(W, H) / 620, 0.78, 1.6);
+}
+window.addEventListener("resize", resize);
+window.addEventListener("orientationchange", function () { setTimeout(resize, 120); });
+resize();
+
+var FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", ' +
+           '"Noto Sans KR", "Malgun Gothic", "Helvetica Neue", Arial, sans-serif';
+function setFont(px, weight) {
+  ctx.font = (weight || 900) + " " + Math.round(px) + "px " + FONT;
+}
+
+
+/* ==========================================================================
+   2. 글로우 스프라이트 캐시
+   파티클마다 radial gradient를 새로 만들면 60fps가 무너진다.
+   색상환을 24칸으로 쪼개 미리 그려두고 drawImage로만 찍는다.
+   ========================================================================== */
+
+var GLOW_STEPS = 24;
+var GLOW = [];
+
+function makeGlowSprite(hue) {
+  var size = 64;
+  var c = document.createElement("canvas");
+  c.width = c.height = size;
+  var g = c.getContext("2d");
+  var grd = g.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+  grd.addColorStop(0.00, "hsla(" + hue + ",100%,95%,1)");
+  grd.addColorStop(0.20, "hsla(" + hue + ",100%,72%,0.95)");
+  grd.addColorStop(0.48, "hsla(" + hue + ",100%,55%,0.42)");
+  grd.addColorStop(1.00, "hsla(" + hue + ",100%,50%,0)");
+  g.fillStyle = grd;
+  g.fillRect(0, 0, size, size);
+  return c;
+}
+for (var gi = 0; gi < GLOW_STEPS; gi++) {
+  GLOW.push(makeGlowSprite(Math.round(gi * (360 / GLOW_STEPS))));
+}
+function glowSprite(hue) {
+  var i = Math.round(hue / (360 / GLOW_STEPS));
+  return GLOW[((i % GLOW_STEPS) + GLOW_STEPS) % GLOW_STEPS];
+}
+// 글로우 스프라이트를 (x,y) 중심, 반지름 r로 찍는다
+function drawGlow(hue, x, y, r, alpha) {
+  ctx.globalAlpha = alpha;
+  ctx.drawImage(glowSprite(hue), x - r, y - r, r * 2, r * 2);
+}
+
+
+/* ==========================================================================
+   3. 사운드 — Web Audio API로 전부 생성 (오디오 파일 없음)
+   · 팝: 사인파 + 아주 짧은 감쇠 엔벨로프 → "톡" 하고 튀는 느낌
+   · 콤보가 오를수록 반음(semitone)씩 음이 올라가는 상승 스케일
+   ========================================================================== */
+
+var Audio_ = {
+  ctx: null,
+  master: null,
+  ready: false,
+
+  // 브라우저 정책상 첫 사용자 입력 시점에만 오디오를 켤 수 있다
+  init: function () {
+    if (this.ready) return;
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    try {
+      this.ctx = new AC();
+      var comp = this.ctx.createDynamicsCompressor(); // 여러 소리가 겹쳐도 찢어지지 않게
+      comp.threshold.value = -14;
+      comp.ratio.value = 12;
+      comp.attack.value = 0.003;
+      comp.release.value = 0.25;
+      this.master = this.ctx.createGain();
+      this.master.gain.value = 0.5;
+      this.master.connect(comp);
+      comp.connect(this.ctx.destination);
+      this.ready = true;
+    } catch (e) { this.ready = false; }
+  },
+
+  resume: function () {
+    if (this.ctx && this.ctx.state === "suspended") this.ctx.resume();
+  },
+
+  // 기본 톤 하나 — 주파수 f, 길이 dur, 볼륨 vol, 파형 type
+  tone: function (f, dur, vol, type, delay, bendTo) {
+    if (!this.ready) return;
+    var ac = this.ctx;
+    var t0 = ac.currentTime + (delay || 0);
+    var osc = ac.createOscillator();
+    var g = ac.createGain();
+    osc.type = type || "sine";
+    osc.frequency.setValueAtTime(f, t0);
+    if (bendTo) osc.frequency.exponentialRampToValueAtTime(Math.max(20, bendTo), t0 + dur);
+    // 아주 짧은 어택 + 지수 감쇠 = 타악기 같은 "톡"
+    g.gain.setValueAtTime(0.0001, t0);
+    g.gain.exponentialRampToValueAtTime(vol, t0 + 0.006);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    osc.connect(g);
+    g.connect(this.master);
+    osc.start(t0);
+    osc.stop(t0 + dur + 0.02);
+  },
+
+  // 버블이 터질 때 — combo가 클수록 반음씩 위로
+  pop: function (combo) {
+    if (!this.ready) return;
+    var semis = Math.min(combo, 22);            // 2옥타브 조금 안 되게 상한
+    var base = 523.25;                          // C5
+    var f = base * Math.pow(2, semis / 12);
+    this.tone(f, 0.22, 0.32, "sine", 0, f * 0.82);   // 본음 (살짝 아래로 떨어지며 "톡")
+    this.tone(f * 2, 0.11, 0.10, "sine", 0.005);     // 배음 → 반짝임
+    this.tone(f * 3.02, 0.045, 0.07, "triangle", 0); // 터지는 순간의 어택
+  },
+
+  // 5콤보 달성 순간의 반짝 화음
+  chime: function (combo) {
+    if (!this.ready) return;
+    var semis = Math.min(combo, 22);
+    var f = 523.25 * Math.pow(2, semis / 12);
+    this.tone(f * 1.5, 0.30, 0.16, "sine", 0.02);
+    this.tone(f * 2.0, 0.34, 0.12, "sine", 0.06);
+  },
+
+  // 버블을 놓쳤을 때 — 아래로 미끄러지는 낮은 소리
+  miss: function () {
+    this.tone(300, 0.32, 0.22, "sine", 0, 110);
+    this.tone(150, 0.36, 0.14, "triangle", 0.01, 70);
+  },
+
+  // 게임 오버 — 내려가는 4음
+  gameOver: function () {
+    var seq = [523.25, 440.0, 349.23, 261.63];
+    for (var i = 0; i < seq.length; i++) {
+      this.tone(seq[i], 0.42, 0.24, "sine", i * 0.13);
+      this.tone(seq[i] * 0.5, 0.46, 0.12, "triangle", i * 0.13);
+    }
+  },
+
+  // 게임 시작 — 올라가는 아르페지오
+  start: function () {
+    var seq = [392.0, 523.25, 659.25, 783.99];
+    for (var i = 0; i < seq.length; i++) {
+      this.tone(seq[i], 0.26, 0.22, "sine", i * 0.075);
+    }
+  }
+};
+
+
+/* ==========================================================================
+   4. 게임 상태 & 엔티티 배열
+   상태 머신: START → PLAYING → GAMEOVER → (다시) PLAYING
+   ========================================================================== */
+
+var STATE = { START: 0, PLAYING: 1, GAMEOVER: 2 };
+
+var G = {
+  state: STATE.START,
+  time: 0,          // 전체 경과 시간 (배경 애니메이션용, 절대 리셋 안 함)
+  playTime: 0,      // 이번 판 경과 시간 (난이도 상승에 사용)
+  stateTime: 0,     // 현재 상태에 머문 시간 (화면 전환 애니메이션용)
+
+  score: 0,
+  displayScore: 0,  // 화면에 굴러가며 표시되는 점수
+  best: 0,
+  lives: 3,
+  maxLives: 3,
+
+  combo: 0,
+  bestCombo: 0,
+  comboTimer: 0,    // 이 시간 안에 다음 버블을 못 터뜨리면 콤보 끊김
+  comboLimit: 1.5,
+
+  spawnTimer: 0,
+  spawnInterval: 0.95,
+
+  // ── 연출 상태값들 ──
+  shake: 0,         // 화면 흔들림 세기(px)
+  shakeX: 0, shakeY: 0,
+  flashAlpha: 0,    // 전체 화면 플래시
+  flashHue: 200,
+  scorePunch: 0,    // 점수 커지는 펀치 애니메이션 (0→1로 세팅 후 감쇠)
+  comboPunch: 0,    // 콤보 숫자 튀어나오는 애니메이션
+  lifePunch: 0,     // 목숨 잃을 때 애니메이션
+  vignette: 0       // 목숨을 잃으면 화면 가장자리가 붉게 물듦
+};
+
+var bubbles   = [];
+var particles = [];
+var floaters  = [];  // "+20" 같이 떠오르는 점수 텍스트
+var dust      = [];  // 배경에 천천히 떠다니는 먼지 (깊이감)
+var rings     = [];  // 터진 자리에서 퍼져 나가는 충격파 링
+
+// 최고점수 불러오기 (localStorage를 못 쓰는 환경에서도 죽지 않게)
+try {
+  var saved = window.localStorage.getItem("neonBubblePop.best");
+  if (saved !== null) G.best = parseInt(saved, 10) || 0;
+} catch (e) { /* 무시 */ }
+
+function saveBest() {
+  try { window.localStorage.setItem("neonBubblePop.best", String(G.best)); }
+  catch (e) { /* 무시 */ }
+}
+
+
+/* ==========================================================================
+   5. 버블
+   아래에서 위로 떠오르고, 살짝 좌우로 흔들리며, 표면에 하이라이트 점 1개.
+   ========================================================================== */
+
+function spawnBubble(atStartScreen) {
+  // 난이도: 0 → 1 (약 80초에 걸쳐 서서히 최고치)
+  var d = easeInOutSine(clamp(G.playTime / 80, 0, 1));
+
+  var baseR = lerp(40, 30, d) * S;
+  var r = baseR * rand(0.85, 1.18);
+  var speed = lerp(62, 168, d) * rand(0.86, 1.16) * clamp(S, 0.85, 1.25);
+
+  if (atStartScreen) { speed *= 0.45; r *= 1.05; }
+
+  var b = {
+    hue: randInt(0, 35) * 10,        // 무지개 전 색상에서 고름
+    r: r,
+    x: rand(r + 10, W - r - 10),
+    y: H + r + rand(0, 40),
+    vy: -speed,
+    wobblePhase: rand(0, TAU),
+    wobbleSpeed: rand(1.5, 2.9),
+    wobbleAmp: rand(10, 26) * S,     // 좌우로 살랑거리는 폭
+    baseX: 0,
+    spin: rand(-0.6, 0.6),
+    age: 0,
+    dead: false
+  };
+  b.baseX = b.x;
+  bubbles.push(b);
+  return b;
+}
+
+function updateBubbles(dt) {
+  for (var i = bubbles.length - 1; i >= 0; i--) {
+    var b = bubbles[i];
+    b.age += dt;
+    b.y += b.vy * dt;
+    // 좌우 흔들림 — 사인파라 자연스럽게 감속/가속된다
+    b.wobblePhase += b.wobbleSpeed * dt;
+    b.x = b.baseX + Math.sin(b.wobblePhase) * b.wobbleAmp;
+    b.x = clamp(b.x, b.r * 0.6, W - b.r * 0.6);
+
+    // 화면 위로 완전히 빠져나가면 "놓친 것"
+    if (b.y + b.r < -4) {
+      bubbles.splice(i, 1);
+      if (G.state === STATE.PLAYING) onMissed(b);
+    }
+  }
+}
+
+function drawBubble(b) {
+  // 등장 애니메이션: 0.28초 동안 easeOutBack으로 뿅 하고 커진다
+  var grow = easeOutBack(b.age / 0.28);
+  // 살아있는 느낌: 아주 약하게 위아래로 눌렸다 펴짐 (squash & stretch)
+  var sq = Math.sin(b.wobblePhase * 1.7) * 0.055;
+  var rx = b.r * grow * (1 + sq);
+  var ry = b.r * grow * (1 - sq);
+  if (rx <= 0.5 || ry <= 0.5) return;
+
+  var h = b.hue;
+
+  // (1) 바깥 글로우 — 네온 느낌의 핵심
+  ctx.globalCompositeOperation = "lighter";
+  drawGlow(h, b.x, b.y, rx * 2.5, 0.34);
+  ctx.globalCompositeOperation = "source-over";
+  ctx.globalAlpha = 1;
+
+  ctx.save();
+  ctx.translate(b.x, b.y);
+  ctx.scale(rx, ry);
+
+  // (2) 본체 — 왼쪽 위에서 빛이 들어오는 구(球) 그라데이션
+  var grd = ctx.createRadialGradient(-0.32, -0.36, 0.06, 0, 0, 1);
+  grd.addColorStop(0.00, "hsla(" + h + ",100%,88%,0.92)");
+  grd.addColorStop(0.32, "hsla(" + h + ",100%,66%,0.62)");
+  grd.addColorStop(0.78, "hsla(" + h + ",95%,48%,0.34)");
+  grd.addColorStop(1.00, "hsla(" + h + ",90%,42%,0.16)");
+  ctx.fillStyle = grd;
+  ctx.beginPath();
+  ctx.arc(0, 0, 1, 0, TAU);
+  ctx.fill();
+
+  ctx.restore();
+
+  // (3) 테두리 링 — 비눗방울 같은 얇고 밝은 윤곽
+  ctx.globalCompositeOperation = "lighter";
+  ctx.strokeStyle = "hsla(" + h + ",100%,82%,0.85)";
+  ctx.lineWidth = Math.max(1.5, 2.6 * S);
+  ctx.beginPath();
+  ctx.ellipse(b.x, b.y, rx * 0.97, ry * 0.97, 0, 0, TAU);
+  ctx.stroke();
+
+  // (4) 하이라이트 점 1개 — 이게 있어야 "유리구슬"처럼 보인다
+  ctx.fillStyle = "rgba(255,255,255,0.9)";
+  ctx.beginPath();
+  ctx.ellipse(b.x - rx * 0.34, b.y - ry * 0.38, rx * 0.19, ry * 0.15,
+              -0.5 + b.spin * 0.2, 0, TAU);
+  ctx.fill();
+
+  // (5) 아주 작은 보조 하이라이트 (더 반짝여 보이게)
+  ctx.globalAlpha = 0.5;
+  ctx.beginPath();
+  ctx.ellipse(b.x + rx * 0.32, b.y + ry * 0.30, rx * 0.09, ry * 0.07, 0.6, 0, TAU);
+  ctx.fill();
+
+  ctx.globalAlpha = 1;
+  ctx.globalCompositeOperation = "source-over";
+}
+
+
+/* ==========================================================================
+   6. 파티클
+   중력 + 공기저항, 점점 작아지며 사라짐, 이전 위치에 약한 잔상.
+   ========================================================================== */
+
+/* 파티클은 화면에서 가장 넓은 면적을 칠하는 요소라 상한이 곧 프레임레이트다.
+   한 번 터질 때 30개 + 5콤보 보너스 18개 기준으로 340이면 연타해도 잘리지 않는다. */
+var MAX_PARTICLES = 340;
+
+function spawnParticles(x, y, hue, r, count) {
+  // 상한을 넘으면 오래된 것부터 한 번에 잘라낸다 (매번 shift 하면 O(n²))
+  var over = particles.length + count - MAX_PARTICLES;
+  if (over > 0) particles.splice(0, over);
+
+  for (var i = 0; i < count; i++) {
+    // 사방으로 고르게 + 약간의 무작위성
+    var a = (i / count) * TAU + rand(-0.16, 0.16);
+    var sp = rand(90, 430) * clamp(S, 0.85, 1.3);
+    var life = rand(0.55, 1.15);
+    particles.push({
+      x: x + Math.cos(a) * r * 0.35,
+      y: y + Math.sin(a) * r * 0.35,
+      px: x, py: y,
+      vx: Math.cos(a) * sp,
+      vy: Math.sin(a) * sp - rand(20, 90),   // 살짝 위로 솟았다가 떨어지도록
+      r: rand(2.5, 7.5) * S,
+      hue: hue + rand(-22, 22),
+      life: life,
+      maxLife: life
+    });
+  }
+}
+
+function updateParticles(dt) {
+  var GRAV = 900;      // 중력
+  var DRAG = 1.9;      // 공기저항 (지수 감쇠)
+  var k = Math.exp(-DRAG * dt);
+  var w = 0;           // 배열 재사용을 위한 쓰기 인덱스 (GC 최소화)
+
+  for (var i = 0; i < particles.length; i++) {
+    var p = particles[i];
+    p.life -= dt;
+    if (p.life <= 0) continue;
+
+    p.px = p.x; p.py = p.y;
+    p.vy += GRAV * dt;
+    p.vx *= k;
+    p.vy *= k;
+    p.x += p.vx * dt;
+    p.y += p.vy * dt;
+
+    particles[w++] = p;
+  }
+  particles.length = w;
+}
+
+function drawParticles() {
+  ctx.globalCompositeOperation = "lighter";
+  for (var i = 0; i < particles.length; i++) {
+    var p = particles[i];
+    var t = p.life / p.maxLife;          // 1 → 0
+    var e = easeOutQuint(t);             // 끝에서 확 사라지지 않고 부드럽게
+    var r = p.r * (0.35 + e * 1.25);     // 점점 작아짐
+    var a = e * 0.95;
+
+    // 잔상: 직전 위치에 옅게 한 번 더.
+    // 빠르게 움직일 때만 그린다 — 느려지면 어차피 겹쳐서 안 보이는데 비용은 두 배다.
+    var dx = p.x - p.px, dy = p.y - p.py;
+    if (dx * dx + dy * dy > 9) drawGlow(p.hue, p.px, p.py, r * 1.9, a * 0.28);
+
+    // 본체
+    drawGlow(p.hue, p.x, p.y, r * 2.05, a);
+  }
+  ctx.globalAlpha = 1;
+  ctx.globalCompositeOperation = "source-over";
+}
+
+
+/* ==========================================================================
+   6-2. 충격파 링
+   터진 자리에서 빠르게 퍼지며 얇아지는 원.
+   전체 화면을 칠하는 플래시와 달리 선 하나라 비용이 거의 없으면서
+   "펑!" 하고 터진 느낌을 가장 확실하게 전달해 준다.
+   ========================================================================== */
+
+function spawnRing(x, y, hue, maxR, life, width) {
+  rings.push({ x: x, y: y, hue: hue, maxR: maxR, age: 0, life: life, width: width });
+}
+
+function updateRings(dt) {
+  var w = 0;
+  for (var i = 0; i < rings.length; i++) {
+    var r = rings[i];
+    r.age += dt;
+    if (r.age < r.life) rings[w++] = r;
+  }
+  rings.length = w;
+}
+
+function drawRings() {
+  if (!rings.length) return;
+  ctx.globalCompositeOperation = "lighter";
+  for (var i = 0; i < rings.length; i++) {
+    var r = rings[i];
+    var t = r.age / r.life;
+    var rad = easeOutQuint(t) * r.maxR;          // 처음엔 확 퍼지고 끝에서 멈춤
+    var a = (1 - easeOutCubic(t)) * 0.85;
+    if (rad <= 0.5 || a <= 0.01) continue;
+    ctx.globalAlpha = a;
+    ctx.strokeStyle = "hsl(" + r.hue + ",100%,75%)";
+    ctx.lineWidth = Math.max(0.6, r.width * (1 - t));  // 퍼지면서 얇아짐
+    ctx.beginPath();
+    ctx.arc(r.x, r.y, rad, 0, TAU);
+    ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+  ctx.globalCompositeOperation = "source-over";
+}
+
+
+/* ==========================================================================
+   7. 떠오르는 점수 텍스트 ("+20")
+   ========================================================================== */
+
+function spawnFloater(x, y, text, hue) {
+  floaters.push({ x: x, y: y, text: text, hue: hue, age: 0, life: 0.95 });
+}
+
+function updateFloaters(dt) {
+  var w = 0;
+  for (var i = 0; i < floaters.length; i++) {
+    var f = floaters[i];
+    f.age += dt;
+    if (f.age < f.life) floaters[w++] = f;
+  }
+  floaters.length = w;
+}
+
+function drawFloaters() {
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  for (var i = 0; i < floaters.length; i++) {
+    var f = floaters[i];
+    var t = f.age / f.life;
+    var rise = easeOutCubic(t) * 74 * S;         // 위로 솟았다가 멈춤
+    var scale = 1 + easeOutBack(clamp(t * 4, 0, 1)) * 0.35;
+    var alpha = 1 - easeOutCubic(clamp((t - 0.45) / 0.55, 0, 1));
+
+    ctx.save();
+    ctx.translate(f.x, f.y - rise);
+    ctx.scale(scale, scale);
+    ctx.globalAlpha = alpha;
+    setFont(26 * S);
+    ctx.lineWidth = 5 * S;
+    ctx.strokeStyle = "rgba(10,6,30,0.65)";
+    ctx.strokeText(f.text, 0, 0);
+    ctx.fillStyle = "hsl(" + f.hue + ",100%,80%)";
+    ctx.fillText(f.text, 0, 0);
+    ctx.restore();
+  }
+  ctx.globalAlpha = 1;
+}
+
+
+/* ==========================================================================
+   8. 배경 — 짙은 남색~보라 그라데이션이 천천히 흐르고,
+      큰 네온 덩어리와 먼지가 떠다녀 깊이감을 준다.
+   ========================================================================== */
+
+var blobs = [];
+for (var bi = 0; bi < 3; bi++) {
+  blobs.push({
+    hue: [265, 205, 320][bi],
+    ox: rand(0, TAU), oy: rand(0, TAU),
+    sx: rand(0.045, 0.085), sy: rand(0.035, 0.07),
+    r: rand(0.45, 0.75)
+  });
+}
+
+/* 배경은 부드러운 그라데이션뿐이라 낮은 해상도로 그린 뒤 확대해도 차이가 없다.
+   화면 크기의 거대한 글로우를 원본 해상도에 매 프레임 합성하면 그것만으로
+   프레임이 무너진다(실측 66ms). 1/3 해상도 버퍼에 그려 올리면 픽셀 수가
+   ~9배 줄어 60fps가 유지되고, 확대 보간 덕에 그라데이션 띠도 오히려 옅어진다. */
+var BG_SCALE = 0.34;
+var bgCanvas = document.createElement("canvas");
+var bgCtx = bgCanvas.getContext("2d", { alpha: false });
+var bgW = 0, bgH = 0;
+
+function resizeBg() {
+  bgW = Math.max(64, Math.round(W * BG_SCALE));
+  bgH = Math.max(64, Math.round(H * BG_SCALE));
+  bgCanvas.width = bgW;
+  bgCanvas.height = bgH;
+}
+resizeBg();
+window.addEventListener("resize", resizeBg);
+
+function initDust() {
+  dust.length = 0;
+  var n = Math.round(clamp((W * H) / 16000, 30, 90));
+  for (var i = 0; i < n; i++) {
+    dust.push({
+      x: rand(0, W), y: rand(0, H),
+      r: rand(0.8, 2.4) * S,
+      v: rand(6, 26),
+      a: rand(0.15, 0.5),
+      hue: rand(190, 300),
+      ph: rand(0, TAU)
+    });
+  }
+}
+initDust();
+window.addEventListener("resize", initDust);
+
+function updateDust(dt) {
+  for (var i = 0; i < dust.length; i++) {
+    var d = dust[i];
+    d.y -= d.v * dt;
+    d.ph += dt * 1.1;
+    if (d.y < -6) { d.y = H + 6; d.x = rand(0, W); }
+  }
+}
+
+function drawBackground() {
+  // ── 1단계: 저해상도 버퍼에 그라데이션 + 커다란 네온 덩어리 ──
+  var g = bgCtx;
+
+  // 세로 그라데이션 — 색이 아주 천천히 흐른다
+  var h1 = 232 + Math.sin(G.time * 0.07) * 16;         // 짙은 남색 근처
+  var h2 = 278 + Math.sin(G.time * 0.05 + 1.2) * 18;   // 보라 근처
+  var grd = g.createLinearGradient(0, 0, 0, bgH);
+  grd.addColorStop(0.00, "hsl(" + h1 + ",62%,9%)");
+  grd.addColorStop(0.55, "hsl(" + ((h1 + h2) / 2) + ",58%,12%)");
+  grd.addColorStop(1.00, "hsl(" + h2 + ",56%,16%)");
+  g.fillStyle = grd;
+  g.fillRect(0, 0, bgW, bgH);
+
+  // 커다란 네온 덩어리 3개가 천천히 떠다님
+  g.globalCompositeOperation = "lighter";
+  for (var i = 0; i < blobs.length; i++) {
+    var b = blobs[i];
+    var x = bgW * (0.5 + Math.sin(G.time * b.sx + b.ox) * 0.42);
+    var y = bgH * (0.5 + Math.cos(G.time * b.sy + b.oy) * 0.42);
+    var r = Math.max(bgW, bgH) * b.r;
+    g.globalAlpha = 0.11;
+    g.drawImage(glowSprite(b.hue), x - r, y - r, r * 2, r * 2);
+  }
+  /* 5콤보 플래시와 피격 비네트도 이 저해상도 버퍼에 합성한다.
+     둘 다 경계가 없는 부드러운 색 덩어리라 확대해도 똑같아 보이는데,
+     원본 해상도에 전체 화면 합성을 하면 그것만으로 50~67ms가 든다.
+     버블·파티클 뒤에 깔리는 대신 게임 요소가 색에 묻히지 않는 이점도 있다. */
+
+  // 5콤보마다 화면 전체가 그 색으로 한 번 번쩍
+  if (G.flashAlpha > 0.005) {
+    g.globalCompositeOperation = "lighter";
+    // 1.4배까지만 — 완전히 하얗게 덮이면 다음 버블이 잠깐 안 보인다
+    g.globalAlpha = Math.min(0.8, G.flashAlpha * 1.4);
+    g.fillStyle = "hsl(" + G.flashHue + ",100%,62%)";
+    g.fillRect(0, 0, bgW, bgH);
+  }
+
+  g.globalCompositeOperation = "source-over";
+  g.globalAlpha = 1;
+
+  // 목숨을 잃으면 화면 가장자리가 붉게 물듦
+  if (G.vignette > 0.01) {
+    var vg = g.createRadialGradient(
+      bgW / 2, bgH / 2, Math.min(bgW, bgH) * 0.32,
+      bgW / 2, bgH / 2, Math.max(bgW, bgH) * 0.78);
+    vg.addColorStop(0, "rgba(255,40,80,0)");
+    vg.addColorStop(1, "rgba(255,30,70," + (0.75 * G.vignette).toFixed(3) + ")");
+    g.fillStyle = vg;
+    g.fillRect(0, 0, bgW, bgH);
+  }
+
+  g.globalAlpha = 1;
+  g.globalCompositeOperation = "source-over";
+
+  // ── 2단계: 화면 전체로 확대 ──
+  // 흔들림이 있어도 가장자리에 빈 틈이 생기지 않도록 여유 있게 칠한다
+  var m = 40;
+  ctx.drawImage(bgCanvas, -m, -m, W + m * 2, H + m * 2);
+
+  // ── 3단계: 먼지는 작고 또렷해야 해서 원본 해상도에 그린다 ──
+  ctx.globalCompositeOperation = "lighter";
+  for (var j = 0; j < dust.length; j++) {
+    var d = dust[j];
+    var tw = 0.6 + Math.sin(d.ph) * 0.4;   // 반짝임
+    drawGlow(d.hue, d.x, d.y, d.r * 5, d.a * tw * 0.55);
+  }
+  ctx.globalAlpha = 1;
+  ctx.globalCompositeOperation = "source-over";
+}
+
+
+/* ==========================================================================
+   9. 게임 로직 — 터뜨리기 / 놓치기 / 콤보 / 난이도
+   ========================================================================== */
+
+function resetGame() {
+  bubbles.length = 0;
+  particles.length = 0;
+  floaters.length = 0;
+  rings.length = 0;
+  G.score = 0;
+  G.displayScore = 0;
+  G.lives = G.maxLives;
+  G.combo = 0;
+  G.bestCombo = 0;
+  G.comboTimer = 0;
+  G.playTime = 0;
+  G.spawnTimer = 0.35;
+  G.spawnInterval = 0.95;
+  G.shake = 0;
+  G.flashAlpha = 0;
+  G.scorePunch = 0;
+  G.comboPunch = 0;
+  G.lifePunch = 0;
+  G.vignette = 0;
+}
+
+function startGame() {
+  resetGame();
+  G.state = STATE.PLAYING;
+  G.stateTime = 0;
+  Audio_.start();
+}
+
+// 버블을 터뜨렸을 때 — 여기가 "재미"가 폭발하는 지점
+function popBubble(b, index) {
+  bubbles.splice(index, 1);
+
+  G.combo++;
+  G.comboTimer = G.comboLimit;
+  if (G.combo > G.bestCombo) G.bestCombo = G.combo;
+
+  // 점수: 콤보가 붙을수록 커지지만 아이가 읽기 어려울 만큼 폭주하진 않게
+  var gain = 10 + Math.min(G.combo - 1, 10) * 5;
+  G.score += gain;
+
+  // 파티클 30개 사방으로 + 작은 충격파
+  spawnParticles(b.x, b.y, b.hue, b.r, 30);
+  spawnRing(b.x, b.y, b.hue, b.r * 3.4, 0.42, 6 * S);
+  spawnFloater(b.x, b.y - b.r * 0.3, "+" + gain, b.hue);
+
+  // 짧고 약한 화면 흔들림 (2~4px) — 콤보가 붙으면 아주 조금만 더 세게
+  G.shake = Math.max(G.shake, lerp(2.2, 4.0, clamp(G.combo / 12, 0, 1)) * S);
+
+  // 점수/콤보 펀치 애니메이션 리셋
+  G.scorePunch = 1;
+  G.comboPunch = 1;
+
+  Audio_.pop(G.combo - 1);
+
+  // 5콤보마다 화면 전체가 그 색으로 한 번 번쩍
+  if (G.combo % 5 === 0) {
+    G.flashAlpha = 0.55;
+    G.flashHue = b.hue;
+    G.shake = Math.max(G.shake, 6 * S);
+    Audio_.chime(G.combo - 1);
+    // 축하 파티클을 한 번 더 뿌리고, 화면을 가로지르는 커다란 충격파
+    spawnParticles(b.x, b.y, b.hue, b.r, 18);
+    spawnRing(b.x, b.y, b.hue, Math.max(W, H) * 0.95, 0.75, 16 * S);
+  }
+}
+
+// 버블을 놓쳤을 때
+function onMissed(b) {
+  G.lives--;
+  G.combo = 0;
+  G.comboTimer = 0;
+  G.lifePunch = 1;
+  G.vignette = 1;
+  G.shake = Math.max(G.shake, 9 * S);
+  Audio_.miss();
+
+  // 화면 위쪽에서 놓친 버블이 힘없이 흩어지는 연출
+  spawnParticles(b.x, Math.max(b.r * 0.4, 8), b.hue, b.r, 12);
+
+  if (G.lives <= 0) {
+    G.lives = 0;
+    G.state = STATE.GAMEOVER;
+    G.stateTime = 0;
+    G.shake = 16 * S;
+    if (G.score > G.best) { G.best = G.score; saveBest(); }
+    Audio_.gameOver();
+  }
+}
+
+// 좌표 (x, y)에 있는 버블을 터뜨린다. 아이 손가락을 위해 판정을 넉넉하게.
+function tryPopAt(x, y) {
+  var bestIdx = -1, bestDist = Infinity;
+  for (var i = 0; i < bubbles.length; i++) {
+    var b = bubbles[i];
+    var pad = b.r * 0.3 + 14 * S;              // 관대한 추가 판정 반경
+    var reach = b.r + pad;
+    var dx = x - b.x, dy = y - b.y;
+    var d2 = dx * dx + dy * dy;
+    if (d2 <= reach * reach && d2 < bestDist) { // 겹쳐 있으면 중심에 가까운 것 우선
+      bestDist = d2;
+      bestIdx = i;
+    }
+  }
+  if (bestIdx >= 0) {
+    popBubble(bubbles[bestIdx], bestIdx);
+    return true;
+  }
+  return false;
+}
+
+// 난이도 곡선 — 시간이 지날수록 자주, 빠르게
+function updateDifficulty(dt) {
+  var d = easeInOutSine(clamp(G.playTime / 80, 0, 1));
+  G.spawnInterval = lerp(0.95, 0.34, d);
+
+  G.spawnTimer -= dt;
+  if (G.spawnTimer <= 0) {
+    spawnBubble(false);
+    // 간격에 약간의 흔들림을 줘서 기계적으로 느껴지지 않게
+    G.spawnTimer = G.spawnInterval * rand(0.78, 1.22);
+    // 후반에는 가끔 두 개가 같이 올라온다
+    if (d > 0.55 && Math.random() < 0.22 * d) spawnBubble(false);
+  }
+}
+
+
+/* ==========================================================================
+   10. 입력 — 마우스 + 터치 통합 (Pointer Events)
+   드래그로 쓸어서 터뜨리는 것도 허용 (아이들이 자주 그렇게 논다).
+   ========================================================================== */
+
+var pointerDown = false;
+
+function canvasPoint(e) {
+  var rect = canvas.getBoundingClientRect();
+  return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+}
+
+function onDown(e) {
+  e.preventDefault();
+  Audio_.init();
+  Audio_.resume();
+  pointerDown = true;
+
+  var p = canvasPoint(e);
+
+  if (G.state === STATE.START) {
+    startGame();
+    return;
+  }
+  if (G.state === STATE.GAMEOVER) {
+    // 실수로 연타해서 바로 넘어가지 않도록 잠깐의 유예
+    if (G.stateTime > 0.7) startGame();
+    return;
+  }
+  tryPopAt(p.x, p.y);
+}
+
+function onMove(e) {
+  if (!pointerDown || G.state !== STATE.PLAYING) return;
+  e.preventDefault();
+  var p = canvasPoint(e);
+  tryPopAt(p.x, p.y);   // 쓸어서 연속으로 터뜨리기
+}
+
+function onUp() { pointerDown = false; }
+
+if (window.PointerEvent) {
+  canvas.addEventListener("pointerdown", onDown, { passive: false });
+  canvas.addEventListener("pointermove", onMove, { passive: false });
+  window.addEventListener("pointerup", onUp);
+  window.addEventListener("pointercancel", onUp);
+} else {
+  // 아주 오래된 브라우저용 대체 경로
+  canvas.addEventListener("mousedown", onDown, false);
+  canvas.addEventListener("mousemove", onMove, false);
+  window.addEventListener("mouseup", onUp, false);
+  canvas.addEventListener("touchstart", function (e) {
+    var t = e.changedTouches[0];
+    onDown({ clientX: t.clientX, clientY: t.clientY, preventDefault: function () { e.preventDefault(); } });
+  }, { passive: false });
+  canvas.addEventListener("touchmove", function (e) {
+    var t = e.changedTouches[0];
+    onMove({ clientX: t.clientX, clientY: t.clientY, preventDefault: function () { e.preventDefault(); } });
+  }, { passive: false });
+  window.addEventListener("touchend", onUp, false);
+}
+
+// 스페이스/엔터로도 시작 가능 (데스크톱 접근성)
+window.addEventListener("keydown", function (e) {
+  if (e.code === "Space" || e.code === "Enter") {
+    e.preventDefault();
+    Audio_.init(); Audio_.resume();
+    if (G.state === STATE.START) startGame();
+    else if (G.state === STATE.GAMEOVER && G.stateTime > 0.7) startGame();
+  }
+});
+
+// 우클릭 메뉴 차단 (모바일에서 길게 누를 때 뜨는 것 포함)
+canvas.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+
+
+/* ==========================================================================
+   11. UI 그리기 — 점수 / 목숨 / 콤보 / 시작·게임오버 화면
+   ========================================================================== */
+
+// 어두운 배경 위에서도 또렷하게 보이도록 외곽선을 두른 텍스트
+function drawText(text, x, y, size, fill, align, baseline, outline) {
+  setFont(size);
+  ctx.textAlign = align || "left";
+  ctx.textBaseline = baseline || "middle";
+  if (outline !== false) {
+    ctx.lineWidth = Math.max(3, size * 0.16);
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = "rgba(8,4,26,0.72)";
+    ctx.strokeText(text, x, y);
+  }
+  ctx.fillStyle = fill;
+  ctx.fillText(text, x, y);
+}
+
+function drawHUD() {
+  var pad = 20 * S;
+  var topSafe = pad + 6 * S;
+
+  // ── 좌상단: 점수 (올라갈 때 살짝 커지는 펀치 애니메이션) ──
+  var punch = 1 + easeOutCubic(G.scorePunch) * 0.45;
+  ctx.save();
+  ctx.translate(pad, topSafe + 18 * S);
+  ctx.scale(punch, punch);
+  drawText("점수", 0, -20 * S, 17 * S, "rgba(180,200,255,0.75)", "left", "middle");
+  drawText(String(Math.round(G.displayScore)), 0, 10 * S, 44 * S, "#ffffff", "left", "middle");
+  ctx.restore();
+
+  // ── 우상단: 목숨 3개를 색깔 원으로 ──
+  var lifeHues = [345, 190, 95];
+  var lr = 13 * S;
+  var gap = 34 * S;
+  var lx = W - pad - lr;
+  var ly = topSafe + 12 * S;
+
+  for (var i = G.maxLives - 1; i >= 0; i--) {
+    var cx = lx - (G.maxLives - 1 - i) * gap;
+    var alive = i < G.lives;
+    var hue = lifeHues[i % lifeHues.length];
+
+    if (alive) {
+      // 살아있는 목숨은 부드럽게 숨쉬듯 커졌다 작아진다
+      var breathe = 1 + Math.sin(G.time * 2.4 + i * 0.9) * 0.06;
+      var rr = lr * breathe;
+      ctx.globalCompositeOperation = "lighter";
+      drawGlow(hue, cx, ly, rr * 3.1, 0.55);
+      ctx.globalCompositeOperation = "source-over";
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = "hsl(" + hue + ",100%,68%)";
+      ctx.beginPath();
+      ctx.arc(cx, ly, rr, 0, TAU);
+      ctx.fill();
+      // 하이라이트 점 (버블과 통일감)
+      ctx.fillStyle = "rgba(255,255,255,0.85)";
+      ctx.beginPath();
+      ctx.arc(cx - rr * 0.3, ly - rr * 0.34, rr * 0.26, 0, TAU);
+      ctx.fill();
+    } else {
+      // 잃은 목숨은 빈 원
+      ctx.globalAlpha = 0.32;
+      ctx.strokeStyle = "hsl(" + hue + ",40%,60%)";
+      ctx.lineWidth = 3 * S;
+      ctx.beginPath();
+      ctx.arc(cx, ly, lr, 0, TAU);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+      // 방금 잃었다면 링이 크게 퍼지며 사라지는 연출
+      if (i === G.lives && G.lifePunch > 0.01) {
+        var e = 1 - G.lifePunch;
+        ctx.globalAlpha = G.lifePunch * 0.8;
+        ctx.strokeStyle = "hsl(" + hue + ",100%,70%)";
+        ctx.lineWidth = 4 * S * G.lifePunch;
+        ctx.beginPath();
+        ctx.arc(cx, ly, lr * (1 + easeOutCubic(e) * 1.8), 0, TAU);
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+      }
+    }
+  }
+}
+
+function drawCombo() {
+  if (G.combo < 2) return;
+
+  // 콤보가 끊기기 직전에는 서서히 흐려진다
+  var fade = clamp(G.comboTimer / 0.45, 0, 1);
+  // 터뜨린 직후 크게 튀어나왔다가 제자리로 (easeOutBack)
+  var pop = easeOutBack(1 - G.comboPunch);
+  var scale = 1 + (1 - pop) * 0.55 + Math.min(G.combo, 30) * 0.012;
+  var hue = (G.combo * 24) % 360;
+  var wob = Math.sin(G.time * 6) * 0.03 * G.comboPunch;
+
+  ctx.save();
+  ctx.translate(W / 2, H * 0.36);
+  ctx.rotate(wob);
+  ctx.scale(scale, scale);
+  ctx.globalAlpha = fade;
+
+  // 뒤쪽 글로우
+  ctx.globalCompositeOperation = "lighter";
+  drawGlow(hue, 0, 0, 130 * S, 0.42 * fade);
+  ctx.globalCompositeOperation = "source-over";
+  ctx.globalAlpha = fade;
+
+  drawText(String(G.combo), 0, -8 * S, 92 * S, "hsl(" + hue + ",100%,78%)", "center", "middle");
+  drawText("콤보!", 0, 46 * S, 30 * S, "hsl(" + hue + ",100%,86%)", "center", "middle");
+
+  ctx.restore();
+  ctx.globalAlpha = 1;
+}
+
+// 시작 화면
+function drawStartScreen() {
+  var t = G.stateTime;
+  // 제목이 위에서 통통 내려오며 등장
+  var intro = easeOutBack(clamp(t / 0.9, 0, 1));
+  var titleY = lerp(-80 * S, H * 0.30, intro);
+  var hue = (G.time * 26) % 360;   // 제목 색이 무지개처럼 천천히 순환
+
+  ctx.globalCompositeOperation = "lighter";
+  drawGlow(hue, W / 2, titleY, 220 * S, 0.3);
+  ctx.globalCompositeOperation = "source-over";
+  ctx.globalAlpha = 1;
+
+  drawText("네온", W / 2, titleY - 34 * S, 46 * S, "hsl(" + hue + ",100%,80%)", "center", "middle");
+  drawText("버블 팝", W / 2, titleY + 22 * S, 68 * S, "#ffffff", "center", "middle");
+
+  // "탭해서 시작!" — 심장박동처럼 크게 뛰었다 작아짐
+  var beat = Math.pow(Math.max(0, Math.sin(G.time * 2.2)), 3);
+  var bs = 1 + beat * 0.14;
+  var appear = easeOutCubic(clamp((t - 0.45) / 0.6, 0, 1));
+
+  ctx.save();
+  ctx.translate(W / 2, H * 0.60);
+  ctx.scale(bs * appear, bs * appear);
+  ctx.globalAlpha = appear;
+  drawText("탭해서 시작!", 0, 0, 52 * S, "#fff45c", "center", "middle");
+  ctx.restore();
+  ctx.globalAlpha = 1;
+
+  drawText("버블을 터뜨려요 · 3개 놓치면 끝!", W / 2, H * 0.72, 21 * S,
+           "rgba(200,215,255,0.8)", "center", "middle");
+
+  if (G.best > 0) {
+    drawText("최고점수 " + G.best, W / 2, H * 0.79, 24 * S,
+             "hsl(45,100%,72%)", "center", "middle");
+  }
+}
+
+// 게임 오버 화면
+var restartBtn = { x: 0, y: 0, w: 0, h: 0 };
+
+function drawGameOverScreen() {
+  var t = G.stateTime;
+
+  // 화면을 어둡게 덮어 UI에 집중시킴
+  ctx.globalAlpha = clamp(t / 0.4, 0, 1) * 0.62;
+  ctx.fillStyle = "#0a0724";
+  ctx.fillRect(-40, -40, W + 80, H + 80);
+  ctx.globalAlpha = 1;
+
+  var isNewBest = (G.score >= G.best && G.score > 0);
+
+  // 패널이 탄성 있게 튀어 올라옴
+  var pop = easeOutElastic(clamp((t - 0.15) / 1.0, 0, 1));
+  var cy = H * 0.44;
+
+  ctx.save();
+  ctx.translate(W / 2, cy);
+  ctx.scale(pop, pop);
+  ctx.globalAlpha = clamp(t / 0.3, 0, 1);
+
+  drawText("게임 오버", 0, -128 * S, 46 * S, "#ff6b8b", "center", "middle");
+
+  drawText("점수", 0, -66 * S, 20 * S, "rgba(190,205,255,0.8)", "center", "middle");
+  drawText(String(G.score), 0, -22 * S, 76 * S, "#ffffff", "center", "middle");
+
+  if (isNewBest) {
+    // 신기록이면 무지개색으로 반짝이며 흔들림
+    var nb = (G.time * 90) % 360;
+    var wig = Math.sin(G.time * 7) * 0.06;
+    ctx.save();
+    ctx.translate(0, 32 * S);
+    ctx.rotate(wig);
+    drawText("★ 신기록! ★", 0, 0, 30 * S, "hsl(" + nb + ",100%,75%)", "center", "middle");
+    ctx.restore();
+  } else {
+    drawText("최고점수 " + G.best, 0, 32 * S, 26 * S,
+             "hsl(45,100%,72%)", "center", "middle");
+  }
+
+  if (G.bestCombo >= 2) {
+    drawText("최고 콤보 " + G.bestCombo, 0, 68 * S, 22 * S,
+             "rgba(190,205,255,0.8)", "center", "middle");
+  }
+
+  ctx.restore();
+  ctx.globalAlpha = 1;
+
+  // ── "다시 하기" 큰 버튼 ──
+  var bw = Math.min(W * 0.72, 320 * S);
+  var bh = 82 * S;
+  var bx = W / 2 - bw / 2;
+  var by = cy + 118 * S;
+  restartBtn.x = bx; restartBtn.y = by; restartBtn.w = bw; restartBtn.h = bh;
+
+  var bAppear = easeOutBack(clamp((t - 0.55) / 0.6, 0, 1));
+  var bBeat = 1 + Math.pow(Math.max(0, Math.sin(G.time * 2.4)), 3) * 0.06;
+  var bScale = bAppear * bBeat;
+
+  ctx.save();
+  ctx.translate(W / 2, by + bh / 2);
+  ctx.scale(bScale, bScale);
+  ctx.globalAlpha = clamp(bAppear, 0, 1);
+
+  var bhue = (G.time * 40) % 360;
+  ctx.globalCompositeOperation = "lighter";
+  drawGlow(bhue, 0, 0, bw * 0.62, 0.45);
+  ctx.globalCompositeOperation = "source-over";
+  ctx.globalAlpha = clamp(bAppear, 0, 1);
+
+  // 둥근 사각형 버튼
+  var r = bh / 2;
+  var grd = ctx.createLinearGradient(0, -bh / 2, 0, bh / 2);
+  grd.addColorStop(0, "hsl(" + bhue + ",95%,66%)");
+  grd.addColorStop(1, "hsl(" + ((bhue + 40) % 360) + ",90%,48%)");
+  ctx.fillStyle = grd;
+  ctx.beginPath();
+  if (ctx.roundRect) {
+    ctx.roundRect(-bw / 2, -bh / 2, bw, bh, r);
+  } else {
+    // roundRect 미지원 브라우저용 수동 경로
+    ctx.moveTo(-bw / 2 + r, -bh / 2);
+    ctx.lineTo(bw / 2 - r, -bh / 2);
+    ctx.arc(bw / 2 - r, 0, r, -Math.PI / 2, Math.PI / 2);
+    ctx.lineTo(-bw / 2 + r, bh / 2);
+    ctx.arc(-bw / 2 + r, 0, r, Math.PI / 2, -Math.PI / 2);
+  }
+  ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,0.55)";
+  ctx.lineWidth = 3 * S;
+  ctx.stroke();
+
+  drawText("다시 하기", 0, 2 * S, 36 * S, "#ffffff", "center", "middle");
+
+  ctx.restore();
+  ctx.globalAlpha = 1;
+}
+
+
+/* ==========================================================================
+   12. 연출 상태 업데이트 (흔들림 / 플래시 / 펀치 / 비네트)
+   전부 지수 감쇠 + 이징이라 프레임레이트가 흔들려도 일정하게 보인다.
+   ========================================================================== */
+
+function updateEffects(dt) {
+  // 화면 흔들림: 세기가 빠르게 줄어들고, 매 프레임 무작위 오프셋
+  G.shake = damp(G.shake, 0, 11, dt);
+  if (G.shake > 0.05) {
+    var ang = rand(0, TAU);
+    G.shakeX = Math.cos(ang) * G.shake;
+    G.shakeY = Math.sin(ang) * G.shake;
+  } else {
+    G.shake = 0; G.shakeX = 0; G.shakeY = 0;
+  }
+
+  G.flashAlpha = damp(G.flashAlpha, 0, 7.5, dt);
+  G.scorePunch = damp(G.scorePunch, 0, 9, dt);
+  G.comboPunch = damp(G.comboPunch, 0, 7, dt);
+  G.lifePunch  = damp(G.lifePunch, 0, 3.2, dt);
+  G.vignette   = damp(G.vignette, 0, 2.2, dt);
+
+  // 점수 숫자가 목표치까지 부드럽게 굴러 올라간다
+  G.displayScore = damp(G.displayScore, G.score, 14, dt);
+  if (Math.abs(G.displayScore - G.score) < 0.6) G.displayScore = G.score;
+}
+
+// (플래시와 비네트는 8번 항목의 배경 버퍼에서 함께 그려진다)
+
+
+/* ==========================================================================
+   13. 메인 루프 — requestAnimationFrame만 사용 (setInterval 금지)
+   ========================================================================== */
+
+var lastTime = 0;
+
+function update(dt) {
+  G.time += dt;
+  G.stateTime += dt;
+
+  updateEffects(dt);
+  updateDust(dt);
+  updateBubbles(dt);
+  updateParticles(dt);
+  updateRings(dt);
+  updateFloaters(dt);
+
+  if (G.state === STATE.PLAYING) {
+    G.playTime += dt;
+    updateDifficulty(dt);
+
+    // 콤보 유지 시간
+    if (G.combo > 0) {
+      G.comboTimer -= dt;
+      if (G.comboTimer <= 0) { G.combo = 0; G.comboTimer = 0; }
+    }
+  } else {
+    // 시작/게임오버 화면에서도 배경에 버블이 한가롭게 떠다닌다
+    G.spawnTimer -= dt;
+    if (G.spawnTimer <= 0) {
+      spawnBubble(true);
+      G.spawnTimer = rand(0.7, 1.5);
+    }
+  }
+}
+
+function render() {
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  // 화면 흔들림은 전체 장면에 적용 (배경은 여유 있게 칠해서 틈이 안 생김)
+  ctx.translate(G.shakeX, G.shakeY);
+
+  drawBackground();
+
+  // 시작/게임오버 화면의 배경 버블은 살짝 흐리게 (UI가 더 잘 읽히도록)
+  var bubbleAlpha = (G.state === STATE.PLAYING) ? 1 : 0.75;
+  ctx.globalAlpha = bubbleAlpha;
+  for (var i = 0; i < bubbles.length; i++) drawBubble(bubbles[i]);
+  ctx.globalAlpha = 1;
+
+  drawParticles();
+  drawRings();
+  drawFloaters();
+
+  if (G.state === STATE.PLAYING) {
+    drawCombo();
+    drawHUD();
+  } else if (G.state === STATE.START) {
+    drawStartScreen();
+  } else {
+    drawHUD();
+    drawGameOverScreen();
+  }
+}
+
+function frame(now) {
+  requestAnimationFrame(frame);
+
+  if (!lastTime) lastTime = now;
+  var dt = (now - lastTime) / 1000;
+  lastTime = now;
+
+  // 탭 전환 등으로 큰 간격이 생겨도 물리가 폭발하지 않도록 상한을 둔다
+  if (dt > 0.05) dt = 0.05;
+  if (dt <= 0) return;
+
+  update(dt);
+  render();
+}
+
+// 탭을 다시 열었을 때 dt가 튀지 않게 시간 기준을 리셋
+document.addEventListener("visibilitychange", function () {
+  if (!document.hidden) lastTime = 0;
+});
+
+// 시작 화면에 버블 몇 개를 미리 띄워둔다
+(function seedStartBubbles() {
+  for (var i = 0; i < 5; i++) {
+    var b = spawnBubble(true);
+    b.y = rand(H * 0.15, H * 1.0);   // 처음부터 화면 곳곳에 흩어져 있도록
+    b.age = rand(0.3, 2.0);
+  }
+  G.spawnTimer = rand(0.6, 1.2);
+})();
+
+requestAnimationFrame(frame);
+
+})();
+</script>
+</body>
+</html>
