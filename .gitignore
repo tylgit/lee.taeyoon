@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+suno_downloads/
+suno-downloader/suno_downloads/
