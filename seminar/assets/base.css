@@ -15,17 +15,17 @@
   --rule:       #DED8D6;
   --rule-2:     #C9C1BF;
 
-  /* 샬롬대학 — 평안을 뜻하는 이름에 맞춘 깊은 청록 */
-  --brand:    #1A5C56;
-  --brand-2:  #2E7A72;
-  --brand-in: #E9F3F1;
+  /* 샬롬대학 상징색 — 남색 */
+  --brand:    #1B3A6B;
+  --brand-2:  #2E5490;
+  --brand-in: #EAEFF7;
   --gold:       #AD7C1C;
   --gold-in:    #FBF3E2;
 
   /* 색이 꽉 찬 브랜드 블록(부 표지·머리띠·번호 원)용.
      본문 강조색(--brand)은 테마에 따라 밝아지므로 흰 글씨를 얹을 수 없다.
      이 두 값은 두 테마에서 모두 깊게 유지해 흰 글씨 대비를 보장한다. */
-  --brand-fill: #1A5C56;
+  --brand-fill: #1B3A6B;
   --gold-fill:  #8F6415;
   --on-brand:   #FFFFFF;
 
@@ -59,14 +59,14 @@
     --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
     --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
     --rule: #383634;   --rule-2: #4A4744;
-    --brand: #6FC3B8; --brand-2: #58B4A8; --brand-in: #13302C;
+    --brand: #8FB3E8; --brand-2: #7AA3E0; --brand-in: #152338;
     --gold: #D6A340; --gold-in: #332816;
     --good: #4FA97B; --good-in: #16281F;
     --warn: #CF8A33; --warn-in: #2B2013;
     --danger: #E0716C; --danger-in: #301A19;
     --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
     --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
-    --brand-fill: #15514B; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+    --brand-fill: #1A3560; --gold-fill: #7A5411; --on-brand: #FFFFFF;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   }
 }
@@ -75,14 +75,14 @@
   --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
   --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
   --rule: #383634;   --rule-2: #4A4744;
-  --brand: #6FC3B8; --brand-2: #58B4A8; --brand-in: #13302C;
+  --brand: #8FB3E8; --brand-2: #7AA3E0; --brand-in: #152338;
   --gold: #D6A340; --gold-in: #332816;
   --good: #4FA97B; --good-in: #16281F;
   --warn: #CF8A33; --warn-in: #2B2013;
   --danger: #E0716C; --danger-in: #301A19;
   --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
   --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
-  --brand-fill: #15514B; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+  --brand-fill: #1A3560; --gold-fill: #7A5411; --on-brand: #FFFFFF;
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
 }
 
@@ -212,4 +212,44 @@ figcaption {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* ── 인쇄 · PDF ───────────────────────────────────────────────────
+   어르신께 종이로 나눠 드리는 것을 전제로 한다. 화면용 어두운 배경과
+   고정 요소를 걷어내고, 끊기면 안 되는 덩어리에 page-break 보호를 건다. */
+@media print {
+  :root {
+    --paper: #FFFFFF; --paper-2: #F6F6F4; --paper-3: #EDEDEA;
+    --ink: #000000; --ink-2: #333333; --ink-3: #5A5A5A;
+    --rule: #CCCCCC; --rule-2: #AAAAAA;
+    --brand: #1B3A6B; --brand-2: #2E5490; --brand-in: #EAEFF7;
+    --brand-fill: #1B3A6B; --on-brand: #FFFFFF;
+    --gold: #8A6315; --gold-in: #FBF3E2; --gold-fill: #8A6315;
+    --good: #1F6B45; --good-in: #E8F4EE;
+    --warn: #8A5214; --warn-in: #FCF2E3;
+    --danger: #9A1C18; --danger-in: #FCECEB;
+    --shadow: none;
+  }
+  body { background: #fff; font-size: 11.5pt; line-height: 1.7; }
+
+  /* 색 있는 블록을 프린터가 그대로 찍게 한다 */
+  *, *::before, *::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* 화면 전용 장치 숨김 */
+  .rail, .hud, .copy, .fig-scroll { position: static !important; }
+  .rail, .hud, .copy { display: none !important; }
+
+  /* 끊기면 안 되는 덩어리 */
+  figure, .note, .prompt, .q4 > div, .card, .step, .check-item,
+  .safety-card, .term, .verdict, .takeaway, .goal-line, .specimen, .stat {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  .tbl-wrap { overflow: visible; break-inside: auto; }
+  table { min-width: 0; font-size: 9.5pt; }
+  thead { display: table-header-group; }
+  thead th { position: static; }
+
+  figure svg { max-width: 100%; height: auto; }
+  a { color: var(--brand); text-decoration: none; }
 }

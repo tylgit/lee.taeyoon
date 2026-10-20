@@ -1,4 +1,4 @@
-<title>고향에서 아틀란타까지</title>
+<title>처음 만나는 AI</title>
 <style>
 {{css}}
 
@@ -83,13 +83,22 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   main { padding: 0 1.15rem 4rem; }
   body { font-size: 16.5px; }
 }
+@media print {
+  .book { display: block; }
+  main { padding: 0; }
+  .wrap, .wide { max-width: 100%; }
+  .cover { padding-top: 0; }
+  .chapter { break-before: page; page-break-before: always; padding-top: 1.2rem; margin-top: 0; border-top: 0; }
+  .chapter:first-of-type { break-before: avoid; page-break-before: avoid; }
+  .part-open { break-before: page; page-break-before: always; }
+}
 </style>
 
 <div class="book">
 
 <aside class="rail">
-  <div class="rail-brand">고향에서<br>아틀란타까지</div>
-  <div class="rail-sub">교재 · 2026.08.15</div>
+  <div class="rail-brand">처음 만나는<br>AI</div>
+  <div class="rail-sub">교재 1권 · 2026.10.20</div>
   <nav aria-label="목차">
     <div class="part-label">여는 글</div>
     <ol>
@@ -139,7 +148,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 <!-- ══════════ 표지 ══════════ -->
 <header class="cover wrap" id="intro">
   <div class="kicker">샬롬대학 · 시니어 AI 워크샵 교재</div>
-  <h1>고향에서<br>아틀란타까지</h1>
+  <h1>처음 만나는<br>AI</h1>
   <p class="lede">
     2026년, AI는 묻고 답하는 물건에서 <strong>맡기면 끝내 오는 물건</strong>으로 바뀌었습니다.
     이 책은 그 변화가 무엇인지, 그리고 어르신께서 그것으로
@@ -147,9 +156,9 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     컴퓨터를 잘 모르셔도 읽으실 수 있게 썼습니다.
   </p>
   <div class="meta">
-    <span>2026년 8월 15일 (토) · 1:30 – 3:30</span>
+    <span>2026년 10월 20일 개정판</span>
     <span>워크샵 교재 · 읽는 책</span>
-    <span>8월 14일 뉴스까지 반영</span>
+    <span>최신 내용은 교재 2권에</span>
   </div>
 </header>
 
@@ -174,7 +183,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <h4>본문에 붙은 표시</h4>
   <p>이 책에는 사실 확인 상태를 나타내는 작은 표시가 붙어 있습니다.</p>
   <ul>
-    <li><span class="src">확인</span> — 2026년 8월 15일 기준으로 <strong>복수의 언론·공식 발표로 교차 확인한 사실</strong>입니다. 날짜·수치·제품명을 그대로 인용하셔도 됩니다.</li>
+    <li><span class="src">확인</span> — 2026년 8월 15일 조사 기준으로 <strong>복수의 언론·공식 발표로 교차 확인한 사실</strong>입니다. 날짜·수치·제품명을 그대로 인용하셔도 됩니다.</li>
     <li><span class="src unver">확인 권장</span> — 출처가 하나뿐이거나, 회사의 홍보 문구를 근거로 한 서술입니다. 발표나 인용 전에 한 번 더 확인하시길 권합니다. 어디를 확인해야 하는지는 <a href="#apx-c">부록 C</a>에 모아 두었습니다.</li>
   </ul>
   <p>

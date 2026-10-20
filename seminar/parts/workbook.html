@@ -98,6 +98,19 @@ h2.sec { font-size: 1.7rem; margin: 4rem 0 1.2rem; padding-top: 2.4rem; border-t
   .step { grid-template-columns: 34px minmax(0,1fr); gap: .7rem; }
   .step-n { width: 30px; height: 30px; font-size: .82rem; }
 }
+@media print {
+  .wb { max-width: 100%; padding: 0; }
+  .wide-wb { max-width: 100%; }
+  .lab { break-before: page; page-break-before: always; margin-top: 0; }
+  h2.sec { break-before: page; page-break-before: always; }
+  .check-item input { appearance: none; -webkit-appearance: none;
+    width: 14px; height: 14px; border: 1.5px solid var(--good); border-radius: 3px; }
+  .lab-body { border-left: 0; border-right: 0; border-bottom: 0; padding-left: 0; padding-right: 0; }
+  .lab-head { border-radius: 8px; }
+  .safety-card { border-width: 2px; }
+  .safety-card .fill { min-height: 2.4rem; }
+  .blank .line { min-height: 2.2rem; }
+}
 </style>
 
 <div class="wb">
@@ -812,7 +825,7 @@ h2.sec { font-size: 1.7rem; margin: 4rem 0 1.2rem; padding-top: 2.4rem; border-t
       </div>
       <div class="row">
         <span class="lab2">정한 날짜</span>
-        <span><span class="fill"></span><span class="hint">2026년 8월 15일</span></span>
+        <span><span class="fill"></span><span class="hint">오늘 날짜를 적으십시오</span></span>
       </div>
       <div class="row">
         <span class="lab2">함께 아는 사람</span>

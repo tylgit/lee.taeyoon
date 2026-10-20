@@ -85,6 +85,15 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   main { padding: 0 1.15rem 4rem; }
   body { font-size: 16.5px; }
 }
+@media print {
+  .book { display: block; }
+  main { padding: 0; }
+  .wrap, .wide { max-width: 100%; }
+  .cover { padding-top: 0; }
+  .chapter { break-before: page; page-break-before: always; padding-top: 1.2rem; margin-top: 0; border-top: 0; }
+  .chapter:first-of-type { break-before: avoid; page-break-before: avoid; }
+  .part-open { break-before: page; page-break-before: always; }
+}
 </style>
 
 <div class="book">

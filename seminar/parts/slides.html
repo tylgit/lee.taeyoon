@@ -125,6 +125,19 @@ body { overflow: hidden; }
   .cols, .stat-row { grid-template-columns: 1fr; }
   .slide { padding: 2.4vh 5vw 7vh; }
 }
+@media print {
+  body { overflow: visible; }
+  .deck { position: static; }
+  .slide {
+    position: static !important; display: flex !important;
+    break-after: page; page-break-after: always;
+    height: 20.2cm; padding: 1.1cm 1.4cm; border: 0;
+    background: var(--paper);
+  }
+  .slide:last-child { break-after: auto; page-break-after: auto; }
+  .fig-slide figure svg { max-height: 11cm; }
+  .lab-slide pre { max-height: none; }
+}
 </style>
 
 <div class="deck" id="deck">
