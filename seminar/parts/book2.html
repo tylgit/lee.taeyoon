@@ -1,0 +1,361 @@
+<title>2026 가을, 무엇이 새로운가</title>
+<style>
+{{css}}
+
+.book { display: grid; grid-template-columns: 236px minmax(0, 1fr); gap: 0; }
+
+.rail {
+  position: sticky; top: 0; align-self: start; height: 100vh;
+  overflow-y: auto; padding: 1.6rem 1rem 3rem 1.6rem;
+  border-right: 1px solid var(--rule); background: var(--paper-2);
+}
+.rail-brand { font-family: var(--f-display); font-weight: 700; font-size: .96rem; line-height: 1.4; color: var(--crimson); margin-bottom: .3rem; }
+.rail-sub { font-size: .72rem; color: var(--ink-3); margin-bottom: 1.4rem; font-family: var(--f-mono); }
+.rail nav ol { list-style: none; margin: 0; padding: 0; }
+.rail nav a { display: block; padding: .3rem .5rem; border-radius: 6px; font-size: .82rem; line-height: 1.45; color: var(--ink-2); text-decoration: none; }
+.rail nav a:hover { background: var(--paper-3); color: var(--crimson); }
+.rail .part-label { font-family: var(--f-mono); font-size: .66rem; letter-spacing: .1em; color: var(--ink-3); margin: 1.1rem 0 .35rem .5rem; }
+
+main { padding: 0 2.4rem 6rem; min-width: 0; }
+.wrap { max-width: var(--measure); margin-inline: auto; }
+.wide { max-width: 1060px; margin-inline: auto; }
+
+.cover { padding: 5rem 0 3.4rem; border-bottom: 3px double var(--crimson); margin-bottom: 3rem; }
+.cover h1 { font-size: clamp(2.3rem, 5.2vw, 3.6rem); letter-spacing: -.02em; margin: 1rem 0 .9rem; }
+.cover .kicker { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .1em; color: var(--crimson); }
+.cover .lede { font-size: 1.12rem; color: var(--ink-2); line-height: 1.85; max-width: 60ch; }
+.cover .meta { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; font-size: .85rem; color: var(--ink-3); font-family: var(--f-mono); }
+
+.chapter { padding-top: 3.6rem; margin-top: 3.6rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
+.chapter > .wrap > .ch-num { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .14em; color: var(--crimson); }
+.chapter h2 { font-size: clamp(1.7rem, 3.4vw, 2.2rem); margin: .5rem 0 1.3rem; letter-spacing: -.01em; }
+.chapter h3 { font-size: 1.26rem; margin: 2.6rem 0 .9rem; }
+.chapter h4 { font-size: 1.05rem; margin: 1.8rem 0 .6rem; font-family: var(--f-body); }
+.chapter p { margin: 1.1rem 0; }
+.chapter ul, .chapter ol { padding-left: 1.35rem; margin: 1.1rem 0; }
+.chapter li { margin: .5rem 0; }
+.chapter li::marker { color: var(--crimson); }
+
+.part-open { padding: 3.4rem 0 1rem; text-align: center; }
+.part-open .pnum { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .22em; color: var(--crimson); }
+.part-open h2 { font-size: clamp(1.5rem, 3.2vw, 2rem); margin: .6rem 0 .5rem; }
+.part-open p { color: var(--ink-3); font-size: .95rem; max-width: 56ch; margin-inline: auto; }
+
+/* ── 네 가지 질문 카드 : 모든 장이 같은 틀로 답한다 ────────────── */
+.q4 { display: grid; gap: .9rem; margin: 1.8rem 0 2.4rem; }
+.q4 > div {
+  display: grid; grid-template-columns: 1.65rem minmax(0,1fr); gap: .85rem;
+  border: 1px solid var(--rule); border-radius: 10px; padding: .95rem 1.15rem;
+  background: var(--paper-2);
+}
+.q4 .n {
+  width: 1.65rem; height: 1.65rem; border-radius: 50%; display: grid; place-items: center;
+  background: var(--brand-fill); color: var(--on-brand);
+  font-family: var(--f-mono); font-size: .76rem; font-weight: 700;
+}
+.q4 .t { font-weight: 700; display: block; margin-bottom: .2rem; font-size: .96rem; }
+.q4 p { margin: 0; font-size: .96rem; }
+.q4 > div:first-child { border-color: var(--crimson); background: var(--crimson-in); }
+.q4 > div:first-child .t { color: var(--crimson); }
+
+.verdict {
+  border: 1px solid var(--rule-2); border-left: 5px solid var(--gold);
+  border-radius: 0 10px 10px 0; padding: 1.05rem 1.3rem; margin: 2.2rem 0;
+  background: var(--gold-in);
+}
+.verdict .lab { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .12em; color: var(--gold); display: block; margin-bottom: .35rem; }
+.verdict p { margin: 0; font-size: 1.02rem; }
+
+.spec { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .8rem; margin: 1.5rem 0; }
+.spec > div { border: 1px solid var(--rule); border-radius: 9px; padding: .75rem .9rem; background: var(--paper-2); }
+.spec .k { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .06em; color: var(--ink-3); display: block; }
+.spec .v { font-size: 1.02rem; font-weight: 700; margin-top: .25rem; display: block; font-variant-numeric: tabular-nums; }
+
+.term { border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0; background: var(--paper-2); }
+.term dt { font-family: var(--f-display); font-weight: 700; color: var(--crimson); margin-top: .7rem; }
+.term dt:first-child { margin-top: 0; }
+.term dd { margin: .25rem 0 0; font-size: .94rem; color: var(--ink-2); }
+
+code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3); padding: .1em .38em; border-radius: 4px; }
+
+@media (max-width: 900px) {
+  .book { grid-template-columns: 1fr; }
+  .rail { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--rule); padding: 1.2rem; }
+  .rail nav ol { columns: 2; column-gap: 1.2rem; }
+  main { padding: 0 1.15rem 4rem; }
+  body { font-size: 16.5px; }
+}
+</style>
+
+<div class="book">
+
+<aside class="rail">
+  <div class="rail-brand">2026 가을,<br>무엇이 새로운가</div>
+  <div class="rail-sub">2026.10.20 기준</div>
+  <nav aria-label="목차">
+    <div class="part-label">여는 글</div>
+    <ol>
+      <li><a href="#howto">이 책을 읽는 법</a></li>
+      <li><a href="#now">제0장 · 두 달 사이에</a></li>
+    </ol>
+    <div class="part-label">제1부 · 새 모델</div>
+    <ol>
+      <li><a href="#c1">제1장 · Anthropic</a></li>
+      <li><a href="#c2">제2장 · OpenAI</a></li>
+      <li><a href="#c3">제3장 · Google</a></li>
+      <li><a href="#c4">제4장 · Meta</a></li>
+      <li><a href="#c5">제5장 · SpaceXAI</a></li>
+      <li><a href="#c6">제6장 · 오픈웨이트</a></li>
+    </ol>
+    <div class="part-label">제2부 · 새 도구</div>
+    <ol>
+      <li><a href="#c7">제7장 · 병렬 에이전트</a></li>
+      <li><a href="#c8">제8장 · 모드가 사라졌다</a></li>
+      <li><a href="#c9">제9장 · Antigravity 2.0</a></li>
+    </ol>
+    <div class="part-label">제3부 · 종합</div>
+    <ol>
+      <li><a href="#c10">제10장 · 지금 순위</a></li>
+      <li><a href="#c11">제11장 · 값의 전쟁</a></li>
+      <li><a href="#c12">제12장 · 무엇을 쓸 것인가</a></li>
+    </ol>
+    <div class="part-label">부록</div>
+    <ol>
+      <li><a href="#apx-a">A · 8월 자료 정오표</a></li>
+      <li><a href="#apx-b">B · 출처 확인 목록</a></li>
+    </ol>
+  </nav>
+</aside>
+
+<main>
+
+<header class="cover wrap">
+  <div class="kicker">고려대학교 아틀란타 교우회 · AI 교재 두 번째 권</div>
+  <h1>2026 가을,<br>무엇이 새로운가</h1>
+  <p class="lede">
+    8월 15일 워크샵에서 &ldquo;속도가 아니라 가속도를 보라&rdquo;고 말씀드렸습니다.
+    그 뒤 <strong>66일</strong> 동안 다섯 진영이 전부 주력을 갈아치웠습니다.
+    이 책은 그 사이에 나온 것들을 <strong>하나씩 같은 네 가지 질문으로</strong> 따져 봅니다.
+  </p>
+  <div class="meta">
+    <span>2026년 10월 20일 기준</span>
+    <span>직전 판: 2026년 8월 15일</span>
+    <span>새 도구 12종 비교 분석</span>
+  </div>
+</header>
+
+<section class="wrap" id="howto">
+  <h3>이 책을 읽는 법</h3>
+  <p>
+    새 AI가 나왔다는 소식은 매주 옵니다. 문제는 그중
+    <strong>무엇이 진짜 새것이고 무엇이 이름만 바뀐 것인지</strong> 가려내기가 어렵다는 점입니다.
+    그래서 이 책은 모든 장에서 <strong>똑같은 네 가지 질문</strong>만 던집니다.
+  </p>
+
+  <div class="q4">
+    <div><span class="n">1</span><span><span class="t">무엇이 새로운가</span><p>지난 판에 없던 것이 정확히 무엇인가. 이름만 올린 것인지, 진짜 달라진 것인지.</p></span></div>
+    <div><span class="n">2</span><span><span class="t">무슨 일을 하는 도구인가</span><p>이것으로 내가 실제로 무엇을 할 수 있나. 모델인가, 제품인가, 기능인가.</p></span></div>
+    <div><span class="n">3</span><span><span class="t">직전 것과 견주면</span><p>같은 회사의 바로 앞 버전과 비교해 무엇이 늘고 무엇이 그대로인가.</p></span></div>
+    <div><span class="n">4</span><span><span class="t">다른 회사 최신과 견주면</span><p>같은 시기 경쟁 제품과 나란히 놓으면 어디가 앞서고 어디가 밀리나.</p></span></div>
+  </div>
+
+  <p>
+    네 질문에 답하고 나면 장 끝에 <strong>한 줄 판정</strong>을 답니다.
+    바쁘시면 각 장의 네모 상자와 마지막 판정만 읽으셔도 됩니다.
+  </p>
+
+  <div class="note check">
+    <span class="note-title">숫자에 관한 미리 알림</span>
+    <p style="margin:0">
+      이 책의 성능 수치는 대부분 <strong>회사가 스스로 발표한 값</strong>이거나
+      측정 기관이 매긴 지수입니다. 지수는 판(version)이 바뀌면 점수도 바뀌고,
+      기관마다 순위가 다르게 나옵니다. <strong>1~2점 차이로 도구를 고르지 마십시오.</strong>
+      확인이 더 필요한 항목은 <a href="#apx-b">부록 B</a>에 모았습니다.
+    </p>
+  </div>
+</section>
+
+<section class="chapter" id="now">
+  <div class="wrap">
+    <div class="ch-num">제0장</div>
+    <h2>두 달 사이에 무슨 일이 있었나</h2>
+    <p>
+      지난 교재는 2026년 8월 15일에 멈춰 있습니다. 그 책에서 가장 최신이라고 적었던
+      Gemini 3.7 Flash는 <strong>이미 두 세대 전 모델</strong>이 되었고,
+      1위였던 Claude Opus 5도 자리를 내주었습니다.
+    </p>
+  </div>
+  <div class="wide">{{fig:timeline2}}</div>
+  <div class="wrap">
+    <p>
+      눈여겨보실 것은 <strong>10월 7일부터 19일까지의 13일</strong>입니다.
+      이 짧은 기간에 OpenAI의 GPT-6, Anthropic의 Haiku 5.5, Meta의 Muse Wonder와 Muse Spark Open,
+      Google의 Gemini 4 Argon 전체 공개, OpenAI의 병렬 에이전트까지 여섯 건이 쏟아졌습니다.
+    </p>
+    <p>
+      그리고 중요한 변화가 하나 더 있습니다. 8월에는 새 소식의 대부분이 <strong>모델</strong>이었는데,
+      10월에는 절반이 <strong>도구와 사용 방식</strong>입니다 &mdash;
+      화면을 그려서 답하는 방식, 여럿이 동시에 일하는 방식, 모드 구분이 사라진 방식.
+      이것이 이번 두 달의 진짜 이야기입니다.
+    </p>
+
+    <div class="verdict">
+      <span class="lab">제0장 판정</span>
+      <p>모델 경쟁은 <strong>상향 평준화</strong>로 접어들었고, 경쟁의 무대가 <strong>&ldquo;누가 더 똑똑한가&rdquo;에서 &ldquo;어떻게 쓰게 할 것인가&rdquo;</strong>로 옮겨 갔습니다.</p>
+    </div>
+  </div>
+</section>
+
+<div class="part-open wrap">
+  <div class="pnum">제 1 부</div>
+  <h2>새 모델 &mdash; 여섯 진영의 두 달</h2>
+  <p>회사별로 한 장씩, 네 가지 질문에 같은 방식으로 답합니다.</p>
+</div>
+
+<section class="chapter" id="c1">
+  <div class="wrap">
+    <div class="ch-num">제1장</div>
+    <h2>Anthropic &mdash; 다섯 번 낸 두 달</h2>
+
+    <p>
+      이번 두 달 가장 분주했던 곳입니다. 9월 1일부터 10월 7일까지
+      <strong>다섯 번</strong> 발표했습니다.
+    </p>
+
+    <div class="q4">
+      <div><span class="n">1</span><span><span class="t">무엇이 새로운가</span>
+        <p>Claude <strong>5.5 계열</strong>(Opus 9/22 · Sonnet 9/28 · Haiku 10/7)이 통째로 올라왔고,
+        그보다 앞서 9월 1일에 <strong>Fable 5.1 · Mythos 5.1</strong>이 나왔습니다.
+        Fable·Mythos는 성능 등급이 아니라 <strong>안전 등급으로 나뉜 첫 제품</strong>이라 개념 자체가 새롭습니다.</p></span></div>
+      <div><span class="n">2</span><span><span class="t">무슨 일을 하는가</span>
+        <p>Opus 5.5는 가장 어려운 판단, Sonnet 5.5는 매일 쓰는 일, Haiku 5.5는 양이 많고 빠른 일.
+        Fable·Mythos 5.1은 코딩과 지식 노동 전문입니다.</p></span></div>
+      <div><span class="n">3</span><span><span class="t">직전 것과 견주면</span>
+        <p>Sonnet 5.5는 Sonnet 5보다 <strong>30% 이상 빠르고</strong> 캐시 읽기 값이 절반이 되어
+        에이전트 작업에서 약 20% 싸졌습니다. Haiku 5.5는 Haiku 4.5보다
+        <strong>운영비가 약 75% 낮습니다.</strong> 성능보다 <strong>값과 속도</strong>를 손본 판입니다.</p></span></div>
+      <div><span class="n">4</span><span><span class="t">다른 회사 최신과 견주면</span>
+        <p>종합 지능 지수에서 Opus 5.5가 <strong>57.6으로 1위</strong>, Sonnet 5.5가 56.0으로 2위입니다.
+        3위 Meta Muse Wonder Full(55.8)과는 <strong>1.8점 차</strong>로, 8월의 격차보다 훨씬 좁혀졌습니다.</p></span></div>
+    </div>
+
+    <div class="spec">
+      <div><span class="k">맥락 창</span><span class="v">100만 토큰</span></div>
+      <div><span class="k">최대 출력</span><span class="v">128K 토큰</span></div>
+      <div><span class="k">Fable 5.1 값</span><span class="v">$10 / $50</span></div>
+      <div><span class="k">Haiku 5.5 입력</span><span class="v">$0.10</span></div>
+    </div>
+
+    <h3>&lsquo;안전 등급으로 나눈 제품&rsquo;이란 무엇인가</h3>
+    <p>
+      이번 두 달에서 가장 설명이 필요한 대목입니다.
+      Fable 5.1과 Mythos 5.1은 <strong>같은 모델</strong>이고 성능도 값도 같습니다.
+      다른 것은 <strong>누구에게 열려 있느냐</strong>뿐입니다.
+    </p>
+  </div>
+
+  <div class="wide">{{fig:safeguard}}</div>
+
+  <div class="wrap">
+    <p>
+      Fable 5.1은 누구나 쓸 수 있되, 사이버보안·생물화학·모델 복제처럼 민감한 요청이 들어오면
+      앞단의 분류기가 걸러서 <strong>덜 유능한 모델이 대신 답하게</strong> 합니다.
+      Mythos 5.1은 그 분류기 없이 그대로 처리하지만,
+      <strong>검증 절차를 통과한 미국 기관과 개인에게만</strong> 열립니다.
+    </p>
+    <p>
+      교우님이 평범한 업무에서 쓰실 때는 두 제품의 차이를 느끼실 일이 없습니다.
+      다만 이 방식이 중요한 이유는, 앞으로 <strong>&ldquo;성능은 같은데 못 쓰는 기능이 있는 제품&rdquo;</strong>이
+      늘어난다는 신호이기 때문입니다.
+    </p>
+
+    <div class="note check">
+      <span class="note-title">함께 나온 것 &mdash; 보이지 않는 워터마크</span>
+      <p style="margin:0">
+        Fable 5.1부터 Claude가 쓴 글에 <strong>눈에 보이지 않는 표식</strong>이 들어갑니다.
+        그리고 그것을 판별하는 도구가 비공개 시험 중입니다.
+        <strong>&ldquo;이 글을 AI가 썼는가&rdquo;를 기계가 가려낼 수 있게 된다</strong>는 뜻이라,
+        학교 과제와 공모전 심사에 곧 영향을 줄 것입니다. <span class="src unver">확인 권장</span>
+      </p>
+    </div>
+
+    <div class="verdict">
+      <span class="lab">제1장 판정</span>
+      <p>성능 1위는 지켰지만 <strong>격차는 좁혀졌고</strong>, 이번 판의 무게중심은 성능이 아니라 <strong>값 내리기</strong>였습니다. 비싼 Opus만 쓰시던 분이라면 이제 <strong>Sonnet 5.5로 내려도 되는지</strong> 한 번 시험해 보실 때입니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="c2">
+  <div class="wrap">
+    <div class="ch-num">제2장</div>
+    <h2>OpenAI &mdash; 답의 &lsquo;모양&rsquo;을 바꿨습니다</h2>
+
+    <p>
+      10월 7일 GPT-6가 나왔습니다. 그런데 이번에 OpenAI가 내세운 것은
+      모델 점수가 아니라 <strong>Intelligent UI</strong>라는 새 응답 방식이었습니다.
+    </p>
+
+    <div class="q4">
+      <div><span class="n">1</span><span><span class="t">무엇이 새로운가</span>
+        <p><strong>Intelligent UI</strong> &mdash; AI가 글이 아니라 <strong>화면을 그려서</strong> 답합니다.
+        표, 그래프, 누르는 단추, 입력칸이 대화창 안에 직접 만들어집니다.
+        그리고 10월 16일에는 <strong>병렬 에이전트</strong>(제7장)가 더해졌습니다.</p></span></div>
+      <div><span class="n">2</span><span><span class="t">무슨 일을 하는가</span>
+        <p>모델이 답의 <strong>형식까지 스스로 고릅니다.</strong>
+        두 상품을 비교해 달라면 비교표를, 추세를 물으면 그래프를 그립니다.
+        간단한 질문에는 예전처럼 짧은 글로 답합니다.</p></span></div>
+      <div><span class="n">3</span><span><span class="t">직전 것과 견주면</span>
+        <p>GPT-5.6까지는 모든 답이 <strong>글 한 덩어리</strong>였습니다.
+        속도도 올라서, 웹 검색이 필요한 질문에서 GPT-6 Instant가
+        GPT-5.6 Instant보다 평균 <strong>44% 먼저</strong> 답하기 시작합니다.</p></span></div>
+      <div><span class="n">4</span><span><span class="t">다른 회사 최신과 견주면</span>
+        <p>순수 점수로는 GPT-6 Astra가 <strong>52.7</strong>로 Claude Opus 5.5(57.6)에 밀립니다.
+        <strong>그러나 응답 방식에서는 유일하게 앞서 있습니다.</strong>
+        Anthropic·Google·Meta 중 답변 안에 조작 가능한 화면을 그려 주는 곳은 아직 없습니다.</p></span></div>
+    </div>
+  </div>
+
+  <div class="wide">{{fig:genui}}</div>
+
+  <div class="wrap">
+    <p>
+      이 변화가 교우회 가족에게 특히 중요한 이유가 있습니다.
+      <strong>긴 글을 읽기 힘들어하시는 분일수록 효과가 큽니다.</strong>
+      보험 두 개를 비교해 달라고 하면 예전에는 열 문단짜리 설명이 나왔고,
+      그걸 읽고 비교하는 일은 결국 사람 몫이었습니다.
+      이제는 표가 나오고, 숫자를 바꿔 다시 계산할 수 있습니다.
+    </p>
+
+    <div class="note check">
+      <span class="note-title">쓰실 때 알아 두실 것</span>
+      <ul style="margin:.4rem 0 0">
+        <li>무료 요금제를 포함해 <strong>모든 등급에</strong> 풀렸습니다 (10월 7~8일 순차 적용).</li>
+        <li>다만 <strong>Pro의 깊은 추론 모드에서는 안 되고</strong>, 구형 맥·윈도우 데스크톱 앱에서도 안 됩니다. 웹 브라우저로 쓰시는 편이 확실합니다.</li>
+        <li>모델 이름(Astra·Sol·Luna)이 자료마다 다르게 적혀 있습니다. <span class="src unver">확인 권장</span></li>
+      </ul>
+    </div>
+
+    <div class="verdict">
+      <span class="lab">제2장 판정</span>
+      <p>점수 경쟁에서는 1위를 내줬지만, <strong>&ldquo;AI를 어떻게 쓰는가&rdquo;를 바꾼 쪽은 OpenAI입니다.</strong> 어르신과 함께 쓰실 도구를 하나만 고르신다면, 지금은 이쪽에 손을 들어 드립니다.</p>
+    </div>
+  </div>
+</section>
+
+{{part:book2-b}}
+
+</main>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var pre = b.closest('.prompt').querySelector('pre');
+    navigator.clipboard.writeText(pre.textContent.trim()).then(function () {
+      var t = b.textContent; b.textContent = '복사됨'; b.dataset.done = '1';
+      setTimeout(function () { b.textContent = t; b.dataset.done = ''; }, 1600);
+    });
+  });
+});
+</script>

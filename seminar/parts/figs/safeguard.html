@@ -1,0 +1,58 @@
+<figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 900 330" role="img" aria-label="Claude Fable 5.1과 Mythos 5.1은 같은 모델에 안전장치 등급만 다르게 건 것이다. 일반 요청은 두 쪽 모두 같은 성능으로 처리하지만, 사이버보안이나 생물화학 같은 민감 분야 요청이 들어오면 Fable은 분류기가 걸러 덜 유능한 모델로 넘기고, Mythos는 검증된 기관에만 열려 있어 그대로 처리한다." style="font-family:var(--f-body)">
+  <defs>
+    <marker id="sg-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="sg-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--warn)"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="26" font-size="13.5" font-weight="700" fill="currentColor">같은 두뇌, 다른 문턱 &mdash; 2026년에 새로 생긴 출시 방식</text>
+
+  <!-- 공통 엔진 -->
+  <rect x="330" y="48" width="240" height="52" rx="10" fill="var(--s1)" opacity=".14"/>
+  <rect x="330" y="48" width="240" height="52" rx="10" fill="none" stroke="var(--s1)" stroke-width="1.8"/>
+  <text x="450" y="70" font-size="13.5" font-weight="700" text-anchor="middle" fill="var(--s1)">같은 모델 하나</text>
+  <text x="450" y="90" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">성능도 값도 동일 · $10 / $50 · 100만 토큰 맥락</text>
+
+  <path d="M410 100 L410 118 L200 118 L200 140" fill="none" stroke="currentColor" stroke-width="1.6" marker-end="url(#sg-a)"/>
+  <path d="M490 100 L490 118 L700 118 L700 140" fill="none" stroke="currentColor" stroke-width="1.6" marker-end="url(#sg-a)"/>
+  <text x="450" y="114" font-size="11" text-anchor="middle" fill="currentColor" opacity=".6">다른 것은 &lsquo;누가 쓸 수 있나&rsquo;뿐</text>
+
+  <!-- Fable -->
+  <rect x="40" y="142" width="320" height="64" rx="10" fill="var(--paper-2)" stroke="currentColor" stroke-width="1.6"/>
+  <text x="200" y="167" font-size="13.5" font-weight="700" text-anchor="middle" fill="currentColor">Claude Fable 5.1</text>
+  <text x="200" y="189" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".85">누구나 쓸 수 있습니다 · 분류기가 앞을 지킵니다</text>
+
+  <!-- Mythos -->
+  <rect x="540" y="142" width="320" height="64" rx="10" fill="var(--warn-in)" stroke="var(--warn)" stroke-width="1.8"/>
+  <text x="700" y="167" font-size="13.5" font-weight="700" text-anchor="middle" fill="var(--warn)">Claude Mythos 5.1</text>
+  <text x="700" y="189" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".85">검증받은 기관만 · 분류기 없이 그대로</text>
+
+  <line x1="200" y1="206" x2="200" y2="228" stroke="currentColor" stroke-width="1.6" marker-end="url(#sg-a)"/>
+  <line x1="700" y1="206" x2="700" y2="228" stroke="var(--warn)" stroke-width="1.6" marker-end="url(#sg-w)"/>
+
+  <!-- 처리 결과 -->
+  <rect x="40" y="230" width="320" height="76" rx="10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <text x="56" y="252" font-size="11.5" fill="var(--good)">보통 질문 → <tspan fill="currentColor" font-weight="700">그대로 최고 성능</tspan></text>
+  <text x="56" y="274" font-size="11.5" fill="var(--danger)">민감 분야 질문 →</text>
+  <text x="56" y="292" font-size="11.5" fill="currentColor">　덜 유능한 모델이 대신 답합니다</text>
+
+  <rect x="540" y="230" width="320" height="76" rx="10" fill="none" stroke="var(--warn)" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <text x="556" y="252" font-size="11.5" fill="var(--good)">보통 질문 → <tspan fill="currentColor" font-weight="700">그대로 최고 성능</tspan></text>
+  <text x="556" y="274" font-size="11.5" fill="var(--warn)">민감 분야 질문 →</text>
+  <text x="556" y="292" font-size="11.5" fill="currentColor">　그대로 처리 (기관 책임)</text>
+
+  <!-- 민감 분야 설명 -->
+  <rect x="378" y="230" width="144" height="76" rx="9" fill="var(--danger-in)" stroke="var(--danger)" stroke-width="1.4"/>
+  <text x="450" y="250" font-size="11.5" font-weight="700" text-anchor="middle" fill="var(--danger)">민감 분야</text>
+  <text x="450" y="270" font-size="11" text-anchor="middle" fill="currentColor">사이버보안</text>
+  <text x="450" y="286" font-size="11" text-anchor="middle" fill="currentColor">생물 · 화학</text>
+  <text x="450" y="302" font-size="11" text-anchor="middle" fill="currentColor">모델 복제</text>
+</svg>
+</div>
+<figcaption><strong>&lsquo;성능 등급&rsquo;이 아니라 &lsquo;안전 등급&rsquo;으로 제품을 나눈 첫 사례입니다.</strong> 지금까지 모델은 Opus·Sonnet·Haiku처럼 똑똑한 순서로 갈렸는데, Fable 5.1과 Mythos 5.1은 <strong>성능이 똑같고 열리는 문만 다릅니다.</strong> 교우님이 쓰실 쪽은 왼쪽이고, 평범한 업무에서는 차이를 느끼실 일이 없습니다.</figcaption>
+</figure>

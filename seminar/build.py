@@ -13,7 +13,7 @@ CSS = (ROOT / "assets" / "base.css").read_text(encoding="utf-8")
 FIGS = ROOT / "parts" / "figs"
 DIST = ROOT / "dist"
 
-DOCS = ["textbook", "slides", "workbook"]
+DOCS = ["textbook", "slides", "workbook", "book2"]
 
 
 def expand(src: str) -> str:

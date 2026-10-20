@@ -1,0 +1,64 @@
+<figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 900 350" role="img" aria-label="같은 질문에 대한 기존 텍스트 응답과 Intelligent UI 응답의 차이. 기존에는 긴 문단으로 설명해 사용자가 직접 읽고 비교해야 했지만, Intelligent UI는 비교표, 그래프, 누를 수 있는 단추와 입력 양식을 대화창 안에 바로 그려 준다." style="font-family:var(--f-body)">
+  <text x="20" y="26" font-size="12.5" font-weight="700" fill="currentColor" opacity=".7">질문 &mdash; &ldquo;A 보험과 B 보험 중 뭐가 나은가요?&rdquo;</text>
+
+  <!-- 왼쪽 : 기존 -->
+  <text x="20" y="58" font-size="13" font-weight="700" fill="currentColor" opacity=".75">지금까지 &mdash; 글로만 답했습니다</text>
+  <rect x="20" y="72" width="390" height="236" rx="10" fill="var(--paper-2)" stroke="currentColor" stroke-width="1.5"/>
+  <g fill="currentColor" opacity=".3">
+    <rect x="40" y="94" width="350" height="8" rx="4"/><rect x="40" y="112" width="350" height="8" rx="4"/>
+    <rect x="40" y="130" width="320" height="8" rx="4"/><rect x="40" y="148" width="350" height="8" rx="4"/>
+    <rect x="40" y="166" width="340" height="8" rx="4"/><rect x="40" y="184" width="350" height="8" rx="4"/>
+    <rect x="40" y="202" width="300" height="8" rx="4"/><rect x="40" y="220" width="350" height="8" rx="4"/>
+    <rect x="40" y="238" width="330" height="8" rx="4"/><rect x="40" y="256" width="210" height="8" rx="4"/>
+  </g>
+  <text x="215" y="290" font-size="11.5" text-anchor="middle" fill="var(--danger)">읽고 비교하는 일은 사람 몫</text>
+
+  <line x1="450" y1="48" x2="450" y2="330" stroke="currentColor" opacity=".22" stroke-dasharray="3 5"/>
+
+  <!-- 오른쪽 : Intelligent UI -->
+  <text x="490" y="58" font-size="13" font-weight="700" fill="var(--crimson)">2026년 10월 &mdash; 화면을 그려서 답합니다</text>
+  <rect x="490" y="72" width="390" height="236" rx="10" fill="var(--crimson-in)" stroke="var(--crimson)" stroke-width="1.8"/>
+
+  <!-- 비교표 -->
+  <g font-size="10.5">
+    <rect x="508" y="90" width="354" height="22" rx="4" fill="var(--crimson)" opacity=".2"/>
+    <text x="520" y="105" fill="currentColor" font-weight="700">항목</text>
+    <text x="650" y="105" fill="currentColor" font-weight="700">A 보험</text>
+    <text x="770" y="105" fill="currentColor" font-weight="700">B 보험</text>
+    <line x1="508" y1="112" x2="862" y2="112" stroke="currentColor" opacity=".25"/>
+    <text x="520" y="130" fill="currentColor">월 납입</text><text x="650" y="130" fill="currentColor">$184</text><text x="770" y="130" fill="var(--good)" font-weight="700">$142</text>
+    <line x1="508" y1="138" x2="862" y2="138" stroke="currentColor" opacity=".15"/>
+    <text x="520" y="156" fill="currentColor">자기부담</text><text x="650" y="156" fill="var(--good)" font-weight="700">$500</text><text x="770" y="156" fill="currentColor">$2,000</text>
+    <line x1="508" y1="164" x2="862" y2="164" stroke="currentColor" opacity=".15"/>
+    <text x="520" y="182" fill="currentColor">치과 포함</text><text x="650" y="182" fill="var(--good)" font-weight="700">예</text><text x="770" y="182" fill="var(--danger)">아니오</text>
+  </g>
+
+  <!-- 미니 그래프 -->
+  <g>
+    <rect x="508" y="196" width="168" height="62" rx="6" fill="var(--paper)" stroke="currentColor" stroke-width="1" opacity=".9"/>
+    <text x="518" y="211" font-size="10" fill="currentColor" opacity=".7">연간 총비용</text>
+    <rect x="518" y="220" width="70" height="12" rx="3" fill="var(--s2)"/>
+    <rect x="518" y="238" width="48" height="12" rx="3" fill="var(--s3)"/>
+    <text x="594" y="230" font-size="9.5" fill="currentColor">A $2,708</text>
+    <text x="572" y="248" font-size="9.5" fill="currentColor">B $3,704</text>
+  </g>
+
+  <!-- 입력 양식 + 단추 -->
+  <g>
+    <rect x="690" y="196" width="172" height="26" rx="5" fill="var(--paper)" stroke="currentColor" stroke-width="1"/>
+    <text x="700" y="213" font-size="10" fill="currentColor" opacity=".55">연간 병원 방문 횟수 …</text>
+    <rect x="690" y="230" width="82" height="28" rx="6" fill="var(--brand-fill)"/>
+    <text x="731" y="248" font-size="10.5" text-anchor="middle" fill="var(--on-brand)" font-weight="700">다시 계산</text>
+    <rect x="780" y="230" width="82" height="28" rx="6" fill="none" stroke="var(--crimson)" stroke-width="1.4"/>
+    <text x="821" y="248" font-size="10.5" text-anchor="middle" fill="var(--crimson)" font-weight="700">표 내보내기</text>
+  </g>
+
+  <text x="685" y="290" font-size="11.5" text-anchor="middle" fill="var(--good)" font-weight="700">비교와 계산까지 화면이 해 줍니다</text>
+
+  <text x="20" y="334" font-size="11.5" fill="currentColor" opacity=".7">AI가 답의 <tspan font-weight="700">모양</tspan>까지 스스로 고릅니다 &mdash; 간단한 질문에는 여전히 짧은 글로 답합니다.</text>
+</svg>
+</div>
+<figcaption><strong>대화창이 &lsquo;읽는 곳&rsquo;에서 &lsquo;쓰는 곳&rsquo;으로 바뀌었습니다.</strong> 표·그래프·단추·입력칸이 답변 안에 그려지고, 숫자를 바꿔 다시 계산할 수 있습니다. 긴 설명을 읽기 힘들어하시던 어르신께 특히 큰 변화입니다.</figcaption>
+</figure>
