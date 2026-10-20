@@ -1,6 +1,6 @@
-<title>안암골에서 아틀란타까지</title>
+<title>고향에서 아틀란타까지</title>
 <style>
-/* ── 고대 아틀란타 교우회 AI 워크샵 2026 · 공통 디자인 시스템 ─────────────
+/* ── 샬롬대학 시니어 AI 워크샵 2026 · 공통 디자인 시스템 ─────────────
    Display : 한국 출판 명조체 (교본의 얼굴)
    Body    : 한국 고딕체 (30~80대 모두 읽히도록 큰 본문)
    Utility : 고정폭 (프롬프트 · 명령어 · 수치)
@@ -17,17 +17,17 @@
   --rule:       #DED8D6;
   --rule-2:     #C9C1BF;
 
-  /* 고려대 정체성 */
-  --crimson:    #8A1538;
-  --crimson-2:  #B03052;
-  --crimson-in: #FBEEF1;
+  /* 샬롬대학 — 평안을 뜻하는 이름에 맞춘 깊은 청록 */
+  --brand:    #1A5C56;
+  --brand-2:  #2E7A72;
+  --brand-in: #E9F3F1;
   --gold:       #AD7C1C;
   --gold-in:    #FBF3E2;
 
   /* 색이 꽉 찬 브랜드 블록(부 표지·머리띠·번호 원)용.
-     본문 강조색(--crimson)은 테마에 따라 밝아지므로 흰 글씨를 얹을 수 없다.
+     본문 강조색(--brand)은 테마에 따라 밝아지므로 흰 글씨를 얹을 수 없다.
      이 두 값은 두 테마에서 모두 깊게 유지해 흰 글씨 대비를 보장한다. */
-  --brand-fill: #8A1538;
+  --brand-fill: #1A5C56;
   --gold-fill:  #8F6415;
   --on-brand:   #FFFFFF;
 
@@ -61,14 +61,14 @@
     --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
     --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
     --rule: #383634;   --rule-2: #4A4744;
-    --crimson: #E0778F; --crimson-2: #D4657E; --crimson-in: #33181F;
+    --brand: #6FC3B8; --brand-2: #58B4A8; --brand-in: #13302C;
     --gold: #D6A340; --gold-in: #332816;
     --good: #4FA97B; --good-in: #16281F;
     --warn: #CF8A33; --warn-in: #2B2013;
     --danger: #E0716C; --danger-in: #301A19;
     --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
     --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
-    --brand-fill: #7C1230; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+    --brand-fill: #15514B; --gold-fill: #7A5411; --on-brand: #FFFFFF;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   }
 }
@@ -77,14 +77,14 @@
   --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
   --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
   --rule: #383634;   --rule-2: #4A4744;
-  --crimson: #E0778F; --crimson-2: #D4657E; --crimson-in: #33181F;
+  --brand: #6FC3B8; --brand-2: #58B4A8; --brand-in: #13302C;
   --gold: #D6A340; --gold-in: #332816;
   --good: #4FA97B; --good-in: #16281F;
   --warn: #CF8A33; --warn-in: #2B2013;
   --danger: #E0716C; --danger-in: #301A19;
   --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
   --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
-  --brand-fill: #7C1230; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+  --brand-fill: #15514B; --gold-fill: #7A5411; --on-brand: #FFFFFF;
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
 }
 
@@ -95,8 +95,8 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--f-body);
-  font-size: 17px;
-  line-height: 1.78;
+  font-size: 18.5px;   /* 시니어 가독성: 기본 본문을 키운다 */
+  line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -104,8 +104,8 @@ body {
 
 h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; line-height: 1.3; margin: 0; font-weight: 700; }
 
-a { color: var(--crimson); text-underline-offset: 3px; }
-:focus-visible { outline: 2.5px solid var(--crimson-2); outline-offset: 3px; border-radius: 3px; }
+a { color: var(--brand); text-underline-offset: 3px; }
+:focus-visible { outline: 2.5px solid var(--brand-2); outline-offset: 3px; border-radius: 3px; }
 
 /* ── 공통 컴포넌트 ───────────────────────────────────────────────── */
 
@@ -127,7 +127,7 @@ a { color: var(--crimson); text-underline-offset: 3px; }
 .chip-ok     { color: var(--good);   border-color: var(--good);   background: var(--good-in); }
 .chip-check  { color: var(--warn);   border-color: var(--warn);   background: var(--warn-in); }
 .chip-risk   { color: var(--danger); border-color: var(--danger); background: var(--danger-in); }
-.chip-ku     { color: var(--crimson);border-color: var(--crimson);background: var(--crimson-in); }
+.chip-ku     { color: var(--brand);border-color: var(--brand);background: var(--brand-in); }
 
 /* 콜아웃 */
 .note {
@@ -146,8 +146,8 @@ a { color: var(--crimson); text-underline-offset: 3px; }
 .note.check  .note-title { color: var(--warn); }
 .note.risk   { border-color: var(--danger);  background: var(--danger-in); }
 .note.risk   .note-title { color: var(--danger); }
-.note.ku     { border-color: var(--crimson); background: var(--crimson-in); }
-.note.ku     .note-title { color: var(--crimson); }
+.note.ku     { border-color: var(--brand); background: var(--brand-in); }
+.note.ku     .note-title { color: var(--brand); }
 
 /* 프롬프트 상자 */
 .prompt {
@@ -175,7 +175,7 @@ a { color: var(--crimson); text-underline-offset: 3px; }
   border: 1px solid var(--rule-2); background: var(--paper);
   color: var(--ink-2); border-radius: 6px; padding: .22em .7em;
 }
-.copy:hover { border-color: var(--crimson); color: var(--crimson); }
+.copy:hover { border-color: var(--brand); color: var(--brand); }
 .copy[data-done="1"] { color: var(--good); border-color: var(--good); }
 
 /* 표 */
@@ -225,7 +225,7 @@ figcaption {
   overflow-y: auto; padding: 1.6rem 1rem 3rem 1.6rem;
   border-right: 1px solid var(--rule); background: var(--paper-2);
 }
-.rail-brand { font-family: var(--f-display); font-weight: 700; font-size: .96rem; line-height: 1.4; color: var(--crimson); margin-bottom: .3rem; }
+.rail-brand { font-family: var(--f-display); font-weight: 700; font-size: .96rem; line-height: 1.4; color: var(--brand); margin-bottom: .3rem; }
 .rail-sub { font-size: .72rem; color: var(--ink-3); margin-bottom: 1.4rem; font-family: var(--f-mono); }
 .rail nav ol { list-style: none; margin: 0; padding: 0; }
 .rail nav a {
@@ -233,7 +233,7 @@ figcaption {
   font-size: .82rem; line-height: 1.45; color: var(--ink-2); text-decoration: none;
   border-left: 2px solid transparent;
 }
-.rail nav a:hover { background: var(--paper-3); color: var(--crimson); }
+.rail nav a:hover { background: var(--paper-3); color: var(--brand); }
 .rail .part-label {
   font-family: var(--f-mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase;
   color: var(--ink-3); margin: 1.1rem 0 .35rem .5rem;
@@ -244,33 +244,33 @@ main { padding: 0 2.4rem 6rem; min-width: 0; }
 .wide { max-width: 1040px; margin-inline: auto; }
 
 /* 표지 */
-.cover { padding: 5rem 0 3.4rem; border-bottom: 3px double var(--crimson); margin-bottom: 3rem; }
+.cover { padding: 5rem 0 3.4rem; border-bottom: 3px double var(--brand); margin-bottom: 3rem; }
 .cover h1 { font-size: clamp(2.4rem, 5.4vw, 3.7rem); letter-spacing: -.015em; margin: 1rem 0 .9rem; }
-.cover .kicker { font-family: var(--f-mono); font-size: .78rem; letter-spacing: .18em; color: var(--crimson); text-transform: uppercase; }
+.cover .kicker { font-family: var(--f-mono); font-size: .78rem; letter-spacing: .18em; color: var(--brand); text-transform: uppercase; }
 .cover .lede { font-size: 1.12rem; color: var(--ink-2); line-height: 1.85; max-width: 60ch; }
 .cover .meta { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; font-size: .85rem; color: var(--ink-3); font-family: var(--f-mono); }
 
 /* 장 */
 .chapter { padding-top: 3.6rem; margin-top: 3.6rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
 .chapter:first-of-type { border-top: 0; }
-.chapter > .wrap > .ch-num { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .14em; color: var(--crimson); }
+.chapter > .wrap > .ch-num { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .14em; color: var(--brand); }
 .chapter h2 { font-size: clamp(1.7rem, 3.4vw, 2.25rem); margin: .5rem 0 1.3rem; letter-spacing: -.01em; }
 .chapter h3 { font-size: 1.28rem; margin: 2.6rem 0 .9rem; }
 .chapter h4 { font-size: 1.06rem; margin: 1.8rem 0 .6rem; font-family: var(--f-body); }
 .chapter p { margin: 1.1rem 0; }
 .chapter ul, .chapter ol { padding-left: 1.35rem; margin: 1.1rem 0; }
 .chapter li { margin: .5rem 0; }
-.chapter li::marker { color: var(--crimson); }
+.chapter li::marker { color: var(--brand); }
 
 /* 부 구분 */
 .part-open { padding: 3.4rem 0 1rem; text-align: center; }
-.part-open .pnum { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .22em; color: var(--crimson); }
+.part-open .pnum { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .22em; color: var(--brand); }
 .part-open h2 { font-size: clamp(1.5rem, 3.2vw, 2rem); margin: .6rem 0 .5rem; }
 .part-open p { color: var(--ink-3); font-size: .95rem; max-width: 54ch; margin-inline: auto; }
 
 /* 학습 목표 */
-.goals { background: var(--crimson-in); border: 1px solid var(--crimson); border-radius: 10px; padding: 1.15rem 1.4rem; margin: 1.6rem 0 2.2rem; }
-.goals .note-title { color: var(--crimson); }
+.goals { background: var(--brand-in); border: 1px solid var(--brand); border-radius: 10px; padding: 1.15rem 1.4rem; margin: 1.6rem 0 2.2rem; }
+.goals .note-title { color: var(--brand); }
 .goals ul { margin: .5rem 0 0; padding-left: 1.2rem; }
 .goals li { margin: .35rem 0; font-size: .95rem; }
 
@@ -285,7 +285,7 @@ main { padding: 0 2.4rem 6rem; min-width: 0; }
 
 /* 용어 카드 */
 .term { border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0; background: var(--paper-2); }
-.term dt { font-family: var(--f-display); font-weight: 700; color: var(--crimson); margin-top: .7rem; }
+.term dt { font-family: var(--f-display); font-weight: 700; color: var(--brand); margin-top: .7rem; }
 .term dt:first-child { margin-top: 0; }
 .term dd { margin: .25rem 0 0; font-size: .94rem; color: var(--ink-2); }
 
@@ -303,12 +303,12 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 <div class="book">
 
 <aside class="rail">
-  <div class="rail-brand">안암골에서<br>아틀란타까지</div>
+  <div class="rail-brand">고향에서<br>아틀란타까지</div>
   <div class="rail-sub">교재 · 2026.08.15</div>
   <nav aria-label="목차">
     <div class="part-label">여는 글</div>
     <ol>
-      <li><a href="#intro">교우 여러분께</a></li>
+      <li><a href="#intro">어르신 여러분께</a></li>
       <li><a href="#howto">이 책을 읽는 법</a></li>
       <li><a href="#now">제0장 · 지금 어디까지 왔나</a></li>
     </ol>
@@ -353,12 +353,13 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
 <!-- ══════════ 표지 ══════════ -->
 <header class="cover wrap" id="intro">
-  <div class="kicker">고려대학교 아틀란타 교우회 · AI 워크샵 교재</div>
-  <h1>안암골에서<br>아틀란타까지</h1>
+  <div class="kicker">샬롬대학 · 시니어 AI 워크샵 교재</div>
+  <h1>고향에서<br>아틀란타까지</h1>
   <p class="lede">
     2026년, AI는 묻고 답하는 물건에서 <strong>맡기면 끝내 오는 물건</strong>으로 바뀌었습니다.
-    이 책은 그 변화가 정확히 무엇인지, 그리고 서른의 교우와 여든의 교우가
-    각자 무엇을 얻을 수 있는지를 처음부터 끝까지 설명합니다.
+    이 책은 그 변화가 무엇인지, 그리고 어르신께서 그것으로
+    <strong>무엇을 하실 수 있는지</strong>를 처음부터 차근차근 설명합니다.
+    컴퓨터를 잘 모르셔도 읽으실 수 있게 썼습니다.
   </p>
   <div class="meta">
     <span>2026년 8월 15일 (토) · 1:30 – 3:30</span>
@@ -380,7 +381,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <p style="margin:0">
       오늘 모임은 <strong>세미나가 아니라 워크샵</strong>입니다. 이 구분은 말장난이 아니라 약속입니다.
       세미나는 앞에서 말하고 뒤에서 듣는 자리이고, 워크샵은 <strong>참석하신 분이 직접 손을 움직여
-      결과물을 가지고 돌아가는 자리</strong>입니다. 그래서 오늘 120분 중 절반인 60분이 교우님 손에 있습니다.
+      결과물을 가지고 돌아가는 자리</strong>입니다. 그래서 오늘 120분 중 절반인 60분이 어르신 손에 있습니다.
       노트북을 꼭 챙겨 오시라고 부탁드린 이유도 같습니다.
     </p>
   </div>
@@ -430,8 +431,8 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   </g>
 
   <!-- 오늘 -->
-  <line x1="900" y1="46" x2="900" y2="400" stroke="var(--crimson)" stroke-width="2" stroke-dasharray="5 4"/>
-  <text x="900" y="36" font-size="12.5" font-weight="700" fill="var(--crimson)" text-anchor="middle" font-family="var(--f-mono)">8/15 워크샵</text>
+  <line x1="900" y1="46" x2="900" y2="400" stroke="var(--brand)" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="900" y="36" font-size="12.5" font-weight="700" fill="var(--brand)" text-anchor="middle" font-family="var(--f-mono)">8/15 워크샵</text>
 
   <!-- 트랙 1 : Anthropic -->
   <text x="12" y="88" font-size="13" font-weight="700" fill="var(--s1)">Anthropic</text>
@@ -540,7 +541,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
       <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
     </marker>
     <marker id="ag-c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="var(--crimson)"/>
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--brand)"/>
     </marker>
   </defs>
 
@@ -573,32 +574,32 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <line x1="300" y1="40" x2="300" y2="430" stroke="currentColor" opacity=".22" stroke-dasharray="3 5"/>
 
   <!-- ══ 오른쪽 : 2026 에이전틱 AI ══ -->
-  <text x="330" y="26" font-size="14" font-weight="700" fill="var(--crimson)">2026 — 에이전틱 AI (맡기고 받기)</text>
+  <text x="330" y="26" font-size="14" font-weight="700" fill="var(--brand)">2026 — 에이전틱 AI (맡기고 받기)</text>
 
   <rect x="330" y="48" width="105" height="46" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
   <text x="382" y="76" font-size="13" text-anchor="middle" fill="currentColor">사람</text>
 
-  <line x1="382" y1="94" x2="382" y2="128" stroke="var(--crimson)" stroke-width="2" marker-end="url(#ag-c)"/>
-  <text x="392" y="116" font-size="11.5" fill="var(--crimson)">목표 한 번</text>
+  <line x1="382" y1="94" x2="382" y2="128" stroke="var(--brand)" stroke-width="2" marker-end="url(#ag-c)"/>
+  <text x="392" y="116" font-size="11.5" fill="var(--brand)">목표 한 번</text>
 
   <!-- 에이전트 루프 박스 -->
-  <rect x="330" y="130" width="330" height="194" rx="12" fill="var(--crimson)" opacity=".07"/>
-  <rect x="330" y="130" width="330" height="194" rx="12" fill="none" stroke="var(--crimson)" stroke-width="1.6"/>
-  <text x="345" y="152" font-size="11" font-family="var(--f-mono)" fill="var(--crimson)" letter-spacing="1">AGENT LOOP</text>
+  <rect x="330" y="130" width="330" height="194" rx="12" fill="var(--brand)" opacity=".07"/>
+  <rect x="330" y="130" width="330" height="194" rx="12" fill="none" stroke="var(--brand)" stroke-width="1.6"/>
+  <text x="345" y="152" font-size="11" font-family="var(--f-mono)" fill="var(--brand)" letter-spacing="1">AGENT LOOP</text>
 
-  <rect x="352" y="166" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--crimson)" stroke-width="1.4"/>
+  <rect x="352" y="166" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--brand)" stroke-width="1.4"/>
   <text x="400" y="191" font-size="12.5" text-anchor="middle" fill="currentColor">① 계획</text>
 
-  <rect x="542" y="166" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--crimson)" stroke-width="1.4"/>
+  <rect x="542" y="166" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--brand)" stroke-width="1.4"/>
   <text x="590" y="191" font-size="12.5" text-anchor="middle" fill="currentColor">② 실행</text>
 
-  <rect x="447" y="248" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--crimson)" stroke-width="1.4"/>
+  <rect x="447" y="248" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--brand)" stroke-width="1.4"/>
   <text x="495" y="273" font-size="12.5" text-anchor="middle" fill="currentColor">③ 점검</text>
 
-  <line x1="450" y1="186" x2="538" y2="186" stroke="var(--crimson)" stroke-width="1.8" marker-end="url(#ag-c)"/>
-  <path d="M590 208 L590 268 L547 268" fill="none" stroke="var(--crimson)" stroke-width="1.8" marker-end="url(#ag-c)"/>
-  <path d="M445 268 L400 268 L400 208" fill="none" stroke="var(--crimson)" stroke-width="1.8" marker-end="url(#ag-c)"/>
-  <text x="495" y="312" font-size="11.5" text-anchor="middle" fill="var(--crimson)">틀리면 스스로 계획으로 돌아가 다시</text>
+  <line x1="450" y1="186" x2="538" y2="186" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ag-c)"/>
+  <path d="M590 208 L590 268 L547 268" fill="none" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ag-c)"/>
+  <path d="M445 268 L400 268 L400 208" fill="none" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ag-c)"/>
+  <text x="495" y="312" font-size="11.5" text-anchor="middle" fill="var(--brand)">틀리면 스스로 계획으로 돌아가 다시</text>
 
   <!-- 도구 -->
   <rect x="700" y="150" width="200" height="136" rx="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 3"/>
@@ -609,8 +610,8 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <text x="800" y="256" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">코드 실행 · 테스트</text>
   <text x="800" y="276" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">캘린더 · 드라이브</text>
 
-  <line x1="640" y1="186" x2="696" y2="186" stroke="var(--crimson)" stroke-width="1.8" marker-end="url(#ag-c)"/>
-  <text x="668" y="178" font-size="10.5" text-anchor="middle" fill="var(--crimson)">도구 호출</text>
+  <line x1="640" y1="186" x2="696" y2="186" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ag-c)"/>
+  <text x="668" y="178" font-size="10.5" text-anchor="middle" fill="var(--brand)">도구 호출</text>
 
   <line x1="696" y1="240" x2="640" y2="240" stroke="currentColor" stroke-width="1.5" marker-end="url(#ag-a)" opacity=".7"/>
   <text x="668" y="232" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".7">결과</text>
@@ -720,7 +721,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   </div>
   <div class="wide"><figure>
 <div class="fig-scroll">
-<svg viewBox="0 0 960 330" role="img" aria-label="2026년 8월 기준 다섯 진영의 에이전틱 AI 제품 지형도. 모든 진영이 개발자용 터미널 에이전트와 비개발자용 업무 에이전트를 한 쌍씩 갖추고 있다. Anthropic은 Claude Code와 Cowork, OpenAI는 Codex와 ChatGPT Work, Google은 Antigravity와 Gemini Spark, SpaceXAI는 Grok Build와 Grok Bot, Meta는 Muse Code를 냈고 업무 트랙은 아직 없다." style="font-family:var(--f-body)">
+<svg viewBox="0 0 960 330" role="img" aria-label="2026년 10월 기준 다섯 진영의 에이전틱 AI 제품 지형도. 모든 진영이 개발자용 터미널 에이전트와 비개발자용 업무 에이전트를 한 쌍씩 갖추고 있다. Anthropic은 Claude Code와 Cowork, OpenAI는 Codex와 ChatGPT Work, Google은 Antigravity와 Gemini Spark, SpaceXAI는 Grok Build와 Grok Bot, Meta는 Muse Code를 냈고 업무 트랙은 아직 없다." style="font-family:var(--f-body)">
   <!-- 열 머리 -->
   <g text-anchor="middle" font-size="13" font-weight="700">
     <text x="245" y="30" fill="var(--s1)">Anthropic</text>
@@ -750,62 +751,62 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
     <rect x="492" y="72" width="146" height="64" rx="8" fill="var(--s3)" opacity=".13"/>
     <rect x="492" y="72" width="146" height="64" rx="8" fill="none" stroke="var(--s3)" stroke-width="1.5"/>
-    <text x="565" y="99" fill="currentColor" font-weight="700">Antigravity</text>
-    <text x="565" y="119" font-size="10.5" fill="currentColor" opacity=".7">3.7 Flash · 값이 가장 쌈</text>
+    <text x="565" y="99" fill="currentColor" font-weight="700">Antigravity 2.0</text>
+    <text x="565" y="119" font-size="10.5" fill="currentColor" opacity=".7">여러 에이전트 관제탑</text>
 
     <rect x="652" y="72" width="146" height="64" rx="8" fill="var(--s4)" opacity=".13"/>
     <rect x="652" y="72" width="146" height="64" rx="8" fill="none" stroke="var(--s4)" stroke-width="1.5"/>
     <text x="725" y="99" fill="currentColor" font-weight="700">Grok Build</text>
-    <text x="725" y="119" font-size="10.5" fill="currentColor" opacity=".7">Cursor 인수로 급성장</text>
+    <text x="725" y="119" font-size="10.5" fill="currentColor" opacity=".7">Cursor 인수 · 값 동결</text>
 
     <rect x="812" y="72" width="146" height="64" rx="8" fill="var(--s6)" opacity=".13"/>
     <rect x="812" y="72" width="146" height="64" rx="8" fill="none" stroke="var(--s6)" stroke-width="1.5"/>
     <text x="885" y="99" fill="currentColor" font-weight="700">Muse Code</text>
-    <text x="885" y="119" font-size="10.5" fill="currentColor" opacity=".7">8/5 베타 · 후발주자</text>
+    <text x="885" y="119" font-size="10.5" fill="currentColor" opacity=".7">Muse Wonder Full 전용</text>
   </g>
 
   <!-- 행 2 : 업무 트랙 -->
-  <rect x="20" y="168" width="920" height="104" rx="10" fill="var(--crimson)" opacity=".07"/>
-  <rect x="20" y="168" width="920" height="104" rx="10" fill="none" stroke="var(--crimson)" stroke-width="1.5"/>
-  <text x="34" y="198" font-size="12.5" font-weight="700" fill="var(--crimson)">업무 트랙</text>
+  <rect x="20" y="168" width="920" height="104" rx="10" fill="var(--brand)" opacity=".07"/>
+  <rect x="20" y="168" width="920" height="104" rx="10" fill="none" stroke="var(--brand)" stroke-width="1.5"/>
+  <text x="34" y="198" font-size="12.5" font-weight="700" fill="var(--brand)">업무 트랙</text>
   <text x="34" y="218" font-size="11" fill="currentColor" opacity=".65">문서와 파일을</text>
   <text x="34" y="234" font-size="11" fill="currentColor" opacity=".65">다루는</text>
-  <text x="34" y="250" font-size="11" fill="var(--crimson)" font-weight="700">← 오늘 여기</text>
+  <text x="34" y="250" font-size="11" fill="var(--brand)" font-weight="700">← 오늘 여기</text>
 
   <g font-size="12.5" text-anchor="middle">
     <rect x="172" y="188" width="146" height="64" rx="8" fill="var(--s1)" opacity=".2"/>
     <rect x="172" y="188" width="146" height="64" rx="8" fill="none" stroke="var(--s1)" stroke-width="2"/>
-    <text x="245" y="215" fill="currentColor" font-weight="700">Claude Cowork</text>
-    <text x="245" y="235" font-size="10.5" fill="currentColor" opacity=".7">데스크톱 폴더 자율 작업</text>
+    <text x="245" y="215" fill="currentColor" font-weight="700">Claude 대화에 통합</text>
+    <text x="245" y="235" font-size="10.5" fill="currentColor" opacity=".7">9/16부터 모드 구분 없음</text>
 
     <rect x="332" y="188" width="146" height="64" rx="8" fill="var(--s2)" opacity=".2"/>
     <rect x="332" y="188" width="146" height="64" rx="8" fill="none" stroke="var(--s2)" stroke-width="2"/>
     <text x="405" y="215" fill="currentColor" font-weight="700">ChatGPT Work</text>
-    <text x="405" y="235" font-size="10.5" fill="currentColor" opacity=".7">몇 시간짜리 프로젝트</text>
+    <text x="405" y="235" font-size="10.5" fill="currentColor" opacity=".7">GPT-6 · Intelligent UI</text>
 
     <rect x="492" y="188" width="146" height="64" rx="8" fill="var(--s3)" opacity=".2"/>
     <rect x="492" y="188" width="146" height="64" rx="8" fill="none" stroke="var(--s3)" stroke-width="2"/>
     <text x="565" y="215" fill="currentColor" font-weight="700">Gemini Spark</text>
-    <text x="565" y="235" font-size="10.5" fill="currentColor" opacity=".7">지메일 · 드라이브 상주</text>
+    <text x="565" y="235" font-size="10.5" fill="currentColor" opacity=".7">Gemini 4 Argon 기반</text>
 
     <rect x="652" y="188" width="146" height="64" rx="8" fill="var(--s4)" opacity=".2"/>
     <rect x="652" y="188" width="146" height="64" rx="8" fill="none" stroke="var(--s4)" stroke-width="2"/>
     <text x="725" y="215" fill="currentColor" font-weight="700">Grok Bot</text>
-    <text x="725" y="235" font-size="10.5" fill="currentColor" opacity=".7">상시 대기 에이전트 팀</text>
+    <text x="725" y="235" font-size="10.5" fill="currentColor" opacity=".7">Grok 4.7 기반</text>
 
     <rect x="812" y="188" width="146" height="64" rx="8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 4" opacity=".45"/>
     <text x="885" y="224" font-size="11.5" fill="currentColor" opacity=".55">아직 없음</text>
   </g>
 
   <text x="20" y="300" font-size="11.5" fill="currentColor" opacity=".7">읽는 법 — 세로로 보면 한 회사의 두 얼굴, 가로로 보면 같은 일을 하는 경쟁 제품입니다.</text>
-  <text x="20" y="320" font-size="11.5" fill="var(--crimson)">교우님이 개발자가 아니라면 위쪽 줄은 이름만 알아두고, 아래쪽 줄에서 하나만 고르시면 됩니다.</text>
+  <text x="20" y="320" font-size="11.5" fill="var(--brand)">어르신이 개발자가 아니라면 위쪽 줄은 이름만 알아두고, 아래쪽 줄에서 하나만 고르시면 됩니다.</text>
 </svg>
 </div>
-<figcaption><strong>2026년의 규칙: 모든 회사가 &lsquo;개발자용 한 개 + 업무용 한 개&rsquo;를 한 쌍으로 냅니다.</strong> 이름이 많아 복잡해 보이지만 실은 다섯 회사가 같은 표를 채우고 있을 뿐입니다. 교우님이 고를 칸은 아래 줄 다섯 개 중 하나입니다.</figcaption>
+<figcaption><strong>다섯 회사가 같은 표의 같은 칸을 채우고 있습니다.</strong> 두 달 전과 달라진 곳은 Anthropic의 업무 칸입니다 &mdash; 따로 열던 Cowork가 <strong>대화 안으로 들어가</strong> 고를 것이 없어졌습니다. 어르신이 고르실 칸은 여전히 아래 줄 하나입니다.</figcaption>
 </figure></div>
   <div class="wrap">
     <p>
-      교우님이 소프트웨어를 만드는 분이 아니라면, <strong>위쪽 줄은 이름만 알아두시고
+      어르신이 소프트웨어를 만드는 분이 아니라면, <strong>위쪽 줄은 이름만 알아두시고
       아래쪽 줄에서 하나만 고르시면 됩니다.</strong> 그리고 대개 이미 쓰고 계신 것을 고르는 편이 낫습니다.
       지메일을 많이 쓰시면 Gemini, ChatGPT를 이미 구독 중이시면 ChatGPT Work,
       문서 작업이 많고 꼼꼼함이 중요하면 Claude Cowork입니다.
@@ -822,7 +823,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
       <span class="note-title">이 장에서 배울 것</span>
       <ul>
         <li>두 제품이 경쟁 관계가 아니라 <strong>같은 엔진의 두 입구</strong>라는 점</li>
-        <li>비개발자 교우님이 쓰실 것은 어느 쪽이며, 무엇을 시킬 수 있는지</li>
+        <li>비개발자 어르신이 쓰실 것은 어느 쪽이며, 무엇을 시킬 수 있는지</li>
         <li>각 제품이 할 수 있는 일과 할 수 없는 일의 경계</li>
       </ul>
     </div>
@@ -860,7 +861,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <rect x="40" y="130" width="350" height="72" rx="10" fill="var(--paper-2)" stroke="currentColor" stroke-width="1.6"/>
   <text x="215" y="157" font-size="14" font-weight="700" text-anchor="middle" fill="currentColor">Claude Code</text>
   <text x="215" y="180" font-size="12" text-anchor="middle" fill="currentColor" opacity=".8">터미널 · 검은 화면에 글자로 대화</text>
-  <text x="215" y="196" font-size="11" text-anchor="middle" fill="currentColor" opacity=".6" font-family="var(--f-mono)">개발자 · 엔지니어 교우</text>
+  <text x="215" y="196" font-size="11" text-anchor="middle" fill="currentColor" opacity=".6" font-family="var(--f-mono)">개발자 · 엔지니어</text>
 
   <line x1="215" y1="202" x2="215" y2="228" stroke="currentColor" stroke-width="1.6" marker-end="url(#ct-a)"/>
 
@@ -871,15 +872,15 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <text x="60" y="316" font-size="12" fill="currentColor">· MCP로 DB · Jira · Slack 연결</text>
 
   <!-- 오른쪽 : Claude Cowork -->
-  <rect x="490" y="130" width="350" height="72" rx="10" fill="var(--crimson-in)" stroke="var(--crimson)" stroke-width="1.8"/>
-  <text x="665" y="157" font-size="14" font-weight="700" text-anchor="middle" fill="var(--crimson)">Claude Cowork</text>
+  <rect x="490" y="130" width="350" height="72" rx="10" fill="var(--brand-in)" stroke="var(--brand)" stroke-width="1.8"/>
+  <text x="665" y="157" font-size="14" font-weight="700" text-anchor="middle" fill="var(--brand)">Claude Cowork</text>
   <text x="665" y="180" font-size="12" text-anchor="middle" fill="currentColor" opacity=".85">데스크톱 앱 · 폴더를 지정하고 말로 시킴</text>
-  <text x="665" y="196" font-size="11" text-anchor="middle" fill="var(--crimson)" font-family="var(--f-mono)">오늘 워크샵의 주인공 · 모든 교우</text>
+  <text x="665" y="196" font-size="11" text-anchor="middle" fill="var(--brand)" font-family="var(--f-mono)">오늘 워크샵의 주인공 · 모든 어르신</text>
 
-  <line x1="665" y1="202" x2="665" y2="228" stroke="var(--crimson)" stroke-width="1.8" marker-end="url(#ct-a)"/>
+  <line x1="665" y1="202" x2="665" y2="228" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ct-a)"/>
 
-  <rect x="490" y="230" width="350" height="106" rx="10" fill="none" stroke="var(--crimson)" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <text x="665" y="252" font-size="11.5" font-weight="700" text-anchor="middle" fill="var(--crimson)">손이 닿는 곳</text>
+  <rect x="490" y="230" width="350" height="106" rx="10" fill="none" stroke="var(--brand)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="665" y="252" font-size="11.5" font-weight="700" text-anchor="middle" fill="var(--brand)">손이 닿는 곳</text>
   <text x="510" y="276" font-size="12" fill="currentColor">· 내가 허락한 폴더의 문서 전부</text>
   <text x="510" y="296" font-size="12" fill="currentColor">· 엑셀 · 워드 · PPT 직접 생성</text>
   <text x="510" y="316" font-size="12" fill="currentColor">· 몇 시간짜리 정리 작업 자율 수행</text>
@@ -917,7 +918,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <p>
       Claude Code는 같은 능력을 <strong>터미널</strong>(검은 화면에 글자만 있는 개발자용 창)에서 씁니다.
       수백 개 파일로 이루어진 소프트웨어 전체를 한 번에 읽고, 여러 파일을 넘나들며 고치고,
-      스스로 테스트를 돌려 확인합니다. IT 분야에 계신 교우님과 자녀분께는 이쪽을 권합니다.
+      스스로 테스트를 돌려 확인합니다. IT 분야에 계신 어르신과 자녀분께는 이쪽을 권합니다.
     </p>
 
     <div class="note check">
@@ -972,7 +973,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
         위 값은 출시 당시 기준입니다. 7월 30일에 Luna가 80%, Terra가 20% 인하되었으므로
         현재 실제 단가는 더 낮습니다. <span class="src unver">확인 권장</span>
         또한 이 값은 개발자가 API로 쓸 때의 값이고,
-        교우님이 ChatGPT 앱으로 쓰실 때는 월정액이라 해당되지 않습니다.
+        어르신이 ChatGPT 앱으로 쓰실 때는 월정액이라 해당되지 않습니다.
       </p>
     </div>
 
@@ -1007,7 +1008,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
       <ul>
         <li>이틀 전(8월 13일) 나온 Gemini 3.7 Flash가 왜 중요한 사건인지</li>
         <li>최상급 모델과 값싼 모델의 <strong>실제 격차가 얼마인지</strong>, 그리고 순위표를 읽을 때 주의할 점</li>
-        <li>Gemini Spark·Live가 교우님의 일상에서 하는 일</li>
+        <li>Gemini Spark·Live가 어르신의 일상에서 하는 일</li>
       </ul>
     </div>
 
@@ -1031,8 +1032,8 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   </g>
 
   <!-- 3.6 Flash 수준 기준선 : 3주 전 수준이 어디였는지 (막대 뒤에 깔림) -->
-  <line x1="528" y1="292" x2="528" y2="394" stroke="var(--crimson)" stroke-width="1.6" stroke-dasharray="4 4" opacity=".55"/>
-  <polygon points="528,286 524,294 532,294" fill="var(--crimson)" opacity=".75"/>
+  <line x1="528" y1="292" x2="528" y2="394" stroke="var(--brand)" stroke-width="1.6" stroke-dasharray="4 4" opacity=".55"/>
+  <polygon points="528,286 524,294 532,294" fill="var(--brand)" opacity=".75"/>
 
   <g font-size="13">
     <!-- 1 Opus 5 -->
@@ -1082,7 +1083,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <text x="200" y="402" text-anchor="end" font-size="10.5" fill="currentColor" opacity=".5">3주 전 모델</text>
     <path d="M210 372 h318 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-318 z" fill="var(--s3)" opacity=".35"/>
     <text x="544" y="387" fill="currentColor" opacity=".7" font-variant-numeric="tabular-nums">49.0%</text>
-    <text x="600" y="387" font-size="12" font-weight="700" fill="var(--crimson)">↑ 3주 만에 +16.3%p</text>
+    <text x="600" y="387" font-size="12" font-weight="700" fill="var(--brand)">↑ 3주 만에 +16.3%p</text>
   </g>
 
   <!-- 1위 ↔ 값싼 등급 격차 -->
@@ -1141,12 +1142,12 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
         글쓰기·번역·상담을 잘하는지는 알려 주지 않습니다.
         또 같은 시험도 측정 기관과 시점에 따라 1~2점씩 다르게 나옵니다.
         <strong>1점 차이로 도구를 고르지 마십시오.</strong>
-        교우님께 실제로 중요한 것은 순위가 아니라
+        어르신께 실제로 중요한 것은 순위가 아니라
         &ldquo;내가 시키려는 일을 해내는가&rdquo;와 &ldquo;값이 감당되는가&rdquo; 둘뿐입니다.
       </p>
     </div>
 
-    <h3>교우님 일상에서는 이렇게 나타납니다</h3>
+    <h3>어르신 일상에서는 이렇게 나타납니다</h3>
     <div class="term">
       <dl style="margin:0">
         <dt>Gemini 3.7 Flash</dt>
@@ -1225,7 +1226,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     </p>
 
     <div class="note check">
-      <span class="note-title">교우님께 실질적으로 의미하는 것</span>
+      <span class="note-title">어르신께 실질적으로 의미하는 것</span>
       <p style="margin:0">
         Grok의 강점은 <strong>X(옛 트위터)의 실시간 정보</strong>입니다. 지금 이 순간 무슨 일이 벌어지고 있는지
         묻기에는 좋습니다. 다만 실시간 소셜 데이터는 검증되지 않은 정보도 함께 딸려 오므로,
@@ -1235,7 +1236,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
     <div class="takeaway">
       <span class="lab">이 장의 한 줄</span>
-      <p>AI 판이 <strong>자본 규모의 싸움</strong>으로 넘어갔다는 신호입니다. 다만 교우님의 선택 기준은 회사 크기가 아니라 &ldquo;내가 하려는 일에 맞는가&rdquo; 하나면 충분합니다.</p>
+      <p>AI 판이 <strong>자본 규모의 싸움</strong>으로 넘어갔다는 신호입니다. 다만 어르신의 선택 기준은 회사 크기가 아니라 &ldquo;내가 하려는 일에 맞는가&rdquo; 하나면 충분합니다.</p>
     </div>
   </div>
 </section>
@@ -1314,12 +1315,12 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <text x="16" y="278" font-size="11.5" fill="currentColor" opacity=".6">출력 100만 토큰당 API 가격 · 2026년 8월 기준. Gemini 3.7 Flash는 연말까지 반값 행사 중입니다.</text>
 </svg>
 </div>
-<figcaption><strong>같은 일에 값이 170배까지 벌어집니다.</strong> 다만 이 표는 개발자가 API로 직접 쓸 때의 값입니다. 교우님이 앱이나 웹으로 쓰실 때는 월정액이라 해당 없으니, &lsquo;비싼 모델은 어려운 일에만&rsquo; 정도로만 기억하시면 충분합니다.</figcaption>
+<figcaption><strong>같은 일에 값이 170배까지 벌어집니다.</strong> 다만 이 표는 개발자가 API로 직접 쓸 때의 값입니다. 어르신이 앱이나 웹으로 쓰실 때는 월정액이라 해당 없으니, &lsquo;비싼 모델은 어려운 일에만&rsquo; 정도로만 기억하시면 충분합니다.</figcaption>
 </figure></div>
 
   <div class="wrap">
     <div class="note risk">
-      <span class="note-title">교우회 보안 주의 — 이것만은 지켜 주십시오</span>
+      <span class="note-title">샬롬대학 보안 주의 — 이것만은 지켜 주십시오</span>
       <p>
         오픈웨이트 모델을 <strong>내 컴퓨터에 내려받아 돌리는 것은 완전히 안전합니다.</strong>
         데이터가 밖으로 나가지 않기 때문입니다.
@@ -1405,7 +1406,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
       법률 AI인 Harvey가 이번 달 베타로 적용에 들어갔고, Thomson Reuters도 지원을 밝혔습니다. <span class="src">확인</span>
     </p>
     <div class="note ok">
-      <span class="note-title">왜 교우님께 좋은 소식인가</span>
+      <span class="note-title">왜 어르신께 좋은 소식인가</span>
       <p style="margin:0">
         지금까지는 AI를 바꾸면 <strong>처음부터 다시 설명</strong>해야 했습니다.
         이 규약이 퍼지면 그럴 필요가 없어집니다.
@@ -1475,7 +1476,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <h3>좋은 지시문의 네 가지 요소</h3>
     <p>결과의 질은 거의 전적으로 <strong>지시문의 구체성</strong>에서 갈립니다. 좋은 지시문에는 넷이 들어갑니다.</p>
     <ol>
-      <li><strong>무엇을</strong> — &ldquo;교우회 주소록 웹페이지&rdquo;처럼 만들 물건을 한 문장으로</li>
+      <li><strong>무엇을</strong> — &ldquo;샬롬대학 주소록 웹페이지&rdquo;처럼 만들 물건을 한 문장으로</li>
       <li><strong>누가 쓰는가</strong> — &ldquo;30대부터 80대까지&rdquo;. 이 한 줄이 글씨 크기와 버튼 크기를 바꿉니다</li>
       <li><strong>기능 목록</strong> — 번호를 매겨 하나씩. 뭉뚱그리면 뭉뚱그린 결과가 나옵니다</li>
       <li><strong>형태 조건</strong> — &ldquo;HTML 파일 하나로&rdquo;, &ldquo;휴대폰에서도 보이게&rdquo;</li>
@@ -1483,25 +1484,25 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
     <div class="note risk">
       <span class="note-title">나쁜 지시문의 예</span>
-      <p style="margin:0"><em>&ldquo;교우회 홈페이지 좀 만들어줘.&rdquo;</em> — AI는 무엇이든 하나 만들어 주긴 합니다. 다만 교우님이 머릿속에 그린 것과는 전혀 다른 물건이 나옵니다.</p>
+      <p style="margin:0"><em>&ldquo;샬롬대학 홈페이지 좀 만들어줘.&rdquo;</em> — AI는 무엇이든 하나 만들어 주긴 합니다. 다만 어르신이 머릿속에 그린 것과는 전혀 다른 물건이 나옵니다.</p>
     </div>
 
     <div class="prompt">
       <div class="prompt-head"><span>실습 1에서 쓸 지시문 (워크북에도 같은 것이 있습니다)</span><button class="copy" type="button">복사</button></div>
-      <pre>고려대학교 아틀란타 교우회를 위한 웹페이지를 하나 만들어 주세요.
+      <pre>샬롬대학를 위한 웹페이지를 하나 만들어 주세요.
 
 [누가 쓰나]
-- 30대부터 80대까지 교우와 가족이 함께 씁니다.
+- 30대부터 80대까지 어르신과 가족이 함께 씁니다.
 - 어르신도 안경 없이 보실 수 있게 글씨를 큼직하게 해 주세요.
 
 [디자인]
-- 고려대 상징색인 크림슨 레드(#8A1538)와 금색, 흰색을 씁니다.
+- 차분한 청록색과 흰색을 씁니다.
 - 화면이 복잡하지 않고 단정하게 해 주세요.
 
 [기능]
-1. 교우 검색창 — 성명, 입학년도/학과, 거주 지역(Duluth, Johns Creek,
+1. 회원 검색창 — 성명, 입학년도/학과, 거주 지역(Duluth, Johns Creek,
    Alpharetta 등)으로 찾을 수 있게
-2. '오늘의 교우 소식' 게시판 칸
+2. '오늘의 소식' 게시판 칸
 3. 누르면 바로 전화가 걸리는 '비상 연락' 버튼
 4. 예시 데이터를 6명분 미리 넣어 주세요 (가상의 이름으로)
 
@@ -1591,7 +1592,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <h3>3. 나만의 노래와 가족 영상</h3>
     <p>
       Suno나 Udio 같은 서비스에 가사를 넣으면 몇 분 만에 곡이 나옵니다.
-      교우회 찬가, 부모님 팔순 축하곡, 손주 생일 노래를 직접 만드실 수 있습니다.
+      샬롬대학 찬가, 부모님 팔순 축하곡, 손주 생일 노래를 직접 만드실 수 있습니다.
       <span class="src unver">확인 권장</span>
       (서비스 이름과 버전은 자주 바뀌므로 현장에서 확인하십시오.)
     </p>
@@ -1619,7 +1620,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
     <p>
       이 장은 이 책에서 가장 <strong>오래 남을</strong> 장이라고 생각합니다.
-      1980년대에 아틀란타에 오신 교우님들의 이야기는 지금 기록하지 않으면 사라집니다.
+      1980년대에 아틀란타에 오신 어르신들의 이야기는 지금 기록하지 않으면 사라집니다.
       영어로 자란 자녀와 손주들은 그 이야기를 <strong>들을 기회가 없었습니다.</strong>
     </p>
   </div>
@@ -1690,7 +1691,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <text x="20" y="30" font-size="13.5" font-weight="700" fill="currentColor">AI에게 자료 정리와 문장은 맡기고, 사실 판정은 끝까지 사람이 쥡니다</text>
 </svg>
 </div>
-<figcaption><strong>핵심은 3단계의 두 화살표입니다.</strong> 한 번에 전체를 시키면 AI가 없는 이야기를 지어냅니다. 장 단위로 끊어 시키고, AI가 <code>[확인 필요]</code>로 표시한 부분은 반드시 교우님이 직접 확인해 되돌리십시오. 이 절차 하나가 &lsquo;그럴듯한 거짓말&rsquo;이 섞인 가족사를 막습니다.</figcaption>
+<figcaption><strong>핵심은 3단계의 두 화살표입니다.</strong> 한 번에 전체를 시키면 AI가 없는 이야기를 지어냅니다. 장 단위로 끊어 시키고, AI가 <code>[확인 필요]</code>로 표시한 부분은 반드시 어르신이 직접 확인해 되돌리십시오. 이 절차 하나가 &lsquo;그럴듯한 거짓말&rsquo;이 섞인 가족사를 막습니다.</figcaption>
 </figure></div>
 
   <div class="wrap">
@@ -1769,7 +1770,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
     <h4>노래 + 사진 → 영상</h4>
     <p>
-      영상 편집 프로그램은 <strong>이미 교우님 노트북에 들어 있습니다.</strong>
+      영상 편집 프로그램은 <strong>이미 어르신 노트북에 들어 있습니다.</strong>
       윈도우 11에는 <strong>Clipchamp</strong>가, 맥에는 <strong>iMovie</strong>가 기본으로 깔려 있고
       둘 다 무료로 1080p 영상을 만들 수 있습니다. <span class="src">확인</span>
       옛 사진 여섯 장에서 열 장, 그리고 방금 만든 MP3만 있으면 됩니다.
@@ -1794,7 +1795,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <div class="note risk">
       <span class="note-title">다만 공개 계정에는 올리지 마십시오</span>
       <p style="margin:0">
-        그 영상에는 교우님 목소리와 가족 얼굴이 담깁니다.
+        그 영상에는 어르신 목소리와 가족 얼굴이 담깁니다.
         가족끼리 나누는 것은 아무 문제 없지만,
         <strong>유튜브 전체공개나 인스타그램 공개 계정에는 올리지 마십시오.</strong>
         다음 장에서 보시겠지만, 목소리 몇 초면 복제됩니다.
@@ -1913,8 +1914,8 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <text x="813" y="218" font-size="11.5" text-anchor="middle" fill="currentColor">내가 아는 번호로</text>
   <text x="813" y="236" font-size="11.5" text-anchor="middle" fill="currentColor">직접 다시 겁니다</text>
 
-  <rect x="20" y="268" width="900" height="44" rx="9" fill="var(--crimson-in)" stroke="var(--crimson)" stroke-width="1.6"/>
-  <text x="470" y="288" font-size="12.5" font-weight="700" text-anchor="middle" fill="var(--crimson)">기억하실 것은 하나입니다 — 목소리는 이제 신분증이 아닙니다.</text>
+  <rect x="20" y="268" width="900" height="44" rx="9" fill="var(--brand-in)" stroke="var(--brand)" stroke-width="1.6"/>
+  <text x="470" y="288" font-size="12.5" font-weight="700" text-anchor="middle" fill="var(--brand)">기억하실 것은 하나입니다 — 목소리는 이제 신분증이 아닙니다.</text>
   <text x="470" y="305" font-size="11.5" text-anchor="middle" fill="currentColor">아무리 자녀 목소리와 똑같아도, 암호를 대지 못하면 자녀가 아닙니다. 끊는 것은 무례가 아닙니다.</text>
 </svg>
 </div>
@@ -1986,7 +1987,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
         AI가 만들어 준 비밀번호는 <strong>대화 기록에 그대로 남습니다.</strong>
         같은 이유로 이미 쓰고 계신 비밀번호를 붙여 넣고
         &ldquo;이거 안전한가요?&rdquo;라고 물어보셔도 안 됩니다.
-        비밀번호는 <strong>교우님 머릿속에서 나와야</strong> 합니다.
+        비밀번호는 <strong>어르신 머릿속에서 나와야</strong> 합니다.
       </p>
     </div>
 
@@ -2012,18 +2013,18 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <div class="wide">
     <div class="tbl-wrap">
       <table>
-        <thead><tr><th>제품</th><th>만든 곳</th><th>무엇을 하나</th><th>이런 교우님께</th></tr></thead>
+        <thead><tr><th>제품</th><th>만든 곳</th><th>무엇을 하나</th><th>이런 어르신께</th></tr></thead>
         <tbody>
-          <tr><td><strong>Claude Cowork</strong></td><td>Anthropic</td><td>데스크톱 폴더의 문서를 자율 정리 · 보고서와 엑셀 생성</td><td><span class="chip chip-ku">추천</span> 문서 많은 직장인·경영자·모든 교우</td></tr>
-          <tr><td><strong>ChatGPT Work</strong></td><td>OpenAI</td><td>몇 시간짜리 복합 프로젝트 자율 수행</td><td>이미 ChatGPT를 쓰고 계신 교우</td></tr>
-          <tr><td><strong>Gemini Spark</strong></td><td>Google</td><td>지메일·드라이브 위에 상주하는 자율 비서</td><td>구글 계정을 주로 쓰시는 교우</td></tr>
-          <tr><td><strong>Gemini Live</strong></td><td>Google</td><td>카메라로 비추며 실시간 대화 · 번역</td><td><span class="chip chip-ku">추천</span> 미국 생활 전반 · 어르신</td></tr>
-          <tr><td><strong>Perplexity<br>(Model Council)</strong></td><td>Perplexity</td><td>여러 AI에 동시에 물어 답을 대조</td><td>중요한 결정 앞의 모든 교우</td></tr>
-          <tr><td><strong>NotebookLM</strong></td><td>Google</td><td>내가 올린 자료 안에서만 답변 · 연표 추출</td><td>자서전·회고록을 준비하시는 교우</td></tr>
-          <tr><td><strong>Claude Code</strong></td><td>Anthropic</td><td>터미널 기반 코딩 · 대형 프로젝트 자율 수정</td><td>개발자·엔지니어 교우와 자녀</td></tr>
-          <tr><td><strong>Codex</strong></td><td>OpenAI</td><td>터미널 코딩 에이전트</td><td>소프트웨어 분야 교우</td></tr>
-          <tr><td><strong>Grok Build / 4.6</strong></td><td>SpaceXAI</td><td>고속 개발 에이전트 · 실시간 소셜 정보</td><td>스타트업 · 시사에 밝고 싶은 교우</td></tr>
-          <tr><td><strong>Qwen3 · DeepSeek</strong></td><td>Alibaba · DeepSeek</td><td>내 컴퓨터에 설치해 인터넷 없이 사용</td><td>보안이 중요한 자료를 다루는 교우</td></tr>
+          <tr><td><strong>Claude Cowork</strong></td><td>Anthropic</td><td>데스크톱 폴더의 문서를 자율 정리 · 보고서와 엑셀 생성</td><td><span class="chip chip-ku">추천</span> 문서 많은 직장인·경영자·모든 어르신</td></tr>
+          <tr><td><strong>ChatGPT Work</strong></td><td>OpenAI</td><td>몇 시간짜리 복합 프로젝트 자율 수행</td><td>이미 ChatGPT를 쓰고 계신 분</td></tr>
+          <tr><td><strong>Gemini Spark</strong></td><td>Google</td><td>지메일·드라이브 위에 상주하는 자율 비서</td><td>구글 계정을 주로 쓰시는 분</td></tr>
+          <tr><td><strong>Gemini Live</strong></td><td>Google</td><td>카메라로 비추며 실시간 대화 · 번역</td><td><span class="chip chip-ku">추천</span> 미국 생활 전반</td></tr>
+          <tr><td><strong>Perplexity<br>(Model Council)</strong></td><td>Perplexity</td><td>여러 AI에 동시에 물어 답을 대조</td><td>중요한 결정 앞의 모든 어르신</td></tr>
+          <tr><td><strong>NotebookLM</strong></td><td>Google</td><td>내가 올린 자료 안에서만 답변 · 연표 추출</td><td>자서전을 준비하시는 어르신</td></tr>
+          <tr><td><strong>Claude Code</strong></td><td>Anthropic</td><td>터미널 기반 코딩 · 대형 프로젝트 자율 수정</td><td>자녀와 손주 세대</td></tr>
+          <tr><td><strong>Codex</strong></td><td>OpenAI</td><td>터미널 코딩 에이전트</td><td>소프트웨어 분야 </td></tr>
+          <tr><td><strong>Grok Build / 4.6</strong></td><td>SpaceXAI</td><td>고속 개발 에이전트 · 실시간 소셜 정보</td><td>스타트업 · 시사에 밝고 싶은 </td></tr>
+          <tr><td><strong>Qwen3 · DeepSeek</strong></td><td>Alibaba · DeepSeek</td><td>내 컴퓨터에 설치해 인터넷 없이 사용</td><td>보안이 중요한 자료를 다루시는 분</td></tr>
         </tbody>
       </table>
     </div>
@@ -2034,7 +2035,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <div class="wrap">
     <div class="ch-num">부록 B</div>
     <h2>바로 쓰는 실전 지시문</h2>
-    <p>복사해서 붙여 넣고, 대괄호 안만 교우님 사정에 맞게 고치시면 됩니다.</p>
+    <p>복사해서 붙여 넣고, 대괄호 안만 어르신 사정에 맞게 고치시면 됩니다.</p>
 
     <h3>생활</h3>
     <div class="prompt">
@@ -2140,7 +2141,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
     <hr style="margin:3rem 0;border:0;border-top:1px solid var(--rule)">
     <p style="text-align:center;color:var(--ink-3);font-size:.9rem">
-      고려대학교 아틀란타 교우회 AI 워크샵 · 2026년 8월 15일<br>
+      샬롬대학 시니어 AI 워크샵 · 2026년 8월 15일<br>
       <span style="font-family:var(--f-mono);font-size:.82rem">교재 · 읽는 책 (1 / 3)　　슬라이드 · 워크북이 따로 있습니다</span>
     </p>
   </div>

@@ -19,7 +19,7 @@ body { overflow: hidden; }
 /* 슬라이드 머리 */
 .s-eyebrow {
   font-family: var(--f-mono); font-size: clamp(.68rem, 1.05vw, .84rem);
-  letter-spacing: .16em; color: var(--crimson); text-transform: uppercase;
+  letter-spacing: .16em; color: var(--brand); text-transform: uppercase;
   margin-bottom: .7rem; flex: none;
 }
 .slide h2 {
@@ -48,7 +48,7 @@ body { overflow: hidden; }
 .cover-slide { justify-content: center; }
 .cover-slide h1 { font-size: clamp(2.5rem, 7vw, 5.4rem); line-height: 1.1; letter-spacing: -.025em; margin: 1rem 0; }
 .cover-slide .sub { font-size: clamp(1rem, 1.8vw, 1.5rem); color: var(--ink-2); max-width: 40ch; }
-.cover-slide .rule { width: 96px; height: 5px; background: var(--crimson); margin: 1.6rem 0; }
+.cover-slide .rule { width: 96px; height: 5px; background: var(--brand); margin: 1.6rem 0; }
 .cover-slide .foot { margin-top: 2.6rem; font-family: var(--f-mono); font-size: .85rem; color: var(--ink-3); line-height: 1.9; }
 
 /* 부 표지 */
@@ -68,11 +68,11 @@ body { overflow: hidden; }
   border: 1.5px solid var(--rule-2); border-radius: 12px; padding: 1.2rem 1.4rem;
   background: var(--paper-2); height: 100%;
 }
-.card.hi { border-color: var(--crimson); background: var(--crimson-in); }
+.card.hi { border-color: var(--brand); background: var(--brand-in); }
 .card.warn { border-color: var(--danger); background: var(--danger-in); }
 .card.good { border-color: var(--good); background: var(--good-in); }
 .card h4 { font-size: clamp(1rem, 1.5vw, 1.25rem); margin: 0 0 .7rem; }
-.card.hi h4 { color: var(--crimson); }
+.card.hi h4 { color: var(--brand); }
 .card.warn h4 { color: var(--danger); }
 .card.good h4 { color: var(--good); }
 .card ul { margin: 0; padding-left: 1.15rem; }
@@ -81,7 +81,7 @@ body { overflow: hidden; }
 /* 큰 숫자 */
 .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 .stat { text-align: center; padding: 1.4rem .8rem; border-radius: 12px; background: var(--paper-2); border: 1.5px solid var(--rule); }
-.stat .n { font-family: var(--f-display); font-size: clamp(2rem, 4.6vw, 3.6rem); font-weight: 700; color: var(--crimson); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .n { font-family: var(--f-display); font-size: clamp(2rem, 4.6vw, 3.6rem); font-weight: 700; color: var(--brand); line-height: 1; font-variant-numeric: tabular-nums; }
 .stat .l { font-size: clamp(.82rem, 1.15vw, 1rem); color: var(--ink-2); margin-top: .6rem; line-height: 1.5; }
 
 /* 강조 문장 */
@@ -90,7 +90,7 @@ body { overflow: hidden; }
   font-size: clamp(1.4rem, 3.1vw, 2.5rem); line-height: 1.4;
   max-width: 22ch; text-wrap: balance;
 }
-.punch em { font-style: normal; color: var(--crimson); }
+.punch em { font-style: normal; color: var(--brand); }
 
 /* 실습 안내 */
 .lab-slide { background: var(--gold-in); }
@@ -113,13 +113,13 @@ body { overflow: hidden; }
   font-family: var(--f-mono); font-size: .72rem; color: var(--ink-3);
 }
 .hud .bar { flex: 1; height: 4px; border-radius: 2px; background: var(--rule); overflow: hidden; }
-.hud .bar i { display: block; height: 100%; background: var(--crimson); width: 0; transition: width .22s ease; }
+.hud .bar i { display: block; height: 100%; background: var(--brand); width: 0; transition: width .22s ease; }
 .hud button {
   font: inherit; cursor: pointer; border: 1px solid var(--rule-2); background: var(--paper);
   color: var(--ink-2); border-radius: 6px; padding: .2em .65em;
 }
-.hud button:hover { border-color: var(--crimson); color: var(--crimson); }
-.hud .ku { color: var(--crimson); font-weight: 700; }
+.hud button:hover { border-color: var(--brand); color: var(--brand); }
+.hud .ku { color: var(--brand); font-weight: 700; }
 
 @media (max-width: 760px) {
   .cols, .stat-row { grid-template-columns: 1fr; }
@@ -131,13 +131,13 @@ body { overflow: hidden; }
 
 <!-- 1 -->
 <section class="slide cover-slide">
-  <div class="s-eyebrow">고려대학교 아틀란타 교우회</div>
+  <div class="s-eyebrow">샬롬대학</div>
   <h1>맡기면<br>끝내 옵니다</h1>
   <div class="rule"></div>
   <p class="sub">2026년의 AI는 묻고 답하는 물건이 아니라,<br>맡기면 해내고 돌아오는 물건입니다.</p>
   <div class="foot">
-    2026년 8월 15일 (토) · 오후 1:30 – 3:30<br>
-    <span style="color:var(--crimson);font-weight:700">세미나가 아니라 워크샵입니다 — 노트북을 열어 주십시오</span>
+    2026년 10월 20일 기준 개정판 · 오후 1:30 – 3:30<br>
+    <span style="color:var(--brand);font-weight:700">세미나가 아니라 워크샵입니다 — 노트북이나 휴대폰을 꺼내 주십시오</span>
   </div>
 </section>
 
@@ -160,7 +160,7 @@ body { overflow: hidden; }
         <ul>
           <li>120분 중 절반인 <strong>60분</strong>이 여러분 손에 있습니다</li>
           <li>세 가지를 <strong>직접 만들어</strong> 가져가십니다</li>
-          <li>그래서 노트북을 부탁드렸습니다</li>
+          <li>그래서 노트북이나 휴대폰을 꼭 챙겨 오시라 했습니다</li>
         </ul>
       </div>
     </div>
@@ -178,10 +178,10 @@ body { overflow: hidden; }
 <!-- 4 -->
 <section class="slide">
   <div class="s-eyebrow">오늘 가져가실 것</div>
-  <h2>집에 갈 때 손에 남는 세 가지</h2>
+  <h2>집에 갈 때 손에 남는 네 가지</h2>
   <div class="s-body">
     <ul class="big-list">
-      <li><span class="m">1</span><span><strong>자서전 한 장</strong> — 교우님 인생의 한 장면. 한글 원고와 영어 대역</span></li>
+      <li><span class="m">1</span><span><strong>자서전 한 장</strong> — 어르신 인생의 한 장면. 한글 원고와 영어 대역</span></li>
       <li><span class="m">2</span><span><strong>그 이야기로 만든 노래</strong> — 한국어로 부르는 MP3 한 곡</span></li>
       <li><span class="m">3</span><span><strong>사진과 노래로 만든 영상</strong> — 손주에게 바로 보낼 MP4</span></li>
       <li><span class="m">4</span><span><strong>안전한 비밀번호 + 가족 암호</strong> — 오늘 만든 것을 지키는 법</span></li>
@@ -193,28 +193,28 @@ body { overflow: hidden; }
 <!-- 5 -->
 <section class="slide part-slide">
   <div class="pn">제 1 부</div>
-  <h2>무엇이 달라졌나</h2>
+  <h2>두 달 사이에 무엇이 달라졌나</h2>
   <p>제품 이름은 계절마다 바뀝니다. 구조 변화 하나만 붙잡으십시오.</p>
 </section>
 
 <!-- 6 -->
 <section class="slide fig-slide">
-  <div class="s-eyebrow">지난 6주</div>
-  <h2>오늘 배울 것의 절반이 <em style="font-style:normal;color:var(--crimson)">6주 안</em>에 나왔습니다</h2>
-  <div class="s-body">{{fig:timeline}}</div>
+  <div class="s-eyebrow">지난 워크샵 이후</div>
+  <h2>66일 동안 다섯 진영이 <em style="font-style:normal;color:var(--brand)">전부</em> 주력을 갈았습니다</h2>
+  <div class="s-body">{{fig:timeline2}}</div>
 </section>
 
 <!-- 7 -->
 <section class="slide">
   <div class="s-eyebrow">숫자로</div>
-  <h2>37일 사이에 벌어진 일</h2>
+  <h2>두 달 사이에 벌어진 일</h2>
   <div class="s-body">
     <div class="stat-row">
-      <div class="stat"><div class="n">37</div><div class="l">일 만에<br>다섯 진영이 전부<br>새 주력 제품 발표</div></div>
-      <div class="stat"><div class="n">3</div><div class="l">주 만에<br>구글이 다음 모델을<br>또 내놓음</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">일 전에<br>Gemini 3.7 Flash<br>발표 (8월 13일)</div></div>
+      <div class="stat"><div class="n">66</div><div class="l">일 만에<br>다섯 진영이 전부<br>새 주력 발표</div></div>
+      <div class="stat"><div class="n">13</div><div class="l">일 동안<br>주요 발표가<br><strong>여섯 건</strong> (10/7~10/19)</div></div>
+      <div class="stat"><div class="n">5.6</div><div class="l">점 안에<br>1위부터 7위까지<br>모여 있습니다</div></div>
     </div>
-    <p class="wide-p">이 속도가 2026년을 어렵게 만드는 진짜 이유입니다. 기술이 어려운 것이 아니라, 어제 배운 것이 오늘 바뀝니다.</p>
+    <p class="wide-p">지난 워크샵에서 &ldquo;가속도를 보라&rdquo;고 말씀드렸습니다. 그 말이 그대로 일어났습니다. 그리고 더 중요한 변화가 있습니다 &mdash; <strong>이제 성능으로는 차이가 거의 안 납니다.</strong></p>
   </div>
 </section>
 
@@ -288,16 +288,37 @@ body { overflow: hidden; }
 </section>
 
 <!-- 13 -->
-<section class="slide fig-slide">
-  <div class="s-eyebrow">Anthropic</div>
-  <h2>Claude Code와 Cowork — 같은 엔진, 두 입구</h2>
-  <div class="s-body">{{fig:claude-two-track}}</div>
+<section class="slide">
+  <div class="s-eyebrow">Anthropic · 9월 16일</div>
+  <h2>&lsquo;모드&rsquo;가 사라졌습니다</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card">
+        <h4>지난 워크샵에서는</h4>
+        <ul>
+          <li>대화는 <strong>Claude</strong>에서</li>
+          <li>문서 일은 <strong>Cowork</strong>를 따로 열고</li>
+          <li>코드는 <strong>Claude Code</strong>로</li>
+        </ul>
+        <p style="font-size:1rem;margin-top:.7rem;color:var(--ink-2)">어느 것을 열지 고르는 법부터 가르쳐야 했습니다.</p>
+      </div>
+      <div class="card hi">
+        <h4>지금은</h4>
+        <ul>
+          <li>그냥 <strong>Claude를 열고 말하면</strong> 됩니다</li>
+          <li>간단하면 답하고, 복잡하면 <strong>알아서</strong> 에이전트로 처리합니다</li>
+          <li>Cowork는 없어진 게 아니라 <strong>안으로 들어갔습니다</strong></li>
+        </ul>
+      </div>
+    </div>
+    <p class="punch" style="max-width:30ch">외울 제품 이름이 <em>하나 줄었습니다.</em></p>
+  </div>
 </section>
 
 <!-- 14 -->
 <section class="slide lab-slide">
-  <div class="s-eyebrow" style="color:var(--gold)">Claude Cowork · 실제 예</div>
-  <h2>폴더를 통째로 맡기면 이렇게 됩니다</h2>
+  <div class="s-eyebrow" style="color:var(--gold)">그래서 이렇게 시킵니다</div>
+  <h2>폴더를 통째로 맡기는 것은 그대로입니다</h2>
   <div class="s-body">
     <pre>바탕화면의 '2026보험서류' 폴더를 열어보세요.
 
@@ -307,72 +328,83 @@ body { overflow: hidden; }
 
 그리고 제가 놓치면 손해 볼 만한 조항이 있으면
 '주의' 열에 한국어로 짧게 적어 주세요.</pre>
-    <p class="wide-p"><strong>손으로 하면 하루</strong>가 걸리는 일입니다. 자리를 비운 동안에도 계속 일합니다.</p>
+    <p class="wide-p">달라진 것은 <strong>모드를 고를 필요가 없다</strong>는 점뿐입니다. 손으로 하면 하루 걸리는 일인 것도 그대로입니다.</p>
   </div>
 </section>
 
 <!-- 15 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">OpenAI · 10월 7일</div>
+  <h2>GPT-6 &mdash; 이번엔 답의 <em style="font-style:normal;color:var(--brand)">모양</em>을 바꿨습니다</h2>
+  <div class="s-body">{{fig:genui}}</div>
+</section>
+
+<!-- 15b -->
 <section class="slide">
-  <div class="s-eyebrow">OpenAI</div>
-  <h2>GPT-5.6은 하나가 아니라 셋입니다</h2>
+  <div class="s-eyebrow">Intelligent UI</div>
+  <h2>글 대신 화면을 그려서 답합니다</h2>
   <div class="s-body">
     <ul class="big-list">
-      <li><span class="m">Sol</span><span><strong>어려운 일에</strong> — 깊은 분석, 중요한 판단, 긴 문서 해석</span></li>
-      <li><span class="m">Ter</span><span><strong>보통 일에</strong> — 대부분의 업무. 헷갈리시면 여기에 두십시오</span></li>
-      <li><span class="m">Lun</span><span><strong>많은 일에</strong> — 간단한 요약·번역·분류를 대량으로</span></li>
+      <li><span class="m">1</span><span>비교를 물으면 <strong>표</strong>를, 추세를 물으면 <strong>그래프</strong>를 그립니다</span></li>
+      <li><span class="m">2</span><span>숫자를 바꿔 <strong>그 자리에서 다시 계산</strong>할 수 있습니다</span></li>
+      <li><span class="m">3</span><span>간단한 질문에는 예전처럼 <strong>짧은 글</strong>로 답합니다</span></li>
+      <li><span class="m">4</span><span><strong>무료 요금제에도 열렸습니다</strong></span></li>
     </ul>
-    <p class="wide-p">7월 9일 출시. 같은 날 나온 <strong>ChatGPT Work</strong>가 Claude Cowork와 정면으로 맞섭니다. 이미 ChatGPT를 구독 중이시면 그쪽부터 써 보십시오. 둘 다 구독하실 필요는 없습니다.</p>
+    <div class="card good">
+      <h4>어르신께 특히 큰 변화입니다</h4>
+      <p style="font-size:1.05rem;line-height:1.7">보험 두 개를 비교해 달라면 예전에는 열 문단짜리 글이 나왔고, 읽고 비교하는 일은 결국 사람 몫이었습니다. 이제는 <strong>표가 나옵니다.</strong></p>
+    </div>
+    <p style="color:var(--ink-2);font-size:1rem">다만 Pro의 깊은 추론 모드와 구형 데스크톱 앱에서는 안 됩니다. <strong>웹 브라우저로 쓰시는 편이 확실합니다.</strong></p>
   </div>
 </section>
 
 <!-- 16 -->
 <section class="slide fig-slide">
-  <div class="s-eyebrow">지금 누가 제일 잘하나</div>
-  <h2>최상급과 값싼 등급의 차이 &mdash; 겨우 8.7점</h2>
-  <div class="s-body">{{fig:deepswe}}</div>
+  <div class="s-eyebrow">어느 것이 제일 좋은가</div>
+  <h2>이제 <em style="font-style:normal;color:var(--brand)">어느 것을 고르셔도</em> 괜찮습니다</h2>
+  <div class="s-body">{{fig:aa-rank}}</div>
 </section>
 
 <!-- 17 -->
 <section class="slide">
-  <div class="s-eyebrow">표를 읽는 법</div>
-  <h2>세로가 아니라 가로를 보십시오</h2>
+  <div class="s-eyebrow">두 달 전과 무엇이 다른가</div>
+  <h2>&lsquo;Anthropic 둘 + 나머지&rsquo;가 아니게 됐습니다</h2>
   <div class="s-body">
     <div class="cols">
       <div class="card">
-        <h4>세로로 읽으면 — 순위</h4>
+        <h4>8월에는</h4>
         <ul>
-          <li>1위 <strong>Claude Opus 5</strong> 74.0%</li>
-          <li>2위 GPT-5.6 Sol 72.7%</li>
-          <li>3위 Claude Fable 5 69.7%</li>
-          <li style="color:var(--ink-3)">Gemini 3.7 Flash는 9개 중 7째</li>
+          <li>1·2위가 Anthropic 독점</li>
+          <li>3위와 <strong>뚜렷한 격차</strong></li>
+          <li>&ldquo;제일 센 것&rdquo;을 묻는 게 의미 있었습니다</li>
         </ul>
       </div>
       <div class="card hi">
-        <h4>가로로 읽으면 — 간격</h4>
+        <h4>지금은</h4>
         <ul>
-          <li>1위와 값싼 등급 차이 <strong>8.7점</strong></li>
-          <li>그 값싼 모델은 3주 전 <strong>49.0%</strong>였습니다</li>
-          <li>값은 <strong>수십 분의 일</strong></li>
+          <li>상위 일곱에 <strong>네 회사</strong>가 들어 있습니다</li>
+          <li>1위와 7위 차이가 <strong>5.6점</strong></li>
+          <li>성능으로는 <strong>고를 수가 없습니다</strong></li>
         </ul>
       </div>
     </div>
-    <p class="punch" style="max-width:30ch">최상급을 못 사도, 오늘 손에 쥔 도구가 <em>작년 최고</em>를 넘어섭니다.</p>
+    <p class="punch" style="max-width:32ch">그래서 기준이 <em>값과 쓰임새</em>로 옮겨갔습니다.</p>
   </div>
 </section>
 
 <!-- 17b -->
 <section class="slide">
-  <div class="s-eyebrow">다만 조심하실 것</div>
-  <h2>1점 차이로 도구를 고르지 마십시오</h2>
+  <div class="s-eyebrow">그래도 조심하실 것</div>
+  <h2>1~2점 차이로 도구를 고르지 마십시오</h2>
   <div class="s-body">
     <div class="cols">
       <div class="card warn">
-        <h4>시험 점수의 한계</h4>
+        <h4>점수표의 한계</h4>
         <ul>
-          <li>DeepSWE는 <strong>코딩만</strong> 재는 시험입니다</li>
-          <li>글쓰기·번역·상담 실력은 알 수 없습니다</li>
-          <li>측정 기관·시점마다 1~2점씩 다릅니다</li>
-          <li>순위는 <strong>몇 주면 뒤집힙니다</strong></li>
+          <li>지수는 <strong>판(version)이 바뀌면</strong> 점수도 바뀝니다</li>
+          <li>집계처마다 <strong>순위가 다릅니다</strong></li>
+          <li>회사 자체 발표치를 모은 표도 섞여 있습니다</li>
+          <li>그리고 <strong>두 달이면 전부 뒤집힙니다</strong></li>
         </ul>
       </div>
       <div class="card good">
@@ -381,40 +413,61 @@ body { overflow: hidden; }
           <li>내가 <strong>시키려는 일</strong>을 해내는가</li>
           <li><strong>값</strong>이 감당되는가</li>
         </ul>
-        <p style="font-size:1rem;margin-top:.8rem">이 둘이면 충분합니다. 순위표는 참고일 뿐입니다.</p>
+        <p style="font-size:1rem;margin-top:.8rem">지금은 상위 일곱이 <strong>전부 충분합니다.</strong> 고르는 데 시간 쓰지 마시고, 고른 하나를 깊이 쓰십시오.</p>
       </div>
     </div>
-    <p class="wide-p" style="color:var(--ink-2)">&ldquo;작년에 써 보니 별로더라&rdquo;는 이 분야에서 유효기간이 지난 판단입니다. 지금 하실 일은 완벽한 도구 고르기가 아니라 <strong>쓰는 법 익히기</strong>입니다.</p>
   </div>
 </section>
 
 <!-- 18 -->
 <section class="slide">
-  <div class="s-eyebrow">SpaceXAI</div>
-  <h2>합병으로 태어난 진영</h2>
+  <div class="s-eyebrow">SpaceXAI · 9월 21일</div>
+  <h2>Grok 4.7 &mdash; 값을 안 올린 쪽</h2>
   <div class="s-body">
     <ul class="big-list">
-      <li><span class="m">2월</span><span>SpaceX가 xAI를 인수 — 합병 후 <strong>1조 2,500억 달러</strong>. 5월에 SpaceXAI로 재편</span></li>
-      <li><span class="m">어제</span><span>코딩 도구 회사 <strong>Cursor를 600억 달러</strong>에 인수 완료 (8월 14일)</span></li>
-      <li><span class="m">어제</span><span><strong>Grok 4.6</strong> 발표 — 종합 지능 지수 <strong>60.9점</strong>으로 세계 3위. 위에는 Claude Opus 5(63.0)와 Fable 5(62.1)뿐</span></li>
+      <li><span class="m">1</span><span>기반 모델은 커졌는데 <strong>값은 그대로</strong> ($2 / $6)</span></li>
+      <li><span class="m">2</span><span>맥락 창 50만 토큰 &mdash; 경쟁사 100만에는 못 미칩니다</span></li>
+      <li><span class="m">3</span><span>8월에 <strong>세계 3위</strong>였는데, 지금은 상위 일곱 밖입니다</span></li>
     </ul>
-    <div class="card warn" style="margin-top:.4rem">
-      <h4>다만 주의</h4>
-      <p style="font-size:1rem">Grok의 강점은 X(옛 트위터)의 <strong>실시간 정보</strong>입니다. 그만큼 검증되지 않은 내용도 함께 딸려 옵니다. 사실 확인이 필요한 일에는 다른 도구와 교차 검증하십시오.</p>
+    <div class="card warn">
+      <h4>남이 뛰는 동안 제자리를 지킨 셈입니다</h4>
+      <p style="font-size:1.05rem">Grok 5는 <strong>아직 날짜가 없습니다.</strong> 1분기·2분기 목표가 모두 지나갔으니, Grok 5를 기다려 결정을 미루지는 마십시오.</p>
     </div>
+    <p style="color:var(--ink-2)">실시간 소식 검색에는 여전히 강합니다. 다만 검증 안 된 내용이 섞이니 <strong>교차 확인</strong>하십시오.</p>
   </div>
 </section>
 
 <!-- 19 -->
-<section class="slide fig-slide">
-  <div class="s-eyebrow">오픈웨이트</div>
-  <h2>같은 일에 값이 170배까지 벌어집니다</h2>
-  <div class="s-body">{{fig:price}}</div>
+<section class="slide">
+  <div class="s-eyebrow">돈 이야기</div>
+  <h2>얼마를 내야 하나요</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card good">
+        <h4>대부분은 무료로 충분합니다</h4>
+        <ul>
+          <li>ChatGPT · Gemini · Claude 모두 <strong>무료 등급</strong>이 있습니다</li>
+          <li>오늘 하는 실습은 <strong>전부 무료로</strong> 됩니다</li>
+          <li>10월부터는 새 기능도 무료 등급에 열렸습니다</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>돈을 내실 만한 때</h4>
+        <ul>
+          <li>하루에 여러 번, 매일 쓰시게 될 때</li>
+          <li>긴 문서를 자주 맡기실 때</li>
+          <li>대개 <strong>월 2~3만 원대</strong>입니다</li>
+        </ul>
+      </div>
+    </div>
+    <p class="punch" style="max-width:34ch">먼저 <em>한 달 무료로</em> 써 보시고, 그때 정하셔도 늦지 않습니다.</p>
+    <p style="color:var(--ink-2);font-size:1rem">값은 자주 바뀝니다. <strong>결제 화면에 뜨는 금액</strong>을 보고 결정하십시오.</p>
+  </div>
 </section>
 
 <!-- 20 -->
 <section class="slide">
-  <div class="s-eyebrow">교우회 보안</div>
+  <div class="s-eyebrow">샬롬대학 보안</div>
   <h2>이것만은 지켜 주십시오</h2>
   <div class="s-body">
     <div class="cols">
@@ -434,22 +487,33 @@ body { overflow: hidden; }
 <!-- 21 -->
 <section class="slide part-slide">
   <div class="pn">제 3 부</div>
-  <h2>이번 주에 일어난 일</h2>
-  <p>워크샵 직전 사흘 사이의 소식만 모았습니다.</p>
+  <h2>쓰는 방식이 바뀌었다</h2>
+  <p>이번 두 달의 진짜 변화는 모델 점수가 아니라 이쪽입니다.</p>
 </section>
 
 <!-- 22 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">10월 16일 · 세 회사가 거의 동시에</div>
+  <h2>병렬 에이전트 &mdash; 여럿이 동시에</h2>
+  <div class="s-body">{{fig:parallel}}</div>
+</section>
+
+<!-- 22b -->
 <section class="slide">
-  <div class="s-eyebrow">8월 13일 · 14일</div>
-  <h2>네 개의 소식, 한 방향</h2>
-  <div class="s-body">
-    <ul class="big-list">
-      <li><span class="m">13</span><span><strong>구글 Gemini 3.7 Flash</strong> — 성능은 오르고 값은 반값</span></li>
-      <li><span class="m">13</span><span><strong>DeepJudge 에이전트 인수인계 규약</strong> — AI를 바꿔도 하던 이야기를 그대로 이어감. Harvey·Thomson Reuters 참여</span></li>
-      <li><span class="m">14</span><span><strong>GitLens 19</strong> — &lsquo;AI가 혼자 짠다&rsquo;에서 <strong>&lsquo;사람과 AI가 한 화면에서 함께 본다&rsquo;</strong>로</span></li>
-      <li><span class="m">14</span><span><strong>SpaceXAI의 Cursor 인수 완료</strong> — 판이 자본 규모의 싸움으로</span></li>
-    </ul>
-    <p class="punch" style="max-width:30ch">성능은 <em>오르고</em>, 값은 <em>내리고</em>, 한 회사에 묶이는 일은 <em>줄어듭니다</em>.</p>
+  <div class="s-eyebrow">두 달을 한 줄로</div>
+  <div class="s-body" style="justify-content:center">
+    <p class="punch" style="max-width:30ch">경쟁이 <em>&ldquo;누가 더 똑똑한가&rdquo;</em>에서<br><em>&ldquo;어떻게 쓰게 할 것인가&rdquo;</em>로 옮겨갔습니다.</p>
+    <div class="cols">
+      <div class="card">
+        <h4>8월의 새 소식</h4>
+        <p style="font-size:1.05rem;line-height:1.7">대부분 <strong>모델</strong>이었습니다. 누가 몇 점인가.</p>
+      </div>
+      <div class="card hi">
+        <h4>10월의 새 소식</h4>
+        <p style="font-size:1.05rem;line-height:1.7">절반이 <strong>쓰는 방식</strong>입니다 &mdash; 화면을 그려 답하고, 여럿이 동시에 일하고, 모드 구분이 사라졌습니다.</p>
+      </div>
+    </div>
+    <p style="color:var(--ink-2)">어르신께는 좋은 소식입니다. <strong>외울 것이 줄고, 쓰기가 쉬워집니다.</strong></p>
   </div>
 </section>
 
@@ -457,7 +521,7 @@ body { overflow: hidden; }
 <section class="slide part-slide">
   <div class="pn">제 4 부</div>
   <h2>이제 직접 해 봅니다</h2>
-  <p>지금부터 90분은 교우님의 이야기를 글과 노래와 영상으로 만드는 시간입니다.</p>
+  <p>지금부터 90분은 어르신의 이야기를 글과 노래와 영상으로 만드는 시간입니다.</p>
 </section>
 
 <!-- 24 -->
@@ -493,7 +557,7 @@ body { overflow: hidden; }
       <li><span class="m">4</span><span><strong style="color:var(--danger)">[확인 필요] 표시를 전부 직접 확인합니다</strong> ← 오늘 가장 중요</span></li>
       <li><span class="m">5</span><span>영어 대역을 만들어 내 메일로 보냅니다</span></li>
     </ul>
-    <p style="color:var(--ink-2)">말이 안 나오시면 <strong>옆자리 교우님께 먼저 들려주십시오.</strong> 사람에게 말하면 훨씬 잘 나옵니다.</p>
+    <p style="color:var(--ink-2)">말이 안 나오시면 <strong>옆자리 어르신께 먼저 들려주십시오.</strong> 사람에게 말하면 훨씬 잘 나옵니다.</p>
   </div>
 </section>
 
@@ -554,7 +618,7 @@ body { overflow: hidden; }
       <li><span class="m">3</span><span>사진 길이를 늘려 <strong>노래 길이에 맞춥니다</strong> (8장 · 2분 = 한 장 15초)</span></li>
       <li><span class="m">4</span><span>맨 앞에 제목 한 줄 → <strong>1080p로 내보내기</strong></span></li>
     </ul>
-    <p style="color:var(--crimson);font-weight:700">다 되면 그 자리에서 카톡으로 보내십시오. 집에 가면 못 보냅니다.</p>
+    <p style="color:var(--brand);font-weight:700">다 되면 그 자리에서 카톡으로 보내십시오. 집에 가면 못 보냅니다.</p>
   </div>
 </section>
 
@@ -651,7 +715,7 @@ body { overflow: hidden; }
     </ul>
     <div class="card warn">
       <h4>오늘 만든 영상에 관하여</h4>
-      <p style="font-size:1.05rem">교우님 목소리와 가족 얼굴이 들어 있습니다. 가족끼리 나누는 것은 좋지만 <strong>공개 계정에는 올리지 마십시오.</strong> 목소리 몇 초면 복제됩니다.</p>
+      <p style="font-size:1.05rem">어르신 목소리와 가족 얼굴이 들어 있습니다. 가족끼리 나누는 것은 좋지만 <strong>공개 계정에는 올리지 마십시오.</strong> 목소리 몇 초면 복제됩니다.</p>
     </div>
   </div>
 </section>
@@ -666,18 +730,18 @@ body { overflow: hidden; }
       <li><span class="m">2</span><span><strong>자서전 두 번째 장을 쓰십시오.</strong> 오늘과 똑같이 — 장면 하나, 5분 구술, 지시문, 확인. <strong>일주일에 한 장이면 1년에 책 한 권입니다.</strong></span></li>
       <li><span class="m">3</span><span><strong>계정 세 개에 2단계 인증을 켜십시오.</strong> 은행, 카카오톡, 페이스북 순으로.</span></li>
     </ul>
-    <p class="punch" style="max-width:30ch">교우님의 이야기가 <em>오늘 처음으로</em> 남았습니다.</p>
-    <p style="color:var(--ink-3);font-family:var(--f-mono);font-size:.9rem">교재와 워크북은 계속 보실 수 있습니다. 궁금한 것은 교우회 단톡방에 올려 주십시오.</p>
+    <p class="punch" style="max-width:30ch">어르신의 이야기가 <em>오늘 처음으로</em> 남았습니다.</p>
+    <p style="color:var(--ink-3);font-family:var(--f-mono);font-size:.9rem">교재와 워크북은 계속 보실 수 있습니다. 궁금한 것은 샬롬대학 단톡방에 올려 주십시오.</p>
   </div>
 </section>
 
 </div>
 
 <div class="hud">
-  <span class="ku">고대 아틀란타 교우회 AI 워크샵</span>
+  <span class="ku">샬롬대학 시니어 AI 워크샵</span>
   <span class="bar"><i id="pbar"></i></span>
   <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
-  <span id="cnt" style="min-width:5.5em;text-align:center">1 / 38</span>
+  <span id="cnt" style="min-width:5.5em;text-align:center">1 / 40</span>
   <button type="button" id="next" aria-label="다음 슬라이드">→</button>
 </div>
 

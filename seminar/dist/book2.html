@@ -1,6 +1,6 @@
 <title>2026 가을, 무엇이 새로운가</title>
 <style>
-/* ── 고대 아틀란타 교우회 AI 워크샵 2026 · 공통 디자인 시스템 ─────────────
+/* ── 샬롬대학 시니어 AI 워크샵 2026 · 공통 디자인 시스템 ─────────────
    Display : 한국 출판 명조체 (교본의 얼굴)
    Body    : 한국 고딕체 (30~80대 모두 읽히도록 큰 본문)
    Utility : 고정폭 (프롬프트 · 명령어 · 수치)
@@ -17,17 +17,17 @@
   --rule:       #DED8D6;
   --rule-2:     #C9C1BF;
 
-  /* 고려대 정체성 */
-  --crimson:    #8A1538;
-  --crimson-2:  #B03052;
-  --crimson-in: #FBEEF1;
+  /* 샬롬대학 — 평안을 뜻하는 이름에 맞춘 깊은 청록 */
+  --brand:    #1A5C56;
+  --brand-2:  #2E7A72;
+  --brand-in: #E9F3F1;
   --gold:       #AD7C1C;
   --gold-in:    #FBF3E2;
 
   /* 색이 꽉 찬 브랜드 블록(부 표지·머리띠·번호 원)용.
-     본문 강조색(--crimson)은 테마에 따라 밝아지므로 흰 글씨를 얹을 수 없다.
+     본문 강조색(--brand)은 테마에 따라 밝아지므로 흰 글씨를 얹을 수 없다.
      이 두 값은 두 테마에서 모두 깊게 유지해 흰 글씨 대비를 보장한다. */
-  --brand-fill: #8A1538;
+  --brand-fill: #1A5C56;
   --gold-fill:  #8F6415;
   --on-brand:   #FFFFFF;
 
@@ -61,14 +61,14 @@
     --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
     --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
     --rule: #383634;   --rule-2: #4A4744;
-    --crimson: #E0778F; --crimson-2: #D4657E; --crimson-in: #33181F;
+    --brand: #6FC3B8; --brand-2: #58B4A8; --brand-in: #13302C;
     --gold: #D6A340; --gold-in: #332816;
     --good: #4FA97B; --good-in: #16281F;
     --warn: #CF8A33; --warn-in: #2B2013;
     --danger: #E0716C; --danger-in: #301A19;
     --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
     --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
-    --brand-fill: #7C1230; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+    --brand-fill: #15514B; --gold-fill: #7A5411; --on-brand: #FFFFFF;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   }
 }
@@ -77,14 +77,14 @@
   --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
   --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
   --rule: #383634;   --rule-2: #4A4744;
-  --crimson: #E0778F; --crimson-2: #D4657E; --crimson-in: #33181F;
+  --brand: #6FC3B8; --brand-2: #58B4A8; --brand-in: #13302C;
   --gold: #D6A340; --gold-in: #332816;
   --good: #4FA97B; --good-in: #16281F;
   --warn: #CF8A33; --warn-in: #2B2013;
   --danger: #E0716C; --danger-in: #301A19;
   --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
   --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
-  --brand-fill: #7C1230; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+  --brand-fill: #15514B; --gold-fill: #7A5411; --on-brand: #FFFFFF;
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
 }
 
@@ -95,8 +95,8 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--f-body);
-  font-size: 17px;
-  line-height: 1.78;
+  font-size: 18.5px;   /* 시니어 가독성: 기본 본문을 키운다 */
+  line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -104,8 +104,8 @@ body {
 
 h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; line-height: 1.3; margin: 0; font-weight: 700; }
 
-a { color: var(--crimson); text-underline-offset: 3px; }
-:focus-visible { outline: 2.5px solid var(--crimson-2); outline-offset: 3px; border-radius: 3px; }
+a { color: var(--brand); text-underline-offset: 3px; }
+:focus-visible { outline: 2.5px solid var(--brand-2); outline-offset: 3px; border-radius: 3px; }
 
 /* ── 공통 컴포넌트 ───────────────────────────────────────────────── */
 
@@ -127,7 +127,7 @@ a { color: var(--crimson); text-underline-offset: 3px; }
 .chip-ok     { color: var(--good);   border-color: var(--good);   background: var(--good-in); }
 .chip-check  { color: var(--warn);   border-color: var(--warn);   background: var(--warn-in); }
 .chip-risk   { color: var(--danger); border-color: var(--danger); background: var(--danger-in); }
-.chip-ku     { color: var(--crimson);border-color: var(--crimson);background: var(--crimson-in); }
+.chip-ku     { color: var(--brand);border-color: var(--brand);background: var(--brand-in); }
 
 /* 콜아웃 */
 .note {
@@ -146,8 +146,8 @@ a { color: var(--crimson); text-underline-offset: 3px; }
 .note.check  .note-title { color: var(--warn); }
 .note.risk   { border-color: var(--danger);  background: var(--danger-in); }
 .note.risk   .note-title { color: var(--danger); }
-.note.ku     { border-color: var(--crimson); background: var(--crimson-in); }
-.note.ku     .note-title { color: var(--crimson); }
+.note.ku     { border-color: var(--brand); background: var(--brand-in); }
+.note.ku     .note-title { color: var(--brand); }
 
 /* 프롬프트 상자 */
 .prompt {
@@ -175,7 +175,7 @@ a { color: var(--crimson); text-underline-offset: 3px; }
   border: 1px solid var(--rule-2); background: var(--paper);
   color: var(--ink-2); border-radius: 6px; padding: .22em .7em;
 }
-.copy:hover { border-color: var(--crimson); color: var(--crimson); }
+.copy:hover { border-color: var(--brand); color: var(--brand); }
 .copy[data-done="1"] { color: var(--good); border-color: var(--good); }
 
 /* 표 */
@@ -224,35 +224,35 @@ figcaption {
   overflow-y: auto; padding: 1.6rem 1rem 3rem 1.6rem;
   border-right: 1px solid var(--rule); background: var(--paper-2);
 }
-.rail-brand { font-family: var(--f-display); font-weight: 700; font-size: .96rem; line-height: 1.4; color: var(--crimson); margin-bottom: .3rem; }
+.rail-brand { font-family: var(--f-display); font-weight: 700; font-size: .96rem; line-height: 1.4; color: var(--brand); margin-bottom: .3rem; }
 .rail-sub { font-size: .72rem; color: var(--ink-3); margin-bottom: 1.4rem; font-family: var(--f-mono); }
 .rail nav ol { list-style: none; margin: 0; padding: 0; }
 .rail nav a { display: block; padding: .3rem .5rem; border-radius: 6px; font-size: .82rem; line-height: 1.45; color: var(--ink-2); text-decoration: none; }
-.rail nav a:hover { background: var(--paper-3); color: var(--crimson); }
+.rail nav a:hover { background: var(--paper-3); color: var(--brand); }
 .rail .part-label { font-family: var(--f-mono); font-size: .66rem; letter-spacing: .1em; color: var(--ink-3); margin: 1.1rem 0 .35rem .5rem; }
 
 main { padding: 0 2.4rem 6rem; min-width: 0; }
 .wrap { max-width: var(--measure); margin-inline: auto; }
 .wide { max-width: 1060px; margin-inline: auto; }
 
-.cover { padding: 5rem 0 3.4rem; border-bottom: 3px double var(--crimson); margin-bottom: 3rem; }
+.cover { padding: 5rem 0 3.4rem; border-bottom: 3px double var(--brand); margin-bottom: 3rem; }
 .cover h1 { font-size: clamp(2.3rem, 5.2vw, 3.6rem); letter-spacing: -.02em; margin: 1rem 0 .9rem; }
-.cover .kicker { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .1em; color: var(--crimson); }
+.cover .kicker { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .1em; color: var(--brand); }
 .cover .lede { font-size: 1.12rem; color: var(--ink-2); line-height: 1.85; max-width: 60ch; }
 .cover .meta { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: .6rem 1.6rem; font-size: .85rem; color: var(--ink-3); font-family: var(--f-mono); }
 
 .chapter { padding-top: 3.6rem; margin-top: 3.6rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
-.chapter > .wrap > .ch-num { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .14em; color: var(--crimson); }
+.chapter > .wrap > .ch-num { font-family: var(--f-mono); font-size: .74rem; letter-spacing: .14em; color: var(--brand); }
 .chapter h2 { font-size: clamp(1.7rem, 3.4vw, 2.2rem); margin: .5rem 0 1.3rem; letter-spacing: -.01em; }
 .chapter h3 { font-size: 1.26rem; margin: 2.6rem 0 .9rem; }
 .chapter h4 { font-size: 1.05rem; margin: 1.8rem 0 .6rem; font-family: var(--f-body); }
 .chapter p { margin: 1.1rem 0; }
 .chapter ul, .chapter ol { padding-left: 1.35rem; margin: 1.1rem 0; }
 .chapter li { margin: .5rem 0; }
-.chapter li::marker { color: var(--crimson); }
+.chapter li::marker { color: var(--brand); }
 
 .part-open { padding: 3.4rem 0 1rem; text-align: center; }
-.part-open .pnum { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .22em; color: var(--crimson); }
+.part-open .pnum { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .22em; color: var(--brand); }
 .part-open h2 { font-size: clamp(1.5rem, 3.2vw, 2rem); margin: .6rem 0 .5rem; }
 .part-open p { color: var(--ink-3); font-size: .95rem; max-width: 56ch; margin-inline: auto; }
 
@@ -270,8 +270,8 @@ main { padding: 0 2.4rem 6rem; min-width: 0; }
 }
 .q4 .t { font-weight: 700; display: block; margin-bottom: .2rem; font-size: .96rem; }
 .q4 p { margin: 0; font-size: .96rem; }
-.q4 > div:first-child { border-color: var(--crimson); background: var(--crimson-in); }
-.q4 > div:first-child .t { color: var(--crimson); }
+.q4 > div:first-child { border-color: var(--brand); background: var(--brand-in); }
+.q4 > div:first-child .t { color: var(--brand); }
 
 .verdict {
   border: 1px solid var(--rule-2); border-left: 5px solid var(--gold);
@@ -287,7 +287,7 @@ main { padding: 0 2.4rem 6rem; min-width: 0; }
 .spec .v { font-size: 1.02rem; font-weight: 700; margin-top: .25rem; display: block; font-variant-numeric: tabular-nums; }
 
 .term { border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0; background: var(--paper-2); }
-.term dt { font-family: var(--f-display); font-weight: 700; color: var(--crimson); margin-top: .7rem; }
+.term dt { font-family: var(--f-display); font-weight: 700; color: var(--brand); margin-top: .7rem; }
 .term dt:first-child { margin-top: 0; }
 .term dd { margin: .25rem 0 0; font-size: .94rem; color: var(--ink-2); }
 
@@ -345,7 +345,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 <main>
 
 <header class="cover wrap">
-  <div class="kicker">고려대학교 아틀란타 교우회 · AI 교재 두 번째 권</div>
+  <div class="kicker">샬롬대학 · 시니어 AI 교재 두 번째 권</div>
   <h1>2026 가을,<br>무엇이 새로운가</h1>
   <p class="lede">
     8월 15일 워크샵에서 &ldquo;속도가 아니라 가속도를 보라&rdquo;고 말씀드렸습니다.
@@ -410,9 +410,9 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   </defs>
 
   <!-- 10/7~10/19 집중 구간 -->
-  <rect x="769" y="46" width="154" height="340" rx="8" fill="var(--crimson)" opacity=".09"/>
-  <rect x="769" y="46" width="154" height="340" rx="8" fill="none" stroke="var(--crimson)" stroke-width="1.4" stroke-dasharray="5 4"/>
-  <text x="846" y="40" font-size="12" font-weight="700" text-anchor="middle" fill="var(--crimson)">13일 동안 6건</text>
+  <rect x="769" y="46" width="154" height="340" rx="8" fill="var(--brand)" opacity=".09"/>
+  <rect x="769" y="46" width="154" height="340" rx="8" fill="none" stroke="var(--brand)" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="846" y="40" font-size="12" font-weight="700" text-anchor="middle" fill="var(--brand)">13일 동안 6건</text>
 
   <!-- 월 눈금 -->
   <g stroke="currentColor" opacity=".14">
@@ -424,7 +424,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <g font-size="12" fill="currentColor" opacity=".6" text-anchor="middle" font-family="var(--f-mono)">
     <text x="150" y="36">8/15</text><text x="351" y="36">9/1</text><text x="705" y="36">10/1</text>
   </g>
-  <text x="930" y="36" font-size="12" font-weight="700" text-anchor="middle" fill="var(--crimson)" font-family="var(--f-mono)">오늘</text>
+  <text x="930" y="36" font-size="12" font-weight="700" text-anchor="middle" fill="var(--brand)" font-family="var(--f-mono)">오늘</text>
 
   <!-- Anthropic -->
   <text x="14" y="95" font-size="13" font-weight="700" fill="var(--s1)">Anthropic</text>
@@ -603,7 +603,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <text x="450" y="302" font-size="11" text-anchor="middle" fill="currentColor">모델 복제</text>
 </svg>
 </div>
-<figcaption><strong>&lsquo;성능 등급&rsquo;이 아니라 &lsquo;안전 등급&rsquo;으로 제품을 나눈 첫 사례입니다.</strong> 지금까지 모델은 Opus·Sonnet·Haiku처럼 똑똑한 순서로 갈렸는데, Fable 5.1과 Mythos 5.1은 <strong>성능이 똑같고 열리는 문만 다릅니다.</strong> 교우님이 쓰실 쪽은 왼쪽이고, 평범한 업무에서는 차이를 느끼실 일이 없습니다.</figcaption>
+<figcaption><strong>&lsquo;성능 등급&rsquo;이 아니라 &lsquo;안전 등급&rsquo;으로 제품을 나눈 첫 사례입니다.</strong> 지금까지 모델은 Opus·Sonnet·Haiku처럼 똑똑한 순서로 갈렸는데, Fable 5.1과 Mythos 5.1은 <strong>성능이 똑같고 열리는 문만 다릅니다.</strong> 어르신이 쓰실 쪽은 왼쪽이고, 평범한 업무에서는 차이를 느끼실 일이 없습니다.</figcaption>
 </figure></div>
 
   <div class="wrap">
@@ -614,7 +614,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
       <strong>검증 절차를 통과한 미국 기관과 개인에게만</strong> 열립니다.
     </p>
     <p>
-      교우님이 평범한 업무에서 쓰실 때는 두 제품의 차이를 느끼실 일이 없습니다.
+      어르신이 평범한 업무에서 쓰실 때는 두 제품의 차이를 느끼실 일이 없습니다.
       다만 이 방식이 중요한 이유는, 앞으로 <strong>&ldquo;성능은 같은데 못 쓰는 기능이 있는 제품&rdquo;</strong>이
       늘어난다는 신호이기 때문입니다.
     </p>
@@ -686,12 +686,12 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <line x1="450" y1="48" x2="450" y2="330" stroke="currentColor" opacity=".22" stroke-dasharray="3 5"/>
 
   <!-- 오른쪽 : Intelligent UI -->
-  <text x="490" y="58" font-size="13" font-weight="700" fill="var(--crimson)">2026년 10월 &mdash; 화면을 그려서 답합니다</text>
-  <rect x="490" y="72" width="390" height="236" rx="10" fill="var(--crimson-in)" stroke="var(--crimson)" stroke-width="1.8"/>
+  <text x="490" y="58" font-size="13" font-weight="700" fill="var(--brand)">2026년 10월 &mdash; 화면을 그려서 답합니다</text>
+  <rect x="490" y="72" width="390" height="236" rx="10" fill="var(--brand-in)" stroke="var(--brand)" stroke-width="1.8"/>
 
   <!-- 비교표 -->
   <g font-size="10.5">
-    <rect x="508" y="90" width="354" height="22" rx="4" fill="var(--crimson)" opacity=".2"/>
+    <rect x="508" y="90" width="354" height="22" rx="4" fill="var(--brand)" opacity=".2"/>
     <text x="520" y="105" fill="currentColor" font-weight="700">항목</text>
     <text x="650" y="105" fill="currentColor" font-weight="700">A 보험</text>
     <text x="770" y="105" fill="currentColor" font-weight="700">B 보험</text>
@@ -719,8 +719,8 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <text x="700" y="213" font-size="10" fill="currentColor" opacity=".55">연간 병원 방문 횟수 …</text>
     <rect x="690" y="230" width="82" height="28" rx="6" fill="var(--brand-fill)"/>
     <text x="731" y="248" font-size="10.5" text-anchor="middle" fill="var(--on-brand)" font-weight="700">다시 계산</text>
-    <rect x="780" y="230" width="82" height="28" rx="6" fill="none" stroke="var(--crimson)" stroke-width="1.4"/>
-    <text x="821" y="248" font-size="10.5" text-anchor="middle" fill="var(--crimson)" font-weight="700">표 내보내기</text>
+    <rect x="780" y="230" width="82" height="28" rx="6" fill="none" stroke="var(--brand)" stroke-width="1.4"/>
+    <text x="821" y="248" font-size="10.5" text-anchor="middle" fill="var(--brand)" font-weight="700">표 내보내기</text>
   </g>
 
   <text x="685" y="290" font-size="11.5" text-anchor="middle" fill="var(--good)" font-weight="700">비교와 계산까지 화면이 해 줍니다</text>
@@ -733,7 +733,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
   <div class="wrap">
     <p>
-      이 변화가 교우회 가족에게 특히 중요한 이유가 있습니다.
+      이 변화가 샬롬대학 어르신에게 특히 중요한 이유가 있습니다.
       <strong>긴 글을 읽기 힘들어하시는 분일수록 효과가 큽니다.</strong>
       보험 두 개를 비교해 달라고 하면 예전에는 열 문단짜리 설명이 나왔고,
       그걸 읽고 비교하는 일은 결국 사람 몫이었습니다.
@@ -860,7 +860,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     </div>
 
     <div class="note ok">
-      <span class="note-title">Muse Spark Open &mdash; 보안이 중요한 교우님께</span>
+      <span class="note-title">Muse Spark Open &mdash; 보안이 중요한 어르신께</span>
       <p style="margin:0">
         가중치가 공개되어 있어 <strong>내 컴퓨터 안에서만</strong> 돌릴 수 있습니다.
         환자 기록, 고객 명단, 계약서처럼 밖으로 내보내면 안 되는 자료를 다루실 때
@@ -998,7 +998,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
       <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
     </marker>
     <marker id="pa-c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="var(--crimson)"/>
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--brand)"/>
     </marker>
   </defs>
 
@@ -1034,17 +1034,17 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   <line x1="235" y1="40" x2="235" y2="320" stroke="currentColor" opacity=".22" stroke-dasharray="3 5"/>
 
   <!-- 오른쪽 : 병렬 -->
-  <text x="268" y="26" font-size="13.5" font-weight="700" fill="var(--crimson)">2026년 10월 &mdash; 여럿이 동시에</text>
+  <text x="268" y="26" font-size="13.5" font-weight="700" fill="var(--brand)">2026년 10월 &mdash; 여럿이 동시에</text>
 
   <rect x="268" y="48" width="110" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <text x="323" y="72" font-size="12.5" text-anchor="middle" fill="currentColor">지시 한 번</text>
 
-  <rect x="412" y="48" width="130" height="38" rx="8" fill="var(--crimson)" opacity=".16"/>
-  <rect x="412" y="48" width="130" height="38" rx="8" fill="none" stroke="var(--crimson)" stroke-width="1.8"/>
-  <text x="477" y="72" font-size="12.5" text-anchor="middle" fill="var(--crimson)" font-weight="700">총괄 에이전트</text>
+  <rect x="412" y="48" width="130" height="38" rx="8" fill="var(--brand)" opacity=".16"/>
+  <rect x="412" y="48" width="130" height="38" rx="8" fill="none" stroke="var(--brand)" stroke-width="1.8"/>
+  <text x="477" y="72" font-size="12.5" text-anchor="middle" fill="var(--brand)" font-weight="700">총괄 에이전트</text>
   <line x1="380" y1="67" x2="408" y2="67" stroke="currentColor" stroke-width="1.5" marker-end="url(#pa-a)"/>
 
-  <g stroke="var(--crimson)" stroke-width="1.8" marker-end="url(#pa-c)" fill="none">
+  <g stroke="var(--brand)" stroke-width="1.8" marker-end="url(#pa-c)" fill="none">
     <path d="M477 88 L477 100 L330 100 L330 118"/>
     <path d="M477 88 L477 118"/>
     <path d="M477 88 L477 100 L624 100 L624 118"/>
@@ -1067,7 +1067,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <text x="624" y="154" text-anchor="middle" font-size="11" fill="currentColor" opacity=".8">초안 작성</text>
   </g>
 
-  <text x="712" y="145" font-size="11.5" fill="var(--crimson)" font-weight="700">동시에</text>
+  <text x="712" y="145" font-size="11.5" fill="var(--brand)" font-weight="700">동시에</text>
 
   <!-- 진행 막대 -->
   <g font-size="10.5">
@@ -1084,10 +1084,10 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <text x="624" y="200" text-anchor="middle" fill="currentColor" opacity=".75">진행 중 34%</text>
   </g>
 
-  <path d="M330 208 L330 226 L477 226 L477 244 M477 208 L477 244 M624 208 L624 226 L477 226" fill="none" stroke="var(--crimson)" stroke-width="1.8" marker-end="url(#pa-c)"/>
-  <rect x="412" y="246" width="130" height="38" rx="8" fill="var(--crimson)" opacity=".16"/>
-  <rect x="412" y="246" width="130" height="38" rx="8" fill="none" stroke="var(--crimson)" stroke-width="1.8"/>
-  <text x="477" y="270" font-size="12.5" text-anchor="middle" fill="var(--crimson)" font-weight="700">합쳐서 완성</text>
+  <path d="M330 208 L330 226 L477 226 L477 244 M477 208 L477 244 M624 208 L624 226 L477 226" fill="none" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#pa-c)"/>
+  <rect x="412" y="246" width="130" height="38" rx="8" fill="var(--brand)" opacity=".16"/>
+  <rect x="412" y="246" width="130" height="38" rx="8" fill="none" stroke="var(--brand)" stroke-width="1.8"/>
+  <text x="477" y="270" font-size="12.5" text-anchor="middle" fill="var(--brand)" font-weight="700">합쳐서 완성</text>
 
   <text x="268" y="310" font-size="11.5" fill="currentColor" opacity=".75">· 각 에이전트가 <tspan font-weight="700">지금 뭘 하는지 따로 보입니다</tspan> · 끝난 것부터 먼저 검토할 수 있습니다</text>
 </svg>
@@ -1145,13 +1145,13 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
       <p style="margin:0">
         2026년 초만 해도 AI 회사들은 제품을 <strong>자꾸 쪼갰습니다</strong> &mdash;
         코딩용, 문서용, 검색용, 대화용. 지금은 <strong>다시 합치는 중</strong>입니다.
-        교우님 입장에서는 좋은 소식입니다. <strong>외울 제품 이름이 줄어듭니다.</strong>
+        어르신 입장에서는 좋은 소식입니다. <strong>외울 제품 이름이 줄어듭니다.</strong>
       </p>
     </div>
 
     <div class="verdict">
       <span class="lab">제8장 판정</span>
-      <p>8월 교재의 &ldquo;Claude Code냐 Cowork냐&rdquo;라는 질문은 <strong>이제 성립하지 않습니다.</strong> 비개발자 교우님은 그냥 Claude를 열고 하고 싶은 말을 하시면 됩니다.</p>
+      <p>8월 교재의 &ldquo;Claude Code냐 Cowork냐&rdquo;라는 질문은 <strong>이제 성립하지 않습니다.</strong> 비개발자 어르신은 그냥 Claude를 열고 하고 싶은 말을 하시면 됩니다.</p>
     </div>
   </div>
 </section>
@@ -1162,7 +1162,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     <h2>Antigravity 2.0 &mdash; 개발자용이지만 흐름을 읽는 창</h2>
 
     <p>
-      개발을 하지 않으시는 교우님은 이 장을 건너뛰셔도 됩니다.
+      개발을 하지 않으시는 어르신은 이 장을 건너뛰셔도 됩니다.
       다만 <strong>자녀와 손주가 쓰는 도구</strong>라 이름만 알아 두시면 대화가 됩니다.
     </p>
 
@@ -1211,8 +1211,8 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
   </g>
 
   <!-- 상위권 밀집 구간 -->
-  <rect x="672" y="44" width="70" height="268" rx="6" fill="var(--crimson)" opacity=".08"/>
-  <text x="707" y="332" font-size="11" font-weight="700" text-anchor="middle" fill="var(--crimson)">5.6점 차</text>
+  <rect x="672" y="44" width="70" height="268" rx="6" fill="var(--brand)" opacity=".08"/>
+  <text x="707" y="332" font-size="11" font-weight="700" text-anchor="middle" fill="var(--brand)">5.6점 차</text>
 
   <g font-size="12.5">
     <text x="220" y="67" text-anchor="end" fill="currentColor" font-weight="700">Claude Opus 5.5</text>
@@ -1360,7 +1360,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
     </p>
     <p>
       이유는 단순합니다. <strong>성능으로 차별화가 안 되니 값으로 싸웁니다.</strong>
-      교우님께는 반가운 소식입니다.
+      어르신께는 반가운 소식입니다.
     </p>
 
     <div class="note risk">
@@ -1391,7 +1391,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
     <div class="tbl-wrap">
       <table>
-        <thead><tr><th>이런 교우님은</th><th>이것을</th><th>왜</th></tr></thead>
+        <thead><tr><th>이런 어르신은</th><th>이것을</th><th>왜</th></tr></thead>
         <tbody>
           <tr><td><strong>긴 글 읽기가 힘들다</strong><br>비교·계산을 자주 한다</td><td><strong>ChatGPT (GPT-6)</strong></td><td>Intelligent UI가 표와 그래프를 그려 줍니다. 무료 요금제에도 열렸습니다</td></tr>
           <tr><td><strong>지메일·드라이브를 주로 쓴다</strong></td><td><strong>Gemini (4 Argon)</strong></td><td>이미 쓰는 계정 안에서 그대로 작동합니다. 값도 지금은 가장 유리합니다</td></tr>
@@ -1506,7 +1506,7 @@ code { font-family: var(--f-mono); font-size: .88em; background: var(--paper-3);
 
     <hr style="margin:3rem 0;border:0;border-top:1px solid var(--rule)">
     <p style="text-align:center;color:var(--ink-3);font-size:.9rem;line-height:1.9">
-      고려대학교 아틀란타 교우회 AI 교재 · 두 번째 권<br>
+      샬롬대학 AI 교재 · 두 번째 권<br>
       <span style="font-family:var(--f-mono);font-size:.82rem">2026년 10월 20일 · 직전 판 2026년 8월 15일</span>
     </p>
   </div>
