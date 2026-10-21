@@ -1,0 +1,1761 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>맡기면 끝내 옵니다</title>
+<style>
+/* ── 샬롬대학 시니어 AI 워크샵 2026 · 공통 디자인 시스템 ─────────────
+   Display : 한국 출판 명조체 (교본의 얼굴)
+   Body    : 한국 고딕체 (30~80대 모두 읽히도록 큰 본문)
+   Utility : 고정폭 (프롬프트 · 명령어 · 수치)
+   ───────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* 지면 · 잉크 (라이트가 기본) */
+  --paper:      #FCFCFB;
+  --paper-2:    #F5F3F1;
+  --paper-3:    #ECE8E6;
+  --ink:        #171215;
+  --ink-2:      #4A4145;
+  --ink-3:      #756A6E;
+  --rule:       #DED8D6;
+  --rule-2:     #C9C1BF;
+
+  /* 샬롬대학 상징색 — 남색 */
+  --brand:    #1B3A6B;
+  --brand-2:  #2E5490;
+  --brand-in: #EAEFF7;
+  --gold:       #AD7C1C;
+  --gold-in:    #FBF3E2;
+
+  /* 색이 꽉 찬 브랜드 블록(부 표지·머리띠·번호 원)용.
+     본문 강조색(--brand)은 테마에 따라 밝아지므로 흰 글씨를 얹을 수 없다.
+     이 두 값은 두 테마에서 모두 깊게 유지해 흰 글씨 대비를 보장한다. */
+  --brand-fill: #1B3A6B;
+  --gold-fill:  #8F6415;
+  --on-brand:   #FFFFFF;
+
+  /* 의미색 (계열색과 절대 겸용하지 않음) */
+  --good:       #2E7D55;
+  --good-in:    #E8F4EE;
+  --warn:       #A2621A;
+  --warn-in:    #FCF2E3;
+  --danger:     #B3241F;
+  --danger-in:  #FCECEB;
+
+  /* 검증된 계열색 · 라이트 (validate_palette.js 전 항목 통과) */
+  --s1: #B03052;  /* Anthropic  */
+  --s2: #1785A8;  /* OpenAI     */
+  --s3: #AD7C1C;  /* Google     */
+  --s4: #5568C4;  /* SpaceXAI   */
+  --s5: #2E9160;  /* 오픈웨이트  */
+  --s6: #A0489A;  /* Meta       */
+
+  --shadow: 0 1px 2px rgba(23,18,21,.06), 0 8px 24px -12px rgba(23,18,21,.18);
+
+  --f-display: 'Nanum Myeongjo', 'AppleMyungjo', 'Batang', 'Apple SD Gothic Neo', serif;
+  --f-body: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', system-ui, sans-serif;
+  --f-mono: 'D2Coding', 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+
+  --measure: 68ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
+    --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
+    --rule: #383634;   --rule-2: #4A4744;
+    --brand: #8FB3E8; --brand-2: #7AA3E0; --brand-in: #152338;
+    --gold: #D6A340; --gold-in: #332816;
+    --good: #4FA97B; --good-in: #16281F;
+    --warn: #CF8A33; --warn-in: #2B2013;
+    --danger: #E0716C; --danger-in: #301A19;
+    --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
+    --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
+    --brand-fill: #1A3560; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #1A1A19;  --paper-2: #232221;  --paper-3: #2E2C2B;
+  --ink: #F2EEEC;    --ink-2: #C3BBB8;    --ink-3: #918885;
+  --rule: #383634;   --rule-2: #4A4744;
+  --brand: #8FB3E8; --brand-2: #7AA3E0; --brand-in: #152338;
+  --gold: #D6A340; --gold-in: #332816;
+  --good: #4FA97B; --good-in: #16281F;
+  --warn: #CF8A33; --warn-in: #2B2013;
+  --danger: #E0716C; --danger-in: #301A19;
+  --s1: #D4657E; --s2: #2B90B5; --s3: #BA8A28;
+  --s4: #7477D2; --s5: #289A6B; --s6: #C46BBD;
+  --brand-fill: #1A3560; --gold-fill: #7A5411; --on-brand: #FFFFFF;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 18.5px;   /* 시니어 가독성: 기본 본문을 키운다 */
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; line-height: 1.3; margin: 0; font-weight: 700; }
+
+a { color: var(--brand); text-underline-offset: 3px; }
+:focus-visible { outline: 2.5px solid var(--brand-2); outline-offset: 3px; border-radius: 3px; }
+
+/* ── 공통 컴포넌트 ───────────────────────────────────────────────── */
+
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* 강의 배지 · 상태 칩 */
+.chip {
+  display: inline-flex; align-items: center; gap: .4em;
+  font-family: var(--f-mono); font-size: .7rem; letter-spacing: .05em;
+  padding: .25em .7em; border-radius: 100px; border: 1px solid;
+  white-space: nowrap; vertical-align: middle;
+}
+.chip-ok     { color: var(--good);   border-color: var(--good);   background: var(--good-in); }
+.chip-check  { color: var(--warn);   border-color: var(--warn);   background: var(--warn-in); }
+.chip-risk   { color: var(--danger); border-color: var(--danger); background: var(--danger-in); }
+.chip-ku     { color: var(--brand);border-color: var(--brand);background: var(--brand-in); }
+
+/* 콜아웃 */
+.note {
+  border-left: 4px solid var(--rule-2);
+  background: var(--paper-2);
+  padding: 1.1rem 1.3rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.6rem 0;
+}
+.note > :first-child { margin-top: 0; }
+.note > :last-child  { margin-bottom: 0; }
+.note-title { font-family: var(--f-display); font-weight: 700; display: block; margin-bottom: .4rem; }
+.note.ok     { border-color: var(--good);    background: var(--good-in); }
+.note.ok     .note-title { color: var(--good); }
+.note.check  { border-color: var(--warn);    background: var(--warn-in); }
+.note.check  .note-title { color: var(--warn); }
+.note.risk   { border-color: var(--danger);  background: var(--danger-in); }
+.note.risk   .note-title { color: var(--danger); }
+.note.ku     { border-color: var(--brand); background: var(--brand-in); }
+.note.ku     .note-title { color: var(--brand); }
+
+/* 프롬프트 상자 */
+.prompt {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  margin: 1.6rem 0;
+  overflow: hidden;
+}
+.prompt-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .6rem .95rem;
+  background: var(--paper-3);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--f-mono); font-size: .74rem; letter-spacing: .04em;
+  color: var(--ink-2);
+}
+.prompt pre {
+  margin: 0; padding: 1rem 1.1rem;
+  font-family: var(--f-mono); font-size: .84rem; line-height: 1.65;
+  white-space: pre-wrap; word-break: break-word; color: var(--ink);
+}
+.copy {
+  font: inherit; font-size: .72rem; cursor: pointer;
+  border: 1px solid var(--rule-2); background: var(--paper);
+  color: var(--ink-2); border-radius: 6px; padding: .22em .7em;
+}
+.copy:hover { border-color: var(--brand); color: var(--brand); }
+.copy[data-done="1"] { color: var(--good); border-color: var(--good); }
+
+/* 표 */
+.tbl-wrap { overflow-x: auto; margin: 1.7rem 0; border: 1px solid var(--rule); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; min-width: 560px; }
+th, td { padding: .7rem .85rem; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+thead th {
+  background: var(--paper-3); font-family: var(--f-mono); font-weight: 600;
+  font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2);
+  position: sticky; top: 0;
+}
+tbody tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* 도표 */
+figure { margin: 2rem 0; }
+figure svg { display: block; max-width: 100%; height: auto; margin-inline: auto; }
+figcaption {
+  margin-top: .85rem; font-size: .84rem; color: var(--ink-3);
+  text-align: center; line-height: 1.6; text-wrap: balance;
+}
+.fig-scroll { overflow-x: auto; }
+
+/* 범례 */
+.legend { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; justify-content: center; margin: .9rem 0 0; padding: 0; list-style: none; font-size: .8rem; color: var(--ink-2); }
+.legend li { display: flex; align-items: center; gap: .45em; }
+.swatch { width: 11px; height: 11px; border-radius: 3px; flex: none; }
+
+/* 출처 확인 표시 */
+.src {
+  font-family: var(--f-mono); font-size: .68rem; letter-spacing: .03em;
+  color: var(--good); border: 1px solid var(--good); background: var(--good-in);
+  border-radius: 4px; padding: .1em .45em; white-space: nowrap; vertical-align: .12em;
+}
+.src.unver { color: var(--warn); border-color: var(--warn); background: var(--warn-in); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* ── 인쇄 · PDF ───────────────────────────────────────────────────
+   어르신께 종이로 나눠 드리는 것을 전제로 한다. 화면용 어두운 배경과
+   고정 요소를 걷어내고, 끊기면 안 되는 덩어리에 page-break 보호를 건다. */
+@media print {
+  :root {
+    --paper: #FFFFFF; --paper-2: #F6F6F4; --paper-3: #EDEDEA;
+    --ink: #000000; --ink-2: #333333; --ink-3: #5A5A5A;
+    --rule: #CCCCCC; --rule-2: #AAAAAA;
+    --brand: #1B3A6B; --brand-2: #2E5490; --brand-in: #EAEFF7;
+    --brand-fill: #1B3A6B; --on-brand: #FFFFFF;
+    --gold: #8A6315; --gold-in: #FBF3E2; --gold-fill: #8A6315;
+    --good: #1F6B45; --good-in: #E8F4EE;
+    --warn: #8A5214; --warn-in: #FCF2E3;
+    --danger: #9A1C18; --danger-in: #FCECEB;
+    --shadow: none;
+  }
+  body { background: #fff; font-size: 11.5pt; line-height: 1.7; }
+
+  /* 색 있는 블록을 프린터가 그대로 찍게 한다 */
+  *, *::before, *::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* 화면 전용 장치 숨김 */
+  .rail, .hud, .copy, .fig-scroll { position: static !important; }
+  .rail, .hud, .copy { display: none !important; }
+
+  /* 끊기면 안 되는 덩어리 */
+  figure, .note, .prompt, .q4 > div, .card, .step, .check-item,
+  .safety-card, .term, .verdict, .takeaway, .goal-line, .specimen, .stat {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  .tbl-wrap { overflow: visible; break-inside: auto; }
+  table { min-width: 0; font-size: 9.5pt; }
+  thead { display: table-header-group; }
+  thead th { position: static; }
+
+  figure svg { max-width: 100%; height: auto; }
+  a { color: var(--brand); text-decoration: none; }
+}
+
+
+body { overflow: hidden; }
+
+.deck { position: fixed; inset: 0; }
+
+.slide {
+  position: absolute; inset: 0;
+  display: none;
+  flex-direction: column;
+  padding: 3.4vh 4.2vw 8vh;
+  background: var(--paper);
+  overflow-y: auto;
+}
+.slide[data-on] { display: flex; }
+
+/* 슬라이드 머리 */
+.s-eyebrow {
+  font-family: var(--f-mono); font-size: clamp(.68rem, 1.05vw, .84rem);
+  letter-spacing: .16em; color: var(--brand); text-transform: uppercase;
+  margin-bottom: .7rem; flex: none;
+}
+.slide h2 {
+  font-size: clamp(1.6rem, 3.5vw, 3rem); line-height: 1.24; margin: 0 0 .5rem;
+  letter-spacing: -.015em; flex: none;
+}
+.slide h3 { font-size: clamp(1.1rem, 1.9vw, 1.5rem); margin: 0 0 1rem; color: var(--ink-2); font-family: var(--f-body); font-weight: 600; flex: none; }
+.s-body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 1.2rem; }
+.slide p { font-size: clamp(1rem, 1.5vw, 1.3rem); line-height: 1.7; margin: 0; max-width: 46ch; }
+.slide p.wide-p { max-width: 62ch; }
+
+/* 큰 목록 */
+.big-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .95rem; }
+.big-list li {
+  display: flex; gap: 1rem; align-items: flex-start;
+  font-size: clamp(1rem, 1.6vw, 1.32rem); line-height: 1.55;
+}
+.big-list .m {
+  flex: none; width: 1.9em; height: 1.9em; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--brand-fill); color: var(--on-brand); font-family: var(--f-mono);
+  font-size: .68em; font-weight: 700;
+}
+
+/* 표지 */
+.cover-slide { justify-content: center; }
+.cover-slide h1 { font-size: clamp(2.5rem, 7vw, 5.4rem); line-height: 1.1; letter-spacing: -.025em; margin: 1rem 0; }
+.cover-slide .sub { font-size: clamp(1rem, 1.8vw, 1.5rem); color: var(--ink-2); max-width: 40ch; }
+.cover-slide .rule { width: 96px; height: 5px; background: var(--brand); margin: 1.6rem 0; }
+.cover-slide .foot { margin-top: 2.6rem; font-family: var(--f-mono); font-size: .85rem; color: var(--ink-3); line-height: 1.9; }
+
+/* 부 표지 */
+.part-slide { justify-content: center; align-items: center; text-align: center; background: var(--brand-fill); }
+.part-slide .pn { font-family: var(--f-mono); font-size: 1rem; letter-spacing: .3em; color: #F4C9D4; }
+.part-slide h2 { color: var(--on-brand); font-size: clamp(2rem, 5vw, 3.6rem); margin: 1rem 0; }
+.part-slide p { color: #F6DDE3; max-width: 40ch; }
+
+/* 도표 슬라이드 */
+.fig-slide figure { margin: 0; width: 100%; }
+.fig-slide figure svg { max-height: 62vh; width: 100%; }
+.fig-slide figcaption { font-size: clamp(.82rem, 1.15vw, 1rem); max-width: 90ch; margin-inline: auto; }
+
+/* 두 칸 */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; align-items: start; }
+.card {
+  border: 1.5px solid var(--rule-2); border-radius: 12px; padding: 1.2rem 1.4rem;
+  background: var(--paper-2); height: 100%;
+}
+.card.hi { border-color: var(--brand); background: var(--brand-in); }
+.card.warn { border-color: var(--danger); background: var(--danger-in); }
+.card.good { border-color: var(--good); background: var(--good-in); }
+.card h4 { font-size: clamp(1rem, 1.5vw, 1.25rem); margin: 0 0 .7rem; }
+.card.hi h4 { color: var(--brand); }
+.card.warn h4 { color: var(--danger); }
+.card.good h4 { color: var(--good); }
+.card ul { margin: 0; padding-left: 1.15rem; }
+.card li { font-size: clamp(.9rem, 1.25vw, 1.08rem); line-height: 1.6; margin: .4rem 0; }
+
+/* 큰 숫자 */
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.stat { text-align: center; padding: 1.4rem .8rem; border-radius: 12px; background: var(--paper-2); border: 1.5px solid var(--rule); }
+.stat .n { font-family: var(--f-display); font-size: clamp(2rem, 4.6vw, 3.6rem); font-weight: 700; color: var(--brand); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat .l { font-size: clamp(.82rem, 1.15vw, 1rem); color: var(--ink-2); margin-top: .6rem; line-height: 1.5; }
+
+/* 강조 문장 */
+.punch {
+  font-family: var(--f-display); font-weight: 700;
+  font-size: clamp(1.4rem, 3.1vw, 2.5rem); line-height: 1.4;
+  max-width: 22ch; text-wrap: balance;
+}
+.punch em { font-style: normal; color: var(--brand); }
+
+/* 실습 안내 */
+.lab-slide { background: var(--gold-in); }
+.lab-badge {
+  display: inline-flex; align-items: center; gap: .5em;
+  font-family: var(--f-mono); font-size: .8rem; letter-spacing: .1em;
+  background: var(--gold-fill); color: var(--on-brand); padding: .3em .9em; border-radius: 100px;
+}
+.lab-slide pre {
+  font-family: var(--f-mono); font-size: clamp(.72rem, 1.05vw, .92rem); line-height: 1.6;
+  background: var(--paper); border: 1px solid var(--rule-2); border-radius: 10px;
+  padding: 1rem 1.2rem; margin: 0; white-space: pre-wrap; max-height: 40vh; overflow: auto;
+}
+
+/* 하단 바 */
+.hud {
+  position: fixed; left: 0; right: 0; bottom: 0; height: 40px;
+  display: flex; align-items: center; gap: 1rem; padding: 0 1.2rem;
+  border-top: 1px solid var(--rule); background: var(--paper);
+  font-family: var(--f-mono); font-size: .72rem; color: var(--ink-3);
+}
+.hud .bar { flex: 1; height: 4px; border-radius: 2px; background: var(--rule); overflow: hidden; }
+.hud .bar i { display: block; height: 100%; background: var(--brand); width: 0; transition: width .22s ease; }
+.hud button {
+  font: inherit; cursor: pointer; border: 1px solid var(--rule-2); background: var(--paper);
+  color: var(--ink-2); border-radius: 6px; padding: .2em .65em;
+}
+.hud button:hover { border-color: var(--brand); color: var(--brand); }
+.hud .ku { color: var(--brand); font-weight: 700; }
+
+@media (max-width: 760px) {
+  .cols, .stat-row { grid-template-columns: 1fr; }
+  .slide { padding: 2.4vh 5vw 7vh; }
+}
+@media print {
+  body { overflow: visible; }
+  .deck { position: static; }
+  .slide {
+    position: static !important; display: flex !important;
+    break-after: page; page-break-after: always;
+    height: 20.2cm; padding: 1.1cm 1.4cm; border: 0;
+    background: var(--paper);
+  }
+  .slide:last-child { break-after: auto; page-break-after: auto; }
+  .fig-slide figure svg { max-height: 11cm; }
+  .lab-slide pre { max-height: none; }
+}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide cover-slide">
+  <div class="s-eyebrow">샬롬대학</div>
+  <h1>맡기면<br>끝내 옵니다</h1>
+  <div class="rule"></div>
+  <p class="sub">2026년의 AI는 묻고 답하는 물건이 아니라,<br>맡기면 해내고 돌아오는 물건입니다.</p>
+  <div class="foot">
+    2026년 10월 20일 기준 개정판 · 오후 1:30 – 3:30<br>
+    <span style="color:var(--brand);font-weight:700">세미나가 아니라 워크샵입니다 — 노트북이나 휴대폰을 꺼내 주십시오</span>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="s-eyebrow">먼저 약속 하나</div>
+  <h2>오늘은 &lsquo;세미나&rsquo;가 아니라 &lsquo;워크샵&rsquo;입니다</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card">
+        <h4>세미나라면</h4>
+        <ul>
+          <li>앞에서 말하고 뒤에서 듣습니다</li>
+          <li>집에 가면 대부분 잊습니다</li>
+          <li>손에 남는 것이 없습니다</li>
+        </ul>
+      </div>
+      <div class="card hi">
+        <h4>워크샵이므로</h4>
+        <ul>
+          <li>120분 중 절반인 <strong>60분</strong>이 여러분 손에 있습니다</li>
+          <li>세 가지를 <strong>직접 만들어</strong> 가져가십니다</li>
+          <li>그래서 노트북이나 휴대폰을 꼭 챙겨 오시라 했습니다</li>
+        </ul>
+      </div>
+    </div>
+    <p class="wide-p" style="color:var(--ink-2)">듣기만 하시면 오늘 시간의 절반이 낭비됩니다. 막히시면 그 자리에서 손을 들어 주십시오.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">오늘의 진행</div>
+  <h2>120분을 이렇게 씁니다</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 956 350" role="img" aria-label="워크샵 120분 진행표. 1시 30분 준비 10분, 1시 40분 강의 20분, 2시 실습1 자서전 25분, 2시 25분 휴식 10분, 2시 35분 강의 5분, 2시 40분 실습2 노래 12분, 2시 52분 실습3 영상 13분, 3시 5분 강의 5분, 3시 10분 실습4 보안 10분, 3시 20분 맺음 10분으로 3시 30분에 끝난다. 손으로 하는 시간이 60분으로 절반을 차지한다." style="font-family:var(--f-body)">
+  <!-- 시각 눈금 : 1:30 = x150, 1분 = 6.5px, 3:30 = x930 -->
+  <g stroke="currentColor" opacity=".14">
+    <line x1="150" y1="60" x2="150" y2="268"/><line x1="345" y1="60" x2="345" y2="268"/>
+    <line x1="540" y1="60" x2="540" y2="268"/><line x1="735" y1="60" x2="735" y2="268"/>
+    <line x1="930" y1="60" x2="930" y2="268"/>
+  </g>
+  <g font-size="12" fill="currentColor" opacity=".6" text-anchor="middle" font-family="var(--f-mono)">
+    <text x="150" y="50">1:30</text><text x="345" y="50">2:00</text><text x="540" y="50">2:30</text>
+    <text x="735" y="50">3:00</text><text x="930" y="50">3:30</text>
+  </g>
+
+  <!-- 행 1 : 준비 -->
+  <text x="14" y="88" font-size="12.5" fill="currentColor" opacity=".8">준비</text>
+  <rect x="150" y="72" width="65" height="30" rx="6" fill="currentColor" opacity=".16"/>
+  <text x="182" y="92" font-size="11" text-anchor="middle" fill="currentColor">10분</text>
+  <text x="224" y="92" font-size="12" fill="currentColor">노트북 · 계정 · 사진 확인</text>
+
+  <!-- 행 2 : 강의 -->
+  <text x="14" y="130" font-size="12.5" fill="currentColor" opacity=".8">강의</text>
+  <rect x="215" y="114" width="130" height="30" rx="6" fill="var(--s2)" opacity=".35"/>
+  <text x="280" y="134" font-size="11.5" text-anchor="middle" fill="currentColor">20분 · AI 지형도</text>
+  <rect x="572" y="114" width="33" height="30" rx="6" fill="var(--s2)" opacity=".35"/>
+  <text x="588" y="134" font-size="10" text-anchor="middle" fill="currentColor">5분</text>
+  <rect x="768" y="114" width="32" height="30" rx="6" fill="var(--s2)" opacity=".35"/>
+  <text x="784" y="134" font-size="10" text-anchor="middle" fill="currentColor">5분</text>
+
+  <!-- 행 3 : 실습 -->
+  <text x="14" y="172" font-size="12.5" font-weight="700" fill="var(--brand)">실습</text>
+  <rect x="345" y="156" width="162" height="30" rx="6" fill="var(--brand)" opacity=".5"/>
+  <text x="426" y="176" font-size="11.5" text-anchor="middle" fill="currentColor" font-weight="700">1 · 자서전 25분</text>
+  <rect x="605" y="156" width="78" height="30" rx="6" fill="var(--brand)" opacity=".5"/>
+  <text x="644" y="176" font-size="11" text-anchor="middle" fill="currentColor" font-weight="700">2 · 노래 12분</text>
+  <rect x="683" y="156" width="85" height="30" rx="6" fill="var(--brand)" opacity=".5"/>
+  <text x="725" y="176" font-size="11" text-anchor="middle" fill="currentColor" font-weight="700">3 · 영상 13분</text>
+  <rect x="800" y="156" width="65" height="30" rx="6" fill="var(--brand)" opacity=".5"/>
+  <text x="832" y="176" font-size="11" text-anchor="middle" fill="currentColor" font-weight="700">4 · 보안 10분</text>
+
+  <!-- 행 4 : 휴식 / 맺음 -->
+  <text x="14" y="214" font-size="12.5" fill="currentColor" opacity=".8">쉼 · 맺음</text>
+  <rect x="507" y="198" width="65" height="30" rx="6" fill="currentColor" opacity=".1"/>
+  <text x="539" y="218" font-size="11" text-anchor="middle" fill="currentColor" opacity=".7">휴식</text>
+  <rect x="865" y="198" width="65" height="30" rx="6" fill="currentColor" opacity=".16"/>
+  <text x="897" y="218" font-size="11" text-anchor="middle" fill="currentColor">맺음</text>
+
+  <!-- 비중 막대 : 실습 60분 = 780px의 절반 -->
+  <text x="14" y="258" font-size="12" fill="currentColor" opacity=".7">비중</text>
+  <rect x="150" y="242" width="780" height="22" rx="5" fill="currentColor" opacity=".1"/>
+  <rect x="150" y="242" width="390" height="22" rx="5" fill="var(--brand)" opacity=".55"/>
+  <text x="345" y="258" font-size="11.5" text-anchor="middle" fill="currentColor" font-weight="700">손으로 하는 시간 60분 (50%)</text>
+  <text x="735" y="258" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".75">듣기 30분 · 준비와 쉼 30분</text>
+
+  <line x1="150" y1="268" x2="930" y2="268" stroke="currentColor" opacity=".4"/>
+
+  <rect x="150" y="290" width="780" height="46" rx="9" fill="var(--brand-in)" stroke="var(--brand)" stroke-width="1.5"/>
+  <text x="540" y="311" font-size="13" font-weight="700" text-anchor="middle" fill="var(--brand)">이래서 이 자리는 &lsquo;세미나&rsquo;가 아니라 &lsquo;워크샵&rsquo;입니다</text>
+  <text x="540" y="329" font-size="11.5" text-anchor="middle" fill="currentColor">듣고 끝나는 자리라면 세미나입니다. 절반의 시간을 어르신 손으로 직접 만드시므로 워크샵입니다.</text>
+</svg>
+</div>
+<figcaption><strong>120분 중 60분, 꼭 절반이 어르신 손에 있습니다.</strong> 실습 1~3은 하나로 이어지는 한 프로젝트라 순서를 바꿀 수 없고, 실습 4는 어떤 일이 있어도 시간을 남겨 둡니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="s-eyebrow">오늘 가져가실 것</div>
+  <h2>집에 갈 때 손에 남는 네 가지</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span><strong>자서전 한 장</strong> — 어르신 인생의 한 장면. 한글 원고와 영어 대역</span></li>
+      <li><span class="m">2</span><span><strong>그 이야기로 만든 노래</strong> — 한국어로 부르는 MP3 한 곡</span></li>
+      <li><span class="m">3</span><span><strong>사진과 노래로 만든 영상</strong> — 손주에게 바로 보낼 MP4</span></li>
+      <li><span class="m">4</span><span><strong>안전한 비밀번호 + 가족 암호</strong> — 오늘 만든 것을 지키는 법</span></li>
+    </ul>
+    <p style="color:var(--ink-2)">넷 다 오늘 이 자리에서 끝냅니다. 숙제로 미루지 않습니다.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide part-slide">
+  <div class="pn">제 1 부</div>
+  <h2>두 달 사이에 무엇이 달라졌나</h2>
+  <p>제품 이름은 계절마다 바뀝니다. 구조 변화 하나만 붙잡으십시오.</p>
+</section>
+
+<!-- 6 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">지난 워크샵 이후</div>
+  <h2>66일 동안 다섯 진영이 <em style="font-style:normal;color:var(--brand)">전부</em> 주력을 갈았습니다</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 1010 430" role="img" aria-label="2026년 8월 15일부터 10월 20일까지 66일간의 주요 AI 발표. 앤스로픽이 9월 1일 Fable·Mythos 5.1, 9월 16일 Cowork 통합, 9월 22일 Opus 5.5, 9월 28일 Sonnet 5.5, 10월 7일 Haiku 5.5를 냈고, 오픈AI는 10월 7일 GPT-6와 Intelligent UI, 10월 16일 병렬 에이전트를 냈다. 구글은 9월 30일 Gemini 4 Argon을 발표해 10월 13일 공개했고, 메타는 10월 12일 Muse Wonder, 10월 15일 Muse Spark Open을 냈다. 10월 7일부터 19일까지 13일 사이에 주요 발표 여섯 건이 몰렸다." style="font-family:var(--f-body)">
+  <defs>
+    <marker id="t2-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <!-- 10/7~10/19 집중 구간 -->
+  <rect x="769" y="46" width="154" height="340" rx="8" fill="var(--brand)" opacity=".09"/>
+  <rect x="769" y="46" width="154" height="340" rx="8" fill="none" stroke="var(--brand)" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="846" y="40" font-size="12" font-weight="700" text-anchor="middle" fill="var(--brand)">13일 동안 6건</text>
+
+  <!-- 월 눈금 -->
+  <g stroke="currentColor" opacity=".14">
+    <line x1="150" y1="46" x2="150" y2="386"/>
+    <line x1="351" y1="46" x2="351" y2="386"/>
+    <line x1="705" y1="46" x2="705" y2="386"/>
+    <line x1="930" y1="46" x2="930" y2="386"/>
+  </g>
+  <g font-size="12" fill="currentColor" opacity=".6" text-anchor="middle" font-family="var(--f-mono)">
+    <text x="150" y="36">8/15</text><text x="351" y="36">9/1</text><text x="705" y="36">10/1</text>
+  </g>
+  <text x="930" y="36" font-size="12" font-weight="700" text-anchor="middle" fill="var(--brand)" font-family="var(--f-mono)">오늘</text>
+
+  <!-- Anthropic -->
+  <text x="14" y="95" font-size="13" font-weight="700" fill="var(--s1)">Anthropic</text>
+  <line x1="150" y1="90" x2="930" y2="90" stroke="var(--s1)" stroke-width="1.2" opacity=".3"/>
+  <g fill="var(--s1)">
+    <circle cx="351" cy="90" r="5.5"/><circle cx="528" cy="90" r="5"/><circle cx="598" cy="90" r="5"/>
+    <circle cx="669" cy="90" r="5"/><circle cx="775" cy="90" r="5.5"/>
+  </g>
+  <g font-size="11" fill="currentColor" text-anchor="middle">
+    <text x="351" y="75" font-weight="700">Fable·Mythos 5.1 <tspan opacity=".6">9/1</tspan></text>
+    <text x="528" y="110">Cowork 통합 <tspan opacity=".6">9/16</tspan></text>
+    <text x="598" y="75">Opus 5.5 <tspan opacity=".6">9/22</tspan></text>
+    <text x="669" y="110">Sonnet 5.5 <tspan opacity=".6">9/28</tspan></text>
+    <text x="775" y="75" font-weight="700">Haiku 5.5 <tspan opacity=".6">10/7</tspan></text>
+  </g>
+
+  <!-- OpenAI -->
+  <text x="14" y="165" font-size="13" font-weight="700" fill="var(--s2)">OpenAI</text>
+  <line x1="150" y1="160" x2="930" y2="160" stroke="var(--s2)" stroke-width="1.2" opacity=".3"/>
+  <circle cx="775" cy="160" r="6" fill="var(--s2)"/><circle cx="882" cy="160" r="5.5" fill="var(--s2)"/>
+  <text x="766" y="164" font-size="11" text-anchor="end" fill="currentColor" font-weight="700">GPT-6 · Intelligent UI <tspan opacity=".6">10/7</tspan></text>
+  <text x="892" y="164" font-size="11" fill="currentColor">병렬 에이전트 <tspan opacity=".6">10/16</tspan></text>
+
+  <!-- Google -->
+  <text x="14" y="225" font-size="13" font-weight="700" fill="var(--s3)">Google</text>
+  <line x1="150" y1="220" x2="930" y2="220" stroke="var(--s3)" stroke-width="1.2" opacity=".3"/>
+  <circle cx="693" cy="220" r="5" fill="var(--s3)"/><circle cx="846" cy="220" r="6" fill="var(--s3)"/>
+  <text x="684" y="224" font-size="11" text-anchor="end" fill="currentColor">Gemini 4 Argon 발표 <tspan opacity=".6">9/30</tspan></text>
+  <text x="856" y="224" font-size="11" fill="currentColor" font-weight="700">전체 공개 <tspan opacity=".6">10/13</tspan></text>
+
+  <!-- Meta -->
+  <text x="14" y="285" font-size="13" font-weight="700" fill="var(--s6)">Meta</text>
+  <line x1="150" y1="280" x2="930" y2="280" stroke="var(--s6)" stroke-width="1.2" opacity=".3"/>
+  <circle cx="834" cy="280" r="6" fill="var(--s6)"/><circle cx="870" cy="280" r="6" fill="var(--s6)"/>
+  <text x="825" y="270" font-size="11" text-anchor="end" fill="currentColor" font-weight="700">Muse Wonder <tspan opacity=".6">10/12</tspan></text>
+  <text x="879" y="296" font-size="11" fill="currentColor" font-weight="700">Muse Spark Open <tspan opacity=".6">10/15</tspan></text>
+
+  <!-- SpaceXAI -->
+  <text x="14" y="345" font-size="13" font-weight="700" fill="var(--s4)">SpaceXAI</text>
+  <line x1="150" y1="340" x2="930" y2="340" stroke="var(--s4)" stroke-width="1.2" opacity=".3"/>
+  <circle cx="587" cy="340" r="5.5" fill="var(--s4)"/>
+  <text x="597" y="344" font-size="11" fill="currentColor">Grok 4.7 <tspan opacity=".6">9/21</tspan></text>
+
+  <!-- 오픈웨이트 -->
+  <text x="14" y="383" font-size="13" font-weight="700" fill="var(--s5)">오픈웨이트</text>
+  <circle cx="917" cy="378" r="5" fill="var(--s5)"/>
+  <text x="908" y="382" font-size="11" text-anchor="end" fill="currentColor">MiniMax M3.1 Flash <tspan opacity=".6">10/19</tspan></text>
+
+  <line x1="150" y1="400" x2="975" y2="400" stroke="currentColor" opacity=".4" marker-end="url(#t2-ar)"/>
+  <text x="150" y="420" font-size="11.5" fill="currentColor" opacity=".6" font-family="var(--f-mono)">지난 워크샵(8/15)부터 오늘(10/20)까지 66일</text>
+</svg>
+</div>
+<figcaption><strong>66일 사이에 다섯 진영이 전부 주력을 갈아치웠습니다.</strong> 특히 10월 7일부터 19일까지 13일 동안 여섯 건이 몰렸습니다 &mdash; 8월 워크샵에서 &ldquo;가속도를 보라&rdquo;고 했던 말이 그대로 일어났습니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="s-eyebrow">숫자로</div>
+  <h2>두 달 사이에 벌어진 일</h2>
+  <div class="s-body">
+    <div class="stat-row">
+      <div class="stat"><div class="n">66</div><div class="l">일 만에<br>다섯 진영이 전부<br>새 주력 발표</div></div>
+      <div class="stat"><div class="n">13</div><div class="l">일 동안<br>주요 발표가<br><strong>여섯 건</strong> (10/7~10/19)</div></div>
+      <div class="stat"><div class="n">5.6</div><div class="l">점 안에<br>1위부터 7위까지<br>모여 있습니다</div></div>
+    </div>
+    <p class="wide-p">지난 워크샵에서 &ldquo;가속도를 보라&rdquo;고 말씀드렸습니다. 그 말이 그대로 일어났습니다. 그리고 더 중요한 변화가 있습니다 &mdash; <strong>이제 성능으로는 차이가 거의 안 납니다.</strong></p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">가장 중요한 그림</div>
+  <h2>챗봇에서 에이전트로</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 920 452" role="img" aria-label="챗봇과 에이전틱 AI의 구조 차이. 챗봇은 사람이 매 단계마다 질문하고 답을 받아 직접 실행해야 하지만, 에이전틱 AI는 목표를 한 번 받으면 계획, 도구 실행, 결과 점검을 스스로 반복하며 사람은 승인 지점에서만 개입한다." style="font-family:var(--f-body)">
+  <defs>
+    <marker id="ag-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="ag-c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--brand)"/>
+    </marker>
+  </defs>
+
+  <!-- ══ 왼쪽 : 지금까지의 챗봇 ══ -->
+  <text x="20" y="26" font-size="14" font-weight="700" fill="currentColor" opacity=".75">지금까지 — 챗봇 (묻고 답하기)</text>
+
+  <rect x="20" y="48" width="105" height="46" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="72" y="76" font-size="13" text-anchor="middle" fill="currentColor">사람</text>
+
+  <rect x="20" y="150" width="105" height="46" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="72" y="178" font-size="13" text-anchor="middle" fill="currentColor">AI</text>
+
+  <rect x="20" y="252" width="105" height="46" rx="8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <text x="72" y="272" font-size="12" text-anchor="middle" fill="currentColor">엑셀 · 메일</text>
+  <text x="72" y="288" font-size="12" text-anchor="middle" fill="currentColor">파일 · 웹</text>
+
+  <line x1="60" y1="94" x2="60" y2="148" stroke="currentColor" marker-end="url(#ag-a)"/>
+  <text x="53" y="126" font-size="11" text-anchor="end" fill="currentColor" opacity=".75">질문</text>
+  <line x1="90" y1="148" x2="90" y2="96" stroke="currentColor" marker-end="url(#ag-a)"/>
+  <text x="97" y="126" font-size="11" fill="currentColor" opacity=".75">답변</text>
+
+  <path d="M136 71 C 190 71, 190 275, 136 275" fill="none" stroke="var(--danger)" stroke-width="1.8" marker-end="url(#ag-a)" opacity=".85"/>
+  <text x="196" y="168" font-size="11.5" fill="var(--danger)">사람이</text>
+  <text x="196" y="184" font-size="11.5" fill="var(--danger)">직접 실행</text>
+
+  <text x="20" y="336" font-size="11.5" fill="currentColor" opacity=".7">한 걸음마다 사람이 다시 물어야 합니다.</text>
+  <text x="20" y="354" font-size="11.5" fill="currentColor" opacity=".7">AI는 손이 없습니다.</text>
+
+  <!-- 구분선 -->
+  <line x1="300" y1="40" x2="300" y2="430" stroke="currentColor" opacity=".22" stroke-dasharray="3 5"/>
+
+  <!-- ══ 오른쪽 : 2026 에이전틱 AI ══ -->
+  <text x="330" y="26" font-size="14" font-weight="700" fill="var(--brand)">2026 — 에이전틱 AI (맡기고 받기)</text>
+
+  <rect x="330" y="48" width="105" height="46" rx="8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <text x="382" y="76" font-size="13" text-anchor="middle" fill="currentColor">사람</text>
+
+  <line x1="382" y1="94" x2="382" y2="128" stroke="var(--brand)" stroke-width="2" marker-end="url(#ag-c)"/>
+  <text x="392" y="116" font-size="11.5" fill="var(--brand)">목표 한 번</text>
+
+  <!-- 에이전트 루프 박스 -->
+  <rect x="330" y="130" width="330" height="194" rx="12" fill="var(--brand)" opacity=".07"/>
+  <rect x="330" y="130" width="330" height="194" rx="12" fill="none" stroke="var(--brand)" stroke-width="1.6"/>
+  <text x="345" y="152" font-size="11" font-family="var(--f-mono)" fill="var(--brand)" letter-spacing="1">AGENT LOOP</text>
+
+  <rect x="352" y="166" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--brand)" stroke-width="1.4"/>
+  <text x="400" y="191" font-size="12.5" text-anchor="middle" fill="currentColor">① 계획</text>
+
+  <rect x="542" y="166" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--brand)" stroke-width="1.4"/>
+  <text x="590" y="191" font-size="12.5" text-anchor="middle" fill="currentColor">② 실행</text>
+
+  <rect x="447" y="248" width="96" height="40" rx="7" fill="var(--paper)" stroke="var(--brand)" stroke-width="1.4"/>
+  <text x="495" y="273" font-size="12.5" text-anchor="middle" fill="currentColor">③ 점검</text>
+
+  <line x1="450" y1="186" x2="538" y2="186" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ag-c)"/>
+  <path d="M590 208 L590 268 L547 268" fill="none" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ag-c)"/>
+  <path d="M445 268 L400 268 L400 208" fill="none" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ag-c)"/>
+  <text x="495" y="312" font-size="11.5" text-anchor="middle" fill="var(--brand)">틀리면 스스로 계획으로 돌아가 다시</text>
+
+  <!-- 도구 -->
+  <rect x="700" y="150" width="200" height="136" rx="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <text x="800" y="172" font-size="12" font-weight="700" text-anchor="middle" fill="currentColor">내 컴퓨터 · 내 계정</text>
+  <text x="800" y="196" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">폴더의 파일 읽고 쓰기</text>
+  <text x="800" y="216" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">엑셀 · 워드 · PPT 만들기</text>
+  <text x="800" y="236" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">웹 검색 · 메일 초안</text>
+  <text x="800" y="256" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">코드 실행 · 테스트</text>
+  <text x="800" y="276" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">캘린더 · 드라이브</text>
+
+  <line x1="640" y1="186" x2="696" y2="186" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#ag-c)"/>
+  <text x="668" y="178" font-size="10.5" text-anchor="middle" fill="var(--brand)">도구 호출</text>
+
+  <line x1="696" y1="240" x2="640" y2="240" stroke="currentColor" stroke-width="1.5" marker-end="url(#ag-a)" opacity=".7"/>
+  <text x="668" y="232" font-size="10.5" text-anchor="middle" fill="currentColor" opacity=".7">결과</text>
+
+  <!-- 승인 지점 -->
+  <path d="M540 326 C 520 364, 480 372, 448 374" fill="none" stroke="var(--warn)" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#ag-a)" opacity=".9"/>
+  <rect x="290" y="358" width="152" height="32" rx="8" fill="var(--warn-in)" stroke="var(--warn)" stroke-width="1.4"/>
+  <text x="366" y="379" font-size="11.5" text-anchor="middle" fill="var(--warn)">사람 승인이 필요할 때만</text>
+
+  <text x="466" y="404" font-size="11.5" fill="currentColor" opacity=".75">삭제 · 전송 · 결제 앞에서는</text>
+  <text x="466" y="422" font-size="11.5" fill="currentColor" opacity=".75">반드시 멈추고 사람에게 물어봅니다.</text>
+</svg>
+</div>
+<figcaption><strong>차이는 &lsquo;손&rsquo;과 &lsquo;되돌아오는 화살표&rsquo;입니다.</strong> 챗봇은 답만 주고 실행은 사람 몫이었습니다. 에이전틱 AI는 도구를 직접 쥐고, 결과가 틀리면 스스로 계획으로 돌아가 다시 시도합니다. 사람은 되돌릴 수 없는 일 앞에서만 개입합니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="s-eyebrow">달라진 것은 딱 둘</div>
+  <h2>손이 생겼고, 되돌아갑니다</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card hi">
+        <h4>① 손이 생겼습니다</h4>
+        <p style="font-size:1.02rem;line-height:1.65">예전 — &ldquo;이 엑셀 수식을 쓰시면 됩니다&rdquo;<br><br>지금 — 엑셀 파일을 <strong>직접 만들어</strong> 폴더에 놓아둡니다.</p>
+      </div>
+      <div class="card hi">
+        <h4>② 스스로 되돌아갑니다</h4>
+        <p style="font-size:1.02rem;line-height:1.65">일을 한 뒤 <strong>&ldquo;내가 한 게 맞나?&rdquo;</strong>를 스스로 확인하고, 틀렸으면 알아서 다시 합니다.<br><br>그래서 몇 시간짜리 일을 맡길 수 있습니다.</p>
+      </div>
+    </div>
+    <p class="punch">&lsquo;알려주기&rsquo;와 &lsquo;해놓기&rsquo; 사이의 거리 — 그것이 <em>전부</em>였습니다.</p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="s-eyebrow">가장 중요한 원칙</div>
+  <h2>무엇을 맡기고, 무엇을 쥐고 있을 것인가</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card good">
+        <h4>맡기셔도 됩니다 — 되돌릴 수 있는 일</h4>
+        <ul>
+          <li>초안 · 요약 · 번역 · 정리 · 표 만들기</li>
+          <li>자료 조사와 비교 (출처는 확인)</li>
+          <li>사진·파일 정리, 형식 변환</li>
+          <li>코드 짜기 — 틀리면 다시 짜면 됩니다</li>
+        </ul>
+      </div>
+      <div class="card warn">
+        <h4>끝까지 쥐십시오 — 되돌릴 수 없는 일</h4>
+        <ul>
+          <li><strong>돈</strong> — 송금 · 결제 · 계약 서명</li>
+          <li><strong>밖으로 나가는 것</strong> — 메일 발송 · 업로드</li>
+          <li><strong>사실 판정</strong> — 가족사 · 병력 · 법률 · 의료</li>
+          <li><strong>지우는 일</strong> — 원본 삭제</li>
+        </ul>
+      </div>
+    </div>
+    <p style="color:var(--ink-2)">기준은 하나입니다 — <strong>되돌릴 수 있는가.</strong> 확인 창이 뜰 때 습관적으로 &lsquo;예&rsquo;를 누르지 마십시오.</p>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="slide part-slide">
+  <div class="pn">제 2 부</div>
+  <h2>다섯 진영</h2>
+  <p>이름은 수십 개지만, 실은 다섯 회사가 같은 표를 채우고 있을 뿐입니다.</p>
+</section>
+
+<!-- 12 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">한 장으로 보는 판세</div>
+  <h2>모두가 &lsquo;개발자용 하나 + 업무용 하나&rsquo;를 냅니다</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 960 330" role="img" aria-label="2026년 10월 기준 다섯 진영의 에이전틱 AI 제품 지형도. 모든 진영이 개발자용 터미널 에이전트와 비개발자용 업무 에이전트를 한 쌍씩 갖추고 있다. Anthropic은 Claude Code와 Cowork, OpenAI는 Codex와 ChatGPT Work, Google은 Antigravity와 Gemini Spark, SpaceXAI는 Grok Build와 Grok Bot, Meta는 Muse Code를 냈고 업무 트랙은 아직 없다." style="font-family:var(--f-body)">
+  <!-- 열 머리 -->
+  <g text-anchor="middle" font-size="13" font-weight="700">
+    <text x="245" y="30" fill="var(--s1)">Anthropic</text>
+    <text x="405" y="30" fill="var(--s2)">OpenAI</text>
+    <text x="565" y="30" fill="var(--s3)">Google</text>
+    <text x="725" y="30" fill="var(--s4)">SpaceXAI</text>
+    <text x="885" y="30" fill="var(--s6)">Meta</text>
+  </g>
+
+  <!-- 행 1 : 개발 트랙 -->
+  <rect x="20" y="52" width="920" height="104" rx="10" fill="currentColor" opacity=".04"/>
+  <text x="34" y="82" font-size="12.5" font-weight="700" fill="currentColor">개발 트랙</text>
+  <text x="34" y="102" font-size="11" fill="currentColor" opacity=".65">터미널에서</text>
+  <text x="34" y="118" font-size="11" fill="currentColor" opacity=".65">코드를 짓는</text>
+  <text x="34" y="134" font-size="11" fill="currentColor" opacity=".65">에이전트</text>
+
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="172" y="72" width="146" height="64" rx="8" fill="var(--s1)" opacity=".13"/>
+    <rect x="172" y="72" width="146" height="64" rx="8" fill="none" stroke="var(--s1)" stroke-width="1.5"/>
+    <text x="245" y="99" fill="currentColor" font-weight="700">Claude Code</text>
+    <text x="245" y="119" font-size="10.5" fill="currentColor" opacity=".7">코드베이스 이해 1위</text>
+
+    <rect x="332" y="72" width="146" height="64" rx="8" fill="var(--s2)" opacity=".13"/>
+    <rect x="332" y="72" width="146" height="64" rx="8" fill="none" stroke="var(--s2)" stroke-width="1.5"/>
+    <text x="405" y="99" fill="currentColor" font-weight="700">Codex</text>
+    <text x="405" y="119" font-size="10.5" fill="currentColor" opacity=".7">ChatGPT 생태계 통합</text>
+
+    <rect x="492" y="72" width="146" height="64" rx="8" fill="var(--s3)" opacity=".13"/>
+    <rect x="492" y="72" width="146" height="64" rx="8" fill="none" stroke="var(--s3)" stroke-width="1.5"/>
+    <text x="565" y="99" fill="currentColor" font-weight="700">Antigravity 2.0</text>
+    <text x="565" y="119" font-size="10.5" fill="currentColor" opacity=".7">여러 에이전트 관제탑</text>
+
+    <rect x="652" y="72" width="146" height="64" rx="8" fill="var(--s4)" opacity=".13"/>
+    <rect x="652" y="72" width="146" height="64" rx="8" fill="none" stroke="var(--s4)" stroke-width="1.5"/>
+    <text x="725" y="99" fill="currentColor" font-weight="700">Grok Build</text>
+    <text x="725" y="119" font-size="10.5" fill="currentColor" opacity=".7">Cursor 인수 · 값 동결</text>
+
+    <rect x="812" y="72" width="146" height="64" rx="8" fill="var(--s6)" opacity=".13"/>
+    <rect x="812" y="72" width="146" height="64" rx="8" fill="none" stroke="var(--s6)" stroke-width="1.5"/>
+    <text x="885" y="99" fill="currentColor" font-weight="700">Muse Code</text>
+    <text x="885" y="119" font-size="10.5" fill="currentColor" opacity=".7">Muse Wonder Full 전용</text>
+  </g>
+
+  <!-- 행 2 : 업무 트랙 -->
+  <rect x="20" y="168" width="920" height="104" rx="10" fill="var(--brand)" opacity=".07"/>
+  <rect x="20" y="168" width="920" height="104" rx="10" fill="none" stroke="var(--brand)" stroke-width="1.5"/>
+  <text x="34" y="198" font-size="12.5" font-weight="700" fill="var(--brand)">업무 트랙</text>
+  <text x="34" y="218" font-size="11" fill="currentColor" opacity=".65">문서와 파일을</text>
+  <text x="34" y="234" font-size="11" fill="currentColor" opacity=".65">다루는</text>
+  <text x="34" y="250" font-size="11" fill="var(--brand)" font-weight="700">← 오늘 여기</text>
+
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="172" y="188" width="146" height="64" rx="8" fill="var(--s1)" opacity=".2"/>
+    <rect x="172" y="188" width="146" height="64" rx="8" fill="none" stroke="var(--s1)" stroke-width="2"/>
+    <text x="245" y="215" fill="currentColor" font-weight="700">Claude 대화에 통합</text>
+    <text x="245" y="235" font-size="10.5" fill="currentColor" opacity=".7">9/16부터 모드 구분 없음</text>
+
+    <rect x="332" y="188" width="146" height="64" rx="8" fill="var(--s2)" opacity=".2"/>
+    <rect x="332" y="188" width="146" height="64" rx="8" fill="none" stroke="var(--s2)" stroke-width="2"/>
+    <text x="405" y="215" fill="currentColor" font-weight="700">ChatGPT Work</text>
+    <text x="405" y="235" font-size="10.5" fill="currentColor" opacity=".7">GPT-6 · Intelligent UI</text>
+
+    <rect x="492" y="188" width="146" height="64" rx="8" fill="var(--s3)" opacity=".2"/>
+    <rect x="492" y="188" width="146" height="64" rx="8" fill="none" stroke="var(--s3)" stroke-width="2"/>
+    <text x="565" y="215" fill="currentColor" font-weight="700">Gemini Spark</text>
+    <text x="565" y="235" font-size="10.5" fill="currentColor" opacity=".7">Gemini 4 Argon 기반</text>
+
+    <rect x="652" y="188" width="146" height="64" rx="8" fill="var(--s4)" opacity=".2"/>
+    <rect x="652" y="188" width="146" height="64" rx="8" fill="none" stroke="var(--s4)" stroke-width="2"/>
+    <text x="725" y="215" fill="currentColor" font-weight="700">Grok Bot</text>
+    <text x="725" y="235" font-size="10.5" fill="currentColor" opacity=".7">Grok 4.7 기반</text>
+
+    <rect x="812" y="188" width="146" height="64" rx="8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="5 4" opacity=".45"/>
+    <text x="885" y="224" font-size="11.5" fill="currentColor" opacity=".55">아직 없음</text>
+  </g>
+
+  <text x="20" y="300" font-size="11.5" fill="currentColor" opacity=".7">읽는 법 — 세로로 보면 한 회사의 두 얼굴, 가로로 보면 같은 일을 하는 경쟁 제품입니다.</text>
+  <text x="20" y="320" font-size="11.5" fill="var(--brand)">어르신이 개발자가 아니라면 위쪽 줄은 이름만 알아두고, 아래쪽 줄에서 하나만 고르시면 됩니다.</text>
+</svg>
+</div>
+<figcaption><strong>다섯 회사가 같은 표의 같은 칸을 채우고 있습니다.</strong> 두 달 전과 달라진 곳은 Anthropic의 업무 칸입니다 &mdash; 따로 열던 Cowork가 <strong>대화 안으로 들어가</strong> 고를 것이 없어졌습니다. 어르신이 고르실 칸은 여전히 아래 줄 하나입니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <div class="s-eyebrow">Anthropic · 9월 16일</div>
+  <h2>&lsquo;모드&rsquo;가 사라졌습니다</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card">
+        <h4>지난 워크샵에서는</h4>
+        <ul>
+          <li>대화는 <strong>Claude</strong>에서</li>
+          <li>문서 일은 <strong>Cowork</strong>를 따로 열고</li>
+          <li>코드는 <strong>Claude Code</strong>로</li>
+        </ul>
+        <p style="font-size:1rem;margin-top:.7rem;color:var(--ink-2)">어느 것을 열지 고르는 법부터 가르쳐야 했습니다.</p>
+      </div>
+      <div class="card hi">
+        <h4>지금은</h4>
+        <ul>
+          <li>그냥 <strong>Claude를 열고 말하면</strong> 됩니다</li>
+          <li>간단하면 답하고, 복잡하면 <strong>알아서</strong> 에이전트로 처리합니다</li>
+          <li>Cowork는 없어진 게 아니라 <strong>안으로 들어갔습니다</strong></li>
+        </ul>
+      </div>
+    </div>
+    <p class="punch" style="max-width:30ch">외울 제품 이름이 <em>하나 줄었습니다.</em></p>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="slide lab-slide">
+  <div class="s-eyebrow" style="color:var(--gold)">그래서 이렇게 시킵니다</div>
+  <h2>폴더를 통째로 맡기는 것은 그대로입니다</h2>
+  <div class="s-body">
+    <pre>바탕화면의 '2026보험서류' 폴더를 열어보세요.
+
+그 안의 영문 PDF들을 전부 읽고,
+1) 보험사 이름  2) 월 납입액  3) 보장 만기일  4) 자기부담금
+네 가지를 뽑아 엑셀 표 한 장으로 정리해 주세요.
+
+그리고 제가 놓치면 손해 볼 만한 조항이 있으면
+'주의' 열에 한국어로 짧게 적어 주세요.</pre>
+    <p class="wide-p">달라진 것은 <strong>모드를 고를 필요가 없다</strong>는 점뿐입니다. 손으로 하면 하루 걸리는 일인 것도 그대로입니다.</p>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">OpenAI · 10월 7일</div>
+  <h2>GPT-6 &mdash; 이번엔 답의 <em style="font-style:normal;color:var(--brand)">모양</em>을 바꿨습니다</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 900 350" role="img" aria-label="같은 질문에 대한 기존 텍스트 응답과 Intelligent UI 응답의 차이. 기존에는 긴 문단으로 설명해 사용자가 직접 읽고 비교해야 했지만, Intelligent UI는 비교표, 그래프, 누를 수 있는 단추와 입력 양식을 대화창 안에 바로 그려 준다." style="font-family:var(--f-body)">
+  <text x="20" y="26" font-size="12.5" font-weight="700" fill="currentColor" opacity=".7">질문 &mdash; &ldquo;A 보험과 B 보험 중 뭐가 나은가요?&rdquo;</text>
+
+  <!-- 왼쪽 : 기존 -->
+  <text x="20" y="58" font-size="13" font-weight="700" fill="currentColor" opacity=".75">지금까지 &mdash; 글로만 답했습니다</text>
+  <rect x="20" y="72" width="390" height="236" rx="10" fill="var(--paper-2)" stroke="currentColor" stroke-width="1.5"/>
+  <g fill="currentColor" opacity=".3">
+    <rect x="40" y="94" width="350" height="8" rx="4"/><rect x="40" y="112" width="350" height="8" rx="4"/>
+    <rect x="40" y="130" width="320" height="8" rx="4"/><rect x="40" y="148" width="350" height="8" rx="4"/>
+    <rect x="40" y="166" width="340" height="8" rx="4"/><rect x="40" y="184" width="350" height="8" rx="4"/>
+    <rect x="40" y="202" width="300" height="8" rx="4"/><rect x="40" y="220" width="350" height="8" rx="4"/>
+    <rect x="40" y="238" width="330" height="8" rx="4"/><rect x="40" y="256" width="210" height="8" rx="4"/>
+  </g>
+  <text x="215" y="290" font-size="11.5" text-anchor="middle" fill="var(--danger)">읽고 비교하는 일은 사람 몫</text>
+
+  <line x1="450" y1="48" x2="450" y2="330" stroke="currentColor" opacity=".22" stroke-dasharray="3 5"/>
+
+  <!-- 오른쪽 : Intelligent UI -->
+  <text x="490" y="58" font-size="13" font-weight="700" fill="var(--brand)">2026년 10월 &mdash; 화면을 그려서 답합니다</text>
+  <rect x="490" y="72" width="390" height="236" rx="10" fill="var(--brand-in)" stroke="var(--brand)" stroke-width="1.8"/>
+
+  <!-- 비교표 -->
+  <g font-size="10.5">
+    <rect x="508" y="90" width="354" height="22" rx="4" fill="var(--brand)" opacity=".2"/>
+    <text x="520" y="105" fill="currentColor" font-weight="700">항목</text>
+    <text x="650" y="105" fill="currentColor" font-weight="700">A 보험</text>
+    <text x="770" y="105" fill="currentColor" font-weight="700">B 보험</text>
+    <line x1="508" y1="112" x2="862" y2="112" stroke="currentColor" opacity=".25"/>
+    <text x="520" y="130" fill="currentColor">월 납입</text><text x="650" y="130" fill="currentColor">$184</text><text x="770" y="130" fill="var(--good)" font-weight="700">$142</text>
+    <line x1="508" y1="138" x2="862" y2="138" stroke="currentColor" opacity=".15"/>
+    <text x="520" y="156" fill="currentColor">자기부담</text><text x="650" y="156" fill="var(--good)" font-weight="700">$500</text><text x="770" y="156" fill="currentColor">$2,000</text>
+    <line x1="508" y1="164" x2="862" y2="164" stroke="currentColor" opacity=".15"/>
+    <text x="520" y="182" fill="currentColor">치과 포함</text><text x="650" y="182" fill="var(--good)" font-weight="700">예</text><text x="770" y="182" fill="var(--danger)">아니오</text>
+  </g>
+
+  <!-- 미니 그래프 -->
+  <g>
+    <rect x="508" y="196" width="168" height="62" rx="6" fill="var(--paper)" stroke="currentColor" stroke-width="1" opacity=".9"/>
+    <text x="518" y="211" font-size="10" fill="currentColor" opacity=".7">연간 총비용</text>
+    <rect x="518" y="220" width="70" height="12" rx="3" fill="var(--s2)"/>
+    <rect x="518" y="238" width="48" height="12" rx="3" fill="var(--s3)"/>
+    <text x="594" y="230" font-size="9.5" fill="currentColor">A $2,708</text>
+    <text x="572" y="248" font-size="9.5" fill="currentColor">B $3,704</text>
+  </g>
+
+  <!-- 입력 양식 + 단추 -->
+  <g>
+    <rect x="690" y="196" width="172" height="26" rx="5" fill="var(--paper)" stroke="currentColor" stroke-width="1"/>
+    <text x="700" y="213" font-size="10" fill="currentColor" opacity=".55">연간 병원 방문 횟수 …</text>
+    <rect x="690" y="230" width="82" height="28" rx="6" fill="var(--brand-fill)"/>
+    <text x="731" y="248" font-size="10.5" text-anchor="middle" fill="var(--on-brand)" font-weight="700">다시 계산</text>
+    <rect x="780" y="230" width="82" height="28" rx="6" fill="none" stroke="var(--brand)" stroke-width="1.4"/>
+    <text x="821" y="248" font-size="10.5" text-anchor="middle" fill="var(--brand)" font-weight="700">표 내보내기</text>
+  </g>
+
+  <text x="685" y="290" font-size="11.5" text-anchor="middle" fill="var(--good)" font-weight="700">비교와 계산까지 화면이 해 줍니다</text>
+
+  <text x="20" y="334" font-size="11.5" fill="currentColor" opacity=".7">AI가 답의 <tspan font-weight="700">모양</tspan>까지 스스로 고릅니다 &mdash; 간단한 질문에는 여전히 짧은 글로 답합니다.</text>
+</svg>
+</div>
+<figcaption><strong>대화창이 &lsquo;읽는 곳&rsquo;에서 &lsquo;쓰는 곳&rsquo;으로 바뀌었습니다.</strong> 표·그래프·단추·입력칸이 답변 안에 그려지고, 숫자를 바꿔 다시 계산할 수 있습니다. 긴 설명을 읽기 힘들어하시던 어르신께 특히 큰 변화입니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 15b -->
+<section class="slide">
+  <div class="s-eyebrow">Intelligent UI</div>
+  <h2>글 대신 화면을 그려서 답합니다</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span>비교를 물으면 <strong>표</strong>를, 추세를 물으면 <strong>그래프</strong>를 그립니다</span></li>
+      <li><span class="m">2</span><span>숫자를 바꿔 <strong>그 자리에서 다시 계산</strong>할 수 있습니다</span></li>
+      <li><span class="m">3</span><span>간단한 질문에는 예전처럼 <strong>짧은 글</strong>로 답합니다</span></li>
+      <li><span class="m">4</span><span><strong>무료 요금제에도 열렸습니다</strong></span></li>
+    </ul>
+    <div class="card good">
+      <h4>어르신께 특히 큰 변화입니다</h4>
+      <p style="font-size:1.05rem;line-height:1.7">보험 두 개를 비교해 달라면 예전에는 열 문단짜리 글이 나왔고, 읽고 비교하는 일은 결국 사람 몫이었습니다. 이제는 <strong>표가 나옵니다.</strong></p>
+    </div>
+    <p style="color:var(--ink-2);font-size:1rem">다만 Pro의 깊은 추론 모드와 구형 데스크톱 앱에서는 안 됩니다. <strong>웹 브라우저로 쓰시는 편이 확실합니다.</strong></p>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">어느 것이 제일 좋은가</div>
+  <h2>이제 <em style="font-style:normal;color:var(--brand)">어느 것을 고르셔도</em> 괜찮습니다</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 800 470" role="img" aria-label="2026년 10월 종합 지능 지수 순위. Claude Opus 5.5가 57.6으로 1위, Claude Sonnet 5.5 56.0, Meta Muse Wonder Full 55.8, Claude Fable 5.1과 Gemini 4 Argon이 약 53, GPT-6 Astra 52.7, Muse Wonder 52.0. 오픈웨이트 중에서는 샤오미 MiMo-V2.6-Pro가 46.3으로 가장 높고 Meta Muse Spark Open이 39.0이다. 상위 일곱 모델이 5.6점 안에 모여 있다." style="font-family:var(--f-body)">
+  <g stroke="currentColor" opacity=".14">
+    <line x1="230" y1="40" x2="230" y2="400"/><line x1="400" y1="40" x2="400" y2="400"/>
+    <line x1="570" y1="40" x2="570" y2="400"/><line x1="740" y1="40" x2="740" y2="400"/>
+  </g>
+
+  <!-- 상위권 밀집 구간 -->
+  <rect x="672" y="44" width="70" height="268" rx="6" fill="var(--brand)" opacity=".08"/>
+  <text x="707" y="332" font-size="11" font-weight="700" text-anchor="middle" fill="var(--brand)">5.6점 차</text>
+
+  <g font-size="12.5">
+    <text x="220" y="67" text-anchor="end" fill="currentColor" font-weight="700">Claude Opus 5.5</text>
+    <path d="M230 52 h486 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-486 z" fill="var(--s1)"/>
+    <text x="732" y="67" font-weight="700" fill="currentColor" font-variant-numeric="tabular-nums">57.6</text>
+
+    <text x="220" y="107" text-anchor="end" fill="currentColor">Claude Sonnet 5.5</text>
+    <path d="M230 92 h472 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-472 z" fill="var(--s1)" opacity=".75"/>
+    <text x="718" y="107" fill="currentColor" font-variant-numeric="tabular-nums">56.0</text>
+
+    <text x="220" y="147" text-anchor="end" fill="currentColor">Muse Wonder Full</text>
+    <path d="M230 132 h470 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-470 z" fill="var(--s6)"/>
+    <text x="716" y="147" fill="currentColor" font-variant-numeric="tabular-nums">55.8</text>
+
+    <text x="220" y="187" text-anchor="end" fill="currentColor">Claude Fable 5.1</text>
+    <path d="M230 172 h447 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-447 z" fill="var(--s1)" opacity=".6"/>
+    <text x="693" y="187" fill="currentColor" font-variant-numeric="tabular-nums">≈53</text>
+
+    <text x="220" y="227" text-anchor="end" fill="currentColor" font-weight="700">Gemini 4 Argon</text>
+    <path d="M230 212 h447 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-447 z" fill="var(--s3)"/>
+    <text x="693" y="227" fill="currentColor" font-variant-numeric="tabular-nums">≈53</text>
+
+    <text x="220" y="267" text-anchor="end" fill="currentColor" font-weight="700">GPT-6 Astra</text>
+    <path d="M230 252 h444 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-444 z" fill="var(--s2)"/>
+    <text x="690" y="267" fill="currentColor" font-variant-numeric="tabular-nums">52.7</text>
+
+    <text x="220" y="307" text-anchor="end" fill="currentColor">Muse Wonder</text>
+    <path d="M230 292 h438 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-438 z" fill="var(--s6)" opacity=".7"/>
+    <text x="684" y="307" fill="currentColor" font-variant-numeric="tabular-nums">52.0</text>
+
+    <text x="220" y="347" text-anchor="end" fill="currentColor">MiMo-V2.6-Pro</text>
+    <text x="220" y="362" text-anchor="end" font-size="10.5" fill="var(--s5)">샤오미 · 오픈웨이트 1위</text>
+    <path d="M230 332 h390 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-390 z" fill="var(--s5)"/>
+    <text x="636" y="347" fill="currentColor" font-variant-numeric="tabular-nums">46.3</text>
+
+    <text x="220" y="387" text-anchor="end" fill="currentColor">Muse Spark Open</text>
+    <text x="220" y="402" text-anchor="end" font-size="10.5" fill="var(--s5)">미국 오픈웨이트 1위</text>
+    <path d="M230 372 h328 a4 4 0 0 1 4 4 v12 a4 4 0 0 1 -4 4 h-328 z" fill="var(--s5)" opacity=".6"/>
+    <text x="574" y="387" fill="currentColor" font-variant-numeric="tabular-nums">39.0</text>
+  </g>
+
+  <g font-size="11" fill="currentColor" opacity=".55" text-anchor="middle" font-family="var(--f-mono)">
+    <text x="230" y="424">0</text><text x="400" y="424">20</text><text x="570" y="424">40</text><text x="740" y="424">60</text>
+  </g>
+  <line x1="230" y1="40" x2="230" y2="404" stroke="currentColor" opacity=".45"/>
+  <text x="14" y="446" font-size="11.5" fill="currentColor" opacity=".6">Artificial Analysis 종합 지능 지수 v4.3 계열 · 2026년 10월 중순 기준</text>
+  <text x="14" y="464" font-size="11.5" fill="var(--warn)">≈ 표시는 복수 보도를 종합한 근사치입니다. 지수는 판(version)이 바뀌면 점수도 달라집니다.</text>
+</svg>
+</div>
+<ul class="legend">
+  <li><span class="swatch" style="background:var(--s1)"></span>Anthropic</li>
+  <li><span class="swatch" style="background:var(--s2)"></span>OpenAI</li>
+  <li><span class="swatch" style="background:var(--s3)"></span>Google</li>
+  <li><span class="swatch" style="background:var(--s6)"></span>Meta</li>
+  <li><span class="swatch" style="background:var(--s5)"></span>오픈웨이트</li>
+</ul>
+<figcaption><strong>1위부터 7위까지가 5.6점 안에 모여 있습니다.</strong> 8월에는 상위권이 &lsquo;Anthropic 둘 + 나머지&rsquo;였는데, 두 달 만에 네 회사가 같은 칸에 들어왔습니다. 이제 순위보다 <strong>값과 쓰임새</strong>가 선택 기준입니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 17 -->
+<section class="slide">
+  <div class="s-eyebrow">두 달 전과 무엇이 다른가</div>
+  <h2>&lsquo;Anthropic 둘 + 나머지&rsquo;가 아니게 됐습니다</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card">
+        <h4>8월에는</h4>
+        <ul>
+          <li>1·2위가 Anthropic 독점</li>
+          <li>3위와 <strong>뚜렷한 격차</strong></li>
+          <li>&ldquo;제일 센 것&rdquo;을 묻는 게 의미 있었습니다</li>
+        </ul>
+      </div>
+      <div class="card hi">
+        <h4>지금은</h4>
+        <ul>
+          <li>상위 일곱에 <strong>네 회사</strong>가 들어 있습니다</li>
+          <li>1위와 7위 차이가 <strong>5.6점</strong></li>
+          <li>성능으로는 <strong>고를 수가 없습니다</strong></li>
+        </ul>
+      </div>
+    </div>
+    <p class="punch" style="max-width:32ch">그래서 기준이 <em>값과 쓰임새</em>로 옮겨갔습니다.</p>
+  </div>
+</section>
+
+<!-- 17b -->
+<section class="slide">
+  <div class="s-eyebrow">그래도 조심하실 것</div>
+  <h2>1~2점 차이로 도구를 고르지 마십시오</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card warn">
+        <h4>점수표의 한계</h4>
+        <ul>
+          <li>지수는 <strong>판(version)이 바뀌면</strong> 점수도 바뀝니다</li>
+          <li>집계처마다 <strong>순위가 다릅니다</strong></li>
+          <li>회사 자체 발표치를 모은 표도 섞여 있습니다</li>
+          <li>그리고 <strong>두 달이면 전부 뒤집힙니다</strong></li>
+        </ul>
+      </div>
+      <div class="card good">
+        <h4>실제로 물어야 할 두 가지</h4>
+        <ul>
+          <li>내가 <strong>시키려는 일</strong>을 해내는가</li>
+          <li><strong>값</strong>이 감당되는가</li>
+        </ul>
+        <p style="font-size:1rem;margin-top:.8rem">지금은 상위 일곱이 <strong>전부 충분합니다.</strong> 고르는 데 시간 쓰지 마시고, 고른 하나를 깊이 쓰십시오.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 18 -->
+<section class="slide">
+  <div class="s-eyebrow">SpaceXAI · 9월 21일</div>
+  <h2>Grok 4.7 &mdash; 값을 안 올린 쪽</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span>기반 모델은 커졌는데 <strong>값은 그대로</strong> ($2 / $6)</span></li>
+      <li><span class="m">2</span><span>맥락 창 50만 토큰 &mdash; 경쟁사 100만에는 못 미칩니다</span></li>
+      <li><span class="m">3</span><span>8월에 <strong>세계 3위</strong>였는데, 지금은 상위 일곱 밖입니다</span></li>
+    </ul>
+    <div class="card warn">
+      <h4>남이 뛰는 동안 제자리를 지킨 셈입니다</h4>
+      <p style="font-size:1.05rem">Grok 5는 <strong>아직 날짜가 없습니다.</strong> 1분기·2분기 목표가 모두 지나갔으니, Grok 5를 기다려 결정을 미루지는 마십시오.</p>
+    </div>
+    <p style="color:var(--ink-2)">실시간 소식 검색에는 여전히 강합니다. 다만 검증 안 된 내용이 섞이니 <strong>교차 확인</strong>하십시오.</p>
+  </div>
+</section>
+
+<!-- 19 -->
+<section class="slide">
+  <div class="s-eyebrow">돈 이야기</div>
+  <h2>얼마를 내야 하나요</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card good">
+        <h4>대부분은 무료로 충분합니다</h4>
+        <ul>
+          <li>ChatGPT · Gemini · Claude 모두 <strong>무료 등급</strong>이 있습니다</li>
+          <li>오늘 하는 실습은 <strong>전부 무료로</strong> 됩니다</li>
+          <li>10월부터는 새 기능도 무료 등급에 열렸습니다</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>돈을 내실 만한 때</h4>
+        <ul>
+          <li>하루에 여러 번, 매일 쓰시게 될 때</li>
+          <li>긴 문서를 자주 맡기실 때</li>
+          <li>대개 <strong>월 2~3만 원대</strong>입니다</li>
+        </ul>
+      </div>
+    </div>
+    <p class="punch" style="max-width:34ch">먼저 <em>한 달 무료로</em> 써 보시고, 그때 정하셔도 늦지 않습니다.</p>
+    <p style="color:var(--ink-2);font-size:1rem">값은 자주 바뀝니다. <strong>결제 화면에 뜨는 금액</strong>을 보고 결정하십시오.</p>
+  </div>
+</section>
+
+<!-- 20 -->
+<section class="slide">
+  <div class="s-eyebrow">샬롬대학 보안</div>
+  <h2>이것만은 지켜 주십시오</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card good">
+        <h4>안전합니다</h4>
+        <p style="font-size:1.05rem;line-height:1.7">오픈소스 모델을 <strong>내 컴퓨터에 내려받아</strong> 돌리는 것. 데이터가 밖으로 나가지 않습니다.</p>
+      </div>
+      <div class="card warn">
+        <h4>삼가십시오</h4>
+        <p style="font-size:1.05rem;line-height:1.7">해외 서비스 웹사이트에 <strong>개인정보·회사 기밀·의료 서류</strong>를 직접 올리는 것. 특히 데이터 관할 법제가 다른 나라의 서버는 위험이 큽니다.</p>
+      </div>
+    </div>
+    <p style="color:var(--ink-2)">특정 나라를 겨냥한 말이 아니라, 모든 해외 서비스에 해당하는 원칙입니다.</p>
+  </div>
+</section>
+
+<!-- 21 -->
+<section class="slide part-slide">
+  <div class="pn">제 3 부</div>
+  <h2>쓰는 방식이 바뀌었다</h2>
+  <p>이번 두 달의 진짜 변화는 모델 점수가 아니라 이쪽입니다.</p>
+</section>
+
+<!-- 22 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">10월 16일 · 세 회사가 거의 동시에</div>
+  <h2>병렬 에이전트 &mdash; 여럿이 동시에</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 940 340" role="img" aria-label="단일 에이전트와 병렬 에이전트의 차이. 단일 에이전트는 조사, 정리, 초안을 차례로 하나씩 처리해 오래 걸리고 중간 상태가 보이지 않는다. 병렬 에이전트는 총괄 에이전트가 일을 셋으로 쪼개 동시에 맡기고 각 진행 상황을 따로 볼 수 있으며, 끝난 것부터 검토한 뒤 합친다." style="font-family:var(--f-body)">
+  <defs>
+    <marker id="pa-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+    <marker id="pa-c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--brand)"/>
+    </marker>
+  </defs>
+
+  <!-- 왼쪽 : 지금까지 -->
+  <text x="20" y="26" font-size="13.5" font-weight="700" fill="currentColor" opacity=".75">지금까지 &mdash; 에이전트 하나가 차례로</text>
+
+  <rect x="20" y="48" width="90" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="65" y="72" font-size="12.5" text-anchor="middle" fill="currentColor">지시 한 번</text>
+
+  <g font-size="12">
+    <rect x="20" y="110" width="90" height="34" rx="7" fill="currentColor" opacity=".08"/>
+    <rect x="20" y="110" width="90" height="34" rx="7" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <text x="65" y="132" text-anchor="middle" fill="currentColor">① 조사</text>
+    <rect x="20" y="160" width="90" height="34" rx="7" fill="currentColor" opacity=".08"/>
+    <rect x="20" y="160" width="90" height="34" rx="7" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <text x="65" y="182" text-anchor="middle" fill="currentColor">② 정리</text>
+    <rect x="20" y="210" width="90" height="34" rx="7" fill="currentColor" opacity=".08"/>
+    <rect x="20" y="210" width="90" height="34" rx="7" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <text x="65" y="232" text-anchor="middle" fill="currentColor">③ 초안</text>
+  </g>
+  <g stroke="currentColor" stroke-width="1.5" marker-end="url(#pa-a)">
+    <line x1="65" y1="88" x2="65" y2="106"/><line x1="65" y1="146" x2="65" y2="156"/><line x1="65" y1="196" x2="65" y2="206"/>
+  </g>
+  <line x1="130" y1="112" x2="130" y2="242" stroke="currentColor" opacity=".5" stroke-width="1.5"/>
+  <text x="140" y="160" font-size="11.5" fill="currentColor" opacity=".7">하나가</text>
+  <text x="140" y="176" font-size="11.5" fill="currentColor" opacity=".7">끝나야</text>
+  <text x="140" y="192" font-size="11.5" fill="currentColor" opacity=".7">다음</text>
+
+  <text x="20" y="276" font-size="11.5" fill="currentColor" opacity=".7">· 오래 걸립니다</text>
+  <text x="20" y="294" font-size="11.5" fill="currentColor" opacity=".7">· 중간에 뭘 하는지 보이지 않습니다</text>
+  <text x="20" y="312" font-size="11.5" fill="var(--danger)">· ②에서 틀리면 ③까지 버립니다</text>
+
+  <line x1="235" y1="40" x2="235" y2="320" stroke="currentColor" opacity=".22" stroke-dasharray="3 5"/>
+
+  <!-- 오른쪽 : 병렬 -->
+  <text x="268" y="26" font-size="13.5" font-weight="700" fill="var(--brand)">2026년 10월 &mdash; 여럿이 동시에</text>
+
+  <rect x="268" y="48" width="110" height="38" rx="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="323" y="72" font-size="12.5" text-anchor="middle" fill="currentColor">지시 한 번</text>
+
+  <rect x="412" y="48" width="130" height="38" rx="8" fill="var(--brand)" opacity=".16"/>
+  <rect x="412" y="48" width="130" height="38" rx="8" fill="none" stroke="var(--brand)" stroke-width="1.8"/>
+  <text x="477" y="72" font-size="12.5" text-anchor="middle" fill="var(--brand)" font-weight="700">총괄 에이전트</text>
+  <line x1="380" y1="67" x2="408" y2="67" stroke="currentColor" stroke-width="1.5" marker-end="url(#pa-a)"/>
+
+  <g stroke="var(--brand)" stroke-width="1.8" marker-end="url(#pa-c)" fill="none">
+    <path d="M477 88 L477 100 L330 100 L330 118"/>
+    <path d="M477 88 L477 118"/>
+    <path d="M477 88 L477 100 L624 100 L624 118"/>
+  </g>
+
+  <g font-size="12">
+    <rect x="268" y="120" width="124" height="42" rx="8" fill="var(--s2)" opacity=".16"/>
+    <rect x="268" y="120" width="124" height="42" rx="8" fill="none" stroke="var(--s2)" stroke-width="1.5"/>
+    <text x="330" y="138" text-anchor="middle" fill="currentColor" font-weight="700">에이전트 A</text>
+    <text x="330" y="154" text-anchor="middle" font-size="11" fill="currentColor" opacity=".8">자료 조사</text>
+
+    <rect x="415" y="120" width="124" height="42" rx="8" fill="var(--s3)" opacity=".16"/>
+    <rect x="415" y="120" width="124" height="42" rx="8" fill="none" stroke="var(--s3)" stroke-width="1.5"/>
+    <text x="477" y="138" text-anchor="middle" fill="currentColor" font-weight="700">에이전트 B</text>
+    <text x="477" y="154" text-anchor="middle" font-size="11" fill="currentColor" opacity=".8">표 정리</text>
+
+    <rect x="562" y="120" width="124" height="42" rx="8" fill="var(--s6)" opacity=".16"/>
+    <rect x="562" y="120" width="124" height="42" rx="8" fill="none" stroke="var(--s6)" stroke-width="1.5"/>
+    <text x="624" y="138" text-anchor="middle" fill="currentColor" font-weight="700">에이전트 C</text>
+    <text x="624" y="154" text-anchor="middle" font-size="11" fill="currentColor" opacity=".8">초안 작성</text>
+  </g>
+
+  <text x="712" y="145" font-size="11.5" fill="var(--brand)" font-weight="700">동시에</text>
+
+  <!-- 진행 막대 -->
+  <g font-size="10.5">
+    <rect x="268" y="176" width="124" height="10" rx="5" fill="currentColor" opacity=".12"/>
+    <rect x="268" y="176" width="124" height="10" rx="5" fill="var(--s2)"/>
+    <text x="330" y="200" text-anchor="middle" fill="var(--good)" font-weight="700">끝남 · 검토 가능</text>
+
+    <rect x="415" y="176" width="124" height="10" rx="5" fill="currentColor" opacity=".12"/>
+    <rect x="415" y="176" width="78" height="10" rx="5" fill="var(--s3)"/>
+    <text x="477" y="200" text-anchor="middle" fill="currentColor" opacity=".75">진행 중 63%</text>
+
+    <rect x="562" y="176" width="124" height="10" rx="5" fill="currentColor" opacity=".12"/>
+    <rect x="562" y="176" width="42" height="10" rx="5" fill="var(--s6)"/>
+    <text x="624" y="200" text-anchor="middle" fill="currentColor" opacity=".75">진행 중 34%</text>
+  </g>
+
+  <path d="M330 208 L330 226 L477 226 L477 244 M477 208 L477 244 M624 208 L624 226 L477 226" fill="none" stroke="var(--brand)" stroke-width="1.8" marker-end="url(#pa-c)"/>
+  <rect x="412" y="246" width="130" height="38" rx="8" fill="var(--brand)" opacity=".16"/>
+  <rect x="412" y="246" width="130" height="38" rx="8" fill="none" stroke="var(--brand)" stroke-width="1.8"/>
+  <text x="477" y="270" font-size="12.5" text-anchor="middle" fill="var(--brand)" font-weight="700">합쳐서 완성</text>
+
+  <text x="268" y="310" font-size="11.5" fill="currentColor" opacity=".75">· 각 에이전트가 <tspan font-weight="700">지금 뭘 하는지 따로 보입니다</tspan> · 끝난 것부터 먼저 검토할 수 있습니다</text>
+</svg>
+</div>
+<figcaption><strong>달라진 것은 속도가 아니라 &lsquo;보인다&rsquo;는 점입니다.</strong> 예전에는 몇 시간짜리 일을 맡기면 끝날 때까지 깜깜했습니다. 이제는 셋이 각각 어디까지 왔는지 보이고, 틀린 쪽만 따로 다시 시킬 수 있습니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 22b -->
+<section class="slide">
+  <div class="s-eyebrow">두 달을 한 줄로</div>
+  <div class="s-body" style="justify-content:center">
+    <p class="punch" style="max-width:30ch">경쟁이 <em>&ldquo;누가 더 똑똑한가&rdquo;</em>에서<br><em>&ldquo;어떻게 쓰게 할 것인가&rdquo;</em>로 옮겨갔습니다.</p>
+    <div class="cols">
+      <div class="card">
+        <h4>8월의 새 소식</h4>
+        <p style="font-size:1.05rem;line-height:1.7">대부분 <strong>모델</strong>이었습니다. 누가 몇 점인가.</p>
+      </div>
+      <div class="card hi">
+        <h4>10월의 새 소식</h4>
+        <p style="font-size:1.05rem;line-height:1.7">절반이 <strong>쓰는 방식</strong>입니다 &mdash; 화면을 그려 답하고, 여럿이 동시에 일하고, 모드 구분이 사라졌습니다.</p>
+      </div>
+    </div>
+    <p style="color:var(--ink-2)">어르신께는 좋은 소식입니다. <strong>외울 것이 줄고, 쓰기가 쉬워집니다.</strong></p>
+  </div>
+</section>
+
+<!-- 23 -->
+<section class="slide part-slide">
+  <div class="pn">제 4 부</div>
+  <h2>이제 직접 해 봅니다</h2>
+  <p>지금부터 90분은 어르신의 이야기를 글과 노래와 영상으로 만드는 시간입니다.</p>
+</section>
+
+<!-- 24 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">오늘의 흐름</div>
+  <h2>하나가 다음을 먹여 살립니다</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 960 300" role="img" aria-label="오늘 만드는 것의 흐름. 5분 구술한 이야기가 자서전 한 장이 되고, 그 원고에서 가사를 뽑아 노래를 만들고, 그 노래와 옛 사진으로 영상을 만든다. 세 실습이 하나의 결과물로 이어지며, 사실 확인은 첫 단계에서 사람이 끝낸다." style="font-family:var(--f-body)">
+  <defs>
+    <marker id="tp-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--brand)"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="28" font-size="13.5" font-weight="700" fill="currentColor">오늘 세 실습은 따로 노는 셋이 아니라, 하나가 다음을 먹여 살립니다</text>
+
+  <!-- 입력 -->
+  <rect x="20" y="96" width="128" height="76" rx="10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="84" y="124" font-size="12.5" text-anchor="middle" fill="currentColor" font-weight="700">어르신의 기억</text>
+  <text x="84" y="145" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">5분간 말로</text>
+  <text x="84" y="162" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">녹음합니다</text>
+
+  <line x1="150" y1="134" x2="184" y2="134" stroke="var(--brand)" stroke-width="2" marker-end="url(#tp-a)"/>
+
+  <!-- 실습 1 -->
+  <rect x="188" y="88" width="176" height="92" rx="10" fill="var(--s1)" opacity=".16"/>
+  <rect x="188" y="88" width="176" height="92" rx="10" fill="none" stroke="var(--s1)" stroke-width="1.8"/>
+  <text x="200" y="80" font-size="11" font-family="var(--f-mono)" fill="var(--s1)">실습 1 · 25분</text>
+  <text x="276" y="118" font-size="14" text-anchor="middle" font-weight="700" fill="currentColor">자서전 한 장</text>
+  <text x="276" y="140" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">약 3,000자 원고</text>
+  <text x="276" y="158" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">한글 + 영어 대역</text>
+  <text x="276" y="172" font-size="10.5" text-anchor="middle" fill="var(--s1)">Claude · ChatGPT</text>
+
+  <line x1="366" y1="134" x2="400" y2="134" stroke="var(--brand)" stroke-width="2" marker-end="url(#tp-a)"/>
+  <text x="383" y="126" font-size="10.5" text-anchor="middle" fill="var(--brand)">가사</text>
+
+  <!-- 실습 2 -->
+  <rect x="404" y="88" width="176" height="92" rx="10" fill="var(--s6)" opacity=".16"/>
+  <rect x="404" y="88" width="176" height="92" rx="10" fill="none" stroke="var(--s6)" stroke-width="1.8"/>
+  <text x="416" y="80" font-size="11" font-family="var(--f-mono)" fill="var(--s6)">실습 2 · 12분</text>
+  <text x="492" y="118" font-size="14" text-anchor="middle" font-weight="700" fill="currentColor">내 이야기 노래</text>
+  <text x="492" y="140" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">MP3 파일 하나</text>
+  <text x="492" y="158" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">한국어 가창</text>
+  <text x="492" y="172" font-size="10.5" text-anchor="middle" fill="var(--s6)">Suno · 무료</text>
+
+  <line x1="582" y1="134" x2="616" y2="134" stroke="var(--brand)" stroke-width="2" marker-end="url(#tp-a)"/>
+  <text x="599" y="126" font-size="10.5" text-anchor="middle" fill="var(--brand)">MP3</text>
+
+  <!-- 실습 3 -->
+  <rect x="620" y="88" width="176" height="92" rx="10" fill="var(--s2)" opacity=".16"/>
+  <rect x="620" y="88" width="176" height="92" rx="10" fill="none" stroke="var(--s2)" stroke-width="1.8"/>
+  <text x="632" y="80" font-size="11" font-family="var(--f-mono)" fill="var(--s2)">실습 3 · 13분</text>
+  <text x="708" y="118" font-size="14" text-anchor="middle" font-weight="700" fill="currentColor">가족 영상</text>
+  <text x="708" y="140" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">MP4 · 1080p</text>
+  <text x="708" y="158" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".8">사진 + 노래 + 자막</text>
+  <text x="708" y="172" font-size="10.5" text-anchor="middle" fill="var(--s2)">Clipchamp · iMovie</text>
+
+  <line x1="798" y1="134" x2="832" y2="134" stroke="var(--brand)" stroke-width="2" marker-end="url(#tp-a)"/>
+
+  <!-- 결과 -->
+  <rect x="836" y="96" width="112" height="76" rx="10" fill="var(--brand)" opacity=".14"/>
+  <rect x="836" y="96" width="112" height="76" rx="10" fill="none" stroke="var(--brand)" stroke-width="1.8"/>
+  <text x="892" y="124" font-size="12.5" text-anchor="middle" font-weight="700" fill="var(--brand)">손주에게</text>
+  <text x="892" y="145" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".85">카톡으로</text>
+  <text x="892" y="162" font-size="11.5" text-anchor="middle" fill="currentColor" opacity=".85">보냅니다</text>
+
+  <!-- 사진 입력 (아래에서 실습 3으로) -->
+  <rect x="620" y="228" width="176" height="46" rx="9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="708" y="248" font-size="12" text-anchor="middle" fill="currentColor" font-weight="700">옛 사진 6~10장</text>
+  <text x="708" y="265" font-size="11" text-anchor="middle" fill="var(--danger)">미리 챙겨 오셔야 합니다</text>
+  <line x1="708" y1="224" x2="708" y2="186" stroke="var(--brand)" stroke-width="2" marker-end="url(#tp-a)"/>
+
+  <!-- 사실 확인 -->
+  <rect x="188" y="228" width="176" height="46" rx="9" fill="var(--warn-in)" stroke="var(--warn)" stroke-width="1.4"/>
+  <text x="276" y="248" font-size="12" text-anchor="middle" font-weight="700" fill="var(--warn)">사실 확인은 여기서 끝</text>
+  <text x="276" y="265" font-size="11" text-anchor="middle" fill="currentColor">[확인 필요] 표시를 사람이 검증</text>
+  <line x1="276" y1="224" x2="276" y2="186" stroke="var(--warn)" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#tp-a)"/>
+</svg>
+</div>
+<figcaption><strong>실습 1의 원고가 실습 2의 가사가 되고, 실습 2의 노래가 실습 3의 배경음악이 됩니다.</strong> 그래서 순서를 건너뛸 수 없고, 첫 단추인 사실 확인을 대충 하면 틀린 이야기가 노래와 영상까지 따라갑니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 25 -->
+<section class="slide">
+  <div class="s-eyebrow">왜 자서전인가</div>
+  <div class="s-body" style="justify-content:center">
+    <p class="punch" style="max-width:26ch">지금 기록하지 않으면 <em>사라집니다.</em></p>
+    <p class="wide-p">1980년대에 아틀란타에 오신 이야기를, 영어로 자란 자녀와 손주는 <strong>들을 기회가 없었습니다.</strong> 물어볼 줄 몰랐고, 우리는 말할 자리가 없었습니다.</p>
+    <div class="card hi">
+      <h4>자서전을 못 쓰는 진짜 이유</h4>
+      <p style="font-size:1.05rem;line-height:1.7">시간이 없어서가 아니라 <strong>&ldquo;처음부터 끝까지&rdquo;를 상상하기 때문</strong>입니다. 전체를 그리면 영원히 시작하지 못합니다.</p>
+      <p style="font-size:1.05rem;line-height:1.7;margin-top:.6rem">그래서 오늘은 <strong>딱 한 장면</strong>만 씁니다. 그리고 <strong>타자가 아니라 말로</strong> 합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 25b -->
+<section class="slide lab-slide">
+  <div class="lab-badge" style="margin-bottom:1rem">실습 1 · 25분</div>
+  <h2>말로 쓰는 자서전 한 장</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span>장면 하나를 고릅니다 — &ldquo;내 인생&rdquo;이 아니라 <strong>&ldquo;그날 하루&rdquo;</strong></span></li>
+      <li><span class="m">2</span><span>휴대폰 <strong>마이크 단추</strong>를 누르고 5분간 그냥 말합니다</span></li>
+      <li><span class="m">3</span><span>워크북의 지시문을 붙여 넣습니다</span></li>
+      <li><span class="m">4</span><span><strong style="color:var(--danger)">[확인 필요] 표시를 전부 직접 확인합니다</strong> ← 오늘 가장 중요</span></li>
+      <li><span class="m">5</span><span>영어 대역을 만들어 내 메일로 보냅니다</span></li>
+    </ul>
+    <p style="color:var(--ink-2)">말이 안 나오시면 <strong>옆자리 어르신께 먼저 들려주십시오.</strong> 사람에게 말하면 훨씬 잘 나옵니다.</p>
+  </div>
+</section>
+
+<!-- 25c -->
+<section class="slide">
+  <div class="s-eyebrow">실습 1에서 절대 건너뛰지 마실 것</div>
+  <div class="s-body" style="justify-content:center">
+    <p class="punch" style="max-width:28ch">AI는 이야기를 매끄럽게 만들려고 <em>세부를 지어냅니다.</em></p>
+    <div class="cols">
+      <div class="card warn">
+        <h4>그냥 두면</h4>
+        <p style="font-size:1.05rem;line-height:1.7">지어낸 이야기가 원고에 남고, 그것이 <strong>노래로, 영상으로 그대로 따라갑니다.</strong> 손주가 읽을 가족사에 거짓이 섞입니다.</p>
+      </div>
+      <div class="card good">
+        <h4>그래서 이렇게</h4>
+        <p style="font-size:1.05rem;line-height:1.7">지시문에 <code>[확인 필요]</code>를 적게 하고, <strong>표시된 문장을 하나하나 확인</strong>합니다. 기억이 안 나면 <strong>지웁니다.</strong></p>
+      </div>
+    </div>
+    <p class="wide-p" style="color:var(--ink-2)">오늘 만드는 것은 소설이 아니라 <strong>기록</strong>입니다.</p>
+  </div>
+</section>
+
+<!-- 25d -->
+<section class="slide lab-slide">
+  <div class="lab-badge" style="margin-bottom:1rem">실습 2 · 12분</div>
+  <h2>그 이야기로 노래 만들기</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span><strong>같은 대화창에</strong> 이어서 &mdash; &ldquo;이 글로 가사를 써 주세요&rdquo;</span></li>
+      <li><span class="m">2</span><span><code>suno.com</code> 가입 (무료 · 하루 50크레딧)</span></li>
+      <li><span class="m">3</span><span><strong>Custom</strong> 모드로 가사를 붙여 넣습니다</span></li>
+      <li><span class="m">4</span><span>Style 칸에 <strong>맨 앞에 <code>Korean</code></strong>을 꼭 넣습니다</span></li>
+      <li><span class="m">5</span><span>MP3로 내려받아 <strong>바탕화면에</strong> 둡니다</span></li>
+    </ul>
+    <pre>Korean ballad, warm acoustic guitar, gentle male vocal, nostalgic, slow tempo</pre>
+    <p style="color:var(--ink-2);font-size:1rem"><strong>Korean을 빼면 영어로 불러 버립니다.</strong> 무료 곡은 가족끼리 나누는 것은 되지만 판매·수익 창출은 안 됩니다.</p>
+  </div>
+</section>
+
+<!-- 25e -->
+<section class="slide lab-slide">
+  <div class="lab-badge" style="margin-bottom:1rem">실습 3 · 13분</div>
+  <h2>사진과 노래로 영상 만들기</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card">
+        <h4>윈도우 &mdash; Clipchamp</h4>
+        <p style="font-size:1.02rem;line-height:1.7">윈도우 11에 <strong>이미 깔려 있습니다.</strong> 시작 검색창에 &lsquo;Clipchamp&rsquo;를 치면 나옵니다.</p>
+      </div>
+      <div class="card">
+        <h4>맥 &mdash; iMovie</h4>
+        <p style="font-size:1.02rem;line-height:1.7">맥에 <strong>이미 깔려 있습니다.</strong> 런치패드에서 &lsquo;iMovie&rsquo;를 찾으십시오.</p>
+      </div>
+    </div>
+    <ul class="big-list">
+      <li><span class="m">1</span><span>사진 6~10장과 MP3를 <strong>한 폴더에</strong> 모읍니다</span></li>
+      <li><span class="m">2</span><span>사진을 타임라인에 순서대로, MP3는 아래 줄에</span></li>
+      <li><span class="m">3</span><span>사진 길이를 늘려 <strong>노래 길이에 맞춥니다</strong> (8장 · 2분 = 한 장 15초)</span></li>
+      <li><span class="m">4</span><span>맨 앞에 제목 한 줄 → <strong>1080p로 내보내기</strong></span></li>
+    </ul>
+    <p style="color:var(--brand);font-weight:700">다 되면 그 자리에서 카톡으로 보내십시오. 집에 가면 못 보냅니다.</p>
+  </div>
+</section>
+
+<!-- 30 -->
+<section class="slide part-slide">
+  <div class="pn">제 5 부</div>
+  <h2>가족을 지키기</h2>
+  <p>방금 만드신 이야기와 사진을 지키는 일이기도 합니다.</p>
+</section>
+
+<!-- 31 -->
+<section class="slide">
+  <div class="s-eyebrow">딥보이스 사기</div>
+  <div class="s-body" style="justify-content:center">
+    <p class="punch" style="max-width:24ch">자녀 목소리 <em>몇 초</em>면<br>똑같은 목소리를 만듭니다.</p>
+    <p class="wide-p">유튜브 영상, SNS에 올린 동영상, 통화 녹음이면 충분합니다. 전화가 옵니다. 자녀 목소리로 울먹이며 사고가 났다고 합니다. 급하다고, 아무에게도 말하지 말라고 합니다.</p>
+    <p class="wide-p" style="color:var(--danger);font-weight:700">목소리가 똑같기 때문에 의심할 겨를이 없습니다. 그것이 이 수법의 전부입니다.</p>
+  </div>
+</section>
+
+<!-- 32 -->
+<section class="slide fig-slide">
+  <div class="s-eyebrow">다섯 단계, 세 개의 차단점</div>
+  <h2>어디서든 한 번만 끊으면 됩니다</h2>
+  <div class="s-body"><figure>
+<div class="fig-scroll">
+<svg viewBox="0 0 940 330" role="img" aria-label="딥보이스 사기의 5단계 진행 과정과 세 개의 차단 지점. 사기범이 SNS에서 자녀 목소리 5초를 수집해 음성을 복제하고 급한 전화를 걸어 송금을 요구한다. 돈 이야기가 나오면 끊기, 가족 암호 묻기, 원래 번호로 다시 걸기 세 가지가 각각 진행을 끊는다." style="font-family:var(--f-body)">
+  <defs>
+    <marker id="df-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="var(--danger)"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="28" font-size="13.5" font-weight="700" fill="var(--danger)">사기범의 진행 순서 — 그리고 이것을 끊는 세 지점</text>
+
+  <!-- 진행 사슬 -->
+  <g font-size="11.5" text-anchor="middle">
+    <rect x="20" y="54" width="150" height="60" rx="9" fill="var(--danger)" opacity=".1"/>
+    <rect x="20" y="54" width="150" height="60" rx="9" fill="none" stroke="var(--danger)" stroke-width="1.4"/>
+    <text x="95" y="79" fill="currentColor" font-weight="700">① 목소리 수집</text>
+    <text x="95" y="99" fill="currentColor" opacity=".8">유튜브·SNS에서 5초</text>
+
+    <rect x="204" y="54" width="150" height="60" rx="9" fill="var(--danger)" opacity=".1"/>
+    <rect x="204" y="54" width="150" height="60" rx="9" fill="none" stroke="var(--danger)" stroke-width="1.4"/>
+    <text x="279" y="79" fill="currentColor" font-weight="700">② 음성 복제</text>
+    <text x="279" y="99" fill="currentColor" opacity=".8">똑같은 목소리 생성</text>
+
+    <rect x="388" y="54" width="150" height="60" rx="9" fill="var(--danger)" opacity=".14"/>
+    <rect x="388" y="54" width="150" height="60" rx="9" fill="none" stroke="var(--danger)" stroke-width="1.4"/>
+    <text x="463" y="79" fill="currentColor" font-weight="700">③ 다급한 전화</text>
+    <text x="463" y="99" fill="currentColor" opacity=".8">울먹임 · 사고 · 급함</text>
+
+    <rect x="572" y="54" width="150" height="60" rx="9" fill="var(--danger)" opacity=".18"/>
+    <rect x="572" y="54" width="150" height="60" rx="9" fill="none" stroke="var(--danger)" stroke-width="1.4"/>
+    <text x="647" y="79" fill="currentColor" font-weight="700">④ 송금 요구</text>
+    <text x="647" y="99" fill="currentColor" opacity=".8">합의금 · 비밀 유지</text>
+
+    <rect x="756" y="54" width="164" height="60" rx="9" fill="var(--danger)" opacity=".26"/>
+    <rect x="756" y="54" width="164" height="60" rx="9" fill="none" stroke="var(--danger)" stroke-width="2"/>
+    <text x="838" y="79" fill="var(--danger)" font-weight="700">⑤ 피해 발생</text>
+    <text x="838" y="99" fill="currentColor" opacity=".8">되돌릴 수 없음</text>
+  </g>
+
+  <g stroke="var(--danger)" stroke-width="1.8" marker-end="url(#df-a)">
+    <line x1="172" y1="84" x2="200" y2="84"/>
+    <line x1="356" y1="84" x2="384" y2="84"/>
+    <line x1="540" y1="84" x2="568" y2="84"/>
+    <line x1="724" y1="84" x2="752" y2="84"/>
+  </g>
+
+  <!-- 차단 지점 -->
+  <g>
+    <line x1="463" y1="118" x2="463" y2="168" stroke="var(--good)" stroke-width="2.5"/>
+    <line x1="647" y1="118" x2="647" y2="168" stroke="var(--good)" stroke-width="2.5"/>
+    <line x1="279" y1="118" x2="279" y2="168" stroke="var(--good)" stroke-width="2.5"/>
+  </g>
+  <g stroke="var(--good)" stroke-width="3" stroke-linecap="round">
+    <line x1="448" y1="126" x2="478" y2="146"/><line x1="478" y1="126" x2="448" y2="146"/>
+    <line x1="632" y1="126" x2="662" y2="146"/><line x1="662" y1="126" x2="632" y2="146"/>
+    <line x1="264" y1="126" x2="294" y2="146"/><line x1="294" y1="126" x2="264" y2="146"/>
+  </g>
+
+  <rect x="150" y="172" width="258" height="76" rx="9" fill="var(--good-in)" stroke="var(--good)" stroke-width="1.6"/>
+  <text x="279" y="196" font-size="12.5" font-weight="700" text-anchor="middle" fill="var(--good)">막는 법 1 — 예방</text>
+  <text x="279" y="218" font-size="11.5" text-anchor="middle" fill="currentColor">아이들 목소리·얼굴이 담긴 영상은</text>
+  <text x="279" y="236" font-size="11.5" text-anchor="middle" fill="currentColor">공개 계정에 올리지 않습니다</text>
+
+  <rect x="428" y="172" width="258" height="76" rx="9" fill="var(--good-in)" stroke="var(--good)" stroke-width="1.6"/>
+  <text x="557" y="196" font-size="12.5" font-weight="700" text-anchor="middle" fill="var(--good)">막는 법 2 — 그 자리에서</text>
+  <text x="557" y="218" font-size="11.5" text-anchor="middle" fill="currentColor">돈 이야기가 나오는 순간 끊고,</text>
+  <text x="557" y="236" font-size="11.5" text-anchor="middle" fill="currentColor">가족 암호를 물어봅니다</text>
+
+  <rect x="706" y="172" width="214" height="76" rx="9" fill="var(--good-in)" stroke="var(--good)" stroke-width="1.6"/>
+  <text x="813" y="196" font-size="12.5" font-weight="700" text-anchor="middle" fill="var(--good)">막는 법 3 — 확인</text>
+  <text x="813" y="218" font-size="11.5" text-anchor="middle" fill="currentColor">내가 아는 번호로</text>
+  <text x="813" y="236" font-size="11.5" text-anchor="middle" fill="currentColor">직접 다시 겁니다</text>
+
+  <rect x="20" y="268" width="900" height="44" rx="9" fill="var(--brand-in)" stroke="var(--brand)" stroke-width="1.6"/>
+  <text x="470" y="288" font-size="12.5" font-weight="700" text-anchor="middle" fill="var(--brand)">기억하실 것은 하나입니다 — 목소리는 이제 신분증이 아닙니다.</text>
+  <text x="470" y="305" font-size="11.5" text-anchor="middle" fill="currentColor">아무리 자녀 목소리와 똑같아도, 암호를 대지 못하면 자녀가 아닙니다. 끊는 것은 무례가 아닙니다.</text>
+</svg>
+</div>
+<figcaption><strong>다섯 단계 중 어디서든 한 번만 끊으면 피해는 일어나지 않습니다.</strong> 사기범은 &lsquo;급하다&rsquo;는 감정으로 확인 절차를 건너뛰게 만드는 데 모든 것을 겁니다. 그래서 방어도 기술이 아니라 &lsquo;미리 정해둔 약속&rsquo; 하나면 충분합니다.</figcaption>
+</figure></div>
+</section>
+
+<!-- 33 -->
+<section class="slide">
+  <div class="s-eyebrow">외우실 것은 이것뿐</div>
+  <h2>다급한 전화를 받았을 때 3대 원칙</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span><strong>돈 이야기가 나오면 일단 끊습니다.</strong> 진짜 자녀라면 다시 겁니다. 끊는 것은 무례가 아닙니다.</span></li>
+      <li><span class="m">2</span><span><strong>미리 정한 가족 암호를 물어봅니다.</strong> AI는 목소리는 흉내 내도 가족만 아는 말은 모릅니다.</span></li>
+      <li><span class="m">3</span><span><strong>내가 아는 번호로 직접 다시 겁니다.</strong> 걸려 온 번호로 되걸지 마십시오.</span></li>
+    </ul>
+    <p class="punch" style="max-width:28ch">목소리는 이제 <em>신분증이 아닙니다.</em></p>
+  </div>
+</section>
+
+<!-- 34 -->
+<section class="slide">
+  <div class="s-eyebrow">비밀번호 · 흔한 오해</div>
+  <h2>&lsquo;복잡하게&rsquo;는 이제 틀린 조언입니다</h2>
+  <div class="s-body">
+    <div class="cols">
+      <div class="card warn">
+        <h4>이런 것은 약합니다</h4>
+        <ul style="font-family:var(--f-mono)">
+          <li>P@ssw0rd!</li>
+          <li>Atlanta2026!</li>
+          <li>내이름 + 생년월일</li>
+        </ul>
+        <p style="font-size:1rem;margin-top:.7rem">짧아서 컴퓨터가 금방 풉니다. <strong>사람만 외우기 힘들 뿐입니다.</strong></p>
+      </div>
+      <div class="card good">
+        <h4>이렇게 하십시오</h4>
+        <ul style="font-family:var(--f-mono)">
+          <li>고등어7수박달력연필</li>
+          <li>anam-tiger-melon-42</li>
+        </ul>
+        <p style="font-size:1rem;margin-top:.7rem">관계없는 <strong>단어 네 개</strong>. 길고, 외워지고, 인터넷에 없습니다.</p>
+      </div>
+    </div>
+    <p class="punch" style="max-width:32ch">진짜 위험은 복잡함이 아니라 <em>같은 걸 여러 곳에 쓰는 것</em>입니다.</p>
+  </div>
+</section>
+
+<!-- 34b -->
+<section class="slide">
+  <div class="s-eyebrow">오늘 배운 것 중 유일한 예외</div>
+  <div class="s-body" style="justify-content:center">
+    <p class="punch" style="max-width:30ch">AI에게 비밀번호를 <em>만들어 달라고 하지 마십시오.</em></p>
+    <p class="wide-p">오늘 AI로 무엇이든 하실 수 있지만 이것만은 예외입니다. AI에게 시키면 그 비밀번호가 <strong>대화 기록에 그대로 남습니다.</strong> 만든 비밀번호를 &ldquo;안전한가요?&rdquo;라고 물어보셔도 안 됩니다.</p>
+    <div class="card good">
+      <h4>대신 오늘 하실 일 — 효과가 가장 큰 것 하나</h4>
+      <p style="font-size:1.08rem;line-height:1.75"><strong>이메일 계정에 2단계 인증을 켜십시오.</strong> 비밀번호가 털려도 휴대폰이 없으면 못 들어옵니다. 비밀번호를 바꾸는 것보다 훨씬 강력합니다.</p>
+      <p style="font-size:1rem;margin-top:.6rem;color:var(--ink-2)">이메일 하나만 뚫리면 나머지가 전부 열립니다. 다른 사이트의 &lsquo;비밀번호 찾기&rsquo;가 그 메일로 오기 때문입니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 34c -->
+<section class="slide lab-slide">
+  <div class="lab-badge" style="margin-bottom:1rem">실습 4 · 10분</div>
+  <h2>비밀번호와 가족 암호, 오늘 끝냅니다</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span>이메일 비밀번호를 <strong>단어 네 개</strong>로 새로 정합니다</span></li>
+      <li><span class="m">2</span><span>그 계정에 <strong>2단계 인증</strong>을 켭니다</span></li>
+      <li><span class="m">3</span><span>워크북의 <strong>가족 안전 암호 카드</strong>를 채웁니다 — 인터넷에 없는 말로</span></li>
+      <li><span class="m">4</span><span><strong>지금 이 자리에서</strong> 가족 단톡방에 알립니다</span></li>
+    </ul>
+    <div class="card warn">
+      <h4>오늘 만든 영상에 관하여</h4>
+      <p style="font-size:1.05rem">어르신 목소리와 가족 얼굴이 들어 있습니다. 가족끼리 나누는 것은 좋지만 <strong>공개 계정에는 올리지 마십시오.</strong> 목소리 몇 초면 복제됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 35 -->
+<section class="slide">
+  <div class="s-eyebrow">마무리</div>
+  <h2>오늘 밤 집에서 하실 세 가지</h2>
+  <div class="s-body">
+    <ul class="big-list">
+      <li><span class="m">1</span><span><strong>오늘 만든 영상을 가족 단톡방에 올리십시오.</strong> 아직 안 보내셨다면 오늘 안에.</span></li>
+      <li><span class="m">2</span><span><strong>자서전 두 번째 장을 쓰십시오.</strong> 오늘과 똑같이 — 장면 하나, 5분 구술, 지시문, 확인. <strong>일주일에 한 장이면 1년에 책 한 권입니다.</strong></span></li>
+      <li><span class="m">3</span><span><strong>계정 세 개에 2단계 인증을 켜십시오.</strong> 은행, 카카오톡, 페이스북 순으로.</span></li>
+    </ul>
+    <p class="punch" style="max-width:30ch">어르신의 이야기가 <em>오늘 처음으로</em> 남았습니다.</p>
+    <p style="color:var(--ink-3);font-family:var(--f-mono);font-size:.9rem">교재와 워크북은 계속 보실 수 있습니다. 궁금한 것은 샬롬대학 단톡방에 올려 주십시오.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="hud">
+  <span class="ku">샬롬대학 시니어 AI 워크샵</span>
+  <span class="bar"><i id="pbar"></i></span>
+  <button type="button" id="prev" aria-label="이전 슬라이드">←</button>
+  <span id="cnt" style="min-width:5.5em;text-align:center">1 / 40</span>
+  <button type="button" id="next" aria-label="다음 슬라이드">→</button>
+</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var i = 0;
+  var cnt = document.getElementById('cnt');
+  var bar = document.getElementById('pbar');
+
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) {
+      if (k === i) { s.setAttribute('data-on', ''); s.scrollTop = 0; }
+      else { s.removeAttribute('data-on'); }
+    });
+    cnt.textContent = (i + 1) + ' / ' + slides.length;
+    bar.style.width = ((i + 1) / slides.length * 100) + '%';
+    try { location.hash = 's' + (i + 1); } catch (e) {}
+  }
+
+  document.getElementById('next').addEventListener('click', function () { show(i + 1); });
+  document.getElementById('prev').addEventListener('click', function () { show(i - 1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1); }
+    else if (e.key === 'Home') { show(0); }
+    else if (e.key === 'End') { show(slides.length - 1); }
+  });
+
+  var m = (location.hash || '').match(/^#s(\d+)$/);
+  show(m ? parseInt(m[1], 10) - 1 : 0);
+})();
+</script>
+</body>
+</html>

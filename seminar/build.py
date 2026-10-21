@@ -12,6 +12,7 @@ ROOT = pathlib.Path(__file__).parent
 CSS = (ROOT / "assets" / "base.css").read_text(encoding="utf-8")
 FIGS = ROOT / "parts" / "figs"
 DIST = ROOT / "dist"
+SOLO = ROOT / "standalone"
 
 DOCS = ["textbook", "slides", "workbook", "book2"]
 
@@ -36,8 +37,51 @@ def expand(src: str) -> str:
     return out.replace("{{css}}", CSS)
 
 
+# ── 배포용 단독 파일 ──────────────────────────────────────────────
+# dist/ 는 아티팩트 서버가 <head>를 붙여 주는 전제로 만든 조각이다.
+# 파일만 떼어 메일·USB로 보내면 그 <head>가 없어 브라우저가 인코딩을
+# 잘못 추측하고 한글이 깨진다. 그래서 배포용은 완전한 문서로 따로 쓴다.
+STANDALONE_NAMES = {
+    "textbook": "샬롬대학_AI교재1_처음만나는AI",
+    "book2":    "샬롬대학_AI교재2_무엇이새로운가",
+    "workbook": "샬롬대학_AI워크북_실습",
+    "slides":   "샬롬대학_AI슬라이드_발표용",
+}
+
+SKELETON = """<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{head}
+</head>
+<body>
+{body}
+</body>
+</html>
+"""
+
+
+def standalone(name: str, page: str) -> str:
+    """조각을 완전한 HTML 문서로 감싼다. <meta charset>은 첫 1024바이트 안에 와야
+    브라우저가 본문을 읽기 전에 인코딩을 확정한다."""
+    head = []
+    body = page
+    for tag in ("title", "style"):
+        m = re.search(rf"<{tag}\b.*?</{tag}>", body, re.S)
+        while m:
+            head.append(m.group(0))
+            body = body[: m.start()] + body[m.end():]
+            m = re.search(rf"<{tag}\b.*?</{tag}>", body, re.S)
+    doc = SKELETON.format(head="\n".join(head), body=body.strip())
+    # 윈도우 메일 클라이언트와 탐색기가 확실히 UTF-8로 인식하도록 BOM을 붙인다
+    return "\ufeff" + doc
+
+
 def main():
     DIST.mkdir(exist_ok=True)
+    SOLO.mkdir(exist_ok=True)
     for name in DOCS:
         src = ROOT / "parts" / f"{name}.html"
         if not src.exists():
@@ -50,6 +94,10 @@ def main():
         dest = DIST / f"{name}.html"
         dest.write_text(out, encoding="utf-8")
         print(f"  {dest.relative_to(ROOT)}  {len(out):,} bytes")
+
+        solo = SOLO / f"{STANDALONE_NAMES.get(name, name)}.html"
+        solo.write_text(standalone(name, out), encoding="utf-8")
+        print(f"  {solo.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
